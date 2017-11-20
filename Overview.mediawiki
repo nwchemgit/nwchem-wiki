@@ -7,6 +7,6 @@ __NOTITLE__
 
 *[[Top-level|Top-level Directives]]
 
-*[[Nwarch|NWChem Architecture]]
+*[[NWChem-Architecture|NWChem Architecture]]
 
 *[[Running|Running NWChem]]
