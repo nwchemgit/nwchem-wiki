@@ -645,7 +645,7 @@ The Intel compilers and MKL work just fine on Mac with the following options:
  BLASOPT="-mkl -openmp"
  USE_OPENMP=T
 
-MPICH and ARMCI-MPI work reliably on Mac.  See [[Release66:ARMCI|Choosing the ARMCI Library]] for details on ARMCI-MPI
+MPICH and ARMCI-MPI work reliably on Mac.  See [[ARMCI|Choosing the ARMCI Library]] for details on ARMCI-MPI
 
 =How-to: Cray platforms=
 
