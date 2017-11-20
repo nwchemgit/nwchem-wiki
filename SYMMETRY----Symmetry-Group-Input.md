@@ -7,10 +7,10 @@ The SYMMETRY directive is used (optionally) within the compound GEOMETRY directi
 
 The keyword group is optional, and can be omitted without affecting how the input for this directive is processed. However, if the SYMMETRY directive is used, a group name must be specified by supplying an entry for the string variable <group_name> or <group number>. The latter is useful for the space groups discussed in the section below. The group name should be specified as the standard Schöflies symbol. Examples of expected input for the variable group_name include such entries as:
 
--   c2v - for molecular symmetry \(C<sub>2v</sub>)\)
+-   c2v - for molecular symmetry \(C<sub>2v</sub>\)
 -   d2h - for molecular symmetry \(D<sub>2h</sub>\)
 -   Td - for molecular symmetry \(T<sub>d</sub>\)
--   d6h - for molecular symmetry \(D<sub>6h</sub>)\)
+-   d6h - for molecular symmetry \(D<sub>6h</sub>\)
 
 The SYMMETRY directive is optional. The default is no symmetry (i.e., \(C<sub>1</sub>\) point group). Automatic detection of point group symmetry is available through the use of autosym in the GEOMETRY directive main line (discussed in [Keywords on the GEOMETRY directive](https://github.com/nwchemgit/nwchem/wiki/Keywords-on-the-GEOMETRY-directive)). Note: if the SYMMETRY directive is present the autosym keyword is ignored.
 
