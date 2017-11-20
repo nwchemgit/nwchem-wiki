@@ -1,31 +1,30 @@
-__NOTITLE__
-=Top-level Directives=
+## Top-level Directives
 
 Top-level directives are directives that can affect all modules in the code. Some specify molecular properties or other data that should apply to all subsequent calculations with the current database. However, most top-level directives provide the user with the means to manage the resources for a calculation and to start computations. As the first step in the execution of a job, NWChem scans the entire input file looking for start-up directives, which NWChem must process before all other input. The input file is then rewound and processed sequentially, and each directive is processed in the order in which it is encountered. In this second pass, start-up directives are ignored.
 
 The following sections describe each of the top-level directives in detail, noting all keywords, options, required input, and defaults.
 
-==START / RESTART ==
+* [START/RESTART](https://github.com/nwchemgit/nwchem/wiki/Start_Restart)
 
-==PERMANENT_DIR==
+* [PERMANENT_DIR](https://github.com/nwchemgit/nwchem/wiki/Permanent_Dir)
 
-==SCRATCH_DIR==
+* [SCRATCH_DIR](https://github.com/nwchemgit/nwchem/wiki/Scratch_Dir)
 
-==MEMORY==
+* [MEMORY](https://github.com/nwchemgit/nwchem/wiki/Memory)
+ 
+* [ECHO](https://github.com/nwchemgit/nwchem/wiki/Echo)
 
-==ECHO==
+* [TITLE](https://github.com/nwchemgit/nwchem/wiki/Title)
 
-==TITLE==
+* [PRINT / NOPRINT](https://github.com/nwchemgit/nwchem/wiki/Print_Noprint)
 
-==PRINT / NOPRINT ==
+* [SET](https://github.com/nwchemgit/nwchem/wiki/Set)
 
-==SET==
+* [UNSET](https://github.com/nwchemgit/nwchem/wiki/Unset)
 
-==UNSET==
+* [STOP](https://github.com/nwchemgit/nwchem/wiki/Stop)
 
-==STOP==
+* [TASK](https://github.com/nwchemgit/nwchem/wiki/Task)
 
-==TASK==
-
-==ECCE_PRINT==
+* [ECCE_PRINT](https://github.com/nwchemgit/nwchem/wiki/Ecce_Print)
 
