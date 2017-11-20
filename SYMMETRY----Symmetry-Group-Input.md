@@ -18,7 +18,7 @@ useful for the space groups discussed in the section below. The group
 name should be specified as the standard Schöflies symbol. Examples of
 expected input for the variable group\_name include such entries as:
 
--   c2v - for molecular symmetry *C<sub>2*v*</sub>
+-   c2v - for molecular symmetry *C*<sub>2*v*</sub>
 -   d2h - for molecular symmetry *D*<sub>2*h*</sub>
 -   Td - for molecular symmetry *T*<sub>*d*</sub>
 -   d6h - for molecular symmetry *D*<sub>6*h*</sub>
