@@ -9,7 +9,7 @@ The default chargeThe charge directive, in conjunction with the charges of atomi
 
  charge 2
 
-If centers with [[Release66:Geometry|fractional charge]] have been specified the net charge of the system should be adjusted to
+If centers with [[Geometry|fractional charge]] have been specified the net charge of the system should be adjusted to
 ensure that there are an integral number of electrons.
 
 The charge may be changed between tasks, and is used by all wavefunction types. For instance, in order to compute the first two
