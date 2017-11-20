@@ -2,10 +2,10 @@ __NOTITLE__
 =NWChem  User Documentation=
 
 
-[[Overview|'''Overview''']]
+[[Overview]]
 {{:Overview}}
 
-[[System Description|'''System Description''']]
+[[System Description|System Description]]
 {{:System Description}}
 
 [[Quantum Mechanical Methods|'''Quantum Mechanical Methods''']]
@@ -23,8 +23,8 @@ __NOTITLE__
 [[Potential Energy Surface Analysis|'''Potential Energy Surface Analysis''']]
 {{:Potential Energy Surface Analysis}}
 
-[[Release66:Electronic Structure Analysis|'''Electronic Structure Analysis''']]
-{{:Release66:Electronic Structure Analysis}}
+[[Electronic Structure Analysis|Electronic Structure Analysis]]
+{{:Electronic Structure Analysis}}
 
 [[Other Capabilities|'''Other Capabilities''']]
 {{:Other Capabilities}}
