@@ -1,10 +1,10 @@
 __NOTITLE__
-*[[Release66:Charge|Charge]]
+*[[Charge|Charge]]
 
-*[[Release66:Geometry|Geometry]]
+*[[Geometry|Geometry]]
 
-*[[Release66:Basis|Basis Sets]]
+*[[Basis|Basis Sets]]
 
-*[[Release66:ECP|Effective Core Potentials]]
+*[[ECP|Effective Core Potentials]]
 
 *[[Release66:Relativistic All-electron Approximations|Relativistic All-electron Approximations]]
