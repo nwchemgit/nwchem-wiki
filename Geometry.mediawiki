@@ -1,5 +1,4 @@
 __NOTITLE__
-=Geometries=
 
 The GEOMETRY directive is a compound directive that allows the user to define the geometry to be used for a given calculation. The directive allows the user to specify the geometry with a relatively small amount of input, but there are a large number of optional keywords and additional subordinate directives that the user can specify, if needed. The directive therefore appears to be rather long and complicated when presented in its general form, as follows:
 
@@ -64,17 +63,18 @@ The three main parts of the GEOMETRY directive are:
 
 The following sections present the input for this compound directive in detail, describing the options available and the usages of the various keywords in each of the three main parts.
 
-==Keywords on the GEOMETRY directive==
 
-==SYMMETRY -- Symmetry Group Input==
+* [[Keywords on the GEOMETRY directive]]{{:Geometry_Keywords}}
 
-===Names of 3-dimensional space groups===
+* [[SYMMETRY -- Symmetry Group Input]]{{:Symmetry}}
 
-==Cartesian coordinate input==
+* [[Names of 3-dimensional space groups]]{{:3D-Space_Groups}}
 
-==ZMATRIX -- Z-matrix input==
+* [[Cartesian coordinate input]]{{Cartesian_coords}}
 
-==ZCOORD -- Forcing internal coordinates==
+* [[ZMATRIX -- Z-matrix input]]{{Zmatrix}}
 
-==SYSTEM -- Lattice parameters for periodic systems==
+* [[ZCOORD -- Forcing internal coordinates]]{{Zcoord}}
+
+* [[SYSTEM -- Lattice parameters for periodic systems]]{{System_lattice}}
 
