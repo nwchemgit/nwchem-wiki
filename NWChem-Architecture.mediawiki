@@ -16,7 +16,7 @@ arrays of data, (2) names of files that contain data, and (3) objects. Arrays ar
 #the number (N) of data items in the array (Note: A scalar is stored as an array of unit length.)
 #the N items of data of the specified type
 
-It is possible to enter data directly into the database using the [[Top-level#SET|SET directive]]. For example, to store a (64-bit precision) three-element real array with the name "reference energies" in the database, the directive is as follows:
+It is possible to enter data directly into the database using the [[SET|SET directive]]. For example, to store a (64-bit precision) three-element real array with the name "reference energies" in the database, the directive is as follows:
 
  set "reference energies" 0.0 1.0 -76.2
 
@@ -68,5 +68,5 @@ database resident object, functions in a similar fashion, using the default name
 The database is persistent, meaning that all input data and output data (calculation results) that are not destroyed in the course of execution are permanently stored. These data are therefore available to subsequent tasks or jobs. This makes the input for restart jobs very simple, since only new or changed data must be provided. It also makes the behavior of successive restart jobs identical to that of multiple tasks within one job.
 
 Sometimes, however, this persistence is undesirable, and it is necessary to return an NWChem module to its default behavior by
-restoring the database to its input-free state. In such a case, the [[Top-level#UNSET|UNSET]] directive can be used to
+restoring the database to its input-free state. In such a case, the [[UNSET|UNSET]] directive can be used to
 delete all database entries associated with a given module (including both inputs and outputs).
