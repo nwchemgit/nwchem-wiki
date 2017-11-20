@@ -1,3 +1,4 @@
+__NOTITLE__
 ==START / RESTART ==
 
 The START or RESTART directive define the start-up mode and are optional keywords. If one of these two directives is not specified explicitly, the code will infer one, based upon the name of the input file and the availability of the database. When allowing NWChem to infer the start-up directive, the user must be quite certain that the contents of the database will result in the desired action. It is usually more prudent to specify the directive explicitly, using the following format:
