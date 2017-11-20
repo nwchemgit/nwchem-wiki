@@ -1,3 +1,4 @@
+==TASK==
 
 The TASK directive is used to tell the code what to do. The input directives are parsed sequentially until a TASK directive
 is encountered, as described in [[Release66:Getting_Started#Input File Structure|Input File Structure]]. At that point, the calculation or operation specified in the TASK directive is performed. When that task is completed, the code looks for additional input to process until the next TASK directive is encountered, which is then executed. This process continues to the end of the input file. NWChem expects the last directive before the end-of-file to be a TASK directive. If it is not, a warning message is printed. Since the database is persistent, multiple tasks within one job behave exactly the same as multiple restart jobs with the same sequence of input.
