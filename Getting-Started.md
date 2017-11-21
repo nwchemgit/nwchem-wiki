@@ -12,7 +12,7 @@ NWChem consists of independent modules that perform the various
 functions of the code. Examples of modules include the input parser, SCF
 energy, SCF analytic gradient, DFT energy, etc.. Data is passed between
 modules and saved for restart using a disk-resident database or dumpfile
-(see [NWChem Architecture](Release66:Nwarch "wikilink")).
+(see [NWChem Architecture](Nwarch "wikilink")).
 
 The input to NWChem is composed of commands, called directives, which
 define data (such as basis sets, geometries, and filenames) and the
@@ -32,16 +32,16 @@ of input, which may contain multiple fields. Compound directives group
 together multiple simple directives that are in some way related and are
 terminated with an END directive. See the sample inputs ([Simple Input
 File](#simple-input-file---_SCF_geometry_optimization "wikilink") and
-[Water Molecule Input](#Water_Molecule_Sample_Input_File "wikilink"))
+[Water Molecule Input](#water-molecule-smple-input-file "wikilink"))
 and the input syntax specification ([Input Format and Syntax for
-Directives](#Input_Format_and_Syntax_for_Directives "wikilink")).
+Directives](#input-format-and-syntax-for-directives "wikilink")).
 
 All input is free format and case is ignored except for actual data
 (e.g., names/tags of centers, titles). Directives or blocks of
 module-specific directives (i.e., compound directives) can appear in any
 order, with the exception of the TASK directive (see [Input File
-Structure](#Input_File_Structure "wikilink") and
-[Tasks](Release66:Top-level#TASK "wikilink")) which is used to invoke an
+Structure](#input-file-structure "wikilink") and
+[Tasks](Top-level#TASK "wikilink")) which is used to invoke an
 NWChem module. All input for a given task must precede the TASK
 directive. This input specification rule allows the concatenation of
 multiple tasks in a single NWChem input file.
@@ -107,11 +107,11 @@ The start-up directives are
 After the input file has been scanned for the start-up directives, it is
 rewound and read sequentially. Input is processed either by the
 top-level parser (for the directives listed in [Top-level
-Directives](Release66:Top-level "wikilink"), such as TITLE, SET, ...) or
+Directives](Top-level "wikilink"), such as TITLE, SET, ...) or
 by the parsers for specific computational modules (e.g., SCF, DFT, ...).
 Any directives that have already been processed (e.g., MEMORY) are
 ignored. Input is read until a TASK directive (see
-[Tasks](Release66:Top-level#TASK "wikilink")) is encountered. A TASK
+[Tasks](Top-level#TASK "wikilink")) is encountered. A TASK
 directive requests that a calculation be performed and specifies the
 level of theory and the operation to be performed. Input processing then
 stops and the specified task is executed. The position of the TASK
@@ -227,7 +227,7 @@ follows:
 `task mp2 freq`
 
 The START directive
-([START/RESTART](Release66:Top-level#START_/_RESTART "wikilink") tells
+([START/RESTART](Top-level#START_/_RESTART "wikilink") tells
 NWChem that this run is to be started from the beginning. This directive
 need not be at the beginning of the input file, but it is commonly
 placed there. Existing database or vector files are to be ignored or
