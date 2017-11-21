@@ -21,7 +21,7 @@ block
 ` CCSD`  
 `   [MAXITER <integer maxiter default 20>]`  
 `   [THRESH  <real thresh default 10e-6>]`  
-`   [TOL2E <real tol2e default min(10e-12 , 0.01*<img alt="$thresh$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/90da5188eee4f5cf91f54c113b9d9b7b.svg?invert_in_darkmode&sanitize=true" align=middle width="47.93283pt" height="22.74591pt"/>)>]`  
+`   [TOL2E <real tol2e default min(10e-12 , 0.01*$thresh$)>]`  
 `   [DIISBAS  <integer diisbas default 5>]`  
 `   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \`  
 `           [virtual <integer nfzv default 0>]]`  
