@@ -9,7 +9,7 @@
 <!-- end list -->
 
   - [Excited-State Calculations (CIS, TDHF,
-    TDDFT)](Excited-State_Calculations "wikilink")
+    TDDFT)](Excited-State-Calculations "wikilink")
 
 <!-- end list -->
 
@@ -18,7 +18,7 @@
 <!-- end list -->
 
   - [Plane-Wave Density Functional Theory (plane-wave
-    DFT)](Plane-Wave_Density_Functional_Theory "wikilink")
+    DFT)](Plane-Wave-Density-Functional-Theory "wikilink")
 
 <!-- end list -->
 
