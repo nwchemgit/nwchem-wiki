@@ -1,4 +1,4 @@
-\_\_NOTITLE\_\_
+
 
 # Pseudopotential plane-wave density functional theory (NWPW)
 
