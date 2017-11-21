@@ -100,24 +100,24 @@ The Z-matrix input shown above is interpreted as follows:
     Only a tag is required for the first center.
 2.  tag2 i R  
     The second center requires specification of its tag and the bond
-    length (\(R_{Ci}\)) distance to a previous atom, which is identified
+    length ($R_{Ci}$) distance to a previous atom, which is identified
     by i.
 3.  tag3 i R j alpha  
     The third center requires specification of its tag, its bond length
-    distance (\(R_{Ci}\)) to one of the two previous centers (identified
-    by the value of i), and the bond angle \(\alpha = \widehat{Cij}\).
+    distance ($R_{Ci}$) to one of the two previous centers (identified
+    by the value of i), and the bond angle $\alpha = \widehat{Cij}$.
 4.  tag i R j alpha k beta \[\<integer orient default 0\>\]  
     The fourth, and all subsequent centers, require the tag, a bond
-    length (\(R_{Ci}\)) relative to center i, the bond angle with
-    centers i and j ( \(\alpha = \widehat{Cij}\), and either the
+    length ($R_{Ci}$) relative to center i, the bond angle with
+    centers i and j ( $\alpha = \widehat{Cij}$, and either the
     dihedral angle (β) between the current center and centers i, j, and
-    k (Figure 1), or a second bond angle \(\beta = \widehat{Cik}\) and
+    k (Figure 1), or a second bond angle $\beta = \widehat{Cik}$ and
     an orientation to the plane containing the other three centers
     (Figure 2 and 3).
 
 By default, β is interpreted as a dihedral angle (see Figure 1), but if
 the optional final parameter (<orient>) is specified with the value ±1,
-then β is interpreted as the angle \(\widehat{Cik}\). The sign of
+then β is interpreted as the angle <img alt="$\widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f378ddbbfa1730f1afcf8fae7f95e7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="27.564405pt" height="33.24123pt"/>. The sign of
 <orient> specifies the direction of the bond angle relative to the plane
 containing the three reference atoms. If <orient> is +1, then the new
 center (C) is above the plane (Figure 2); and if <orient> is -1, then C
@@ -170,7 +170,7 @@ or may not be identical.
 ` end`
 
 The following example illustrates the Z-matrix input for the molecule
-\(CH_3CF_3\). This input uses the numbers of centers to specify the
+<img alt="$CH_3CF_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cdaae9d00c367465fffd1cfa2ee4dead.svg?invert_in_darkmode&sanitize=true" align=middle width="63.8088pt" height="22.38192pt"/>. This input uses the numbers of centers to specify the
 connectivity information (i, j, and k), and uses symbolic variables for
 the Z-matrix parameters R, alpha, and beta, which are defined in the
 inputs for the VARIABLES and CONSTANTS directives.
