@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Effective Core Potentials
 
 Effective core potentials (ECPs) are a useful means of replacing the
@@ -17,7 +15,7 @@ A brief recapitulation of the development of RECPs is given here,
 following Pacios and Christiansen. The process can be viewed as starting
 from an atomic Dirac-Hartree-Fock calculation, done in jj coupling, and
 producing relativistic effective potentials (REPs) for each *l* and *j*
-value, \(U^{\rm REP}_{lj}\). From these, a local potential is extracted,
+value, <img alt="$U^{\rm REP}_{lj}$" src="svgs/2bfcf33d220bfe761e3f0afb5c2265f0.svg?invert_in_darkmode" align=middle width="40.08708pt" height="27.59823pt"/>. From these, a local potential is extracted,
 which for example contains the Coulomb potential of the core electrons
 balanced by the part of the nuclear attraction which cancels the core
 electron charge. The residue is expressed in a semi-local form,
