@@ -100,18 +100,17 @@ The Z-matrix input shown above is interpreted as follows:
     Only a tag is required for the first center.
 2.  tag2 i R  
     The second center requires specification of its tag and the bond
-    length ($R_{Ci}$) distance to a previous atom, which is identified
-    by i.
+    length (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) distance to a previous atom, which is identified by i.
 3.  tag3 i R j alpha  
     The third center requires specification of its tag, its bond length
-    distance ($R_{Ci}$) to one of the two previous centers (identified
+    distance (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) to one of the two previous centers (identified
     by the value of i), and the bond angle $\alpha = \widehat{Cij}$.
 4.  tag i R j alpha k beta \[\<integer orient default 0\>\]  
     The fourth, and all subsequent centers, require the tag, a bond
-    length ($R_{Ci}$) relative to center i, the bond angle with
-    centers i and j ( $\alpha = \widehat{Cij}$, and either the
+    length (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) relative to center i, the bond angle with
+    centers i and j ( <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>), and either the
     dihedral angle (β) between the current center and centers i, j, and
-    k (Figure 1), or a second bond angle $\beta = \widehat{Cik}$ and
+    k (Figure 1), or a second bond angle <img alt="$\beta = \widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7a54fc2c3b8cd34f0e2bd17402b0c9b3.svg?invert_in_darkmode&sanitize=true" align=middle width="59.565pt" height="33.24123pt"/> and
     an orientation to the plane containing the other three centers
     (Figure 2 and 3).
 
