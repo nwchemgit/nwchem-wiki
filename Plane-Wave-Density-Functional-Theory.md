@@ -4,7 +4,7 @@
 
 The NWChem plane-wave (NWPW) module uses pseudopotentials and plane-wave
 basis sets to perform Density Functional Theory calculations (simple
-introduction [Media:Pw-lecture.pdf](Media:Pw-lecture.pdf "wikilink")).
+introduction [Media:pw-lecture.pdf](Media:pw-lecture.pdf "wikilink")).
 This module complements the capabilities of the more traditional
 Gaussian function based approaches by having an accuracy at least as
 good for many applications, yet is still fast enough to treat systems
