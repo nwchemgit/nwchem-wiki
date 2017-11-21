@@ -22,5 +22,5 @@ __NOTITLE__
 
 *[[Examples|Examples]]{{:Examples}}
 
-*[[supplementary_information|Supplementary Information]]
+*[[Supplementary Information|Supplementary Information]]
 {{:supplementary_information}}
