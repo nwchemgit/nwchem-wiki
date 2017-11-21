@@ -101,4 +101,4 @@ transformation.
 [`Pm-3m`](Pm-3m "wikilink")`       `[`Pn-3n`](Pn-3n "wikilink")`       `[`Pm-3n`](Pm-3n "wikilink")`       `[`Pn-3m`](Pn-3m "wikilink")`       `[`Fm-3m`](Fm-3m "wikilink")  
 [`Fm-3c`](Fm-3c "wikilink")`       `[`Fd-3m`](Fd-3m "wikilink")`       `[`Fd-3c`](Fd-3c "wikilink")`       `[`Im-3m`](Im-3m "wikilink")`       `[`Ia-3d`](Ia-3d "wikilink")
 
-{{:geometry_load}}
+<!--{{:geometry_load}}-->
