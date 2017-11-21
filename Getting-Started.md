@@ -4,8 +4,8 @@
 
 This section provides an overview of NWChem input and program
 architecture, and the syntax used to describe the input. See [Simple
-Input File](_edit#simple-input-file----scf-geometry-optimization)
-and [Water Molecule Input](_edit#water-molecule-sample-input-file)
+Input File](#simple-input-file----scf-geometry-optimization)
+and [Water Molecule Input](#water-molecule-sample-input-file)
 for examples of NWChem input files with detailed explanation.
 
 NWChem consists of independent modules that perform the various
