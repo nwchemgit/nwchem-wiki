@@ -4,7 +4,7 @@
 <!-- end list -->
 
   - [Density Functional Theory
-    (DFT)](Density_Functional_Theory_for_Molecules "wikilink")
+    (DFT)](Density-Functional-Theory-for-Molecules "wikilink")
 
 <!-- end list -->
 
