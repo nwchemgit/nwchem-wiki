@@ -1,3 +1,4 @@
+\_\_NOTITLE\_\_
 
 # Effective Core Potentials
 
@@ -20,7 +21,7 @@ value, \(U^{\rm REP}_{lj}\). From these, a local potential is extracted,
 which for example contains the Coulomb potential of the core electrons
 balanced by the part of the nuclear attraction which cancels the core
 electron charge. The residue is expressed in a semi-local form,
-<img alt="$U^{REP} = U^{REP}_{LJ}(r) + \sum_{l=0}^{L-1} \sum_{j=l-1/2}^{l+1/2} \left[ U^{REP}_{ij}(r) - U^{REP}_{LJ}(r)] \right] \sum_m \vert lj m \rangle \langle lj m \vert$" src="https://rawgit.com/philipashlock/mediawiki-to-markdown/master/svgs/e9b9fd02f41fadedf5a95c153c362854.svg?invert_in_darkmode" align=middle width="548.877945pt" height="34.27314pt"/>
+<img alt="$U^{REP} = U^{REP}_{LJ}(r) + \sum_{l=0}^{L-1} \sum_{j=l-1/2}^{l+1/2} \left[ U^{REP}_{ij}(r) - U^{REP}_{LJ}(r)] \right] \sum_m \vert lj m \rangle \langle lj m \vert$" src="svgs/e9b9fd02f41fadedf5a95c153c362854.svg?invert_in_darkmode" align=middle width="548.877945pt" height="34.27314pt"/>
 
 where *L* is one larger than the maximum angular momentum in the atom.
 The scalar potential is obtained by averaging the REPs for each *j* for
