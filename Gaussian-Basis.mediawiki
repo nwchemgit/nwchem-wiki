@@ -169,7 +169,7 @@ Here we compute the IR spectrum and the element-wise breakdown of the vibrationa
 
 
 
-The IR spectrum and vibrational density of states were generated from the [[Media:qmd_tools.tar.gz|qmd_analysis code]] with the following command.
+The IR spectrum and vibrational density of states were generated from the [[qmd_tools.tar.gz|qmd_analysis code]] with the following command.
 
  ./qmd_analysis -xyz SiCl4.xyz -steps 15000 -skip 5000 -ts 10.0 -temp 20.0 -smax 800 -width 10.0
 
@@ -177,4 +177,4 @@ where we have skipped the first 5000 steps from the simulation and only used the
 
 The computed IR spectrum and vibrational density of states are shown here.
 
-[[File:SiCl4IR.png|400px|]],[[File:SiCl4VDOS.png|400px|]]
+[[SiCl4IR.png|400px|]],[[SiCl4VDOS.png|400px|]]
