@@ -16,8 +16,7 @@ refer to the following paper: S. A. Fischer, T. W. Ueltschi, P. Z.
 El-Khoury, A. L. Mifflin, W. P. Hess, H.F. Wang, C. J. Cramer, N. Govind
 "Infrared and Raman Spectroscopy from Ab Initio Molecular Dynamics and
 Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
-Phys. Chem. B, 120 (8), pp 1429–1436 (2016), DOI:
-10.1021/acs.jpcb.5b03323 (2015) Publication Date (Web): July 29, 2015
+Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015) Publication Date (Web): July 29, 2015
 
 `QMD`  
 `  [dt_nucl <double default 10.0>]`  
