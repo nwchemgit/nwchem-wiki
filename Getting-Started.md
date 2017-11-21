@@ -12,7 +12,7 @@ NWChem consists of independent modules that perform the various
 functions of the code. Examples of modules include the input parser, SCF
 energy, SCF analytic gradient, DFT energy, etc.. Data is passed between
 modules and saved for restart using a disk-resident database or dumpfile
-(see [NWChem Architecture](Nwarch "wikilink")).
+(see [NWChem Architecture](NWchem-Architecture "wikilink")).
 
 The input to NWChem is composed of commands, called directives, which
 define data (such as basis sets, geometries, and filenames) and the
