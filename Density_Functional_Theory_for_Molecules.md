@@ -120,7 +120,7 @@ are:
 ` DIRECT`  
 ` SEMIDIRECT [filesize `<integer filesize default disksize>`]`  
 `            [memsize  `<integer memsize default available>`]`  
-`            [filename `<string filename default "$file_prefix.aoints$">`]`
+`            [filename `<string filename default $file_prefix.aoints$>`]`
 ` INCORE`  
 ` ITERATIONS <integer iterations default 30>`  
 ` MAX_OVL`  
