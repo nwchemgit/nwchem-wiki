@@ -15,11 +15,11 @@ A brief recapitulation of the development of RECPs is given here,
 following Pacios and Christiansen. The process can be viewed as starting
 from an atomic Dirac-Hartree-Fock calculation, done in jj coupling, and
 producing relativistic effective potentials (REPs) for each *l* and *j*
-value, <img alt="$U^{\rm REP}_{lj}$" src="svgs/2bfcf33d220bfe761e3f0afb5c2265f0.svg?invert_in_darkmode" align=middle width="40.08708pt" height="27.59823pt"/>. From these, a local potential is extracted,
+value, <img alt="$U^{\rm REP}_{lj}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2bfcf33d220bfe761e3f0afb5c2265f0.svg?sanitize=true" align=middle width="40.08708pt" height="27.59823pt"/>. From these, a local potential is extracted,
 which for example contains the Coulomb potential of the core electrons
 balanced by the part of the nuclear attraction which cancels the core
 electron charge. The residue is expressed in a semi-local form,
-<img alt="$U^{REP} = U^{REP}_{LJ}(r) + \sum_{l=0}^{L-1} \sum_{j=l-1/2}^{l+1/2} \left[ U^{REP}_{ij}(r) - U^{REP}_{LJ}(r)] \right] \sum_m \vert lj m \rangle \langle lj m \vert$" src="svgs/e9b9fd02f41fadedf5a95c153c362854.svg?invert_in_darkmode" align=middle width="548.877945pt" height="34.27314pt"/>
+<img alt="$U^{REP} = U^{REP}_{LJ}(r) + \sum_{l=0}^{L-1} \sum_{j=l-1/2}^{l+1/2} \left[ U^{REP}_{ij}(r) - U^{REP}_{LJ}(r)] \right] \sum_m \vert lj m \rangle \langle lj m \vert$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9b9fd02f41fadedf5a95c153c362854.svg?sanitize=true" align=middle width="548.877945pt" height="34.27314pt"/>
 
 where *L* is one larger than the maximum angular momentum in the atom.
 The scalar potential is obtained by averaging the REPs for each *j* for
