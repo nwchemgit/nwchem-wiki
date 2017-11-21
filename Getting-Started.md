@@ -19,11 +19,11 @@ define data (such as basis sets, geometries, and filenames) and the
 actions to be performed on that data. Directives are processed in the
 order presented in the input file, with the exception of certain
 start-up directives (see [Input File
-Structure](#Input_File_Structure "wikilink")) which provide critical job
+Structure](#input-file-structure "wikilink")) which provide critical job
 control information, and are processed before all other input. Most
 directives are specific to a particular module and define data that is
 used by that module only. A few directives (see [Top-level
-Directives](Release66:Top-level#Top-level_Directives "wikilink"))
+Directives](Top-level#top-level-directives "wikilink"))
 potentially affect all modules, for instance by specifying the total
 electric charge on the system.
 
@@ -31,7 +31,7 @@ There are two types of directives. Simple directives consist of one line
 of input, which may contain multiple fields. Compound directives group
 together multiple simple directives that are in some way related and are
 terminated with an END directive. See the sample inputs ([Simple Input
-File](#Simple_Input_File_--_SCF_geometry_optimization "wikilink") and
+File](#simple-input-file---_SCF_geometry_optimization "wikilink") and
 [Water Molecule Input](#Water_Molecule_Sample_Input_File "wikilink"))
 and the input syntax specification ([Input Format and Syntax for
 Directives](#Input_Format_and_Syntax_for_Directives "wikilink")).
