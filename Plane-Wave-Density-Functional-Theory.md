@@ -4,7 +4,7 @@
 
 The NWChem plane-wave (NWPW) module uses pseudopotentials and plane-wave
 basis sets to perform Density Functional Theory calculations (simple
-introduction [Media:pw-lecture.pdf](Media:pw-lecture.pdf "wikilink")).
+introduction [pw-lecture.pdf](pw-lecture.pdf "wikilink")).
 This module complements the capabilities of the more traditional
 Gaussian function based approaches by having an accuracy at least as
 good for many applications, yet is still fast enough to treat systems
@@ -2832,7 +2832,7 @@ molecular dynamics by combining the motion of the ion cores and a
 fictitious motion for the Kohn-Sham orbitals of density-functional
 theory (R. Car and M. Parrinello, Phys. Rev. Lett. **55**, 2471, (1985)
 - simple introduction
-[Media:Cpmd-lecture.pdf](Media:Cpmd-lecture.pdf "wikilink")). At the
+[cpmd-lecture.pdf](cpmd-lecture.pdf "wikilink")). At the
 heart of this method they introduced a fictitious kinetic energy
 functional for the Kohn-Sham
 orbitals.
@@ -2967,7 +2967,7 @@ where \(T_e^0\) and \(T_{ionic}^0\) are the initial temperatures, and
 ## NWPW Tutorial 1: S\(_2\) dimer examples with PSPW
 
 A description of all the examples in NWPW Tutorial 1 can be found in the
-attached pdf [Media:nwpwexample1.pdf](Media:nwpwexample1.pdf "wikilink")
+attached pdf [nwpwexample1.pdf](nwpwexample1.pdf "wikilink")
 
 ### Total energy of S\(_2\) dimer with LDA approximation
 
@@ -3180,7 +3180,7 @@ output:[Media:s2-example4.nwout](Media:s2-example4.nwout "wikilink")
 In this example, a constant energy Car-Parrinello simulation of S\(_2\)
 dimer using LDA approximation is calculated. A brief introduction to the
 Car-Parrinello method can be found in
-[Media:cpmd-lecture.pdf](Media:cpmd-lecture.pdf "wikilink")
+[cpmd-lecture.pdf](cpmd-lecture.pdf "wikilink")
 
 ` echo`  
 ` title "AIMD simulation of s2-dimer"`  
@@ -3441,8 +3441,8 @@ Input
 
 ## NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics
 
-([Media:isodesmic.pdf](Media:isodesmic.pdf "wikilink")
-[Media:isodesmic.tgz](Media:isodesmic.tgz "wikilink"))
+([isodesmic.pdf](isodesmic.pdf "wikilink")
+[isodesmic.tgz](isodesmic.tgz "wikilink"))
 
 The development of a computational scheme that can accurately predict
 reaction energies requires some care. As shown in Table 1 energy errors
@@ -4812,7 +4812,7 @@ program:[Media:makehistogram.gz](Media:makehistogram.gz "wikilink"))
 A description of using the WHAM method for generating free energy of the
 gas-phase dissociation reaction CH\(_3\)Cl \(\rightarrow\) CH\(_3\)+Cl
 can be found in the attached pdf
-([Media:nwchem-new-pmf.pdf](Media:nwchem-new-pmf.pdf "wikilink"))
+([nwchem-new-pmf.pdf](nwchem-new-pmf.pdf "wikilink"))
 
 ## PAW Tutorial
 
