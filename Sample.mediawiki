@@ -62,7 +62,7 @@ An external field may be simulated with point charges. The charges here apply a 
 
 The final energy should be -128.496441, which together with the previous field-free result yields an estimate for the polarizability of 1.83 atomic units. Note that by [[Geometry|default]] NWChem does not include the interaction between the two point charges in the total energy.
 
-==SCF energy of <math>H_{2}CO</math> using ECPs for C and O==
+==SCF energy of H<sub>2</sub>CO using ECPs for C and O==
 
 The following will compute the SCF energy for formaldehyde with ECPs on the Carbon and Oxygen centers.
 
