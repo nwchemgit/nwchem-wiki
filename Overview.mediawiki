@@ -1,7 +1,7 @@
 __NOTITLE__
 *[[Capabilities|Comprehensive Suite of Scalable Capabilities]]
 
-*[[Compiling_NWChem|Compiling NWChem]]
+*[[Compiling NWChem|Compiling NWChem]]
 
 *[[Getting Started|Getting Started]]
 
