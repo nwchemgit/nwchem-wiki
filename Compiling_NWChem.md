@@ -642,13 +642,13 @@ required:
 `make nwchem_config NWCHEM_MODULES="all python"`  
 `make`
 
-#### NWChem 6.6 on Centos 7.1
+#### NWChem 6.8 on Centos 7.1/Fedora 27
 
   - Packages
 required:
 
 `python-devel gcc-gfortran  openblas-devel openblas-serial64 openmpi-devel scalapack-openmpi-devel \`  
-`elpa-openmpi-devel tcsh openssh-clients which`
+`elpa-openmpi-devel tcsh openssh-clients which tar`
 
   - Settings
 
