@@ -501,8 +501,8 @@ CC variables. Please provide filenames only as in the examples above\!
 Note 1: If in a Linux environment, FC is set equal to anything other
 than the tested compilers, there is no guarantee of a successful
 installation, since the makefile structure has not been tested to
-process other settings. In other words, please avoid make FC="ifort -O3
--xhost" and stick to make FC="ifort", instead
+process other settings. In other words, please avoid make FC="ifort -O3 -xhost"
+and stick to make FC="ifort", instead
 
 Note 2: It's better to avoid redefining CC, since a) NWChem does not
 have C source that is a computational bottleneck and b) we typically
