@@ -227,8 +227,7 @@ are
 `  % setenv MPI_LIB /usr/local/mpich2.141p1/lib `  
 `  % setenv MPI_INCLUDE '/usr/local/mpich2.141p1/include`
 
-Note: a script is available in NWChem 6.5 to extract the environment
-variables listed above
+Note: a script is available in NWChem 6.5 to extract the environment variables listed above
 
 $NWCHEM\_TOP/contrib/distro-tools/getmpidefs\_nwchem
 
