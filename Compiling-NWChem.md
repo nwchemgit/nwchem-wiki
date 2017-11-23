@@ -493,8 +493,7 @@ Or one can supply the compiler options to the make command, e.g:
 
 `  % make FC=ifort CC=icc`
 
-For example, on Linux FC could be set either equal to ifort, gfortran or
-pgf90
+For example, on Linux FC could be set either equal to ifort, gfortran or pgf90
 
 **Nota bene:** NWChem does NOT support usage of the full path in FC and
 CC variables. Please provide filenames only as in the examples above\!
