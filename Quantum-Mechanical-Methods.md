@@ -1,5 +1,5 @@
   - [Hartree-Fock (HF)
-    Theory](Hartree-Fock_Theory_for_Molecules "wikilink")
+    Theory](Hartree-Fock-Theory-for-Molecules "wikilink")
 
 <!-- end list -->
 
