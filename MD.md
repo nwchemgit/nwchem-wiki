@@ -228,22 +228,22 @@ Multi-configuration thermodynamic integration
 
 The following keywords control free energy difference simulations. Multi-configuration thermodynamic integrations are always combined with multiple step thermodynamic perturbations.
 
-`   (forward | reverse) [[`<integer mrun>` of] `<integer maxlam>`]`
+`   (forward | reverse) [[<integer mrun> of] <integer maxlam>]`
 `   `
 
 Specifies the direction and number of integration steps in free energy evaluations, with forward being the default direction. <mrun> is the number of ensembles that will be generated in this calculation, and <maxlam> is the total number of ensembles to complete the thermodynamic integration. The default value for <maxlam> is 21. The default value of <mrun> is the value of <maxlam>.
 
-`   error `<real edacq>
+`   error <real edacq>`
 `   `
 
-Specifies the maximum allowed statistical error in each generated ensemble, where <edacq> is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to $\\lambda$ with a default of 5.0 \(kJ mol^{-1}\).
+Specifies the maximum allowed statistical error in each generated ensemble, where <edacq> is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/> with a default of 5.0 <img alt="$kJ mol^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9e6f26ffa9c11ec7fc178fb4ec8dd59f.svg?invert_in_darkmode&sanitize=true" align=middle width="63.9969pt" height="26.70657pt"/>.
 
-`   drift `<real ddacq>
+`   drift <real ddacq>`
 `   `
 
-Specifies the maximum allowed drift in the free energy result, where <ddacq> is the maximum drift allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 \(kJ mol^{-1} ps^{-1}\).
+Specifies the maximum allowed drift in the free energy result, where <ddacq> is the maximum drift allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1} ps^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/31a9d30a29fa0f4c5923496e777ab5c2.svg?invert_in_darkmode&sanitize=true" align=middle width="97.561695pt" height="26.70657pt"/>.
 
-`   factor `<real fdacq>
+`   factor <real fdacq>`
 `   `
 
 Specifies the maximum allowed change in ensemble size where <fdacq> is the minimum size of an ensemble relative to the previous ensemble in the calculation with a default value of 0.75.
@@ -253,10 +253,10 @@ Specifies the maximum allowed change in ensemble size where <fdacq> is the minim
 
 Specifies that a free energy decomposition is to be carried out. Since free energy contributions are path dependent, results from a decomposition analysis can no be unambiguously interpreted, and the default is not to perform this decomposition.
 
-`   sss [delta `<real delta>`]`
+`   sss [delta <real delta>]`
 `   `
 
-Specifies that atomic non-bonded interactions describe a dummy atom in either the initial or final state of the thermodynamic calculation will be calculated using separation-shifted scaling, where <delta> is the separation-shifted scaling factor with a default of \(0.075 nm^2\). This scaling method prevents problems associated with singularities in the interaction potentials.
+Specifies that atomic non-bonded interactions describe a dummy atom in either the initial or final state of the thermodynamic calculation will be calculated using separation-shifted scaling, where <delta> is the separation-shifted scaling factor with a default of <img alt="$0.075 nm^2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde6b54b6723ccfc3b0293826bfcfd13.svg?invert_in_darkmode&sanitize=true" align=middle width="68.040555pt" height="26.70657pt"/>. This scaling method prevents problems associated with singularities in the interaction potentials.
 
 `   new | renew | extend`
 `   `
@@ -276,13 +276,13 @@ Specifies the integration algorithm, where leapfrog specifies the default leap f
 `   guided [`<real fguide default 0.2>` [`<real tguide default 0.2>`]]`
 `   `
 
-Specifies the use of the guided molecular dynamics simulation technique. Variable *fguide* defines the fraction of the averaged forces *g* to be added to the forces \(f^{f}\) evaluated using the force field functions to obtain the forces *f* used to advance the coordinates.
+Specifies the use of the guided molecular dynamics simulation technique. Variable *fguide* defines the fraction of the averaged forces *g* to be added to the forces <img alt="$f^{f}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aac399a766fd66ec52ce651f8dbc7e3a.svg?invert_in_darkmode&sanitize=true" align=middle width="17.458485pt" height="27.85299pt"/> evaluated using the force field functions to obtain the forces *f* used to advance the coordinates.
 
-\(f_i=f^{f}_i+fguide * g_{i-1}\)
+<img alt="$f_i=f^{f}_i+fguide * g_{i-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cc72f07f1f63ba27a370261690168ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="167.770845pt" height="31.72125pt"/>
 
 Variable tguide defines the length of the averaging relative to the timestep Δ *t*.
 
-\(g_i = {\Delta t\over tguide} f_i + \left(1- {\Delta t\over tguide}\right) g_{i-1}\)
+<img alt="$g_i = {\Delta t\over tguide} f_i + \left(1- {\Delta t\over tguide}\right) g_{i-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cd0fbec5c477acca717650497fc6753f.svg?invert_in_darkmode&sanitize=true" align=middle width="231.061545pt" height="37.80348pt"/>
 
 The current implementation is still under development.
 
@@ -320,7 +320,7 @@ Specifies a constant temperature ensemble using Berendsen's thermostat, where <t
 `   isobar [`<real prsext>`] [trelax `<real prsrlx>` ] \`
 `          [compress `<real compr>`] [anisotropic] [xy | z | xy-z]`
 
-Specifies a constant pressure ensemble using Berendsen's piston, where <prsext> is the external pressure with a default of \(1.025 10^{5} Pa\), <prsrlx> is the pressure relaxation time in ps with a default of 0.5, and <compr> is the system compressibility in \(m{^2}N^{-1}\) with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
+Specifies a constant pressure ensemble using Berendsen's piston, where <prsext> is the external pressure with a default of <img alt="$1.025 10^{5} Pa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7104a9cbf96d125d88749351b5c33f4.svg?invert_in_darkmode&sanitize=true" align=middle width="82.508745pt" height="26.70657pt"/>, <prsrlx> is the pressure relaxation time in ps with a default of 0.5, and <compr> is the system compressibility in <img alt="$m{^2}N^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e2c5efb4ab2a30c085dc8485b09a9d54.svg?invert_in_darkmode&sanitize=true" align=middle width="53.468085pt" height="26.70657pt"/> with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
 
 Velocity reassignments
 ----------------------
@@ -383,7 +383,7 @@ Long range electrostatic interactions are implemented using the smooth particle 
 `       [order `<integer morder>`] [fft `<integer imfft>`]\`
 `       [procs `<integer nprocs>`] [solvent]`
 
-Specifies the use of smooth particle-mesh Ewald long range interaction treatment, where ng is the number of grid points per dimension, ealpha is the Ewald coefficient in \(nm^{-1}\), with a default that leads to a tolerance of \(10^{-4}\) at the short range cutoff radius, and morder is order of the Cardinal B-spline interpolation which must be an even number and at least 4 (default value). A platform specific 3D fast Fourier transform is used, if available, when imfft is set to 2. nprocs can be used to define a subset of processors to be used to do the FFT calculations. If solvent is specified, the charge grid will be calculated from the solvent charges only.
+Specifies the use of smooth particle-mesh Ewald long range interaction treatment, where ng is the number of grid points per dimension, ealpha is the Ewald coefficient in <img alt="$nm^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5ca6e2b7bcbc238bdbb565ea0cf817ae.svg?invert_in_darkmode&sanitize=true" align=middle width="40.972965pt" height="26.70657pt"/>, with a default that leads to a tolerance of <img alt="$10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6784e1fd68d75a57b35bd36247a1aefe.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> at the short range cutoff radius, and morder is order of the Cardinal B-spline interpolation which must be an even number and at least 4 (default value). A platform specific 3D fast Fourier transform is used, if available, when imfft is set to 2. nprocs can be used to define a subset of processors to be used to do the FFT calculations. If solvent is specified, the charge grid will be calculated from the solvent charges only.
 
 `   react [`<real dielec default 80.0>`]`
 
@@ -442,7 +442,7 @@ Specifies that pairlists will be atom based. Normally pairlist are charge group 
 Autocorrelation function
 ------------------------
 
-For the evaluation of the statistical error of multi-configuration thermodynamic integration free energy results a correlated data analysis is carried out, involving the calculation of the autocorrelation function of the derivative of the Hamiltonian with respect to the control variable $\\lambda$.
+For the evaluation of the statistical error of multi-configuration thermodynamic integration free energy results a correlated data analysis is carried out, involving the calculation of the autocorrelation function of the derivative of the Hamiltonian with respect to the control variable <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>.
 
 `   auto `<integer lacf>` [fit `<integer nfit>`] [weight `<real weight>`]`
 
@@ -571,7 +571,7 @@ The following keywords control recording data to file. Record directives may be 
 `          [acf] [cnv] [fet]`
 `          [binary] [ascii] [ecce] [argos]`
 
--   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in $\\lambda$. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
+-   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
 
 <!-- -->
 
@@ -619,7 +619,7 @@ The following keywords control recording data to file. Record directives may be 
 
 <!-- -->
 
--   Keyword free specifies the frequency <nffree> in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every $\\lambda$. This option is obsolete. All data are required to do the final analysis.
+-   Keyword free specifies the frequency <nffree> in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>. This option is obsolete. All data are required to do the final analysis.
 
 <!-- -->
 
@@ -654,9 +654,9 @@ Program control options
 
 Determines the type of dynamic load balancing performed, where the default is none. Load balancing option size is resizing cells on a node, and pairs redistributes the cell-cell interactions over nodes. Keyword reset will reset the load balancing read from the restart file. The level of cell resizing can be influenced with *factld*. The cells on the busiest node are resized with a factor
 
-\(\left( 1 - factld * { {T_{sync} \over n_p} - t^{min}_{sync} \over t_{wall}} \right)^{1\over 3}\)
+<img alt="$\left( 1 - factld * { {T_{sync} \over n_p} - t^{min}_{sync} \over t_{wall}} \right)^{1\over 3}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d6623ab11535e7438b54adef23725be3.svg?invert_in_darkmode&sanitize=true" align=middle width="201.328545pt" height="61.00545pt"/>
 
-Where \(T_{sync}\) is the accumulated synchronization time of all nodes, \(n_p\) is the total number of nodes, \(t^{min}_{sync}\) is the synchronization time of the busiest node, and \(t_{wall}\) is the wall clock time of the molecular dynamics step. For the combined load balancing, ldpair is the number of successive pair redistribution load balancing steps in which the accumulated synchronization time increases, before a resizing load balancing step will be attempted. Load balancing is only performed in molecular dynamics steps in which the pair-list is updated. The default load balancing is equivalent to specifying
+Where <img alt="$T_{sync}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cc10b4813049c20dc63220c1959ce82c.svg?invert_in_darkmode&sanitize=true" align=middle width="36.754575pt" height="22.38192pt"/> is the accumulated synchronization time of all nodes, <img alt="$n_p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9371e0bac3b9ddbbe7ff10223641b00.svg?invert_in_darkmode&sanitize=true" align=middle width="16.58118pt" height="14.10255pt"/> is the total number of nodes, <img alt="$t^{min}_{sync}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6371b18f413b2ec25e3f94e7f628005b.svg?invert_in_darkmode&sanitize=true" align=middle width="33.098175pt" height="27.10224pt"/> is the synchronization time of the busiest node, and <img alt="$t_{wall}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dbd54c6eef2fd24cbf082f78100048e5.svg?invert_in_darkmode&sanitize=true" align=middle width="31.21767pt" height="20.1465pt"/> is the wall clock time of the molecular dynamics step. For the combined load balancing, ldpair is the number of successive pair redistribution load balancing steps in which the accumulated synchronization time increases, before a resizing load balancing step will be attempted. Load balancing is only performed in molecular dynamics steps in which the pair-list is updated. The default load balancing is equivalent to specifying
 
 `   load pairs 10 size 0.75`
 
