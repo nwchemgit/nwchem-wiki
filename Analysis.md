@@ -132,7 +132,7 @@ To analyze the root mean square deviation from the specified reference coordinat
 
 `rmsd`
 
-To analyze protein $\\phi$-$\\psi$ and backbone hydrogen bonding:
+To analyze protein <img alt="$\\phi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/607b35d374182a21d59771b5613c77b9.svg?invert_in_darkmode&sanitize=true" align=middle width="32.846055pt" height="45.82083pt"/>-<img alt="$\\psi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/368287a63c78370a3a419dc1b0036fb6.svg?invert_in_darkmode&sanitize=true" align=middle width="32.846055pt" height="45.82083pt"/> and backbone hydrogen bonding:
 
 `ramachandran`
 
@@ -187,7 +187,7 @@ Coordinate histograms are specified by
 
 `histogram `<integer idef>` [`<integer length>`] zcoordinate `<string filename>
 
-where *idef* is the atom group definition number, *length* is the size of the histogram, zcoordinate is the currently only histogram option, and $filename$ is the filname to which the histogram is written.
+where *idef* is the atom group definition number, *length* is the size of the histogram, zcoordinate is the currently only histogram option, and <img alt="$filename$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ebe1efea94507a0bee82dbc9ac2d018a.svg?invert_in_darkmode&sanitize=true" align=middle width="68.75649pt" height="22.74591pt"/> is the filname to which the histogram is written.
 
 Order parameters are evalated using
 
@@ -269,7 +269,7 @@ Atom rendering is specified using
 `       [ `<integer iatag>` [ `<integer jatag default iatag>` ] [ `<real rtag default 0.0>` ] ]`
 `       [ `<string anam>` ]`
 
-for all atoms anam within a distance $rtag$ from segments $iatag$ through $jatag$, and a scaling factor of $rval$. A question mark can be used in anam as a wild card character.
+for all atoms anam within a distance <img alt="$rtag$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d27dff583239b5f92bb177f0e93a75de.svg?invert_in_darkmode&sanitize=true" align=middle width="30.81474pt" height="20.1465pt"/> from segments <img alt="$iatag$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a5fc2c1cb1c7c00ad2a0c026c155617.svg?invert_in_darkmode&sanitize=true" align=middle width="37.26822pt" height="21.60213pt"/> through <img alt="$jatag$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3c2df9732319cf79e85ac465559f3e57.svg?invert_in_darkmode&sanitize=true" align=middle width="39.311415pt" height="21.60213pt"/>, and a scaling factor of <img alt="$rval$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e59caa52426cab252f5bed55bc1b699.svg?invert_in_darkmode&sanitize=true" align=middle width="30.23889pt" height="22.74591pt"/>. A question mark can be used in anam as a wild card character.
 
 Atom color is specified using
 
@@ -302,7 +302,7 @@ The initial sequence number of esp related files is defined by
 
 `index `<integer index default 1>
 
-A sequence of trajectory files with unequal lengths can be converted to files with all $nclean$ frames using
+A sequence of trajectory files with unequal lengths can be converted to files with all <img alt="$nclean$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a82f80fa1ad88445e6814ef9998b308d.svg?invert_in_darkmode&sanitize=true" align=middle width="48.239565pt" height="22.74591pt"/> frames using
 
 `clean `<integer nclean>
 
@@ -315,7 +315,7 @@ A file in plt format of the electrostatic potential resulting from partial charg
 `     [ `<real rcut default 1.0>` ] [periodic [`<integer iper default 3>`]] \`
 `     [ `<string xfile>` [ `<string pltfile>` ] ]`
 
-The input coordinates are taken from the xyzq file that can be generated from a rst by the prepare module. Parameter spacing specifies the number of gridpoints per nm, rcut specifies extent of the charge grid beyond the molecule. Periodic boundaries will be used if periodic is specified. If iper is set to 2, periodic boundary conditions are applied in x and y dimensions only. If periodic is specified, a negative value of rcut will extend the grid in the periodic dimensions by abs(rcut), otherwise this value will be ignored in the periodic dimensions. The resulting plt formatted file pltfile can be viewed with the gOpenMol program. The resulting electrostatic potential grid is in units of \(kJ mol^{-1} e^{-1}\). If no files are specified, only the parameters are set. This analysis applies to solute(s) only.
+The input coordinates are taken from the xyzq file that can be generated from a rst by the prepare module. Parameter spacing specifies the number of gridpoints per nm, rcut specifies extent of the charge grid beyond the molecule. Periodic boundaries will be used if periodic is specified. If iper is set to 2, periodic boundary conditions are applied in x and y dimensions only. If periodic is specified, a negative value of rcut will extend the grid in the periodic dimensions by abs(rcut), otherwise this value will be ignored in the periodic dimensions. The resulting plt formatted file pltfile can be viewed with the gOpenMol program. The resulting electrostatic potential grid is in units of <img alt="$kJ mol^{-1} e^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7c7b8255032b643e31a6d41dd956b79f.svg?invert_in_darkmode&sanitize=true" align=middle width="89.27094pt" height="26.70657pt"/>. If no files are specified, only the parameters are set. This analysis applies to solute(s) only.
 
 The electrostatic potential at specific point are evaluated using
 
