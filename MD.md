@@ -88,7 +88,7 @@ The extension 1-9 defines the priority of database file.
 | **sgm** | segments   |
 |         |            |
 
-</center>
+
 ### Force fields
 
 Force fields recognized are
