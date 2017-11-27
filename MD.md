@@ -36,7 +36,7 @@ File names used have the form *system*\_*calc*.*ext*, with exception of the [top
 
 The extensions <ext> identify the kind of information on a file, and are pre-determined.
 
-<center>
+
 |           |                                                              |
 |-----------|--------------------------------------------------------------|
 | **dbg**   | debug file                                                   |
@@ -58,14 +58,14 @@ The extensions <ext> identify the kind of information on a file, and are pre-det
 | **tim**   | timing analysis file                                         |
 | **top**   | topology file, contains the static description of a system   |
 | **trj**   | trajectory file                                              |
-||
+|           |                                                              |
 
-</center>
+
 ### Databases
 
 Database file supplied with NWChem and used by the prepare module are found in directories with name ffield\_*level*, where *ffield* is any of the supported [force fields](#Force_fields "wikilink"). The source of the data is identified by *level*, and can be
 
-<center>
+
 |       |                             |
 |-------|-----------------------------|
 | level | Description                 |
@@ -74,36 +74,34 @@ Database file supplied with NWChem and used by the prepare module are found in d
 | **q** | contributed data            |
 | **u** | user preferred data         |
 | **t** | user defined temporary data |
-||
+|       |                             |
 
-</center>
 The user is can replace these directories or add additional database files by specifying them in the *.nwchemrc* file. or in the prepare input file.
 
 The extension 1-9 defines the priority of database file.
 
-<center>
 |         |            |
 |---------|------------|
 | **frg** | fragments  |
 | **par** | parameters |
 | **seq** | sequences  |
 | **sgm** | segments   |
-||
+|         |            |
 
 </center>
 ### Force fields
 
 Force fields recognized are
 
-<center>
+
 |         |             |                               |
 |---------|-------------|-------------------------------|
 | Keyword | Force field | Status                        |
 | amber   | AMBER99     | AMBER95,GLYCAM also available |
 | charmm  | CHARMM      |                               |
-||
+|         |             |                               |
 
-</center>
+
 Format of fragment files
 ------------------------
 
