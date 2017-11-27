@@ -236,7 +236,7 @@ Specifies the direction and number of integration steps in free energy evaluatio
 `   error <real edacq>`
 `   `
 
-Specifies the maximum allowed statistical error in each generated ensemble, where <edacq> is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/> with a default of 5.0 <img alt="$kJ mol^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9e6f26ffa9c11ec7fc178fb4ec8dd59f.svg?invert_in_darkmode&sanitize=true" align=middle width="63.9969pt" height="26.70657pt"/>.
+Specifies the maximum allowed statistical error in each generated ensemble, where <edacq> is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9e6f26ffa9c11ec7fc178fb4ec8dd59f.svg?invert_in_darkmode&sanitize=true" align=middle width="63.9969pt" height="26.70657pt"/>.
 
 `   drift <real ddacq>`
 `   `
@@ -442,7 +442,7 @@ Specifies that pairlists will be atom based. Normally pairlist are charge group 
 Autocorrelation function
 ------------------------
 
-For the evaluation of the statistical error of multi-configuration thermodynamic integration free energy results a correlated data analysis is carried out, involving the calculation of the autocorrelation function of the derivative of the Hamiltonian with respect to the control variable <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>.
+For the evaluation of the statistical error of multi-configuration thermodynamic integration free energy results a correlated data analysis is carried out, involving the calculation of the autocorrelation function of the derivative of the Hamiltonian with respect to the control variable λ.
 
 `   auto `<integer lacf>` [fit `<integer nfit>`] [weight `<real weight>`]`
 
@@ -539,7 +539,6 @@ Following keywords control periodic events during a molecular dynamics or thermo
 
 -   Keyword rdf specifies the frequency <nfrdf> in molecular dynamics steps of calculating contributions to the radial distribution functions. The default is 0. The range of the radial distribution functions is given by <rrdf> in nm, with a default of the short range cutoff radius. Note that radial distribution functions are not evaluated beyond the short range cutoff radius. The number of bins in each radial distribution function is given by <ngl>, with a default of 1000. This option is no longer supported. If radial distribution function are to be calculated, a rdi files needs to be available in which the contributions are specified as follows.
 
-<center>
 |      |        |                                                            |
 |------|--------|------------------------------------------------------------|
 | Card | Format | Description                                                |
@@ -548,7 +547,6 @@ Following keywords control periodic events during a molecular dynamics or thermo
 | I-3  | i      | First atom number                                          |
 | I-4  | i      | Second atom number                                         |
 
-</center>
 Recording
 ---------
 
@@ -571,7 +569,7 @@ The following keywords control recording data to file. Record directives may be 
 `          [acf] [cnv] [fet]`
 `          [binary] [ascii] [ecce] [argos]`
 
--   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
+-   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in λ. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
 
 <!-- -->
 
@@ -619,7 +617,7 @@ The following keywords control recording data to file. Record directives may be 
 
 <!-- -->
 
--   Keyword free specifies the frequency <nffree> in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every <img alt="$\\lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84113ddd6cbfce2ac8c6d5c5ccb99b09.svg?invert_in_darkmode&sanitize=true" align=middle width="52.454985pt" height="39.45183pt"/>. This option is obsolete. All data are required to do the final analysis.
+-   Keyword free specifies the frequency <nffree> in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every λ. This option is obsolete. All data are required to do the final analysis.
 
 <!-- -->
 
