@@ -116,7 +116,7 @@ Keyword sscyx may be used to rename cysteine residues that form sulphur bridges 
 
 Keyword hbuild may be used to add hydrogen atoms to the unknown segments of the structure found on the pdb file. Placement of hydrogen atoms is based on geometric criteria, and the resulting fragment and segment files should be carefully examined for correctness.
 
-The database directories are used as specified in the file $.nwchemrc$. Specific definitions for the force field used may be changed in the input file using
+The database directories are used as specified in the file .nwchemrc. Specific definitions for the force field used may be changed in the input file using
 
 `directory_(1-9) <string ffdir> [<string parfile>]`
 
@@ -135,7 +135,7 @@ Variable qscale specifies the factor with which SCF/RESP determined charges will
 
 `modify sequence { `<integer sgmnum>:<string sgmnam> }`
 
-This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N$\_\\epsilon$ site and residue 202 is a hystidine protonated at the N$\_\\delta$ site:
+This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N<img alt="$\_\\epsilon$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26431b1adf65f1245b514d3adb6777fa.svg?invert_in_darkmode&sanitize=true" align=middle width="52.162275pt" height="45.82083pt"/> site and residue 202 is a hystidine protonated at the N<img alt="$\_\\delta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bb53c313e75a9cc3ea9078408022f26.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76378pt" height="39.45183pt"/> site:
 
 `modify sequence 114:HIE 202:HID`
 
@@ -240,7 +240,7 @@ Appending to an existing topology file
 
 ` <real dist1> <real dist2>  <real dist3> <real forc1> <real forc2>`
 
-This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in \(kJ mol^{-1} nm^{-2}\).
+This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in <img alt="$kJ mol^{-1} nm^{-2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/56c2c4cf32fcf191f3e45838c1bc1a89.svg?invert_in_darkmode&sanitize=true" align=middle width="105.854595pt" height="26.70657pt"/>.
 
 `select <integer isel> { <string atoms> }`
 
