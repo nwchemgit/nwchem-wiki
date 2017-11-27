@@ -22,7 +22,7 @@ or
 System specification
 --------------------
 
-`system `<string systemid>`_`<string calcid>
+`system <string systemid>_<string calcid>`
 
 where the strings systemid and calcid are user defined names for the chemical system and the type of calculation to ber performed, respectively. These names are used to derive the filenames used for the calculation. The topoly file used will be systemid.top, while all other files are named systemid\_calcid.ext.
 
