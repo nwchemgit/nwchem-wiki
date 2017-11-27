@@ -53,26 +53,32 @@ Default database directories
 
 The file $HOME/.nwchemrc may contain the following entries that determine which files are used by the prepare module.
 
-ffield <string ffname>
+`ffield <string ffname>`
 
 This entry specifies the default force field. Database files supplied with NWChem currently support values for ffname of amber, referring to AMBER95, and charmm, referring to the academic CHARMM22 force field.
 
-<string ffname>`_(1-9) `<string ffdir>`[\{`<string parfile>`\}]`
+`<string ffname>_(1-9) <string ffdir>[\{<string parfile>\}]`
 
 Entries of this type specify the directory ffdir in which force field database files can be found. Optionally the parameterfile in this directory may be specified as parfile. The prepare module will only use files in directories specified here. One exception is that files in the current work directory will be used if no directory with current files is specified. The directories are read in the order 1-9 with duplicate parameters taken from the last occurrence found. Note that multiple parameter files may be specified that will be read in the order in which they are specified.
 
-<string solvnam>` `<string solvfil>
+`<string solvnam> <string solvfil>`
 
 This entry may be used to identify a pure solvent restart file solvfil by a name solvnam
 
 An example file $HOME/.nwchemrc is:
 
 `ffield amber`
+
 `amber_1 /soft/nwchem/share/amber/amber_s/amber99.par,spce.par`
+
 `amber_2 /soft/nwchem/share/amber/amber_x/`
+
 `amber_3 /usr/people/username/data/amber/amber_u/`
+
 `spce /soft/nwchem/share/solvents/spce.rst`
+
 `charmm_1 /soft/nwchem/share/charmm/charmm_s/`
+
 `charmm_2 /soft/nwchem/share/charmm/charmm_x/`
 
 System name and coordinate source
@@ -112,22 +118,22 @@ Keyword hbuild may be used to add hydrogen atoms to the unknown segments of the 
 
 The database directories are used as specified in the file $.nwchemrc$. Specific definitions for the force field used may be changed in the input file using
 
-`directory_(1-9) `<string ffdir>`[`<string parfile>`]`
+`directory_(1-9) <string ffdir> [<string parfile>]`
 
 Sequence file generation
 ------------------------
 
 If no existing sequence file is present in the current directory, or if the new\_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
 
-`maxscf `<integer maxscf default 20>
+`maxscf <integer maxscf default 20>`
 
 Variable maxscf specifies the maximum number of atoms in a segment for which partial atomic charges will be determined from an SCF calculation followed by RESP charge fitting. For larger segments a crude partial charge guestimation will be done.
 
-`qscale `<real qscale default 1.0>
+`qscale <real qscale default 1.0>`
 
 Variable qscale specifies the factor with which SCF/RESP determined charges will be multiplied.
 
-`modify sequence { `<integer sgmnum>`:`<string sgmnam>` }`
+`modify sequence { `<integer sgmnum>:<string sgmnam> }`
 
 This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N$\_\\epsilon$ site and residue 202 is a hystidine protonated at the N$\_\\delta$ site:
 
@@ -135,7 +141,7 @@ This command specifies that segment sgmnam should be used for segment with numbe
 
 Links between atoms can be enforced with
 
-`link `<string atomname>` `<string atomname>
+`link <string atomname> <string atomname>`
 
 For example, to link atom SG in segment 20 with atom FE in segment 55, use:
 
@@ -143,15 +149,15 @@ For example, to link atom SG in segment 20 with atom FE in segment 55, use:
 
 The format of the sequence file is given in Table 36.9. In addition to the list of segments this file also includes links between non-standard segments or other non-standard links. These links are generated based on distances found between atoms on the pdb file. When atoms are involved in such non-standard links that have not been identified in the fragment of segment files as a non-chain link atom, the prepare module will ignore these links and report them as skipped. If one or more of these links are required, the user has to include them with explicit link directives in the sequence file, making them forced links. Alternatively, these links can be made forced-links by changing link into LINK in the sequence file.
 
-`fraction { `<integer imol>` }`
+`fraction { <integer imol> }`
 
 Directive fraction can be used to separate solute molecules into fractions for which energies will be separately reported during molecular dynamics simulations. The listed molecules will be the last molecule in a fraction. Up to 10 molecules may be specified in this directive.
 
-`counter `<integer num>` `<string ion>
+`counter <integer num> <string ion>`
 
 Directive counter adds num counter ions of type ion to the sequence file. Up to 10 counter directives may appear in the input block.
 
-`counter `<real factor>
+`counter <real factor>`
 
 This directive scales the counter ion charge by the specified factor in the determination of counter ions positions.
 
@@ -166,20 +172,20 @@ Keyword new\_top is used to force the generation of a new topology file. An exis
 
 The prepare module generates force field specific fragment, segment and topology files. The force field may be explicitly specified in the prepare input block by specifying its name. Currently AMBER and CHARMM are the supported force fields. A default force field may be specified in the file $HOME/.nwchemrc.
 
-`standard `<string dir_s>`[`<string par_s>`]`
-`extensions `<string dir_x>`[`<string par_x>`]`
-`contributed `<string dir_q>`[`<string par_q>`]`
-`user `<string dir_u>`[`<string par_u>`]`
-`temporary `<string dir_t>`[`<string par_t>`]`
-`current `<string dir_c>`[`<string par_c>`]`
+`standard <string dir_s>[<string par_s>]`
+`extensions <string dir_x>[<string par_x>]`
+`contributed <string dir_q>[<string par_q>]`
+`user <string dir_u>[<string par_u>]`
+`temporary <string dir_t>[<string par_t>]`
+`current <string dir_c>[<string par_c>]`
 
 The user can explicitly specify the directories where force field specific databases can be found. These include force field standards, extensions, quality assurance tests, user preferences, temporary , and current database files. Defaults for the directories where database files reside may be specified in the file $HOME/.nwchemrc for each of the supported force fields. Fragment, segment and sequence files generated by the prepare module are written in the temporary directory. When not specified, the current directory will be used. Topology and restart files are always created in the current directory.
 
 The following directives control the modifications of a topology file. These directives are executed in the order in which they appear in the prepare input deck. The topology modifying commands are not stored on the run-time database and are, therefor, not persistent.
 
-`modify atom `<string atomname>` [set `<integer mset>` | initial | final] \`
-`   ( type `<string atomtyp>` |  charge `<real atomcharge>` |  \`
-`     polar `<real atompolar>` | dummy | self | quantum | quantum_high )`
+`modify atom <string atomname> [set <integer mset> | initial | final] \`
+`   ( type <string atomtyp> |  charge <real atomcharge> |  \`
+`     polar <real atompolar> | dummy | self | quantum | quantum_high )`
 
 These modify commands change the atom type, partial atomic charge, atomic polarizability, specify a dummy, self-interaction and quantum atom, respectively. If mset is specified, the modification will only apply to the specified set, which has to be 1, 2 or 3. If not specified, the modification will be applied to all three sets. The quantum region in QM/MM simulations is defined by specifying atoms with the quantum or quantum\_high label. For atoms defined quantum\_high basis sets labeled X\_H will be used. The atomnam should be specified as <integer isgm>:<string name>, where isgm is the segment number, and name is the atom name. A leading blank in an atom name should be substituted with an underscore. The modify commands may be combined. For example, the following directive changes for the specified atom the charge and atom type in set 2 and specifies the atom to be a dummy in set 3.
 
