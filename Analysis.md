@@ -132,7 +132,7 @@ To analyze the root mean square deviation from the specified reference coordinat
 
 `rmsd`
 
-To analyze protein <img alt="$\\phi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/607b35d374182a21d59771b5613c77b9.svg?invert_in_darkmode&sanitize=true" align=middle width="32.846055pt" height="45.82083pt"/>-<img alt="$\\psi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/368287a63c78370a3a419dc1b0036fb6.svg?invert_in_darkmode&sanitize=true" align=middle width="32.846055pt" height="45.82083pt"/> and backbone hydrogen bonding:
+To analyze protein φ-ψ and backbone hydrogen bonding:
 
 `ramachandran`
 
