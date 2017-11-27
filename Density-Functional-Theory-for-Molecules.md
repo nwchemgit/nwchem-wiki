@@ -36,10 +36,10 @@ throughout). There are sub-directives which allow for customized
 application; those currently provided as options for the DFT module
 are:
 
-` VECTORS [[input] (`<string input_movecs default atomic>`) || \`  
-`                  (project `<string basisname>` `<string filename>`)] \`  
-`          [swap [alpha||beta] `<integer vec1 vec2>` ...] \`  
-`          [output `<string output_filename default input_movecs>`] \`  
+` VECTORS [[input] (<string input_movecs default atomic>) || \`  
+`                  (project <string basisname> <string filename>`)] \`  
+`          [swap [alpha||beta] <integer vec1 vec2> ...] \`  
+`          [output <string output_filename default input_movecs>] \`  
 ` XC [[acm] [b3lyp] [beckehandh] [pbe0]\`  
 `    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke97-d] [becke98] \`  
 `     [hcth] [hcth120] [hcth147]\`  
@@ -128,7 +128,7 @@ are:
 ` RODFT`  
 ` MULLIKEN`  
 ` DISP`  
-` XDM [ a1 `<real a1>` ]   [ a2 `<real a2>` ]`  
+` XDM [ a1 <real a1> ]   [ a2 <real a2> ]`  
 ` MULT <integer mult default 1>`  
 ` NOIO`  
 ` PRINT||NOPRINT`
