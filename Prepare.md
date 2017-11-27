@@ -236,13 +236,13 @@ Note that keywords free, qhop and qhop are mutually exclusive.
 Appending to an existing topology file
 --------------------------------------
 
-noe <string atom1> <string atom3> \\
+`noe <string atom1> <string atom3> \\`
 
-` `<real dist1>` `<real dist2>`  `<real dist3>` `<real forc1>` `<real forc2>
+` <real dist1> <real dist2>  <real dist3> <real forc1> <real forc2>`
 
 This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in \(kJ mol^{-1} nm^{-2}\).
 
-`select `<integer isel>` { `<string atoms>` }`
+`select <integer isel> { <string atoms> }`
 
 Directive select specifies a group of atoms used in the definition of potential of mean force potentials.
 
@@ -253,13 +253,13 @@ The selected atoms are specified by the string atoms which takes the form
 For example, all carbon and oxygen atoms in segments 3 and 6 through 12 are selected for group 1 by
 
 `3,6-12:_C????,_O????`
-`pmf [all] [bias] zalign `<integer isel>` `<real forcon1>` `<real forcon2>` `
-`pmf [combine] [bias] xyplane `<integer isel>` `<real forcon1>` `<real forcon2>
-`pmf [constraint] [bias] (distance | zdistance) `<integer isel>` `<integer jsel>` \`
-`            `<real dist1>` `<real dist2>` `<real forcon1>` `<real forcon2>
-`pmf [bias] angle `<integer isel>` `<integer jsel>` `<integer ksel>` \`
-`            `<real angle1>` `<real angle2>` `<real forcon1>` `<real forcon2>
-`pmf [bias] torsion `<integer isel>` `<integer jsel>` `<integer ksel>` `<integer lsel>` \`
+`pmf [all] [bias] zalign <integer isel> <real forcon1> <real forcon2>`
+`pmf [combine] [bias] xyplane <integer isel> <real forcon1> <real forcon2>`
+`pmf [constraint] [bias] (distance | zdistance) <integer isel> <integer jsel> \`
+`            `<real dist1> <real dist2> <real forcon1> <real forcon2>
+`pmf [bias] angle <integer isel> <integer jsel> <integer ksel> \`
+`            `<real angle1> <real angle2> <real forcon1> <real forcon2>`
+`pmf [bias] torsion <integer isel> <integer jsel> <integer ksel> <integer lsel> \`
 `            `<real angle1>` `<real angle2>` `<real forcon1>` `<real forcon2>
 `pmf [bias] basepair `<integer isel>` `<integer jsel>` \`
 `            `<real dist1>` `<real dist2>` `<real forcon1>` `<real forcon2>
