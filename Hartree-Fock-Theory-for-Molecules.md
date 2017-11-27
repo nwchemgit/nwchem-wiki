@@ -811,7 +811,7 @@ the cache memory size. The form of this directive is as follows:
 
 `  SEMIDIRECT [filesize `<integer filesize default disksize>`] `  
 `             [memsize  `<integer memsize default available>`]`  
-`             [filename <string filename default <img alt="$file_prefix.aoints$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/574492cfdf1a0bc11efca49c7b1885f8.svg?invert_in_darkmode&sanitize=true" align=middle width="126.33027pt" height="22.74591pt"/>>]`
+`             [filename <string filename default $file_prefix.aoints$]`
 
 The keyword FILESIZE allows the user to specify the amount of disk space
 to be used per process for storing the integrals in 64-bit words.
