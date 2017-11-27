@@ -560,20 +560,35 @@ Recording
 The following keywords control recording data to file. Record directives may be combined to a single directive.
 
 `   record [rest `<integer nfrest>` [keep]]     \`
+
 `          [coord `<integer nfcoor default 0>`] \`
+
 `          [wcoor `<integer nfwcoo default 0>`] \`
+
 `          [scoor `<integer nfscoo default 0>`] \`
+
 `          [veloc `<integer nfvelo default 0>`] \`
+
 `          [wvelo `<integer nfwvel default 0>`] \`
+
 `          [svelo `<integer nfsvel default 0>`] \`
+
 `          [force `<integer nfvelo default 0>`] \`
+
 `          [wforc `<integer nfwvel default 0>`] \`
+
 `          [sforc `<integer nfsvel default 0>`] \`
-`          [(prop | prop_average) `<integer nfprop default 0>`]  \`
-`          [free `<integer nffree default 1>`]  \`
-`          [sync `<integer nfsync default 0>`]  \`
-`          [times `<integer nftime default 0>`] \`
+
+`          [(prop | prop_average) <integer nfprop default 0>]  \`
+
+`          [free <integer nffree default 1>]  \`
+
+`          [sync <integer nfsync default 0>]  \`
+
+`          [times <integer nftime default 0>] \`
+
 `          [acf] [cnv] [fet]`
+
 `          [binary] [ascii] [ecce] [argos]`
 
 -   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in λ. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
