@@ -508,14 +508,21 @@ Periodic updates
 
 Following keywords control periodic events during a molecular dynamics or thermodynamic integration simulation. Update directives may be combined to a single directive.
 
-`   update [pairs `<integer nfpair default 1>`]                  \`
-`          [long `<integer nflong default 1>`]                   \`
-`          [center `<integer nfcntr default 0>` [zonly | xyonly] \`
-`                  [fraction `<integer idscb(1:5)>`]             \`
-`          [motion `<integer nfslow default 0>`]                 \`
-`          [analysis `<integer nfanal default 0>`]               \`
-`          [rdf `<integer nfrdf default 0>`                      \`
-`                  [range `<real rrdf>`] [bins `<integer ngl>`]    \`
+`   update [pairs <integer nfpair default 1>]                  \`
+
+`          [long <integer nflong default 1>]                   \`
+
+`          [center <integer nfcntr default 0> [zonly | xyonly] \`
+
+`                  [fraction <integer idscb(1:5)>]             \`
+
+`          [motion <integer nfslow default 0>]                 \`
+
+`          [analysis <integer nfanal default 0>]               \`
+
+`          [rdf <integer nfrdf default 0>                      \`
+
+`                  [range <real rrdf>] [bins <integer ngl>`]    \`
 
 -   Keyword pairs specifies the frequency <nfpair> in molecular dynamics steps of updating the pair lists. The default for the frequency is 1. In addition, pair lists are also updated after each step in which recording of the restart or trajectory files is performed. Updating the pair lists includes the redistribution of atoms that changed domain and load balancing, if specified.
 
