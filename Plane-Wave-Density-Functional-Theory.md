@@ -303,11 +303,7 @@ high-frequency components of the wavefunction in the atomic sphere
 region. Effectively this splits the original wavefunction into two
 parts:
 
-<center>
-
 <img alt="<img alt="$\psi_n(\mathbf{r}) = \tilde{\psi}_n(\mathbf{r}) + \sum_I \psi_n^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68f3a0f1e1d66f32691ef41bf0ab5c89.svg?invert_in_darkmode&sanitize=true" align=middle width="189.915495pt" height="30.55107pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68f3a0f1e1d66f32691ef41bf0ab5c89.svg?invert_in_darkmode&sanitize=true" align=middle width="189.915495pt" height="30.55107pt"/>
-
-</center>
 
 The first part <img alt="<img alt="$\tilde{\psi}_n(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/08adcb3a29f050420c64eeffd66743c2.svg?invert_in_darkmode&sanitize=true" align=middle width="40.14978pt" height="30.55107pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/08adcb3a29f050420c64eeffd66743c2.svg?invert_in_darkmode&sanitize=true" align=middle width="40.14978pt" height="30.55107pt"/> is smooth and can be
 represented using a plane wave basis set of practical size. The second
