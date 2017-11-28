@@ -345,7 +345,8 @@ wavefunctions <img alt="$\psi_n$" src="https://raw.githubusercontent.com/wiki/nw
 
 which can be represented by fairly small plane-wave basis. The
 transformation <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/> is defined using a local PAW basis, which consists
-of atomic orbitals, <img alt="$\varphi_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74bd0086a3bdc1567a34307fac0dc58c.svg?invert_in_darkmode&sanitize=true" align=middle width="40.57515pt" height="27.59823pt"/>, smooth atomic
+of atomic orbitals, <img alt="$\varphi{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74bd0086a3bdc1567a34307fac0dc58c.svg?invert_in_darkmode&sanitize=true" align=middle width="40.57515pt" height="27.59823pt"/>, 
+smooth atomic
 orbitals, <img alt="$\tilde{\varphi}_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5074914e7109591ffd03fd70b2673b18.svg?invert_in_darkmode&sanitize=true" align=middle width="40.615245pt" height="27.59823pt"/> which coincide with
 the atomic orbitals outside a defined atomic sphere, and projector
 functions, <img alt="$p_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9f91dd583ac30baa6a15f183e53d7c21.svg?invert_in_darkmode&sanitize=true" align=middle width="38.10147pt" height="27.59823pt"/>. Where I is the atomic index and
