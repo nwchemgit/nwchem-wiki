@@ -1824,7 +1824,7 @@ This describes the bond distance between any pair of atoms <img alt="$i$" src="h
 
 #### Angle Collective Variable
 
-This describes the bond angle formed at <img alt="<img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> by the triplet
+This describes the bond angle formed at <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> by the triplet
 <img alt="$&amp;lt;jik&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8cb7383c6dd45f500dfd0bb39264b7f8.svg?invert_in_darkmode&sanitize=true" align=middle width="59.6475pt" height="22.74591pt"/>"
 
 <img alt="$s\left(r_{ij},r_{ik}\right) = \frac{\bold{r}_{ij}\cdot\bold{r}_{ik}}{r_{ij}r_{ik}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/37f0e0317abf31f95c5902d1b0c10c3b.svg?invert_in_darkmode&sanitize=true" align=middle width="131.80266pt" height="27.3438pt"/>
