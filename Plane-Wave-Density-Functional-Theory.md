@@ -345,10 +345,10 @@ wavefunctions <img alt="$\psi_n$" src="https://raw.githubusercontent.com/wiki/nw
 
 which can be represented by fairly small plane-wave basis. The
 transformation <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/> is defined using a local PAW basis, which consists
-of atomic orbitals, <img alt="<img alt="$\varphi_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74bd0086a3bdc1567a34307fac0dc58c.svg?invert_in_darkmode&sanitize=true" align=middle width="40.57515pt" height="27.59823pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74bd0086a3bdc1567a34307fac0dc58c.svg?invert_in_darkmode&sanitize=true" align=middle width="40.57515pt" height="27.59823pt"/>, smooth atomic
-orbitals, <img alt="<img alt="$\tilde{\varphi}_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5074914e7109591ffd03fd70b2673b18.svg?invert_in_darkmode&sanitize=true" align=middle width="40.615245pt" height="27.59823pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5074914e7109591ffd03fd70b2673b18.svg?invert_in_darkmode&sanitize=true" align=middle width="40.615245pt" height="27.59823pt"/> which coincide with
+of atomic orbitals, <img alt="$\varphi_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74bd0086a3bdc1567a34307fac0dc58c.svg?invert_in_darkmode&sanitize=true" align=middle width="40.57515pt" height="27.59823pt"/>, smooth atomic
+orbitals, <img alt="$\tilde{\varphi}_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5074914e7109591ffd03fd70b2673b18.svg?invert_in_darkmode&sanitize=true" align=middle width="40.615245pt" height="27.59823pt"/> which coincide with
 the atomic orbitals outside a defined atomic sphere, and projector
-functions, <img alt="<img alt="$p_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9f91dd583ac30baa6a15f183e53d7c21.svg?invert_in_darkmode&sanitize=true" align=middle width="38.10147pt" height="27.59823pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9f91dd583ac30baa6a15f183e53d7c21.svg?invert_in_darkmode&sanitize=true" align=middle width="38.10147pt" height="27.59823pt"/>. Where I is the atomic index and
+functions, <img alt="$p_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9f91dd583ac30baa6a15f183e53d7c21.svg?invert_in_darkmode&sanitize=true" align=middle width="38.10147pt" height="27.59823pt"/>. Where I is the atomic index and
 α is the orbital index. The projector functions are constructed such
 that they are localized within the defined atomic sphere and in addition
 are orthonormal to the atomic orbitals. Blöchl defined the invertible
@@ -357,19 +357,19 @@ by
 
 <center>
 
-<img alt="<img alt="$T = 1 + \sum_I \sum_{\alpha} (|\tilde{\varphi}_{\alpha}^I&amp;gt; - |\varphi_{\alpha}^I&amp;gt;)&amp;lt;p_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/96a32e61cc6a97808d8d505057fbd426.svg?invert_in_darkmode&sanitize=true" align=middle width="274.860795pt" height="27.59823pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a7576bf0f6c17bddbd9ef0f4bfff1954.svg?invert_in_darkmode&sanitize=true" align=middle width="274.284945pt" height="27.59823pt"/>
+<img alt="$T = 1 + \sum_I \sum_{\alpha} (|\tilde{\varphi}_{\alpha}^I&amp;gt; - |\varphi_{\alpha}^I&amp;gt;)&amp;lt;p_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/96a32e61cc6a97808d8d505057fbd426.svg?invert_in_darkmode&sanitize=true" align=middle width="274.860795pt" height="27.59823pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I&amp;gt; - |\tilde{\varphi}_{\alpha}^I&amp;gt;)&amp;lt;\tilde{\varphi}_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bec6e5df80e00243278d844c268b152.svg?invert_in_darkmode&sanitize=true" align=middle width="277.411695pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/42c265d0096977b42f33cc28e11f65b0.svg?invert_in_darkmode&sanitize=true" align=middle width="276.834195pt" height="30.18576pt"/>
+<img alt="$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I&amp;gt; - |\tilde{\varphi}_{\alpha}^I&amp;gt;)&amp;lt;\tilde{\varphi}_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bec6e5df80e00243278d844c268b152.svg?invert_in_darkmode&sanitize=true" align=middle width="277.411695pt" height="30.18576pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$|\tilde{p}_{\alpha}^I&amp;gt; = \sum_{\beta} [&amp;lt;\tilde{p}^I | \varphi^I &amp;gt;]_{\alpha\beta}^{-1} |p_{\beta}^I&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8eaaf5c0ae8c493088ada6f6f2c8c5cf.svg?invert_in_darkmode&sanitize=true" align=middle width="233.214795pt" height="28.83969pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cb830d68da2b5e12c6dc2a5fb07dd8ba.svg?invert_in_darkmode&sanitize=true" align=middle width="221.945295pt" height="28.83969pt"/>
+<img alt="$|\tilde{p}_{\alpha}^I&amp;gt; = \sum_{\beta} [&amp;lt;\tilde{p}^I | \varphi^I &amp;gt;]_{\alpha\beta}^{-1} |p_{\beta}^I&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8eaaf5c0ae8c493088ada6f6f2c8c5cf.svg?invert_in_darkmode&sanitize=true" align=middle width="233.214795pt" height="28.83969pt"/>
 
 </center>
 
@@ -381,7 +381,7 @@ that may be expanded in a plane wave basis set of a manageable size.
 The expression for the total energy in PAW method can be separated into
 the following 15 terms.
 
-<img alt="<img alt="$E_{PAW} = &amp;#10; \tilde{E}_{kinetic-pw}+\tilde{E}_{vlocal-pw}+\tilde{E}_{Coulomb-pw}+\tilde{E}_{xc-pw} + E_{ion-ion}\\&amp;#10;+E_{kinetic-atom}+E_{local-atom}+E_{xc-atom}+ E_{cmp-vloc}+E_{hartree-atom}\\&amp;#10;+E_{cmp-cmp} + E_{cmp-pw}+E_{valence-core}+E_{kinetic-core}+E_{ion-core}&amp;#10;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a05e70c963973f10ff38478d6b3547c.svg?invert_in_darkmode&sanitize=true" align=middle width="568.32435pt" height="88.29348pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d67ff36e022a7f689a8e0f058af25db2.svg?invert_in_darkmode&sanitize=true" align=middle width="544.6584pt" height="88.29348pt"/>
+<img alt="$E_{PAW} = &amp;#10; \tilde{E}_{kinetic-pw}+\tilde{E}_{vlocal-pw}+\tilde{E}_{Coulomb-pw}+\tilde{E}_{xc-pw} + E_{ion-ion}\\&amp;#10;+E_{kinetic-atom}+E_{local-atom}+E_{xc-atom}+ E_{cmp-vloc}+E_{hartree-atom}\\&amp;#10;+E_{cmp-cmp} + E_{cmp-pw}+E_{valence-core}+E_{kinetic-core}+E_{ion-core}&amp;#10;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a05e70c963973f10ff38478d6b3547c.svg?invert_in_darkmode&sanitize=true" align=middle width="568.32435pt" height="88.29348pt"/>
 
 
 The first five terms are essentially the same as for a standard
@@ -390,50 +390,50 @@ where
 
 <center>
 
-<img alt="<img alt="$\tilde{E}_{kinetic-pw} = \sum_i \sum_{\mathbf{G}} \frac{|\mathbf{G}|^2}{2} \tilde{\psi}_i^{*}(\mathbf{G}) \tilde{\psi}_i(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8f506d88a55dc627eac295f43d272b1f.svg?invert_in_darkmode&sanitize=true" align=middle width="281.516895pt" height="36.42078pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8f506d88a55dc627eac295f43d272b1f.svg?invert_in_darkmode&sanitize=true" align=middle width="281.516895pt" height="36.42078pt"/>
+<img alt="$\tilde{E}_{kinetic-pw} = \sum_i \sum_{\mathbf{G}} \frac{|\mathbf{G}|^2}{2} \tilde{\psi}_i^{*}(\mathbf{G}) \tilde{\psi}_i(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8f506d88a55dc627eac295f43d272b1f.svg?invert_in_darkmode&sanitize=true" align=middle width="281.516895pt" height="36.42078pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$\tilde{E}_{vlocal-pw} = \sum_{\mathbf{G}} \tilde{\rho}(\mathbf{G}) V_{local}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4aec437e3fcb7e03dc6a868a6c8e6e75.svg?invert_in_darkmode&sanitize=true" align=middle width="231.082995pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4aec437e3fcb7e03dc6a868a6c8e6e75.svg?invert_in_darkmode&sanitize=true" align=middle width="231.082995pt" height="30.18576pt"/>
+<img alt="$\tilde{E}_{vlocal-pw} = \sum_{\mathbf{G}} \tilde{\rho}(\mathbf{G}) V_{local}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4aec437e3fcb7e03dc6a868a6c8e6e75.svg?invert_in_darkmode&sanitize=true" align=middle width="231.082995pt" height="30.18576pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$\tilde{E}_{Coulomb-pw} = \frac{\Omega}{2} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|} \tilde{\rho}^{*}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/af889cf26290b2444c71aacebddf820b.svg?invert_in_darkmode&sanitize=true" align=middle width="266.008545pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/af889cf26290b2444c71aacebddf820b.svg?invert_in_darkmode&sanitize=true" align=middle width="266.008545pt" height="30.18576pt"/>
+<img alt="$\tilde{E}_{Coulomb-pw} = \frac{\Omega}{2} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|} \tilde{\rho}^{*}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/af889cf26290b2444c71aacebddf820b.svg?invert_in_darkmode&sanitize=true" align=middle width="266.008545pt" height="30.18576pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b3516c11341b2721685de47027419b10.svg?invert_in_darkmode&sanitize=true" align=middle width="250.779045pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b3516c11341b2721685de47027419b10.svg?invert_in_darkmode&sanitize=true" align=middle width="250.779045pt" height="30.18576pt"/>
+<img alt="$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b3516c11341b2721685de47027419b10.svg?invert_in_darkmode&sanitize=true" align=middle width="250.779045pt" height="30.18576pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{ion-ion} = &amp;#10;\begin{matrix}&amp;#10; \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\&amp;#10;+ \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2&amp;#10;\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0df3a031b119b9a2b3c868b59e78f681.svg?invert_in_darkmode&sanitize=true" align=middle width="714.572595pt" height="60.10323pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0cb71a748cc94d67dfba361d767e553d.svg?invert_in_darkmode&sanitize=true" align=middle width="612.244545pt" height="60.10323pt"/>
+<img alt="$E_{ion-ion} = &amp;#10;\begin{matrix}&amp;#10; \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\&amp;#10;+ \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2&amp;#10;\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0df3a031b119b9a2b3c868b59e78f681.svg?invert_in_darkmode&sanitize=true" align=middle width="714.572595pt" height="60.10323pt"/>
 
 </center>
 
-The local potential in the <img alt="<img alt="$\tilde{E}_{vlocal-pw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed7e25bd59dfd54bb862a0196b05c232.svg?invert_in_darkmode&sanitize=true" align=middle width="73.65996pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed7e25bd59dfd54bb862a0196b05c232.svg?invert_in_darkmode&sanitize=true" align=middle width="73.65996pt" height="30.18576pt"/> term is the Fourier
+The local potential in the <img alt="$\tilde{E}_{vlocal-pw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed7e25bd59dfd54bb862a0196b05c232.svg?invert_in_darkmode&sanitize=true" align=middle width="73.65996pt" height="30.18576pt"/> term is the Fourier
 transform
 of
 
 <center>
 
-<img alt="<img alt="$V_{local}(\mathbf{r}) = -\sum_I Z_I \frac{\frac{|\mathbf{r}-\mathbf{R}_I|}{\sigma_I}}{|\mathbf{r}-\mathbf{R}_I|} + v_{ps}^I(|\mathbf{|\mathbf{r}-\mathbf{R}_I|})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1f9c2f2151db8a770069f8a5a9dc6599.svg?invert_in_darkmode&sanitize=true" align=middle width="304.936995pt" height="48.96771pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1f9c2f2151db8a770069f8a5a9dc6599.svg?invert_in_darkmode&sanitize=true" align=middle width="304.936995pt" height="48.96771pt"/>
+<img alt="$V_{local}(\mathbf{r}) = -\sum_I Z_I \frac{\frac{|\mathbf{r}-\mathbf{R}_I|}{\sigma_I}}{|\mathbf{r}-\mathbf{R}_I|} + v_{ps}^I(|\mathbf{|\mathbf{r}-\mathbf{R}_I|})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1f9c2f2151db8a770069f8a5a9dc6599.svg?invert_in_darkmode&sanitize=true" align=middle width="304.936995pt" height="48.96771pt"/>
 
 </center>
 
-It turns out that for many atoms <img alt="<img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> needs to be fairly small.
-This results in <img alt="<img alt="$V_{local} (\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1e432f41caeffa48726fe348135edd39.svg?invert_in_darkmode&sanitize=true" align=middle width="58.81029pt" height="24.56553pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1e432f41caeffa48726fe348135edd39.svg?invert_in_darkmode&sanitize=true" align=middle width="58.81029pt" height="24.56553pt"/> being stiff. However, since
+It turns out that for many atoms <img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> needs to be fairly small.
+This results in <img alt="$V_{local} (\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1e432f41caeffa48726fe348135edd39.svg?invert_in_darkmode&sanitize=true" align=middle width="58.81029pt" height="24.56553pt"/> being stiff. However, since
 in the integral above this function is multiplied by a smooth density
-<img alt="<img alt="$\tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/305950daa7ae8b7ebefd828bffb6e35f.svg?invert_in_darkmode&sanitize=true" align=middle width="36.044085pt" height="24.56553pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/305950daa7ae8b7ebefd828bffb6e35f.svg?invert_in_darkmode&sanitize=true" align=middle width="36.044085pt" height="24.56553pt"/> the expansion of <img alt="<img alt="$V_{local}(/mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c9e2cdc8d7a2a2b20584999b673ce0e1.svg?invert_in_darkmode&sanitize=true" align=middle width="127.320105pt" height="24.56553pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c9e2cdc8d7a2a2b20584999b673ce0e1.svg?invert_in_darkmode&sanitize=true" align=middle width="127.320105pt" height="24.56553pt"/>
+<img alt="$\tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/305950daa7ae8b7ebefd828bffb6e35f.svg?invert_in_darkmode&sanitize=true" align=middle width="36.044085pt" height="24.56553pt"/> the expansion of <img alt="$V_{local}(/mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c9e2cdc8d7a2a2b20584999b673ce0e1.svg?invert_in_darkmode&sanitize=true" align=middle width="127.320105pt" height="24.56553pt"/>
 only needs to be the same as the smooth density. The auxiliary
-pseudoptential <img alt="<img alt="$v_{ps}^I (|\mathbf{r}-\mathbf{R}_I |)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68955ed882742db5a988dfd352804c70.svg?invert_in_darkmode&sanitize=true" align=middle width="93.04416pt" height="27.59823pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68955ed882742db5a988dfd352804c70.svg?invert_in_darkmode&sanitize=true" align=middle width="93.04416pt" height="27.59823pt"/> is defined to
+pseudoptential <img alt="$v_{ps}^I (|\mathbf{r}-\mathbf{R}_I |)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68955ed882742db5a988dfd352804c70.svg?invert_in_darkmode&sanitize=true" align=middle width="93.04416pt" height="27.59823pt"/> is defined to
 be localized within the atomic sphere and is introduced to remove ghost
 states due to local basis set incompleteness.
 
@@ -443,25 +443,25 @@ pseudowavefunctions.
 
 <center>
 
-<img alt="<img alt="$E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt; (t_{atom}^I)_{\alpha\beta} &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5b001a868ab188c55a92b8287938a193.svg?invert_in_darkmode&sanitize=true" align=middle width="428.442795pt" height="30.55107pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a7405ec46150e0166a886dffbcfbc02c.svg?invert_in_darkmode&sanitize=true" align=middle width="431.323695pt" height="30.55107pt"/>
+<img alt="$E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt; (t_{atom}^I)_{\alpha\beta} &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5b001a868ab188c55a92b8287938a193.svg?invert_in_darkmode&sanitize=true" align=middle width="428.442795pt" height="30.55107pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{local-atom}=\sum_I \sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt; (u_{atom}^I)_{\alpha\beta} &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4adf8affa2bca872ca95a270d932ac94.svg?invert_in_darkmode&sanitize=true" align=middle width="418.074195pt" height="30.55107pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/def820e55662e34b3d9a00b1d6c8ae50.svg?invert_in_darkmode&sanitize=true" align=middle width="420.955095pt" height="30.55107pt"/>
+<img alt="$E_{local-atom}=\sum_I \sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt; (u_{atom}^I)_{\alpha\beta} &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4adf8affa2bca872ca95a270d932ac94.svg?invert_in_darkmode&sanitize=true" align=middle width="418.074195pt" height="30.55107pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{xc-atom}=\sum_I \sum_{\theta\phi} w_{\theta\phi} \int_0^{r_cut^I} r^2 (\rho^I(r,\theta,\phi) \epsilon_{xc}(\rho^I(r,\theta,\phi)) -\tilde{\rho}^I(r,\theta,\phi) \epsilon_{xc}(\tilde{\rho}^I(r,\theta,\phi))) dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ff7d85d9de1d829e21007f706b223136.svg?invert_in_darkmode&sanitize=true" align=middle width="631.772295pt" height="39.46899pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ff7d85d9de1d829e21007f706b223136.svg?invert_in_darkmode&sanitize=true" align=middle width="631.772295pt" height="39.46899pt"/>
+<img alt="$E_{xc-atom}=\sum_I \sum_{\theta\phi} w_{\theta\phi} \int_0^{r_cut^I} r^2 (\rho^I(r,\theta,\phi) \epsilon_{xc}(\rho^I(r,\theta,\phi)) -\tilde{\rho}^I(r,\theta,\phi) \epsilon_{xc}(\tilde{\rho}^I(r,\theta,\phi))) dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ff7d85d9de1d829e21007f706b223136.svg?invert_in_darkmode&sanitize=true" align=middle width="631.772295pt" height="39.46899pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{hartree-atom}= \sum_I W_{atom}^I =\frac{1}{2} \sum_I &amp;#10;\sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt;  &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;&amp;#10;\sum_j \sum_{\mu\nu} &amp;lt;\tilde{\psi}_j|\tilde{p}_{\mu}^I&amp;gt;  &amp;lt;\tilde{p}_{\nu}^I|\tilde{\psi}_j&amp;gt;&amp;#10;\sum_{lm} \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} \tau_{l_\mu m_\mu, l_\nu m_\nu}^{lm} (V_{Heff}^I)_{\alpha\beta\mu\nu}^{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d3299566c92980761d194f4aac53fa88.svg?invert_in_darkmode&sanitize=true" align=middle width="1043.293845pt" height="30.55107pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/22f79246a23b999714c98ca5b0da9722.svg?invert_in_darkmode&sanitize=true" align=middle width="699.6594pt" height="64.24242pt"/>
+<img alt="$E_{hartree-atom}= \sum_I W_{atom}^I =\frac{1}{2} \sum_I &amp;#10;\sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt;  &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;&amp;#10;\sum_j \sum_{\mu\nu} &amp;lt;\tilde{\psi}_j|\tilde{p}_{\mu}^I&amp;gt;  &amp;lt;\tilde{p}_{\nu}^I|\tilde{\psi}_j&amp;gt;&amp;#10;\sum_{lm} \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} \tau_{l_\mu m_\mu, l_\nu m_\nu}^{lm} (V_{Heff}^I)_{\alpha\beta\mu\nu}^{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d3299566c92980761d194f4aac53fa88.svg?invert_in_darkmode&sanitize=true" align=middle width="1043.293845pt" height="30.55107pt"/>
 
 </center>
 
@@ -470,31 +470,31 @@ densities.
 
 <center>
 
-<img alt="<img alt="$E_{cmp-vloc}= \sum_{\mathbf{G}} [\rho_{cmp} (\mathbf{G}) \tilde{V}_{local}(\mathbf{G})+\tilde{\rho}_{cmp}(\mathbf{G})(V_{local}(\mathbf{G})-\tilde{V}_{local}(\mathbf{G}))] &amp;#10;+\int (\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(V_{local}(r)-\tilde{V}_{local}(\mathbf{r}))d\mathbf{r}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/61ca7aee9f8a6092a4d41a7fa2b30140.svg?invert_in_darkmode&sanitize=true" align=middle width="784.7169pt" height="51.78921pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/459d5715337549baf25f2bfc84a05c7e.svg?invert_in_darkmode&sanitize=true" align=middle width="758.31195pt" height="51.78921pt"/>
+<img alt="$E_{cmp-vloc}= \sum_{\mathbf{G}} [\rho_{cmp} (\mathbf{G}) \tilde{V}_{local}(\mathbf{G})+\tilde{\rho}_{cmp}(\mathbf{G})(V_{local}(\mathbf{G})-\tilde{V}_{local}(\mathbf{G}))] &amp;#10;+\int (\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(V_{local}(r)-\tilde{V}_{local}(\mathbf{r}))d\mathbf{r}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/61ca7aee9f8a6092a4d41a7fa2b30140.svg?invert_in_darkmode&sanitize=true" align=middle width="784.7169pt" height="51.78921pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{cmp-cmp}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} &amp;#10;[ \rho_{cmp}(\mathbf{G}) \tilde{\rho}_{cmp}(\mathbf{G})&amp;#10;- \frac{1}{2} \tilde{\rho}_{cmp}(\mathbf{G})\tilde{\rho}_{cmp}(\mathbf{G})]&amp;#10;+ \frac{1}{2} \iint \frac{(\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(\rho_{cmp}(\mathbf{r}')-\tilde{\rho}_{cmp}(\mathbf{r}'))} {|\mathbf{r}-\mathbf{r}'|}  d\mathbf{r} d\mathbf{r}'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/58f0ff22a55e59412d3bffbac17ff167.svg?invert_in_darkmode&sanitize=true" align=middle width="855.759795pt" height="35.69577pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/35649651b74b469435346d2750e0d5fa.svg?invert_in_darkmode&sanitize=true" align=middle width="784.763595pt" height="35.69577pt"/>
+<img alt="$E_{cmp-cmp}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} &amp;#10;[ \rho_{cmp}(\mathbf{G}) \tilde{\rho}_{cmp}(\mathbf{G})&amp;#10;- \frac{1}{2} \tilde{\rho}_{cmp}(\mathbf{G})\tilde{\rho}_{cmp}(\mathbf{G})]&amp;#10;+ \frac{1}{2} \iint \frac{(\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(\rho_{cmp}(\mathbf{r}')-\tilde{\rho}_{cmp}(\mathbf{r}'))} {|\mathbf{r}-\mathbf{r}'|}  d\mathbf{r} d\mathbf{r}'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/58f0ff22a55e59412d3bffbac17ff167.svg?invert_in_darkmode&sanitize=true" align=middle width="855.759795pt" height="35.69577pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$E_{cmp-pw}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} \rho_{cmp}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5befec376218cfd100814a1a21223383.svg?invert_in_darkmode&sanitize=true" align=middle width="276.733545pt" height="27.72033pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5befec376218cfd100814a1a21223383.svg?invert_in_darkmode&sanitize=true" align=middle width="276.733545pt" height="27.72033pt"/>
+<img alt="$E_{cmp-pw}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} \rho_{cmp}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5befec376218cfd100814a1a21223383.svg?invert_in_darkmode&sanitize=true" align=middle width="276.733545pt" height="27.72033pt"/>
 
 </center>
 
 In the first two formulas the first terms are computed using plane-waves
 and the second terms are computed using Gaussian two center integrals.
-The smooth local potential in the <img alt="<img alt="$E_{cmp-vloc}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f662a7095d0a4f4c7567d46cf7ceda31.svg?invert_in_darkmode&sanitize=true" align=middle width="70.0392pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f662a7095d0a4f4c7567d46cf7ceda31.svg?invert_in_darkmode&sanitize=true" align=middle width="70.0392pt" height="22.38192pt"/> term is the Fourier
+The smooth local potential in the <img alt="$E_{cmp-vloc}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f662a7095d0a4f4c7567d46cf7ceda31.svg?invert_in_darkmode&sanitize=true" align=middle width="70.0392pt" height="22.38192pt"/> term is the Fourier
 transform
 of
 
 <center>
 
-<img alt="<img alt="$\tilde{V}_{local}(\mathbf{r})=- \sum_I Z_I    \frac{ erf( \frac{ |\mathbf{r}-\mathbf{R}_I | }{\tilde{\sigma}_I })} {|r-R_I |}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1a0d812242e714c4218fa7b300898302.svg?invert_in_darkmode&sanitize=true" align=middle width="216.355095pt" height="48.96771pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1a0d812242e714c4218fa7b300898302.svg?invert_in_darkmode&sanitize=true" align=middle width="216.355095pt" height="48.96771pt"/>
+<img alt="$\tilde{V}_{local}(\mathbf{r})=- \sum_I Z_I    \frac{ erf( \frac{ |\mathbf{r}-\mathbf{R}_I | }{\tilde{\sigma}_I })} {|r-R_I |}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1a0d812242e714c4218fa7b300898302.svg?invert_in_darkmode&sanitize=true" align=middle width="216.355095pt" height="48.96771pt"/>
 
 </center>
 
@@ -503,13 +503,13 @@ are
 
 <center>
 
-<img alt="<img alt="$\rho_{cmp}(r)=\sum_I\sum_{lm} Q_{lm}^I g_{lm}^(\sigma_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3eb755504671afe017d10c089812abf5.svg?invert_in_darkmode&sanitize=true" align=middle width="278.545245pt" height="34.27314pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3eb755504671afe017d10c089812abf5.svg?invert_in_darkmode&sanitize=true" align=middle width="278.545245pt" height="34.27314pt"/>
+<img alt="$\rho_{cmp}(r)=\sum_I\sum_{lm} Q_{lm}^I g_{lm}^(\sigma_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3eb755504671afe017d10c089812abf5.svg?invert_in_darkmode&sanitize=true" align=middle width="278.545245pt" height="34.27314pt"/>
 
 </center>
 
 <center>
 
-<img alt="<img alt="$\tilde{\rho}_{cmp}(r)=\sum_I \sum_{lm} Q_{lm}^I g_{lm}^(\tilde{\sigma}_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/82d5c2a76f9e68c2d3683cbb2e6a9017.svg?invert_in_darkmode&sanitize=true" align=middle width="278.611245pt" height="34.27314pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/82d5c2a76f9e68c2d3683cbb2e6a9017.svg?invert_in_darkmode&sanitize=true" align=middle width="278.611245pt" height="34.27314pt"/>
+<img alt="$\tilde{\rho}_{cmp}(r)=\sum_I \sum_{lm} Q_{lm}^I g_{lm}^(\tilde{\sigma}_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/82d5c2a76f9e68c2d3683cbb2e6a9017.svg?invert_in_darkmode&sanitize=true" align=middle width="278.611245pt" height="34.27314pt"/>
 
 </center>
 
@@ -521,9 +521,8 @@ where
 
 </center>
 
-The decay parameter <img alt="<img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> is defined the same as above, and
-<img alt="<img alt="$\tilde{\sigma}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/868716a1beb2c79093e4eceb0dd3946e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="21.87504pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/868716a1beb2c79093e4eceb0dd3946e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="21.87504pt"/> is defined to be smooth enough in order that ρ
-̃\_cmp (r) and <img alt="<img alt="$\tilde{V}_{local}(r)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/408502d1bcbe2ef8af49657dd00ed880.svg?invert_in_darkmode&sanitize=true" align=middle width="58.93503pt" height="30.18576pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/408502d1bcbe2ef8af49657dd00ed880.svg?invert_in_darkmode&sanitize=true" align=middle width="58.93503pt" height="30.18576pt"/> can readily be expanded in
+The decay parameter <img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> is defined the same as above, and
+<img alt="$\tilde{\sigma}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/868716a1beb2c79093e4eceb0dd3946e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="21.87504pt"/> is defined to be smooth enough in order that ρ̃\_cmp (r) and <img alt="$\tilde{V}_{local}(r)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/408502d1bcbe2ef8af49657dd00ed880.svg?invert_in_darkmode&sanitize=true" align=middle width="58.93503pt" height="30.18576pt"/> can readily be expanded in
 terms of plane-waves.
 
 The final three terms are the energies that contain the core
@@ -594,7 +593,7 @@ are
 
 <center>
 
-<img alt="<img alt="$\tau_{l_\alpha m_\alpha,l_\beta m_\beta}^{lm}= \int_0^{2\pi} \int_0^{\pi} T_{lm} (\theta,\phi) T_{l_\alpha m_\alpha } (\theta,\phi) T_{l_\beta m_\beta } (\theta,\phi)  \sin(\theta) d\theta d\phi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aa22bd7b752349e96d6a8f4953dd5b90.svg?invert_in_darkmode&sanitize=true" align=middle width="452.729145pt" height="33.132pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aa22bd7b752349e96d6a8f4953dd5b90.svg?invert_in_darkmode&sanitize=true" align=middle width="452.729145pt" height="33.132pt"/>
+<img alt="$\tau_{l_\alpha m_\alpha,l_\beta m_\beta}^{lm}= \int_0^{2\pi} \int_0^{\pi} T_{lm} (\theta,\phi) T_{l_\alpha m_\alpha } (\theta,\phi) T_{l_\beta m_\beta } (\theta,\phi)  \sin(\theta) d\theta d\phi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aa22bd7b752349e96d6a8f4953dd5b90.svg?invert_in_darkmode&sanitize=true" align=middle width="452.729145pt" height="33.132pt"/>
 
 </center>
 
@@ -1123,9 +1122,9 @@ The following list describes these keywords.
     orbitals
   - <output_wavefunctions> - name that will point to file containing the
     one-electron orbitals at the end of the run.
-  - <fake_mass> - value for the electronic fake mass (<img alt="<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>). This
+  - <fake_mass> - value for the electronic fake mass (<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>). This
     parameter is not presently used in a conjugate gradient simulation
-  - <time_step> - value for the time step (<img alt="<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>). This parameter
+  - <time_step> - value for the time step (<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>). This parameter
     is not presently used in a conjugate gradient simulation.
   - <inner_iteration> - number of iterations between the printing out of
     energies and tolerances
@@ -1149,7 +1148,7 @@ The following list describes these keywords.
     Note Ewald summation is only used if the simulation\_cell is
     periodic.
 
-` Default set to be `<img alt="<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
+` Default set to be `<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
 
   - (Vosko || PBE96 || revPBE) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -1452,7 +1451,7 @@ The following list describes the input for the Car-Parrinello sub-block.
     orbital velocities.
   - <output_v_wavefunctions> - name of the file that will contain the
     one-electron orbital velocities at the end of the run.
-  - <fake_mass> - value for the electronic fake mass (<img alt="<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>).
+  - <fake_mass> - value for the electronic fake mass (<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>).
   - <time_step> - value for the Verlet integration time step
     ($\Delta t$).
   - <inner_iteration> - number of iterations between the printing out of
@@ -1475,7 +1474,7 @@ The following list describes the input for the Car-Parrinello sub-block.
     Note Ewald summation is only used if the simulation\_cell is
     periodic.
 
-` Default set to be `<img alt="<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
+` Default set to be `<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -1691,7 +1690,7 @@ is a powerful, non-equilibrium molecular dynamics method which
 accelerates the sampling of the multidimensional free energy surfaces of
 chemical reactions. This is achieved by adding an external
 time-dependent bias potential that is a function of user defined
-collective variables, <img alt="<img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>. The bias potential discourages the
+collective variables, <img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>. The bias potential discourages the
 system from sampling previously visited values of <img alt="<img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/> (i.e.,
 encourages the system to explore new values of <img alt="<img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>). During the
 simulation the bias potential accumulates in low energy wells which then
