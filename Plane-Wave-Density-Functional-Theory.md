@@ -1974,8 +1974,8 @@ sub-block.
     orbitals
   - <output_wavefunctions> - name of the file tha will contain the
     one-electron orbitals at the end of the run.
-  - <fake_mass> - value for the electronic fake mass (<img alt="<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>).
-  - <time_step> - value for the time step (<img alt="<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>).
+  - <fake_mass> - value for the electronic fake mass (<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>).
+  - <time_step> - value for the time step (<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>).
   - <inner_iteration> - number of iterations between the printing out of
     energies and tolerances
   - <outer_iteration> - number of outer iterations
@@ -1995,7 +1995,7 @@ sub-block.
     Note Ewald summation is only used if the simulation\_cell is
     periodic.
 
-` Default set to be `<img alt="<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
+` Default set to be `<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -2042,7 +2042,9 @@ input in detail.
 
 Alternatively, instead of explicitly entering lattice vectors, users can
 enter the unit cell using the standard cell parameters, a, b, c,
-<img alt="<img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>, <img alt="<img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>, and <img alt="<img alt="$\gamma$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>, by using the LATTICE block. The
+<img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>,
+<img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>, 
+and <img alt="$\gamma$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>, by using the LATTICE block. The
 format for input is as follows:
 
 `NWPW`  
@@ -2142,12 +2144,12 @@ that you specify.
 Basically, the pseudopotential
 energy
 
-<img alt="<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ebf5b6cffb11b24b8340ba90b370b03.svg?invert_in_darkmode&sanitize=true" align=middle width="830.321745pt" height="39.01194pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/946a013e87bedf6b7b98699f463d4f5d.svg?invert_in_darkmode&sanitize=true" align=middle width="829.618845pt" height="39.01194pt"/>
+<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ebf5b6cffb11b24b8340ba90b370b03.svg?invert_in_darkmode&sanitize=true" align=middle width="830.321745pt" height="39.01194pt"/>
 
 was modified
 to
 
-<img alt="<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I}  \left(1-\delta_{l,l^\sigma} \delta_{I,ionlist^\sigma}(\xi^\sigma-1)\right) &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0af951100d1f7a3b61c91a36abaebd7.svg?invert_in_darkmode&sanitize=true" align=middle width="1026.227895pt" height="39.01194pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/de32eafd5ade3fbd6e8d7036d12b55dc.svg?invert_in_darkmode&sanitize=true" align=middle width="1025.526645pt" height="39.01194pt"/>
+<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I}  \left(1-\delta_{l,l^\sigma} \delta_{I,ionlist^\sigma}(\xi^\sigma-1)\right) &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0af951100d1f7a3b61c91a36abaebd7.svg?invert_in_darkmode&sanitize=true" align=middle width="1026.227895pt" height="39.01194pt"/>
 
 An example input is as follows:
 
@@ -2269,7 +2271,7 @@ contained in the geometry blocks. The following local pseudopotential
 suggested by Laio, VandeVondele and Rothlisberger can be automatically
 generated.
 
-<img alt="<img alt="$\begin{matrix}V(\vec{r}) = -Z_{ion}\frac{{r_c}^{n_{\sigma}} - r^{n_{\sigma}}}{-sign(Z_{ion})*{r_c}^{n_{\sigma}+1}-r^{n_{\sigma}+1}}\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/17086f550a410c207428802b573b51b2.svg?invert_in_darkmode&sanitize=true" align=middle width="270.767145pt" height="31.97766pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/17086f550a410c207428802b573b51b2.svg?invert_in_darkmode&sanitize=true" align=middle width="270.767145pt" height="31.97766pt"/>
+<img alt="$\begin{matrix}V(\vec{r}) = -Z_{ion}\frac{{r_c}^{n_{\sigma}} - r^{n_{\sigma}}}{-sign(Z_{ion})*{r_c}^{n_{\sigma}+1}-r^{n_{\sigma}+1}}\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/17086f550a410c207428802b573b51b2.svg?invert_in_darkmode&sanitize=true" align=middle width="270.767145pt" height="31.97766pt"/>
 
 The following input To define this pseudopo the O^ MM atom using the
 following input
@@ -2281,7 +2283,8 @@ following input
 `END`
 
 defines the local pseudopotential for the O^ MM atom , where
-<img alt="<img alt="$Z_{ion}=-0.8476$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>, <img alt="<img alt="$n_{\sigma}=4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e56942592d9ad471b92a22dba2b133c6.svg?invert_in_darkmode&sanitize=true" align=middle width="48.74067pt" height="21.10812pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e56942592d9ad471b92a22dba2b133c6.svg?invert_in_darkmode&sanitize=true" align=middle width="48.74067pt" height="21.10812pt"/>, and <img alt="<img alt="$r_c=0.7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c3a2feed51f0f36f7a17124ccead504.svg?invert_in_darkmode&sanitize=true" align=middle width="56.881275pt" height="21.10812pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c3a2feed51f0f36f7a17124ccead504.svg?invert_in_darkmode&sanitize=true" align=middle width="56.881275pt" height="21.10812pt"/>. The following
+<img alt="$Z_{ion}=-0.8476$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>, 
+<img alt="$n_{\sigma}=4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e56942592d9ad471b92a22dba2b133c6.svg?invert_in_darkmode&sanitize=true" align=middle width="48.74067pt" height="21.10812pt"/>, and <img alt="$r_c=0.7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c3a2feed51f0f36f7a17124ccead504.svg?invert_in_darkmode&sanitize=true" align=middle width="56.881275pt" height="21.10812pt"/>. The following
 input can be used to define the local pseudopotentials for all the MM
 atoms in the geometry block defined above
 
@@ -2430,19 +2433,19 @@ to define the pseudopotential. After the ATOMIC\_FILLING: <ncore>
 <nvalence> line, the core states are listed (one per line), and then the
 valence states are listed (one per line). Each state contains two
 integer and a value. The first integer specifies the radial quantum
-number, <img alt="<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>, the second integer specifies the angular momentum quantum
-number, <img alt="<img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/>, and the third value specifies the occupation of the
+number, <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>, the second integer specifies the angular momentum quantum
+number, <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/>, and the third value specifies the occupation of the
 state.
 
 For example to define a pseudopotential for the Neon atom in the
-<img alt="<img alt="$1s^2 2s^2 2p^6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a25c18197ba3b73e419b77b39111c7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="69.43563pt" height="26.70657pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a25c18197ba3b73e419b77b39111c7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="69.43563pt" height="26.70657pt"/> state could have the block
+<img alt="$1s^2 2s^2 2p^6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a25c18197ba3b73e419b77b39111c7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="69.43563pt" height="26.70657pt"/> state could have the block
 
 `ATOMIC_FILLING: 1 2 `  
 ` 1 s 2.0 #core state - 1s^2 `  
 ` 2 s 2.0 #valence state - 2s^2 `  
 ` 2 p 6.0 #valence state - 2p^6`
 
-for a pseudopotential with a <img alt="<img alt="$2s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/> and <img alt="<img alt="$2p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/> valence electrons or the
+for a pseudopotential with a <img alt="$2s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/> and <img alt="$2p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/> valence electrons or the
 block
 
 `ATOMIC_FILLING: 3 0 `  
@@ -2456,9 +2459,9 @@ could be used for a pseudopotential with no valence electrons.
 
 This optional block specifies the cutoff distances used to match the
 all-electron atom to the pseudopotential atom. For Hamann
-pseudopotentials <img alt="<img alt="$r_{cut}(l)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/> defines the distance where the
+pseudopotentials <img alt="$r_{cut}(l)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/> defines the distance where the
 all-electron potential is matched to the pseudopotential, and for
-Troullier-Martins pseudopotentials <img alt="<img alt="$r_{cut}(l)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/> defines the distance
+Troullier-Martins pseudopotentials <img alt="$r_{cut}(l)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3900e93dc26b755c3479ab08de679b08.svg?invert_in_darkmode&sanitize=true" align=middle width="44.77077pt" height="24.56553pt"/> defines the distance
 where the all-electron orbital is matched to the pseudowavefunctions.
 Thus the definition of the radii depends on the type of pseudopotential.
 The cutoff radii used in Hamann pseudopotentials will be smaller than
