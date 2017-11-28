@@ -1891,8 +1891,12 @@ surface normal:
 
 where <img alt="$Z_{ads}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/79893c344f6963e41e3e8f21bafa8ed4.svg?invert_in_darkmode&sanitize=true" align=middle width="31.28202pt" height="22.38192pt"/> denotes the position of the adatom/admolecule/impurity
 along the surface normal (here, we assume the surface normal to be the
-z-axis) and the summation over <img alt="<img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> runs over <img alt="<img alt="$N_{plane}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fec83962e01db7093a670f089a6a7e1.svg?invert_in_darkmode&sanitize=true" align=middle width="45.530925pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fec83962e01db7093a670f089a6a7e1.svg?invert_in_darkmode&sanitize=true" align=middle width="45.530925pt" height="22.38192pt"/> atoms at
-<img alt="<img alt="$Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed35373880183d013fc1bba898b2e3ae.svg?invert_in_darkmode&sanitize=true" align=middle width="15.813105pt" height="22.38192pt"/>" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed35373880183d013fc1bba898b2e3ae.svg?invert_in_darkmode&sanitize=true" align=middle width="15.813105pt" height="22.38192pt"/> which form the layer. The layer could be on the face or in the
+z-axis) and the summation over 
+<img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> 
+runs over 
+<img alt="$N_{plane}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fec83962e01db7093a670f089a6a7e1.svg?invert_in_darkmode&sanitize=true" align=middle width="45.530925pt" height="22.38192pt"/> 
+atoms at
+<img alt="$Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed35373880183d013fc1bba898b2e3ae.svg?invert_in_darkmode&sanitize=true" align=middle width="15.813105pt" height="22.38192pt"/> which form the layer. The layer could be on the face or in the
 interior of the
 slab.
 
