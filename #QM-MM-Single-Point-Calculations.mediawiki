@@ -1,5 +1,5 @@
 __NOTITLE__
-{{Template:Release66:QMMM_Single_Point_Calculations}}
+{{Template:QMMM_Single_Point_Calculations}}
 The task directive for QM/MM single point energy and gradient calculations is given by
  task qmmm <qmtheory> energy
 or
@@ -19,3 +19,44 @@ include
 *[[qmmm_link_ecp   |link_ecp]].
 
 {{qmmm_example3}}
+
+
+  start etl
+
+  permanent_dir ./perm
+  scratch_dir ./data
+
+  prepare
+  source etl0.pdb
+  new_top new_seq
+  new_rst
+  modify atom 1:_C1  quantum
+  modify atom 1:2H1  quantum
+  modify atom 1:3H1  quantum
+  modify atom 1:4H1  quantum
+  center
+  orient
+  solvate box 3.0
+  update lists
+  ignore
+  write etl_ref.rst
+  write etl_ref.pdb
+  end
+  task prepare
+
+  md
+  system etl_ref
+  end
+
+  basis
+  * library "6-31G"
+  end
+  dft
+  xc b3lyp
+  end
+
+  qmmm
+    link_atoms hydrogen
+  end
+
+  task qmmm dft energy
