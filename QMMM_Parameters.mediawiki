@@ -23,7 +23,6 @@ The QM/MM interface parameters define the interaction between classical and quan
 
 
 Detailed explanation of the subdirectives in the QM/MM input block is given below:
-
 {{qmmm_eref}}
 
 {{qmmm_bq_zone}}
