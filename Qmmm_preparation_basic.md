@@ -1,7 +1,7 @@
 One of major required pieces of information that has to be provided in the prepare block for QM/MM simulations is the definition of the QM region.
-This can be accomplished using ''modify'' directive used either per atom 
+This can be accomplished using ''modify'' directive used either per atom   
 ` modify atom <integer isgm>:<string atomname> quantum`  
-or per segment/residue basis 
+or per segment/residue basis   
 ` modify segment <integer isgm> quantum`  
 
 Here ''isgm'' and ''atomname'' refer to the residue number and atom name record as given in the PDB file. It is important to note that that the leading blanks in atom name record should be indicated with underscores. Per PDB format guidelines the atom name record starts at column 13. If, for example, the atom name record "OW" starts in the 14th column in PDB file, it will appear as "_OW" in the modify atom directive in the prepare block. 
