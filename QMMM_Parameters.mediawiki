@@ -1,38 +1,38 @@
 __NOTITLE__
-{{Template:Release66:QMMM_Input_Links}}
+{{Template:QMMM_Input_Links}}
 The QM/MM interface parameters define the interaction between classical and quantum regions. 
-<onlyinclude>
+
   qmmm
-  [ [[Release66:qmmm_eref       |eref]] <double precision default 0.0d0>]
-  [ [[Release66:qmmm_bq_zone    |bqzone]] <double precision default 9.0d0>]
-  [ [[Release66:qmmm_mm_charges |mm_charges]] [exclude <(none||all||linkbond||linkbond_H) default none>]
+  [ [[qmmm_eref       |eref]] <double precision default 0.0d0>]
+  [ [[qmmm_bq_zone    |bqzone]] <double precision default 9.0d0>]
+  [ [[qmmm_mm_charges |mm_charges]] [exclude <(none||all||linkbond||linkbond_H) default none>]
            [ expand  <none||all||solute||solvent> default none]
            [ update  <integer default 0>] 
-  [ [[Release66:qmmm_link_atoms |link_atoms]] <(hydrogen||halogen) default hydrogen>]
-  [ [[Release66:qmmm_link_ecp   |link_ecp]]  <(auto||user) default auto>]
-  [ [[Release66:qmmm_region     |region]]   < [region1]  [region2]  [region3] > ]
-  [ [[Release66:qmmm_method     |method]]   [method1]  [method2]  [method3]  ]
-  [ [[Release66:qmmm_maxiter    |maxiter]]  [maxiter1] [maxiter2] [maxiter3] ]
-  [ [[Release66:qmmm_ncycles    |ncycles]]  < [number] default 1 > ]
-  [ [[Release66:qmmm_density    |density]]  [espfit] [static] [dynamical] ]
-  [ [[Release66:qmmm_xyz     |xyz]]  ]
-  [ [[Release66:qmmm_convergence     |convergence]] <double precision default 1.0d-4>] ]
-  [ [[Release66:qmmm_rename   |rename]] ] <filename>
-  [ [[Release66:qmmm_nsamples|nsamples]] ]
+  [ [[qmmm_link_atoms |link_atoms]] <(hydrogen||halogen) default hydrogen>]
+  [ [[qmmm_link_ecp   |link_ecp]]  <(auto||user) default auto>]
+  [ [[qmmm_region     |region]]   < [region1]  [region2]  [region3] > ]
+  [ [[qmmm_method     |method]]   [method1]  [method2]  [method3]  ]
+  [ [[qmmm_maxiter    |maxiter]]  [maxiter1] [maxiter2] [maxiter3] ]
+  [ [[qmmm_ncycles    |ncycles]]  < [number] default 1 > ]
+  [ [[qmmm_density    |density]]  [espfit] [static] [dynamical] ]
+  [ [[qmmm_xyz     |xyz]]  ]
+  [ [[qmmm_convergence     |convergence]] <double precision default 1.0d-4>] ]
+  [ [[qmmm_rename   |rename]] ] <filename>
+  [ [[qmmm_nsamples|nsamples]] ]
   end
 
-</onlyinclude>
+
 Detailed explanation of the subdirectives in the QM/MM input block is given below:
 
-{{:Release66:qmmm_eref}}
+{{qmmm_eref}}
 
-{{:Release66:qmmm_bq_zone}}
+{{qmmm_bq_zone}}
 
-{{:Release66:qmmm_mm_charges}}
+{{qmmm_mm_charges}}
 
-{{:Release66:qmmm_link_atoms}}
+{{qmmm_link_atoms}}
 
-{{:Release66:qmmm_link_ecp}}
+{{qmmm_link_ecp}}
 
 {{:qmmm_region}}
 
