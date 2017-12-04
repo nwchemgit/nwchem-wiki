@@ -1727,7 +1727,7 @@ To use the Grimme DFT-D3 dispersion correction, use the option
 <!-- end list -->
 
   - vdw 4 triggers the DFT-D3BJ dispersion model. Currently only BLYP,
-    B3LYP, BHLYP, TPSS, and TPSSh are supported.
+    B3LYP, BHLYP, TPSS, TPSSh,  B2-PLYP, B97-D, BP86, PBE96, PW6B95, revPBE, B3PW91, pwb6k, b1b95, CAM-B3LYP, LC-wPBE,  HCTH120, MPW1B95, BOP, OLYP,  BPBE, OPBE and SSB  are supported.
 
 This capability is also supported for energy gradients and Hessian. Is
 possible to be deactivated with OFF.
