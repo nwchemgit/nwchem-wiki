@@ -1682,17 +1682,16 @@ atoms. <img alt="$R_{vdw}$" src="https://raw.githubusercontent.com/wiki/nwchemgi
 radii and the nucleus distance respectively. The <img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> value
 contributes to control the corrections at intermediate distances.
 
-There are available three ways to compute
-    $C_6^{ij}$:
+There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>:* 
 
-1.  <img alt="$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>
-    where $N_{eff}$ and $C_6$ are obtained from Q. Wu and W. Yang,
-    J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
-    Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use vdw 0)
-2.  <img alt="$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See
-    details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use vdw 1)
-3.  <img alt="$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp.
-    Chem. 271787 (2006). (Use vdw 2)
+1.  <img alt="$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  
+where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
+J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
+Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use vdw 0)  
+
+2.  <img alt="$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use vdw 1)  
+
+3.  <img alt="$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use vdw 2)  
 
 Note that in each option there is a certain set of <img alt="$C_6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> and
 <img alt="$R_{vdw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/>. ALso note that Grimme only defined parameters for elements
