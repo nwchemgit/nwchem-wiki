@@ -12,7 +12,7 @@ trial vector algorithm (or its modification for a non-Hermitian
 eigenvalue problem). The capabilities of the module are summarized as
 follows:
 
-  - Vertical excitation energies (valence and core)
+  - Vertical excitation energies (valence and core),
   - Spin-restricted singlet and triplet excited states for closed-shell
     systems,
   - Spin-unrestricted doublet, etc., excited states for open-shell
