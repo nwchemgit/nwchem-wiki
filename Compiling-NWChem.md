@@ -81,13 +81,12 @@ MACX64</p></td>
 <td><p>GNU, xlf, Intel</p></td>
 </tr>
 <tr class="odd">
-<td><p>CYGWIN<br />
-WIN32</p></td>
+<td>CYGWIN<br />
+</td>
 <td><p>Intel x86</p></td>
 <td><p>Windows with Cygwin<br />
 Windows</p></td>
-<td><p>GNU<br />
-Compaq</p></td>
+<td><p>GNU</p></td>
 </tr>
 <tr class="even">
 </tr>
@@ -131,18 +130,6 @@ MPI-SPAWN</p></td>
 <td><p>MPI</p></td>
 </tr>
 <tr class="odd">
-<td><p>MELLANOX</p></td>
-<td><p>LINUX, LINUX64</p></td>
-<td><p>Mellanox InfiniBand</p></td>
-<td><p>VAPI</p></td>
-</tr>
-<tr class="even">
-<td><p>GM</p></td>
-<td><p>LINUX, LINUX64</p></td>
-<td><p>Myrinet</p></td>
-<td><p>GM</p></td>
-</tr>
-<tr class="odd">
 <td><p>DMAPP</p></td>
 <td><p>LINUX64</p></td>
 <td><p>Cray Gemini &amp; Aries</p></td>
@@ -171,12 +158,6 @@ MPI-SPAWN</p></td>
 <td><p>BGP</p></td>
 <td><p>IBM Blue Gene/P</p></td>
 <td><p>DCMF, MPI</p></td>
-</tr>
-<tr class="even">
-<td><p>VIA</p></td>
-<td><p>LINUX</p></td>
-<td><p>Giganet/CLAN</p></td>
-<td><p>VIA</p></td>
 </tr>
 <tr class="odd">
 </tr>
