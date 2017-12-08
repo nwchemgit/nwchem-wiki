@@ -36,7 +36,8 @@ when using the ***NWChem development*** source
 <tr class="even">
 <td><p>LINUX</p></td>
 <td><p>x86<br />
-ppc</p></td>
+ppc<br/>
+arm</p></td>
 <td><p>RedHat, Suse<br />
 Suse</p></td>
 <td><p>GNU, Intel, PGI<br />
@@ -46,7 +47,9 @@ GNU, xlf</p></td>
 <td><p>LINUX64</p></td>
 <td><p>ia64<br />
 x86_64<br />
-ppc64, ppc64le</p></td>
+ppc64</br>
+ppc64le</br>
+aarch64</p></td>
 <td><p>RedHat<br />
 SLES, RedHat<br />
 SLES, RedHat</p></td>
@@ -117,11 +120,22 @@ to be defined.
 <td><p>Verbs</p></td>
 </tr>
 <tr class="odd">
-<td><p>MPI-MT<br />
-MPI-SPAWN</p></td>
+<td><p>MPI-PR</td>
 <td><p>LINUX64</p></td>
-<td><p>Myrinet MX, InfiniBand</p></td>
+<td><p>Any network with MPI</p></td>
+<td><p>MPI</p></td>
+</tr>
+<tr class="even">
+<td><p>MPI-PT</p>/td>
+<td><p>LINUX64</p></td>
+<td><p> </p></td>
 <td><p>MPI-2</p></td>
+</tr>
+<tr class="odd">
+<td><p>MPI-TS</p></td>
+<td><p>any</p></td>
+<td><p>any network with MPI</p></td>
+<td><p>MPI</p></td>
 </tr>
 <tr class="even">
 <td><p>MPI-TS</p></td>
