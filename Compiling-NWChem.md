@@ -122,13 +122,14 @@ to be defined.
 <tr class="odd">
 <td><p>MPI-PR</td>
 <td><p>LINUX64</p></td>
-<td><p>Any network with MPI</p></td>
+<td><p>Any network</p></td>
 <td><p>MPI</p></td>
 </tr>
 <tr class="even">
-<td><p>MPI-PT</p>/td>
+<td><p>MPI-MT<br />
+MPI-SPAWN</p></td>
 <td><p>LINUX64</p></td>
-<td><p> </p></td>
+<td><p>MPI support multi-threading multiple</p></td>
 <td><p>MPI-2</p></td>
 </tr>
 <tr class="odd">
@@ -138,7 +139,7 @@ to be defined.
 <td><p>MPI</p></td>
 </tr>
 <tr class="even">
-<td><p>MPI-TS</p></td>
+<td><p>MPI-PT</p></td>
 <td><p>any</p></td>
 <td><p>any network with MPI</p></td>
 <td><p>MPI</p></td>
