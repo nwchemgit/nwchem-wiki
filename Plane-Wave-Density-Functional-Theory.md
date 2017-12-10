@@ -2956,8 +2956,8 @@ attached pdf [nwpwexample1.pdf](nwpwexample1.pdf "wikilink")
 
 ### Total energy of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
-(input:[Media:s2-example1.nw](Media:s2-example1.nw "wikilink"),
-output:[Media:s2-example1.nwout](Media:s2-example1.nwout "wikilink"))
+(input:[Media:s2-example1.nw](s2-example1.nw "wikilink"),
+output:[Media:s2-example1.nwout](s2-example1.nwout "wikilink"))
 
 In this example, the total energy of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using LDA
 approximation for the exchange-correlation functional is calculated.
@@ -3017,8 +3017,8 @@ be
 
 ### Structural optimization of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
-(input:[Media:s2-example2.nw](Media:s2-example2.nw "wikilink"),
-output:[Media:s2-example2.nwout](Media:s2-example2.nwout "wikilink"))
+(input:[Media:s2-example2.nw](s2-example2.nw "wikilink"),
+output:[Media:s2-example2.nwout](s2-example2.nwout "wikilink"))
 
 In this example, the structure of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using results
 generated from prior energy calculation is calculated. Since most of the
@@ -3100,8 +3100,8 @@ be
 
 ### Frequency calculation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
-(input:[Media:s2-example3.nw](Media:s2-example3.nw "wikilink"),
-output:[Media:s2-example3.nwout](Media:s2-example3.nwout "wikilink"))
+(input:[Media:s2-example3.nw](s2-example3.nw "wikilink"),
+output:[Media:s2-example3.nwout](s2-example3.nwout "wikilink"))
 
 In this example, the vibrational frequency of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using
 results generated from prior geometry optimization is calculated. Since
@@ -3157,10 +3157,10 @@ generated
 
 ### Ab initio molecular dynamics simulation (Car-Parrinello) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
 
-(input:[Media:s2-example4.nw](Media:s2-example4.nw "wikilink"),
-output:[Media:s2-example4.nwout](Media:s2-example4.nwout "wikilink")
-[Media:s2-md.xyz](Media:s2-md.xyz "wikilink")
-[Media:s2-md.emotion.dat](Media:s2-md.emotion.dat "wikilink") )
+(input:[Media:s2-example4.nw](s2-example4.nw "wikilink"),
+output:[Media:s2-example4.nwout](s2-example4.nwout "wikilink")
+[Media:s2-md.xyz](s2-md.xyz "wikilink")
+[Media:s2-md.emotion.dat](s2-md.emotion.dat "wikilink") )
 
 In this example, a constant energy Car-Parrinello simulation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
 dimer using LDA approximation is calculated. A brief introduction to the
@@ -3234,12 +3234,12 @@ simulation.
 
 [file:s2-md.png](file:s2-md.png "wikilink")
 
-### Ab initio molecular dynamics simulation (Born-Oppenheimer) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
+### Ab initio molecular dynamics simulation (Born-Oppenheimer) of S<sub2</sub> dimer using the LDA approximation
 
-(input:[Media:s2-example5.nw](Media:s2-example5.nw "wikilink"),
-output:[Media:s2-example5.nwout](Media:s2-example5.nwout "wikilink")
-[Media:s2-bomd.xyz](Media:s2-bomd.xyz "wikilink")
-[Media:s2-bomd.emotion.dat](Media:s2-bomd.emotion.dat "wikilink") ) In
+(input:[Media:s2-example5.nw](s2-example5.nw "wikilink"),
+output:[Media:s2-example5.nwout](s2-example5.nwout "wikilink")
+[Media:s2-bomd.xyz](s2-bomd.xyz "wikilink")
+[Media:s2-bomd.emotion.dat](s2-bomd.emotion.dat "wikilink") ) In
 this example, a constant energy Born-Oppenheimer simulation of S2 dimer
 using LDA approximation is calculated.
 
@@ -3316,12 +3316,12 @@ will have a more open geometry.
 
 ### Simulated Annealing Using Constant Energy Simulation
 
-(input:[Media:b12-example2a.nw](Media:b12-example2a.nw "wikilink"),
-output:[Media:b12-example2a.nwout](Media:b12-example2a.nwout "wikilink")
-[Media:b12.00.xyz](Media:b12.00.xyz "wikilink")
-[Media:b12.00.emotion.dat](Media:b12.00.emotion.dat "wikilink")
-[Media:b12.01.xyz](Media:b12.01.xyz "wikilink")
-[Media:b12.01.emotion.dat](Media:b12.01.emotion.dat "wikilink"))
+(input:[Media:b12-example2a.nw](b12-example2a.nw "wikilink"),
+output:[Media:b12-example2a.nwout](b12-example2a.nwout "wikilink")
+[Media:b12.00.xyz](b12.00.xyz "wikilink")
+[Media:b12.00.emotion.dat](b12.00.emotion.dat "wikilink")
+[Media:b12.01.xyz](b12.01.xyz "wikilink")
+[Media:b12.01.emotion.dat](b12.01.emotion.dat "wikilink"))
 
 This example uses a series of constant energy Car-Parrinello simulations
 with velocity scaling to do simulated annealing. The initial four
@@ -3389,15 +3389,15 @@ or
 
 ### Simulated Annealing Using Constant Temperature Simulation
 
-(input:[Media:b12-example2b.nw](Media:b12-example2b.nw "wikilink"),
-output:[Media:b12-example2b.nwout](Media:b12-example2b.nwout "wikilink")
-[Media:b12.10.xyz](Media:b12.10.xyz "wikilink")
-[Media:b12.10.emotion.dat](Media:b12.10.emotion.dat "wikilink")
-[Media:b12.11.xyz.gz](Media:b12.11.xyz.gz "wikilink")
-[Media:b12.11.emotion.dat](Media:b12.11.emotion.dat "wikilink"))
+(input:[Media:b12-example2b.nw](b12-example2b.nw "wikilink"),
+output:[Media:b12-example2b.nwout](b12-example2b.nwout "wikilink")
+[Media:b12.10.xyz](b12.10.xyz "wikilink")
+[Media:b12.10.emotion.dat](b12.10.emotion.dat "wikilink")
+[Media:b12.11.xyz.gz](b12.11.xyz.gz "wikilink")
+[Media:b12.11.emotion.dat](b12.11.emotion.dat "wikilink"))
 
 (mpeg movie of simulation:
-[Media:boron.mpg](Media:boron.mpg "wikilink"))
+[Media:boron.mpg](boron.mpg "wikilink"))
 
 The simulated annealing calculation in this example uses a constant
 temperature Car-Parrinello simulation with an exponential cooling
@@ -3531,7 +3531,7 @@ CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/
 Un-optimized geometries for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H and
 CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> which are needed to design your simulations are contained in
 the file
-[Media:thermodynamics.xyz](Media:thermodynamics.xyz "wikilink"). You
+[Media:thermodynamics.xyz](thermodynamics.xyz "wikilink"). You
 will also need to calculate the energies for the H, C, S, and Cl atoms
 to calculate the atomization energies. The multiplicities for these
 atoms are 2, 3, 3 and 2 respectively. You will also need to calculate
@@ -3617,8 +3617,8 @@ Table 3: Miscellaneous experimental gas-phase enthalpies of formation
 
 ## NWPW Tutorial 4: AIMD/MM simulation of CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> + 64 H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>O
 
-(input:[Media:ccl4-64water.nw](Media:ccl4-64water.nw "wikilink"),
-output:[Media:ccl4-64water.nwout](Media:ccl4-64water.nwout "wikilink"))
+(input:[Media:ccl4-64water.nw](ccl4-64water.nw "wikilink"),
+output:[Media:ccl4-64water.nwout](ccl4-64water.nwout "wikilink"))
 
 In this section we show how use the PSPW module to perform a
 Car-Parrinello AIMD/MM simulation for a CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> molecule in a box of
@@ -3642,12 +3642,12 @@ plots.
 
 ### Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW
 
-(input:[Media:diamond-pspw.nw](Media:diamond-pspw.nw "wikilink"),
-output:[Media:diamond-pspw.nwout](Media:diamond-pspw.nwout "wikilink"),
-[Media:diamond.opt.cif](Media:diamond.opt.cif "wikilink"))
+(input:[Media:diamond-pspw.nw](diamond-pspw.nw "wikilink"),
+output:[Media:diamond-pspw.nwout](diamond-pspw.nwout "wikilink"),
+[Media:diamond.opt.cif](diamond.opt.cif "wikilink"))
 
-(input:[Media:catom-pspw.nw](Media:catom-pspw.nw "wikilink"),
-output:[Media:catom-pspw.nwout](Media:catom-pspw.nwout "wikilink"))
+(input:[Media:catom-pspw.nw](catom-pspw.nw "wikilink"),
+output:[Media:catom-pspw.nwout](catom-pspw.nwout "wikilink"))
 
 The following example uses the PSPW module to optimize the unit cell and
 geometry for a diamond crystal. The fractional coordinates and the unit
@@ -3851,8 +3851,8 @@ energy.
 
 ### Optimizing the Unit Cell for an 8 Atom Supercell of Diamond with BAND
 
-(input:[Media:diamond-band.nw](Media:diamond-band.nw "wikilink"),
-output:[Media:diamond-band.nwout](Media:diamond-band.nwout "wikilink"))
+(input:[Media:diamond-band.nw](diamond-band.nw "wikilink"),
+output:[Media:diamond-band.nwout](diamond-band.nwout "wikilink"))
 
 In this example the BAND module is used to optimize the unit cell and
 geometry for a diamond crystal at different Brillouin zone
@@ -3947,8 +3947,8 @@ Angs.
 
 ### Using BAND to Optimize the Unit Cell for a 2 Atom Primitive Cell of Diamond
 
-(input:[Media:diamond-fcc.nw](Media:diamond-fcc.nw "wikilink"),
-output:[Media:diamond-fcc.nwout.gz](Media:diamond-fcc.nwout.gz "wikilink"))
+(input:[Media:diamond-fcc.nw](diamond-fcc.nw "wikilink"),
+output:[Media:diamond-fcc.nwout.gz](diamond-fcc.nwout.gz "wikilink"))
 
 In this example the BAND module is used to optimize a 2 atom unit cell
 for a diamond crystal at different Brillouin zone samplings. The
@@ -4023,8 +4023,8 @@ cell.
 
 ### Using BAND to Calculate the Band Structures of Diamond
 
-(input:[Media:diamond-structure.nw](Media:diamond-structure.nw "wikilink"),
-output:[Media:diamond-structure.nwout](Media:diamond-structure.nwout "wikilink"),
+(input:[Media:diamond-structure.nw](diamond-structure.nw "wikilink"),
+output:[Media:diamond-structure.nwout](diamond-structure.nwout "wikilink"),
 [file:diamondfcc.restricted\_band.dat](file:diamondfcc.restricted_band.dat "wikilink"))
 
 The following example uses the BAND module to calculate the band
@@ -4094,13 +4094,13 @@ xmgrace) can be used to display the band structure.
 ### Using BAND to Calculate the Density of States of Diamond
 
 (2 atom cell -
-input:[Media:diamond-dos.nw](Media:diamond-dos.nw "wikilink")
-output:[Media:diamond-dos.nwout](Media:diamond-dos.nwout "wikilink"),
-[Media:diamond-dos.dos.dat](Media:diamond-dos.dos.dat "wikilink")) (8
+input:[Media:diamond-dos.nw](diamond-dos.nw "wikilink")
+output:[Media:diamond-dos.nwout](diamond-dos.nwout "wikilink"),
+[Media:diamond-dos.dos.dat](diamond-dos.dos.dat "wikilink")) (8
 atom cell -
-input:[Media:diamond-dos8.nw](Media:diamond-dos8.nw "wikilink") output:
-[Media:diamond-dos8.nwout.gz](Media:diamond-dos8.nwout.gz "wikilink"),
-[Media:diamond-dos8.dos.dat](Media:diamond-dos8.dos.dat "wikilink"))
+input:[Media:diamond-dos8.nw](diamond-dos8.nw "wikilink") output:
+[Media:diamond-dos8.nwout.gz](diamond-dos8.nwout.gz "wikilink"),
+[Media:diamond-dos8.dos.dat](diamond-dos8.dos.dat "wikilink"))
 
 The following example uses the BAND module to calculate the density of
 states the diamond
@@ -4163,8 +4163,8 @@ states.
 
 ## NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation
 
-(input:[Media:Ni-band.nw](Media:Ni-band.nw "wikilink")
-output:[Media:Ni-band.nwout](Media:Ni-band.nwout "wikilink")) The
+(input:[Media:Ni-band.nw](Ni-band.nw "wikilink")
+output:[Media:Ni-band.nwout](Ni-band.nwout "wikilink")) The
 following example demonstrates how to uses the BAND module to optimize
 the unit cell and geometry for FCC cell of Nickel
 metal
@@ -4266,12 +4266,12 @@ Angs.
 ## NWPW Tutorial 7: Optimizing the unit cells with symmetry: Diamond with Fd-3m symmetry and Brucite with P-3m1 symmetry
 
 (Diamond example,
-input:[Media:diamond-symmetry.nw](Media:diamond-symmetry.nw "wikilink"),
-output:[Media:diamond-symmetry.nwout](Media:diamond-symmetry.nwout "wikilink"))
+input:[Media:diamond-symmetry.nw](diamond-symmetry.nw "wikilink"),
+output:[Media:diamond-symmetry.nwout](diamond-symmetry.nwout "wikilink"))
 
 (Brucite example,
-input:[Media:brucite-symmetry.nw](Media:brucite-symmetry.nw "wikilink"),
-output:[Media:brucite-symmetry.nwout](Media:brucite-symmetry.nwout "wikilink"))
+input:[Media:brucite-symmetry.nw](brucite-symmetry.nw "wikilink"),
+output:[Media:brucite-symmetry.nwout](brucite-symmetry.nwout "wikilink"))
 
 The following example uses the BAND module to optimize the unit cell and
 geometry for a Diamond crystal with Fd-3m symmetry. The fractional
@@ -4505,8 +4505,8 @@ steps,
 
 whereas, without symmetry the optimization may not be converged even at
 100 geometry steps
-(input:[Media:brucite-nosymmetry.nw](Media:brucite-nosymmetry.nw "wikilink"),
-output:[Media:brucite-nosymmetry.nwout](Media:brucite-nosymmetry.nwout "wikilink")).
+(input:[Media:brucite-nosymmetry.nw](brucite-nosymmetry.nw "wikilink"),
+output:[Media:brucite-nosymmetry.nwout](brucite-nosymmetry.nwout "wikilink")).
 
 `@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
 `@ ---- ---------------- -------- -------- -------- -------- -------- --------`  
@@ -4526,12 +4526,12 @@ output:[Media:brucite-nosymmetry.nwout](Media:brucite-nosymmetry.nwout "wikilink
 In this example the PSPW module is used to run an NVT simulation for a
 diamond crystal using the a Metropolis Monte-Carlo algorithm.
 
-(input:[Media:diamond-nvt.nw](Media:diamond-nvt.nw "wikilink"),
-output:[Media:diamond-nvt.nwout.gz](Media:diamond-nvt.nwout.gz "wikilink"),
-datafiles:[Media:diamond-nvt.emotion.gz](Media:diamond-nvt.emotion.gz "wikilink"),
-[Media:diamond-nvt.ion\_motion.gz](Media:diamond-nvt.ion_motion.gz "wikilink"),
-[Media:diamond-nvt.xyz.gz](Media:diamond-nvt.xyz.gz "wikilink"),
-[Media:diamond\_nvt\_234.cif.gz](Media:diamond_nvt_234.cif.gz "wikilink"))
+(input:[Media:diamond-nvt.nw](diamond-nvt.nw "wikilink"),
+output:[Media:diamond-nvt.nwout.gz](diamond-nvt.nwout.gz "wikilink"),
+datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz "wikilink"),
+[Media:diamond-nvt.ion\_motion.gz](diamond-nvt.ion_motion.gz "wikilink"),
+[Media:diamond-nvt.xyz.gz](diamond-nvt.xyz.gz "wikilink"),
+[Media:diamond\_nvt\_234.cif.gz](diamond_nvt_234.cif.gz "wikilink"))
 
 ![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
 T=300K.](diamond-nvt.gif
@@ -4609,12 +4609,12 @@ In this example the PSPW module is used to run an NPT simulation for a
 diamond crystal using the a Metropolis Monte-Carlo
 algorithm.
 
-(input:[Media:diamond-metropolis.nw](Media:diamond-metropolis.nw "wikilink"),
-output:[Media:diamond-metropolis.nwout.gz](Media:diamond-metropolis.nwout.gz "wikilink"),
-datafiles:[Media:diamond-metropolis.emotion.gz](Media:diamond-metropolis.emotion.gz "wikilink"),
-[Media:diamond-metropolis.ion\_motion.gz](Media:diamond-metropolis.ion_motion.gz "wikilink"),
-[Media:diamond-metropolis.xyz.gz](Media:diamond-metropolis.xyz.gz "wikilink"),
-[Media:diamond\_metropolis\_1234.cif.gz](Media:diamond_metropolis_1234.cif.gz "wikilink"))
+(input:[Media:diamond-metropolis.nw](diamond-metropolis.nw "wikilink"),
+output:[Media:diamond-metropolis.nwout.gz](diamond-metropolis.nwout.gz "wikilink"),
+datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz "wikilink"),
+[Media:diamond-metropolis.ion\_motion.gz](diamond-metropolis.ion_motion.gz "wikilink"),
+[Media:diamond-metropolis.xyz.gz](diamond-metropolis.xyz.gz "wikilink"),
+[Media:diamond\_metropolis\_1234.cif.gz](diamond_metropolis_1234.cif.gz "wikilink"))
 
 `title "Metropolis NPT simulation of diamond - this input is used to put the system in equilibrium"`  
 `echo`  
@@ -4681,10 +4681,10 @@ datafiles:[Media:diamond-metropolis.emotion.gz](Media:diamond-metropolis.emotion
 
 </center>
 
-(inputs:[Media:diamond-metropolis-sampling.nw.tgz](Media:diamond-metropolis-sampling.nw.tgz "wikilink"))
+(inputs:[Media:diamond-metropolis-sampling.nw.tgz](diamond-metropolis-sampling.nw.tgz "wikilink"))
 
 (python analysis
-program:[Media:makehistogram.gz](Media:makehistogram.gz "wikilink"))
+program:[Media:makehistogram.gz](makehistogram.gz "wikilink"))
 
 `[WE27972:~/Projects/NWChem/Metropolis] bylaska% makehistogram -t 300 -c 2 1235/diamond-metropolis-1235.emotion 1236/diamond-metropolis-1236.emotion `  
 `1237/diamond-metropolis-1237.emotion 1238/diamond-metropolis-1238.emotion 1239/diamond-metropolis-1239.emotion 1240/diamond-metropolis-1240.emotion `  
