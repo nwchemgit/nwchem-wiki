@@ -1,0 +1,35 @@
+title "triplet carbon atom at pbe96 level"
+
+start c1-pspw
+
+memory 1400 mb
+
+permanent_dir ./perm
+scratch_dir   ./scratch
+
+geometry
+C 0 0 0
+end
+
+#calculate atom in large unit cell using periodic boundary conditions
+nwpw
+   simulation_cell
+      FCC 38.0     #large cell
+   end
+   xc pbe96
+   mult 3
+  lmbfgs
+end
+task pspw energy
+
+#recalculate using free-space (aperiodic) boundary conditions
+nwpw
+   simulation_cell
+      FCC 38.0     #large cell
+      boundary_conditions aperiodic
+   end
+   xc pbe96
+   mult 3
+  lmbfgs
+end
+task pspw energy
