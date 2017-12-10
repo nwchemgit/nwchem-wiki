@@ -856,7 +856,11 @@ initial guesses by using "set tce:maxeorb" directive. For example for
 system with the C2V symmetry with the orbital energy structure shown
 below
 
-![ea-ip-initial-guess.png] (https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ea-ip-initial-guess.png "ea ip initial guess")
+![ea-ip-initial-guess.png] (https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ea-ip-initial-guess.png)
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+
 
 one can use the energy window (in the sense of the absolute value of the
 HF orbital energies) to pinpoint the initial guesses. If one is
