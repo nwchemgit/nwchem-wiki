@@ -1,0 +1,48 @@
+title "brucite testing - using P-3m1 symmetry"
+echo
+
+memory 1500 mb
+
+permanent_dir ./perm
+scratch_dir   ./scratch
+
+geometry nocenter noautosym noautoz print 
+  system crystal 
+    lat_a 3.14979
+    lat_b 3.14979
+    lat_c 4.7702
+    alpha 90.0
+    beta  90.0
+    gamma 120.0
+  end
+symmetry P-3m1
+Mg   0.00000   0.00000  0.00000
+O   0.33333   0.66667   0.22030
+H   0.33333   0.66667   0.41300
+end 
+set nwpw:cif_filename brucite
+
+#turn on pseudopotential filtering 
+set nwpw:kbpp_ray .true.
+set nwpw:kbpp_filter .true.
+
+
+#***** setup the nwpw gamma point code ****
+nwpw
+   ewald_rcut 3.0
+   ewald_ncut 8
+   xc pbe96
+   lmbfgs
+   monkhorst-pack 3 3 2
+   #np_dimensions -1 -1 4
+end
+
+driver
+   clear
+   maxiter 31
+end
+
+set includestress  .true.          # tell driver to optimize unit cell
+set includelattice .true.
+
+task band optimize ignore
