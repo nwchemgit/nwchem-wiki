@@ -1,0 +1,58 @@
+title "Diamond 8 atom cubic cell - geometry and unit cell optimization"
+echo
+
+permanent_dir ./perm8
+scratch_dir   ./scratch
+ 
+start diamond-dos8
+ 
+memory 1950 mb
+
+#**** Enter the geometry using fractional coordinates ****
+geometry center noautosym noautoz print 
+  system crystal 
+    lat_a 3.534d0
+    lat_b 3.534d0
+    lat_c 3.534d0
+    alpha 90.0d0 
+    beta  90.0d0 
+    gamma 90.0d0 
+  end
+  C -0.50000d0 -0.50000d0 -0.50000d0
+  C  0.00000d0  0.00000d0 -0.50000d0
+  C  0.00000d0 -0.50000d0  0.00000d0
+  C -0.50000d0  0.00000d0  0.00000d0
+  C -0.25000d0 -0.25000d0 -0.25000d0
+  C  0.25000d0  0.25000d0 -0.25000d0
+  C  0.25000d0 -0.25000d0  0.25000d0
+  C -0.25000d0  0.25000d0  0.25000d0
+end
+ 
+nwpw 
+  ewald_rcut 3.0
+  ewald_ncut 8    #The default value of 1 needs to be increased
+  lmbfgs
+  xc pbe96
+  np_dimensions -1 -1 4
+
+  monkhorst-pack 5 5 5
+end
+
+#need to run "task band energy" before "task band dos" can be run
+task band energy
+
+nwpw
+   virtual 16
+   dos-grid 11 11 11
+end
+
+# set the number of points along the energy axis
+set dos:npoints 500
+
+# set the dos energy range in au,
+# default: emin = min(eig) - 0.1, emax = max(eig) + 0.1
+set dos:emin -0.4
+set dos:emax  2.0
+
+task band dos
+
