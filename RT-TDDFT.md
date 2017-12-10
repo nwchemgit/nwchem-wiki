@@ -603,7 +603,7 @@ Note, the syntax for extracting the x polarization for the x-kick, etc.
 Alternatively, we could grep and cut, or whatnot. This will give use the
 resulting time-dependent dipole moments:
 
-<img alt="Time-dependent dipole moments" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_td_dipoles.png" align=middle with="365pt" height="100pt"/>  
+<img alt="Time-dependent dipole moments" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_td_dipoles.png" align=middle with="730pt" height="200pt"/>  
 
 Now, we need to take the Fourier transforms of these dipole moments to
 yield the the x,x element of the 3x3 linear polarizability tensor, and
@@ -654,7 +654,7 @@ field regime, the two are identical. Note the oscillator strengths are
 arbitrary and scaled, if not scaled the area under each RT-TDDFT curve
 should integrate to the linear response oscillator strength.
 
-<img alt="Linear absorption spectrum" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_abs_spectrum.png" align=middle with="131pt" height="100pt"/>  
+<img alt="Linear absorption spectrum" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_abs_spectrum.png" align=middle with="262pt" height="200pt"/>  
 
 ### Resonant ultraviolet excitation of water
 
@@ -680,7 +680,7 @@ mode. The full input deck is
 and the output is
 [media:RT\_TDDFT\_h2o\_resonant.nwo.gz](media:RT_TDDFT_h2o_resonant.nwo.gz "wikilink").
 
-<img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="122pt" height="100pt"/>  
+<img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="244pt" height="200pt"/>  
 
 `title "Water TD-PBE0 resonant excitation" `  
 `echo`  
@@ -759,7 +759,7 @@ and the output is
 ` end`  
 `task dft rt_tddft`
 
-<img alt="Time-dependent electric field and dipole moment during resonant excitation" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_td.png" align=middle with="134pt" height="100pt"/>  
+<img alt="Time-dependent electric field and dipole moment during resonant excitation" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_td.png" align=middle with="268pt" height="200pt"/>  
 
 From the time-dependent dipole moment you can see the field driving the
 system into a superposition of the ground state and the one excited
@@ -1009,7 +1009,7 @@ and the full output is
 `end`  
 `task dft rt_tddft`
 
-<img alt="Time dependent charge oscillation between a TCNE dimer" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_tcne_td_charge.png" align=middle with="183pt" height="100pt"/>  
+<img alt="Time dependent charge oscillation between a TCNE dimer" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_tcne_td_charge.png" align=middle with="364pt" height="200pt"/>  
 
 The time-dependent charge shows that the excess electron starts on the
 "bottom" molecule (i.e., a total electronic charge of -65), then swings
