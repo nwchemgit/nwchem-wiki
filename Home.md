@@ -5,7 +5,7 @@ NWChem User Documentation
 
 <!-- -->
 
--   [System Description](System_Description "wikilink")
+-   [System Description](System-Description "wikilink")
 
 <!-- -->
 
