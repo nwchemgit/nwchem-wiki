@@ -1,0 +1,60 @@
+title "B12 LDA/20Ry - constant temperature annealing example"
+echo
+
+start b12.anneal2
+
+scratch_dir   ./scratch
+permanent_dir ./perm2
+
+charge 0
+
+#### icosahedral structure ####
+geometry
+B 1.06848703 -1.06977718 -0.27191204
+B -0.41738004 -1.54046760 0.30786278
+B 1.54044867 0.41755176 0.31097113
+B -1.53464475 -0.41595403 -0.30802728
+B 0.41455946 1.53816406 -0.30497372
+B -1.06506013 1.06638042 0.26996858
+B 0.69163266 -0.69066193 1.27228704
+B -0.26229140 -0.90393650 -1.22051191
+B 0.89747884 0.25958856 -1.21386685
+B -0.69798902 0.69567491 -1.28227908
+B 0.26356093 0.90344215 1.22217740
+B -0.89880225 -0.26000463 1.21830395
+end
+
+nwpw
+  simulation_cell
+    boundary_conditions aperiodic
+    SC 20.0
+  end
+  cutoff 10.0
+  lmbfgs
+  Car-Parrinello
+    Nose-Hoover 250.0 3500.0 250.0 3500.0 #Tion=Telc=3500K, relaxation periods=250au
+    fake_mass 500.0
+    time_step 5.0
+    loop 10 1000
+    scaling 1.0 1.0
+    emotion_filename b12.10.emotion
+    xyz_filename     b12.10.xyz
+  end
+end
+task pspw energy
+
+set cpmd:init_velocities_temperature 3500.0
+task pspw car-parrinello
+unset cpmd:init_velocities_temperature
+
+nwpw
+  Car-Parrinello
+    SA_decay 4.134d4 4.134d4              #decay rate in units of au (1au=4.1889e-17seconds)
+    Nose-Hoover 250.0 3500.0 250.0 3500.0 #Tion=Telc=3500K, relaxation periods=250au
+    loop 10 5000
+    emotion_filename b12.11.emotion
+    xyz_filename     b12.11.xyz
+  end
+end
+task pspw car-parrinello
+task pspw optimize ignore #final optimization
