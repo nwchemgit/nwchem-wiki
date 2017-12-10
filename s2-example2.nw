@@ -1,0 +1,10 @@
+echo
+title "optimization of s2-dimer LDA/30Ry with PSPW method"
+scratch_dir   ./scratch
+permanent_dir ./perm
+restart s2-pspw-energy
+driver
+   maxiter 20
+   xyz s2
+end
+task pspw optimize
