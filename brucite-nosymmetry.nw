@@ -1,0 +1,50 @@
+title "brucite testing - not using symmetry"
+echo
+
+memory 1500 mb
+
+#permanent_dir ./perm332
+#scratch_dir   ./perm332
+
+geometry nocenter noautosym noautoz print 
+  system crystal 
+    lat_a 3.14979
+    lat_b 3.14979
+    lat_c 4.7702
+    alpha 90.0
+    beta  90.0
+    gamma 120.0
+  end
+
+Mg           0.000000      0.000000      0.000000
+O            0.333333     -0.333333      0.220300
+O           -0.333333      0.333333     -0.220300
+H            0.333333     -0.333333      0.413000
+H           -0.333333      0.333333     -0.413000
+end 
+set nwpw:cif_filename brucite-nosym
+
+#turn on pseudopotential filtering 
+set nwpw:kbpp_ray .true.
+set nwpw:kbpp_filter .true.
+
+
+#***** setup the nwpw gamma point code ****
+nwpw
+   ewald_rcut 3.0
+   ewald_ncut 8
+   xc pbe96
+   lmbfgs
+   monkhorst-pack 3 3 2
+   np_dimensions -1 -1 4
+end
+
+driver
+   clear
+   maxiter 151
+end
+
+set includestress  .true.          # tell driver to optimize unit cell
+set includelattice .true.
+
+task band optimize ignore
