@@ -637,7 +637,7 @@ Here, you can just use your favorite Fourier transform utility or
 analysis software, but for convenience there is also a simple GNU Octave
 fft1d.m utility in the "contrib/parsers" directory of the trunk or
 download here:
-[media:RT\_TDDFT\_scripts.tgz](media:RT_TDDFT_scripts.tgz "wikilink")
+[media:RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink")
 Note, options are hardcoded at the moment, so the switches above are not
 correct instead edit the file and run (also it reads file rather than
 redirect from stdin). Assuming the FFT output takes the form (w, Re, Im,
