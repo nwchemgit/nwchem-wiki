@@ -853,13 +853,9 @@ As in the EOMCCSD input we can request any number of roots.
 
 In analogy to the EOMCC calculations we can customize the number of
 initial guesses by using "set tce:maxeorb" directive. For example for
-system with the ![ea ip](https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/images/ea-ip-initial-guess.png) symmetry with the orbital energy structure shown
+system with the symmetry with the orbital energy structure shown
 below
 ![ea ip](https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/images/ea-ip-initial-guess.png) 
-
-
-
-
 one can use the energy window (in the sense of the absolute value of the
 HF orbital energies) to pinpoint the initial guesses. If one is
 interested in calculating one EA-EOMCCSD root of the a1 symmetry the
