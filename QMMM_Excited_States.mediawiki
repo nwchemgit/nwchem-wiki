@@ -1,7 +1,7 @@
 __NOTITLE__
 {{Template:QMMM_Single_Point_Calculations}}
 The excited state QM/MM energy calculations can be performed
-with [[Release66:TCE|TCE]] 
+with [[TCE|TCE]] 
  task qmmm tce energy
 or [[Excited-State Calculations|TDDFT]] 
  task qmmm tddft energy
