@@ -1,0 +1,9 @@
+echo
+title "frequency calculation of s2-dimer LDA/30Ry with PSPW method"
+scratch_dir   ./scratch
+permanent_dir ./perm
+restart s2-pspw-energy
+freq
+   animate
+end
+task pspw freq
