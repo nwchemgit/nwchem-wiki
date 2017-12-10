@@ -3634,7 +3634,7 @@ be 5.0 au and 600.0 au, respectively.
 
 ## NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond
 
-<img alt="diamong" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond.png" align=right with="200pt" height="190pt"/>   The PSPW and BAND
+<img alt="diamong" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond.png" align=left with="200pt" height="190pt"/>   The PSPW and BAND
 codes can be used to determine structures and energies for a wide range
 of crystalline systems. It can also be used to generate band structure
 and density of state
@@ -3941,7 +3941,7 @@ Angs.
 
 <center>
 
-[500px](ecohdist.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ecohdist.png" align=middle with="792pt" height="612pt"/>  
 
 </center>
 
@@ -4015,11 +4015,7 @@ distance versus the Brillouin zone sampling for the 8 atom SC unit cell
 and the 2 atom FCC unit
 cell.
 
-<center>
-
-[500px](band-fcc.png "wikilink")
-
-</center>
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-fcc.png" align=middle with="792pt" height="612pt"/>  
 
 ### Using BAND to Calculate the Band Structures of Diamond
 
@@ -4087,7 +4083,7 @@ xmgrace) can be used to display the band structure.
 
 <center>
 
-[500px](band-structure.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-structure.png" align=middle with="792pt" height="612pt"/>  
 
 </center>
 
@@ -4155,7 +4151,7 @@ states.
 
 <center>
 
-[500px](band-dos.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-dos.png" align=middle with="792pt" height="612pt"/>  
 
 </center>
 
@@ -4259,7 +4255,7 @@ Angs.
 
 <center>
 
-[500px](niecohdist.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/niecohdist.png" align=middle with="792pt" height="612pt"/>  
 
 </center>
 
@@ -4677,7 +4673,7 @@ datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz "w
 
 <center>
 
-[400px](diamond-metropolis.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-metropolis.png" align=middle with="640pt" height="480pt"/>  
 
 </center>
 
@@ -4787,8 +4783,8 @@ program:[Media:makehistogram.gz](makehistogram.gz "wikilink"))
 
 <center>
 
-[400px](diamond-e-histogram.png "wikilink")
-[400px](diamond-v-histogram.png "wikilink")
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-e-histogram.png" align=middle with="640pt" height="480pt"/>  
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-v-histogram.png" align=middle with="640pt" height="480pt"/>  
 
 </center>
 
