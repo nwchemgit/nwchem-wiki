@@ -6,4 +6,4 @@ the preparation of topology and restart files for QM/MM simulations are:
 *Parameter Files (extension .par)
 
 A number of fragment files as well as standard Amber type force parameter files are provided with the NWChem distribution. However, user should be prepared
-to generate additional fragment and [parameter files](../Parameter-file.pdf) for nonstandard cases
+to generate additional fragment and [parameter files](./Parameter-file.pdf) for nonstandard cases
