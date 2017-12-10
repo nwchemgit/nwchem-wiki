@@ -1,0 +1,225 @@
+title "Tetracyanoethylene dimer charge transfer"
+
+echo
+scratch_dir ./scratch
+permanent_dir ./perm
+
+start tcne
+echo
+
+##
+## Each fragment optimized with cc-pvdz/B3LYP
+##
+geometry "bottom" units angstroms noautosym nocenter noautoz
+ C    -1.77576486     0.66496556     0.00004199
+ N    -2.94676621     0.71379797     0.00004388
+ C    -0.36046718     0.62491168     0.00003506
+ C     0.36049301    -0.62492429    -0.00004895
+ C     1.77579907    -0.66504145    -0.00006082
+ N     2.94680364    -0.71382258    -0.00006592
+ C    -0.31262746    -1.87038951    -0.00011201
+ N    -0.85519492    -2.90926164    -0.00016331
+ C     0.31276207     1.87031662     0.00010870
+ N     0.85498782     2.90938919     0.00016857
+end
+
+geometry "top" units angstroms noautosym nocenter noautoz
+ C    -1.77576486     0.66496556     3.00004199
+ N    -2.94676621     0.71379797     3.00004388
+ C    -0.36046718     0.62491168     3.00003506
+ C     0.36049301    -0.62492429     2.99995105
+ C     1.77579907    -0.66504145     2.99993918
+ N     2.94680364    -0.71382258     2.99993408
+ C    -0.31262746    -1.87038951     2.99988799
+ N    -0.85519492    -2.90926164     2.99983669
+ C     0.31276207     1.87031662     3.00010870
+ N     0.85498782     2.90938919     3.00016857
+end
+
+
+## dimer geometry is the union of bottom and top geometry
+geometry "dimer" units angstroms noautosym nocenter noautoz
+ C    -1.77576486     0.66496556     0.00004199
+ N    -2.94676621     0.71379797     0.00004388
+ C    -0.36046718     0.62491168     0.00003506
+ C     0.36049301    -0.62492429    -0.00004895
+ C     1.77579907    -0.66504145    -0.00006082
+ N     2.94680364    -0.71382258    -0.00006592
+ C    -0.31262746    -1.87038951    -0.00011201
+ N    -0.85519492    -2.90926164    -0.00016331
+ C     0.31276207     1.87031662     0.00010870
+ N     0.85498782     2.90938919     0.00016857
+#---
+ C    -1.77576486     0.66496556     3.00004199
+ N    -2.94676621     0.71379797     3.00004388
+ C    -0.36046718     0.62491168     3.00003506
+ C     0.36049301    -0.62492429     2.99995105
+ C     1.77579907    -0.66504145     2.99993918
+ N     2.94680364    -0.71382258     2.99993408
+ C    -0.31262746    -1.87038951     2.99988799
+ N    -0.85519492    -2.90926164     2.99983669
+ C     0.31276207     1.87031662     3.00010870
+ N     0.85498782     2.90938919     3.00016857
+end
+
+
+##
+## C, N: 3-21++G
+##
+basis spherical
+C    S
+    172.2560000              0.0617669        
+     25.9109000              0.3587940        
+      5.5333500              0.7007130        
+C    SP
+      3.6649800             -0.3958970              0.2364600        
+      0.7705450              1.2158400              0.8606190        
+C    SP
+      0.1958570              1.0000000              1.0000000        
+C    SP
+      0.0438000              1.0000000              1.0000000        
+N    S
+    242.7660000              0.0598657        
+     36.4851000              0.3529550        
+      7.8144900              0.7065130        
+N    SP
+      5.4252200             -0.4133010              0.2379720        
+      1.1491500              1.2244200              0.8589530        
+N    SP
+      0.2832050              1.0000000              1.0000000        
+N    SP
+      0.0639000              1.0000000              1.0000000        
+end
+
+
+##
+## Charge density fitting basis.
+##
+basis "cd basis"
+C    S
+      5.91553927E+02         0.31582020
+      1.72117940E+02         0.87503863
+      5.47992590E+01         2.30760524
+C    S
+      1.89590940E+01         1.0000000
+C    S
+      7.05993000E+00         1.0000000
+C    S
+      2.79484900E+00         1.0000000
+C    S
+      1.15863400E+00         1.0000000
+C    S
+      4.94324000E-01         1.0000000
+C    S
+      2.12969000E-01         1.0000000
+C    P
+      3.27847358E-01         1.0000000
+C    P
+      7.86833659E-01         1.0000000
+C    P
+      1.97101832E+00         1.0000000
+C    D
+      4.01330100E+00         1.0000000
+C    D
+      1.24750500E+00         1.0000000
+C    D
+      4.08148000E-01         1.0000000
+C    F
+      9.00000000E-01         1.0000000
+N    S
+      7.91076935E+02         0.41567506
+      2.29450184E+02         1.14750694
+      7.28869600E+01         3.01935767
+N    S
+      2.51815960E+01         1.0000000
+N    S
+      9.37169700E+00         1.0000000
+N    S
+      3.71065500E+00         1.0000000
+N    S
+      1.53946300E+00         1.0000000
+N    S
+      6.57553000E-01         1.0000000
+N    S
+      2.83654000E-01         1.0000000
+N    P
+      4.70739194E-01         1.0000000
+N    P
+      1.12977407E+00         1.0000000
+N    P
+      2.83008403E+00         1.0000000
+N    D
+      5.83298650E+00         1.0000000
+N    D
+      1.73268650E+00         1.0000000
+N    D
+      5.45242500E-01         1.0000000
+N    F
+      1.82648000E+00         1.0000000
+end
+
+
+##
+## Universal DFT parameters. Note, we are doing open-shell even for
+## the neutral fragment so the movecs have the correct size. 
+##
+## We are using the CAM-B3LYP functional (no need to use "direct"
+## since we are doing CD fitting).
+##
+dft
+  xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00
+  cam 0.33 cam_alpha 0.19 cam_beta 0.46
+  odft
+  convergence density 1d-9
+  grid fine
+  maxiter 1000
+end
+
+
+##
+## Converge bottom fragment with extra electron and top fragment as
+## neutral.
+##
+charge -1
+set geometry "bottom"
+dft
+  mult 2
+  vectors input atomic output "bottom.movecs"
+end
+task dft energy
+
+charge 0
+set geometry "top"
+dft
+  mult 1
+  vectors input atomic output "top.movecs"
+end
+task dft energy
+
+
+##
+## Assemble the two fragments but don't do SCF--this keeps the system
+## in a far-from-equilibrium state from which we will watch the
+## dynamics.
+##
+charge -1
+set geometry "dimer"
+dft
+  mult 2
+  vectors input fragment "bottom.movecs" "top.movecs" output "dimer.movecs"
+  noscf
+end
+task dft energy
+
+
+##
+## Now do RT-TDDFT from this crazy state without any electric fields.
+##
+rt_tddft
+  tmax 500.0
+  dt 0.2
+  load vectors "dimer.movecs"
+
+  print dipole field energy s2 charge
+end
+task dft rt_tddft
