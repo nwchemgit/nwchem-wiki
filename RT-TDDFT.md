@@ -603,8 +603,7 @@ Note, the syntax for extracting the x polarization for the x-kick, etc.
 Alternatively, we could grep and cut, or whatnot. This will give use the
 resulting time-dependent dipole moments:
 
-![Time-dependent dipole moments](RT_TDDFT_h2o_td_dipoles.png
-"Time-dependent dipole moments")
+<img alt="Time-dependent dipole moments" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_td_dipoles.png" align=middle with="365pt" height="100pt"/>  
 
 Now, we need to take the Fourier transforms of these dipole moments to
 yield the the x,x element of the 3x3 linear polarizability tensor, and
