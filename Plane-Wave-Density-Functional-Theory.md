@@ -3634,7 +3634,7 @@ be 5.0 au and 600.0 au, respectively.
 
 ## NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond
 
-[right|200px|caption](diamond.png "wikilink") The PSPW and BAND
+<img alt="diamong" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond.png" align=right with="200pt" height="190pt"/>   The PSPW and BAND
 codes can be used to determine structures and energies for a wide range
 of crystalline systems. It can also be used to generate band structure
 and density of state
