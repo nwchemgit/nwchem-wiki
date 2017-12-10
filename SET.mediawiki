@@ -1,6 +1,6 @@
 ==SET==
 
-This top-level directive allows the user to enter data directly into the [[Nwarch#Database Structure|run-time database]]. The format of the directive is as follows:
+This top-level directive allows the user to enter data directly into the [[NWChem-Architecture#database-structure|run-time database]]. The format of the directive is as follows:
 
  SET <string name> [<string type default automatic>] <type data>
 
