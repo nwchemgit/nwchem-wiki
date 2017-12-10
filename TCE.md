@@ -858,7 +858,6 @@ below
 
 ![ea-ip-initial-guess] (https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ea-ip-initial-guess.png)
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 
