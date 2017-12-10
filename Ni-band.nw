@@ -1,0 +1,82 @@
+title "Ni FCC metal, monkhorst-pack=3x3x3, 5x5x5, and 7x7x7, fermi smearing, xc=pbe96"
+echo
+
+start Ni-band
+
+memory 1900 mb
+
+permanent_dir ./perm
+scratch_dir   ./scratch
+
+geometry units angstroms center noautosym noautoz print
+ system crystal
+    lat_a 3.5451d0
+    lat_b 3.5451d0
+    lat_c 3.5454d0
+    alpha 90.0d0
+    beta  90.0d0
+    gamma 90.0d0
+  end
+
+Ni 0.000000   0.000000   0.000000
+Ni 0.000000   0.500000   0.500000 
+Ni 0.500000   0.000000   0.500000 
+Ni 0.500000   0.500000   0.000000
+end
+set nwpw:cif_filename Ni-band
+set nwpw:zero_forces .true.
+set includestress    .true.
+
+#turn on pseudopotential filtering 
+set nwpw:kbpp_ray .true.
+set nwpw:kbpp_filter .true.
+
+nwpw
+   #fractional occupation
+   smear fermi 
+
+   #scf option used with smear
+   scf anderson outer_iterations 0 kerker 2.0  
+
+
+   ewald_ncut 8
+   ewald_rcut 3.0
+   xc pbe96
+   monkhorst-pack 3 3 3
+   np_dimensions -1 -1 4 
+end
+
+#generate initial wavefunctions w/ low cutoff energy
+nwpw
+   loop 10 10
+   cutoff 10.0
+end
+task band energy
+
+#increase cutoff energy and number of iterations
+nwpw
+   cutoff 50.0
+   loop 10 100
+end
+
+#3x3x3 k-point mesh
+nwpw 
+  monkhorst-pack 3 3 3
+end
+set nwpw:cif_filename nickel333.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#5x5x5 k-point mesh
+nwpw 
+  monkhorst-pack 5 5 5
+end
+set nwpw:cif_filename nickel555.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#7x7x7 k-point mesh
+nwpw 
+  monkhorst-pack 7 7 7
+end
+set nwpw:cif_filename nickel777.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
