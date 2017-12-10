@@ -3232,7 +3232,7 @@ The following plot shows the Car-Parrinello <img alt="$^3\Sigma_g^-$" src="https
 energy surface generated from the
 simulation.
 
-[file:s2-md.png](s2-md.png "wikilink")
+<img alt="s2-md" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/s2-md.png" align=middle with="150pt" height="112pt"/>  
 
 ### Ab initio molecular dynamics simulation (Born-Oppenheimer) of S<sub2</sub> dimer using the LDA approximation
 
