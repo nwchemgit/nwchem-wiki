@@ -1,0 +1,30 @@
+echo
+title "AIMD simulation of s2-dimer"
+scratch_dir   ./scratch
+permanent_dir ./perm
+start s2-md
+geometry
+S 0.0 0.0 0.0
+S 0.0 0.0 1.95
+end
+nwpw
+  simulation_cell
+    SC 20.0
+  end
+  cutoff 15.0
+
+  mult 3
+  xc lda
+  lmbfgs
+end
+
+nwpw
+   car-parrinello
+      time_step 5.0
+      fake_mass 600.0
+      loop 1 1000
+      xyz_filename s2-md.xyz
+   end
+end
+task pspw energy
+task pspw car-parrinello
