@@ -3277,7 +3277,7 @@ The following plot shows the <img alt="$^3\Sigma_g^-$" src="https://raw.githubus
 generated from the
 simulation.
 
-[file:s2-bomd.png](file:s2-bomd.png "wikilink")
+[file:s2-bomd.png](s2-bomd.png "wikilink")
 
 ## NWPW Tutorial 2: Using PSPW Car-Parrinello Simulated Annealing Simulations to Optimize Structures
 
@@ -3312,7 +3312,7 @@ prevalence, ab initio calculations performed by several researchers have
 suggested that B<img alt="$_{12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b969a189f1d72cb1b766b0414d53d618.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="14.10255pt"/>, as well as B<img alt="$_{12}^+$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9688308038c1d0faef7ec46d707cd750.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="28.25757pt"/> and B<img alt="$_{12}^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/76b163dea42b9afe111cd4adae744905.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="28.25757pt"/>,
 will have a more open geometry.
 
-[file:boron.png](file:boron.png "wikilink")
+[file:boron.png](boron.png "wikilink")
 
 ### Simulated Annealing Using Constant Energy Simulation
 
@@ -3634,7 +3634,7 @@ be 5.0 au and 600.0 au, respectively.
 
 ## NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond
 
-[right|200px|caption](file:diamond.png "wikilink") The PSPW and BAND
+[right|200px|caption](diamond.png "wikilink") The PSPW and BAND
 codes can be used to determine structures and energies for a wide range
 of crystalline systems. It can also be used to generate band structure
 and density of state
@@ -3806,8 +3806,8 @@ energy the energy of an isolated carbon atom at the same level of theory
 and cutoff energy will need to be calculated. The following input can be
 used to the energy of an isolated carbon atom.
 
-(input:[file:catom-pspw.nw](file:catom-pspw.nw "wikilink"),
-output:[file:catom-pspw.nwout](file:catom-pspw.nwout "wikilink"))
+(input:[file:catom-pspw.nw](catom-pspw.nw "wikilink"),
+output:[file:catom-pspw.nwout](catom-pspw.nwout "wikilink"))
 
 `title "triplet carbon atom at pbe96 level using a large unit cell"`  
 `start c1-pspw`  
@@ -3941,7 +3941,7 @@ Angs.
 
 <center>
 
-[500px](file:ecohdist.png "wikilink")
+[500px](ecohdist.png "wikilink")
 
 </center>
 
@@ -4017,7 +4017,7 @@ cell.
 
 <center>
 
-[500px](file:band-fcc.png "wikilink")
+[500px](band-fcc.png "wikilink")
 
 </center>
 
@@ -4025,7 +4025,7 @@ cell.
 
 (input:[Media:diamond-structure.nw](diamond-structure.nw "wikilink"),
 output:[Media:diamond-structure.nwout](diamond-structure.nwout "wikilink"),
-[file:diamondfcc.restricted\_band.dat](file:diamondfcc.restricted_band.dat "wikilink"))
+[file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat "wikilink"))
 
 The following example uses the BAND module to calculate the band
 structure for the FCC cell of the a diamond crystal. The fractional
@@ -4081,13 +4081,13 @@ block.
 `task band structure`
 
 This calculation outputs the
-[file:diamondfcc.restricted\_band.dat](file:diamondfcc.restricted_band.dat "wikilink"))
+[file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat "wikilink"))
 data file in the permanent\_directory. A plotting (e.g. gnuplot or
 xmgrace) can be used to display the band structure.
 
 <center>
 
-[500px](file:band-structure.png "wikilink")
+[500px](band-structure.png "wikilink")
 
 </center>
 
@@ -4155,7 +4155,7 @@ states.
 
 <center>
 
-[500px](file:band-dos.png "wikilink")
+[500px](band-dos.png "wikilink")
 
 </center>
 
@@ -4259,7 +4259,7 @@ Angs.
 
 <center>
 
-[500px](file:niecohdist.png "wikilink")
+[500px](niecohdist.png "wikilink")
 
 </center>
 
@@ -4434,7 +4434,7 @@ symmetry.
 
 <center>
 
-[400px](file:Brucite-small.jpg "wikilink")
+[400px](Brucite-small.jpg "wikilink")
 
 </center>
 
@@ -4677,7 +4677,7 @@ datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz "w
 
 <center>
 
-[400px](file:diamond-metropolis.png "wikilink")
+[400px](diamond-metropolis.png "wikilink")
 
 </center>
 
@@ -4787,8 +4787,8 @@ program:[Media:makehistogram.gz](makehistogram.gz "wikilink"))
 
 <center>
 
-[400px](file:diamond-e-histogram.png "wikilink")
-[400px](file:diamond-v-histogram.png "wikilink")
+[400px](diamond-e-histogram.png "wikilink")
+[400px](diamond-v-histogram.png "wikilink")
 
 </center>
 
