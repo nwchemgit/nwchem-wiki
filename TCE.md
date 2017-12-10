@@ -855,8 +855,7 @@ In analogy to the EOMCC calculations we can customize the number of
 initial guesses by using "set tce:maxeorb" directive. For example for
 system with the ![ea ip](https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/images/ea-ip-initial-guess.png) symmetry with the orbital energy structure shown
 below
-
-![ea-ip-initial-guess] (https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ea-ip-initial-guess.png)
+![ea ip](https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/images/ea-ip-initial-guess.png) 
 
 
 
