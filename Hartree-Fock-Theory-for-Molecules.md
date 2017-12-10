@@ -82,7 +82,7 @@ defeating the defaults by specifying the keywords
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
 previous calculation (see [NWChem
-Architecture](NWChem Architecture "wikilink") for restart behavior).
+Architecture](NWChem-Architecture "wikilink") for restart behavior).
 
 ## SYM -- use of symmetry
 
