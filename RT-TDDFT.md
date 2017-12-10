@@ -654,8 +654,7 @@ field regime, the two are identical. Note the oscillator strengths are
 arbitrary and scaled, if not scaled the area under each RT-TDDFT curve
 should integrate to the linear response oscillator strength.
 
-![Linear absorption spectrum](RT_TDDFT_h2o_abs_spectrum.png
-"Linear absorption spectrum")
+<img alt="Linear absorption spectrum" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_abs_spectrum.png" align=middle with="131pt" height="100pt"/>  
 
 ### Resonant ultraviolet excitation of water
 
