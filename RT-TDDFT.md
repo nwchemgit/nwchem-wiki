@@ -680,9 +680,7 @@ mode. The full input deck is
 and the output is
 [media:RT\_TDDFT\_h2o\_resonant.nwo.gz](media:RT_TDDFT_h2o_resonant.nwo.gz "wikilink").
 
-![Absorption spectrum and excitation
-bandwidth](RT_TDDFT_h2o_resonant_spec_field.png
-"Absorption spectrum and excitation bandwidth")
+<img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="122pt" height="100pt"/>  
 
 `title "Water TD-PBE0 resonant excitation" `  
 `echo`  
@@ -761,9 +759,7 @@ bandwidth](RT_TDDFT_h2o_resonant_spec_field.png
 ` end`  
 `task dft rt_tddft`
 
-![Time dependent electric field and dipole moment during resonant
-excitation](RT_TDDFT_h2o_resonant_td.png
-"Time dependent electric field and dipole moment during resonant excitation")
+<img alt="Time-dependent electric field and dipole moment during resonant excitation" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_td.png" align=middle with="134pt" height="100pt"/>  
 
 From the time-dependent dipole moment you can see the field driving the
 system into a superposition of the ground state and the one excited
@@ -1013,9 +1009,7 @@ and the full output is
 `end`  
 `task dft rt_tddft`
 
-![Time dependent charge oscillation between a TCNE
-dimer](RT_TDDFT_tcne_td_charge.png
-"Time dependent charge oscillation between a TCNE dimer")
+<img alt="Time dependent charge oscillation between a TCNE dimer" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_tcne_td_charge.png" align=middle with="183pt" height="100pt"/>  
 
 The time-dependent charge shows that the excess electron starts on the
 "bottom" molecule (i.e., a total electronic charge of -65), then swings
