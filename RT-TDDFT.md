@@ -181,7 +181,7 @@ before stopping, which must be a positive real number. In practice, you
 can just stop the simulation early, so in most cases it is simplest to
 just set this to a large value to ensure you capture all the important
 dynamics (see [Hints and
-Tricks](Release66:RT-TDDFT#Hints_and_Tricks "wikilink")). For most
+Tricks](RT-TDDFT#Hints_and_Tricks "wikilink")). For most
 valence excitations, for example, 1000 au is overkill so you might want
 to automatically stop at 500 au:
 
@@ -267,7 +267,7 @@ usually no need to change this from "\*".
 
 This sets the number of run-time check points where the time-dependent
 complex density matrix is saved to file, allowing the simulation to be
-[restarted](Release66:RT-TDDFT#Restarts "wikilink")) from that point. By
+[restarted](RT-TDDFT#Restarts "wikilink")) from that point. By
 default this is set to 0. There is no significant computational cost to
 restart checkpointing, but of course there is some disk I/O cost (which
 may become somewhat significant for larger systems). For example, in the
@@ -406,7 +406,7 @@ The defaults correspond to:
 This sub-block is used to specify external electric fields, each of
 which must be given a unique name. Numerous fields can be specified, but
 each will applied to the system only if an appropriate [excitation
-rule](Release66:RT-TDDFT#EXCITE_--_Excitation_rules "wikilink") is set.
+rule](RT-TDDFT#EXCITE_--_Excitation_rules "wikilink") is set.
 There are a few preset field types; others would have to be manually
 coded. Note the names are arbitrary, but chosen here to be
 descriptive:
@@ -452,7 +452,7 @@ This sets the rules for applying external fields to the system. It takes
 the form "excite <geom> with <field>", where <geom> is the name of a
 geometry fragment (defaults to "geometry" which is the default geometry
 name), and <field> is the name of a [field
-structure](Release66:RT-TDDFT#FIELD_--_Sub-block_for_specifying_external_electric_fields "wikilink").
+structure](RT-TDDFT#FIELD_--_Sub-block_for_specifying_external_electric_fields "wikilink").
 Assuming, for example, you have defined a field name "kick" this option
 takes the form (note that quotes are optional and shown for clarity):
 

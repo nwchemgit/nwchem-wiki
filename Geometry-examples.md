@@ -1,7 +1,7 @@
 # Examples of geometries using symmetry
 
 Below are examples of the use of the SYMMETRY directive in the compound
-[GEOMETRY directive](Release66:Geometry "wikilink"). The z axis is
+[GEOMETRY directive](Geometry "wikilink"). The z axis is
 always the primary rotation axis. When in doubt about which axes and
 planes are used for the group elements, the keyword print may be added
 to the SYMMETRY directive to obtain this information.

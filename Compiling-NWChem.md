@@ -179,7 +179,7 @@ MPI-SPAWN</p></td>
 </tbody>
 </table>
 
-Please see [Choosing the ARMCI Library](Release66:ARMCI "wikilink") for
+Please see [Choosing the ARMCI Library](ARMCI "wikilink") for
 additional information on choosing the right network
 options.
 
@@ -869,7 +869,7 @@ options:
 `USE_OPENMP=T`
 
 MPICH and ARMCI-MPI work reliably on Mac. See [Choosing the ARMCI
-Library](Release66:ARMCI "wikilink") for details on ARMCI-MPI
+Library](ARMCI "wikilink") for details on ARMCI-MPI
 
 # How-to: Cray platforms
 

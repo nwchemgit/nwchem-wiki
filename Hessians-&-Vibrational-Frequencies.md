@@ -27,7 +27,7 @@ input begins with hessian and has the form:
 
 You may modify the default threshold for the wavefunction. This keyword
 is identical to
-[THRESH](Release66:Hartree-Fock_Theory_for_Molecules#THRESH_--_convergence_threshold "wikilink")
+[THRESH](Hartree-Fock_Theory_for_Molecules#THRESH_--_convergence_threshold "wikilink")
 in the SCF, and the
 [CONVERGENCE](Density_Functional_Theory_for_Molecules#CONVERGENCE_--_SCF_Convergence_Control "wikilink")
 gradient in the DFT. The usual defaults for the convergence of the
@@ -91,7 +91,7 @@ the molecular system based on the frequencies obtained from the
 projected hessian.
 
 The default mass of each atom is used unless an alternative mass is
-provided via the [geometry](Release66:Geometry "wikilink") input or
+provided via the [geometry](Geometry "wikilink") input or
 redefined using the vibrational module input. The default mass is the
 mass of the most abundant isotope of each element. If the abundance was
 roughly equal, the mass of the isotope with the longest half life was
