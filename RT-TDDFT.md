@@ -498,9 +498,9 @@ simultaneously excites all electronic modes of that polarization. The
 three resulting dipole moments are then Fourier transformed to give the
 frequency-dependent linear polarizabilty, and thus the absorption
 spectrum. The full input deck is
-[media:RT\_TDDFT\_h2o\_abs.nw](media:RT_TDDFT_h2o_abs.nw "wikilink") and
+[RT\_TDDFT\_h2o\_abs.nw](RT_TDDFT_h2o_abs.nw "wikilink") and
 the corresponding output is
-[media:RT\_TDDFT\_h2o\_abs.nwo.gz](media:RT_TDDFT_h2o_abs.nwo.gz "wikilink").
+[RT\_TDDFT\_h2o\_abs.nwo.gz](RT_TDDFT_h2o_abs.nwo.gz "wikilink").
 
 `title "Water TD-PBE0 absorption spectrum"`  
 `echo`  
@@ -593,7 +593,7 @@ the corresponding output is
 After running the simulation, we extract the x-dipole moment for the
 x-kick and similarly for the y and z-kicks (see "contrib/parsers"
 directory for this script or download here:
-[media:RT\_TDDFT\_scripts.tgz](media:RT_TDDFT_scripts.tgz "wikilink") ).
+[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink") ).
 
 `nw_rtparse.py -xdipole -px -tkick_x h2o_abs.nwo > x.dat`  
 `nw_rtparse.py -xdipole -py -tkick_y h2o_abs.nwo > y.dat`  
@@ -637,7 +637,7 @@ Here, you can just use your favorite Fourier transform utility or
 analysis software, but for convenience there is also a simple GNU Octave
 fft1d.m utility in the "contrib/parsers" directory of the trunk or
 download here:
-[media:RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink")
+[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink")
 Note, options are hardcoded at the moment, so the switches above are not
 correct instead edit the file and run (also it reads file rather than
 redirect from stdin). Assuming the FFT output takes the form (w, Re, Im,
@@ -676,9 +676,9 @@ The procedure is outlined below, and the corresponding frequency extent
 of the pulse is shown on the absorption figure in orange. Note that it
 only covers one excitation, i.e., the field selectively excites one
 mode. The full input deck is
-[media:RT\_TDDFT\_h2o\_resonant.nw](media:RT_TDDFT_h2o_resonant.nw "wikilink")
+[RT\_TDDFT\_h2o\_resonant.nw](RT_TDDFT_h2o_resonant.nw "wikilink")
 and the output is
-[media:RT\_TDDFT\_h2o\_resonant.nwo.gz](media:RT_TDDFT_h2o_resonant.nwo.gz "wikilink").
+[RT\_TDDFT\_h2o\_resonant.nwo.gz](RT_TDDFT_h2o_resonant.nwo.gz "wikilink").
 
 <img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="244pt" height="200pt"/>  
 
@@ -779,9 +779,9 @@ here is to use fragments by have multiple geometries in the input deck,
 where each fragment is converged separately, then assembled together
 without SCF to use as a starting point. We use a small but diffuse basis
 and a range-separated functional (CAM-B3LYP). The input deck is
-[media:RT\_TDDFT\_tcne\_dimer.nw](media:RT_TDDFT_tcne_dimer.nw "wikilink")
+[RT\_TDDFT\_tcne\_dimer.nw](RT_TDDFT_tcne_dimer.nw "wikilink")
 and the full output is
-[media:RT\_TDDFT\_tcne\_dimer.nwo.gz](media:RT_TDDFT_tcne_dimer.nwo.gz "wikilink").
+[RT\_TDDFT\_tcne\_dimer.nwo.gz](RT_TDDFT_tcne_dimer.nwo.gz "wikilink").
 
 `title "Tetracyanoethylene dimer charge transfer"`  
   
