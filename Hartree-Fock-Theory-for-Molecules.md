@@ -130,7 +130,7 @@ for tol2e.
 It is generally not necessary to set this parameter directly. Specify
 instead the required precision in the wavefunction, using the THRESH
 directive ([Convergence
-threshold](#THRESH_--_convergence_threshold "wikilink")). The default
+threshold](#thresh----convergence-threshold "wikilink")). The default
 threshold is the minimum of <img alt="$10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f7ed66ae8d8f913f33d096b40bf1fcfd.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> and 0.01 times the requested
 convergence threshold for the SCF calculation ([Convergence
 threshold](#THRESH_--_convergence_threshold "wikilink")).
