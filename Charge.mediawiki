@@ -20,4 +20,4 @@ vertical ionization energies of <math>LiH</math>, one might optimize the geometr
  charge 1 scf; uhf; doublet; end task scf
  charge 2 scf; uhf; singlet; end task scf
 
-The GEOMETRY, BASIS, and SCF directives are described below ([[Geometry|Geometry]], [[Basis|Basis]] and [[SCF|Hartree-Fock-Theory-for-Molecules]] respectively) but their intent should be clear. The TASK directive is described above ([[TASK|TASK]]).
+The GEOMETRY, BASIS, and SCF directives are described below ([[Geometry|Geometry]], [[Basis|Basis]] and [[Hartree-Fock-Theory-for-Molecules|SCF]] respectively) but their intent should be clear. The TASK directive is described above ([[TASK|TASK]]).
