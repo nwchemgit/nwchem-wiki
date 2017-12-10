@@ -14,7 +14,7 @@ In the current implementation only solute atoms can be declared as quantum. If p
  title "Prepare QM/MM calculation of ethanol"
  start etl
  
- [[Release66:Prepare|prepare]]
+ [[Prepare|prepare]]
  #--''name of the pdb file''
     source [[media:Etl0.pdb|etl0.pdb]]                    
  #--''generate new topology and sequence file''
