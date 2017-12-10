@@ -1,0 +1,74 @@
+title "Diamond 8 atom cubic cell - geometry and unit cell optimization"
+echo
+
+permanent_dir ./perm
+scratch_dir   ./scratch
+ 
+start diamond-band
+ 
+memory 1950 mb
+
+#**** Enter the geometry using fractional coordinates ****
+geometry center noautosym noautoz print 
+  system crystal 
+    lat_a 3.58d0 
+    lat_b 3.58d0 
+    lat_c 3.58d0 
+    alpha 90.0d0 
+    beta  90.0d0 
+    gamma 90.0d0 
+  end
+  C -0.50000d0 -0.50000d0 -0.50000d0
+  C  0.00000d0  0.00000d0 -0.50000d0
+  C  0.00000d0 -0.50000d0  0.00000d0
+  C -0.50000d0  0.00000d0  0.00000d0
+  C -0.25000d0 -0.25000d0 -0.25000d0
+  C  0.25000d0  0.25000d0 -0.25000d0
+  C  0.25000d0 -0.25000d0  0.25000d0
+  C -0.25000d0  0.25000d0  0.25000d0
+end
+set includestress    .true.   # option tells driver to optimize the unit cell
+set nwpw:zero_forces .true.   # option zeros the forces on the atoms--> only lattice parameters optimized
+ 
+nwpw 
+  ewald_rcut 3.0
+  ewald_ncut 8    #The default value of 1 needs to be increased
+  lmbfgs
+  xc pbe96
+end
+
+#1x1x1 k-point mesh
+nwpw 
+  monkhorst-pack 1 1 1
+end
+set nwpw:cif_filename diamond111.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#2x2x2 k-point mesh
+nwpw 
+  monkhorst-pack 2 2 2
+end
+set nwpw:cif_filename diamond222.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+
+#3x3x3 k-point mesh
+nwpw 
+  monkhorst-pack 3 3 3
+end
+set nwpw:cif_filename diamond333.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#4x4x4 k-point mesh
+nwpw 
+  monkhorst-pack 4 4 4 
+end
+set nwpw:cif_filename diamond444.opt
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#5x5x5 k-point mesh
+nwpw 
+  monkhorst-pack 5 5 5
+end
+set nwpw:cif_filename diamond555.opt
+driver; clear; maxiter 40; end; task band optimize ignore
