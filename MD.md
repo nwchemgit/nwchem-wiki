@@ -107,7 +107,7 @@ Format of fragment files
 
 Fragment files contain the basic information needed to specify all interactions that need to be considered in a molecular simulation. Normally these files are created by the prepare module. Manual editing is needed when, for example, the prepare module could not complete atom typing, or when modified charges are required.
 
-The formats of files used in NWChem are listed [ here](Release66:Format_of_MD_Files "wikilink").
+The formats of files used in NWChem are listed [ here](Format_of_MD_Files "wikilink").
 
 Creating segment files
 ----------------------

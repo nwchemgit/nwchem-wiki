@@ -1,9 +1,9 @@
 # Geometry Optimization with DRIVER
 
 The DRIVER module is one of two drivers (also see documentation on
-[STEPPER](Release66:Geometry_Optimization#Geometry_Optimization_with_STEPPER "wikilink"))
+[STEPPER](Geometry_Optimization#Geometry_Optimization_with_STEPPER "wikilink"))
 to perform a geometry optimization function on the molecule defined by
-input using the [GEOMETRY](Release66:Geometry "wikilink") directive.
+input using the [GEOMETRY](Geometry "wikilink") directive.
 Geometry optimization is either an energy minimization or a transition
 state optimization. The algorithm programmed in DRIVER is a quasi-newton
 optimization with line searches and approximate energy Hessian updates.
@@ -250,10 +250,10 @@ and these specific print options
 
 The STEPPER module performs a search for critical points on the
 potential energy surface of the molecule defined by input using the
-[GEOMETRY](Release66:Geometry "wikilink") directive. Since STEPPER is
+[GEOMETRY](Geometry "wikilink") directive. Since STEPPER is
 not the primary geometry optimization module in NWChem the compound
 directive is required; the
-[DRIVER](Release66:Geometry_Optimization "wikilink") module is the
+[DRIVER](Geometry_Optimization "wikilink") module is the
 default. Input for this module is specified within the compound
 directive,
 
@@ -291,7 +291,7 @@ directive
 STEPPER can also be used to find the transition state by following the
 lowest eigenvector of the nuclear Hessian. This is usually invoked by
 using the saddle keyword on the [TASK
-directive](Release66:Top-level#TASK "wikilink"), but it may also be
+directive](Top-level#TASK "wikilink"), but it may also be
 selected by specifying the directive
 
 ` TS`
@@ -388,7 +388,7 @@ initial hessian. Once Stepper executes it generates a binary dump file
 by the name of name.stpr41 which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
-[START](Release66:Top-level#START_and_RESTART_--_Start-up_mode "wikilink")).
+[START](Top-level#START_and_RESTART_--_Start-up_mode "wikilink")).
 It also stores the information for the last valid step in case the
 algorithm must take a ["backstep"](#Backstepping_in_STEPPER "wikilink").
 This file is the working data store for all stepper-based optimizations.

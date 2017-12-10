@@ -22,10 +22,10 @@ A spin-restricted, closed shell RHF calculation is performed by default.
 An error results if the number of electrons is inconsistent with this
 assumption. The number of electrons is inferred from the total charge on
 the system and the sum of the effective nuclear charges of all centers
-(atoms and dummy atoms, see [GEOMETRY](Release66:Geometry "wikilink")).
+(atoms and dummy atoms, see [GEOMETRY](Geometry "wikilink")).
 The total charge on the system is zero by default, unless specified at
 some value by input on the CHARGE directive [Total system
-charge](Release66:Top-level#CHARGE_--_Total_system_charge "wikilink").
+charge](Top-level#CHARGE_--_Total_system_charge "wikilink").
 
 The options available to define the SCF wavefunction and multiplicity
 are as follows:
@@ -82,7 +82,7 @@ defeating the defaults by specifying the keywords
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
 previous calculation (see [NWChem
-Architecture](Release66:Nwarch "wikilink") for restart behavior).
+Architecture](Nwarch "wikilink") for restart behavior).
 
 ## SYM -- use of symmetry
 
@@ -93,7 +93,7 @@ matrix construction (via the petite-list or skeleton algorithm) in the
 SCF, if symmetry was used in the specification of the geometry. Symmetry
 adaptation of the molecular orbitals is not affected by this option. The
 default is to use symmetry if it is specified in the [geometry
-directive](Release66:Geometry "wikilink").
+directive](Geometry "wikilink").
 
 For example, to disable use of symmetry in Fock matrix construction:
 
@@ -178,7 +178,7 @@ input molecular orbital vectors as any of the following:
     previous calculation. Note that unless the path is fully qualified,
     or begins with a dot ("."), then it is assumed to reside in the
     directory for permanent files (see [File
-    directories](Release66:Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink")).
+    directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink")).
   - PROJECT basisname filename -- projects the existing MO vectors in
     the file filename from the smaller basis with name basisname into
     the current basis. The definition of the basis basisname must be
@@ -214,7 +214,7 @@ follows:
     the output vectors (overwriting the input vectors); else,
   - a default file name is generated in the directory for permanent
     files ([File
-    directories](Release66:Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
+    directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
     by prepending ".movecs" with the file prefix, i.e.,
     "<file_prefix>.movecs".
 
@@ -401,7 +401,7 @@ First, the geometry of the dimer and the two monomers are specified and
 given names. Then, after the basis specification, calculations are
 performed on the fragments by setting the geometry to the appropriate
 fragment
-([SET](Release66:Top-level#SET_--_Enter_data_in_the_RTDB "wikilink"))
+([SET](Top-level#SET_--_Enter_data_in_the_RTDB "wikilink"))
 and redirecting the output molecular orbitals to an appropriately named
 file. Note also that use of the atomic initial guess is forced, since
 the default initial guess is to use any existing MOs which would not be
@@ -632,11 +632,11 @@ charged, this default guess may be improved upon by modifying the atomic
 densities. This is done by setting parameters that add fractional
 charges to the occupation of the valence atomic orbitals. Since the
 atomic SCF program does not have its own input block, the SET directive
-([SET](Release66:Top-level#SET "wikilink")) must be used to set these
+([SET](Top-level#SET "wikilink")) must be used to set these
 parameters.
 
 The input specifies a list of tags (i.e., names of atoms in a geometry,
-see [GEOMETRY](Release66:Geometry "wikilink")) and the charges to be
+see [GEOMETRY](Geometry "wikilink")) and the charges to be
 added to those centers. Two parameters must be set as follows:
 
 ` set atomscf:tags_z `<string list_of_tags>  
@@ -662,11 +662,11 @@ report an error, and it will not report further errors in the input for
 modifying the charge even when they are detected.
 
 Finally, recall that the database is persistent ([Data
-persistence](Release66:Nwarch#Persistence_of_data_and_restart "wikilink"))
+persistence](Nwarch#Persistence_of_data_and_restart "wikilink"))
 and that the modified settings will be used in subsequent atomic guess
 calculations unless the data is deleted from the database with the UNSET
 directive
-([UNSET](Release66:Top-level#UNSET_--_Delete_data_in_the_RTDB "wikilink")).
+([UNSET](Top-level#UNSET_--_Delete_data_in_the_RTDB "wikilink")).
 
 ## Accuracy of initial guess
 
@@ -785,7 +785,7 @@ The default behavior of the SCF module is
   - If there is not enough memory to store all the integrals at once,
     then 95% of the available disk space in the scratch directory (see
     [File
-    directories](Release66:Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
+    directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
     is assumed to be available for this purpose, and as many integrals
     as possible are cached on disk (with no memory being used for
     caching). Some attempt is made to store the most expensive integrals
@@ -824,14 +824,14 @@ satisfied.)
 
 By default, the integral files are placed into the scratch directory
 (see [File
-directories](Release66:Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink")).
+directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink")).
 Specifying the keyword FILENAME overrides this default. The
 user-specified name entered in the string filename has the process
 number appended to it, so that each process has a distinct file but with
 a common base-name and directory. Therefore, it is not possible to use
 this keyword to specify different disks for different processes. The
 SCRATCH\_DIR directive (see [File
-directories](Release66:Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
+directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
 can be used for this purpose.
 
 For example, to force full recomputation of all integrals:
@@ -1107,7 +1107,7 @@ The SCF module includes an experimental implementation of orbital
 localization, including Foster-Boys and Pipek-Mezey which only works for
 closed-shell (RHF) wavefunctions. There is currently no input in the SCF
 block to control this so the SET directive
-([SET](Release66:Top-level#SET "wikilink")) must be used.
+([SET](Top-level#SET "wikilink")) must be used.
 
 The directive
 
@@ -1129,7 +1129,7 @@ wavefunctions using molecular orbitals.
 
 All output from the SCF module is controlled using the PRINT directive
 described in [Print
-control](Release66:Top-level#PRINT_and_NOPRINT_--_Print_control "wikilink").
+control](Top-level#PRINT_and_NOPRINT_--_Print_control "wikilink").
 The following list describes the items from SCF that are currently under
 direct print control, along with the print level for each
 one.
