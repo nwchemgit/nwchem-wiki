@@ -643,7 +643,7 @@ correct instead edit the file and run (also it reads file rather than
 redirect from stdin). Assuming the FFT output takes the form (w, Re, Im,
 Abs), to plot using gnuplot we would do:
 
-`gnuplot> plot "s.dat" u (<img alt="$1*27.2114):($" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a30ffaa3e99019a42addf67c6db3631b.svg?invert_in_darkmode&sanitize=true" align=middle width="103.78203pt" height="24.56553pt"/>1*(<img alt="$3+$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc5ff3bf284ae72bd541757c096f7c9d.svg?invert_in_darkmode&sanitize=true" align=middle width="20.92629pt" height="21.10812pt"/>7+$11))`
+gnuplot> plot "s.dat" u (<img alt="" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a30ffaa3e99019a42addf67c6db3631b.svg?invert_in_darkmode&sanitize=true" align=middle width="103.78203pt" height="24.56553pt"/>1*(<img alt="$3+$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc5ff3bf284ae72bd541757c096f7c9d.svg?invert_in_darkmode&sanitize=true" align=middle width="20.92629pt" height="21.10812pt"/>7+$11))
 
 where we have scaled by 27.2114 to output in eV instead of atomic units,
 and we have not properly scaled to get the absolute oscillator strengths
