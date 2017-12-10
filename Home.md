@@ -9,33 +9,33 @@ NWChem User Documentation
 
 <!-- -->
 
--   [Quantum Mechanical Methods](Quantum_Mechanical_Methods "wikilink")
+-   [Quantum Mechanical Methods](Quantum-Mechanical-Methods "wikilink")
 
 <!-- -->
 
--   [Quantum Molecular Dynamics](Quantum_Molecular_Dynamics "wikilink")
+-   [Quantum Molecular Dynamics](Quantum-Molecular-Dynamics "wikilink")
 
 <!-- -->
 
--   [Molecular Mechanics](Classical_Methods "wikilink")
+-   [Molecular Mechanics](Classical-Methods "wikilink")
 
 <!-- -->
 
--   [Hybrid Approaches](Hybrid_Approaches "wikilink")
+-   [Hybrid Approaches](Hybrid-Approaches "wikilink")
 
 <!-- -->
 
 -   [Potential Energy Surface
-    Analysis](Potential_Energy_Surface_Analysis "wikilink")
+    Analysis](Potential-Energy-Surface-Analysis "wikilink")
 
 <!-- -->
 
 -   [Electronic Structure
-    Analysis](Electronic_Structure_Analysis "wikilink")
+    Analysis](Electronic-Structure-Analysis "wikilink")
 
 <!-- -->
 
--   [Other Capabilities](Other_Capabilities "wikilink")
+-   [Other Capabilities](Other-Capabilities "wikilink")
 
 <!-- -->
 
