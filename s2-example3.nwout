@@ -1,0 +1,803 @@
+ argument  1 = s2-example3.nw
+ argument  2 = -np
+ argument  3 = 6
+ 
+
+
+============================== echo of input deck ==============================
+echo
+title "frequency calculation of s2-dimer LDA/30Ry with PSPW method"
+scratch_dir   ./scratch
+permanent_dir ./perm
+restart s2-pspw-energy
+freq
+   animate
+end
+task pspw freq
+================================================================================
+
+
+                                         
+                                         
+ 
+ 
+             Northwest Computational Chemistry Package (NWChem) 5.1.1
+             --------------------------------------------------------
+ 
+ 
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+ 
+                                         
+                                         
+ 
+ 
+                  COPYRIGHT (C) 1994, 1995, 1996, 1997, 1998, 1999,
+                2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
+                                     2009, 2010
+                        Pacific Northwest National Laboratory,
+                             Battelle Memorial Institute.
+ 
+                            >>> All Rights Reserved <<<
+ 
+ 
+                                    DISCLAIMER
+                                    ----------
+
+            This material was prepared as an account of work sponsored
+            by an agency of the United States Government.  Neither the
+            United States Government nor the United States Department
+            of Energy, nor Battelle, nor any of their employees, MAKES
+            ANY WARRANTY, EXPRESS OR IMPLIED, OR ASSUMES ANY LEGAL
+            LIABILITY OR RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS,
+            OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT,
+            SOFTWARE, OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE
+            WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS.
+
+
+                                    LIMITED USE
+                                    -----------
+
+            This software (including any documentation) is being made
+            available to you for your internal use only, solely for use
+            in performance of work directly for the U.S. Federal
+            Government or work under contracts with the U.S. Department
+            of Energy or other U.S. Federal Government agencies.  This
+            software is a version which has not yet been evaluated and
+            cleared for commercialization.  Adherence to this notice
+            may be necessary for the author, Battelle Memorial
+            Institute, to successfully assert copyright in and
+            commercialize this software. This software is not intended
+            for duplication or distribution to third parties without
+            the permission of the Manager of Software Products at
+            Pacific Northwest National Laboratory, Richland,
+            Washington, 99352.
+
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were produced with
+            Government support under Contract Number DE-AC05-76RL01830
+            awarded by the United States Department of Energy.  The
+            Government retains a paid-up non-exclusive, irrevocable
+            worldwide license to reproduce, prepare derivative works,
+            perform publicly and display publicly by or for the
+            Government, including the right to distribute to other
+            Government contractors.
+
+
+           Job information
+           ---------------
+
+    hostname      = seattle-1
+    program       = nwchem
+    date          = Mon Aug  9 16:39:46 2010
+
+    compiled      = Wed_Jul_21_12:26:22_2010
+    source        = /home/bylaska/nwchem-releases/nwchem
+    nwchem branch = Development
+    input         = s2-example3.nw
+    prefix        = s2-pspw-energy.
+    data base     = ./perm/s2-pspw-energy.db
+    status        = restart
+    nproc         =        6
+    time left     =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap      =   13107201 doubles =    100.0 Mbytes
+    stack     =   13107201 doubles =    100.0 Mbytes
+    global    =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total     =   52428802 doubles =    400.0 Mbytes
+    verify    = yes
+    hardfail  = no 
+
+
+           Directory information
+           ---------------------
+ 
+  0 permanent = ./perm
+  0 scratch   = ./scratch
+ 
+ 
+           Previous task information
+           -------------------------
+
+    Theory    = pspw                            
+    Operation = optimize                      
+    Status    = ok                            
+    Qmmm      = F
+    Ignore    = F
+
+ 
+           Geometries in the database
+           --------------------------
+ 
+       Name                              Natoms  Last Modified
+       --------------------------------  ------  ------------------------
+    1  driverinitial                          2  Mon Aug  9 16:36:08 2010  
+    2  geometry                               2  Mon Aug  9 16:36:17 2010  
+ 
+  The geometry named "geometry" is the default for restart
+ 
+ 
+ 
+           Basis sets in the database
+           --------------------------
+ 
+  There are no basis sets in the database
+ 
+ 
+ 
+                                NWChem Input Module
+                                -------------------
+ 
+ 
+            frequency calculation of s2-dimer LDA/30Ry with PSPW method
+            -----------------------------------------------------------
+ 
+ 
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+ 
+ 
+ 
+                         NWChem Finite-difference Hessian
+                         --------------------------------
+ 
+ 
+ *** Warning continue called for but no   ***
+ *** fd restart file for nuclear hessian ***
+ *** starting from scratch so to speak   ***
+          ****************************************************
+          *                                                  *
+          *               NWPW PSPW Calculation              *
+          *                                                  *
+          *  [ (Grassman/Stiefel manifold implementation) ]  *
+          *                                                  *
+          *      [ NorthWest Chemistry implementation ]      *
+          *                                                  *
+          *            version #5.10   06/12/02              *
+          *                                                  *
+          *    This code was developed by Eric J. Bylaska,   *
+          *    and was based upon algorithms and code        *
+          *    developed by the group of Prof. John H. Weare *
+          *                                                  *
+          ****************************************************
+     >>>  JOB STARTED       AT Mon Aug  9 16:39:46 2010  <<<
+          ================ input data ========================
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ number of processors used:         6
+ processor grid           :   6 x   1
+ parallel mapping         :   hilbert
+ parallel mapping         :  balanced
+
+ options:
+      boundary conditions  = periodic    (version3)
+      electron spin        = unrestricted
+      exchange-correlation = LDA (Vosko et al) parameterization
+
+ elements involved in the cluster:
+      1: S     core charge:  6.0000  lmax=  2
+             comment    : Hamann pseudopotential
+             pseudpotential type            :   0
+             highest angular component      :   2
+             local potential used           :   2
+             number of non-local projections:   4
+             cutoff =   0.843   0.955   0.955
+ 
+
+ total charge:   0.000
+
+ atomic composition:
+     S   :  2
+
+ number of electrons: spin up=     7 (   7 per task)  down=     5 (   5 per task) (fourier space)
+ number of orbitals : spin up=     7 (   7 per task)  down=     5 (   5 per task) (fourier space)
+
+ supercell:
+      cell_name:  cell_default                                      
+      lattice:    a1=<  20.000   0.000   0.000 >
+                  a2=<   0.000  20.000   0.000 >
+                  a3=<   0.000   0.000  20.000 >
+      reciprocal: b1=<   0.314   0.000   0.000 >
+                  b2=<   0.000   0.314   0.000 >
+                  b3=<   0.000   0.000   0.314 >
+      lattice:    a=      20.000 b=     20.000 c=      20.000
+                  alpha=  90.000 beta=  90.000 gamma=  90.000
+                  omega=      8000.0
+
+      density cutoff= 30.000  fft= 50x 50x 50(    31335 waves     5222 per task)
+      wavefnc cutoff= 15.000  fft= 50x 50x 50(    11060 waves     1843 per task)
+      ewald summation: cut radius=    6.37  and  1
+                        madelung= 1.76011888
+
+ technical parameters:
+      time step=      5.80     ficticious mass=  400000.0
+      tolerance=.100E-06 (energy)   0.100E-06 (density)
+      maximum iterations =    1000 (   10 inner  100 outer )
+
+
+
+
+
+== Energy Calculation ==
+
+
+          ============ Grassmann lmbfgs iteration ============
+     >>>  ITERATION STARTED AT Mon Aug  9 16:39:46 2010  <<<
+    iter.           Energy         DeltaE       DeltaRho 
+    ------------------------------------------------------
+      10   -0.2041364257E+02   -0.81803E-08    0.58008E-10
+  *** tolerance ok. iteration terminated
+     >>>  ITERATION ENDED   AT Mon Aug  9 16:39:47 2010  <<<
+
+
+==  Summary Of Results  ==
+ 
+ number of electrons: spin up=    7.00000  down=    5.00000 (real space)
+
+ total     energy    :  -0.2041364257E+02 (   -0.10207E+02/ion)
+ total orbital energy:  -0.4941504397E+01 (   -0.41179E+00/electron)
+ hartree   energy    :   0.1678438482E+02 (    0.13987E+01/electron)
+ exc-corr  energy    :  -0.4318695049E+01 (   -0.35989E+00/electron)
+ ion-ion   energy    :  -0.1472877340E-01 (   -0.73644E-02/ion)
+
+ kinetic (planewave) :   0.7524191168E+01 (    0.62702E+00/electron)
+ V_local (planewave) :  -0.4501131420E+02 (   -0.37509E+01/electron)
+ V_nl    (planewave) :   0.4622519462E+01 (    0.38521E+00/electron)
+ V_Coul  (planewave) :   0.3356876964E+02 (    0.27974E+01/electron)
+ V_xc.   (planewave) :  -0.5645670466E+01 (   -0.47047E+00/electron)
+ Virial Coefficient  :  -0.1656748916E+01
+
+ orbital energies:
+    -0.2005534E+00 (  -5.457eV)
+    -0.2005534E+00 (  -5.457eV)
+    -0.3289029E+00 (  -8.950eV)    -0.2985424E+00 (  -8.124eV)
+    -0.3289029E+00 (  -8.950eV)    -0.2985425E+00 (  -8.124eV)
+    -0.3580936E+00 (  -9.744eV)    -0.3351705E+00 (  -9.121eV)
+    -0.5637114E+00 ( -15.339eV)    -0.5251221E+00 ( -14.289eV)
+    -0.7631855E+00 ( -20.767eV)    -0.7402240E+00 ( -20.143eV)
+
+ Total PSPW energy   :  -0.2041364257E+02
+
+
+=== Spin Contamination ===
+ 
+ <Sexact^2> =    2.00000000000000     
+ <S^2>      =    2.00296125788763     
+ 
+
+
+== Center of Charge ==
+
+spin up     (    0.0000,    0.0000,    0.0000 )
+spin down   (    0.0000,    0.0000,    0.0000 )
+     total  (    0.0000,    0.0000,    0.0000 )
+ionic       (    0.0000,    0.0000,    0.0000 )
+crystal     (    0.0000,    0.0000,    0.0000 )
+
+
+== Crystal Dipole ==
+
+mu   =  (    0.0000,    0.0000,    0.0000 ) au
+|mu| =     0.0000 au,       0.0000 Debye
+
+
+== Molecular Dipole wrt Center of Mass ==
+
+mu   =  (    0.0000,    0.0000,    0.0000 ) au
+|mu| =     0.0000 au,       0.0000 Debye
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.595942E+00
+  main loop   :   0.418522E+00
+  epilogue    :   0.219701E+00
+  total       :   0.123416E+01
+  cputime/step:   0.104630E+00       (       4 evalulations,       1 linesearches)
+
+
+Time spent doing                        total          step
+  FFTs                       :   0.289211E-01  0.723028E-02
+  dot products               :   0.903336E-01  0.225834E-01
+  geodesic                   :   0.114148E-01  0.285369E-02
+  ffm_dgemm                  :   0.119712E-01  0.299281E-02
+  fmf_dgemm                  :   0.664257E-02  0.166064E-02
+  m_diagonalize              :   0.238893E-03  0.597234E-04
+    - m_tredq                :   0.000000E+00  0.000000E+00
+    - m_getdiags             :   0.000000E+00  0.000000E+00
+    - m_tqliq                :   0.000000E+00  0.000000E+00
+    - m_eigsrt               :   0.000000E+00  0.000000E+00
+  exchange correlation       :   0.243199E-01  0.607997E-02
+  local pseudopotentials     :   0.223160E-03  0.557899E-04
+  non-local pseudopotentials :   0.680766E-01  0.170192E-01
+  hartree potentials         :   0.111532E-02  0.278831E-03
+  ion-ion interaction        :   0.977993E-03  0.244498E-03
+  structure factors          :   0.487804E-03  0.121951E-03
+  phase factors              :   0.100136E-04  0.250340E-05
+  masking and packing        :   0.364499E-01  0.911248E-02
+  queue fft                  :   0.229270E+00  0.573174E-01
+  queue fft (serial)         :   0.469468E-01  0.117367E-01
+  queue fft (message passing):   0.179756E+00  0.449391E-01
+  HFX potential              :   0.000000E+00  0.000000E+00
+  qmmm LJ                    :   0.000000E+00  0.000000E+00
+  qmmm residual Q            :   0.000000E+00  0.000000E+00
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:39:47 2010  <<<
+
+ Saving state for pspw with suffix hess
+        ./perm/s2-pspw-energy.movecs
+ 
+  
+ initial hessian
+
+ zero matrix
+
+  
+ atom:   2 xyz: 1(+) wall time:       1.7      date:  Mon Aug  9 16:39:47 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041364241E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.592816E+00
+  main loop   :   0.277877E+01
+  epilogue    :   0.193777E+00
+  total       :   0.356536E+01
+  cputime/step:   0.817286E-01       (      34 evalulations,      15 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:39:51 2010  <<<
+ atom:   2 xyz: 1(-) wall time:       5.4      date:  Mon Aug  9 16:39:51 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041364240E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.579781E+00
+  main loop   :   0.278319E+01
+  epilogue    :   0.228380E+00
+  total       :   0.359135E+01
+  cputime/step:   0.818584E-01       (      34 evalulations,      15 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:39:55 2010  <<<
+ atom:   2 xyz: 2(+) wall time:       9.2      date:  Mon Aug  9 16:39:55 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041364240E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.580886E+00
+  main loop   :   0.272019E+01
+  epilogue    :   0.209215E+00
+  total       :   0.351029E+01
+  cputime/step:   0.800057E-01       (      34 evalulations,      15 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:39:59 2010  <<<
+ atom:   2 xyz: 2(-) wall time:      13.0      date:  Mon Aug  9 16:39:59 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041364241E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.577798E+00
+  main loop   :   0.273445E+01
+  epilogue    :   0.226078E+00
+  total       :   0.353833E+01
+  cputime/step:   0.804251E-01       (      34 evalulations,      15 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:40:02 2010  <<<
+ atom:   2 xyz: 3(+) wall time:      16.6      date:  Mon Aug  9 16:40:02 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041362709E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.576844E+00
+  main loop   :   0.239985E+01
+  epilogue    :   0.217004E+00
+  total       :   0.319370E+01
+  cputime/step:   0.857088E-01       (      28 evalulations,      12 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:40:06 2010  <<<
+ atom:   2 xyz: 3(-) wall time:      20.1      date:  Mon Aug  9 16:40:06 2010
+
+
+ input psi filename:./perm/s2-pspw-energy.movecs
+
+ Total PSPW energy   :  -0.2041362676E+02
+
+ output psi filename:./perm/s2-pspw-energy.movecs
+
+
+== Timing ==
+
+cputime in seconds
+  prologue    :   0.641074E+00
+  main loop   :   0.244135E+01
+  epilogue    :   0.225534E+00
+  total       :   0.330796E+01
+  cputime/step:   0.871912E-01       (      28 evalulations,      12 linesearches)
+ 
+     >>>  JOB COMPLETED     AT Mon Aug  9 16:40:09 2010  <<<
+  
+  finite difference hessian delta =   1.000000000000000E-002
+
+              1        2        3        4        5        6      
+    1    0.0041   0.0000   0.0000  -0.0065   0.0000   0.0000
+    2    0.0000   0.0041   0.0000   0.0000  -0.0065   0.0000
+    3    0.0000   0.0000   0.3136   0.0000   0.0000  -0.3196
+    4   -0.0065   0.0000   0.0000   0.0041   0.0000   0.0000
+    5    0.0000  -0.0065   0.0000   0.0000   0.0041   0.0000
+    6    0.0000   0.0000  -0.3196   0.0000   0.0000   0.3136
+  
+
+  finite difference derivative dipole; delta =   1.000000000000000E-002
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =    -8.8810     [  -42.6573]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -8.8810     [  -42.6573]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =    -8.8810     [  -42.6573]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -8.8810     [  -42.6573]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0218     [    0.1049]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0218     [    0.1049]
+  
+  
+  triangle hessian written to ./perm/s2-pspw-energy.hess
+  derivative dipole written to ./perm/s2-pspw-energy.fd_ddipole
+
+ Deleting state for pspw with suffix hess
+        ./perm/s2-pspw-energy.movecs
+ 
+ 
+ 
+  Vibrational analysis via the FX method 
+ 
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+ 
+  Vib: Default input used 
+ 
+  Nuclear Hessian passed symmetry test 
+ 
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    S        1  0.0000000D+00  0.0000000D+00 -1.7868794D+00  3.1972070D+01
+    S        2  0.0000000D+00  0.0000000D+00  1.7868794D+00  3.1972070D+01
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+              1           2           3           4           5           6
+   ----- ----- ----- ----- -----
+    1   1.28964D-01
+    2   0.00000D+00 1.28964D-01
+    3   0.00000D+00 0.00000D+00 9.80890D+00
+    4  -2.02506D-01 0.00000D+00 0.00000D+00 1.28964D-01
+    5   0.00000D+00-2.02506D-01 0.00000D+00 0.00000D+00 1.28964D-01
+    6   0.00000D+00 0.00000D+00-9.99592D+00 0.00000D+00 0.00000D+00 9.80890D+00
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency        -70.30      -44.08      -44.08       93.59       93.59      723.42
+ 
+           1     0.00000     0.12505     0.00000     0.12505     0.00000     0.00000
+           2     0.00000     0.00000     0.12505     0.00000     0.12505     0.00000
+           3     0.12505     0.00000     0.00000     0.00000     0.00000     0.12505
+           4     0.00000     0.12505     0.00000    -0.12505     0.00000     0.00000
+           5     0.00000     0.00000     0.12505     0.00000    -0.12505     0.00000
+           6     0.12505     0.00000     0.00000     0.00000     0.00000    -0.12505
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1      -70.298 ||       0.000               0.000             0.026
+    2      -44.083 ||     -10.669               0.000             0.000
+    3      -44.083 ||       0.000             -10.669             0.000
+    4       93.589 ||       0.000               0.000             0.000
+    5       93.589 ||       0.000               0.000             0.000
+    6      723.419 ||       0.000               0.000             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1      -70.298 ||    0.000030           0.001         0.029       0.000
+    2      -44.083 ||    4.933815         113.827      4809.728      30.000
+    3      -44.083 ||    4.933815         113.827      4809.728      30.000
+    4       93.589 ||    0.000000           0.000         0.000       0.000
+    5       93.589 ||    0.000000           0.000         0.000       0.000
+    6      723.419 ||    0.000000           0.000         0.000       0.000
+ ----------------------------------------------------------------------------
+
+
+
+ 
+ 
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Dependent rotation vector no.                     3
+  found in ECKART; assuming linear geometry
+ Projected Nuclear Hessian trans-rot subspace norm:1.2326D-32
+                         (should be close to zero!) 
+
+
+From the projected analysis 
+The Zero-Point Energy (Kcal/mol) =           1.03448901
+
+ center of mass
+ --------------
+ x =   0.00000000 y =   0.00000000 z =   0.00000000
+
+ moments of inertia (a.u.)
+ ------------------
+         204.169665771583           0.000000000000           0.000000000000
+           0.000000000000         204.169665771583           0.000000000000
+           0.000000000000           0.000000000000           0.000000000000
+
+ Rotational Constants
+ --------------------
+ A=   0.000000 cm-1  (  0.000000 K)
+ B=   0.294854 cm-1  (  0.424219 K)
+ C=   0.294854 cm-1  (  0.424219 K)
+
+
+ Temperature                      =   298.15K
+ frequency scaling parameter      =   1.0000
+
+
+ Linear Molecule                   
+
+ Zero-Point correction to Energy  =    1.034 kcal/mol  (  0.001647 au)
+ Thermal correction to Energy     =    2.579 kcal/mol  (  0.004110 au)
+ Thermal correction to Enthalpy   =    3.171 kcal/mol  (  0.005054 au)
+
+ Total Entropy                    =   52.277 cal/mol-K
+   - Translational                =   38.368 cal/mol-K (mol. weight =  63.9441)
+   - Rotational                   =   13.630 cal/mol-K (symmetry #  =        2)
+   - Vibrational                  =    0.279 cal/mol-K
+
+ Cv (constant volume heat capacity) =    5.750 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    1.986 cal/mol-K
+   - Vibrational                    =    0.785 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency        0.00        0.00        0.00        0.00        0.00      723.42
+ 
+           1     0.00000     0.17685     0.00000     0.00000     0.00000     0.00000
+           2     0.00000     0.00000     0.17685     0.00000     0.00000     0.00000
+           3     0.12505     0.00000     0.00000     0.00000     0.00000     0.12505
+           4     0.00000     0.00000     0.00000     0.17685     0.00000     0.00000
+           5     0.00000     0.00000     0.00000     0.00000     0.17685     0.00000
+           6     0.12505     0.00000     0.00000     0.00000     0.00000    -0.12505
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1        0.000 ||       0.000               0.000             0.026
+    2        0.000 ||      -7.544               0.000             0.000
+    3        0.000 ||       0.000              -7.544             0.000
+    4        0.000 ||      -7.544               0.000             0.000
+    5        0.000 ||       0.000              -7.544             0.000
+    6      723.419 ||       0.000               0.000             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1        0.000 ||    0.000030           0.001         0.029       0.000
+    2        0.000 ||    2.466908          56.914      2404.864      15.000
+    3        0.000 ||    2.466908          56.914      2404.864      15.000
+    4        0.000 ||    2.466908          56.914      2404.864      15.000
+    5        0.000 ||    2.466908          56.914      2404.864      15.000
+    6      723.419 ||    0.000000           0.000         0.000       0.000
+ ----------------------------------------------------------------------------
+
+
+
+ vib:animation  T
+
+ Task  times  cpu:       10.0s     wall:       23.9s
+ 
+ 
+                                NWChem Input Module
+                                -------------------
+ 
+ 
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls:    0        0        0        0        0        0        0        0     
+number of processes/call 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+bytes total:             0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+bytes remote:            0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 0 bytes
+ 
+
+
+
+                                  ACKNOWLEDGEMENT
+                                  ---------------
+
+            Please use the following acknowledgement where appropriate 
+            for results obtained with NWChem:
+
+            High Performance Computational Chemistry Group, "NWChem, A
+            Computational Chemistry Package for Parallel Computers, 
+            Version 5.1.1" (2008), Pacific Northwest National Laboratory,
+            Richland, Washington 99352-0999, USA.
+
+
+                                     CITATION
+                                     --------
+
+          Please use the following citation when publishing results
+          obtained with NWChem:
+
+          E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski, T. P. Straatsma,
+          M. Valiev, H. J. J. Van Dam, D. Wang, E. Apra, T. L. Windus, J. Hammond,
+          J. Autschbach, P. Nichols, S. Hirata, M. T. Hackler, Y. Zhao, P.-D. Fan,
+          R. J. Harrison, M. Dupuis, D. M. A. Smith, J. Nieplocha, V. Tipparaju,
+          M. Krishnan, A. Vazquez-Mayagoitia, L. Jensen, M. Swart, Q. Wu,
+          T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown, 
+          G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao,
+          R. Kendall, J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell, 
+          D. Bernholdt, P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. Deegan, 
+          K. Dyall, D. Elwood, E. Glendening, M. Gutowski, A. Hess, J. Jaffe, 
+          B. Johnson, J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, 
+          X. Long, B. Meng, T. Nakajima, S. Niu, L. Pollack, M. Rosing, 
+          G. Sandrone, M. Stave, H. Taylor, G. Thomas, J. van Lenthe, 
+          A. Wong, and Z. Zhang,
+          "NWChem, A Computational Chemistry Package for Parallel Computers, 
+          Version 5.1.1" (2008),
+                      Pacific Northwest National Laboratory,
+                      Richland, Washington 99352-0999, USA.
+
+
+
+ Total times  cpu:       10.0s     wall:       24.0s
+MA_summarize_allocated_blocks: starting scan ...
+MA_summarize_allocated_blocks: scan completed: 0 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         0	         0
+	maximum number of blocks	       235	        14
+	current total bytes		         0	         0
+	maximum total bytes		  16717672	   1404904
+	maximum total K-bytes		     16718	      1405
+	maximum total M-bytes		        17	         2
