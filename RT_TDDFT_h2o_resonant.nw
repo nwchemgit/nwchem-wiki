@@ -1,0 +1,76 @@
+title "Water TD-PBE0 resonant excitation"
+echo
+scratch_dir ./scratch
+permanent_dir ./perm
+
+start water
+
+##
+## aug-cc-pvtz / pbe0 optimized
+##
+## Note: you are required to explicitly name the geometry
+##
+geometry "system" units angstroms nocenter noautoz noautosym
+  O     0.00000000    -0.00001441    -0.34824012
+  H    -0.00000000     0.76001092    -0.93285191
+  H     0.00000000    -0.75999650    -0.93290797
+end
+
+## Note: We need to explicitly set the "active" geometry even though there is only one geom.
+set geometry "system"
+
+## All DFT and basis parameters are inherited by the RT-TDDFT code
+basis
+ * library 6-31G
+end
+
+dft
+ xc pbe0
+end
+
+## Compute ground state of the system
+task dft energy
+
+##
+## We excite the system with a quasi-monochromatic
+## (Gaussian-enveloped) z-polarized E-field tuned to a transition at
+## 10.25 eV.  The envelope takes the form:
+##
+## G(t) = exp(-(t-t0)^ / 2s^2)
+##
+## The target excitation has an energy (frequency) of w = 0.3768 au
+## and thus an oscillation period of T = 2 pi / w = 16.68 au
+##
+## Since we are doing a Gaussian envelope in time, we will get a
+## Gaussian envelope in frequency (Gaussians are eigenfunctions of a
+## Fourier transform), with width equal to the inverse of the width in
+## time.  Say, we want a Gaussian in frequency with FWHM = 1 eV
+## (recall FWHM = 2 sqrt (2ln2) s_freq) we want an s_freq = 0.42 eV =
+## 0.0154 au, thus in time we need s_time = 1 / s_time = 64.8 au.
+##
+## Now we want the envelope to be effectively zero at t=0, say 1e-8
+## (otherwise we get "windowing" effects).  Reordering G(t):
+##
+## t0 = t - sqrt(-2 s^2 ln G(t))
+##
+## That means our Gaussian needs to be centered at t0 = 393.3 au.
+##
+## The total simulation time will be 1000 au to leave lots of time to
+## see oscillations after the field has passed.
+##
+rt_tddft
+  tmax 1000.0
+  dt 0.2
+
+  field "driver"
+    type gaussian
+    polarization z
+    frequency 0.3768  # = 10.25 eV
+    center 393.3
+    width 64.8
+    max 0.0001
+  end
+
+  excite "system" with "driver"
+ end
+task dft rt_tddft
