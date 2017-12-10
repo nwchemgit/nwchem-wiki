@@ -3,7 +3,7 @@
 The default in NWChem is to specify the geometry information entirely in
 Cartesian coordinates, and examples of this format have appeared above
 (e.g, [Water Molecule
-Input](Getting_Started#Water_Molecule_Sample_Input_File "wikilink")).
+Input](Getting-Started#Water_Molecule_Sample_Input_File "wikilink")).
 Each center (usually an atom) is identified on a line of the following
 form:
 
