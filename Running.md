@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Running NWChem
 
 The command required to invoke NWChem is machine dependent, whereas most
