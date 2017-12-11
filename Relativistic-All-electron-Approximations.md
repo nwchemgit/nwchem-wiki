@@ -109,7 +109,8 @@ basis" (see [Basis Sets](Basis "wikilink")).
 ## Zeroth Order regular approximation (ZORA)
 
 The spin-free and spin-orbit one-electron zeroth-order regular
-approximation (ZORA) have been implemented. The use of relativistic
+approximation (ZORA) have been implemented. ZORA can be accessed only 
+via the DFT and SO-DFT modules. The use of relativistic
 effects with ZORA can be invoked by specifying:
 
 ` ZORA [<string (ON||OFF) default ON>`
@@ -125,26 +126,26 @@ turned off.
 To increase the accuracy of ZORA calculations, the following settings may be used 
 in the relativistic block
 
-`relativistic`
-` zora on`
-` zora:cutoff 1d-30`
-`end`
+` relativistic`
+`   zora on`
+`   zora:cutoff 1d-30`
+` end`
 
 To invoke the relativistic ZORA model potential approach due to van Wullen (references 16 & 17)
 
-`relativistic`
+` relativistic`
 `  zora on`
 `  zora:cutoff 1d-30`
-`# use model potential constructed from 4c densities`
+`  # use model potential constructed from 4c densities`
 `  modelpotential  1`
-`end`
+` end`
 
-`relativistic`
+` relativistic`
 `  zora on`
 `  zora:cutoff 1d-30`
-`# use model potential constructed from 2c densities`
+`  # use model potential constructed from 2c densities`
 `  modelpotential  2`
-`end`
+` end`
 
 ## Dyall's Modified Dirac Hamitonian approximation
 
