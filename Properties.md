@@ -83,7 +83,8 @@ consideration.
 **Calculating EPR and paramagnetic NMR parameters:** The following
 [tutorial](EPR-pNMR.pdf "wikilink") illustrates how to combine the
 hyperfine, gshift and shielding to calculate the EPR and paramagnetic
-NMR parameters of an open-shell system.
+NMR parameters of an open-shell system. All calculations are compatible 
+with the ZORA model potential approach.
 
 For theoretical and computational details, please refer to the following
 references:
