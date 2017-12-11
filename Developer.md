@@ -99,7 +99,7 @@ The programming model in is based on independent "task" modules that
 perform various functions in the code and are build on modular APIs.
 Modules and APIs can share data, or share access to files containing
 data, only through a (most of the time) [disk-resident run time
-database](NWChem_Architecture "wikilink"), which is similar to the
+database](NWChem-Architecture "wikilink"), which is similar to the
 GAMESS-UK dumpfile or the Gaussian checkpoint file. The run time
 database contains all the information necessary to
 [restart](Top-level#START_.2F_RESTART "wikilink") a task.
