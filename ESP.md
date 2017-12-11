@@ -41,7 +41,7 @@ When omitted, a default value for rcut of 0.3 nm is used.
 
 `       spacing <real spac>  `
   
-where spac is the grid spacing in $nm$ for the regularly spaced grid points. `  
+where spac is the grid spacing in <img alt="$nm$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55e64309e6bad09453ebdfb3c7254f1f.svg?invert_in_darkmode&sanitize=true" align=middle width="24.209295pt" height="14.10255pt"/> for the regularly spaced grid points. `  
 If not specified, a default spacing of 0.05 nm is used.`
 
   - The van der Waals radius of an element can be specified by
