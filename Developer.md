@@ -20,7 +20,7 @@ The NWChem GIT repository is hosted on Github at
 
 The development version of NWChem can be downloaded using the command
 
-`    % git clone `<https://github.com/nwchemgit/nwchem>
+`    % git clone <https://github.com/nwchemgit/nwchem>`
 
   - **Committing changes adding new files**
 
@@ -46,9 +46,7 @@ restricted. New potential developers should contact members of the
 NWChem Core Developer
 Team.
 
-`Before contributions from this new developer can be incorporated into NWChem, this person will have to provide written feedback that the contributions can be released within NWChem under a `[`ECL``
-``2.0`` ``open-source``
-``license`](http://www.opensource.org/licenses/ecl2.php)`. `
+Before contributions from this new developer can be incorporated into NWChem, this person will have to provide written feedback that the contributions can be released within NWChem under a [ECL 2.0 open-source license(http://www.opensource.org/licenses/ecl2.php).
 
 A (Trusted) Developer will receive the appropriate access to the
 nwchemgit github repository. If a Developer consistently incorporates
