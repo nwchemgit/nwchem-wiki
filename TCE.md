@@ -432,7 +432,7 @@ These keywords stand for the following models:
     components: (1) total energy of the K-th state
     E<sub>K</sub>=E<sub>K</sub> </sup>EOMCCSD</sup>+δ<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>(T) and (2)
     the so-called δ-corrected EOMCCSD excitation energy
-    ω<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=ω<sub>K</sub><sup>EOMCCSD</sup>+δ<sub>K</sub><sup> CR-EOMCCSD(T),IA}(T)</sup>.
+    ω<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=ω<sub>K</sub><sup>EOMCCSD</sup>+δ<sub>K</sub><sup> CR-EOMCCSD(T),IA</sup>(T).
   - CREOM(T)AC: active-space CR-EOMCCSD(T) approach,
   - QCISD: quadratic configuration interaction singles & doubles,
   - CISD: configuration interaction singles & doubles,
