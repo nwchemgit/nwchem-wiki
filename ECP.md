@@ -212,3 +212,22 @@ potentials in the published papers are defined as
 <img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> (Note: On the CRENBL website the spin-orbit potentials already
 have been corrected with the <img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> factor, so make sure the
 appropriate scaling is applied).
+
+For example, to use the Stuttgart/Köln ECP and SO-ECP for Hg  (ECP60MDF) in NWChem
+
+The highlighted section below is the SO part. The unhighlighted part is the ECP. 
+
+!  Q=20., MEFIT, MCDHF+Breit, Ref 37.  
+ECP,Hg,60,5,4;  
+1; 2,1.000000,0.000000;   
+2; 2,12.413071,275.774797; 2,6.897913,49.267898;   
+4; 2,11.310320,80.506984; 2,10.210773,161.034824; 2,5.939804,9.083416; 2,5.019755,18.367773;   
+4; 2,8.407895,51.137256; 2,8.214086,76.707459; 2,4.012612,6.561821; 2,3.795398,9.818070;   
+2; 2,3.273106,9.429001; 2,3.208321,12.494856;   
+2; 2,4.485296,-6.338414; 2,4.513200,-8.099863;   
+**4; 2,11.310320,-161.013967; 2,10.210773,161.034824; 2,5.939804,-18.166832; 2,5.019755,18.367773;**     
+**4; 2,8.407895,-51.137256; 2,8.214086,51.138306; 2,4.012612,-6.561821; 2,3.795398,6.545380;**      
+**2; 2,3.273106,-6.286001; 2,3.208321,6.247428;**      
+**2; 2,4.485296,3.169207; 2,4.513200,-3.239945;**  
+! References:  
+! [37] D. Figgen, G. Rauhut, M. Dolg, H. Stoll, Chem. Phys. 311, 227 (2005).  
