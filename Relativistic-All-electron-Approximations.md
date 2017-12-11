@@ -126,26 +126,28 @@ turned off.
 To increase the accuracy of ZORA calculations, the following settings may be used 
 in the relativistic block
 
-` relativistic`
-`   zora on`
-`   zora:cutoff 1d-30`
+` relativistic`  
+`     zora on`  
+`     zora:cutoff 1d-30`  
 ` end`
 
-To invoke the relativistic ZORA model potential approach due to van Wullen (references 16 & 17)
+To invoke the relativistic ZORA model potential approach due to van Wullen (references 16 & 17).
 
-` relativistic`
-`  zora on`
-`  zora:cutoff 1d-30`
-`  # use model potential constructed from 4c densities`
-`  modelpotential  1`
-` end`
+For model potentials constructed from 4-component densities:  
+` relativistic`  
+`     zora on`  
+`     zora:cutoff 1d-30`  
+`     modelpotential  1`  
+` end`  
 
-` relativistic`
-`  zora on`
-`  zora:cutoff 1d-30`
-`  # use model potential constructed from 2c densities`
-`  modelpotential  2`
-` end`
+For model potentials constructed from 2-component densities:  
+` relativistic`  
+`     zora on`  
+`     zora:cutoff 1d-30`  
+`     modelpotential  2`  
+` end`  
+
+Both approaches are comparable in accuracy and depends on the system.
 
 ## Dyall's Modified Dirac Hamitonian approximation
 
@@ -332,5 +334,5 @@ nonrelativistic.
 13. Haeberlen, O.D.; Roesch, N. (1992). "A scalar-relativistic extension of the linear combination of Gaussian-type orbitals local density functional method: application to AuH, AuCl and Au2". Chemical Physics Letters 199: 491-496. doi:10.1016/0009-2614(92)87033-L. ISSN 0009-2614. 
 14. Nakajima, T.; Hirao, K. (2000). "Numerical illustration of third-order Douglas-Kroll method: atomic and molecular properties of superheavy element 112". Chemical Physics Letters 329: 511-516. doi:10.1016/S0009-2614(00)01035-6. ISSN 0009-2614. 
 15. Nakajima, T.; Hirao, K. (2000). "The higher-order Douglas--Kroll transformation". The Journal of Chemical Physics 113: 7786-7789. doi:10.1063/1.1316037. 
-16. van Wullen, C. J. Chem. Phys. 109, 392 (1998).
-17. van Wullen, C. Michauk, J. Chem. Phys. 123, 204113 (2005).
+16. van Wullen, C. (1998). "Molecular density functional calculations in the regular relativistic approximation: Method, application to coinage metal diatomics, hydrides, fluorides and chlorides, and comparison with first-order relativistic calculations". The Journal of Chemical Physics 109: 392-399  https://doi.org/10.1063/1.476576
+17. van Wullen, C. Michauk, C. (2005). "Accurate and efficient treatment of two-electron contributions in quasirelativistic high-order Douglas-Kroll density-functional calculations". The Journal of Chemical Physics 123, 204113 https://doi.org/10.1063/1.2133731
