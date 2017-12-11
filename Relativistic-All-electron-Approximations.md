@@ -122,15 +122,7 @@ block and turn the approximation OFF. The user can also simply put a
 blank RELATIVISTIC block in the input file and all options will be
 turned off.
 
-\==
-
-<div id="Dyall-Mod-Dirac-Hamiltonian">
-
-Dyall's Modified Dirac Hamitonian approximation
-
-</div>
-
-\==
+## Dyall's Modified Dirac Hamitonian approximation
 
 The approximate methods described in this section are all based on
 Dyall's modified Dirac Hamiltonian. This Hamiltonian is entirely
