@@ -25,7 +25,7 @@ the system and the sum of the effective nuclear charges of all centers
 (atoms and dummy atoms, see [GEOMETRY](Geometry "wikilink")).
 The total charge on the system is zero by default, unless specified at
 some value by input on the CHARGE directive [Total system
-charge](Top-level#CHARGE_--_Total_system_charge "wikilink").
+charge](Charge "wikilink").
 
 The options available to define the SCF wavefunction and multiplicity
 are as follows:
@@ -1129,7 +1129,7 @@ wavefunctions using molecular orbitals.
 
 All output from the SCF module is controlled using the PRINT directive
 described in [Print
-control](Top-level#PRINT_and_NOPRINT_--_Print_control "wikilink").
+control](Print_Noprint "wikilink").
 The following list describes the items from SCF that are currently under
 direct print control, along with the print level for each
 one.
