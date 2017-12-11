@@ -430,7 +430,7 @@ These keywords stand for the following models:
   - CREOMSD(T): EOMCCSD energies and completely renormalized
     EOMCCSD(T)(IA) correction. In this option NWCHEM prints two
     components: (1) total energy of the K-th state
-    E<sub>K</sub>=E<sub>K<sub></sup>EOMCCSD</sup>+δ<sub>K</sub><sup>CR-EOMCCSD(T),IA<sup>(T) and (2)
+    E<sub>K</sub>=E<sub>K<sub>HH </sup>EOMCCSD</sup>+δ<sub>K</sub><sup>CR-EOMCCSD(T),IA<sup>(T) and (2)
     the so-called δ-corrected EOMCCSD excitation energy
     ω<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=ω</sub>K</sub><sup>EOMCCSD</sup>+δ<sub>K</sub><sup> CR-EOMCCSD(T),IA}(T)</sup>.
   - CREOM(T)AC: active-space CR-EOMCCSD(T) approach,
