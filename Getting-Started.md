@@ -23,7 +23,7 @@ Structure](#input-file-structure "wikilink")) which provide critical job
 control information, and are processed before all other input. Most
 directives are specific to a particular module and define data that is
 used by that module only. A few directives (see [Top-level
-Directives](Top-level#top-level-directives "wikilink"))
+Directives](Top-level "wikilink"))
 potentially affect all modules, for instance by specifying the total
 electric charge on the system.
 
@@ -111,7 +111,7 @@ Directives](Top-level "wikilink"), such as TITLE, SET, ...) or
 by the parsers for specific computational modules (e.g., SCF, DFT, ...).
 Any directives that have already been processed (e.g., MEMORY) are
 ignored. Input is read until a TASK directive (see
-[Tasks](Top-level#TASK "wikilink")) is encountered. A TASK
+[Tasks](TASK "wikilink")) is encountered. A TASK
 directive requests that a calculation be performed and specifies the
 level of theory and the operation to be performed. Input processing then
 stops and the specified task is executed. The position of the TASK
@@ -174,7 +174,7 @@ new ones.
 The last line of this sample input file (task scf optimize) tells the
 program to optimize the molecular geometry by minimizing the SCF energy.
 (For a description of possible tasks and the format of the TASK
-directive, refer to [Tasks](Top-level#TASK "wikilink"))
+directive, refer to [Tasks](TASK "wikilink"))
 
 If the input is stored in the file n2.nw, the command to run this job on
 a typical UNIX workstation is as follows:
@@ -227,7 +227,7 @@ follows:
 `task mp2 freq`
 
 The START directive
-([START/RESTART](Top-level#START_/_RESTART "wikilink") tells
+([START/RESTART](Start_Restart "wikilink") tells
 NWChem that this run is to be started from the beginning. This directive
 need not be at the beginning of the input file, but it is commonly
 placed there. Existing database or vector files are to be ignored or
@@ -235,7 +235,8 @@ overwritten. The entry h2o\_freq on the START line is the prefix to be
 used for all files created by the calculation. This convention allows
 different jobs to run in the same directory or to share the same scratch
 directory
-[SCRATCH\_DIR/PERMANENT\_DIR](Top-level#SCRATCH_DIR_/_PERMANENT_DIR "wikilink"),
+[SCRATCH\_DIR](Scratch_Dir "wikilink")/
+[PERMANENT\_DIR](Permanen_Dir "wikilink"),
 as long as they use different prefix names in this field.
 
 As in the first sample problem, the geometry is given in Cartesian
@@ -265,7 +266,7 @@ relevant input for a given problem. The TASK directive causes the code
 to perform the specified calculation using the parameters set in the
 preceding directives. In this case, the first task is an SCF calculation
 with geometry optimization, specified with the input scf and optimize.
-(See [Tasks](Top-level#TASK "wikilink") for a list of
+(See [Tasks](TASK "wikilink") for a list of
 available tasks and operations.)
 
 After the completion of any task, settings in the database are used in
@@ -340,7 +341,7 @@ In the input file:
     included into the current input file at the current line. Up to
     three levels of nested include files are supported. The user should
     note that inputting a basis set from the standard basis library
-    ([Basis Sets](Basis_Sets "wikilink")) uses one level of include.
+    ([Basis Sets](Basis-Set "wikilink")) uses one level of include.
   - Data is read from the input file until an end-of-file is detected,
     or until the string EOF (ignoring case) is encountered at the
     beginning of an input line.
@@ -353,8 +354,8 @@ line of input with one or more fields. Compound directives can have
 multiple input lines, and can also include other optional simple and
 compound directives. A compound directive is terminated with an END
 directive. The directives START (see
-[START/RESTART](Top-level#START_/_RESTART "wikilink")) and
-ECHO (see [ECHO](Top-level#ECHO "wikilink")) are examples of
+[START/RESTART](Start_Restart "wikilink")) and
+ECHO (see [ECHO](Echo "wikilink")) are examples of
 simple directives. The directive GEOMETRY (see
 [Geometry](Geometry "wikilink")) is an example of a
 compound directive.
