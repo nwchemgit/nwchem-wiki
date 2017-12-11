@@ -5,7 +5,7 @@ This is an optional top-level directive that allows the user to specify the tota
 
  CHARGE <real charge default 0>
 
-The default chargeThe charge directive, in conjunction with the charges of atomic nuclei (which can be changed via the geometry input, cf. Section -sec:cart-), determines the total number of electrons in the chemical system. Therefore, a charge n specification removes "n" electrons from the chemical system. Similarly, charge -n adds "n" electrons. is zero if this directive is omitted. An example of a case where the directive would be needed is for a calculation on a doubly charged cation. In such a case, the directive is simply, 
+The charge directive, in conjunction with the charges of atomic nuclei (which can be changed via the geometry input, cf. Section -sec:cart-), determines the total number of electrons in the chemical system. Therefore, a charge n specification removes "n" electrons from the chemical system. Similarly, charge -n adds "n" electrons. is zero if this directive is omitted. An example of a case where the directive would be needed is for a calculation on a doubly charged cation. In such a case, the directive is simply, 
 
  charge 2
 
@@ -20,4 +20,4 @@ vertical ionization energies of <math>LiH</math>, one might optimize the geometr
  charge 1 scf; uhf; doublet; end task scf
  charge 2 scf; uhf; singlet; end task scf
 
-The GEOMETRY, BASIS, and SCF directives are described below ([[Geometry|Geometry]], [[Basis|Basis]] and [[SCF|SCF]] respectively) but their intent should be clear. The TASK directive is described above ([[TASK|TASK]]).
+The GEOMETRY, BASIS, and SCF directives are described below ([[Geometry|Geometry]], [[Basis|Basis]] and [[Hartree-Fock-Theory-for-Molecules|SCF]] respectively) but their intent should be clear. The TASK directive is described above ([[TASK|TASK]]).
