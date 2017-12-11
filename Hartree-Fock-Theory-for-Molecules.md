@@ -57,7 +57,7 @@ calculation will be a spin-restricted, high-spin, open-shell SCF
 calculation (keyword ROHF). The open-shell orbitals must be the highest
 occupied orbitals. If necessary, any starting vectors may be rearranged
 through the use of the SWAP keyword on the
-[VECTORS](#VECTORS_--_input.2Foutput_of_MO_vectors "wikilink") directive
+[VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink") directive
 to accomplish this.
 
 A spin-unrestricted solution can also be performed by specifying the
@@ -76,8 +76,8 @@ The user should be aware that, by default, molecular orbitals are
 symmetry adapted in NWChem. This may not be desirable for fully
 unrestricted wavefunctions. In such cases, the user has the option of
 defeating the defaults by specifying the keywords
-[ADAPT](#ADAPT_-_symmetry_adaptation_of_MOs "wikilink") OFF and
-[SYM](#SYM "wikilink") OFF .
+[ADAPT](#adapt---symmetry-adaptation-of-mos "wikilink") OFF and
+[SYM](#sym----use-of-symmetry "wikilink") OFF .
 
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
@@ -114,7 +114,7 @@ construction is that the density is totally symmetric. If the orbitals
 are symmetry contaminated, this assumption may not be valid -- which
 could result in incorrect energies and poor convergence of the
 calculation. It is thus advisable when specifying ADAPT OFF to also
-specify SYM OFF ([Use of Symmetry](#SYM_--_use_of_symmetry "wikilink")).
+specify SYM OFF ([Use of Symmetry](#sym----use-of-symmetry "wikilink")).
 
 ## TOL2E -- integral screening threshold
 
