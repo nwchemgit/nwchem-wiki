@@ -1,4 +1,0 @@
- 
-*[[Sample|Sample input files]]
-
-*[[Geometry examples|Examples of geometries using symmetry]]
