@@ -84,7 +84,7 @@ module:
   - Frozen core and virtual approximation.
   - DIIS extrapolation and Jacobi update of excitation amplitudes
   - Additional algorithms for the 2-e integral transformation, including
-    efficient and scalable spin-free out-of-core $N^5$ algorithms.
+    efficient and scalable spin-free out-of-core N<sub>5</sub> algorithms.
   - Hybrid I/O schemes for both spin-orbital and spin-free calculations
     which eliminate the memory bottleneck of the 2-e integrals in favor
     of disk storage. Calculations with nearly 400 basis functions at the
@@ -430,9 +430,9 @@ These keywords stand for the following models:
   - CREOMSD(T): EOMCCSD energies and completely renormalized
     EOMCCSD(T)(IA) correction. In this option NWCHEM prints two
     components: (1) total energy of the K-th state
-    $E_K=E_K^{\rm EOMCCSD}+\delta_K^{\rm CR-EOMCCSD(T),IA}(T)$ and (2)
+    E_K=E_K<sup>EOMCCSD<sup>+δ<sub>K</sub><sup>CR-EOMCCSD(T),IA<sup>(T) and (2)
     the so-called δ-corrected EOMCCSD excitation energy
-    $\omega_K^{\rm CR-EOMCCSD(T),IA}=\omega_K^{\rm EOMCCSD}+\delta_K^{\rm CR-EOMCCSD(T),IA}(T)$.
+    ω<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=ω</sub>K</sub><sup>EOMCCSD</sup>+δ<sub>K</sub><sup> CR-EOMCCSD(T),IA}(T)</sup>.
   - CREOM(T)AC: active-space CR-EOMCCSD(T) approach,
   - QCISD: quadratic configuration interaction singles & doubles,
   - CISD: configuration interaction singles & doubles,
