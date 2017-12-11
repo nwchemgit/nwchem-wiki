@@ -505,9 +505,16 @@ metadynamics.](Meta-example.gif
 Below is a list of files and the number of times they have been
 downloaded. 
 
-![Total Downloads](https://img.shields.io/github/downloads/nwchemgit/nwchem/total.svg)
+All Releases Downloads ![All Releases Downloads](https://img.shields.io/github/downloads/nwchemgit/nwchem/total.svg)
 
-![Total Downloads](https://img.shields.io/github/downloads-pre/nwchemgit/nwchem/total.svg)
+Latest Release Downloads ![Latest Release Downloads](https://img.shields.io/github/downloads/nwchemgit/nwchem/latest/total.svg)
+
+Total Pre-Releases Downloads ![Total Pre-Release Downloads](https://img.shields.io/github/downloads-pre/nwchemgit/nwchem/total.svg)
+
+v6.8-beta.3 Downloads ![Latest Release Downloads](https://img.shields.io/github/downloads/nwchemgit/nwchem/v6.8-beta.3/total.svg)
+
+v6.8 Downloads ![Latest Release Downloads](https://img.shields.io/github/downloads/nwchemgit/nwchem/v6.8/total.svg)
+
 
 
 ## References
