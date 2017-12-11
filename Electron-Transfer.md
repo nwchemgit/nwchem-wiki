@@ -1,32 +1,30 @@
-\_\_NOTITLE\_\_
-
 # Electron Transfer
 
 The NWChem electron transfer (ET) module calculates the electronic
 coupling energy (also called the electron transfer matrix element)
 between ET reactant and product states. The electronic coupling
-(\(V_{RP}\)), activation energy (\(\Delta G^{*}\)), and nuclear
+(<img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>), activation energy (<img alt="$\Delta G^{*}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d4b6f1efc7506d98c4c1182d400b8b19.svg?invert_in_darkmode&sanitize=true" align=middle width="33.23397pt" height="22.59873pt"/>), and nuclear
 reorganization energy (λ) are all components of the electron transfer
 rate defined by Marcus' theory, which also depends on the temperature
 (see Reference 1
 below):
 
-\({k_{ET}}= \frac{2\pi}{\hbar} V_{RP}^{2} \frac{1}{\sqrt{4\pi \lambda k_{B}T}} \exp \left( \frac{- \Delta G^{*}}{k_{B} T} \right)\)
+<img alt="${k_{ET}}= \frac{2\pi}{\hbar} V_{RP}^{2} \frac{1}{\sqrt{4\pi \lambda k_{B}T}} \exp \left( \frac{- \Delta G^{*}}{k_{B} T} \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/534ce113598ba681e3cbb214b4ef4072.svg?invert_in_darkmode&sanitize=true" align=middle width="255.900645pt" height="37.80348pt"/>
 
 The ET module utilizes the method of *Corresponding Orbital
-Transformation* to calculate \(V_{RP}\). The only input required are the
+Transformation* to calculate <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>. The only input required are the
 names of the files containing the open-shell (UHF) MO vectors for the ET
 reactant and product states (*R* and *P*).
 
-The basis set used in the calculation of \(V_{RP}\) must be the same as
+The basis set used in the calculation of <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> must be the same as
 the basis set used to calculate the MO vectors of *R* and *P*. The
-magnitude of \(V_{RP}\) depends on the amount of overlap between *R* and
+magnitude of <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> depends on the amount of overlap between *R* and
 *P*, which is important to consider when choosing the basis set. Diffuse
 functions may be necessary to fill in the overlap, particularly when the
 ET distance is long.
 
 The MO's of *R* and *P* must correspond to localized states. for
-instance, in the reaction \(A^{ -} B \rightarrow  A B^{ -}\) the
+instance, in the reaction <img alt="$A^{ -} B \rightarrow  A B^{ -}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/15728481d59878d0e5ad1e52c3c03e12.svg?invert_in_darkmode&sanitize=true" align=middle width="97.899945pt" height="26.12412pt"/> the
 transferring electron is localized on A in the reactant state and is
 localized on B in the product state. To verify the localization of the
 electron in the calculation of the vectors, carefully examine the
@@ -63,7 +61,7 @@ is the only required input in the ET module, although there are other
 optional keywords described
 below.
 
-## FOCK/NOFOCK -- method for calculating the two-electron contribution to \(V_{RP}\)
+## FOCK/NOFOCK -- method for calculating the two-electron contribution to <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>
 
 `  <string (FOCK||NOFOCK) default FOCK>`
 
@@ -85,7 +83,7 @@ The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the two-electron contribution to the
 Hamiltonian between the electron transfer reactant and product states.
 As a default, tol2e is set depending on the magnitude of the overlap
-between the ET reactant and product states (\(S_{RP}\)), and is not less
+between the ET reactant and product states (<img alt="$S_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/09e2ae89de9087b174958724cbf3e4e9.svg?invert_in_darkmode&sanitize=true" align=middle width="30.06795pt" height="22.38192pt"/>), and is not less
 than 1.0d-12 or greater than 1.0d-7.
 
 The input to specify the threshold explicitly within the ET directive
@@ -96,7 +94,7 @@ is, for example:
 ## Example
 
 The following example is for a simple electron transfer reaction,
-\(He_{} \rightarrow He^{ +}\). The ET calculation is easy to execute,
+<img alt="$He_{} \rightarrow He^{ +}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/071c03bc68d9e9cb99efa0d16a160ace.svg?invert_in_darkmode&sanitize=true" align=middle width="81.53376pt" height="26.12412pt"/>. The ET calculation is easy to execute,
 but it is crucial that ET reactant and product wavefunctions reflect
 localized states. This can be accomplished using either a [fragment
 guess](SCF#Superposition_of_fragment_molecular_orbitals "wikilink"), or
@@ -158,9 +156,9 @@ Here is what the output looks like for this example:
 `                                                   0.000693 eV`  
 `                                                      0.016 kcal/mol`
 
-The overlap between the ET reactant and product states (\(S_{RP}\)) is
+The overlap between the ET reactant and product states (<img alt="$S_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/09e2ae89de9087b174958724cbf3e4e9.svg?invert_in_darkmode&sanitize=true" align=middle width="30.06795pt" height="22.38192pt"/>) is
 small, so the magnitude of the coupling between the states is also
 small. If the fragment guess or charged atomic density guess were not
 used, the Mulliken spin population would be 0.5 on both He atoms, the
 overlap between the ET reactant and product states would be 100 % and an
-infinite \(V_{RP}\) would result.
+infinite <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> would result.
