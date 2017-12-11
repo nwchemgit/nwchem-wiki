@@ -1,3 +1,0 @@
-*[https://github.com/GlobalArrays/ga/ Global Arrays]
-
-*[[ARMCI|Choosing the right ARMCI library]]

@@ -1,3 +1,0 @@
-*[http://www.emsl.pnl.gov/docs/global/ Global Arrays]
-
-*[[Release66:ARMCI|Choosing the right ARMCI library]]
