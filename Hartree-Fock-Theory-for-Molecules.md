@@ -82,7 +82,7 @@ defeating the defaults by specifying the keywords
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
 previous calculation (see [NWChem
-Architecture](Nwarch "wikilink") for restart behavior).
+Architecture](NWChem-Architecture "wikilink") for restart behavior).
 
 ## SYM -- use of symmetry
 
@@ -130,10 +130,10 @@ for tol2e.
 It is generally not necessary to set this parameter directly. Specify
 instead the required precision in the wavefunction, using the THRESH
 directive ([Convergence
-threshold](#THRESH_--_convergence_threshold "wikilink")). The default
+threshold](#thresh----convergence-threshold "wikilink")). The default
 threshold is the minimum of <img alt="$10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f7ed66ae8d8f913f33d096b40bf1fcfd.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> and 0.01 times the requested
 convergence threshold for the SCF calculation ([Convergence
-threshold](#THRESH_--_convergence_threshold "wikilink")).
+threshold](#thresh----convergence-threshold "wikilink")).
 
 The input to specify the threshold explicitly within the SCF directive
 is, for example:
@@ -718,7 +718,7 @@ for both ROHF/RHF and UHF calculations. For most molecules, this number
 of iterations is more than sufficient for the quadratically convergent
 SCF algorithm to obtain a solution converged to the default threshold
 (see [Convergence
-threshold](#THRESH_--_convergence_threshold "wikilink") above). If the
+threshold](#thresh----convergence-threshold "wikilink") above). If the
 SCF program detects that the quadratically convergent algorithm is not
 efficient, then it will resort to a linearly convergent algorithm and
 increase the maximum number of iterations by 10.
