@@ -80,7 +80,7 @@ To Be Revised: %% The type of developer and their level of access are:
 
 A detailed step-by-step description of the build process and necessary
 and optional environment variables is outlined on the [Compiling
-NWChem](Compiling_NWChem "wikilink") page.
+NWChem](Compiling-NWChem "wikilink") page.
 
 ## Development Contribution Requirements
 
