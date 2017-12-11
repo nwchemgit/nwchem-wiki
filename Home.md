@@ -43,4 +43,4 @@ NWChem User Documentation
 
 <!-- -->
 
--   [Supplementary Information](Supplementary_Information "wikilink")
+-   [Supplementary Information](Supplementary-Information "wikilink")
