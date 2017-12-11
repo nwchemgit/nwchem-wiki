@@ -45,7 +45,7 @@ All three MP2 tasks share the same input block.
 `   [VECTORS `<string filename default scf-output-vectors>` \`  
 `     [swap [(alpha||beta)] `<integer pair-list>`] ]`  
 `   [RIAPPROX `<string riapprox default V>`]`  
-`   [FILE3C <string filename default <img alt="$file_prefix$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d55b30fdf6e0dbf4663e6c28a7b65f65.svg?invert_in_darkmode&sanitize=true" align=middle width="76.12341pt" height="22.74591pt"/>.mo3cint">]`  
+`   [FILE3C <string filename default $file_prefix$.mo3cint">]`  
 `   [SCRATCHDISK `<integer>`]`  
 ` END`
 
@@ -119,7 +119,7 @@ or equivalently, using the optional keyword core
 Again, note that if the 10 orbitals to be frozen do not correspond to
 the first 10 orbitals, then the swap keyword of the VECTORS directive
 must be used to order the input orbitals correctly ([MO
-vectors](#VECTORS_--_MO_vectors "wikilink")).
+vectors](#vectors----mo-vectors "wikilink")).
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
@@ -203,7 +203,7 @@ to obtain vectors from the file /tmp/h2o.movecs, use the directive
 
 ` vectors /tmp/h2o.movecs`
 
-As noted above ([FREEZE](#FREEZE_--_Freezing_orbitals "wikilink")) if
+As noted above ([FREEZE](#freeze----freezing-orbitals "wikilink")) if
 the SCF orbitals are not in the correct order, it is necessary to
 permute the input orbitals using the swap keyword of the VECTORS
 directive. For instance, if it is desired to freeze a total six orbitals
@@ -213,7 +213,7 @@ orbital 7 into the 6th position. This is accomplished by
 ` vectors swap 6 7`
 
 The swap capability is examined in more detail in [Input/output of MO
-vectors](Hartree-Fock_Theory_for_Molecules#VECTORS_--_input/output_of_MO_vectors "wikilink").
+vectors](Hartree-Fock_Theory_for_Molecules#vectors----inputoutput-of-mo-vectors "wikilink").
 
 ## RI-MP2 fitting basis
 
