@@ -206,9 +206,7 @@ the spin-orbit potential defined in the input is of the form:
 
 For example, in the literature (most of) the Stuttgart potentials are
 defined as <img alt="$\Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/100737b94927e62da95985868aaf6e3d.svg?invert_in_darkmode&sanitize=true" align=middle width="29.03736pt" height="22.38192pt"/> and, hence, have to be multiplied by
-<img alt="$2/(2{l}+1)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/156fcb35730b5da1280fe772d5b19893.svg?invert_in_darkmode&sanitize=true" align=middle width="70.745235pt" height="24.56553pt"/> (Note: On the Stuttgart and Kohln web pages the
-spin-orbit potentials have already been corrected by the appropriate
-scaling factor and can be used as is). On the other hand, the CRENBL
+<img alt="$2/(2{l}+1)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/156fcb35730b5da1280fe772d5b19893.svg?invert_in_darkmode&sanitize=true" align=middle width="70.745235pt" height="24.56553pt"/> (Note: On the Stuttgart/Köln web pages (http://www.tc.uni-koeln.de/PP/clickpse.en.html), spin-orbit potentials have already been corrected by the appropriate scaling factor and can be used as is). On the other hand, the CRENBL
 potentials in the published papers are defined as
 <img alt="$\,\!\frac{l}{2l+1} \Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/212280724cc111ee1d85ad12e99830b6.svg?invert_in_darkmode&sanitize=true" align=middle width="58.43013pt" height="28.86675pt"/> and, hence, have to be multiplied by
 <img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> (Note: On the CRENBL website the spin-orbit potentials already
