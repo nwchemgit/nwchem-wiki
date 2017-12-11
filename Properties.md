@@ -81,7 +81,7 @@ the highest abundance and has spin, will be chosen for each atom under
 consideration.
 
 **Calculating EPR and paramagnetic NMR parameters:** The following
-[tutorial](Media:EPR-pNMR.pdf "wikilink") illustrates how to combine the
+[tutorial](EPR-pNMR.pdf "wikilink") illustrates how to combine the
 hyperfine, gshift and shielding to calculate the EPR and paramagnetic
 NMR parameters of an open-shell system.
 
