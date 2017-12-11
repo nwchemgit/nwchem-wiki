@@ -298,20 +298,20 @@ nonrelativistic.
 ` end`  
 ` task scf`
 
-<references/>
+### References 
 
-1.  <refbase>20</refbase>
-2.  <refbase>18</refbase>
-3.  <refbase>19</refbase>
-4.  <refbase>21</refbase>
-5.  <refbase>22</refbase>
-6.  <refbase>23</refbase>
-7.  <refbase>30</refbase>
-8.  <refbase>24</refbase>
-9.  <refbase>25</refbase>
-10. <refbase>26</refbase>
-11. <refbase>18</refbase>
-12. <refbase>19</refbase>
-13. <refbase>27</refbase>
-14. <refbase>28</refbase>
-15. <refbase>29</refbase>
+1. Douglas, M.; Kroll, N.M. (1974). "Quantum electrodynamical corrections to the fine structure of helium". Annals of Physics 82: 89-155. doi:10.1016/0003-4916(74)90333-9. ISSN 0003-4916. 
+2. Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. doi:10.1103/PhysRevA.32.756. 
+3. Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. doi:10.1103/PhysRevA.33.3742. 
+4. Chang, C; Pelissier, M; Durand, M (1986). "Regular Two-Component Pauli-Like Effective Hamiltonians in Dirac Theory". Physica Scripta 34: 394. doi:10.1088/0031-8949/34/5/007. ISSN 1402-4896. 
+5. van Lenthe, E (1996). "The ZORA Equation" (in English). 
+6. Faas, S.; Snijders, J.G.; van Lenthe, J.H.; van Lenthe, E.; Baerends, E.J. (1995). "The ZORA formalism applied to the Dirac-Fock equation". Chemical Physics Letters 246: 632-640. doi:10.1016/0009-2614(95)01156-0. ISSN 0009-2614. 
+7. Nichols, P.; Govind, N.; Bylaska, E.J.; de Jong, W.A. (2009). "Gaussian Basis Set and Planewave Relativistic Spin-Orbit Methods in NWChem". Journal of Chemical Theory and Computation 5: 491-499. doi:10.1021/ct8002892. ISSN 1549-9618. 
+8. Dyall, K.G. (1994). "An exact separation of the spin-free and spin-dependent terms of the Dirac--Coulomb--Breit Hamiltonian". The Journal of Chemical Physics 100: 2118-2127. doi:10.1063/1.466508. 
+9. Dyall, K.G. (1997). "Interfacing relativistic and nonrelativistic methods. I. Normalized elimination of the small component in the modified Dirac equation". The Journal of Chemical Physics 106: 9618-9626. doi:10.1063/1.473860. 
+10. Dyall, K.G.; Enevoldsen, T. (1999). "Interfacing relativistic and nonrelativistic methods. III. Atomic 4-spinor expansions and integral approximations". The Journal of Chemical Physics 111: 10000-10007. doi:10.1063/1.480353. 
+11. Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. doi:10.1103/PhysRevA.32.756. 
+12. Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. doi:10.1103/PhysRevA.33.3742. 
+13. Haeberlen, O.D.; Roesch, N. (1992). "A scalar-relativistic extension of the linear combination of Gaussian-type orbitals local density functional method: application to AuH, AuCl and Au2". Chemical Physics Letters 199: 491-496. doi:10.1016/0009-2614(92)87033-L. ISSN 0009-2614. 
+14. Nakajima, T.; Hirao, K. (2000). "Numerical illustration of third-order Douglas-Kroll method: atomic and molecular properties of superheavy element 112". Chemical Physics Letters 329: 511-516. doi:10.1016/S0009-2614(00)01035-6. ISSN 0009-2614. 
+15. Nakajima, T.; Hirao, K. (2000). "The higher-order Douglas--Kroll transformation". The Journal of Chemical Physics 113: 7786-7789. doi:10.1063/1.1316037. 
