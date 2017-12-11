@@ -41,7 +41,7 @@ All input is free format and case is ignored except for actual data
 module-specific directives (i.e., compound directives) can appear in any
 order, with the exception of the TASK directive (see [Input File
 Structure](#input-file-structure "wikilink") and
-[Tasks](Top-level#TASK "wikilink")) which is used to invoke an
+[Tasks](TASK "wikilink")) which is used to invoke an
 NWChem module. All input for a given task must precede the TASK
 directive. This input specification rule allows the concatenation of
 multiple tasks in a single NWChem input file.
