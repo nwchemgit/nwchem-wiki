@@ -693,7 +693,7 @@ available in the wavefunction, and the energy should be converged to
 approximately the square of this number. It should be noted, however,
 that the precision in the energy will not exceed that of the integral
 screening tolerance. This tolerance ([Integral screening
-threshold](#TOL2E_--_integral_screening_threshold "wikilink")) is
+threshold](#tol2e----integral-screening-threshold "wikilink")) is
 automatically set from the convergence threshold, so that sufficient
 precision is usually available by default.
 
@@ -785,7 +785,7 @@ The default behavior of the SCF module is
   - If there is not enough memory to store all the integrals at once,
     then 95% of the available disk space in the scratch directory (see
     [File
-    directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink"))
+    directories](Scratch_Dir "wikilink"))
     is assumed to be available for this purpose, and as many integrals
     as possible are cached on disk (with no memory being used for
     caching). Some attempt is made to store the most expensive integrals
@@ -824,7 +824,7 @@ satisfied.)
 
 By default, the integral files are placed into the scratch directory
 (see [File
-directories](Top-level#SCRATCH_DIR_and_PERMANENT_DIR_--_File_directories "wikilink")).
+directories](Scratch_Dir "wikilink")).
 Specifying the keyword FILENAME overrides this default. The
 user-specified name entered in the string filename has the process
 number appended to it, so that each process has a distinct file but with
