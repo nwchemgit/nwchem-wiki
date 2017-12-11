@@ -3,7 +3,7 @@
 The TASK directive is used to tell the code what to do. The input
 directives are parsed sequentially until a TASK directive is
 encountered, as described in [Input File
-Structure](Getting_Started#Input_File_Structure "wikilink"). At that
+Structure](Getting-Started#input-file-structure "wikilink"). At that
 point, the calculation or operation specified in the TASK directive is
 performed. When that task is completed, the code looks for additional
 input to process until the next TASK directive is encountered, which is
@@ -29,7 +29,7 @@ termination, and is recognized by all forms of the TASK directive. When
 a TASK directive includes the keyword ignore, a warning message is
 printed if the task fails, and code execution continues with the next
 task. An example of this feature is given in the [sample input
-file](Density_Functional_Theory_for_Molecules#Sample_input_file "wikilink").
+file](Density-Functional-Theory-for-Molecules#sample-input-file "wikilink").
 
 The input options, keywords, and defaults for each of these four forms
 for the TASK directive are discussed in the following sections.
@@ -76,21 +76,21 @@ in NWChem:
   - optimize - Minimize the energy by varying the molecular structure.
     By default, this geometry optimization is presently driven by the
     [Driver
-    module](Hessians_&_Vibrational_Frequencies#Geometry_Optimization_with_DRIVER "wikilink"),
+    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink"),
     but the [Stepper
-    module](Hessians_&_Vibrational_Frequencies#Geometry_Optimization_with_STEPPER "wikilink")
+    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink")
     may also be used.
   - saddle - Conduct a search for a transition state (or saddle point)
     using either [Driver
-    module](Hessians_&_Vibrational_Frequencies#Geometry_Optimization_with_DRIVER "wikilink")
+    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink")
     (the default) or
-    [Stepper](Hessians_&_Vibrational_Frequencies#Geometry_Optimization_with_STEPPER "wikilink").
+    [Stepper](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink").
   - hessian - Compute second derivatives. See [hessian
-    section](Hessians_&_Vibrational_Frequencies#Hessians "wikilink") for
+    section](Hessians-&-Vibrational-Frequencies#hessians "wikilink") for
     analytic hessians.
   - frequencies or freq - Compute second derivatives and print out an
     analysis of molecular vibrations. See [vibration
-    section](Hessians_&_Vibrational_Frequencies#Vibrational_frequencies "wikilink")
+    section](Hessians-&-Vibrational-Frequencies#vibrational-frequencies "wikilink")
     for controls for vibration calculations.
   - vscf - Compute anharmonic contributions to the vibrational modes.
     See the [vibrational SCF section](VSCF "wikilink") for options.
@@ -100,7 +100,7 @@ in NWChem:
     integration using classical MD
 
 NOTE: See [PSPW
-Tasks](Plane-Wave_Density_Functional_Theory#PSPW_Tasks "wikilink") for
+Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks "wikilink") for
 the complete list of operations that accompany the NWPW module.
 
 The user should be aware that some of these operations (gradient,
@@ -132,7 +132,7 @@ theory, the TASK directive is
 The optional keyword ignore can be used to allow execution to continue
 even if the task fails, as discussed above. An example with the keyword
 ignore can be found in the [DFT
-example](Density_Functional_Theory_for_Molecules#Sample_input_file "wikilink").
+example](Density-Functional-Theory-for-Molecules#sample-input-file "wikilink").
 
 ### TASK Directive for Special Operations
 
@@ -206,7 +206,7 @@ script in a file and execute the file from within NWChem.
 ### TASK Directive for QM/MM simulations
 
 This is very similar to the most commonly used version of the [TASK
-directive](Top-level#TASK_Directive_for_Electronic_Structure "wikilink"),
+directive](TASK "wikilink"),
 and it has the following
 form:
 
