@@ -11,16 +11,16 @@ additional platforms and better environment variables over time.
   - **NWCHEM\_TOP** defines the top directory of the NWChem source tree,
     e.g.
 
-When dealing with source from a ***NWChem release*** (6.6 in this
+When dealing with source from a ***NWChem release*** (6.8 in this
 example)
 
-`  % setenv NWCHEM_TOP `*<your path>*`/nwchem-6.6`
+`  % setenv NWCHEM_TOP  *<your path>*/nwchem-6.8`
 
 when using the ***NWChem development*** source
 
-`  % setenv NWCHEM_TOP `*<your path>*`/nwchem`
+`  % setenv NWCHEM_TOP  *<your path>*/nwchem`
 
-  - **NWCHEM\_TARGET** defines your target platform, e.g.
+  - $NWCHEM\_TARGET defines your target platform, e.g.
 
 `  % setenv NWCHEM_TARGET LINUX64`
 
