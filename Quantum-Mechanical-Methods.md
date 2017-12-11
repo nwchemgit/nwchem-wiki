@@ -36,6 +36,3 @@
 
   - [Multiconfiguration SCF](Multiconfiguration_SCF "wikilink")
 
-<!-- end list -->
-
-  - [Selected CI](SELCI "wikilink")
