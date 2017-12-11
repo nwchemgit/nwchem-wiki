@@ -100,7 +100,7 @@ in NWChem:
     integration using classical MD
 
 NOTE: See [PSPW
-Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks "wikilink") for
+Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks---gamma-point-calculations "wikilink") for
 the complete list of operations that accompany the NWPW module.
 
 The user should be aware that some of these operations (gradient,
