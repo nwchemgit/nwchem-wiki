@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # NWChem Development Consortium
 
 ## Core Development Team
