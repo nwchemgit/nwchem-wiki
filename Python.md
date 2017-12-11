@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Controlling NWChem with Python
 
 Python (version 1.5.1) programs may be embedded into the NWChem input
@@ -128,7 +126,7 @@ Section 38.3.9).
     with the given name.
 
 An
-[example](#Accessing_geometry_information_--_a_temporary_hack "wikilink")
+[example](#accessing-geometry-information----a-temporary-hack "wikilink")
 below explains, in lieu of a Python wrapper for the geometry object, how
 to obtain the Cartesian molecular coordinates directly from the
 database.
@@ -568,7 +566,7 @@ database.
 
 This illustrates how to handle signals from terminating child processes
 and how to generate simple plots on UNIX systems. The [scanning
-example](#Scanning_a_basis_exponent_revisited "wikilink") is modified so
+example](#scanning-a-basis-exponent-revisited "wikilink") is modified so
 that instead of writing the data to a file for subsequent visualization,
 it is saved for subsequent visualization with Gnuplot (you'll need both
 Gnuplot and the corresponding package for Python in your PYTHONPATH.
