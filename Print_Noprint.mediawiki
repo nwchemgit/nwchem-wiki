@@ -11,7 +11,7 @@ print level (general verbosity) and the printing of individual items which are i
 The default print level is medium.
 
 Every output that is printed by NWChem has a print threshold associated with it. If this threshold is equal to or lower than the
-print level requested by the user, then the output is generated. For example, the [[Hartree-Fock Theory for Molecules#Printing Information from the SCF Module|threshold for printing]] the SCF energy at convergence is low. This means that if the user-specified print level on the PRINT directive is
+print level requested by the user, then the output is generated. For example, the [[Hartree-Fock Theory for Molecules#printing-information-from-the-scf-module|threshold for printing]] the SCF energy at convergence is low. This means that if the user-specified print level on the PRINT directive is
 low, medium, high, or debug, then the SCF energy will be printed at convergence.
 
 The overall print level specified using the PRINT directive is a convenient tool for controlling the verbosity of NWChem. Setting the print level to high might be helpful in diagnosing convergence problems. The print level of debug might also be of use in evaluating problem cases, but the user should be aware that this can generate a huge amount of output. Setting the print level to low might be the preferable choice for geometry optimizations that will perform many steps which are in themselves of little interest to the user.
