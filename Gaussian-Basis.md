@@ -26,8 +26,8 @@ Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](ht
 `  [rand_seed `<integer default new one generated for each run>`]`  
 `  [com_step <integer default 100>]`  
 `  [print_xyz <integer default 1>]`  
-`  [linear]`   
-`  [property <integer default 1>]`  
+`  [linear]`      
+`  [property <integer default 1>]`   
 `  [tddft <integer default 1>]`   
 `END`
 
@@ -118,7 +118,7 @@ For example, property 5 will calculate properties on the current geometry every 
 
 ### tddft -- How often to peform TDDFT calculation as part of the MD simulation  
 
-If present, the code will look for the property block and calculate the requested properties
+If present, the code will look for the property block and calculate the requested properties.  
 For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.    
 
 ## Sample input
