@@ -14,6 +14,7 @@ Kohn-Sham orbitals in the:
   - any empirical mixture of local and non-local approximations
     (including exact exchange), and
   - asymptotically corrected exchange-correlation potentials.
+  - spin-orbit effects
 
 The formal scaling of the DFT computation can be reduced by choosing to
 use auxiliary Gaussian basis sets to fit the charge density (CD) and/or
@@ -1841,11 +1842,11 @@ DFT Print Control Specifications
 
 # Spin-Orbit Density Functional Theory (SODFT)
 
-The spin-orbit DFT module (SODFT) in the NWChem code allows for the
-variational treatment of the one-electron spin-orbit operator within the
-DFT framework. The implementation requires the definition of an
-effective core potential (ECP) and a matching spin-orbit potential (SO).
-The current implementation does NOT use symmetry.
+The spin-orbit DFT module (SODFT) in the NWChem code allows for the variational   
+treatment of the one-electron spin-orbit operator within the DFT framework. Calculations   
+can be performed either with an electron relativistic approach (ZORA) or with an    
+effective core potential (ECP) and a matching spin-orbit potential (SO). The current   
+implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
 encounters the TASK directive ([TASK](Top-level#TASK "wikilink")).
@@ -1866,9 +1867,6 @@ Note: One should use a combination of ECP and SO potentials that were
 designed for the same size core, i.e. don't use a small core ECP
 potential with a large core SO potential (it will produce erroneous
 results).
-
-Also, note that charge fitting basis sets will not work with spin-orbit
-calculations.
 
 The following is an example of a calculation of <img alt="$UO_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06f075d510ceac444f473cefd7f488b2.svg?invert_in_darkmode&sanitize=true" align=middle width="31.993995pt" height="22.38192pt"/>:
 
