@@ -57,6 +57,8 @@ The capabilities of the module include:
     response formalism.
   - State-specific Multireference Coupled Cluster methods (MRCC)
     (Brillouin-Wigner (BW-MRCC) and Mukherjee (Mk-MRCC) approaches).
+  - Universally State Selective corrections to the BW-MRCC and Mk-MRCC methods 
+    (diagonal USS(2) and perturbative USS(pt) methods).
   - Electron affinity/Ionization potential EOMCCSD formulations
     (EA/IP-EOMCC; available for RHF reference only).
 
@@ -150,6 +152,11 @@ For details of particular CC implementations, see:
     K. Kowalski, J. Chem. Phys. 137, 094112 (2012).
   - K. Bhaskaran-Nair, K. Kowalski, J. Moreno, M. Jarrell, W.A. Shelton,
     J. Chem. Phys. 141, 074304 (2014).
+  - J. Brabec, S. Banik, K. Kowalski, J.  Pittner, J. Chem. Phys. 145, 164106
+    (2016).
+  - S. Rajbhandari, F. Rastello, K. Kowalski, S. Krishnamoorthy, P.  Sadayappan, 
+    Proceedings of the 22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming
+    327 (2017). 
 
 ## Algorithms of CI, MBPT, and CC methods
 
