@@ -720,6 +720,10 @@ for a specific excited state using the DPLOT block
 
 TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum 
 
+Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission    
+Spectroscopy of Transition Metal", J. Chem. Theory Comput., 2015, 11 (12), pp 5804–5809  
+DOI: 10.1021/acs.jctc.5b00763
+
 1.  Calculate the neutral ground state.   
 2.  Calculate a full core hole (FCH) ionized state self-consistently, where the  
 1s core orbital of the absorbing center is swapped with a virtual orbital. Use the   
