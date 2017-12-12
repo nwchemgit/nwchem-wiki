@@ -718,6 +718,12 @@ for a specific excited state using the DPLOT block
 `end`  
 `task dplot`
 
-TDDFT calculation of the valence-to-core X-ray emission spectrum 
+TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum 
 
-
+1.  Calculate the neutral ground state.   
+2.  Calculate a full core hole (FCH) ionized state self-consistently, where the  
+1s core orbital of the absorbing center is swapped with a virtual orbital. Use the   
+maximum overlap constraint to prevent core hole collapse during the FCH calculation.
+3.  Perform a LR-TDDFT calculation within the TDA is performed with the FCH ionized    
+state as reference. 
+4.  Final spectra is produced by taking the absolute value of the negative eigenvalues.
