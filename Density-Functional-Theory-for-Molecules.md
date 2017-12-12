@@ -1861,8 +1861,8 @@ Potentials](ECP "wikilink") for details, one also has to specify a
 spin-orbit (SO) potential. The input specification for the SO potential
 can be found in [Effective Core
 Potentials](ECP#Spin-orbit_ECPs "wikilink"). At this time we have not
-included any spin-orbit potentials in the basis set library. However,   
-one can get these from the Stuttgart/Köln web pages   
+included any spin-orbit potentials in the basis set library. However,
+one can get these from the Stuttgart/Köln web pages    
 (http://www.tc.uni-koeln.de/PP/clickpse.en.html).  See [Effective Core
 Potentials](ECP "wikilink") for details how to define the SO ECPs
 
