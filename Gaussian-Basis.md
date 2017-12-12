@@ -26,9 +26,9 @@ Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](ht
 `  [rand_seed `<integer default new one generated for each run>`]`  
 `  [com_step <integer default 100>]`  
 `  [print_xyz <integer default 1>]`  
-`  [linear]`  
+`  [linear]`   
 `  [property <integer default 1>]`  
-`  [tddft <integer default 1>]`
+`  [tddft <integer default 1>]`   
 `END`
 
 The module is called as:
