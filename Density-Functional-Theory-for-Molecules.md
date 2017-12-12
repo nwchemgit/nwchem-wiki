@@ -459,6 +459,7 @@ computed as
 | pbe0        | \* | \* | \*  |      | \*    | Y   | \[17\] |
 | mpw1k       | \* | \* | \*  |      | \*    | Y   | \[25\] |
 | xmvs15      | \* |    |     | \*   |       | N   | \[55\] |
+| hle16       | \* | \* | \*  |      | \*    | Y   | \[56\] |
 |  |
 
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
@@ -541,6 +542,8 @@ to nuclear position.
 53. J. P. Perdew and W. Yue, Phys. Rev. B 33, 8800 (1986)
 54. A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
 55. J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
+56. P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
+
 
 ### Meta-GGA Functionals
 
