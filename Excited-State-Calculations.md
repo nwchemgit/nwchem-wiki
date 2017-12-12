@@ -717,3 +717,7 @@ for a specific excited state using the DPLOT block
 `   output root-2.cube`  
 `end`  
 `task dplot`
+
+TDDFT calculation of the valence-to-core X-ray emission spectrum 
+
+
