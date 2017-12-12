@@ -609,6 +609,11 @@ Near-Edge X-Ray Absorption", J. Chem. Theory Comput., 2012, 8 (9), pp 3284–329
 
 TDDFT optimization with LDA of Pyridine with the 6-31G basis
 
+D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon   
+Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State   
+Energy Gradients within Time-Dependent Density Functional Theory"   
+J. Chem. Theory Comput., 2013, 9 (12), pp 5490–5503
+
 `echo`  
 `start tddftgrad_pyridine_opt`  
 `title "TDDFT/LDA geometry optimization of Pyridine with 6-31G"`  
