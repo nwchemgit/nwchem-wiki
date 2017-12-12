@@ -554,6 +554,10 @@ only meaningful with B3LYP functional).
 TDDFT for core states. The following example illustrates the usage of an
 energy cutoff and energy and orbital windows.
 
+K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and    
+Real-Time Time-Dependent Density Functional Theory Studies of Core-Level   
+Near-Edge X-Ray Absorption", J. Chem. Theory Comput., 2012, 8 (9), pp 3284–3292
+
 `echo`  
 `start h2o_core`  
 `memory 1000 mb`  
