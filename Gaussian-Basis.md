@@ -111,6 +111,16 @@ and Angstrom/fs, respectively.
 
 If present, the code assumes the molecule is linear.
 
+### property -- How often to calculate molecular properties as part of the MD simulation
+
+If present, the code will look for the property block and calculate the requested properties.  
+For example, property 5 will calculate properties on the current geometry every 5 steps.  
+
+### tddft -- How often to peform TDDFT calculation as part of the MD simulation  
+
+If present, the code will look for the property block and calculate the requested properties
+For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.    
+
 ## Sample input
 
 The following is a sample input for a ground state MD simulation. The
