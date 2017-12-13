@@ -215,8 +215,9 @@ basis set (POL1). The calculations were performed using Barracuda
 cluster at EMSL.</small> <File:gpu_speedup_uracil.png>|<small>*Speedup
 of GPU over CPU of the (T) part of the (T) part of the Reg-CCSD(T)
 approach as a function of the tile size for the uracil molecule. The
-calculations were performed using Barracuda cluster at EMSL.</small>
-<File:ccsd_eomccsd_new.png>|<small>*Comparison of the CCSD/EOMCCSD
+calculations were performed using Barracuda cluster at EMSL.  
+![](ccsd_eomccsd_new.png " ")
+*Comparison of the CCSD/EOMCCSD
 iteration times for BacterioChlorophyll (BChl, Mg O6 N4 C 36 H38) for
 various tile sizes. Calculations were performed for 3-21G basis set (503
 basis functions, C1 symmetry, 240 correlated electrons, 1020
@@ -226,9 +227,11 @@ cores).
 *Time per CCSD
 iteration for BChl in 6-311G basis set (733 basis functions, C1
 symmetry, 240 correlated electrons, 1020 cores) as a function of tile
-size.</small> <File:eomccsd_scaling_ic.png>|<small>''Scalability of the
+size.
+![](eomccsd_scaling_ic.png "")
+Scalability of the
 CCSD/EOMCCSD codes for BChl in 6-311G basis set (733 basis functions;
-tilesize=40, C1 symmetry, 240 correlated electrons).</small>
+tilesize=40, C1 symmetry, 240 correlated electrons).
 
 Other tests:
 
