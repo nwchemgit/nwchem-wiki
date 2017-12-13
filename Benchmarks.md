@@ -78,7 +78,7 @@ scalability tests of the BW-MRCCSD(T) implementation of NWChem have been
 performed on the Jaguar Cray-XK6 computer system of the National Center
 for Computational Sciences at Oak Ridge National Laboratory.
 
-![Mrccsd\_t\_titan.png](Mrccsd_t_titan.png "Mrccsd_t_titan.png")
+![mrccsd\_t\_titan.png](mrccsd_t_titan.png "mrccsd_t_titan.png")
 
 # Timings of CCSD/EOMCCSD for the oligoporphyrin dimer
 
