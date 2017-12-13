@@ -1,6 +1,6 @@
 While we have done our best to compile an exhaustive list of software
 using NWChem, we might have missed packages and/or incorrectly described
-some software features. Please use this [Github Issue feature](https://github.com/nwchemgit/nwchem/issues "wikilink") to provide
+some software features. Please use the [Github Issue feature](https://github.com/nwchemgit/nwchem/issues "wikilink") to provide
 feedback on this page content.
 
 ## User interface software
@@ -13,7 +13,7 @@ feedback on this page content.
     analyzes output files (including frequencies) <http://avogadro.cc>
   - **WebMO** World Wide Web-based interface to computational chemistry
     packages <https://www.webmo.net/> \[2\]
-  - *' Jmol*' analyzes output and cube files
+  - ** Jmol** analyzes output and cube files
     <http://wiki.jmol.org/index.php/NWChem>
   - **Scienomics MAPS** platform has a NWChem Plugin that will allow
     users to easily create NWChem input files. Since MAPS platform also
