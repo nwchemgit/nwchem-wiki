@@ -774,6 +774,29 @@ same location. Additionally it is strongly encouraged to run the NWChem
 QA tests from the /nwchem/QA/tests/tce\_mrcc\_bwcc\_subgroups directory
 with various combinations of subgroup size and total number of CPU.
 
+
+The USS corrections can be enabled by using "usspt" directive
+keyword in the mrccdata
+
+```
+tce
+  mkccsd
+  thresh 1.0e-10
+  targetsym a1
+  maxiter 600
+  io ga
+end
+
+mrccdata
+  usspt
+  root 1
+  cas 2 2
+end
+```
+
+In effect both diagonal and perturbative USS corrections will be calculated after
+the completion of iterative Mk-MRCCSD or BW-MRCCSD calculations.
+
 ### Electron affinity, ionization potential EOMCCSD methods
 
 The EA/IP-EOMCCSD methodologies are available in the 6.5 NWChem release.
@@ -1229,6 +1252,10 @@ better performance.
 
 In the later part of this manual several examples illustrate the use of
 the newly introduced keywords.
+
+An efficient loop-fused four-index transfromations for RHF and ROHF references can be
+enabled by the sequence "2eorb/2emet 16".
+
 
 ### CCSD(T)/CR-EOMCCSD(T) calculations with large tiles
 
