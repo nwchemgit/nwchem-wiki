@@ -769,9 +769,9 @@ cores/CPU available then the size of the subgroupsize (n) is 120.
 
 CAUTION: Before using the subgroup-based algorithm the users should
 perform the GA subgroup test in
-nwchem/src/tools/ga-5-2/global/testing/pgtest.x and pg2test.x in the
+$NWCHEM_TOP/src/tools/ga-5-6-3/global/testing/pgtest.x and pg2test.x in the
 same location. Additionally it is strongly encouraged to run the NWChem
-QA tests from the /nwchem/QA/tests/tce\_mrcc\_bwcc\_subgroups directory
+QA tests from the $NWCHEM_TOP/QA/tests/tce\_mrcc\_bwcc\_subgroups directory
 with various combinations of subgroup size and total number of CPU.
 
 
