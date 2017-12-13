@@ -30,10 +30,11 @@ calculations were performed on the Chinook HP computer system at MSCF
 EMSL, PNNL.![PWMD](PWMDScaling.png "wikilink") Exact
 exchange timings – 80 atom cell of hematite (cutoff energy=100Ry). These
 calculations were performed on the Franklin Cray-XT4 computer system at
-NERSC.](file:PWEXScaling.png "wikilink") [center|320px|thumb|Exact
+NERSC.
+![](PWEXScaling.png "wikilink") Exact
 exchange timings – 576 atom cell of water (cutoff energy=100Ry). These
 calculations were performed on the Hopper Cray-XE6 computer system at
-NERSC.](file:water192b.png "wikilink")
+NERSC.![](water192b.png "wikilink")
 
 # Parallel performance of the CR-EOMCCSD(T) method (triples part)
 
@@ -209,10 +210,12 @@ examples below shows the first results of the performance of the triples
 part of Reg-CCSD(T) on GPGPUs (left two examples) and of using
 alternative task schedules for the iterative CCSD and EOMCCSD.
 
-<File:gpu_scaling_spiro.png>|<small>*Scalability of the triples part of
+![](gpu_scaling_spiro.png "")Scalability of the triples part of
 the Reg-CCSD(T) approach for Spiro cation described by the Sadlej's TZ
 basis set (POL1). The calculations were performed using Barracuda
-cluster at EMSL.</small> <File:gpu_speedup_uracil.png>|<small>*Speedup
+cluster at EMSL.
+![](gpu_speedup_uracil.png "")
+Speedup
 of GPU over CPU of the (T) part of the (T) part of the Reg-CCSD(T)
 approach as a function of the tile size for the uracil molecule. The
 calculations were performed using Barracuda cluster at EMSL.  
