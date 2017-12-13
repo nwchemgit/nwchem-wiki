@@ -222,7 +222,7 @@ various tile sizes. Calculations were performed for 3-21G basis set (503
 basis functions, C1 symmetry, 240 correlated electrons, 1020
 cores).
 
-![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png "wiki')
+![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png "wiki")
 *Time per CCSD
 iteration for BChl in 6-311G basis set (733 basis functions, C1
 symmetry, 240 correlated electrons, 1020 cores) as a function of tile
