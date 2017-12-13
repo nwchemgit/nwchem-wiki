@@ -50,3 +50,7 @@ NWChem User Documentation
 <!-- -->
 
 -   [Developer](Developer "wikilink")
+
+<!-- -->
+
+-   [FAQ](FAQ "wikilink")
