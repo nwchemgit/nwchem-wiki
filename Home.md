@@ -1,4 +1,6 @@
-NWChem User Documentation
+![](https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png)
+  
+NWChem User Documentation   
 =========================
 
 -   [Overview](Overview "wikilink")
@@ -48,3 +50,7 @@ NWChem User Documentation
 <!-- -->
 
 -   [Developer](Developer "wikilink")
+
+<!-- -->
+
+-   [FAQ](FAQ "wikilink")
