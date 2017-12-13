@@ -4,7 +4,7 @@
 
 ## Where is the User's Manual?
 
-`NWChem User's Manual at  `
+The NWChem User's Manual is now at [https://github.com/nwchemgit/nwchem/wiki](https://github.com/nwchemgit/nwchem/wiki) 
 
 ## Where do I go for help with a Global Arrays problem?
 
@@ -15,13 +15,13 @@ website at <http://hpc.pnl.gov/globalarrays/>
 
 ## Where do I go for help with NWChem problems?
 
-Please post your NWChem issue to the NWChem Community forums at
-<http://www.nwchem-sw.org//index.php/Special:AWCforum>
+Please post your NWChem issue to the NWChem forum hosted on Google Groups at
+<https://groups.google.com/forum/#!forum/nwchem-forum>
 
 ## Where do I find the instructions for installing NWChem?
 
 For updated instructions for compiling NWChem please visit the following
-URL <http://www.nwchem-sw.org/index.php/Compiling_NWChem>
+URL <https://github.com/nwchemgit/nwchem/wiki/Compiling-NWChem>
 
 # Installation Problems
 
