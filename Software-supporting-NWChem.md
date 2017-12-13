@@ -1,7 +1,6 @@
 While we have done our best to compile an exhaustive list of software
 using NWChem, we might have missed packages and/or incorrectly described
-some software features. Please use this [
-link](Special:AWCforum/post/todo_new_t/id12 "wikilink") to provide
+some software features. Please use this [Github Issue feature](https://github.com/nwchemgit/nwchem/issues "wikilink") to provide
 feedback on this page content.
 
 ## User interface software
