@@ -1,4 +1,3 @@
-**NWChem Frequently Asked Questions**
 
 # General information about NWChem
 
