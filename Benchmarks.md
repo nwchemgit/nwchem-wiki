@@ -220,7 +220,10 @@ calculations were performed using Barracuda cluster at EMSL.</small>
 iteration times for BacterioChlorophyll (BChl, Mg O6 N4 C 36 H38) for
 various tile sizes. Calculations were performed for 3-21G basis set (503
 basis functions, C1 symmetry, 240 correlated electrons, 1020
-cores).</small> <File:bchl_6_311G_ccsd.png>|<small>*Time per CCSD
+cores).
+
+![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png "wiki')
+*Time per CCSD
 iteration for BChl in 6-311G basis set (733 basis functions, C1
 symmetry, 240 correlated electrons, 1020 cores) as a function of tile
 size.</small> <File:eomccsd_scaling_ic.png>|<small>''Scalability of the
