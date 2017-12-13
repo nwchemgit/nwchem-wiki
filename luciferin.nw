@@ -1,0 +1,62 @@
+echo
+
+start luciferin
+
+permanent_dir /dtemp/nwchem_user
+
+memory stack 1300 mb heap 100 mb global 3400 mb noverify
+
+geometry units angstrom noautosym
+C      0.000   0.000   0.000
+C      1.398   0.000   0.000
+C      2.147   1.179   0.000
+C      1.492   2.414   0.000
+C      0.091   2.432  -0.001
+C     -0.648   1.241   0.000
+O     -2.009   1.292  -0.001
+N      3.606   0.969   0.009
+C      3.943  -0.313   0.016
+S      2.523  -1.339   0.013
+C      5.328  -0.806   0.065
+N      5.645  -2.082   0.185
+S      6.720   0.245   0.195
+C      7.830  -1.081   0.760
+C      7.120  -2.370   0.276
+C      7.621  -2.737  -1.102
+O      7.573  -3.895  -1.478
+O      8.147  -1.792  -1.900
+H     -0.566  -0.932   0.003
+H      2.060   3.344   0.002
+H     -0.434   3.387   0.000
+H     -2.330   1.314   0.907
+H      7.875  -1.070   1.849
+H      8.829  -0.984   0.335
+H      7.312  -3.191   0.966
+H      9.092  -1.994  -2.067
+end
+
+basis spherical
+ * library aug-cc-pvdz
+end
+
+set lindep:n_dep 0
+
+scf
+   singlet
+   thresh 1.e-8
+   maxiter 200
+end
+
+tce
+   ccsd
+   freeze atomic
+   2eorb
+   2emet 13
+   maxiter 100
+   tilesize 40
+   attilesize 45
+   thresh 1.0d-5
+   lshift 0.2
+end
+
+task tce energy
