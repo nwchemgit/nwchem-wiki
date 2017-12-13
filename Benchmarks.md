@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Benchmarks performed with NWChem
 
 This page contains a suite of benchmarks performed with NWChem. The
@@ -193,7 +191,7 @@ MIC and Nvidia GPU implementations. Tests were performed using 96
 compute nodes on the Cascade system at EMSL (Intel® Xeon™ Phi 5110P) and
 Titan system at ORNL (NVIDIA Tesla® K20X).
 
-([ input file](Media:Pentacene_ccsdt.nw "wikilink"))
+([ input file](Media:pentacene_ccsdt.nw "wikilink"))
 
 |          |                      |             |
 | -------- | -------------------- | ----------- |
