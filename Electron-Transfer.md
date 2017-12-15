@@ -97,11 +97,11 @@ The following example is for a simple electron transfer reaction,
 <img alt="$He_{} \rightarrow He^{ +}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/071c03bc68d9e9cb99efa0d16a160ace.svg?invert_in_darkmode&sanitize=true" align=middle width="81.53376pt" height="26.12412pt"/>. The ET calculation is easy to execute,
 but it is crucial that ET reactant and product wavefunctions reflect
 localized states. This can be accomplished using either a [fragment
-guess](SCF#Superposition_of_fragment_molecular_orbitals "wikilink"), or
+guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals "wikilink"), or
 a [charged atomic density
-guess](SCF#Atomic_guess_orbitals_with_charged_atoms "wikilink"). For
+guess](Hartree-Fock-Theory-for-Molecules#atomic-guess-orbitals-with-charged-atoms "wikilink"). For
 self-exchange ET reactions such as this one, you can use the
-[REORDER](SCF#VECTORS_--_input/output_of_MO_vectors "wikilink") keyword
+[REORDER](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink") keyword
 to move the electron from the first helium to the second.
 
 Example input :

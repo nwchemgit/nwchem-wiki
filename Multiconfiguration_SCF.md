@@ -39,7 +39,7 @@ E.g.,
 
 The input molecular orbitals (see the vectors directive in [MCSCF
 Vectors](#VECTORS_--_Input/output_of_MO_vectors "wikilink") and [SCF
-Vectors](Release62:Hartree-Fock_Theory_for_Molecules#VECTORS_--_input/output_of_MO_vectors "wikilink"))
+Vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink"))
 must be arranged in order
 
 1.  doubly occupied orbitals,
@@ -94,17 +94,17 @@ which is equivalent to
 ## VECTORS -- Input/output of MO vectors
 
 Calculations are best started from RHF/ROHF molecular orbitals (see
-[SCF](Release62:Hartree-Fock_Theory_for_Molecules "wikilink")), and by
+[SCF](Hartree-Fock-Theory-for-Molecules "wikilink")), and by
 default vectors are taken from the previous MCSCF or SCF calculation. To
 specify another input file use the VECTORS directive. Vectors are by
 default output to the input file, and may be redirected using the output
 keyword. The swap keyword of the
-[VECTORS](Release62:Hartree-Fock_Theory_for_Molecules#VECTORS_--_input.2Foutput_of_MO_vectors "wikilink")
+[VECTORS](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink")
 directive may be used to reorder orbitals to obtain the correct active
 space.
 
 The
-[LOCK](Release62:Hartree-Fock_Theory_for_Molecules#VECTORS_--_input/output_of_MO_vectors "wikilink")
+[LOCK](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink")
 keyword allows the user to specify that the ordering of orbitals will be
 locked to that of the initial vectors, insofar as possible. The default
 is to order by ascending orbital energies within each orbital space. One
@@ -141,7 +141,7 @@ E.g., to specify the one-electron approximation throughout
 
 ## LEVEL -- Level shift for convergence
 
-The [Hessian](Release62:Hessians_&_Vibrational_Frequencies "wikilink")
+The [Hessian](Hessians-&-Vibrational-Frequencies "wikilink")
 used in the MCSCF optimization is by default level shifted by 0.1 until
 the orbital gradient norm falls below 0.01, at which point the level
 shift is reduced to zero. The initial value of 0.1 may be changed using
@@ -156,7 +156,7 @@ E.g., to set the initial level shift to 0.5
 
 Specific output items can be selectively enabled or disabled using the
 [print control
-mechanism](Release62:Top-level#PRINT_.2F_NOPRINT "wikilink") with the
+mechanism](Top-level#PRINT_.2F_NOPRINT "wikilink") with the
 available print options listed in the table
 below.
 

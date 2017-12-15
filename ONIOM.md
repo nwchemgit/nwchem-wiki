@@ -280,7 +280,7 @@ efficient during geometry optimizations and frequency calculations, and
 is also useful for the initial calculation. In the absence of existing
 MO vectors files, the default atomic guess is used (see [|Input/output
 of MO
-vectors](Hartree-Fock-Theory-for-Molecules#vectors----input/output-of-mo-vectors "wikilink")).
+vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink")).
 
 If special measures must be taken to converge the initial SCF, DFT or
 MCSCF calculation for one or more of the systems, then initial vectors
