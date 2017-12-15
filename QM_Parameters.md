@@ -1,4 +1,4 @@
-\_\_NOTITLE\_\_ {{Template:QMMM_Input_Links}} The parameters defining
+The parameters defining
 calculation of the QM region (including basis sets) must be present in
 the traditional NWChem input format except for the geometry block.
 
