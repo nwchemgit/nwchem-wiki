@@ -21,7 +21,7 @@ logical-false values are specified as .false., false, or f. One
 exception to the automatic detection of the data type is that the data
 type **must** be explicitly stated to input integer ranges, unless the
 first element in the list is an integer that is not a
-[range](Getting_Started#Input_Format_and_Syntax_for_Directives "wikilink").
+[range](Getting-Started#Input_Format_and_Syntax_for_Directives "wikilink").
 For example,
 
 `set atomid 1 3:7 21`
