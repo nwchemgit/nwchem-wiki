@@ -7,7 +7,7 @@
 
 <!-- end list -->
 
-  - [Getting Started](Getting_Started "wikilink")
+  - [Getting Started](Getting-Started "wikilink")
 
 <!-- end list -->
 
