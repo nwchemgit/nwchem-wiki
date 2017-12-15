@@ -1,3 +1,0 @@
-*[[Plane-Wave Density Functional Theory|Plane-Wave Basis]]
-
-*[[Gaussian-Basis|Gaussian Basis AIMD]]
