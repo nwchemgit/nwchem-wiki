@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Comprehensive Suite of Scalable Capabilities
 
 NWChem provides many methods for computing the properties of molecular
