@@ -1,14 +1,12 @@
-\_\_NOTITLE\_\_
-
-  - [COSMO Solvation Model](COSMO_Solvation_Model "wikilink")
+  - [COSMO Solvation Model](COSMO-Solvation-Model "wikilink")
 
 <!-- end list -->
 
-  - [SMD Model](SMD_Model "wikilink")
+  - [SMD Model](SMD-Model "wikilink")
 
 <!-- end list -->
 
-  - [VEM Model](VEM_Model "wikilink")
+  - [VEM Model](VEM-Model "wikilink")
 
 <!-- end list -->
 
