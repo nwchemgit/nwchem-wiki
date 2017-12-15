@@ -3,6 +3,6 @@
   - [Geometry Optimization (Minimization & Transition State
     Search)](Geometry-Optimization "wikilink")
   - [Hessians & Vibrational
-    Frequencies](Hessians-&-Vibrational-Frequencies "wikilink")
+    Frequencies](Hessians-and-Vibrational-Frequencies "wikilink")
   - [Nudged Elastic Band (NEB) and Zero Temperature String
-    Methods](Nudged-Elastic-Band-\(NEB\)-and-Zero-Temperature-String-Methods "wikilink")
+    Methods](Nudged-Elastic-Band-and-Zero-Temperature-String-Methods "wikilink")
