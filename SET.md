@@ -21,7 +21,7 @@ logical-false values are specified as .false., false, or f. One
 exception to the automatic detection of the data type is that the data
 type **must** be explicitly stated to input integer ranges, unless the
 first element in the list is an integer that is not a
-[range](Getting-Started#Input_Format_and_Syntax_for_Directives "wikilink").
+[range](Getting-Started#input-format-and-syntax-for-directives "wikilink").
 For example,
 
 `set atomid 1 3:7 21`
@@ -68,10 +68,10 @@ the "ghost" basis of the other atom.
 The SET directive can also be used as an indirect means of supplying
 input to a part of the code that does not have a separate input module
 (e.g., the [atomic
-SCF](Hartree-Fock_Theory_for_Molecules#Atomic_guess_orbitals_with_charged_atoms "wikilink")).
+SCF](Hartree-Fock-Theory-for-Molecules#atomic-guess-orbitals-with-charged_atoms "wikilink")).
 Additional examples of applications of this directive can be found in
 the [sample input
-files](Getting_Started#Water_Molecule_Sample_Input_File "wikilink"), and
+files](Getting-Started#water-molecule-sample-input-file "wikilink"), and
 its usage with [basis sets](Basis "wikilink") and
 [geometries](Geometry "wikilink"). Also see [database
 section](Nwarch#Database_Structure "wikilink") for an example of how to
