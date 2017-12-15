@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # COSMO Solvation Model
 
 COSMO is the continuum solvation \`COnductor-like Screening MOdel' of A.
