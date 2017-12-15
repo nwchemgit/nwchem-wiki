@@ -1,4 +1,3 @@
-\_\_NOTITLE\_\_
 
 # Interfaces to Other Programs
 
