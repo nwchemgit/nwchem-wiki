@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # Hybrid Calculations with ONIOM
 
 ONIOM is the hybrid method of Morokuma and co-workers that enables
@@ -205,7 +203,7 @@ high-level theory defaults to the standard "ao basis". That for the
 medium level defaults to the high-level basis, and the low-level basis
 defaults to the medium-level basis. Other wavefunction parameters are
 obtained from the standard wavefunction input blocks. See [Effective
-core potential](#Effective_core_potential "wikilink") for an example.
+core potential](#effective-core-potential "wikilink") for an example.
 
 ### Effective core potentials
 
@@ -250,7 +248,7 @@ marks inside the input string must be preceded by a backslash to avoid
 special interpretation.
 
 See [|DFT with and without charge
-fitting](#DFT_with_and_without_charge_fitting "wikilink") for another
+fitting](#dft-with-and-without-charge-fitting "wikilink") for another
 example.
 
 ## Use of symmetry
@@ -282,7 +280,7 @@ efficient during geometry optimizations and frequency calculations, and
 is also useful for the initial calculation. In the absence of existing
 MO vectors files, the default atomic guess is used (see [|Input/output
 of MO
-vectors](Hartree-Fock_Theory_for_Molecules#VECTORS_--_input/output_of_MO_vectors "wikilink")).
+vectors](Hartree-Fock-Theory-for-Molecules#vectors----input/output-of-mo-vectors "wikilink")).
 
 If special measures must be taken to converge the initial SCF, DFT or
 MCSCF calculation for one or more of the systems, then initial vectors
@@ -302,7 +300,7 @@ a \(d^5\) configuration for the iron atom since the *d* orbitals are
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
-guess](Hartree-Fock_Theory_for_Molecules#Superposition_of_fragment_molecular_orbitals "wikilink")
+guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals "wikilink")
 as a starting guess for the real system. The resulting converged
 molecular orbitals can be saved either with the default name (as
 described above in this section), in which case no additional input is
