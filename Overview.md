@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
   - [Comprehensive Suite of Scalable
     Capabilities](Capabilities "wikilink")
 
