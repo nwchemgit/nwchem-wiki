@@ -141,7 +141,7 @@ E.g., to specify the one-electron approximation throughout
 
 ## LEVEL -- Level shift for convergence
 
-The [Hessian](Hessians-&-Vibrational-Frequencies "wikilink")
+The [Hessian](Hessians-and-Vibrational-Frequencies "wikilink")
 used in the MCSCF optimization is by default level shifted by 0.1 until
 the orbital gradient norm falls below 0.01, at which point the level
 shift is reduced to zero. The initial value of 0.1 may be changed using

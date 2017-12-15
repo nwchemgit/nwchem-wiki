@@ -76,21 +76,21 @@ in NWChem:
   - optimize - Minimize the energy by varying the molecular structure.
     By default, this geometry optimization is presently driven by the
     [Driver
-    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink"),
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink"),
     but the [Stepper
-    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink")
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink")
     may also be used.
   - saddle - Conduct a search for a transition state (or saddle point)
     using either [Driver
-    module](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink")
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink")
     (the default) or
-    [Stepper](Hessians-&-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink").
+    [Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink").
   - hessian - Compute second derivatives. See [hessian
-    section](Hessians-&-Vibrational-Frequencies#hessians "wikilink") for
+    section](Hessians-and-Vibrational-Frequencies#hessians "wikilink") for
     analytic hessians.
   - frequencies or freq - Compute second derivatives and print out an
     analysis of molecular vibrations. See [vibration
-    section](Hessians-&-Vibrational-Frequencies#vibrational-frequencies "wikilink")
+    section](Hessians-and-Vibrational-Frequencies#vibrational-frequencies "wikilink")
     for controls for vibration calculations.
   - vscf - Compute anharmonic contributions to the vibrational modes.
     See the [vibrational SCF section](VSCF "wikilink") for options.
