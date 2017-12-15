@@ -16,24 +16,29 @@ functions) without symmetry. These calculations were performed on the
 Cascade supercomputer located at PNNL. The [input
 file](input_c240_pbe0.nw "wikilink") is available.
 
-![c240\_web4.png](c240_web4.png "c240_web4.png")
+![c240\_web4.png](c240_web4.png 
+"c240_web4.png")
 
 # Parallel performance of *Ab initio* Molecular Dynamics using plane waves
 
 |AIMD Parallel timings for <img alt="$UO_2^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cd58371c815e721956191c6092523a5.svg?invert_in_darkmode&sanitize=true" align=middle width="42.50433pt" height="28.83969pt"/>+122<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O.
 These calculations were performed on the Franklin Cray-XT4 computer
-system at NERSC.![PW](PWScaling.png "wikilink") 
+system at NERSC.![PW](PWScaling.png 
+"wikilink") 
 AIMD and AIMD/MM Parallel Timings for <img alt="$Zn^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/535088252ee6a9c0146ed4ba09c15c92.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76708pt" height="26.70657pt"/>+64<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O (unit
 cell parameters SC=12.4 Angs. and cutoff energy =100Ry). These
 calculations were performed on the Chinook HP computer system at MSCF
-EMSL, PNNL.![PWMD](PWMDScaling.png "wikilink") Exact
+EMSL, PNNL.![PWMD](PWMDScaling.png 
+"wikilink") Exact
 exchange timings – 80 atom cell of hematite (cutoff energy=100Ry). These
 calculations were performed on the Franklin Cray-XT4 computer system at
 NERSC.
-![](PWEXScaling.png "wikilink") Exact
+![](PWEXScaling.png 
+"wikilink") Exact
 exchange timings – 576 atom cell of water (cutoff energy=100Ry). These
 calculations were performed on the Hopper Cray-XE6 computer system at
-NERSC.![](water192b.png "wikilink")
+NERSC.![](water192b.png 
+"wikilink")
 
 # Parallel performance of the CR-EOMCCSD(T) method (triples part)
 
@@ -68,7 +73,7 @@ Kowalski, JCTC 2012, 8(2), pp 487–497). Currently, PNNL postdoctoral
 fellow Dr. Kiran Bhaskaran Nair is developing perturbative MRCCSD(T)
 approaches, which accounts for the effect of triple excitations.
 
-![mrccsd\_scalability.png](mrccsd_scalability.png
+![mrccsd\_scalability.png](mrccsd_scalability.png 
 "mrccsd_scalability.png")
 
 Scaling of the triples part of the BW-MRCCSD(T) method for
@@ -77,7 +82,8 @@ scalability tests of the BW-MRCCSD(T) implementation of NWChem have been
 performed on the Jaguar Cray-XK6 computer system of the National Center
 for Computational Sciences at Oak Ridge National Laboratory.
 
-![mrccsd\_t\_titan.png](mrccsd_t_titan.png "mrccsd_t_titan.png")
+![mrccsd\_t\_titan.png](mrccsd_t_titan.png 
+"mrccsd_t_titan.png")
 
 # Timings of CCSD/EOMCCSD for the oligoporphyrin dimer
 
@@ -209,28 +215,33 @@ examples below shows the first results of the performance of the triples
 part of Reg-CCSD(T) on GPGPUs (left two examples) and of using
 alternative task schedules for the iterative CCSD and EOMCCSD.
 
-![](gpu_scaling_spiro.png "")Scalability of the triples part of
+![](gpu_scaling_spiro.png 
+"")Scalability of the triples part of
 the Reg-CCSD(T) approach for Spiro cation described by the Sadlej's TZ
 basis set (POL1). The calculations were performed using Barracuda
 cluster at EMSL.
-![](gpu_speedup_uracil.png "")
+![](gpu_speedup_uracil.png 
+"")
 Speedup
 of GPU over CPU of the (T) part of the (T) part of the Reg-CCSD(T)
 approach as a function of the tile size for the uracil molecule. The
 calculations were performed using Barracuda cluster at EMSL.  
-![](ccsd_eomccsd_new.png " ")
+![](ccsd_eomccsd_new.png 
+" ")
 *Comparison of the CCSD/EOMCCSD
 iteration times for BacterioChlorophyll (BChl, Mg O6 N4 C 36 H38) for
 various tile sizes. Calculations were performed for 3-21G basis set (503
 basis functions, C1 symmetry, 240 correlated electrons, 1020
 cores).
 
-![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png "wiki")
+![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png 
+"wiki")
 *Time per CCSD
 iteration for BChl in 6-311G basis set (733 basis functions, C1
 symmetry, 240 correlated electrons, 1020 cores) as a function of tile
 size.
-![](eomccsd_scaling_ic.png "")
+![](eomccsd_scaling_ic.png 
+"")
 Scalability of the
 CCSD/EOMCCSD codes for BChl in 6-311G basis set (733 basis functions;
 tilesize=40, C1 symmetry, 240 correlated electrons).
@@ -243,11 +254,13 @@ frozen) on Hopper using 25 nodes (600 cores). One can observe almost
 10-fold speedup of the CCSD(ATS) code for tilesize=40 compared to
 standard TCE CCSD implementation using tilesize=12.
 
-![uracil\_trimer.png](uracil_trimer.png "uracil_trimer.png")
+![uracil\_trimer.png](uracil_trimer.png 
+"uracil_trimer.png")
 
 Performance tests for water clusters
 
-![CTF.png](CTF.png "CTF.png")
+![CTF.png](CTF.png 
+"CTF.png")
 
 Luciferin (aug-cc-pVDZ basis set; RHF reference; frozen core) - time per
 CCSD iteration ([ input file](luciferin.nw "wikilink"))
