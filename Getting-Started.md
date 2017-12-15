@@ -341,7 +341,7 @@ In the input file:
     included into the current input file at the current line. Up to
     three levels of nested include files are supported. The user should
     note that inputting a basis set from the standard basis library
-    ([Basis Sets](Basis-Set "wikilink")) uses one level of include.
+    ([Basis Sets](Basis "wikilink")) uses one level of include.
   - Data is read from the input file until an end-of-file is detected,
     or until the string EOF (ignoring case) is encountered at the
     beginning of an input line.
