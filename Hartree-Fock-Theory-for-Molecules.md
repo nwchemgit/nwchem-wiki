@@ -971,10 +971,10 @@ actions are
   - Examining an analysis of the initial orbitals
     ([Printing](#printing-information-from-the-SCF_Module "wikilink"))
     and then swapping them to attain the desired occupation
-    ([VECTORS](#VECTORS_--_input/output_of_MO_vectors "wikilink")).
+    ([VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink")).
   - Converging the calculation in a minimal basis set, which is usually
     easier, and then projecting into a larger basis set
-    ([VECTORS](#vectors----input/output-of-mo-vectors "wikilink")).
+    ([VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink")).
   - Using the fragment orbital initial guess ([Fragment molecular
     orbitals](#superposition-of-fragment-molecular-orbitals "wikilink")).
 
