@@ -74,5 +74,5 @@ the [sample input
 files](Getting-Started#water-molecule-sample-input-file "wikilink"), and
 its usage with [basis sets](Basis "wikilink") and
 [geometries](Geometry "wikilink"). Also see [database
-section](Nwarch#Database_Structure "wikilink") for an example of how to
+section](NWChem-Architecture#database-structure "wikilink") for an example of how to
 store an array in the database.
