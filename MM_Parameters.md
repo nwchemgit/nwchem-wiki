@@ -1,4 +1,4 @@
-\_\_NOTITLE\_\_ {{Template:QMMM_Input_Links}} The molecular mechanics
+The molecular mechanics
 parameters are given in the form of standard MD input block as used by
 the [MD module](MD "wikilink"). At the basic level the molecular
 mechanics input block specifies the restart and topology file that were
