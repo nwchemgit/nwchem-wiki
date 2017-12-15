@@ -14,10 +14,9 @@ calculation involved performing a PBE0 calculation (in direct mode) on
 the on C<sub>240</sub> system with the 6-31G\* basis set (3600 basis
 functions) without symmetry. These calculations were performed on the
 Cascade supercomputer located at PNNL. The [input
-file](Media:input_c240_pbe0.nw "wikilink") is available.
+file](input_c240_pbe0.nw "wikilink") is available.
 
-![c240\_web4.png](c240_web4.png
-"c240_web4.png")
+![c240\_web4.png](c240_web4.png "c240_web4.png")
 
 # Parallel performance of *Ab initio* Molecular Dynamics using plane waves
 
@@ -43,7 +42,7 @@ approach](http://dx.doi.org/10.1063/1.3385315) for Green Fluorescent
 Protein Chromophore (GFPC) described by cc-pVTZ basis set (648 basis
 functions) as obtained from NWChem. Timings were determined from
 calculations on the Franklin Cray-XT4 computer system at NERSC. See the
-[ input file](Media:input_gfpc.nw "wikilink") for details.
+[ input file](input_gfpc.nw "wikilink") for details.
 
 ![ ](creomccsd_t.png " ")
 
@@ -86,7 +85,7 @@ CCSD/EOMCCSD timings for oligoporphyrin dimer (942 basis functions, 270
 correlated electrons, D2h symmetry, excited-state calculations were
 performed for state of b1g symmetry, in all test calculation convergence
 threshold was relaxed, 1024 cores were used). See the [ input
-file](Media:input_p2ta.nw "wikilink") for
+file](input_p2ta.nw "wikilink") for
 details.
 
 `--------------------------------------------------------`  
@@ -192,7 +191,7 @@ MIC and Nvidia GPU implementations. Tests were performed using 96
 compute nodes on the Cascade system at EMSL (Intel® Xeon™ Phi 5110P) and
 Titan system at ORNL (NVIDIA Tesla® K20X).
 
-([ input file](Media:pentacene_ccsdt.nw "wikilink"))
+([ input file](pentacene_ccsdt.nw "wikilink"))
 
 |          |                      |             |
 | -------- | -------------------- | ----------- |
@@ -251,7 +250,7 @@ Performance tests for water clusters
 ![CTF.png](CTF.png "CTF.png")
 
 Luciferin (aug-cc-pVDZ basis set; RHF reference; frozen core) - time per
-CCSD iteration ([ input file](Media:luciferin.nw "wikilink"))
+CCSD iteration ([ input file](luciferin.nw "wikilink"))
 
 ` tilesize = 30 `  
 `   256 cores      644 sec.`  
@@ -265,7 +264,7 @@ CCSD iteration ([ input file](Media:luciferin.nw "wikilink"))
 `    256             575 sec.`
 
 Sucrose (6-311G\*\* basis set; RHF reference; frozen core) - time per
-CCSD iteration ([ input file](Media:sucrose.nw "wikilink"))
+CCSD iteration ([ input file](sucrose.nw "wikilink"))
 
 `tilesize = 40`  
 `   256 cores   1486 sec. `  
@@ -273,7 +272,7 @@ CCSD iteration ([ input file](Media:sucrose.nw "wikilink"))
 `  1024          608 sec.`
 
 Cytosine-OH (POL1; UHF reference; frozen core) - time per EOMCCSD
-iteration ([ input file](Media:cytosine_oh_pol1.nw "wikilink"))
+iteration ([ input file](cytosine_oh_pol1.nw "wikilink"))
 
 ` tilesize = 30`  
 ` 256 cores    44.5 sec.`
