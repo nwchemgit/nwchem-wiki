@@ -1,4 +1,3 @@
-\_\_NOTITLE\_\_
 
   - [Charge](Charge "wikilink")
 
@@ -17,4 +16,4 @@
 <!-- end list -->
 
   - [Relativistic All-electron
-    Approximations](Relativistic_All-electron_Approximations "wikilink")
+    Approximations](Relativistic-All-electron-Approximations "wikilink")
