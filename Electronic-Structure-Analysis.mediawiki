@@ -1,4 +1,0 @@
-
-*[[Properties|Molecular Properties]]
-*[[ESP|Electrostatic Potential Charges]]
-*[[DPLOT|DPLOT]]
