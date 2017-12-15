@@ -3,7 +3,7 @@
 
 <!-- end list -->
 
-  - [Compiling NWChem](Compiling_NWChem "wikilink")
+  - [Compiling NWChem](Compiling-NWChem "wikilink")
 
 <!-- end list -->
 
