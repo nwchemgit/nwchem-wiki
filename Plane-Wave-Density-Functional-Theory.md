@@ -1680,12 +1680,8 @@ to NWChem in the near future.
 
 ### MetaDynamics
 
-![Metadynamics bias potential. Courtesy of Raymond Atta-Fynn](ray2.gif
-"Metadynamics bias potential. Courtesy of Raymond Atta-Fynn")
-![Metadynamics simulation of the first hydrolysis of U(IV) from
-[1](http://pubs.acs.org/doi/abs/10.1021/ic202338z?mi=yfiw1s&af=R&pageSize=20&searchText=toxic).
-Courtesy of Raymond Atta-Fynn](ray.gif
-"Metadynamics simulation of the first hydrolysis of U(IV) from 1. Courtesy of Raymond Atta-Fynn")
+![Metadynamics bias potential. Courtesy of Raymond Atta-Fynn](ray2.gif "Metadynamics bias potential. Courtesy of Raymond Atta-Fynn")
+![Metadynamics simulation of the first hydrolysis of U(IV) from [1](http://pubs.acs.org/doi/abs/10.1021/ic202338z?mi=yfiw1s&af=R&pageSize=20&searchText=toxic).  Courtesy of Raymond Atta-Fynn](ray.gif "Metadynamics simulation of the first hydrolysis of U(IV) from 1. Courtesy of Raymond Atta-Fynn")
 Metadynamics[2](http://en.wikipedia.org/wiki/Metadynamics)[3](http://iopscience.iop.org/0034-4885/71/12/126601)[4](http://people.sissa.it/~laio/Research/Res_metadynamics.php)
 is a powerful, non-equilibrium molecular dynamics method which
 accelerates the sampling of the multidimensional free energy surfaces of
@@ -4090,62 +4086,63 @@ xmgrace) can be used to display the band structure.
 ### Using BAND to Calculate the Density of States of Diamond
 
 (2 atom cell -
-input:[Media:diamond-dos.nw](diamond-dos.nw "wikilink")
-output:[Media:diamond-dos.nwout](diamond-dos.nwout "wikilink"),
-[Media:diamond-dos.dos.dat](diamond-dos.dos.dat "wikilink")) (8
+input:[diamond-dos.nw](diamond-dos.nw "wikilink")
+output:[diamond-dos.nwout](diamond-dos.nwout "wikilink"),
+[diamond-dos.dos.dat](diamond-dos.dos.dat "wikilink")) (8
 atom cell -
-input:[Media:diamond-dos8.nw](diamond-dos8.nw "wikilink") output:
-[Media:diamond-dos8.nwout.gz](diamond-dos8.nwout.gz "wikilink"),
-[Media:diamond-dos8.dos.dat](diamond-dos8.dos.dat "wikilink"))
+input:[diamond-dos8.nw](diamond-dos8.nw "wikilink") output:
+[diamond-dos8.nwout.gz](diamond-dos8.nwout.gz "wikilink"),
+[diamond-dos8.dos.dat](diamond-dos8.dos.dat "wikilink"))
 
 The following example uses the BAND module to calculate the density of
 states the diamond
 crystal.
 
-`title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"`  
-`echo`  
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"  
+echo  
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
-` `  
-`start diamond-dos`  
-` `  
-`memory 1950 mb`  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-dos  
+   
+memory 1950 mb  
   
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`  system crystal `  
-`    lat_a 2.500d0 `  
-`    lat_b 2.500d0 `  
-`    lat_c 2.500d0 `  
-`    alpha 60.0d0 `  
-`    beta  60.0d0 `  
-`    gamma 60.0d0 `  
-`  end`  
-` C  0.00000d0  0.00000d0  0.00000d0`  
-` C  0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-` `  
-`nwpw`  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8    #The default value of 1 needs to be increased`  
-`  lmbfgs`  
-`  xc pbe96`  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
   
-`  monkhorst-pack 9 9 9`  
-`end`  
+  monkhorst-pack 9 9 9  
+end  
   
-`#need to run "task band energy" before "task band dos" can be run`  
-`task band energy`  
+#need to run "task band energy" before "task band dos" can be run  
+task band energy  
   
-`nwpw`  
-`   virtual 26                #26 virtual orbitals included in the DOS calculation`  
-`   dos-grid 11 11 11`  
-`end`  
-`task band dos`
+nwpw  
+   virtual 26                #26 virtual orbitals included in the DOS calculation  
+   dos-grid 11 11 11  
+end  
+task band dos
+```
 
-This calculation outputs the ![Diamond-dos.dos.dat](Diamond-dos.dos.dat
-"Diamond-dos.dos.dat") data file in the permanent\_directory. A plotting
+This calculation outputs the ![Diamond-dos.dos.dat](Diamond-dos.dos.dat "Diamond-dos.dos.dat") data file in the permanent\_directory. A plotting
 (e.g. gnuplot or xmgrace) can be used to display the density of
 states.
 
@@ -4165,86 +4162,88 @@ following example demonstrates how to uses the BAND module to optimize
 the unit cell and geometry for FCC cell of Nickel
 metal
 
-`title "Ni FCC metal, monkhorst-pack=3x3x3, 5x5x5, and 7x7x7, fermi smearing, xc=pbe96"`  
-`echo`  
+```
+title "Ni FCC metal, monkhorst-pack=3x3x3, 5x5x5, and 7x7x7, fermi smearing, xc=pbe96"  
+echo  
   
-`start Ni-band`  
+start Ni-band  
   
-`memory 1900 mb`  
+memory 1900 mb  
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
   
-`geometry units angstroms center noautosym noautoz print`  
-` system crystal`  
-`    lat_a 3.5451d0`  
-`    lat_b 3.5451d0`  
-`    lat_c 3.5454d0`  
-`    alpha 90.0d0`  
-`    beta  90.0d0`  
-`    gamma 90.0d0`  
-`  end`  
+geometry units angstroms center noautosym noautoz print  
+ system crystal  
+    lat_a 3.5451d0  
+    lat_b 3.5451d0  
+    lat_c 3.5454d0  
+    alpha 90.0d0  
+    beta  90.0d0  
+    gamma 90.0d0  
+  end  
   
-`Ni 0.000000   0.000000   0.000000`  
-`Ni 0.000000   0.500000   0.500000 `  
-`Ni 0.500000   0.000000   0.500000 `  
-`Ni 0.500000   0.500000   0.000000`  
-`end`  
-`set nwpw:cif_filename Ni-band`  
-`set nwpw:zero_forces .true.`  
-`set includestress    .true.`  
+Ni 0.000000   0.000000   0.000000  
+Ni 0.000000   0.500000   0.500000   
+Ni 0.500000   0.000000   0.500000   
+Ni 0.500000   0.500000   0.000000  
+end  
+set nwpw:cif_filename Ni-band  
+set nwpw:zero_forces .true.  
+set includestress    .true.  
   
-`#turn on pseudopotential filtering `  
-`set nwpw:kbpp_ray .true.`  
-`set nwpw:kbpp_filter .true.`  
+#turn on pseudopotential filtering   
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
   
-`nwpw`  
-`   #fractional occupation`  
-`   smear fermi `  
+nwpw  
+   #fractional occupation  
+   smear fermi   
   
-`   #scf option used with smear`  
-`   scf anderson outer_iterations 0 kerker 2.0  `  
+   #scf option used with smear  
+   scf anderson outer_iterations 0 kerker 2.0    
   
-`   ewald_ncut 8`  
-`   ewald_rcut 3.0`  
-`   xc pbe96`  
-`   monkhorst-pack 3 3 3`  
-`   np_dimensions -1 -1 4 `  
-`end`  
+   ewald_ncut 8  
+   ewald_rcut 3.0  
+   xc pbe96  
+   monkhorst-pack 3 3 3  
+   np_dimensions -1 -1 4   
+end  
   
-`#generate initial wavefunctions w/ low cutoff energy`  
-`nwpw`  
-`   loop 10 10`  
-`   cutoff 10.0`  
-`end`  
-`task band energy`  
+#generate initial wavefunctions w/ low cutoff energy  
+nwpw  
+   loop 10 10  
+   cutoff 10.0  
+end  
+task band energy  
   
-`#increase cutoff energy and number of iterations`  
-`nwpw`  
-`   cutoff 50.0`  
-`   loop 10 100`  
-`end`
+#increase cutoff energy and number of iterations  
+nwpw  
+   cutoff 50.0  
+   loop 10 100  
+end
 
-`#3x3x3 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 3 3 3`  
-`end`  
-`set nwpw:cif_filename nickel333.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#3x3x3 k-point mesh  
+nwpw   
+  monkhorst-pack 3 3 3  
+end  
+set nwpw:cif_filename nickel333.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#5x5x5 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 5 5 5`  
-`end`  
-`set nwpw:cif_filename nickel555.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#5x5x5 k-point mesh  
+nwpw   
+  monkhorst-pack 5 5 5  
+end  
+set nwpw:cif_filename nickel555.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#7x7x7 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 7 7 7`  
-`end`  
-`set nwpw:cif_filename nickel777.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#7x7x7 k-point mesh  
+nwpw   
+  monkhorst-pack 7 7 7  
+end  
+set nwpw:cif_filename nickel777.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
+```
 
 The following figure shows a plot of the cohesive energy and Ni-Ni bond
 distance versus the Brillouin zone sampling. As can be seen in this
@@ -4530,8 +4529,7 @@ datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz "wikilink"),
 [Media:diamond\_nvt\_234.cif.gz](diamond_nvt_234.cif.gz "wikilink"))
 
 ![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
-T=300K.](diamond-nvt.gif
-"NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
+T=300K.](diamond-nvt.gif "NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
 
 `title "Metropolis NVT simulation of diamond - this input is used to put the system in equilibrium"`  
 `echo`  
