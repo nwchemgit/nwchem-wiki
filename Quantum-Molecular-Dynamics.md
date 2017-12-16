@@ -1,4 +1,4 @@
-  - [Plane-Wave Basis](Plane-Wave_Density_Functional_Theory "wikilink")
+  - [Plane-Wave Basis](Plane-Wave-Density-Functional-Theory "wikilink")
 
 <!-- end list -->
 
