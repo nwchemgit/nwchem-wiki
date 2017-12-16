@@ -16,29 +16,24 @@ functions) without symmetry. These calculations were performed on the
 Cascade supercomputer located at PNNL. The [input
 file](input_c240_pbe0.nw "wikilink") is available.
 
-![c240\_web4.png](c240_web4.png 
-"c240_web4.png")
+![c240\_web4.png](./c240_web4.png "c240_web4.png")
 
 # Parallel performance of *Ab initio* Molecular Dynamics using plane waves
 
 |AIMD Parallel timings for <img alt="$UO_2^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cd58371c815e721956191c6092523a5.svg?invert_in_darkmode&sanitize=true" align=middle width="42.50433pt" height="28.83969pt"/>+122<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O.
 These calculations were performed on the Franklin Cray-XT4 computer
-system at NERSC.![PW](PWScaling.png 
-"wikilink") 
+system at NERSC.![PW](PWScaling.png "wikilink") 
 AIMD and AIMD/MM Parallel Timings for <img alt="$Zn^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/535088252ee6a9c0146ed4ba09c15c92.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76708pt" height="26.70657pt"/>+64<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O (unit
 cell parameters SC=12.4 Angs. and cutoff energy =100Ry). These
 calculations were performed on the Chinook HP computer system at MSCF
-EMSL, PNNL.![PWMD](PWMDScaling.png 
-"wikilink") Exact
+EMSL, PNNL.![PWMD](PWMDScaling.png "wikilink") Exact
 exchange timings – 80 atom cell of hematite (cutoff energy=100Ry). These
 calculations were performed on the Franklin Cray-XT4 computer system at
 NERSC.
-![](PWEXScaling.png 
-"wikilink") Exact
+![](PWEXScaling.png "wikilink") Exact
 exchange timings – 576 atom cell of water (cutoff energy=100Ry). These
 calculations were performed on the Hopper Cray-XE6 computer system at
-NERSC.![](water192b.png 
-"wikilink")
+NERSC.![](water192b.png "wikilink")
 
 # Parallel performance of the CR-EOMCCSD(T) method (triples part)
 
@@ -234,8 +229,7 @@ various tile sizes. Calculations were performed for 3-21G basis set (503
 basis functions, C1 symmetry, 240 correlated electrons, 1020
 cores).
 
-![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png 
-"wiki")
+![bchl_6_311G_ccsd.png](bchl_6_311G_ccsd.png "wiki")
 *Time per CCSD
 iteration for BChl in 6-311G basis set (733 basis functions, C1
 symmetry, 240 correlated electrons, 1020 cores) as a function of tile
