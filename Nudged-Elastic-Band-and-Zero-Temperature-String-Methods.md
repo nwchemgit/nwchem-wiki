@@ -554,8 +554,7 @@ HCN-string1.stringpath\_final.xyz](Media:_HCN-string1.stringpath_final.xyz "wiki
 
 <center>
 
-![HCN--\>HNC Reaction Pathway](hcn-hnc-dft.gif
-"HCN--\>HNC Reaction Pathway")
+![HCN--\>HNC Reaction Pathway](hcn-hnc-dft.gif "HCN--\>HNC Reaction Pathway")
 
 </center>
 
