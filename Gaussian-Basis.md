@@ -256,7 +256,5 @@ half-maximum of the peaks in the resulting spectra.
 The computed IR spectrum and vibrational density of states are shown
 here.
 
-![pic1](SiCl4IR.png
-"") 
-![pic2](SiCl4VDOS.png
-"")
+![pic1](SiCl4IR.png "") 
+![pic2](SiCl4VDOS.png "")
