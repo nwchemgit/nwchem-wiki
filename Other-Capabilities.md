@@ -1,4 +1,4 @@
-  - [Electron Transfer Calculations](Electron_Transfer "wikilink")
+  - [Electron Transfer Calculations](Electron-Transfer "wikilink")
   - [VSCF](VSCF "wikilink")
   - [Dynamical Nucleation Theory Monte Carlo](DNTMC "wikilink")
   - [Correlation consistent Composite Approach (ccCA)](CCCA "wikilink")
