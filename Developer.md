@@ -25,7 +25,10 @@ The development version (git master branch) of NWChem can be downloaded using th
 A branch version cane be downloaded by using the -b option of git clone. For example,
 the hotfix/release-6-8 branch can be downloaded with the command
 
-`    % git clone -b hotfix/release-6-8 https://github.com/nwchemgit/nwchem nwchem-6.8.1`
+```
+git clone -b hotfix/release-6-8  \
+https://github.com/nwchemgit/nwchem nwchem-6.8.1
+```
 
 
   - **Committing changes adding new files**
@@ -39,6 +42,7 @@ TBD Instructions on Fork & Pull
 
 1.  Before committing any changes or additions, make sure the NWChem
     tree compiles properly
+2.  Run QA tests (if not the full suite, please try the one relevant for the NWChem module you have just modified).
 2.  When adding new files, make sure to properly update the GNUMakefile
     in the directory you are working in, so that the new file gets
     compiled
@@ -139,7 +143,7 @@ subsequent computations.
 
 <!-- end list -->
 
-1.  FORTRAN77 and FORTRAN90. For FORTRAN90, avoid using allocates and
+1.  FORTRAN77 and FORTRAN90. For FORTRAN90, avoid -- when possible -- using allocates and
     deallocates. Dynamic memory access should be performed using the
     memory access (MA) layer.
 2.  C and C++. Only simple constructs should be used in C++.
