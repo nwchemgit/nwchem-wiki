@@ -14,13 +14,19 @@ an extensive description of the GIT functionality and commands, please
 check the git documentation.
 
 The NWChem GIT repository is hosted on Github at
-<https://github.com/nwchemgit/nwchem/>
+https://github.com/nwchemgit/nwchem/
 
   - **Downloading**
 
-The development version of NWChem can be downloaded using the command
+The development version (git master branch) of NWChem can be downloaded using the command
 
-`    % git clone <https://github.com/nwchemgit/nwchem>`
+`    % git clone https://github.com/nwchemgit/nwchem`
+
+A branch version cane be downloaded by using the -b option of git clone. For example,
+the hotfix/release-6-8 branch can be downloaded with the command
+
+`    % git clone -b hotfix/release-6-8 https://github.com/nwchemgit/nwchem nwchem-6.8.1`
+
 
   - **Committing changes adding new files**
 
