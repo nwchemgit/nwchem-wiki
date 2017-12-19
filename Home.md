@@ -57,4 +57,4 @@ NWChem User Documentation
 
 <!-- -->
 
--   [Known Bugs](Known Bugs "wikilink")
+-   [Known Bugs](Known-Bugs "wikilink")
