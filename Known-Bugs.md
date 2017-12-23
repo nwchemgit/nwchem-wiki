@@ -1,4 +1,4 @@
-Use our "issue tracker":http://github.com/nwchemgit/nwchem to report new bugs. 
+Use our "issue tracker":https://github.com/nwchemgit/nwchem/issues to report new bugs. 
 
 Also check there for other issues that may not have made it into these lists. 
 
