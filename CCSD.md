@@ -20,7 +20,7 @@ block
 
 ` CCSD`  
 `   [MAXITER <integer maxiter default 20>]`  
-`   [THRESH  <real thresh default 10e-6>]`  
+`   [THRESH  <real thresh default 1e-6>]`  
 `   [TOL2E <real tol2e default min(10e-12 , 0.01*$thresh$)>]`  
 `   [DIISBAS  <integer diisbas default 5>]`  
 `   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \`  
