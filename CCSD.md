@@ -21,7 +21,7 @@ block
 ` CCSD`  
 `   [MAXITER <integer maxiter default 20>]`  
 `   [THRESH  <real thresh default 1e-6>]`  
-`   [TOL2E <real tol2e default min(10e-12 , 0.01*$thresh$)>]`  
+`   [TOL2E <real tol2e default min(1e-12 , 0.01*`*`thresh`*`)>]`  
 `   [DIISBAS  <integer diisbas default 5>]`  
 `   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \`  
 `           [virtual <integer nfzv default 0>]]`  
@@ -49,11 +49,11 @@ Controls the convergence threshold for the iterative part of the
 calculation. Both the RMS error in the amplitudes and the change in
 energy must be less than thresh.
 
-` THRESH  <real thresh default 10e-6>`
+` THRESH  <real thresh default 1e-6>`
 
 ## TOL2E -- integral screening threshold
 
-` TOL2E <real tol2e default min(10e-12 , 0.01*`*`thresh`*`)>`
+` TOL2E <real tol2e default min(1e-12 , 0.01*`*`thresh`*`)>`
 
 The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the energy and related quantities.
