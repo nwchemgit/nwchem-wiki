@@ -1105,6 +1105,7 @@ recommended).
 
 Environmental variables required for compilation:
 
+`% setenv USE_KNL 1`
 `% setenv USE_OPENMP 1`  
 `% setenv USE_F90_ALLOCATABLE T`  
 `% setenv USE_FASTMEM T`
