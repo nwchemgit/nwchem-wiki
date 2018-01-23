@@ -44,7 +44,7 @@ where <level of theory> is any Gaussian basis set method in NWChem
 This specifies the nuclear time step in atomic units (1 a.u. = 0.02419
 fs). Default 10.0 a.u.
 
-### nsteps\_nucl -- Simulation steps
+### nstep\_nucl -- Simulation steps
 
 This specifies the number of steps to take in the nuclear dynamics.
 Default 1000
