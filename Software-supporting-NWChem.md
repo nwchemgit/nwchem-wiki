@@ -53,6 +53,9 @@ feedback on this page content.
     <http://pupil.sf.net>
   - **LICHEM** interfaces between QM and MM software
     <http://github.com/kratman/LICHEM_QMMM>
+  - **VENUS** interfaces NWChem with chemical dynamics
+    <http://hase-group.ttu.edu/venus.html>
+    <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
     <http://www.win.tue.nl/~bbaumeie/votca-xtp.shtml>
   - **PyDP4** is Python workflow for DP4 analysis of organic molecules
