@@ -59,9 +59,11 @@ feedback on this page content.
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
     <http://www.win.tue.nl/~bbaumeie/votca-xtp.shtml>
   - **PyDP4** is Python workflow for DP4 analysis of organic molecules
-    <http://github.com/KristapsE/PyDP4>
+    <https://github.com/KristapsE/PyDP4>
   - **Fafoom** Flexible algorithm for optimization of molecules
     <https://github.com/adrianasupady/fafoom>
+  - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
+    <http://pymatgen.org>
 
 ## Programs that can display cube and/or Molden files
 
