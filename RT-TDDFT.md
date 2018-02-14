@@ -406,7 +406,7 @@ The defaults correspond to:
 This sub-block is used to specify external electric fields, each of
 which must be given a unique name. Numerous fields can be specified, but
 each will applied to the system only if an appropriate [excitation
-rule](RT-TDDFT#EXCITE_--_Excitation_rules "wikilink") is set.
+rule](RT-TDDFT#excite----excitation-rules "wikilink") is set.
 There are a few preset field types; others would have to be manually
 coded. Note the names are arbitrary, but chosen here to be
 descriptive:
