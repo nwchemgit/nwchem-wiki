@@ -21,7 +21,7 @@ the following paper:
     Molecules and Chromophores", J. Chem. Theory Comput., 7, 1344 (2011)
 
 This functionality is built on the [Gaussian basis set
-DFT](Density_Functional_Theory_for_Molecules "wikilink") module, and
+DFT](Density-Functional-Theory-for-Molecules "wikilink") module, and
 will work for closed-shell (spin-restricted) and open-shell (spin
 unrestricted) calculations with essentially any combination of basis set
 and exchange-correlation functional in NWChem. The current
@@ -143,7 +143,7 @@ Dipole moment
 
 The [charge](Charge "wikilink"), [geometry](Geometry "wikilink"), [basis
 set](Basis "wikilink"), and
-[DFT](Density_Functional_Theory_for_Molecules "wikilink") options are
+[DFT](Density-Functional-Theory-for-Molecules "wikilink") options are
 all specified as normal, using their respective syntax. Real-time TDDFT
 parameters are supplied in the RT\_TDDFT block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
@@ -452,7 +452,7 @@ This sets the rules for applying external fields to the system. It takes
 the form "excite <geom> with <field>", where <geom> is the name of a
 geometry fragment (defaults to "geometry" which is the default geometry
 name), and <field> is the name of a [field
-structure](RT-TDDFT#FIELD_--_Sub-block_for_specifying_external_electric_fields "wikilink").
+structure](RT-TDDFT#field----sub-block-for-specifying-external-electric-fields "wikilink").
 Assuming, for example, you have defined a field name "kick" this option
 takes the form (note that quotes are optional and shown for clarity):
 
