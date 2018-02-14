@@ -6,7 +6,7 @@ Real-time time-dependent density functional theory (RT-TDDFT) is a
 DFT-based approach to electronic excited states based on integrating the
 time-dependent Kohn-Sham (TDKS) equations in time. The theoretical
 underpinnings, strengths, and limitations are similar to traditional
-linear-response (LR) [TDDFT](Excited-State_Calculations "wikilink")
+linear-response (LR) [TDDFT](Excited-State-Calculations "wikilink")
 methods, but instead of a frequency domain solution to the TDKS
 equations, RT-TDDFT yields a full time-resolved, potentially non-linear
 solution. Real-time simulations can be used to compute not only
