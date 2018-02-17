@@ -80,7 +80,7 @@ keywords in each of the three main parts.
 <!-- end list -->
 
   - [SYMMETRY -- Symmetry Group
-    Input](SYMMETRY_--_Symmetry_Group_Input "wikilink"){{:Symmetry}}
+    Input](SYMMETRY----Symmetry-Group-Input "wikilink")
 
 <!-- end list -->
 
