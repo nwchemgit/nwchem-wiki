@@ -320,32 +320,33 @@ end
 task dft energy
 ```
 Changing maxiter for a specific monomer: (Zn<sup>2+</sup>(H<sub>2</sub>O))
-
-`title znwater`  
-`start znwater`  
-`echo`  
-`geometry noautoz units angstrom`  
-`  symmetry c1 `  
-`  Zn -1.89334 -0.72741 -0.00000 `  
-`  O -0.20798 0.25012 0.00000  `  
-`  H -0.14200 1.24982 -0.00000 `  
-`  H 0.69236 -0.18874 -0.00000`  
-`end`  
-`basis "ao basis" `  
-`  O library 6-31G `  
-`  Zn library 6-31G `  
-`  H library 6-31G `  
-`  bqO library O 6-31G `  
-`  bqZn library Zn 6-31G `  
-`  bqH library H 6-31G`  
-`end`  
-`charge 2`  
-`scf; direct; end`  
-`mp2; end`  
-`bsse `  
-` mon metal 1 `  
-` charge 2 `  
-` input_wghost "scf\; maxiter 200\; end" `  
-` mon water 2 3 4`  
-`end`  
-`task mp2 optimize`
+```
+title znwater  
+start znwater  
+echo  
+geometry noautoz units angstrom  
+  symmetry c1   
+  Zn -1.89334 -0.72741 -0.00000   
+  O -0.20798 0.25012 0.00000    
+  H -0.14200 1.24982 -0.00000   
+  H 0.69236 -0.18874 -0.00000  
+end  
+basis "ao basis"   
+  O library 6-31G   
+  Zn library 6-31G   
+  H library 6-31G   
+  bqO library O 6-31G   
+  bqZn library Zn 6-31G   
+  bqH library H 6-31G  
+end  
+charge 2  
+scf; direct; end  
+mp2; end  
+bsse   
+ mon metal 1   
+ charge 2   
+ input_wghost "scf\; maxiter 200\; end"   
+ mon water 2 3 4  
+end  
+task mp2 optimize
+```
