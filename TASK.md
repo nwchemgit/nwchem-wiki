@@ -281,7 +281,7 @@ for the monomer with ghost. The input changes will be applied within
 this and for the following calculations, you should be cautious
 reverting the changes for the next monomers. CHARGE assigns a charge to
 a monomer and it must be consistent with the total charge in the whole
-system (see Section -sec:charge-). The options OFF and ON turns off and
+system (see Section [Charge](Charge "wikilink")). The options OFF and ON turns off and
 on any BSSE calculation.
 
 The energy evaluation involves 1 + 2N calculations, i.e. one for the
