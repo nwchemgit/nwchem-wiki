@@ -21,7 +21,7 @@ follows:
           [(nuc || nucl || nucleus) <string nucmodel>]  
    [SYMMETRY [group] <string group_name> [print] \  
           [tol <real tol default 1d-2>]]  
-   [ [LOAD](geometry_load "wikilink") [format xyz||pdb]  [frame <int frame>] \  
+   [ [LOAD] [format xyz||pdb]  [frame <int frame>] \  
           [select [not] \  
                [name <string atomname>] \  
                [rname <string residue-name>]  
@@ -105,3 +105,6 @@ keywords in each of the three main parts.
 
   - [SYSTEM -- Lattice parameters for periodic
     systems](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")
+
+
+  -  [ LOAD -- Load geometry from XYZ file ](Geometry-load "wikilink") 
