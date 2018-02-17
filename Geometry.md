@@ -105,6 +105,6 @@ keywords in each of the three main parts.
 
   - [SYSTEM -- Lattice parameters for periodic
     systems](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")
+<!-- end list -->
 
-
-  -  [ LOAD -- Load geometry from XYZ file ](Geometry-load "wikilink") 
+  -  [ LOAD -- Load geometry from XYZ file](Geometry-load "wikilink") 
