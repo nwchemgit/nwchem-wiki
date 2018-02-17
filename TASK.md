@@ -258,17 +258,17 @@ energies, energy gradients, geometry optimizations, Hessians and
 frequencies, at the level of theory that allows these tasks, can be
 obtained with the BSSE correction. The input options for the BSSE
 section are:
-
-`BSSE `  
-` MON `<string monomer name>` `<integer natoms>`  `  
-` [INPUT [`<string input>`]]  `  
-` [INPUT_WGHOST[`<string input>`]]  `  
-` [CHARGE [`<real charge>`]]  `  
-` [ MULT `<integer mult>`]`  
-` [OFF]  `  
-` [ON]`  
-`END`
-
+```
+BSSE   
+ MON <string monomer name> <integer natoms>  
+ [INPUT [<string input>]]    
+ [INPUT_WGHOST[<string input>]]    
+ [CHARGE [<real charge>]]    
+ [ MULT <integer mult>]  
+ [OFF]    
+ [ON]  
+END
+```
 MON defines the monomer's name and its atoms; <string monomer name>
 defines the name of the monomer, <integer atoms> is the list of atoms
 corresponding to the monomer (where such a list is relative to the
@@ -294,31 +294,32 @@ corresponding bqX for each element, instead.
 
 ### Examples
 
-The dimer \((FH)_2\)
+The dimer (FH)<sub>2</sub>
 
-`title dimer`  
-`start dimer`  
-`geometry units angstrom`  
-`  symmetry c1 `  
-`  F 1.47189 2.47463 -0.00000 `  
-`  H 1.47206 3.29987 0.00000  `  
-`  F 1.46367 -0.45168 0.00000 `  
-`  H 1.45804 0.37497 -0.00000`  
-`end`  
-`basis "ao basis" `  
-`  F library 6-31G `  
-`  H library 6-31G `  
-`  bqF library F 6-31G `  
-`  bqH library H 6-31G`  
-`end`  
-`dft; xc slater 1.0 vwn_5 1.0; direct; end`  
-`bsse `  
-` mon first 1 2 `  
-` mon second 3 4`  
-`end`  
-`task dft energy`
-
-Changing maxiter for a specific monomer: \(Zn^{2+}(H_2O)\)
+```
+title dimer  
+start dimer  
+geometry units angstrom  
+  symmetry c1   
+  F 1.47189 2.47463 -0.00000   
+  H 1.47206 3.29987 0.00000    
+  F 1.46367 -0.45168 0.00000   
+  H 1.45804 0.37497 -0.00000  
+end  
+basis "ao basis"   
+  F library 6-31G   
+  H library 6-31G   
+  bqF library F 6-31G   
+  bqH library H 6-31G 
+end
+dft; xc slater 1.0 vwn_5 1.0; direct; end 
+bsse 
+ mon first 1 2   
+ mon second 3 4  
+end
+task dft energy
+```
+Changing maxiter for a specific monomer: (Zn<sup>2+</sup>(H<sub>2</sub>O))
 
 `title znwater`  
 `start znwater`  
