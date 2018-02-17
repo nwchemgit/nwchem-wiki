@@ -276,7 +276,7 @@ initial geometry). This information is needed for each monomer. With the
 tag INPUT the user can modify any calculation attributes for each
 monomer without ghost. For example, the iterations number and the grid
 can be changed in a DFT calculation (see the example of the interaction
-between \(Zn^{2+}\) and water). INPUT\_WGHOST is the same than INPUT but
+between Zn<sup>2+</sup> and water). INPUT\_WGHOST is the same than INPUT but
 for the monomer with ghost. The input changes will be applied within
 this and for the following calculations, you should be cautious
 reverting the changes for the next monomers. CHARGE assigns a charge to
