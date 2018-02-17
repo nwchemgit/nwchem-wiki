@@ -7,59 +7,59 @@ additional subordinate directives that the user can specify, if needed.
 The directive therefore appears to be rather long and complicated when
 presented in its general form, as
 follows:
-
-` GEOMETRY [`<string name default geometry>`] \`  
-`          [units `<string units default angstroms>`] \`  
-`          [(angstrom_to_au || ang2au) \`  
-`                 <real angstrom_to_au default 1.8897265>] \`  
-`          [print [xyz] || noprint] \`  
-`          [center || nocenter] \`  
-`          [bqbq] \`  
-`          [autosym [real tol default 1d-2] || noautosym] \`  
-`          [autoz || noautoz] \`  
-`          [adjust] \`  
-`          [(nuc || nucl || nucleus) `<string nucmodel>`]`  
-`   [SYMMETRY [group] `<string group_name>` [print] \`  
-`          [tol <real tol default 1d-2>]]`  
-`   [ `[`LOAD`](geometry_load "wikilink")` [format xyz||pdb]  [frame `<int frame>`] \`  
-`          [select [not] \`  
-`               [name `<string atomname>`] \`  
-`               [rname `<string residue-name>`]`  
-`               [id  `<int atom-id>`|`<int range atom-id1:atom-id2>` ... ]`  
-`               [resi `<int residue-id>`|`<int range residue-id1:residue-id2>` ... ]`  
-`         ]`  
-`   `<string filename>` ]`  
-`  `  
-`   `<string tag>` `<real x y z>` [vx vy vz] [charge `<real charge>`] \`  
-`          [mass `<real mass>`] \`  
-`          [(nuc || nucl || nucleus) `<string nucmodel>`]`  
-`   ... ]`  
-`   [ZMATRIX || ZMT || ZMAT`  
-`        `<string tagn>` `<list_of_zmatrix_variables>  
-`        ... `  
-`        [VARIABLES`  
-`             `<string symbol>` `<real value>  
-`             ... ]`  
-`        [CONSTANTS`  
-`             `<string symbol>` `<real value>  
-`             ... ]`  
-`    (END || ZEND)]`  
-`    [ZCOORD`  
-`         CVR_SCALING `<real value>  
-`         BOND    `<integer i>` `<integer j>` \`  
-`                 [`<real value>`] [`<string name>`] [constant]`  
-`         ANGLE   `<integer i>` `<integer j>` \`  
-`                     [`<real value>`] [`<string name>`] [constant]`  
-`         TORSION `<integer i>` `<integer j>` `<integer k>` `<integer l>` \`  
-`                 [`<real value>`] [`<string name>`] [constant]`  
-`     END]`  
-`         `  
-`     [SYSTEM surface  `<molecule polymer surface crystal default molecule>  
-`          lat_a `<real lat_a>` lat_b `<real lat_b>` lat_c `<real lat_c>  
-`          alpha `<real alpha>` beta `<real beta>` gamma `<real gamma>  
-`     END]`  
-`  END`
-
+```
+ GEOMETRY [<string name default geometry>] \  
+          [units <string units default angstroms>] \  
+          [(angstrom_to_au || ang2au) \  
+                 <real angstrom_to_au default 1.8897265>] \  
+          [print [xyz] || noprint] \  
+          [center || nocenter] \  
+          [bqbq] \  
+          [autosym [real tol default 1d-2] || noautosym] \  
+          [autoz || noautoz] \  
+          [adjust] \  
+          [(nuc || nucl || nucleus) <string nucmodel>]  
+   [SYMMETRY [group] <string group_name> [print] \  
+          [tol <real tol default 1d-2>]]  
+   [ [LOAD](geometry_load "wikilink") [format xyz||pdb]  [frame <int frame>] \  
+          [select [not] \  
+               [name <string atomname>] \  
+               [rname <string residue-name>]  
+               [id  <int atom-id>|<int range atom-id1:atom-id2> ... ]  
+               [resi <int residue-id>|<int range residue-id1:residue-id2> ... ]  
+         ]  
+   <string filename> ]  
+    
+   <string tag> <real x y z> [vx vy vz] [charge <real charge>] \  
+          [mass <real mass>] \  
+          [(nuc || nucl || nucleus) <string nucmodel>]  
+   ... ]  
+   [ZMATRIX || ZMT || ZMAT  
+        <string tagn> <list_of_zmatrix_variables>  
+        ...   
+        [VARIABLES  
+             <string symbol> <real value>  
+             ... ]  
+        [CONSTANTS  
+             <string symbol> <real value>  
+             ... ]  
+    (END || ZEND)]  
+    [ZCOORD  
+         CVR_SCALING <real value>  
+         BOND    <integer i> <integer j> \  
+                 [<real value>] [<string name>] [constant]  
+         ANGLE   <integer i> <integer j> \  
+                     [<real value>] [<string name>] [constant]  
+         TORSION <integer i> <integer j> <integer k> <integer l> \  
+                 [<real value>] [<string name>] [constant]  
+     END]  
+           
+     [SYSTEM surface  <molecule polymer surface crystal default molecule>  
+          lat_a <real lat_a> lat_b <real lat_b> lat_c <real lat_c>  
+          alpha <real alpha> beta <real beta> gamma <real gamma>  
+     END]  
+  END
+```
 The three main parts of the GEOMETRY directive are:
 
   - keywords on the first line of the directive (to specify such
