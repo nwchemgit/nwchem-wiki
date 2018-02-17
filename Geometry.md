@@ -75,7 +75,7 @@ detail, describing the options available and the usages of the various
 keywords in each of the three main parts.
 
   - [Keywords on the GEOMETRY
-    directive](Keywords_on_the_GEOMETRY_directive "wikilink"){{:Geometry_Keywords}}
+    directive](Keywords-on-the-GEOMETRY-directive "wikilink")
 
 <!-- end list -->
 
@@ -99,9 +99,9 @@ keywords in each of the three main parts.
 <!-- end list -->
 
   - [ZCOORD -- Forcing internal
-    coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink"){{Zcoord}}
+    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink")
 
 <!-- end list -->
 
   - [SYSTEM -- Lattice parameters for periodic
-    systems](SYSTEM_--_Lattice_parameters_for_periodic_systems "wikilink"){{System_lattice}}
+    systems](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")
