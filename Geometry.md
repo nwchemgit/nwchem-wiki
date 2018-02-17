@@ -85,17 +85,16 @@ keywords in each of the three main parts.
 <!-- end list -->
 
   - [Names of 3-dimensional space
-    groups](Names_of_3-dimensional_space_groups "wikilink"){{:3D-Space_Groups}}
+    groups](Names-of-3-dimensional-space-groups "wikilink")
 
 <!-- end list -->
 
   - [Cartesian coordinate
-    input](Cartesian_coordinate_input "wikilink"){{Cartesian_coords}}
-
+    input](Cartesian-coordinate-input "wikilink")
 <!-- end list -->
 
   - [ZMATRIX -- Z-matrix
-    input](ZMATRIX_--_Z-matrix_input "wikilink"){{Zmatrix}}
+    input](ZMATRIX----Z-matrix-input "wikilink")
 
 <!-- end list -->
 
