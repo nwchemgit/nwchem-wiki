@@ -1412,27 +1412,28 @@ URL
 Once Mpich is installed, you should copy the installation files to a
 different location to avoid the failure of the tools compilation. You
 can use the following command
-
-`% cp -rp /c/Program\ Files\ `\(x86\)`/MPICH2/ ~/`
-
+```
+% cp -rp /c/Program\ Files\ \(x86\)/MPICH2/ ~/
+```
 You mght want to install Python, too, by using the following
 installation file
 
 <https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi>
 
 Next, you need to set the env.
-
-`% export NWCHEM_TOP=~/nwchem-6.5`  
-`% export NWCHEM_TARGET=LINUX`  
-`% export USE_MPI=y`  
-`% export MPI_LOC=~/MPICH2`  
-`% export MPI_INCLUDE=$MPI_LOC/include`  
-`% export MPI_LIB=$MPI_LOC/lib`  
-`% export LIBMPI="-lfmpich2g -lmpi"`  
-`% export PYTHONHOME=/c/Python27/`  
-`% export PYTHONVERSION=27`  
-`% export DEPEND_CC=gcc`
-
+```
+% export NWCHEM_TOP=~/nwchem-6.8  
+% export NWCHEM_TARGET=LINUX
+% export USE_MPI=y  
+% export MPI_LOC=~/MPICH2  
+% export MPI_INCLUDE=$MPI_LOC/include  
+% export MPI_LIB=$MPI_LOC/lib  
+% export LIBMPI="-lfmpich2g -lmpi"  
+% export PYTHONHOME=/c/Python27/  
+% export PYTHONVERSION=27  
+% export DEPEND_CC=gcc
+% export USE_INTERNALBLAS=y
+```
 Then, you can start the compilation by typing
 
 `% cd $NWCHEM_TOP/src`  
