@@ -1441,6 +1441,12 @@ Then, you can start the compilation by typing
 % make nwchem_config  
 % make FC=gfortran DEPEND_CC=gcc
 ```
+A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL). 
+**WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
+
+https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
+
+
 As an unsupported alternative, Cygwin might be used with make, perl, and
 gcc/gfortran version 4 installed (however several Cygwin versions are
 not a good match for NWChem installation, for example cygwin version
