@@ -1433,13 +1433,14 @@ Next, you need to set the env.
 % export PYTHONVERSION=27  
 % export DEPEND_CC=gcc
 % export USE_INTERNALBLAS=y
+% export NWCHEM_MODULES=all
 ```
 Then, you can start the compilation by typing
-
-`% cd $NWCHEM_TOP/src`  
-`% make nwchem_config`  
-`% make FC=gfortran DEPEND_CC=gcc`
-
+```
+% cd $NWCHEM_TOP/src  
+% make nwchem_config  
+% make FC=gfortran DEPEND_CC=gcc
+```
 As an unsupported alternative, Cygwin might be used with make, perl, and
 gcc/gfortran version 4 installed (however several Cygwin versions are
 not a good match for NWChem installation, for example cygwin version
