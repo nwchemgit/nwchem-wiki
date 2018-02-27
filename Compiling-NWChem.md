@@ -1415,7 +1415,7 @@ can use the following command
 ```
 % cp -rp /c/Program\ Files\ \(x86\)/MPICH2/ ~/
 ```
-You mght want to install Python, too, by using the following
+You might want to install Python, too, by using the following
 installation file
 
 <https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi>
