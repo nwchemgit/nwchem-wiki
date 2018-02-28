@@ -13,17 +13,17 @@ additional platforms and better environment variables over time.
 
 When dealing with source from a ***NWChem release*** (6.8 in this
 example)
-
-`  % setenv NWCHEM_TOP  *<your path>*/nwchem-6.8`
-
+```
+export NWCHEM_TOP=<your path>/nwchem-6.8
+```
 when using the ***NWChem development*** source
-
-`  % setenv NWCHEM_TOP  *<your path>*/nwchem`
-
+```
+export NWCHEM_TOP=<your path>/nwchem
+```
   - $NWCHEM\_TARGET defines your target platform, e.g.
-
-`  % setenv NWCHEM_TARGET LINUX64`
-
+```
+export NWCHEM_TARGET=LINUX64
+```
 <table>
 <caption>The platforms that available are:</caption>
 <tbody>
@@ -98,9 +98,9 @@ Windows</p></td>
 
   - **ARMCI\_NETWORK** must be defined in order to achieve best
     performance on high performance networks, e.g.
-
-`  % setenv ARMCI_NETWORK OPENIB`
-
+```
+export ARMCI_NETWORK=OPENIB
+```
 For a single processor system, this environment variable does not have
 to be defined.
 
@@ -511,7 +511,7 @@ and COPTIMIZE have been tested by the NWChem developers (using the
 internal QA suites, among others), while any modification might produce
 incorrect results.
 
-# How-to: Build\_nwchem script
+# How-to: Build\_nwchem script (unsupported)
 
 The build\_nwchem script is an auto-compile tool. It guesses the
 configuration of your machine based on the results of a number of tests
@@ -523,11 +523,11 @@ requirement to use the script is that the MPI compiler wrappers (e.g.
 mpif90, mpicc and mpiCC) should be in your path, and that if your
 machine uses the "module" software you should have all modules you want
 to use loaded. If these requirements are met then simply run
-
-` % cd `<your path>`/nwchem`  
-` % ./contrib/distro-tools/build_nwchem | tee build_nwchem.log`
-
-In the file build\_nwchem.log you will find under "Building NWChem" a
+```
+% cd $NWCHEM_TOP  
+ % ./contrib/distro-tools/build_nwchem | tee build_nwchem.log
+```
+In the file build_nwchem.log you will find under "Building NWChem" a
 report on what platform the script thinks you are using.
 
 In addition to compiling the code the build\_nwchem script now also
@@ -550,40 +550,40 @@ This is particularly convenient when developing.
 
   - **Common environmental variables for building in serial or in
     parallel with MPI**
-
-` % setenv NWCHEM_TOP `<your path>`/nwchem`  
-` % setenv NWCHEM_TARGET LINUX64`  
-` % setenv NWCHEM_MODULES  all`
-
+```
+ % setenv NWCHEM_TOP <your path>/nwchem  
+ % setenv NWCHEM_TARGET LINUX64  
+ % setenv NWCHEM_MODULES  all
+```
   - **Common environmental variables for building with MPI**
 
 The following environment variables need to be set when NWChem is
 compiled with
 MPI:
+```
+% setenv USE_MPI y  
+% setenv USE_MPIF y  
+% setenv USE_MPIF4 y
 
-` % setenv USE_MPI y`  
-` % setenv USE_MPIF y`  
-` % setenv USE_MPIF4 y`
-
-` % setenv MPI_LOC `<your path>`/openmpi-1.4.3  (for example, if you are using OpenMPI)`  
-` % setenv MPI_LIB `<your path>`/openmpi-1.4.3/lib`  
-` % setenv MPI_INCLUDE `<your path>`/openmpi-1.4.3/include`  
-` % setenv LIBMPI "-lmpi_f90 -lmpi_f77 -lmpi -lpthread"`
-
+ % setenv MPI_LOC <your path>/openmpi-1.4.3  (for example, if you are using OpenMPI)  
+ % setenv MPI_LIB <your path>/openmpi-1.4.3/lib  
+ % setenv MPI_INCLUDE <your path>/openmpi-1.4.3/include  
+ % setenv LIBMPI "-lmpi_f90 -lmpi_f77 -lmpi -lpthread"
+```
 **New in NWChem 6.6:** If the location of the mpif90 command is part of
 your PATH env. variable, NWChem will figure out the values of LIBMPI,
-MPI\_LIB and MPI\_INCLUDE (if they are not set). Therefore, we recommend
-not to set LIBMPI, MPI\_LIB and MPI\_INCLUDE and add the location of
+MPI_LIB and MPI_INCLUDE (if they are not set). Therefore, we recommend
+not to set LIBMPI, MPI_LIB and MPI_INCLUDE and add the location of
 mpif90 to the PATH variable, instead.
 
   - **Compiling the code once all variables are set**
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src  
   
-`  % make nwchem_config`  
+  % make nwchem_config
   
-`  % make FC=gfortran >& make.log`
-
+  % make FC=gfortran >& make.log
+```
 #### NWChem 6.6 on Ubuntu 14.04 (Trusty Tahr)
 
 These instruction are likely to work (with minor modifications) on all
@@ -595,22 +595,22 @@ required:
 `python-dev gfortran libopenblas-dev libopenmpi-dev openmpi-bin tcsh make `
 
   - Settings
-
-`export USE_MPI=y`  
-`export NWCHEM_TARGET=LINUX64`  
-`export USE_PYTHONCONFIG=y`  
-`export PYTHONVERSION=2.7`  
-`export PYTHONHOME=/usr`  
-`export BLASOPT="-lopenblas -lpthread -lrt"`  
-`export BLAS_SIZE=4`  
-`export USE_64TO32=y`
-
+```
+export USE_MPI=y  
+export NWCHEM_TARGET=LINUX64  
+export USE_PYTHONCONFIG=y  
+export PYTHONVERSION=2.7  
+export PYTHONHOME=/usr 
+export BLASOPT="-lopenblas -lpthread -lrt"  
+export BLAS_SIZE=4  
+export USE_64TO32=y
+```
   - Compilation steps
-
-`make nwchem_config NWCHEM_MODULES="all python"`  
-`make 64_to_32`  
-`make`
-
+```
+make nwchem_config NWCHEM_MODULES="all python"  
+make 64_to_32
+make
+```
 #### NWChem 6.6 on Fedora 22
 
   - Packages
@@ -1386,7 +1386,7 @@ Infiniband clusters are:
 `  % make >& make.log`
 
 # How-to: Windows Platforms
-
+## MingW
 The current recommended approach for building a NWChem binary for a
 Windows platform is to build with the
 [MinGW/Mingw32](http://www.mingw.org/) environment. MinGW can be
@@ -1441,12 +1441,17 @@ Then, you can start the compilation by typing
 % make nwchem_config  
 % make FC=gfortran DEPEND_CC=gcc
 ```
+## WSL on Windows 10
 A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL). 
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
 
 https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 
-
+Once Ubuntu is installed, the quickest method to install NWChem is by fetching the Ubuntu NWChem package by typing
+```
+sudo apt install nwchem
+``` 
+## Cygwin
 As an unsupported alternative, Cygwin might be used with make, perl, and
 gcc/gfortran version 4 installed (however several Cygwin versions are
 not a good match for NWChem installation, for example cygwin version
