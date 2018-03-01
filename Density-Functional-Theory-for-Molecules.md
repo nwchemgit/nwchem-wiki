@@ -21,23 +21,23 @@ use auxiliary Gaussian basis sets to fit the charge density (CD) and/or
 fit the exchange-correlation (XC) potential.
 
 DFT input is provided using the compound DFT directive
-
-` DFT`  
-`   ...`  
-` END`
-
+```
+ DFT  
+   ...  
+ END
+```
 The actual DFT calculation will be performed when the input module
 encounters the [TASK](Top-level#TASK "wikilink") directive.
-
-` TASK DFT`
-
+```
+ TASK DFT
+```
 Once a user has specified a geometry and a Kohn-Sham orbital basis set
 the DFT module can be invoked with no input directives (defaults invoked
 throughout). There are sub-directives which allow for customized
 application; those currently provided as options for the DFT module
 are:
 
-` VECTORS [[input] (<string input_movecs default atomic>) || \`  
+`VECTORS [[input] (<string input_movecs default atomic>) || \`  
 `                  (project <string basisname> <string filename>`)] \`  
 `          [swap [alpha||beta] <integer vec1 vec2> ...] \`  
 `          [output <string output_filename default input_movecs>] \`  
