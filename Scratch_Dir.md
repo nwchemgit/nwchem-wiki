@@ -1,5 +1,5 @@
 
-## SCRATCH\_DIR
+## SCRATCH_DIR
 
 This start-up directive allows the user to specify the directory
 location of scratch files created by NWChem. NWChem distinguishes
@@ -20,13 +20,13 @@ scratch file directories with automated striping across processors with
 round-robin allocation. On SMP clusters (a.k.a. constellations), both of
 these specifications are required.
 
-The SCRATCH\_DIR enables the user to specify a single directory for all
+The SCRATCH_DIR enables the user to specify a single directory for all
 processes or different directories for different processes. The general
 form of the directive is as
 follows:
-
-`(SCRATCH_DIR) [(<string host&>||`<integer process>`):]  `<string directory>`  [...]`
-
+```
+(SCRATCH_DIR) [(<string host>||<integer process>):]  <string directory>  [...]
+```
 Directories are extracted from the user input by executing the following
 steps, in sequence:
 
