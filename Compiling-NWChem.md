@@ -759,13 +759,13 @@ required:
     choosing, say /Users/johndoe/nwchem
   - Install Homebrew as described at
 <http://brew.sh>
-
-`ruby -e "$(curl -fsSL `<https://raw.github.com/Homebrew/homebrew/go/install>`)"`
-
+```
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+```
   - Use Homebrew to install mpich2
-
-`brew install mpich2`
-
+```
+brew install mpich2
+```
   - As usual, set the env. variables
 
 `setenv USE_MPI y`  
@@ -832,27 +832,27 @@ required:
 ```
 
   - Use Homebrew to install open-mpi
-
-`brew install open-mpi`
-
+```
+brew install open-mpi
+```
   - As usual, set the env. variables
-
-`setenv USE_MPI y`  
-`setenv NWCHEM_TARGET MACX64`  
-`setenv NWCHEM_TOP /Users/johndoe/nwchem`  
-`setenv USE_INTERNALBLAS=y`
-
+```
+export USE_MPI=y  
+export NWCHEM_TARGET=MACX64  
+export NWCHEM_TOP=/Users/johndoe/nwchem  
+export USE_INTERNALBLAS=y
+```
   - **Important**: set the following env. variable (GA will not compile
     otherwise)
-
-`setenv CFLAGS_FORGA "-DMPICH_NO_ATTR_TYPE_TAGS"`
-
+```
+export CFLAGS_FORGA "-DMPICH_NO_ATTR_TYPE_TAGS"
+```
   - Go to your source directory, configure, and compile
-
-` cd /Users/johndoe/nwchem/src`  
-` make nwchem_config`  
-` make`
-
+```
+ cd /Users/johndoe/nwchem/src  
+ make nwchem_config`  
+ make
+```
 **WARNING:** Please do not use the Mac OS X default BLAS and LAPACK
 libraries available (or brew's veclibfort), since they are causing
 NWChem to produce erroneous results
