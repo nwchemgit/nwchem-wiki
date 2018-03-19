@@ -1051,39 +1051,37 @@ XC40](https://www.nersc.gov/users/computational-systems/cori), as of
 November 6th 2016, when using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu
 PrgEnv-intel`).
-
-`export NWCHEM_TARGET=LINUX64`  
-`export USE_MPI=y`  
-`export NWCHEM_TARGET=LINUX64`  
-`export ARMCI_NETWORK=MPI-PR`  
-`export USE_MPI=y`  
-`export USE_SCALAPACK=y`  
-`export SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\`  
-`-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"`  
-`export SCALAPACK_SIZE=8`  
-`export SCALAPACK_LIB="$SCALAPACK"`  
-`export BLAS_SIZE=8`  
-`export BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lmkl_core -liomp5 -lpthread -ldmapp -lm"`  
-`export USE_NOIO=y`  
-`export CRAYPE_LINK_TYPE=dynamic`
-
+```
+export NWCHEM_TARGET=LINUX64  
+export USE_MPI=y  
+export NWCHEM_TARGET=LINUX64  
+export ARMCI_NETWORK=MPI-PR  
+export USE_MPI=y  
+export USE_SCALAPACK=y  
+export SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \  
+-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
+export SCALAPACK_SIZE=8  
+export SCALAPACK_LIB="$SCALAPACK" 
+export BLAS_SIZE=8` 
+export BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lmkl_core -liomp5 -lpthread -ldmapp -lm"  
+export USE_NOIO=y  
+export CRAYPE_LINK_TYPE=dynamic
+```
 To compile
-
-`make nwchem_config`  
-`make FC=ftn`
-
+```
+make nwchem_config
+make FC=ftn
+```
 The following env. variables needs to added to the batch queue
 submission script
-
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=16384 `  
-`MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000 `  
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=131072 `  
-`MPICH_GNI_NUM_BUFS=300 `  
-`MPICH_GNI_NDREG_MAXSIZE=16777216 `  
-`MPICH_GNI_MBOX_PLACEMENT=nic `  
-`MPICH_GNI_LMT_PATH=disabled `  
-`COMEX_MAX_NB_OUTSTANDING=6`
-
+```
+MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000  
+MPICH_GNI_MAX_EAGER_MSG_SIZE=98304  
+MPICH_GNI_NUM_BUFS=300  
+MPICH_GNI_NDREG_MAXSIZE=16777216 
+MPICH_GNI_MBOX_PLACEMENT=nic
+COMEX_MAX_NB_OUTSTANDING=6
+```
 # How-to: Intel Xeon Phi
 
 This section describes both the newer KNL and older KNC hardware, in
