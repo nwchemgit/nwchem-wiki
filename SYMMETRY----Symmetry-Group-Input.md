@@ -6,10 +6,10 @@ directive to specify the point group for the molecular geometry or space
 group for the crystal structure. The general form of the directive, as
 described above within the general form of the GEOMETRY directive, is as
 follows:
-
-`   [SYMMETRY [group] `<string group_name>`|`<integer group number>` [setting `<integer setting>`] [print] \`  
-`          [tol <real tol default 1d-2>]]`
-
+```
+   [SYMMETRY [group] <string group_name>|<integer group number> [setting <integer setting>] [print] \  
+          [tol <real tol default 1d-2>]]
+```
 The keyword group is optional, and can be omitted without affecting how
 the input for this directive is processed. However, if the SYMMETRY
 directive is used, a group name must be specified by supplying an entry
