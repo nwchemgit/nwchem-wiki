@@ -4,7 +4,7 @@ state QM/MM energy calculations can be performed with
 
 `task qmmm tce energy`
 
-or [TDDFT](Excited-State_Calculations "wikilink")
+or [TDDFT](Excited-State-Calculations "wikilink")
 
 `task qmmm tddft energy`
 
