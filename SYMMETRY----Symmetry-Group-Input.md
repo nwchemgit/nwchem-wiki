@@ -7,7 +7,8 @@ group for the crystal structure. The general form of the directive, as
 described above within the general form of the GEOMETRY directive, is as
 follows:
 ```
-   [SYMMETRY [group] <string group_name>|<integer group number> [setting <integer setting>] [print] \  
+   [SYMMETRY [group] <string group_name>|<integer group number> \
+   [setting <integer setting>] [print] \  
           [tol <real tol default 1d-2>]]
 ```
 The keyword group is optional, and can be omitted without affecting how
