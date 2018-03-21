@@ -1,0 +1,39 @@
+```
+group number                 = 6
+group name                   =         Pm
+crystal system               = Monoclinic
+setting number               = 1
+number of symmetry operators = 2
+
++x,+y,+z
++x,-y,+z
+
+= operator 1 =
+ 1.0 0.0 0.0 0.0
+ 0.0 1.0 0.0 0.0
+ 0.0 0.0 1.0 0.0
+
+= operator 2 =
+ 1.0 0.0 0.0 0.0
+ 0.0 -1.0 0.0 0.0
+ 0.0 0.0 1.0 0.0
+
+group number                 = 6
+group name                   =         Pm
+crystal system               = Monoclinic
+setting number               = 2
+number of symmetry operators = 2
+
++x,+y,+z
++x,+y,-z
+
+= operator 1 =
+ 1.0 0.0 0.0 0.0
+ 0.0 1.0 0.0 0.0
+ 0.0 0.0 1.0 0.0
+
+= operator 2 =
+ 1.0 0.0 0.0 0.0
+ 0.0 1.0 0.0 0.0
+ 0.0 0.0 -1.0 0.0 
+```
