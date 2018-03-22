@@ -631,9 +631,9 @@ Lifshifts):
 LC-wPBE:
 
 `xc xwpbe 1.00 cpbe96 1.0 hfexch 1.00`  
-`cam 0.3 cam_alpha 0.00 cam_beta 1.00`
+`cam 0.4 cam_alpha 0.00 cam_beta 1.00`
 
-LC-wPBEh:
+LRC-wPBEh:
 
 `xc xwpbe 0.80 cpbe96 1.0 hfexch 1.00`  
 `cam 0.2 cam_alpha 0.20 cam_beta 0.80`
@@ -668,25 +668,19 @@ details about the theory behind these functionals and applications.
 
 1.  A. Savin, In Recent Advances in Density Functional Methods Part I;
     D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
-2.  H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540
-    (2001)
-3.  Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.
-    Phys. 120, 8425 (2004)
+2.  H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540 (2001)
+3.  Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
 4.  T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
-5.  M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8,
-    4543 (2006)
-6.  J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126,
-    154105 (2007)
-7.  E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
-8.  A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126,
-    191109 (2007)
-9.  M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
-10. N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113,
-    6041 (2009)
-11. R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85
-    (2010)
-12. J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
-13. P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
+5.  M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
+6.  O.A. Vydrov, G.E. Scuseria J. Chem. Phys. 125 234109 (2006)
+7.  J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126, 154105 (2007)
+8.  E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
+9.  A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126, 191109 (2007)
+10. M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
+11. N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113, 6041 (2009)
+12. R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85 (2010)
+13. J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
+14. P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
 
 Example illustrating the CAM-B3LYP functional:
 
