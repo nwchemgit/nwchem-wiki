@@ -89,7 +89,7 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
   - **XAIM** <http://www.quimica.urv.es/XAIM>
   - **NCIPLOT** <http://github.com/aoterodelaroza/nciplot>
-  - **Multiwfn** <http://multiwfn.codeplex.com>
+  - **Multiwfn** <http://sobereva.com/multiwfn/>
   - **Postg** <http://github.com/aoterodelaroza/postg>
 
 <!-- end list -->
