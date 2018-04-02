@@ -637,7 +637,12 @@ required:
 `make`
 
 #### NWChem 6.8 on Centos 7.1/Fedora 27
-
+Once you have added the [EPEL
+repository](https://fedoraproject.org/wiki/EPEL) to your Centos/Fedora/RedHat
+installation, you can have a more efficient NWChem build. 
+```
+sudo  -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+```
   - Packages
 required:
 
@@ -645,28 +650,28 @@ required:
 `elpa-openmpi-devel tcsh openssh-clients which tar`
 
   - Settings
-
-`export USE_MPI=y`  
-`export NWCHEM_TARGET=LINUX64`  
-`export USE_PYTHONCONFIG=y`  
-`export PYTHONVERSION=2.7`  
-`export PYTHONHOME=/usr`  
-`export USE_64TO32=y`  
-`export BLAS_SIZE=4`  
-`export BLASOPT="-lopenblas -lpthread -lrt"`  
-`export SCALAPACK_SIZE=4`  
-`export SCALAPACK="-L/usr/lib64/openmpi/lib -lscalapack "`  
-`export ELPA="-I/usr/lib64/gfortran/modules/openmpi -L/usr/lib64/openmpi/lib -lelpa"`  
-`export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:$LD_LIBRARY_PATH`  
-`export PATH=/usr/lib64/openmpi/bin/:$PATH`
-
+```
+export USE_MPI=y`  
+export NWCHEM_TARGET=LINUX64  
+export USE_PYTHONCONFIG=y  
+export PYTHONVERSION=2.7  
+export PYTHONHOME=/usr  
+export USE_64TO32=y  
+export BLAS_SIZE=4  
+export BLASOPT="-lopenblas -lpthread -lrt"  
+export SCALAPACK_SIZE=4  
+export SCALAPACK="-L/usr/lib64/openmpi/lib -lscalapack "  
+export ELPA="-I/usr/lib64/gfortran/modules/openmpi -L/usr/lib64/openmpi/lib -lelpa"  
+export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:$LD_LIBRARY_PATH 
+export PATH=/usr/lib64/openmpi/bin/:$PATH
+```
   - Compilation steps
-
-`cd $NWCHEM_TOP/src`  
-`make nwchem_config NWCHEM_MODULES="all python"`  
-`make 64_to_32`  
-`make`
-
+```
+cd $NWCHEM_TOP/src  
+make nwchem_config NWCHEM_MODULES="all python"  
+make 64_to_32  
+make
+```
 #### NWChem 6.6 on RedHat 6
 
   - Packages required:
