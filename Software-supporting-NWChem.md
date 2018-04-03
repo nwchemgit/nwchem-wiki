@@ -66,7 +66,7 @@ feedback on this page content.
   - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
     <http://pymatgen.org>
 
-## Programs that can display cube and/or Molden files
+## Programs that can display or manipulate cube and/or Molden files
 
 The following programs can display cube files from [ charge density
 ](DPLOT#GAUSSIAN_--_Gaussian_Cube_format "wikilink") and [
@@ -81,6 +81,8 @@ ESP](Properties#Gaussian_Cube_Files "wikilink") and/or use
   - **VESTA** <http://jp-minerals.org/vesta/en/>
   - **Jamberoo**
     <http://sf.anu.edu.au/~vvv900/cct/appl/jmoleditor/index.html>
+  - **Molden2AIM** is a utility program which can be used to create AIM-WFN, AIM-WFX, and NBO-47 files from a Molden file
+     <https://github.com/zorkzou/Molden2AIM>
 
 ## Programs post-processing AIM files
 
