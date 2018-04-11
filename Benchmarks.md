@@ -26,7 +26,7 @@ system at NERSC.![PW](PWScaling.png "wikilink")
 AIMD and AIMD/MM Parallel Timings for <img alt="$Zn^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/535088252ee6a9c0146ed4ba09c15c92.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76708pt" height="26.70657pt"/>+64<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O (unit
 cell parameters SC=12.4 Angs. and cutoff energy =100Ry). These
 calculations were performed on the Chinook HP computer system at MSCF
-EMSL, PNNL.![PWMD](PWMDScaling.png "wikilink") Exact
+EMSL, PNNL.![PWMD](PWMDScaling.png =250x250) "wikilink") Exact
 exchange timings – 80 atom cell of hematite (cutoff energy=100Ry). These
 calculations were performed on the Franklin Cray-XT4 computer system at
 NERSC.
