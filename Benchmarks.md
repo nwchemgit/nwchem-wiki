@@ -73,7 +73,7 @@ Kowalski, JCTC 2012, 8(2), pp 487–497). Currently, PNNL postdoctoral
 fellow Dr. Kiran Bhaskaran Nair is developing perturbative MRCCSD(T)
 approaches, which accounts for the effect of triple excitations.
 The [input file](betacarotene.nw "wikilink") and output files for runs
-at [6000 cores] (betacarotene.out.6000procs "wikilink") 
+at [6000 cores](betacarotene.out.6000procs "wikilink") 
 are available.  
 
 ![mrccsd\_scalability.png](mrccsd_scalability.png 
