@@ -28,7 +28,8 @@ system at NERSC.
 AIMD and AIMD/MM Parallel Timings for <img alt="$Zn^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/535088252ee6a9c0146ed4ba09c15c92.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76708pt" height="26.70657pt"/>+64<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O (unit
 cell parameters SC=12.4 Angs. and cutoff energy =100Ry). These
 calculations were performed on the Chinook HP computer system at MSCF
-EMSL, PNNL.![PWMD](PWMDScaling.png "wikilink")  
+EMSL, PNNL.  
+![PWMD](PWMDScaling.png "wikilink")  
 Exact exchange timings – 80 atom cell of hematite (cutoff energy=100Ry). These
 calculations were performed on the Franklin Cray-XT4 computer system at
 NERSC.  
@@ -36,7 +37,8 @@ NERSC.
 Exact
 exchange timings – 576 atom cell of water (cutoff energy=100Ry). These
 calculations were performed on the Hopper Cray-XE6 computer system at
-NERSC.![](water192b.png "wikilink")  
+NERSC.  
+![](water192b.png "wikilink")  
 
 # Parallel performance of the CR-EOMCCSD(T) method (triples part)
 
@@ -91,29 +93,29 @@ performed for state of b1g symmetry, in all test calculation convergence
 threshold was relaxed, 1024 cores were used). See the [ input
 file](input_p2ta.nw "wikilink") for
 details.
-
-`--------------------------------------------------------`  
-` Iter          Residuum       Correlation     Cpu    Wall`  
-` --------------------------------------------------------`  
-`   1   0.7187071521175  -7.9406033677717   640.9   807.7`  
-`   ......`  
-` MICROCYCLE DIIS UPDATE: 10 5`  
-`  11   0.0009737920958  -7.9953441809574   691.1   822.2`  
-` --------------------------------------------------------`  
-` Iterations converged`  
-` CCSD correlation energy / hartree =        -7.995344180957357`  
-` CCSD total energy / hartree       =     -2418.570838364838890`  
+```
+--------------------------------------------------------
+ Iter          Residuum       Correlation     Cpu    Wall
+ --------------------------------------------------------
+   1   0.7187071521175  -7.9406033677717   640.9   807.7
+   ......
+ MICROCYCLE DIIS UPDATE: 10 5
+  11   0.0009737920958  -7.9953441809574   691.1   822.2
+ --------------------------------------------------------
+ Iterations converged
+ CCSD correlation energy / hartree =        -7.995344180957357
+ CCSD total energy / hartree       =     -2418.570838364838890
   
-` EOM-CCSD right-hand side iterations`  
-` --------------------------------------------------------------`  
-`      Residuum       Omega / hartree  Omega / eV    Cpu    Wall`  
-` --------------------------------------------------------------`  
-`......`  
-`Iteration   2 using    6 trial vectors`  
-`  0.1584284659595   0.0882389635508    2.40111   865.3  1041.2`  
-`Iteration   3 using    7 trial vectors`  
-`  0.0575982107592   0.0810948687618    2.20670   918.0  1042.2`
-
+ EOM-CCSD right-hand side iterations
+ --------------------------------------------------------------
+      Residuum       Omega / hartree  Omega / eV    Cpu    Wall
+ --------------------------------------------------------------
+......
+Iteration   2 using    6 trial vectors
+  0.1584284659595   0.0882389635508    2.40111   865.3  1041.2
+Iteration   3 using    7 trial vectors
+  0.0575982107592   0.0810948687618    2.20670   918.0  1042.2
+```
 # Performance tests of the GPU implementation of non-iterative part of the CCSD(T) approach
 
 Recent tests of the GPU CCSD(T) implementation performed on Titan Cray
