@@ -69,18 +69,19 @@ scalabililty tests for the Brillouin-Wigner MRCCSD approach have been
 performed on Jaguar XT5 system at ORNL for <img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>-carotene in 6-31
 basis set (472 orbitals, 216 correlated electrons, 20 reference
 functions; see J.Brabec, J. Pittner, H.J.J. van Dam, E. Aprà, K.
-Kowalski, JCTC 2012, 8(2), pp 487–497). Currently, PNNL postdoctoral
-fellow Dr. Kiran Bhaskaran Nair is developing perturbative MRCCSD(T)
-approaches, which accounts for the effect of triple excitations.
+Kowalski, JCTC 2012, 8(2), pp 487–497). 
 The [input file](betacarotene.nw "wikilink") and output files for runs
 at [6000 cores](betacarotene.out.6000procs "wikilink"),
-at [12000 cores](betacarotene.out.12000procs "wikilink"),
-and at [24000 cores](betacarotene.out.24000procs "wikilink"),
+at [12000 cores](betacarotene.out.12000procs "wikilink")
+and at [24000 cores](betacarotene.out.24000procs "wikilink")
 are available.  
 
 ![mrccsd\_scalability.png](mrccsd_scalability.png 
 "mrccsd_scalability.png")
 
+Former PNNL postdoctoral
+fellow Dr. Kiran Bhaskaran Nair developed perturbative MRCCSD(T)
+approaches, which accounts for the effect of triple excitations.
 Scaling of the triples part of the BW-MRCCSD(T) method for
 <img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>-carotene in 6-31 basis set (JCP 137, 094112 (2012)). The
 scalability tests of the BW-MRCCSD(T) implementation of NWChem have been
