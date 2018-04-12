@@ -730,8 +730,8 @@ and
 ```
 diis 0
 ```
-in tce block. The line "subgroupsize n" defines the size of the subgroup and
-improvetiling refers to the data representation in the MRCC subgroup
+in tce block. The line `subgroupsize n` defines the size of the subgroup and
+`improvetiling` refers to the data representation in the MRCC subgroup
 algorithm. For example, if user has 4 references and total 32 cores/CPU
 then n should be defined as 32/4=8. If user has 10 references and 1200
 cores/CPU available then the size of the subgroupsize (n) is 120.
@@ -773,7 +773,7 @@ cores/CPU available then the size of the subgroupsize (n) is 120.
 ```
 CAUTION: Before using the subgroup-based algorithm the users should
 perform the GA subgroup test in
-$NWCHEM_TOP/src/tools/ga-5-6-3/global/testing/pgtest.x and pg2test.x in the
+`$NWCHEM_TOP/src/tools/ga-5-6-3/global/testing/pgtest.x` and `pg2test.x` in the
 same location. Additionally it is strongly encouraged to run the NWChem
 QA tests from the $NWCHEM_TOP/QA/tests/tce\_mrcc\_bwcc\_subgroups directory
 with various combinations of subgroup size and total number of CPU.
