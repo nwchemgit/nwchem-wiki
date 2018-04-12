@@ -16,7 +16,7 @@ functions) without symmetry. These calculations were performed on the
 Cascade supercomputer located at PNNL. The [input
 file](input_c240_pbe0.nw "wikilink") is available.
 
-![c240\_web4.png](./c240_web4.png "c240_web4.png")
+![c240\_web10.png](./c240_web10.png "c240_web4.png")
 
 # Parallel performance of *Ab initio* Molecular Dynamics using plane waves
 
