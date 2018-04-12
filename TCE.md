@@ -542,76 +542,77 @@ interest. The ROOT keyword followed by the root number specifies the
 state the code calculates. The lowest root, the ground state, is
 identified as root 1. If one wants to calculate the third root the
 keyword ROOT 3 should be used. An example is given below.
-
-` echo`  
-` start tce_mrcc_bwcc `  
-` memory stack 1000 mb heap 100 mb global 500 mb verify`  
-` geometry units au`  
-`   H                     0.00000000     -2.27289450     -1.58834700`  
-`   O                     0.00000000      0.00000000     -0.01350000`  
-`   H                     0.00000000      2.27289450     -1.58834700`  
-` end`  
-` basis spherical`  
-`   O library cc-pvdz`  
-`   H library cc-pvdz`  
-` end`  
-` charge 0`  
-` scf`  
-`   rohf`  
-`   singlet`  
-`   thresh 1.0e-10`  
-`   tol2e 1.0e-10`  
-` end`  
-` tce`  
-`   bwccsd`  
-`   thresh 1.0e-7`  
-`   targetsym a1`  
-`   io ga`  
-`   tilesize 18`  
-` end`  
-` mrccdata`  
-`   root 1`  
-`   nref 4`  
-`   222220`  
-`   222202`  
-`   2222ab`  
-`   2222ba`  
-` end`  
-` task tce energy`
-
-` echo`  
-` start tce_mrcc_mkcc `  
-` memory stack 1000 mb heap 100 mb global 500 mb verify`  
-` geometry units au`  
-`   H                   0.00000000     -2.27289450     -1.58834700`  
-`   O                   0.00000000      0.00000000     -0.01350000`  
-`   H                   0.00000000      2.27289450     -1.58834700`  
-` end`  
-` basis spherical`  
-`   O library cc-pvdz`  
-`   H library cc-pvdz`  
-` end`  
-` charge 0`  
-` scf`  
-`   rohf`  
-`   singlet`  
-`   thresh 1.0e-10`  
-`   tol2e 1.0e-10`  
-` end`  
-` tce`  
-`   mkccsd`  
-`   thresh 1.0e-5`  
-`   targetsym a1`  
-`   maxiter 100`  
-`   io ga`  
-`   tilesize 18`  
-` end`  
-` mrccdata`  
-`   root 1`  
-`   cas 2 2 # Please make sure the references generated are correct.`  
-` end`  
-` task tce energy`
-
+```
+ echo
+ start tce_mrcc_bwcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   bwccsd
+   thresh 1.0e-7
+   targetsym a1
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce energy
+```
+```
+ echo
+ start tce_mrcc_mkcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                   0.00000000     -2.27289450     -1.58834700
+   O                   0.00000000      0.00000000     -0.01350000
+   H                   0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   mkccsd
+   thresh 1.0e-5
+   targetsym a1
+   maxiter 100
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   root 1
+   cas 2 2 # Please make sure the references generated are correct.
+ end
+ task tce energy
+```
 This version of MRCC works only with GA as specified by the "IO GA"
 option. In addition this code works only with the spin-orbit 4-index
 transformation, however in all circumstances an RHF Hartree-Fock initial
@@ -627,82 +628,85 @@ corrections the keyword "SE4T" should be added to the MRCCDATA block.
 The implementation details and the from of the triples correction are
 given in equation 20 \[ [J. Chem. Phys. 137, 094112
 (2012)](http://dx.doi.org/10.1063/1.4747698)\].
-
-` echo`  
-` start tce_mrcc_bwcc `  
-` memory stack 1000 mb heap 100 mb global 500 mb verify`  
-` geometry units au`  
-`   H                     0.00000000     -2.27289450     -1.58834700`  
-`   O                     0.00000000      0.00000000     -0.01350000`  
-`   H                     0.00000000      2.27289450     -1.58834700`  
-` end`  
-` basis spherical`  
-`   O library cc-pvdz`  
-`   H library cc-pvdz`  
-` end`  
-` charge 0`  
-` scf`  
-`   rohf`  
-`   singlet`  
-`   thresh 1.0e-10`  
-`   tol2e 1.0e-10`  
-` end`  
-` tce`  
-`   bwccsd`  
-`   thresh 1.0e-7`  
-`   targetsym a1`  
-`   io ga`  
-`   tilesize 18`  
-` end`  
-` mrccdata`  
-`   se4t`  
-`   no_aposteriori`  
-`   root 1`  
-`   nref 4`  
-`   222220`  
-`   222202`  
-`   2222ab`  
-`   2222ba`  
-` end`  
-` task tce energy`
-
-` echo`  
-` start tce_mrcc_mkcc `  
-` memory stack 1000 mb heap 100 mb global 500 mb verify`  
-` geometry units au`  
-`   H                     0.00000000     -2.27289450     -1.58834700`  
-`   O                     0.00000000      0.00000000     -0.01350000`  
-`   H                     0.00000000      2.27289450     -1.58834700`  
-` end`  
-` basis spherical`  
-`   O library cc-pvdz`  
-`   H library cc-pvdz`  
-` end`  
-` charge 0`  
-` scf`  
-`   rohf`  
-`   singlet`  
-`   thresh 1.0e-10`  
-`   tol2e 1.0e-10`  
-` end`  
-` tce`  
-`   mkccsd`  
-`   thresh 1.0e-5`  
-`   targetsym a1`  
-`   io ga`  
-`   tilesize 18`  
-`   maxiter 100`  
-` end`  
-` mrccdata`  
-`   se4t`  
-`   root 1`  
-`   nref 4`  
-`   222220`  
-`   222202`  
-`   2222ab`  
-`   2222ba`  
-` end`  
-` task tce energy`
+```
+ echo
+ start tce_mrcc_bwcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   bwccsd
+   thresh 1.0e-7
+   targetsym a1
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   se4t
+   no_aposteriori
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce ener
+```
+```
+ echo
+ start tce_mrcc_mkcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   mkccsd
+   thresh 1.0e-5
+   targetsym a1
+   io ga
+   tilesize 18
+   maxiter 100
+ end
+ mrccdata
+   se4t
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce ener
+```
+### Implementation notes for reference-level-parallelism in MRCC
 
 The current version of the MRCC codes contains also a pilot
 implementation of the reference-level-parallelism based on the use of
@@ -718,55 +722,55 @@ this approach have been described in
 
 Two essential keywords have to be added to the "mrccdata" block of the
 input:
-
-`subgroupsize n`  
-`improvetiling`
-
+```
+subgroupsize n
+improvetiling
+```
 and
-
-`diis 0`
-
-in tce block. The "subgroupsize n" defines the size of the subgroup and
+```
+diis 0
+```
+in tce block. The line "subgroupsize n" defines the size of the subgroup and
 improvetiling refers to the data representation in the MRCC subgroup
 algorithm. For example, if user has 4 references and total 32 cores/CPU
 then n should be defined as 32/4=8. If user has 10 references and 1200
 cores/CPU available then the size of the subgroupsize (n) is 120.
-
-` echo`  
-` start tce_mrcc_bwcc_subgroups `  
-` memory stack 1000 mb heap 100 mb global 500 mb verify`  
-` geometry units au`  
-`   H                   0.00000000     -2.27289450     -1.58834700`  
-`   O                   0.00000000      0.00000000     -0.01350000`  
-`   H                   0.00000000      2.27289450     -1.58834700`  
-` end`  
-` basis spherical`  
-`   O library cc-pvdz`  
-`   H library cc-pvdz`  
-` end`  
-` charge 0`  
-` scf`  
-`   rohf`  
-`   singlet`  
-`   thresh 1e-12`  
-`   tol2e 1e-12`  
-` end`  
-` tce`  
-`   bwccsd`  
-`   targetsym a1`  
-`   io ga`  
-`   diis 0`  
-`   thresh 1e-7`  
-`   tilesize 18`  
-` end`  
-` mrccdata`  
-`   subgroupsize 2 # Please read the documentation below.`  
-`   improvetiling`  
-`   root 1`  
-`   cas 2 2`  
-` end`  
-` task tce energy`
-
+```
+ echo
+ start tce_mrcc_bwcc_subgroups 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                   0.00000000     -2.27289450     -1.58834700
+   O                   0.00000000      0.00000000     -0.01350000
+   H                   0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1e-12
+   tol2e 1e-12
+ end
+ tce
+   bwccsd
+   targetsym a1
+   io ga
+   diis 0
+   thresh 1e-7
+   tilesize 18
+ end
+ mrccdata
+   subgroupsize 2 # Please read the documentation below.
+   improvetiling
+   root 1
+   cas 2 2
+ end
+ task tce ener
+```
 CAUTION: Before using the subgroup-based algorithm the users should
 perform the GA subgroup test in
 $NWCHEM_TOP/src/tools/ga-5-6-3/global/testing/pgtest.x and pg2test.x in the
