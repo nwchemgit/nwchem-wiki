@@ -186,8 +186,7 @@ system at PNNL
 Aprà, E.; Klemm, M.; Kowalski, K., "Efficient Implementation of
 Many-Body Quantum Chemical Methods on the Intel® Xeon Phi Coprocessor,"
 High Performance Computing, Networking, Storage and Analysis, SC14:
-International Conference for , vol., no., pp.674,684, 16-21 Nov. 2014
-[3](http://dx.doi.org/10.1109/SC.2014.60)
+International Conference for , vol., no., pp.674-684, 16-21 Nov. 2014 [http://dx.doi.org/10.1109/SC.2014.60](http://dx.doi.org/10.1109/SC.2014.60)
 
 (Triplet state of
 Si<sub>4</sub>C<sub>3</sub>N<sub>2</sub>H<sub>12</sub>, 706 basis set
