@@ -176,10 +176,9 @@ Dam, E. Aprà, K. Kowalski, J. Chem. Theory Comput. 9, 1949 (2013))
 
 # Performance tests of the Xeon Phi implementation of non-iterative part of the CCSD(T) approach
 
-Recent tests (January 2015) of the Xeon Phi CCSD(T) implementation
-performed on EMSL cascade
-[2](http://www.emsl.pnl.gov/emslweb/instruments/computing-cascade-atipa-1440-intel-xeon-phi-node-fdr-infiniband-linux-cluster)
-system at PNNL
+Tests  of the Xeon Phi CCSD(T) implementation
+performed on the EMSL [cascade](http://www.emsl.pnl.gov/emslweb/instruments/computing-cascade-atipa-1440-intel-xeon-phi-node-fdr-infiniband-linux-cluster)
+system at PNNL 
 
 ![Triplet\_updated\_feb2015.png](Triplet_updated_feb2015.png
 "Triplet_updated_feb2015.png")
