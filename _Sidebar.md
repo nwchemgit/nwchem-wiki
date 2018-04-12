@@ -49,7 +49,15 @@ NWChem User Documentation
 
 <!-- -->
 
+-   [Compiling NWChem](Compiling-NWChem "wikilink")
+
+<!-- -->
+
 -   [Developer](Developer "wikilink")
+
+<!-- -->
+
+-   [Benchmarks](Benchmarks "wikilink")
 
 <!-- -->
 
