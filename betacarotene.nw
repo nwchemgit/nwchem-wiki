@@ -132,7 +132,7 @@ improvetiling
 subgroups 1200
 #subgroups 1600#for 48k
 bwcorr
-rootmucilage 1.0
+root 1
 cas 4 4
 end
 set tce:icrun t
