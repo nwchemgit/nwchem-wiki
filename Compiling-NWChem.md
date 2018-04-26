@@ -642,7 +642,7 @@ Once you have added the [EPEL
 repository](https://fedoraproject.org/wiki/EPEL) to your Centos/Fedora/RedHat
 installation, you can have a more efficient NWChem build. 
 ```
-sudo  -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
 ```
   - Packages
 required:
