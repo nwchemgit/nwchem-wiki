@@ -2237,21 +2237,20 @@ means that user will use 1 GPU per node.
 To enable the compilation of CUDA code one has to set the follwoing
 variables before the compilation of
 NWChem.
-
-`export TCE_CUDA=Y`  
-`export CUDA_LIBS="-L`*<Your Path to cuda>*`/lib64 -L`*<Your Path to cuda>*`/lib -lcudart"`  
-`export CUDA_FLAGS="-arch `*`compute`` ``capability`` ``2.x`` ``or``
-``higher`*`"`  
-`export CUDA_INCLUDE="-I. -I`*<Your Path to cuda>*`/include"`
-
+```
+export TCE_CUDA=Y 
+export CUDA_LIBS="-L<Your Path to cuda>/lib64 -L<Your Path to cuda>/lib -lcudart"
+export CUDA_FLAGS="-arch  <Your Cuda architecture>"  
+export CUDA_INCLUDE="-I. -I<Your Path to cuda>/include"
+```
 For
 example:
-
-`export TCE_CUDA=Y`  
-`export CUDA_LIBS="-L/usr/local/cuda-5.0/lib64 -L/usr/local/cuda-5.0/lib -lcudart"`  
-`export CUDA_FLAGS="-arch sm_20 "`  
-`export CUDA_INCLUDE="-I. -I/usr/local/cuda-5.0/include"`
-
+```
+export TCE_CUDA=Y
+export CUDA_LIBS="-L/usr/local/cuda-5.0/lib64 -L/usr/local/cuda-5.0/lib -lcudart"
+export CUDA_FLAGS="-arch sm_20 "
+export CUDA_INCLUDE="-I. -I/usr/local/cuda-5.0/include"
+```
 In addition the code needs to be compiled with the following make
 command
 
