@@ -150,8 +150,8 @@ block. The syntax is:
 `   [SYMMETRY]`  
 `   [ECUT] <-cutoff energy>`  
 `   [EWIN] <-lower cutoff energy>  <-higher cutoff energy>`  
-`   [ALPHA] `<integer lower orbital> <integer upper orbital>`
-`   [BETA] `<integer lower orbital> <integer upper orbital>` 
+`   [ALPHA] `<integer lower orbital> <integer upper orbital>`  
+`   [BETA] `<integer lower orbital> <integer upper orbital>`  
 `   [CIVECS]`  
 `   [GRAD, END]`  
 `   [CDSPECTRUM]`  
