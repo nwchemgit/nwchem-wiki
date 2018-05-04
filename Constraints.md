@@ -10,8 +10,8 @@ below:
 CONSTRAINTS [string name ] \  
           [clear] \  
           [enable||disable] \  
-          [fix atom `<integer list>`] \  
-          [spring bond `<integer atom1>` `<integer atom2>` `<real k>` `<real r0>` ]  
+          [fix atom <integer list>] \  
+          [spring bond `<integer atom1> <integer atom2> <real k> <real r0> ]  
  END
 ```
 The keywords are described below
@@ -75,7 +75,7 @@ The keywords are described below
        end
 ```
   - spring bond <img alt="$&lt;i j k r_0&gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/424902055502ece4201b8adbfaa6ef95.svg?invert_in_darkmode&sanitize=true" align=middle width="71.741175pt" height="22.74591pt"/> - places a spring with a spring constant
-    *k* and equilibrium length $r_0$ between atoms *i* and *j* (all in
+    *k* and equilibrium length <img alt="$r_0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1db75c795ab2c794f72bbe79b8113be1.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> between atoms *i* and *j* (all in
     atomic units). Please note that this type of constraint adds an
     additional term to the total energy expression
 
