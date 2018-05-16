@@ -49,12 +49,12 @@ Car-Parrinello output data files are described in section
 Datafiles](#PSPW_Car-Parrinello_Output_Datafiles "wikilink"), and the
 minimization and Car-Parrinello algorithms are described in section
 [Car-Parrinello Scheme for Ab Initio Molecular
-Dynamics](#Car-Parrinello_Scheme_for_Ab_Initio_Molecular_Dynamics "wikilink").
+Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics "wikilink").
 Examples of how to setup and run a PSPW geometry optimization, a
 Car-Parrinello simulation, a band structure minimization, and a PAW
 geometry optimization are presented at the end. Finally in section [NWPW
 Capabilities and
-Limitations](#NWPW_Capabilities_and_Limitations "wikilink") the
+Limitations](#nwpw-capabilities-and-limitations "wikilink") the
 capabilities and limitations of the NWPW module are discussed.  
 
 <span style="color: red;"> *As of NWChem 6.6 to use PAW potentials the
