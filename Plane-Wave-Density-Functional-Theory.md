@@ -8,40 +8,23 @@
          - [1.1.2.1 DFT + U Corrections]
          - [1.1.2.2 Grimme Dispersion Corrections]
          - [1.1.2.3 Using Exchange-Correlation Potentials Available in the DFT Module]
-
-1.1.2.4 Exact Exchange
-
-1.1.2.5 Self-Interaction Corrections
-
-1.1.3 Wannier
-
-1.1.4 Mulliken Analysis
-
-1.1.5 Density of States
-
-1.1.6 Projected Density of States
-
-1.1.7 Point Charge Analysis
-
-1.1.8 PSPW_DPLOT - Generate Gaussian Cube Files
-
-1.2 Band Tasks - Multiple k-point Calculations
-
-1.2.1 Brillouin Zone
-
-1.2.1.1 Band Structure Paths
-
-1.2.1.2 Special Points of Different Space Groups (Conventional Cells)
-
-1.2.2 Screened Exchange
-
-1.2.3 Density of States and Projected Density of States
-
-1.2.4 Two-Component Wavefunctions (Spin-Orbit ZORA)
-
-1.2.5 BAND_DPLOT - Generate Gaussian Cube Files
-
-1.3 Car-Parrinello
+         - [1.1.2.4 Exact Exchange]
+         - [1.1.2.5 Self-Interaction Corrections]
+      - [1.1.3 Wannier]
+      - [1.1.4 Mulliken Analysis]
+      - [1.1.5 Density of States]
+      - [1.1.6 Projected Density of States]
+      - [1.1.7 Point Charge Analysis]
+      - [1.1.8 PSPW_DPLOT - Generate Gaussian Cube Files]
+   - [1.2 Band Tasks - Multiple k-point Calculations]
+      - [1.2.1 Brillouin Zone]
+         - [1.2.1.1 Band Structure Paths]
+         - [1.2.1.2 Special Points of Different Space Groups (Conventional Cells)]
+      - [1.2.2 Screened Exchange]
+      - [1.2.3 Density of States and Projected Density of States]
+      - [1.2.4 Two-Component Wavefunctions (Spin-Orbit ZORA)]
+      - [1.2.5 BAND_DPLOT - Generate Gaussian Cube Files]
+   - [1.3 Car-Parrinello]
 
 1.3.1 Adding Geometry Constraints to a Car-Parrinello Simulation
 
