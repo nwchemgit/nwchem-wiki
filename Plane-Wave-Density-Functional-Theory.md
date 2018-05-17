@@ -925,7 +925,7 @@ additional parameters, e.g.
 The parameters are
 
 `nwpw`  
-` dos  [`<alpha>` `<npoints>` `<emin>` `<emax>`]`  
+` dos  [<alpha> <npoints> <emin> <emax>]`  
 `end`
 
 where
@@ -1280,7 +1280,7 @@ sub-block.
 `... `  
 ` BRILLOUIN_ZONE `  
 `   ZONE_NAME <string name default 'zone_default'> `  
-`   (KVECTOR `<real k1 k2 k3 no default>` <real weight default (see input description)> `  
+`   (KVECTOR <real k1 k2 k3 no default> <real weight default (see input description)> `  
 `    ...) `  
 ` END`  
 `...`  
@@ -1344,7 +1344,7 @@ additional parameters, e.g.
 The parameters are
 
 `nwpw`  
-` dos  [`<alpha>` `<npoints>` `<emin>` `<emax>`]`  
+` dos  [<alpha> <npoints> <emin> <emax>]`  
 `end`
 
 where
@@ -1389,6 +1389,88 @@ determine weights for dos generation. If the variable is not set then
 all the atoms are used, e.g.
 
 `set nwpw:dos:actlist 1 2 3 4`
+
+For projected density of states the "Mulliken" keyword needs to be set,
+e.g.
+
+`nwpw`  
+`  Mulliken`  
+`  dos`  
+`end`
+
+The following additional files are generated and written to the
+permanent\_dir for restricted calculations
+
+  - file\_prefix.mulliken\_dos\_both\_s - total s projected density of
+    restricted states
+  - file\_prefix.mulliken\_fdos\_both\_s - s projected density of states
+    of filled restricted states
+  - file\_prefix.mulliken\_vdos\_both\_s - s projected density of states
+    of virtual restricted states
+  - file\_prefix.mulliken\_dos\_both\_p - total p projected density of
+    states
+  - file\_prefix.mulliken\_fdos\_both\_p - p projected density of states
+    of filled states
+  - file\_prefix.mulliken\_vdos\_both\_p - p projected density of states
+    of virtual states
+
+...
+
+  - file\_prefix.mulliken\_dos\_both\_all - total of projected density
+    of filled and virtual restricted states
+  - file\_prefix.mulliken\_fdos\_both\_all - total of projected density
+    of filled restricted states
+  - file\_prefix.mulliken\_vdos\_both\_all - total of projected density
+    of states of virtual restricted states
+
+Similarly for unrestricted calculations
+
+  - file\_prefix.mulliken\_dos\_alpha\_s - total s projected density of
+    up states
+  - file\_prefix.mulliken\_fdos\_alpha\_s - s projected density of
+    states of filled up states
+  - file\_prefix.mulliken\_vdos\_alpha\_s - s projected density of
+    states of virtual up states
+  - file\_prefix.mulliken\_dos\_alpha\_p - total p projected density of
+    up states
+  - file\_prefix.mulliken\_fdos\_alpha\_p - p projected density of
+    states of filled up states
+  - file\_prefix.mulliken\_vdos\_alpha\_p - p projected density of
+    states of virtual up states
+
+...
+
+  - file\_prefix.mulliken\_dos\_alpha\_all - total of projected density
+    of filled up states
+  - file\_prefix.mulliken\_fdos\_alpha\_all - total of projected density
+    of filled up states
+  - file\_prefix.mulliken\_vdos\_alpha\_all - total of projected density
+    of states of virtual up states
+
+...
+
+  - file\_prefix.mulliken\_dos\_beta\_s - total s projected density of
+    down states
+  - file\_prefix.mulliken\_fdos\_beta\_s - s projected density of states
+    of filled down states
+  - file\_prefix.mulliken\_vdos\_beta\_s - s projected density of states
+    of virtual down states
+  - file\_prefix.mulliken\_dos\_beta\_p - total p projected density of
+    down states
+  - file\_prefix.mulliken\_fdos\_beta\_p - p projected density of states
+    of filled down states
+  - file\_prefix.mulliken\_vdos\_beta\_p - p projected density of states
+    of virtual down states
+
+...
+
+  - file\_prefix.mulliken\_dos\_beta\_all - total of projected density
+    of filled down states
+  - file\_prefix.mulliken\_fdos\_beta\_all - total of projected density
+    of filled down states
+  - file\_prefix.mulliken\_vdos\_beta\_all - total of projected density
+    of states of virtual down states
+
 
 ### Two-Component Wavefunctions (Spin-Orbit ZORA)
 
