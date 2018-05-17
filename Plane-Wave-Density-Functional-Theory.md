@@ -4498,50 +4498,50 @@ The following example uses the BAND module to optimize the unit cell and
 geometry for a Diamond crystal with Fd-3m symmetry. The fractional
 coordinates, unit cell, and symmetry are defined in the geometry
 block.
-
-`title "Diamond 8 atom cubic cell generated using Fd-3m symmetry - geometry and unit cell optimization"`  
-`echo`  
+```
+title "Diamond 8 atom cubic cell generated using Fd-3m symmetry - geometry and unit cell optimization" 
+echo 
   
-`memory 1500 mb`  
+memory 1500 mb
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
+permanent_dir ./perm
+scratch_dir   ./scratch
   
-`start diamond-symmetry`  
+start diamond-symmetry  
   
   
-`geometry nocenter noautosym noautoz print `  
-` system crystal `  
-`   lat_a 3.58`  
-`   lat_b 3.58`  
-`   lat_c 3.58`  
-`   alpha 90.0`  
-`   beta  90.0`  
-`   gamma 90.0`  
-` end`  
-`symmetry Fd-3m`  
-`C 0.0 0.0 0.0`  
-`end `  
-`set nwpw:cif_filename diamond-symmetry`  
+geometry nocenter noautosym noautoz print 
+ system crystal 
+   lat_a 3.58 
+   lat_b 3.58 
+   lat_c 3.58  
+   alpha 90.0  
+   beta  90.0  
+   gamma 90.0  
+ end
+symmetry Fd-3m
+C 0.0 0.0 0.0
+end 
+set nwpw:cif_filename diamond-symmetry
   
-`#turn on pseudopotential filtering `  
-`set nwpw:kbpp_ray    .true.`  
-`set nwpw:kbpp_filter .true.`  
-` `  
-`#***** setup the nwpw Band code - 3x3x3 k-point mesh ****`  
-`nwpw`  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8`  
-`  xc pbe96`  
-`  lmbfgs`  
-`  monkhorst-pack 3 3 3`  
-`  np_dimensions -1 -1 4`  
-`end`  
+#turn on pseudopotential filtering  
+set nwpw:kbpp_ray    .true.
+set nwpw:kbpp_filter .true.
   
-`set includestress  .true.   # tell driver to optimize unit cell`  
-`set includelattice .true.   # tell driver to optimize with a,b,c,alpha,beta,gamma`  
-`task band optimize ignore`
-
+#***** setup the nwpw Band code - 3x3x3 k-point mesh ****  
+nwpw
+  ewald_rcut 3.0
+  ewald_ncut 8
+  xc pbe96  
+  lmbfgs
+  monkhorst-pack 3 3 3
+  np_dimensions -1 -1 4
+end  
+  
+set includestress  .true.   # tell driver to optimize unit cell
+set includelattice .true.   # tell driver to optimize with a,b,c,alpha,beta,gamma
+task band optimize ignore
+```
 The optimized geometry will also contain the information about the
 symmetry being
 used
