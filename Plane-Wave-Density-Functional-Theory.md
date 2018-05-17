@@ -5061,45 +5061,45 @@ wavefunction and geometry in tandem.
 The following example demonstrates how to uses the PAW module to
 optimize the unit cell and geometry for a silicon-carbide
 crystal.
-
-`title "SiC 8 atom cubic cell - geometry and unit cell optimization"`  
-`start SiC`  
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry units au center noautosym noautoz print`  
-` system crystal`  
-`   lat_a 8.277d0`  
-`   lat_b 8.277d0`  
-`   lat_c 8.277d0`  
-`   alpha 90.0d0`  
-`   beta  90.0d0`  
-`   gamma 90.0d0`  
-` end`  
-`Si    -0.50000d0  -0.50000d0  -0.50000d0`  
-`Si     0.00000d0   0.00000d0  -0.50000d0`  
-`Si     0.00000d0  -0.50000d0   0.00000d0`  
-`Si    -0.50000d0   0.00000d0   0.00000d0`  
-`C     -0.25000d0  -0.25000d0  -0.25000d0`  
-`C      0.25000d0   0.25000d0  -0.25000d0`  
-`C      0.25000d0  -0.25000d0   0.25000d0`  
-`C     -0.25000d0   0.25000d0   0.25000d0`  
-`end`  
-`#***** setup the nwpw gamma point code ****`  
-`nwpw`  
-`  simulation_cell`  
-`    ngrid 16 16 16`  
-`  end`  
-`  ewald_ncut 8`  
-`end`  
-`set nwpw:minimizer 2`  
-`set nwpw:psi_nolattice .true.  # turns of unit cell checking for wavefunctions`  
-`driver`  
-`  clear`  
-`  maxiter 40`  
-`end`  
-`set includestress .true.         # this option tells driver to optimize the unit cell`  
-`set nwpw:stress_numerical .true. #currently only numerical stresses implemented in paw`  
-`task paw optimize`
-
+```
+title "SiC 8 atom cubic cell - geometry and unit cell optimization" 
+start SiC
+#**** Enter the geometry using fractional coordinates ****  
+geometry units au center noautosym noautoz print
+ system crystal
+   lat_a 8.277d0
+   lat_b 8.277d0 
+   lat_c 8.277d0  
+   alpha 90.0d0  
+   beta  90.0d0
+   gamma 90.0d0
+ end 
+Si    -0.50000d0  -0.50000d0  -0.50000d0
+Si     0.00000d0   0.00000d0  -0.50000d0  
+Si     0.00000d0  -0.50000d0   0.00000d0 
+Si    -0.50000d0   0.00000d0   0.00000d0
+C     -0.25000d0  -0.25000d0  -0.25000d0
+C      0.25000d0   0.25000d0  -0.25000d0 
+C      0.25000d0  -0.25000d0   0.25000d0
+C     -0.25000d0   0.25000d0   0.25000d0  
+end  
+#***** setup the nwpw gamma point code ****  
+nwpw
+  simulation_cell 
+    ngrid 16 16 16
+  end
+  ewald_ncut 8 
+end  
+set nwpw:minimizer 2
+set nwpw:psi_nolattice .true.  # turns of unit cell checking for wavefunctions 
+driver
+  clear 
+  maxiter 40  
+end
+set includestress .true.         # this option tells driver to optimize the unit cell
+set nwpw:stress_numerical .true. #currently only numerical stresses implemented in paw
+task paw optimize
+```
 ### Running a Car-Parrinello Simulation
 
 In this section we show how use the PAW module to perform a
@@ -5121,33 +5121,33 @@ the simulation cell cell is aperiodic and cubic with a side length of
 is 44 Ry). The time step and fake mass for the Car-Parrinello run are
 specified to be 5.0 au and 600.0 au,
 respectively.
-
-`start c2_paw_lda_md`  
-`title "C2 restricted singlet dimer, LDA/44Ry - constant energy Car-Parrinello simulation"`  
-`geometry  `  
-` C    -0.62 0.0 0.0`  
-` C     0.62 0.0 0.0`  
-`end`  
-`pspw`  
-`  simulation_cell units angstroms`  
-`     boundary_conditions aperiodic`  
-`     lattice`  
-`       lat_a 10.00d0`  
-`       lat_b 10.00d0`  
-`       lat_c 10.00d0`  
-`     end`  
-`     ngrid 40 40 40`  
-`  end`  
-`  Car-Parrinello`  
-`    fake_mass 600.0`  
-`    time_step 5.0`  
-`    loop 10 10`  
-`  end`  
-`end`  
-`set nwpw:minimizer 2`  
-`task paw energy`  
-`task paw Car-Parrinello`
-
+```
+start c2_paw_lda_md  
+title "C2 restricted singlet dimer, LDA/44Ry - constant energy Car-Parrinello simulation"
+geometry  
+ C    -0.62 0.0 0.0 
+ C     0.62 0.0 0.0 
+end
+pspw 
+  simulation_cell units angstroms  
+     boundary_conditions aperiodic 
+     lattice 
+       lat_a 10.00d0  
+       lat_b 10.00d0
+       lat_c 10.00d0
+     end  
+     ngrid 40 40 40
+  end  
+  Car-Parrinello 
+    fake_mass 600.0
+    time_step 5.0 
+    loop 10 10  
+  end 
+end 
+set nwpw:minimizer 2
+task paw energy
+task paw Car-Parrinello
+```
 ## NWPW Capabilities and Limitations
 
   - Hybrid Functionals (e.g. PBE0, LDA-SIC) only work in PSPW.
