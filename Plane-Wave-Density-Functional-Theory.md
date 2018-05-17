@@ -1,118 +1,105 @@
 ##### Contents  
 
-* [1 Pseudopotential plane-wave density functional theory (NWPW)](#Pseudopotential-plane-wave-density-functional-theory-nwpw "wikilink")
+* [1 Pseudopotential plane-wave density functional theory (NWPW)](#pseudopotential-plane-wave-density-functional-theory-nwpw "wikilink")
    - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks---gamma-point-calculations "wikilink")
       - [1.1.1 PAW Potentials](#paw-potentials "wikilink") 
          - [1.1.1.1 PAW Implementation Notes](#paw-implementation-notes "wikilink")
-      - [1.1.2 Exchange-Correlation Potentials]
-         - [1.1.2.1 DFT + U Corrections]
-         - [1.1.2.2 Grimme Dispersion Corrections]
-         - [1.1.2.3 Using Exchange-Correlation Potentials Available in the DFT Module]
-         - [1.1.2.4 Exact Exchange]
-         - [1.1.2.5 Self-Interaction Corrections]
-      - [1.1.3 Wannier]
-      - [1.1.4 Mulliken Analysis]
-      - [1.1.5 Density of States]
-      - [1.1.6 Projected Density of States]
-      - [1.1.7 Point Charge Analysis]
-      - [1.1.8 PSPW_DPLOT - Generate Gaussian Cube Files]
-   - [1.2 Band Tasks - Multiple k-point Calculations]
-      - [1.2.1 Brillouin Zone]
-         - [1.2.1.1 Band Structure Paths]
-         - [1.2.1.2 Special Points of Different Space Groups (Conventional Cells)]
-      - [1.2.2 Screened Exchange]
-      - [1.2.3 Density of States and Projected Density of States]
-      - [1.2.4 Two-Component Wavefunctions (Spin-Orbit ZORA)]
-      - [1.2.5 BAND_DPLOT - Generate Gaussian Cube Files]
-   - [1.3 Car-Parrinello]
-
-1.3.1 Adding Geometry Constraints to a Car-Parrinello Simulation
-
-1.3.2 Car-Parrinello Output Datafiles
-
-1.3.2.1 XYZ motion file
-
-1.3.2.2 ION_MOTION motion file
-
-1.3.2.3 EMOTION motion file
-1.3.2.4 HMOTION motion file
-1.3.2.5 EIGMOTION motion file
-1.3.2.6 OMOTION motion file
-1.4 Born-Oppenheimer Molecular Dynamics
-1.5 Metropolis Monte-Carlo
-1.6 Free Energy Simulations
-1.6.1 MetaDynamics
-1.6.1.1 Input
-1.6.2 TAMD - Temperature Accelerated Molecular Dynamics
-1.6.2.1 Input
-1.6.3 Collective Variables
-1.6.3.1 Bond Distance Collective Variable
-
-1.6.3.2 Angle Collective Variable
-1.6.3.3 Coordination Collective Variable
-1.6.3.4 N-Plane Collective Variable
-1.6.3.5 User defined Collective Variable
-1.7 Extended X-Ray Absorption Fine Structure (EXAFS) - Integration with FEFF6L
-1.8 Frozen Phonon Calculations
-1.9 Steepest Descent
-1.10 Simulation Cell
-1.11 Unit Cell Optimization
-1.12 SMEAR - Fractional Occupation of the Molecular Orbitals
-1.13 Spin Penalty Functions
-1.14 AIMD/MM (QM/MM)
-1.15 PSP_GENERATOR
-1.15.1 ATOMIC_FILLING Block
-1.15.2 CUTOFF
-1.15.3 SEMICORE_RADIUS
-1.16 PAW Tasks - Legacy Implementation
-1.17 Pseudopotential and PAW basis Libraries
-1.18 NWPW RTDB Entries and Miscellaneous DataFiles
-1.18.1 Ion Positions
-1.18.2 Ion Velocities
-1.18.3 Wavefunction Datafile
-
-1.18.4 Velocity Wavefunction Datafile
-1.18.5 Formatted Pseudopotential Datafile
-
-1.18.6 One-Dimensional Pseudopotential Datafile
-1.19 Car-Parrinello Scheme for Ab Initio Molecular Dynamics
-1.19.1 Verlet Algorithm for Integration
-1.19.2 Constant Temperature Simulations: Nose-Hoover Thermostats
-1.20 NWPW Tutorial 1: S2 dimer examples with PSPW
-1.20.1 Total energy of S2 dimer with LDA approximation
-1.20.2 Structural optimization of S2 dimer with LDA approximation
-1.20.3 Frequency calculation of S2 dimer with LDA approximation
-1.20.4 Ab initio molecular dynamics simulation (Car-Parrinello) of S2 dimer using the LDA approximation
-1.20.5 Ab initio molecular dynamics simulation (Born-Oppenheimer) of S2 dimer using the LDA approximation
-1.21 NWPW Tutorial 2: Using PSPW Car-Parrinello Simulated Annealing Simulations to Optimize Structures
-1.21.1 Simulated Annealing Using Constant Energy Simulation
-1.21.2 Simulated Annealing Using Constant Temperature Simulation
-1.22 NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics
-1.23 NWPW Tutorial 4: AIMD/MM simulation of CCl4 + 64 H2O
-1.24 NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond
-1.24.1 Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW
-1.24.2 Optimizing the Unit Cell for an 8 Atom Supercell of Diamond with BAND
-1.24.3 Using BAND to Optimize the Unit Cell for a 2 Atom Primitive Cell of Diamond
-1.24.4 Using BAND to Calculate the Band Structures of Diamond
-1.24.5 Using BAND to Calculate the Density of States of Diamond
-1.24.6 Calculate the Phonon Spectrum of Diamond
-1.25 NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation
-1.26 NWPW Tutorial 7: Optimizing the unit cells with symmetry: Diamond with Fd-3m symmetry and Brucite with P-3m1 symmetry
-1.27 NWPW Tutorial 8: NVT Metropolis Monte-Carlo Simulations
-
-1.28 NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations
-1.29 NWPW Tutorial 9: Free Energy Simulations
-
-1.30 PAW Tutorial
-1.30.1 Optimizing a water molecule
-1.30.2 Optimizing a unit cell and geometry for Silicon-Carbide
-1.30.3 Running a Car-Parrinello Simulation
-1.31 NWPW Capabilities and Limitations
-
-1.32 Development Blog
-
-1.33 Questions and Difficulties
-
+      - [1.1.2 Exchange-Correlation Potentials](#exchange-correlation-potentials "wikilink")
+         - [1.1.2.1 DFT + U Corrections](#dft-+-u-corrections "wikilink")
+         - [1.1.2.2 Grimme Dispersion Corrections](#grimme-dispersion-corrections "wikilink")
+         - [1.1.2.3 Using Exchange-Correlation Potentials Available in the DFT Module](#using-exchange-correlation-potentials-available-in-the-dft-module "wikilink")
+         - [1.1.2.4 Exact Exchange](#exact-exchange "wikilink")
+         - [1.1.2.5 Self-Interaction Corrections](#self-interaction-corrections "wikilink")
+      - [1.1.3 Wannier](#wannier "wikilink")
+      - [1.1.4 Mulliken Analysis](#mulliken-analysis "wikilink")
+      - [1.1.5 Density of States](#density-of-states "wikilink")
+      - [1.1.6 Projected Density of States](#projected-density-of-states "wikilink")
+      - [1.1.7 Point Charge Analysis](#point-charge-analysis "wikilink")
+      - [1.1.8 PSPW_DPLOT - Generate Gaussian Cube Files](#pspw_dplot---generate-gaussian-cube-files "wikilink")
+   - [1.2 Band Tasks - Multiple k-point Calculations](#band-tasks---multiple-k-point-calculations "wikilink")
+      - [1.2.1 Brillouin Zone](#brillouin-zone "wikilink")
+         - [1.2.1.1 Band Structure Paths](#band-structure-paths "wikilink")
+         - [1.2.1.2 Special Points of Different Space Groups (Conventional Cells)](#special-points-of-different-space-groups-conventional-cells "wikilink")
+      - [1.2.2 Screened Exchange](#screened-exchange "wikilink")
+      - [1.2.3 Density of States and Projected Density of States](#density-of-states-and-projected-density-of-states "wikilink")
+      - [1.2.4 Two-Component Wavefunctions (Spin-Orbit ZORA)](#two-component-wavefunctions-spin-orbit-zora "wikilink")
+      - [1.2.5 BAND_DPLOT - Generate Gaussian Cube Files](#band_dplot---generate-gaussian-cube-files "wikilink")
+   - [1.3 Car-Parrinello](#car-parrinello "wikilink")
+      - [1.3.1 Adding Geometry Constraints to a Car-Parrinello Simulation][#adding-geometry-constraints-to-a-car-parrinello-simulation "wikilink")
+      - [1.3.2 Car-Parrinello Output Datafiles](#Car-Parrinello Output Datafiles "wikilink")
+         - [1.3.2.1 XYZ motion file](#XYZ motion file "wikilink")
+         - [1.3.2.2 ION_MOTION motion file](#ION_MOTION motion file "wikilink")
+         - [1.3.2.3 EMOTION motion file](#EMOTION motion file "wikilink")
+         - [1.3.2.4 HMOTION motion file](#HMOTION motion file "wikilink")
+         - [1.3.2.5 EIGMOTION motion file](#.3.2.5 EIGMOTION motion file "wikilink")
+         - [1.3.2.6 OMOTION motion file](#OMOTION motion file "wikilink")
+   - [1.4 Born-Oppenheimer Molecular Dynamics](#born-oppenheimer-molecular Dynamics "wikilink")
+   - [1.5 Metropolis Monte-Carlo](#metropolis-monte-carlo  "wikilink")
+   - [1.6 Free Energy Simulations](#free-energy-simulations "wikilink")
+      - [1.6.1 MetaDynamics](#metaDynamics "wikilink")
+         - [1.6.1.1 Input](#Input "wikilink")
+      - [1.6.2 TAMD - Temperature Accelerated Molecular Dynamics](#tamd---temperature-accelerated-molecular-dynamics "wikilink")
+         - [1.6.2.1 Input](#input "wikilink")
+      - [1.6.3 Collective Variables](#collective-variables "wikilink")
+         - [1.6.3.1 Bond Distance Collective Variable](#bond-distance-collective-variable "wikilink")
+         - [1.6.3.2 Angle Collective Variable](#angle-collective-variable "wikilink")
+         - [1.6.3.3 Coordination Collective Variable](#coordination-collective-variable "wikilink")
+         - [1.6.3.4 N-Plane Collective Variable](#n-plane-collective-variable "wikilink")
+         - [1.6.3.5 User defined Collective Variable](#user-defined-collective-variable "wikilink")
+   - [1.7 Extended X-Ray Absorption Fine Structure (EXAFS) - Integration with FEFF6L](#extended-x-ray-absorption-fine-structure-exafs---integration-with-feff6l "wikilink")
+   - [1.8 Frozen Phonon Calculations](#frozen-phonon-calculations "wikilink")
+   - [1.9 Steepest Descent](#steepest-descent "wikilink")
+   - [1.10 Simulation Cell](#simulation-cell "wikilink")
+   - [1.11 Unit Cell Optimization](#unit-cell Optimization "wikilink")
+   - [1.12 SMEAR - Fractional Occupation of the Molecular Orbitals](#smear---fractional-occupation-of-the-molecular-orbitals "wikilink")
+   - [1.13 Spin Penalty Functions](#spin-penalty-functions "wikilink")
+   - [1.14 AIMD/MM (QM/MM)](#aimdmm-qmmm "wikilink")
+   - [1.15 PSP_GENERATOR](#psp_generator "wikilink")
+      - [1.15.1 ATOMIC_FILLING Block](#atomic_filling-block  "wikilink")
+      - [1.15.2 CUTOFF](#cutoff  "wikilink")
+      - [1.15.3 SEMICORE_RADIUS](#semicore_radius  "wikilink")
+   - [1.16 PAW Tasks - Legacy Implementation](#paw_tasks---legacy-implementation  "wikilink")
+   - [1.17 Pseudopotential and PAW basis Libraries](#pseudopotential-and-paw-basis-libraries  "wikilink")
+   - [1.18 NWPW RTDB Entries and Miscellaneous DataFiles](#nwpw-rtdb-entries-and-miscellaneous-dataFiles  "wikilink")
+      - [1.18.1 Ion Positions](#ion-positions  "wikilink")
+      - [1.18.2 Ion Velocities](#ion-velocities  "wikilink")
+      - [1.18.3 Wavefunction Datafile](#wavefunction-datafile  "wikilink")
+      - [1.18.4 Velocity Wavefunction Datafile](#velocity-wavefunction-datafile  "wikilink")
+      - [1.18.5 Formatted Pseudopotential Datafile](#formatted-pseudopotential-datafile  "wikilink")
+      - [1.18.6 One-Dimensional Pseudopotential Datafile](#one-dimensional-pseudopotential-datafile  "wikilink")
+   - [1.19 Car-Parrinello Scheme for Ab Initio Molecular Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics  "wikilink")
+      - [1.19.1 Verlet Algorithm for Integration](#verlet-algorithm-for-integration  "wikilink")
+      - [1.19.2 Constant Temperature Simulations: Nose-Hoover Thermostats](#constant-temperature-simulations-nose-hoover-thermostats  "wikilink")
+   - [1.20 NWPW Tutorial 1: S2 dimer examples with PSPW](#nwpw-tutorial-1-s2-dimer-examples-with-pspw  "wikilink")
+      - [1.20.1 Total energy of S2 dimer with LDA approximation](#total-energy-of-s2-dimer-with-lda-approximation  "wikilink")
+      - [1.20.2 Structural optimization of S2 dimer with LDA approximation](#structural-optimization-of-s2-dimer-with-lda-approximation  "wikilink")
+      - [1.20.3 Frequency calculation of S2 dimer with LDA approximation](#frequency-calculation-of-s2-dimer-with-lda-approximation  "wikilink")
+      - [1.20.4 Ab initio molecular dynamics simulation (Car-Parrinello) of S2 dimer using the LDA approximation](#ab-initio-molecular-dynamics-simulation-car-parrinello-of-s2-dimer-using-the-lda-approximation  "wikilink")
+      - [1.20.5 Ab initio molecular dynamics simulation (Born-Oppenheimer) of S2 dimer using the LDA approximation](#ab-initio-molecular-dynamics-simulation-born-oppenheimer-of-s2-dimer-using-the-lda-approximation  "wikilink")
+   - [1.21 NWPW Tutorial 2: Using PSPW Car-Parrinello Simulated Annealing Simulations to Optimize Structures](#nwpw-tutorial-2:-using-pspw-car-parrinello-simulated-annealing-simulations-to-optimize-structures  "wikilink")
+      - [1.21.1 Simulated Annealing Using Constant Energy Simulation](#simulated-annealing-using-constant-energy-simulation  "wikilink")
+      - [1.21.2 Simulated Annealing Using Constant Temperature Simulation](#simulated-annealing-using-constant-temperature-simulation  "wikilink")
+   - [1.22 NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics](#nwpw-tutorial-3:-using-isodesmic-reaction-energies-to-estimate-gas-phase-thermodynamics  "wikilink")
+   - [1.23 NWPW Tutorial 4: AIMD/MM simulation of CCl4 + 64 H2O](#nwpw-tutorial-4:-aimdmm-simulation-of-ccl4-+-64-h2o  "wikilink")
+   - [1.24 NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond](#NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond  "wikilink")
+      - [1.24.1 Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW](#Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW  "wikilink")
+      - [1.24.2 Optimizing the Unit Cell for an 8 Atom Supercell of Diamond with BAND](#Optimizing the Unit Cell for an 8 Atom Supercell of Diamond with BAND  "wikilink")
+      - [1.24.3 Using BAND to Optimize the Unit Cell for a 2 Atom Primitive Cell of Diamond](#Using BAND to Optimize the Unit Cell for a 2 Atom Primitive Cell of Diamond  "wikilink")
+      - [1.24.4 Using BAND to Calculate the Band Structures of Diamond](#Using BAND to Calculate the Band Structures of Diamond  "wikilink")
+      - [1.24.5 Using BAND to Calculate the Density of States of Diamond](#Using BAND to Calculate the Density of States of Diamond  "wikilink")
+      - [1.24.6 Calculate the Phonon Spectrum of Diamond](#Calculate the Phonon Spectrum of Diamond  "wikilink")
+   - [1.25 NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation](#NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation  "wikilink")
+   - [1.26 NWPW Tutorial 7: Optimizing the unit cells with symmetry: Diamond with Fd-3m symmetry and Brucite with P-3m1 symmetry](#NWPW Tutorial 7: Optimizing the unit cells with symmetry: Diamond with Fd-3m symmetry and Brucite with P-3m1 symmetry  "wikilink")
+   - [1.27 NWPW Tutorial 8: NVT Metropolis Monte-Carlo Simulations](#NWPW Tutorial 8: NVT Metropolis Monte-Carlo Simulations  "wikilink")
+   - [1.28 NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations](#NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations  "wikilink")
+   - [1.29 NWPW Tutorial 9: Free Energy Simulations](#NWPW Tutorial 9: Free Energy Simulations  "wikilink")
+   - [1.30 PAW Tutorial](#PAW Tutorial  "wikilink")
+      - [1.30.1 Optimizing a water molecule](#Optimizing a water molecule  "wikilink")
+      - [1.30.2 Optimizing a unit cell and geometry for Silicon-Carbide](#Optimizing a unit cell and geometry for Silicon-Carbide  "wikilink")
+      - [1.30.3 Running a Car-Parrinello Simulation](#Running a Car-Parrinello Simulation 
+   - [1.31 NWPW Capabilities and Limitations](#nwpw-capabilities-and-limitations  "wikilink")
+   - [1.32 Development Blog](#development-blog  "wikilink")
+   - [1.33 Questions and Difficulties](#questions-and-difficulties "wikilink")
 
 
 # Pseudopotential plane-wave density functional theory (NWPW)
