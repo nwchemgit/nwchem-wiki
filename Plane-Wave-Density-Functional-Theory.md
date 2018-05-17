@@ -3599,12 +3599,12 @@ in units of au (conversion 1 au = 2.41889e-17 seconds).
 
 Key
 Input
-
-` ….`  
-` Car-Parrinello`  
-` SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=4.1889e-17seconds)`  
-` ….`
-
+```
+ ….
+ Car-Parrinello`  
+ SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=4.1889e-17seconds)  
+ ….
+```
 ## NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics
 
 ([isodesmic.pdf](isodesmic.pdf "wikilink")
@@ -4321,7 +4321,8 @@ end
 task band energy  
   
 nwpw  
-   virtual 26                #26 virtual orbitals included in the DOS calculation  
+   virtual 26                     #26 virtual orbitals included in the DOS calculation  
+   dos 0.002 700 -1.00000 2.0000  #alpha npoints emin emax,....,change default energy range and gridding. note alpha not used in task band dos calculations
    dos-grid 11 11 11  
 end  
 task band dos
@@ -4336,6 +4337,54 @@ states.
 <img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-dos.png" align=middle with="792pt" height="612pt"/>  
 
 </center>
+
+
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - projected density of states plot"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-pdos  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+end  
+  
+#need to run "task band energy" before "task band dos" can be run  
+task band energy  
+  
+nwpw  
+   virtual 26                     #26 virtual orbitals included in the DOS calculation  
+   dos 0.002 700 -1.00000 2.0000  #alpha npoints emin emax,....,change default energy range and gridding. note alpha not used in task band dos calculations
+   dos-grid 11 11 11  
+   mulliken                       # mulliken keyword used to turn on projected density of states
+end  
+task band dos
+```
+
 
 ### Calculate the Phonon Spectrum of Diamond
 
