@@ -4210,7 +4210,7 @@ coordinates and the unit cell are defined in the geometry block. The
 simulation\_cell block is not needed since NWPW automatically uses the
 unit cell defined in the geometry
 block.
-
+```
 `title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"`  
 `echo`  
   
@@ -4256,7 +4256,7 @@ block.
 `   zone_structure_name fccpath`  
 `end`  
 `task band structure`
-
+```
 This calculation outputs the
 [file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat "wikilink"))
 data file in the permanent\_directory. A plotting (e.g. gnuplot or
