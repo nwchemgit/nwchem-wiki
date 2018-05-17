@@ -4284,7 +4284,7 @@ states the diamond
 crystal.
 
 ```
-title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"  
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - density of states plot"  
 echo  
   
 permanent_dir ./perm  
@@ -4338,6 +4338,47 @@ states.
 </center>
 
 ### Calculate the Phonon Spectrum of Diamond
+
+
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Phonon spectra"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-dos  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+end  
+
+task band energy  
+task band freq
+
+```
+
 
 ## NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation
 
