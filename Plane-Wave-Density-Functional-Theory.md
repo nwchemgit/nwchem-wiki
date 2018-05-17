@@ -3142,7 +3142,7 @@ output:[Media:s2-example1.nwout](s2-example1.nwout "wikilink"))
 
 In this example, the total energy of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using LDA
 approximation for the exchange-correlation functional is calculated.
-
+```
 ` echo`  
 ` title "total energy of s2-dimer LDA/30Ry with PSPW method"`  
 ` scratch_dir   ./scratch`  
@@ -3162,10 +3162,10 @@ approximation for the exchange-correlation functional is calculated.
 `   lmbfgs`  
 ` end`  
 ` task pspw energy`
-
+```
 The energies from the simulation will
 be
-
+```
 ` ...`  
 ` ==  Summary Of Results  ==`  
   
@@ -3195,7 +3195,7 @@ be
 ` `  
 `  Total PSPW energy   :  -0.2041363137E+02`  
 ` ...`
-
+```
 ### Structural optimization of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
 (input:[Media:s2-example2.nw](s2-example2.nw "wikilink"),
@@ -3205,7 +3205,7 @@ In this example, the structure of the S<img alt="$_2$" src="https://raw.githubus
 generated from prior energy calculation is calculated. Since most of the
 parameters are already stored in the run-time database the input is very
 simple.
-
+```
 ` echo`  
 ` title "optimization of s2-dimer LDA/30Ry with PSPW method"`  
 ` scratch_dir   ./scratch`  
@@ -3216,21 +3216,21 @@ simple.
 `    xyz s2`  
 ` end`  
 ` task pspw optimize`
-
+```
 As the optimization process consists of series of total energy
 evaluations the contents of the output file are very much similar to
 that in Example I. At each step the total energy and force information
 will be outputed as
 follows
-
+```
 `   Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
 `   ---- ---------------- -------- -------- -------- -------- -------- --------`  
 ` @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8`
-
+```
 The best way to keep track of the optimization calculation is to run the
 following grep command on the output
 file.
-
+```
 ` grep @ outputfile`  
   
 ` @ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
@@ -3239,10 +3239,10 @@ file.
 ` @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8`  
 ` @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7`  
 ` @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7`
-
+```
 The optimized energy and geometry will
 be
-
+```
 ` ...`  
 `       ----------------------`  
 `       Optimization converged`  
@@ -3278,7 +3278,7 @@ be
 `     2 S                   16.0000     0.00000000     0.00000000     0.94557591`  
 ` `  
 ` ...`
-
+```
 ### Frequency calculation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
 (input:[Media:s2-example3.nw](s2-example3.nw "wikilink"),
@@ -3288,7 +3288,7 @@ In this example, the vibrational frequency of the S<img alt="$_2$" src="https://
 results generated from prior geometry optimization is calculated. Since
 most of the parameters are already stored in the run-time database the
 input is very simple.
-
+```
 ` echo`  
 ` title "frequency calculation of s2-dimer LDA/30Ry with PSPW method"`  
 ` scratch_dir   ./scratch`  
@@ -3335,7 +3335,7 @@ generated
 `     6      723.419 ||    0.000000           0.000         0.000       0.000`  
 `  ----------------------------------------------------------------------------`  
 ` ...`
-
+```
 ### Ab initio molecular dynamics simulation (Car-Parrinello) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
 
 (input:[Media:s2-example4.nw](s2-example4.nw "wikilink"),
@@ -3347,7 +3347,7 @@ In this example, a constant energy Car-Parrinello simulation of S<img alt="$_2$"
 dimer using LDA approximation is calculated. A brief introduction to the
 Car-Parrinello method can be found in
 [cpmd-lecture.pdf](cpmd-lecture.pdf "wikilink")
-
+```
 ` echo`  
 ` title "AIMD simulation of s2-dimer"`  
 ` scratch_dir   ./scratch`  
@@ -3374,13 +3374,13 @@ Car-Parrinello method can be found in
 ` end`  
 ` task pspw energy`  
 ` task pspw car-parrinello`
-
+```
 A plotting program (e.g. gnuplot, xmgrace) can be used to look at the
 total, potential, kinetic energies, contained in the s2-md.emotion file
 (see section [EMOTION motion file](#EMOTION_motion_file "wikilink") for
 datafile format)
 i.e.,
-
+```
 ` seattle-1604% gnuplot`  
 ` `  
 `       G N U P L O T`  
@@ -3408,7 +3408,7 @@ i.e.,
 ` Terminal type set to 'x11'`  
 ` gnuplot> plot "s2-md.emotion","s2-md.emotion" using 1:3`  
 ` gnuplot> `
-
+```
 The following plot shows the Car-Parrinello <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
 energy surface generated from the
 simulation.
@@ -3423,7 +3423,7 @@ output:[Media:s2-example5.nwout](s2-example5.nwout "wikilink")
 [Media:s2-bomd.emotion.dat](s2-bomd.emotion.dat "wikilink") ) In
 this example, a constant energy Born-Oppenheimer simulation of S2 dimer
 using LDA approximation is calculated.
-
+```
 ` title "AIMD simulation of s2-dimer"`  
 ` echo`
 
@@ -3453,7 +3453,7 @@ using LDA approximation is calculated.
 `    bo_time_step 10.0`  
 ` end`  
 ` task pspw born-oppenheimer`
-
+```
 The following plot shows the <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> energy surface
 generated from the
 simulation.
@@ -3520,7 +3520,7 @@ to increase the ionic velocities by a factor of two at the start of the
 Car-Parrinello simulation.
 
 Key Input
-
+```
 ` ….`  
 ` Car-Parrinello`  
 ` fake_mass 500.0`  
@@ -3532,9 +3532,9 @@ Key Input
 ` xyz_filename     b12.00.xyz`  
 ` end`  
 ` ….`
-
+```
 Output
-
+```
 ` ….      `  
 `     wavefnc cutoff= 10.000  fft= 42x 42x 42(     6027 waves     1004 per task)`  
 ` `  
@@ -3554,16 +3554,16 @@ Output
 ` `  
 `Constant Energy Simulation         `  
 ` ….`
-
+```
 The program checks to see if the initial input ionic velocities have a
 non-zero center of mass velocity. If there is a non-zero center of mass
 velocity in the system then by default the program removes it. To turn
 off this feature set the following
-
-` nwpw`  
-`    translation on`  
-` end`
-
+```
+ nwpw 
+    translation on  
+ end
+```
 or
 
 ` set nwpw:com_shift .false.`
@@ -3725,16 +3725,16 @@ H = E + H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/
 
 Thermodynamic output from a frequency
 calculation:
-
+```
 `Temperature                      =   298.15K`  
 `frequency scaling parameter      =   1.0000`  
   
 `Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)`  
 `Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)`
-
+```
 The following line contains the value for
 H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
-
+```
 `Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)`
 
 `Total Entropy                    =   44.401 cal/mol-K`  
@@ -3746,7 +3746,7 @@ H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgi
 `  - Translational                  =    2.979 cal/mol-K`  
 `  - Rotational                     =    2.979 cal/mol-K`  
 `  - Vibrational                    =    0.544 cal/mol-K`
-
+```
 <center>
 
 |              |             |             |             |             |               |             |               |            |
@@ -3836,7 +3836,7 @@ cell are defined in the geometry block. The simulation\_cell block is
 not needed since NWPW automatically uses the unit cell defined in the
 geometry
 block.
-
+```
 `title "Diamond 8 atom cubic cell - geometry and unit cell optimization"`  
 `echo`  
 ` `  
@@ -3882,10 +3882,10 @@ block.
 `set nwpw:cif_filename diamond.opt  # create a CIF file containing optimization history `  
 `set includestress .true.           # this option tells driver to optimize the unit cell`  
 `task pspw optimize ignore`
-
+```
 The optimized energy and geometry will
 be
-
+```
 ` ...`  
 `     ----------------------`  
 `     Optimization converged`  
@@ -3971,7 +3971,7 @@ be
 `------------------------------------------------------------------------------`  
 `                           number of included internuclear angles:          9`  
 `==============================================================================  ...`
-
+```
 The C-C bond distance after the geometry optimization is 1.58 Angs. and
 agrees very well with the experimental value of 1.54 Angs.. Another
 quantity that can be calculated from this simulation is the cohesive
@@ -3989,7 +3989,7 @@ used to the energy of an isolated carbon atom.
 
 (input:[file:catom-pspw.nw](catom-pspw.nw "wikilink"),
 output:[file:catom-pspw.nwout](catom-pspw.nwout "wikilink"))
-
+```
 `title "triplet carbon atom at pbe96 level using a large unit cell"`  
 `start c1-pspw`  
 `memory 1400 mb`  
@@ -4012,7 +4012,7 @@ output:[file:catom-pspw.nwout](catom-pspw.nwout "wikilink"))
 `  lmbfgs`  
 `end`  
 `task pspw energy`
-
+```
 The total energy from the simulation will be
 
 `Total PSPW energy   :  -0.5421213534E+01`
@@ -4038,7 +4038,7 @@ output:[Media:diamond-band.nwout](diamond-band.nwout "wikilink"))
 In this example the BAND module is used to optimize the unit cell and
 geometry for a diamond crystal at different Brillouin zone
 samplings.
-
+```
 `title "Diamond 8 atom cubic cell - geometry and unit cell optimization" `  
 `echo`  
   
@@ -4112,7 +4112,7 @@ samplings.
 `end`  
 `set nwpw:cif_filename diamond555.opt`  
 `driver; clear; maxiter 40; end; task band optimize ignore`
-
+```
 The following figure shows a plot of the cohesive energy and C-C bond
 distance versus the Brillouin zone sampling. As can be seen in this
 figure the cohesive energy (w/o zero-point correction) and C-C bond
@@ -4135,7 +4135,7 @@ In this example the BAND module is used to optimize a 2 atom unit cell
 for a diamond crystal at different Brillouin zone samplings. The
 optimized energy and geometry will be (Monkhorst-Pack sampling of
 11x11x11)
-
+```
 `     ----------------------`  
 `     Optimization converged`  
 `     ----------------------`  
@@ -4190,7 +4190,7 @@ optimized energy and geometry will be (Monkhorst-Pack sampling of
 ` ------------------------------------------------------------------------------`  
 `                         number of included internuclear distances:          1`  
 ` ==============================================================================`
-
+```
 The following figure shows a plot of the cohesive energy and C-C bond
 distance versus the Brillouin zone sampling for the 8 atom SC unit cell
 and the 2 atom FCC unit
