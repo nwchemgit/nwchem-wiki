@@ -1107,11 +1107,12 @@ NWPW
            <string density_name no default>  
    ELF [restricted|alpha|beta] <string elf_name no default>`   
    ORBITAL <integer orbital_number no default> <string orbital_name no default>  
-   [LIMITXYZ [units <string Units default angstroms>]   
+   [LIMITXYZ [units <string Units default au>]   
    <real X_From> <real X_To> <integer No_Of_Spacings_X>   
    <real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
    <real Z_From> <real Z_To> <integer No_Of_Spacings_Z>]  
    NCELL <integer nx default 0> <integer ny default 0> <integer nz default 0>
+   POSITION_TOLERANCE <real rtol default 0.001>
  END  
 ...  
 END
