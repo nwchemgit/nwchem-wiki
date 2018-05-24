@@ -1102,15 +1102,15 @@ sub-block.
 NWPW  
 ...   
  DPLOT  
-   VECTORS `<string input_wavefunctions default input_movecs>`  
+   VECTORS <string input_wavefunctions default input_movecs>  
    DENSITY [total||diff||alpha||beta||laplacian||potential default total]   
-           `<string density_name no default>`   
-   ELF [restricted|alpha|beta] `<string elf_name no default>`   
-   ORBITAL `<integer orbital_number no default>` `<string orbital_name no default>  
-   [LIMITXYZ [units `<string Units default angstroms>`]   
-   `<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>`   
-   `<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
-   `<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>`]  
+           <string density_name no default>  
+   ELF [restricted|alpha|beta] <string elf_name no default>`   
+   ORBITAL <integer orbital_number no default> <string orbital_name no default>  
+   [LIMITXYZ [units <string Units default angstroms>]   
+   <real X_From> <real X_To> <integer No_Of_Spacings_X>   
+   <real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
+   <real Z_From> <real Z_To> <integer No_Of_Spacings_Z>]  
  END  
 ...  
 END
@@ -1124,9 +1124,10 @@ the second file is optionally given the density is computed as the
 difference between the corresponding electron densities. The vector
 files have to
 match.
-
-`DENSITY [total||difference||alpha||beta||laplacian||potential default total] <string density_name no default>`
-
+```
+DENSITY [total||difference||alpha||beta||laplacian||potential default total] 
+        <string density_name no default>
+```
 This sub-directive specifies, what kind of density is to be plotted. The
 known names for total, difference, alpha, beta, laplacian, and
 potential.
@@ -1143,9 +1144,9 @@ This sub-directive specifies the molecular orbital number that is to be
 plotted.
 ```
 LIMITXYZ [units <string Units default angstroms>]  
-<real X_From> <real X_To>` `<integer No_Of_Spacings_X>  
-<real Y_From> <real Y_To>` `<integer No_Of_Spacings_Y>  
-<real Z_From> <real Z_To>` `<integer No_Of_Spacings_Z>
+<real X_From> <real X_To> <integer No_Of_Spacings_X>  
+<real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
+<real Z_From> <real Z_To> <integer No_Of_Spacings_Z>
 ```
 By default the grid spacing and the limits of the cell to be plotted are
 defined by the input wavefunctions. Alternatively the user can use the
@@ -1157,9 +1158,9 @@ for Units are angstroms, au and bohr.
 
 All input to the Band Tasks is contained within the compound NWPW block,
 ```
-`NWPW `  
-` ...`  
-`END`
+NWPW   
+ ...  
+END
 ```
 To perform an actual calculation a Task Band directive is used (Section
 [Task](Top-level#TASK "wikilink")).
@@ -1172,51 +1173,51 @@ sub-directives which allow for customized application; those currently
 provided as options for the Band module
 are:
 ```
-`NWPW `  
-` CELL_NAME <string cell_name default 'cell_default'> `  
-` ZONE_NAME <string zone_name default 'zone_default'> `  
-` INPUT_WAVEFUNCTION_FILENAME `<string input_wavefunctions default input_movecs>` `  
-` OUTPUT_WAVEFUNCTION_FILENAME `<string output_wavefunctions default input_movecs>` `  
-` FAKE_MASS <real fake_mass default 400000.0> `  
-` TIME_STEP <real time_step default 5.8> `  
-` LOOP <integer inner_iteration outer_iteration default 10 100> `  
-` TOLERANCES <real tole tolc default 1.0e-7 1.0e-7> `  
-` CUTOFF `<real cutoff>` `  
-` ENERGY_CUTOFF <real ecut default (see input description)> `  
-` WAVEFUNCTION_CUTOFF <real wcut default (see input description)> `  
-` EWALD_NCUT <integer ncut default 1>] `  
-` EWALD_RCUT <real rcut default (see input description)> `
+NWPW   
+ CELL_NAME <string cell_name default cell_default> 
+ ZONE_NAME <string zone_name default zone_default>  
+ INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default input_movecs>  
+ OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default input_movecs>  
+ FAKE_MASS <real fake_mass default 400000.0>   
+ TIME_STEP <real time_step default 5.8>   
+ LOOP <integer inner_iteration outer_iteration default 10 100>   
+ TOLERANCES <real tole tolc default 1.0e-7 1.0e-7> 
+ CUTOFF <real cutoff>  
+ ENERGY_CUTOFF <real ecut default (see input description)> 
+ WAVEFUNCTION_CUTOFF <real wcut default (see input description)>  
+ EWALD_NCUT <integer ncut default 1>] 
+ EWALD_RCUT <real rcut default (see input description)> 
 
-` XC (Vosko      || LDA          || PBE96         || revPBE       || PBEsol          ||  `  
-`                     || HSE  || default Vosko)                                                                `  
-`  #Note that HSE is the only hybrid functional implemented in BAND`
+ XC (Vosko      || LDA          || PBE96         || revPBE       || PBEsol          ||  `  
+                || HSE  || default Vosko)                                                                `  
+  #Note that HSE is the only hybrid functional implemented in BAND
 
-` DFT||ODFT||RESTRICTED||UNRESTRICTED `  
-` MULT <integer mult default 1> `  
-` CG `  
-` LMBFGS `  
-` SCF [Anderson|| simple || Broyden] `  
-` [CG || RMM-DIIS] [density || potential] `  
-` [ALPHA real alpha default 0.25] `  
-` [ITERATIONS integer inner_iterations default 5] `  
-` [OUTER_ITERATIONS integer outer_iterations default 0]`
+ DFT||ODFT||RESTRICTED||UNRESTRICTED   
+ MULT <integer mult default 1>   
+ CG  
+ LMBFGS  
+ SCF [Anderson|| simple || Broyden]  
+ [CG || RMM-DIIS] [density || potential]  
+ [ALPHA real alpha default 0.25]  
+ [ITERATIONS integer inner_iterations default 5]  
+ [OUTER_ITERATIONS integer outer_iterations default 0]
 
-` SIMULATION_CELL `  
-`   ... (see input description) `  
-` END `  
-` BRILLOUIN_ZONE `  
-`   ... (see input description) `  
-` END `  
-` MONKHORST-PACK <real n1 n2 n3 default 1 1 1>`  
-` BAND_DPLOT `  
-`   ... (see input description) `  
-` END`  
-` MAPPING <integer mapping default 1> `  
-` SMEAR <sigma default 0.001> `  
-` [TEMPERATURE `<temperature>`] `  
-` [FERMI || GAUSSIAN default FERMI] `  
-` [ORBITALS <integer orbitals default 4>]`  
-`END `
+ SIMULATION_CELL 
+   ... (see input description)   
+ END 
+ BRILLOUIN_ZONE 
+   ... (see input description) 
+ END 
+ MONKHORST-PACK <real n1 n2 n3 default 1 1 1>
+ BAND_DPLOT 
+   ... (see input description)  
+ END`  
+ MAPPING <integer mapping default 1>  
+ SMEAR <sigma default 0.001> 
+ [TEMPERATURE `<temperature>`] 
+ [FERMI || GAUSSIAN default FERMI] 
+ [ORBITALS <integer orbitals default 4>] 
+END 
 ```
 The following list describes these keywords.
 
@@ -1276,15 +1277,15 @@ brillouin\_zone sub-block within the NWPW block. Listed below is the
 format of a brillouin\_zone
 sub-block.
 ```
-`NWPW`  
-`... `  
-` BRILLOUIN_ZONE `  
-`   ZONE_NAME <string name default 'zone_default'> `  
-`   (KVECTOR <real k1 k2 k3 no default> <real weight default (see input description)> `  
-`    ...) `  
-` END`  
-`...`  
-`END`
+NWPW  
+...   
+ BRILLOUIN_ZONE 
+   ZONE_NAME <string name default zone_default> 
+   (KVECTOR <real k1 k2 k3 no default> <real weight default (see input description)>   
+    ...)   
+ END  
+...  
+END
 ```
 The user enters the special points and weights of the Brillouin zone.
 The following list describes the input in detail.
