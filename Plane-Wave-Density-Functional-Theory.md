@@ -1111,6 +1111,7 @@ NWPW
    <real X_From> <real X_To> <integer No_Of_Spacings_X>   
    <real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
    <real Z_From> <real Z_To> <integer No_Of_Spacings_Z>]  
+   NCELL <integer nx default 0> <integer ny default 0> <integer nz default 0>
  END  
 ...  
 END
