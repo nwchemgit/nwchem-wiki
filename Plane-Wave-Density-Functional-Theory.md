@@ -1066,17 +1066,17 @@ functions.
 The following SET directives are used to define the
 fitting.
 ```
-`set pspw_APC:Gc `<real Gc_cutoff>` # specifies the maximum frequency component of the density to be used in the fitting in units of au.`  
-`set pspw_APC:nga `<integer number_gauss>` # specifies the the number of Gaussian functions per atom.`  
-`set pspw_APC:gamma `<real gamma_list>` # specifies the decay lengths of each atom centered Gaussian. `
+set pspw_APC:Gc <real Gc_cutoff> # specifies the maximum frequency component of the density to be used in the fitting in units of au.  
+set pspw_APC:nga `<integer number_gauss>` # specifies the the number of Gaussian functions per atom.
+set pspw_APC:gamma `<real gamma_list>` # specifies the decay lengths of each atom centered Gaussian. 
 ```
 We suggest using the following parameters.
 ```
-`set pspw_APC:Gc 2.5`  
-`set pspw_APC:nga 3`  
-`set pspw_APC:gamma 0.6 0.9 1.35 `  
+set pspw_APC:Gc 2.5
+set pspw_APC:nga 3 
+set pspw_APC:gamma 0.6 0.9 1.35  
 ```
-### PSPW\_DPLOT - Generate Gaussian Cube Files
+### PSPW_DPLOT - Generate Gaussian Cube Files
 
 The pspw dplot task is used to generate plots of various types of
 electron densities (or orbitals) of a molecule. The electron density is
@@ -1084,13 +1084,13 @@ calculated on the specified set of grid points from a PSPW calculation.
 The output file generated is in the Gaussian Cube format. Input to the
 DPLOT task is contained within the DPLOT sub-block.
 ```
-`NWPW `  
-`... `  
-` DPLOT `  
-`   ... `  
-` END `  
-`...`  
-`END`
+NWPW 
+...  
+ DPLOT   
+   ...   
+ END  
+... 
+END
 ```
 To run a DPLOT calculation the following directive is used:
 
@@ -1099,25 +1099,25 @@ To run a DPLOT calculation the following directive is used:
 Listed below is the format of a DPLOT
 sub-block.
 ```
-`NWPW`  
-`... `  
-` DPLOT `  
-`   VECTORS `<string input_wavefunctions default input_movecs>` `  
-`   DENSITY [total||diff||alpha||beta||laplacian||potential default total] `  
-`           `<string density_name no default>` `  
-`   ELF [restricted|alpha|beta] `<string elf_name no default>` `  
-`   ORBITAL `<integer orbital_number no default>` `<string orbital_name no default>  
-`   [LIMITXYZ [units `<string Units default angstroms>`] `  
-`   `<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>` `  
-`   `<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
-`   `<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>`]`  
-` END`  
-`...`  
-`END`
+NWPW  
+...   
+ DPLOT  
+   VECTORS `<string input_wavefunctions default input_movecs>`  
+   DENSITY [total||diff||alpha||beta||laplacian||potential default total]   
+           `<string density_name no default>`   
+   ELF [restricted|alpha|beta] `<string elf_name no default>`   
+   ORBITAL `<integer orbital_number no default>` `<string orbital_name no default>  
+   [LIMITXYZ [units `<string Units default angstroms>`]   
+   `<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>`   
+   `<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
+   `<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>`]  
+ END  
+...  
+END
 ```
 The following list describes the input for the DPLOT sub-block.
 
-`VECTORS `<string input_wavefunctions default input_movecs>`  `
+`VECTORS <string input_wavefunctions default input_movecs>` 
 
 This sub-directive specifies the name of the molecular orbital file. If
 the second file is optionally given the density is computed as the
@@ -1125,27 +1125,27 @@ difference between the corresponding electron densities. The vector
 files have to
 match.
 
-`DENSITY [total||difference||alpha||beta||laplacian||potential default total] `<string density_name no default>
+`DENSITY [total||difference||alpha||beta||laplacian||potential default total] <string density_name no default>`
 
 This sub-directive specifies, what kind of density is to be plotted. The
 known names for total, difference, alpha, beta, laplacian, and
 potential.
 
-`ELF [restricted|alpha|beta] `<string elf_name no default>
+`ELF [restricted|alpha|beta] <string elf_name no default>`
 
 This sub-directive specifies that an electron localization function
 (ELF) is to be
 plotted.
 
-`ORBITAL `<integer orbital_number no default>` `<string orbital_name no default>
+`ORBITAL <integer orbital_number no default> <string orbital_name no default>`
 
 This sub-directive specifies the molecular orbital number that is to be
 plotted.
 ```
-`LIMITXYZ [units `<string Units default angstroms>`] `  
-<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>` `  
-<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
-<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>
+LIMITXYZ [units <string Units default angstroms>]  
+<real X_From> <real X_To>` `<integer No_Of_Spacings_X>  
+<real Y_From> <real Y_To>` `<integer No_Of_Spacings_Y>  
+<real Z_From> <real Z_To>` `<integer No_Of_Spacings_Z>
 ```
 By default the grid spacing and the limits of the cell to be plotted are
 defined by the input wavefunctions. Alternatively the user can use the
