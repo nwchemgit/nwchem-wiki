@@ -13,8 +13,8 @@ Performance of the Gaussian basis set DFT module in NWChem. This
 calculation involved performing a PBE0 calculation (in direct mode) on
 the on C<sub>240</sub> system with the 6-31G\* basis set (3600 basis
 functions) without symmetry. These calculations were performed on the
-Cascade supercomputer located at PNNL. The [input
-file](input_c240_pbe0.nw "wikilink") is available.
+Cascade supercomputer located at PNNL. [Input](c240_631gs.nw "wikilink") and
+[output](c240_631gs.output "wikilink") files are available.
 
 ![c240\_web10.png](./c240_web10.png "c240_web4.png")
 
