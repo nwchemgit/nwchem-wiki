@@ -188,15 +188,16 @@ pspw gradient TASK pspw optimize TASK pspw saddle TASK pspw freqencies
 TASK pspw vib there are additional directives that are specific to the
 PSPW module, which are:
 ```
-`TASK PSPW [Car-Parrinello             || `  
-`           pspw_dplot                 || `  
-`           wannier                    || `  
-`           psp_generator              || `  
-`           steepest_descent           || `  
-`           psp_formatter              || `  
-`           wavefunction_initializer   || `  
-`           v_wavefunction_initializer || `  
-`           wavefunction_expander       ]`
+TASK PSPW [Car-Parrinello             ||   
+           Born-Oppenheimer           ||
+           pspw_dplot                 ||  
+           wannier                    || 
+           psp_generator              || 
+           steepest_descent           ||  
+           psp_formatter              || 
+           wavefunction_initializer   ||  
+           v_wavefunction_initializer ||  
+           wavefunction_expander       ]
 ```
 Once a user has specified a geometry, the PSPW module can be invoked
 with no input directives (defaults invoked throughout). However, the
