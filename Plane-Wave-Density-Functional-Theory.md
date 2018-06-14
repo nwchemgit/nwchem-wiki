@@ -183,15 +183,33 @@ To perform an actual calculation a TASK PSPW directive is used (Section
 `TASK PSPW`
 
 In addition to the directives listed in
-[Task](Top-level#Task "wikilink"), i.e. TASK pspw energy TASK
-pspw gradient TASK pspw optimize TASK pspw saddle TASK pspw freqencies
-TASK pspw vib there are additional directives that are specific to the
+[Task](Top-level#Task "wikilink"), i.e. 
+```
+TASK PSPW energy 
+TASK PSPW gradient 
+TASK PSPW optimize 
+TASK PSPW saddle 
+TASK PSPW freqencies
+TASK PSPW vib 
+```
+there are additional directives that are specific to the
 PSPW module, which are:
 ```
 TASK PSPW [Car-Parrinello             ||   
            Born-Oppenheimer           ||
+           Metropolis                 ||
+           pspw_et                    ||
+           noit_energy                ||
+           stress                     ||
            pspw_dplot                 ||  
-           wannier                    || 
+           wannier                    ||
+           expand_cell                || 
+           exafs                      ||
+           ionize                     ||
+           lcao                       ||
+           rdf                        ||
+           aimd_properties            ||
+           translate                  ||
            psp_generator              || 
            steepest_descent           ||  
            psp_formatter              || 
