@@ -2224,17 +2224,17 @@ The simulation cell parameters are entered by defining a
 simulation\_cell sub-block within the PSPW block. Listed below is the
 format of a simulation\_cell sub-block.
 ```
-`NWPW`  
-`... `  
-` SIMULATION_CELL CELL_NAME <string name default 'cell_default'> `  
-` BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) `  
-` LATTICE_VECTORS `  
-`   <real a1.x a1.y a1.z default 20.0 0.0 0.0> `  
-`   <real a2.x a2.y a2.z default 0.0 20.0 0.0> `  
-`   <real a3.x a3.y a3.z default 0.0 0.0 20.0> `  
-` NGRID <integer na1 na2 na3 default 32 32 32> END`  
-`...`  
-`END`
+NWPW 
+...   
+ SIMULATION_CELL CELL_NAME <string name default 'cell_default'>  
+ BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) 
+ LATTICE_VECTORS   
+   <real a1.x a1.y a1.z default 20.0 0.0 0.0> 
+   <real a2.x a2.y a2.z default 0.0 20.0 0.0>   
+   <real a3.x a3.y a3.z default 0.0 0.0 20.0> 
+ NGRID <integer na1 na2 na3 default 32 32 32> END 
+...  
+`END
 ```
 Basically, the user needs to enter the dimensions, gridding and boundary
 conditions of the simulation cell. The following list describes the
@@ -2261,35 +2261,35 @@ enter the unit cell using the standard cell parameters, a, b, c,
 and <img alt="$\gamma$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>, by using the LATTICE block. The
 format for input is as follows:
 ```
-`NWPW`  
-`... `  
-` SIMULATION_CELL `  
-`   ... `  
-`   LATTICE `  
-`     [lat_a <real a default 20.0>] `  
-`     [lat_b <real b default 20.0>] `  
-`     [lat_c <real c default 20.0>] `  
-`     [alpha <real alpha default 90.0>] `  
-`     [beta <real beta default 90.0>] `  
-`     [gamma <real gamma default 90.0>] `  
-`   END `  
-`   ... `  
-` END`  
-`...`  
-`END`
+NWPW 
+... 
+ SIMULATION_CELL `  
+   ...   
+   LATTICE   
+     [lat_a <real a default 20.0>]  
+     [lat_b <real b default 20.0>]  
+     [lat_c <real c default 20.0>] 
+     [alpha <real alpha default 90.0>]  
+     [beta <real beta default 90.0>] 
+     [gamma <real gamma default 90.0>]  
+   END 
+   ...   
+ END
+...
+END
 ```
 The user can also enter the lattice vectors of standard unit cells using
 the keywords SC, FCC, BCC, for simple cubic, face-centered cubic, and
 body-centered cubic respectively. Listed below is an example of the
 format of this type of input.
 ```
-`NWPW`  
-`... `  
-` SIMULATION_CELL SC 20.0 `  
-`   .... `  
-` END`  
-`...`  
-`END`
+NWPW 
+... 
+ SIMULATION_CELL SC 20.0 
+   .... 
+ END
+...
+END
 ```
 Finally, the lattice vectors from the unit cell can also be defined
 using the fractional coordinate input in the GEOMETRY input (see section
@@ -2298,24 +2298,24 @@ Parameters](Geometry#SYSTEM_--_Lattice_parameters_for_periodic_systems "wikilink
 Listed below is an example of the format of this type of input for an 8
 atom silicon carbide unit cell.
 ```
-`geometry units au `  
-` system crystal `  
-`   lat_a 8.277d0 `  
-`   lat_b 8.277d0 `  
-`   lat_c 8.277d0 `  
-`   alpha 90.0d0 `  
-`   beta 90.0d0 `  
-`   gamma 90.0d0 `  
-` end`  
-` Si -0.50000d0 -0.50000d0 -0.50000d0`  
-` Si 0.00000d0 0.00000d0 -0.50000d0`  
-` Si 0.00000d0 -0.50000d0 0.00000d0`  
-` Si -0.50000d0 0.00000d0 0.00000d0`  
-` C -0.25000d0 -0.25000d0 -0.25000d0`  
-` C 0.25000d0 0.25000d0 -0.25000d0`  
-` C 0.25000d0 -0.25000d0 0.25000d0`  
-` C -0.25000d0 0.25000d0 0.25000d0`  
-`end`
+geometry units au  
+ system crystal 
+   lat_a 8.277
+   lat_b 8.277   
+   lat_c 8.277   
+   alpha 90.0  
+   beta 90.0   
+   gamma 90.0   
+ end
+ Si -0.50000 -0.50000 -0.50000
+ Si  0.00000  0.00000 -0.50000 
+ Si  0.00000 -0.50000  0.00000
+ Si -0.50000  0.00000  0.00000  
+ C  -0.25000 -0.25000 -0.25000  
+ C   0.25000  0.25000 -0.25000 
+ C   0.25000 -0.25000  0.25000 
+ C  -0.25000  0.25000  0.25000  
+end
 ```
 Warning - Currently only the "system crystal" option is recognized by
 NWPW. The "system slab" and "system polymer" options will be supported
@@ -2336,10 +2336,10 @@ crystal unit cell in addition to the geometry.
 The smear keyword to turn on fractional occupation of the molecular
 orbitals in PSPW and BAND
 calculations
-
-`SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`] [FERMI || GAUSSIAN default FERMI] `  
-`                            [ORBITALS <integer orbitals default 4>]`
-
+```
+SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`] [FERMI || GAUSSIAN default FERMI]   
+                            [ORBITALS <integer orbitals default 4>]
+```
 Both Fermi-Dirac (FERMI) and Gaussian broadening functions are
 available. The ORBITALS keyword is used to change the number of virtual
 orbitals to be used in the calculation. Note to use this option the user
@@ -2367,64 +2367,63 @@ to
 
 An example input is as follows:
 ```
-`title "hematite 10 atoms"`  
+title "hematite 10 atoms"
   
-`start hema10`  
+start hema10
   
-`memory 1900 mb`  
+memory 1900 mb
   
-`permanent_dir ./perm`  
-`scratch_dir   ./perm`  
+permanent_dir ./perm
+scratch_dir   ./perm
   
-`geometry center noautosym noautoz print`  
-` system crystal`  
-`   lat_a 5.42`  
-`   lat_b 5.42`  
-`   lat_c 5.42`  
-`   alpha 55.36`  
-`   beta  55.36`  
-`   gamma 55.36`  
-` end`  
-`Fe                  0.355000   0.355000   0.355000`  
-`Fe                  0.145000   0.145000   0.145000`  
-`Fe                 -0.355000  -0.355000  -0.355000`  
-`Fe                  0.855000   0.855000   0.855000`  
-`O                   0.550000  -0.050000   0.250000`  
-`O                   0.250000   0.550000  -0.050000`  
-`O                  -0.050000   0.250000   0.550000`  
-`O                  -0.550000   0.050000  -0.250000`  
-`O                  -0.250000  -0.550000   0.050000`  
-`O                   0.050000  -0.250000  -0.550000`  
-`end`  
+geometry center noautosym noautoz print
+ system crystal
+   lat_a 5.42 
+   lat_b 5.42 
+   lat_c 5.42 
+   alpha 55.36  
+   beta  55.36  
+   gamma 55.36  
+ end
+Fe                  0.355000   0.355000   0.355000
+Fe                  0.145000   0.145000   0.145000  
+Fe                 -0.355000  -0.355000  -0.355000  
+Fe                  0.855000   0.855000   0.855000  
+O                   0.550000  -0.050000   0.250000  
+O                   0.250000   0.550000  -0.050000  
+O                  -0.050000   0.250000   0.550000  
+O                  -0.550000   0.050000  -0.250000  
+O                  -0.250000  -0.550000   0.050000  
+O                   0.050000  -0.250000  -0.550000\  
+end  
   
-`nwpw`  
-`  virtual 8`  
-`  odft`  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8`  
-`  xc pbe96`  
-`  lmbfgs`  
-`  cutoff 10.0`  
-`  mult 1`  
-`  dplot`  
-`     density diff diff1.cube`  
-`  end`  
-`   `  
-`  #spin penalty functions`  
-`  pspspin up   d -1.0 1:2`  
-`  pspspin down d -1.0 3:4`  
-`end`  
-`task pspw energy`  
-`task pspw pspw_dplot`  
+nwpw
+  virtual 8
+  odft
+  ewald_rcut 3.0
+  ewald_ncut 8 
+  xc pbe96
+  lmbfgs 
+  mult 1
+  dplot
+     density diff diff1.cube
+  end`  
+
+  #spin penalty functions  
+  pspspin up   d -1.0 1:2  
+  pspspin down d -1.0 3:4  
+end
+task pspw energy 
+task pspw pspw_dplot  
   
-`nwpw`  
-`  pspspin off`  
-`  dplot`  
-`     density diff diff2.cube`  
-`  end`  
-`end`  
-`task pspw energy`  
-`task pspw pspw_dplot`
+nwpw
+  pspspin off
+  dplot
+     density diff diff2.cube
+  end`  
+end`  
+task pspw energy
+task pspw pspw_dplot
 ```
 ## AIMD/MM (QM/MM)
 
