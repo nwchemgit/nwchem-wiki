@@ -93,9 +93,9 @@ where charge is the net charge of the set of atoms {[iatom:jatom]}.
 
   - The individual charge of a group of atoms can be constrained to be equal to those of a second group of atoms
 with
-
-`       constrain group  <integer iatom> <integer jatom>  to  <integer katom> <integer latom> ` 
-  
+```
+      constrain group  <integer iatom> <integer jatom>  to  <integer katom> <integer latom>
+```  
 resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k atom+1, ... for atoms jatom and latom.
 
   - A special constraint
