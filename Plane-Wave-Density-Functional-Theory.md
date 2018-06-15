@@ -225,70 +225,67 @@ most systems. There are sub-directives which allow for customized
 application; those currently provided as options for the PSPW module
 are:
 ```
-`NWPW `  
-` SIMULATION_CELL            ... (see section `[`Simulation``
-``Cell`](#Simulation_Cell "wikilink")`) END `  
-` CELL_NAME <string cell_name default 'cell_default'> `  
-` VECTORS [[input (<string input_wavefunctions default file_prefix.movecs>) ||`  
-`          [output(<string output_wavefunctions default file_prefix.movecs>)]]`  
-` XC (Vosko      || LDA          || PBE96         || revPBE       || PBEsol          ||  `  
-`     LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    || `  
-`     PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  || `  
-`     revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC || `  
-`     PBE96-Grimme2  || PBE96-Grimme3  || PBE96-Grimme4  || BLYP-Grimme2   || BLYP-Grimme3    || BLYP-Grimme4 ||`  
-`     revPBE-Grimme2 || revPBE-Grimme3 || revPBE-Grimme4 || PBEsol-Grimme2 || PBEsol-Grimme3 || PBEsol-Grimme4 ||`  
-`     PBE0-Grimme2    || PBE0-Grimme3    || PBE0-Grimme4   || B3LYP-Grimme2  || B3LYP-Grimme3  || B3LYP-Grimme4 ||`  
-`     revPBE0-Grimme2 || revPBE0-Grimme3 || revPBE0-Grimme4 ||`  
-`     PBE0       || revPBE0      || HSE  || HF || default Vosko) `  
-` XC new ...(see section `[`Using`` ``Exchange-Correlation``
-``Potentials`` ``Available`` ``in`` ``the`` ``DFT``
-``Module`](#Using_Exchange-Correlation_Potentials_Available_in_the_DFT_Module "wikilink")`)`  
-` DFT||ODFT||RESTRICTED||UNRESTRICTED `  
-` MULT <integer mult default 1> `  
-` CG `  
-` LMBFGS `  
-` SCF [Anderson|| simple || Broyden] `  
-`     [CG || RMM-DIIS] `  
-`     [density || potential] `  
-`     [ALPHA real alpha default 0.25] `  
-`     [Kerker real ekerk nodefault]`  
-`     [ITERATIONS integer inner_iterations default 5] `  
-`     [OUTER_ITERATIONS integer outer_iterations default 0]`  
-` LOOP <integer inner_iteration outer_iteration default 10 100> `  
-` TOLERANCES <real tole tolc default 1.0e-7 1.0e-7> `  
-` FAKE_MASS <real fake_mass default 400000.0> `  
-` TIME_STEP <real time_step default 5.8> `  
-` EWALD_NCUT <integer ncut default 1> `  
-` EWALD_RCUT <real rcut default (see input description)> `  
-` CUTOFF `<real cutoff>` `  
-` ENERGY_CUTOFF <real ecut default (see input description)> `  
-` WAVEFUNCTION_CUTOFF <real wcut default (see input description)> `  
-` ALLOW_TRANSLATION `  
-` TRANSLATION (ON || OFF)`  
-` ROTATION (ON || OFF) `  
-` MULLIKEN [OFF]`  
-` EFIELD `  
-` `  
-` MAPPING <integer mapping default 1>`  
-` NP_DIMENSIONS <integer npi npj default -1 -1>`  
-` CAR-PARRINELLO             ... (see section `[`Car-Parrinello`](#Car-Parrinello "wikilink")`) END `  
-` STEEPEST_DESCENT           ... (see section `[`Steepest``
-``Descent`](#STEEPEST_DESCENT "wikilink")`) END`  
-` DPLOT                      ... (see section `[`DPLOT`](#DPLOT "wikilink")`) END `  
-` WANNIER                    ... (see section `[`Wannier`](#Wannier "wikilink")`) END `  
-` PSP_GENERATOR              ... (see section `[`PSP``
-``Generator`](#PSP_GENERATOR "wikilink")`)) END `  
-`   `  
-` WAVEFUNCTION_INITIALIZER   ... (see section `[`Wavefunction``
-``Initializer`](NWPW_RETIRED#WAVEFUNCTION_INITIALIZER "wikilink")` - retired) END `  
-` V_WAVEFUNCTION_INITIATIZER ... (see section `[`Wavefunction``
-``Velocity``
-``Initializer`](NWPW_RETIRED#V_WAVEFUNCTION_INITIALIZER "wikilink")` - retired) END `  
-` WAVEFUNCTION_EXPANDER      ... (see section `[`Wavefunction``
-``Expander`](NWPW_RETIRED#WAVEFUNCTION_EXPANDER "wikilink")` - retired) END `  
-` INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
-` OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs> `  
-`END`
+NWPW   
+  SIMULATION_CELL            ... (see section `[`Simulation Cell`](#Simulation_Cell "wikilink")`) END   
+  CELL_NAME <string cell_name default 'cell_default'> `  
+  VECTORS [[input (<string input_wavefunctions default file_prefix.movecs>) || 
+           [output(<string output_wavefunctions default file_prefix.movecs>)]] 
+  XC (Vosko      || LDA          || PBE96         || revPBE       || PBEsol          ||   
+      LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    || 
+      PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  || 
+      revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC || 
+      PBE96-Grimme2  || PBE96-Grimme3  || PBE96-Grimme4  || BLYP-Grimme2   || BLYP-Grimme3    || BLYP-Grimme4 || 
+      revPBE-Grimme2 || revPBE-Grimme3 || revPBE-Grimme4 || PBEsol-Grimme2 || PBEsol-Grimme3 || PBEsol-Grimme4 || 
+      PBE0-Grimme2    || PBE0-Grimme3    || PBE0-Grimme4   || B3LYP-Grimme2  || B3LYP-Grimme3  || B3LYP-Grimme4 ||
+      revPBE0-Grimme2 || revPBE0-Grimme3 || revPBE0-Grimme4 ||
+      PBE0       || revPBE0      || HSE  || HF || default Vosko) 
+  XC new ...(see section `[`Using Exchange-Correlation Potentials Available in the DFT Module`](#Using_Exchange-Correlation_Potentials_Available_in_the_DFT_Module "wikilink")`) 
+  DFT||ODFT||RESTRICTED||UNRESTRICTED `  
+  MULT <integer mult default 1>   
+  CG 
+  LMBFGS   
+  SCF [Anderson|| simple || Broyden]  
+      [CG || RMM-DIIS] 
+      [density || potential]
+      [ALPHA real alpha default 0.25]
+      [Kerker real ekerk nodefault] 
+      [ITERATIONS integer inner_iterations default 5]  
+      [OUTER_ITERATIONS integer outer_iterations default 0]
+  LOOP <integer inner_iteration outer_iteration default 10 100>  
+  TOLERANCES <real tole tolc default 1.0e-7 1.0e-7> 
+  FAKE_MASS <real fake_mass default 400000.0> 
+  TIME_STEP <real time_step default 5.8> 
+  EWALD_NCUT <integer ncut default 1> 
+  EWALD_RCUT <real rcut default (see input description)>  
+  CUTOFF  <real cutoff> 
+  ENERGY_CUTOFF <real ecut default (see input description)> 
+  WAVEFUNCTION_CUTOFF <real wcut default (see input description)>  
+  ALLOW_TRANSLATION 
+  TRANSLATION (ON || OFF)
+  ROTATION (ON || OFF) 
+  MULLIKEN [OFF]
+  EFIELD `  
+
+  BO_STEPS <integer bo_inner_iteration bo_outer_iteration default 10 100> 
+  MC_STEPS <integer mc_inner_iteration mc_outer_iteration default 10 100>
+  BO_TIME_STEP  <real bo_time_step default 5.0> 
+  BO_ALGORITHM [verlet|| velocity-verlet || leap-frog]
+  BO_FAKE_MASS <real bo_fake_mass default 500.0> 
+
+  MAPPING <integer mapping default 1>  
+  NP_DIMENSIONS <integer npi npj default -1 -1>`  
+  CAR-PARRINELLO             ... (see section `[`Car-Parrinello`](#Car-Parrinello "wikilink")`) END 
+  STEEPEST_DESCENT           ... (see section `[`Steepest Descent`](#STEEPEST_DESCENT "wikilink")`) END
+  DPLOT                      ... (see section `[`DPLOT`](#DPLOT "wikilink")`) END 
+  WANNIER                    ... (see section `[`Wannier`](#Wannier "wikilink")`) END 
+  PSP_GENERATOR              ... (see section `[`PSP Generator`](#PSP_GENERATOR "wikilink")`)) END   
+  
+  WAVEFUNCTION_INITIALIZER   ... (see section `[`Wavefunction Initializer`](NWPW_RETIRED#WAVEFUNCTION_INITIALIZER "wikilink")` - retired) END  
+  V_WAVEFUNCTION_INITIATIZER ... (see section `[`Wavefunction Velocity Initializer` (NWPW_RETIRED#V_WAVEFUNCTION_INITIALIZER "wikilink")` - retired) END  
+  WAVEFUNCTION_EXPANDER      ... (see section `[`Wavefunction Expander`](NWPW_RETIRED#WAVEFUNCTION_EXPANDER "wikilink")` - retired) END  
+  INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
+ OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs> `  
+END
 ```
 The following list describes the keywords contained in the PSPW input
 block.
@@ -1609,8 +1606,8 @@ pointers to data, as well as parameter input. Listed below is the format
 of a Car-Parrinello
 sub-block.
 ```
-`NWPW`  
-`... `  
+NWPW  
+...   
 ` Car-Parrinello `  
 `   CELL_NAME <string cell_name default 'cell_default'> `  
 `   INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
@@ -1880,8 +1877,23 @@ orbitals. To be used with a molecular orbital viewer that will be ported
 to NWChem in the near future.
 
 ## Born-Oppenheimer Molecular Dynamics
+```
+NWPW
+...
+  BO_STEPS <integer bo_inner_iteration bo_outer_iteration default 10 100> 
+  BO_TIME_STEP  <real bo_time_step default 5.0> 
+  BO_ALGORITHM [verlet|| velocity-verlet || leap-frog]
+  BO_FAKE_MASS <real bo_fake_mass default 500.0> 
+END
+```
 
 ## Metropolis Monte-Carlo
+```
+NWPW
+...
+  MC_STEPS <integer mc_inner_iteration mc_outer_iteration default 10 100> 
+END
+```
 
 ## Free Energy Simulations
 
