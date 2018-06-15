@@ -10,11 +10,11 @@ The ESP module is specified by the NWChem task directive
 `task esp`
 
 The input for the module is taken from the ESP input block
-
-`ESP`  
-`  ...`  
-`END`
-
+```
+ESP  
+  ... 
+END
+```
 ## Grid specification
 
 The grid points for which the quantum mechanical electrostatic potential
@@ -109,11 +109,11 @@ Restraints can be applied to each partial charge using the RESP charge
 fitting procedure.
 
   - The directive for charge restraining is
-
-`       restrain [hfree] (harmonic [`<real scale>`] | \`  
-`        hyperbolic [`<real scale>` [`<real tight>`]]  \`  
-`         [maxiter `<integer maxit>`]  [tolerance `<real toler>`])`
-
+```
+      restrain [hfree] (harmonic [<real scale>] | \ 
+      hyperbolic [<real scale> [<real tight>]]  \  
+       [maxiter <integer maxit>]  [tolerance <real toler>])
+```
 Here hfree can be specified to exclude hydrogen atoms from the
 restaining procedure. Variable scale is the strength of the restraint
 potential, with a default of 0.005 au for the harmonic restraint and a
