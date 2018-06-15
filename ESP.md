@@ -41,14 +41,15 @@ When omitted, a default value for rcut of 0.3 nm is used.
 
 `       spacing <real spac>  `
   
-where spac is the grid spacing in <img alt="$nm$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55e64309e6bad09453ebdfb3c7254f1f.svg?invert_in_darkmode&sanitize=true" align=middle width="24.209295pt" height="14.10255pt"/> for the regularly spaced grid points. `  
-If not specified, a default spacing of 0.05 nm is used.`
+where spac is the grid spacing in <img alt="$nm$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55e64309e6bad09453ebdfb3c7254f1f.svg?invert_in_darkmode&sanitize=true" align=middle width="24.209295pt" height="14.10255pt"/> for the regularly spaced grid points.
+If not specified, a default spacing of 0.05 nm is used.
 
   - The van der Waals radius of an element can be specified by
 
 `       radius <integer iatnum> <real atrad>`  
   
-where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination. Default values will be used for atoms not specified.
+where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination.  
+Default values will be used for atoms not specified.
 
   - The probe radius in nm determining the envelope around the molecule
     is specified by
@@ -61,7 +62,7 @@ by
 
 `       factor <real factor default 1.0>`  
   
-All grid points are discarded that lie within a distance factor*(radius(i)+probe) from any atom `*`i`*`.
+All grid points are discarded that lie within a distance factor*(radius(i)+probe) from any atom **i**.
 
   - Schwarz screening is applied using
 
@@ -81,9 +82,9 @@ where charge is the net charge of the set of atoms {iatom}. A negat
 used to specify that the partial charge of that atom is substracted in the sum for the set.
 
   - The net charge of a sequence of atoms can be constrained using
-
-`       constrain <real charge> <integer iatom> through`<integer jatom>`  
-  
+```
+       constrain <real charge> <integer iatom> through <integer jatom> 
+```  
 where charge is the net charge of the set of atoms {[iatom:jatom]}.
 
   - A group of atoms can be constrained to have the same charge with
@@ -95,7 +96,7 @@ with
 
 `       constrain group  <integer iatom> <integer jatom>  to  <integer katom> <integer latom> ` 
   
-resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k atom+1, ... for atoms jatom and latom.`
+resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k atom+1, ... for atoms jatom and latom.
 
   - A special constraint
 
