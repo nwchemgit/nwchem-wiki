@@ -781,28 +781,28 @@ potentials available in DFT Module (see Section [XC and DECOMP --
 Exchange-Correlation
 Potentials](Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink")).
 ```
-` XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\`  
-`    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \`  
-`     [hcth407] [becke97gga1] [hcth407p] \`  
-`     [optx] [hcthp14] [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\`  
-`     [HFexch <real prefactor default 1.0>] \`  
-`     [becke88 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xperdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [gill96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [lyp <real prefactor default 1.0>] \`  
-`     [perdew81 <real prefactor default 1.0>] \`  
-`     [perdew86 [nonlocal] <real prefactor default 1.0>] \`  
-`     [perdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [cpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [pw91lda <real prefactor default 1.0>] \`  
-`     [slater <real prefactor default 1.0>] \`  
-`     [vwn_1 <real prefactor default 1.0>] \`  
-`     [vwn_2 <real prefactor default 1.0>] \`  
-`     [vwn_3 <real prefactor default 1.0>] \`  
-`     [vwn_4 <real prefactor default 1.0>] \`  
-`     [vwn_5 <real prefactor default 1.0>] \`  
-`     [vwn_1_rpa <real prefactor default 1.0>]]`
+  XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\
+      [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \ 
+      [hcth407] [becke97gga1] [hcth407p] \
+      [optx] [hcthp14] [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\
+      [HFexch <real prefactor default 1.0>] \
+      [becke88 [nonlocal] <real prefactor default 1.0>] \
+      [xperdew91 [nonlocal] <real prefactor default 1.0>] \
+      [xpbe96 [nonlocal] <real prefactor default 1.0>] \
+      [gill96 [nonlocal] <real prefactor default 1.0>] \
+      [lyp <real prefactor default 1.0>] \
+      [perdew81 <real prefactor default 1.0>] \
+      [perdew86 [nonlocal] <real prefactor default 1.0>] \
+      [perdew91 [nonlocal] <real prefactor default 1.0>] \
+      [cpbe96 [nonlocal] <real prefactor default 1.0>] \
+      [pw91lda <real prefactor default 1.0>] \
+      [slater <real prefactor default 1.0>] \
+      [vwn_1 <real prefactor default 1.0>] \
+      [vwn_2 <real prefactor default 1.0>] \
+      [vwn_3 <real prefactor default 1.0>] \
+      [vwn_4 <real prefactor default 1.0>] \
+      [vwn_5 <real prefactor default 1.0>] \
+      [vwn_1_rpa <real prefactor default 1.0>]]
 ```
 These functional can be invoked by prepending the "new" directive before
 the exchange correlation potetntials in the input directive, XC new
@@ -1349,22 +1349,22 @@ The "dos" option is used to calculate density of states using broadening
 of the eigenvalues . This option can be specified without additional
 parameters, i.e.
 ```
-`nwpw`  
-`  dos`  
-`end`
+nwpw  
+  dos
+end
 ```
 in which case default values are used, or it can be specified with
 additional parameters, e.g.
 ```
-`nwpw`  
-`   dos 0.002 700 -0.80000 0.8000`  
-`end`
+nwpw  
+   dos 0.002 700 -0.80000 0.8000
+end
 ```
 The parameters are
 ```
-`nwpw`  
-` dos  [<alpha> <npoints> <emin> <emax>]`  
-`end`
+nwpw 
+ dos  [<alpha> <npoints> <emin> <emax>]
+end
 ```
 where
 
@@ -1412,10 +1412,10 @@ all the atoms are used, e.g.
 For projected density of states the "Mulliken" keyword needs to be set,
 e.g.
 ```
-`nwpw`  
-`  Mulliken`  
-`  dos`  
-`end`
+nwpw
+  Mulliken
+  dos 
+end
 ```
 The following additional files are generated and written to the
 permanent\_dir for restricted calculations
@@ -1501,13 +1501,13 @@ calculated on the specified set of grid points from a Band calculation.
 The output file generated is in the Gaussian Cube format. Input to the
 BAND\_DPLOT task is contained within the BAND\_DPLOT sub-block.
 ```
-`NWPW `  
-`... `  
-` BAND_DPLOT `  
-`   ... `  
-` END `  
-`...`  
-`END`
+NWPW   
+...  
+ BAND_DPLOT 
+   ... 
+ END 
+...
+END
 ```
 To run a BAND\_DPLOT calculation the following directive is used:
 
@@ -1516,28 +1516,27 @@ To run a BAND\_DPLOT calculation the following directive is used:
 Listed below is the format of a BAND\_DPLOT
 sub-block.
 ```
-`NWPW`  
-`... `  
-` BAND_DPLOT `  
-`   VECTORS `<string input_wavefunctions default input_movecs>` `  
-`   DENSITY [total||difference||alpha||beta||laplacian||potential default total] `  
-`           `<string density_name no default>` `  
-`   ELF [restricted|alpha|beta] `<string elf_name no default>` `  
-`   ORBITAL (density || real || complex default density) `  
-`           `<integer orbital_number no default>` `  
-`           <integer brillion_number default 1> `  
-`           `<string orbital_name no default>  
-`   [LIMITXYZ [units `<string Units default angstroms>`] `  
-`   `<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>` `  
-`   `<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
-`   `<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>`]`  
-` END`  
-`...`  
-`END`
+NWPW
+... 
+ BAND_DPLOT 
+   VECTORS `<string input_wavefunctions default input_movecs>
+   DENSITY [total||difference||alpha||beta||laplacian||potential default total] <string density_name no default>
+   ELF [restricted|alpha|beta] <string elf_name no default>  
+   ORBITAL (density || real || complex default density)  
+           <integer orbital_number no default> 
+           <integer brillion_number default 1> 
+           <string orbital_name no default>  
+   [LIMITXYZ [units <string Units default angstroms>]   
+    <real X_From> <real X_To> <integer No_Of_Spacings_X>  
+    <real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
+    <real Z_From> <real Z_To> <integer No_Of_Spacings_Z>] 
+ END
+...
+END
 ```
 The following list describes the input for the BAND\_DPLOT sub-block.
 
-`VECTORS `<string input_wavefunctions default input_movecs>
+`VECTORS <string input_wavefunctions default input_movecs>`
 
 This sub-directive specifies the name of the molecular orbital file. If
 the second file is optionally given the density is computed as the
@@ -1545,25 +1544,25 @@ difference between the corresponding electron densities. The vector
 files have to
 match.
 
-`DENSITY [total||difference||alpha||beta||laplacian||potential default total] `<string density_name no default>
+`DENSITY [total||difference||alpha||beta||laplacian||potential default total] `<string density_name no default>`
 
 This sub-directive specifies, what kind of density is to be plotted. The
 known names for total, difference, alpha, beta, laplacian, and
 potential.
 
-`ELF [restricted|alpha|beta] `<string elf_name no default>
+`ELF [restricted|alpha|beta] `<string elf_name no default>`
 
 This sub-directive specifies that an electron localization function
 (ELF) is to be
 plotted.
-
-`ORBITAL (density || real || complex default density) `<integer orbital_number no default>`  <integer brillion_number default 1> `<string orbital_name no default>
-
+```
+ORBITAL (density || real || complex default density) <integer orbital_number no default><integer brillion_number default 1> <string orbital_name no default>
+```
 This sub-directive specifies the molecular orbital number that is to be
 plotted.
 ```
-`LIMITXYZ [units `<string Units default angstroms>`] `  
-<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>` `  
+LIMITXYZ [units `<string Units default angstroms>] 
+<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>  
 <real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
 <real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>
 ```
@@ -1587,19 +1586,19 @@ Dynamics](#Car-Parrinello_Scheme_for_Ab_Initio_Molecular_Dynamics "wikilink").
 Input to the Car-Parrinello simulation is contained within the
 Car-Parrinello sub-block.
 ```
-`NWPW `  
-`... `  
-` Car-Parrinello `  
-`   ... `  
-` END `  
-`...`  
-`END`
+NWPW 
+... 
+ Car-Parrinello  
+   ...  
+ END  
+...
+END
 ```
 To run a Car-Parrinello calculation the following directives are used:
 ```
-`TASK PSPW Car-Parrinello `  
-`TASK BAND Car-Parrinello`  
-`TASK PAW Car-Parrinello`
+TASK PSPW Car-Parrinello   
+ TASK BAND Car-Parrinello`  
+ TASK PAW Car-Parrinello
 ```
 The Car-Parrinello sub-block contains a great deal of input, including
 pointers to data, as well as parameter input. Listed below is the format
@@ -1608,41 +1607,41 @@ sub-block.
 ```
 NWPW  
 ...   
-` Car-Parrinello `  
-`   CELL_NAME <string cell_name default 'cell_default'> `  
-`   INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
-`   OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs> `  
-`   INPUT_V_WAVEFUNCTION_FILENAME <string input_v_wavefunctions default file_prefix.vmovecs> `  
-`   OUTPUT_V_WAVEFUNCTION_FILENAME <string output_v_wavefunctions default file_prefix.vmovecs> `  
-`   FAKE_MASS <real fake_mass default default 1000.0> `  
-`   TIME_STEP <real time_step default 5.0> `  
-`   LOOP <integer inner_iteration outer_iteration default 10 1> `  
-`   SCALING <real scale_c scale_r default 1.0 1.0> `  
-`   ENERGY_CUTOFF <real ecut default (see input description)> `  
-`   WAVEFUNCTION_CUTOFF <real wcut default (see input description)> `  
-`   EWALD_NCUT <integer ncut default 1> `  
-`   EWALD_RCUT <real rcut default (see input description)> `  
-`   XC (Vosko      || LDA          || PBE96         || revPBE       || HF            ||  `  
-`       LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    || `  
-`       PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  || `  
-`       revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC || `  
-`       PBE0       || revPBE0      || default Vosko) `  
-`   [Nose-Hoover <real Period_electron real Temperature_electron `  
-`                 real Period_ion      real Temperature_ion    `  
-`                 integer Chainlength_electron integer Chainlength_ion default 100.0 298.15 100.0 298.15 1 1>]  `  
-`   [TEMPERATURE <real Temperature_ion      real Period_ion `  
-`                 real Temperature_electron real Period_electron  `  
-`                 integer Chainlength_ion integer Chainlength_electron default 298.15 1200 298.15 1200.0 1 1>]  `  
-`   [SA_decay <real sa_scale_c sa_scale_r default 1.0 1.0>] `  
-`   XYZ_FILENAME <string xyz_filename default file_prefix.xyz> `  
-`   ION_MOTION_FILENAME <string ion_motion_filename default file_prefix.ion_motion`  
-`   EMOTION_FILENAME <string emotion_filename default file_prefix.emotion> `  
-`   HMOTION_FILENAME `<string hmotion_filename nodefault>` `  
-`   OMOTION_FILENAME `<string omotion_filename nodefault>` `  
-`   EIGMOTION_FILENAME `<string eigmotion_filename nodefault>  
-` END`  
-`...`  
-`END`
+ Car-Parrinello   
+   CELL_NAME <string cell_name default 'cell_default'>
+   INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs>  
+   OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs>   
+   INPUT_V_WAVEFUNCTION_FILENAME <string input_v_wavefunctions default file_prefix.vmovecs> 
+   OUTPUT_V_WAVEFUNCTION_FILENAME <string output_v_wavefunctions default file_prefix.vmovecs>  
+   FAKE_MASS <real fake_mass default default 1000.0>
+   TIME_STEP <real time_step default 5.0>  
+   LOOP <integer inner_iteration outer_iteration default 10 1> 
+   SCALING <real scale_c scale_r default 1.0 1.0> `  
+   ENERGY_CUTOFF <real ecut default (see input description)>   
+   WAVEFUNCTION_CUTOFF <real wcut default (see input description)>   
+   EWALD_NCUT <integer ncut default 1>   
+   EWALD_RCUT <real rcut default (see input description)> `  
+    XC (Vosko      || LDA          || PBE96         || revPBE       || HF            ||    
+        LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    ||   
+        PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  ||   
+        revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC ||   
+        PBE0       || revPBE0      || default Vosko) 
+   [Nose-Hoover <real Period_electron real Temperature_electron 
+                 real Period_ion      real Temperature_ion     
+                 integer Chainlength_electron integer Chainlength_ion default 100.0 298.15 100.0 298.15 1 1>]   
+   [TEMPERATURE <real Temperature_ion      real Period_ion 
+                 real Temperature_electron real Period_electron  
+                 integer Chainlength_ion integer Chainlength_electron default 298.15 1200 298.15 1200.0 1 1>]   
+   [SA_decay <real sa_scale_c sa_scale_r default 1.0 1.0>] 
+   XYZ_FILENAME <string xyz_filename default file_prefix.xyz> 
+   ION_MOTION_FILENAME <string ion_motion_filename default file_prefix.ion_motion
+   EMOTION_FILENAME <string emotion_filename default file_prefix.emotion> 
+   HMOTION_FILENAME `<string hmotion_filename nodefault>
+   OMOTION_FILENAME `<string omotion_filename nodefault>
+   EIGMOTION_FILENAME `<string eigmotion_filename nodefault>  
+ END  
+...  
+END
 ```
 The following list describes the input for the Car-Parrinello sub-block.
 
