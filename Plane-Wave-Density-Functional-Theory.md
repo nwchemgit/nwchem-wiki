@@ -354,17 +354,17 @@ block.
     2d-hilbert FFT is used.
 
 A variety of prototype minimizers can be used to minimize the energy. To
-use these new optimizers the following SET directive needs to be
+use these other optimizers the following SET directive needs to be
 specified:
-
-`set nwpw:mimimizer 1 # Default - Grassman conjugate gradient minimizer is used to minimize the energy.`  
-`set nwpw:mimimizer 2 # Grassman LMBFGS minimimzer is used to minimize the energy.`  
-`set nwpw:minimizer 4 # Stiefel conjugate gradient minimizer is used to minimize the energy. `  
-`set nwpw:minimizer 5 # Band-by-band (potential) minimizer is used to minimize the energy.`  
-`set nwpw:minimizer 6 # Projected Grassman LMBFGS minimizer is used to minimize the energy.`  
-`set nwpw:minimizer 7 # Stiefel LMBFGS minimizer is used to minimize the energy.`  
-`set nwpw:minimizer 8 # Band-by-band (density) minimizer is used to minimize the energy.`
-
+```
+set nwpw:mimimizer 1 # Default - Grassman conjugate gradient minimizer is used to minimize the energy. 
+set nwpw:mimimizer 2 # Grassman LMBFGS minimimzer is used to minimize the energy.
+set nwpw:minimizer 4 # Stiefel conjugate gradient minimizer is used to minimize the energy. 
+set nwpw:minimizer 5 # Band-by-band (potential) minimizer is used to minimize the energy.
+set nwpw:minimizer 6 # Projected Grassman LMBFGS minimizer is used to minimize the energy.
+set nwpw:minimizer 7 # Stiefel LMBFGS minimizer is used to minimize the energy.
+set nwpw:minimizer 8 # Band-by-band (density) minimizer is used to minimize the energy.
+```
 Limited testing suggests that the Grassman LMBFGS minimizer is about
 twice as fast as the conjugate gradient minimizer. However, there are
 several known cases where this optimizer fails, so it is currently not a
@@ -373,11 +373,11 @@ default option, and should be used with caution.
 In addition the following SET directives can be
 specified:
 ```
-`set nwpw:lcao_skip .false. # Initial wavefunctions generated using an LCAO guess. `  
-`set nwpw:lcao_skip .true. # Default - Initial wavefunctions generated using a random plane-wave guess.`  
-`set nwpw:lcao_print .false. # Default - Output not produced during the generation of the LCAO guess. `  
-`set nwpw:lcao_print .true. # Output produced during the generation of the LCAO guess.`  
-`set nwpw:lcao_iterations 2 #specifies the number of LCAO iterations.`
+set nwpw:lcao_skip .false. # Initial wavefunctions generated using an LCAO guess.  
+set nwpw:lcao_skip .true. # Default - Initial wavefunctions generated using a random plane-wave guess.
+set nwpw:lcao_print .false. # Default - Output not produced during the generation of the LCAO guess.   
+set nwpw:lcao_print .true. # Output produced during the generation of the LCAO guess.
+set nwpw:lcao_iterations 2 #specifies the number of LCAO iterations.
 ```
 ### PAW Potentials
 
@@ -388,7 +388,7 @@ potentials located in the default paw potential library
 the code to use PAW potentials for carbon and hydrogen, the following
 input would be used.
 ```
-nwpw`  
+nwpw 
     pseudopotentials 
       C library paw_default 
       H library paw_default 
@@ -409,12 +409,12 @@ numerical stresses. The following SET directives can be used to tell the
 code to calculate stresses
 numerically.
 ```
-`set includestress  .true.              #this option tells driver to optimize the unit cell`  
-`set includelattice .true.              #this option tells driver to optimize cell using a,b,c,alpha,beta,gamma`  
-`set nwpw:frozen_lattice:thresh 999.0   #large number guarentees the lattice gridding does not adjust during optimization`  
-`set nwpw:cif_filename  pspw_corundum`  
-`set nwpw:stress_numerical .true.`  
-`set nwpw:lstress_numerical .true.`
+set includestress  .true.              #this option tells driver to optimize the unit cell 
+set includelattice .true.              #this option tells driver to optimize cell using a,b,c,alpha,beta,gamma 
+set nwpw:frozen_lattice:thresh 999.0   #large number guarentees the lattice gridding does not adjust during optimization
+set nwpw:cif_filename  pspw_corundum
+set nwpw:stress_numerical .true. 
+set nwpw:lstress_numerical .true.
 ```
 #### PAW Implementation Notes
 
