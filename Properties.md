@@ -34,9 +34,9 @@ open-shell spin unrestricted) wavefunctions. The NMR hyperfine and
 indirect spin-spin coupling require a UHF or ODFT wave function.
 
 ## Vectors keyword
-
-` VECTORS [ (`<string input_movecs >`)]`
-
+```
+ VECTORS [ (<string input_movecs >)]
+```
 The VECTORS directive allows the user to specify the input molecular
 orbital vectors for the property calculation
 
@@ -44,26 +44,26 @@ orbital vectors for the property calculation
 
 Each property can be requested by defining one of the following
 keywords:
-
-` NBOFILE`  
-` DIPOLE`  
-` QUADRUPOLE`  
-` OCTUPOLE`  
-` MULLIKEN`  
-` ESP`  
-` EFIELD`  
-` EFIELDGRAD`  
-` EFIELDGRADZ4`  
-` GSHIFT`  
-` ELECTRONDENSITY`  
-` HYPERFINE [`<integer>` number_of_atoms `<integer>` atom_list]`  
-` SHIELDING [`<integer>` number_of_atoms `<integer>` atom_list]`  
-` SPINSPIN [`<integer>` number_of_pairs `<integer>` pair_list]`  
-` RESPONSE [`<integer>` response_order `<real>` frequency]`  
-` AIMFILE`  
-` MOLDENFILE`  
-` ALL`
-
+```
+ NBOFILE  
+ DIPOLE  
+ QUADRUPOLE  
+ OCTUPOLE  
+ MULLIKEN  
+ ESP  
+ EFIELD  
+ EFIELDGRAD  
+ EFIELDGRADZ4  
+ GSHIFT  
+ ELECTRONDENSITY  
+ HYPERFINE [<integer> number_of_atoms <integer> atom_list]  
+ SHIELDING [<integer> number_of_atoms <integer> atom_list]  
+ SPINSPIN [<integer> number_of_pairs <integer> pair_list]  
+ RESPONSE [<integer> response_order <real> frequency]  
+ AIMFILE  
+ MOLDENFILE  
+ ALL
+```
 The "ALL" keyword generates all currently available properties.
 
 ### NMR and EPR
@@ -104,9 +104,9 @@ references:
 
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
-
-`   [CENTER ((com || coc || origin || arb `<real x y z>`) default coc)]`
-
+```
+   [CENTER ((com || coc || origin || arb <real x y z>) default coc)]
+```
 com is the center of mass, coc is the center of charge, origin is (0.0,
 0.0, 0.0) and arb is any arbitrary point which must be accompanied by
 the coordinated to be used. Currently the x, y, and z coordinates must
@@ -116,18 +116,18 @@ be given in the same units as UNITS in [GEOMETRY](Geometry "wikilink").
 
 Response calculations can be calculated as
 follows:
-
-`property`  
-` response  1 7.73178E-2   # response order and frequency in Hartree energy units`  
-` velocity                 # use modified velocity gauge for electric dipole `  
-` orbeta                   # calculate optical rotation 'beta' directly [2]`  
-` giao                     # GIAO optical rotation [1,3,6], forces orbeta`  
-` bdtensor                 # calculates B-tilde of Refs. [1,6]`  
-` analysis                 # analyze response in terms of MOs [6]`  
-` damping 0.007            # complex response functions with damping, Ref [5]`  
-` convergence 1e-4         # set CPKS convergence criterion (default 1e-4)`  
-`end`
-
+```
+property`  
+ response  1 7.73178E-2   # response order and frequency in Hartree energy units  
+ velocity                 # use modified velocity gauge for electric dipole  
+ orbeta                   # calculate optical rotation 'beta' directly [2]  
+ giao                     # GIAO optical rotation [1,3,6], forces orbeta  
+ bdtensor                 # calculates B-tilde of Refs. [1,6] 
+ analysis                 # analyze response in terms of MOs [6]  
+ damping 0.007            # complex response functions with damping, Ref [5] 
+ convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
+end
+```
 Response calculations are currently supported only for order 1 (linear
 response), single frequency, electric field and mixed electric-magnetic
 field perturbations. The output consists of the electric polarizability
@@ -169,34 +169,34 @@ Raman calculations can be performed by specifying the Raman block. These
 calculations are performed in conjunction with polarizability
 calculations. Detailed description of input parameters at
 <http://pubs.acs.org/doi/suppl/10.1021/jp411039m>
-
-`RAMAN`  
-` [ (NORMAL | | RESONANCE) default NORMAL ]`  
-` [ (LORENTZIAN | | GAUSSIAN) default LORENTZIAN ]`  
-` [ LOW <double low default 0.0> ]`  
-` [ HIGH <double high default ‘highest normal mode’> ]`  
-` [ FIRST <integer first default ‘7’> ]`  
-` [ LAST < integer last default ‘number of normal modes’ > ]`  
-` [ WIDTH <double width default 20.0> ]`  
-` [ DQ <double dq default 0.01> ]`  
-`END`  
-`task dft raman`
-
+```
+RAMAN 
+ [ (NORMAL | | RESONANCE) default NORMAL ]  
+ [ (LORENTZIAN | | GAUSSIAN) default LORENTZIAN ]  
+ [ LOW <double low default 0.0> ]  
+ [ HIGH <double high default ‘highest normal mode’> ]  
+ [ FIRST <integer first default ‘7’> ]  
+ [ LAST < integer last default ‘number of normal modes’ > ]  
+ [ WIDTH <double width default 20.0> ]  
+ [ DQ <double dq default 0.01> ]  
+END  
+task dft raman
+```
 or
 
 `task dft raman numerical`
 
 Sample input block:
-
-`property`  
-` response 1 8.8559E-2`  
-` damping 0.007`  
-`end`  
-`raman`  
-` normal`  
-` lorentzian`  
-`end`
-
+```
+property` 
+ response 1 8.8559E-2  
+ damping 0.007  
+end  
+raman  
+ normal  
+ lorentzian  
+end
+```
 #### Raman Keywords
 
   - NORMAL and RESONANCE: Type of Raman plot to make.
