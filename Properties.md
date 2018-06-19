@@ -22,12 +22,12 @@ functions. The properties that are available are:
 The properties module is started when the task directive TASK <theory>
 property is defined in the user input file. The input format has the
 form:
-
-` PROPERTY`  
-`   [property keyword]`  
-`   [CENTER ((com || coc || origin || arb `<real x y z>`) default coc)]`  
-` END`
-
+```
+ PROPERTY 
+   [property keyword]  
+   [CENTER ((com || coc || origin || arb <real x y z>) default coc)] 
+ END
+```
 Most of the properties can be computed for Hartree-Fock (closed-shell
 RHF, open-shell ROHF, and open-shell UHF), and DFT (closed-shell and
 open-shell spin unrestricted) wavefunctions. The NMR hyperfine and
@@ -117,7 +117,7 @@ be given in the same units as UNITS in [GEOMETRY](Geometry "wikilink").
 Response calculations can be calculated as
 follows:
 ```
-property`  
+property
  response  1 7.73178E-2   # response order and frequency in Hartree energy units  
  velocity                 # use modified velocity gauge for electric dipole  
  orbeta                   # calculate optical rotation 'beta' directly [2]  
