@@ -35,20 +35,20 @@ approximations
 `TASK RIMP2`
 
 All three MP2 tasks share the same input block.
-
-` MP2`  
-`   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \`  
-`           [virtual <integer nfzv default 0>]]`  
-`   [TIGHT]`  
-`   [PRINT]`  
-`   [NOPRINT]`  
-`   [VECTORS `<string filename default scf-output-vectors>` \`  
-`     [swap [(alpha||beta)] `<integer pair-list>`] ]`  
-`   [RIAPPROX `<string riapprox default V>`]`  
-`   [FILE3C <string filename default $file_prefix$.mo3cint">]`  
-`   [SCRATCHDISK `<integer>`]`  
-` END`
-
+```
+ MP2  
+   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
+           [virtual <integer nfzv default 0>]]  
+   [TIGHT]  
+   [PRINT]  
+   [NOPRINT]  
+   [VECTORS <string filename default scf-output-vectors> \  
+     [swap [(alpha||beta)] <integer pair-list>] ]  
+   [RIAPPROX <string riapprox default V>]  
+   [FILE3C <string filename default $file_prefix$.mo3cint>  
+   [SCRATCHDISK <integer>] 
+ END
+```
 ## FREEZE -- Freezing orbitals
 
 All MP2 modules support frozen core orbitals, however, only the direct
@@ -432,22 +432,22 @@ been argued to be a sign that the system might be near degenerate\[9\].
 Each MP2 output contains the calculation of the SCS-MP2 correlation
 energies as suggested by S.Grimme\[10\]
 
-The SCF keyword is only required for gradients calculations:
-
-` MP2`  
-`   [SCS]`  
-` END`
-
+The SCS keyword is only required for gradients calculations:
+```
+ MP2  
+   [SCS]  
+ END
+```
 Scaling factors for the two components (parallel and opposite spin) can
 be defined by using the keywords FSS (same spin factor) and FOS
 (opposite spin factor):
-
-`mp2`  
-`   scs`  
-`   fss   1.13`  
-`   fos  0.56`  
-`end`
-
+```
+mp2  
+   scs  
+   fss   1.13  
+   fos  0.56  
+end
+```
 Default values are FSS=1.2, FOS=0.3 for MP2, and FSS=1.13, FOS=1.27 for
 CCSD.
 
