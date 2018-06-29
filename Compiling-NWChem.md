@@ -652,7 +652,7 @@ required:
 
   - Settings
 ```
-export USE_MPI=y`  
+export USE_MPI=y
 export NWCHEM_TARGET=LINUX64  
 export USE_PYTHONCONFIG=y  
 export PYTHONVERSION=2.7  
