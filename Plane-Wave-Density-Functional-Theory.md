@@ -1082,15 +1082,15 @@ functions.
 The following SET directives are used to define the
 fitting.
 ```
-set pspw_APC:Gc <real Gc_cutoff> # specifies the maximum frequency component of the density to be used in the fitting in units of au.  
-set pspw_APC:nga `<integer number_gauss>` # specifies the the number of Gaussian functions per atom.
-set pspw_APC:gamma `<real gamma_list>` # specifies the decay lengths of each atom centered Gaussian. 
+set nwpw_APC:Gc <real Gc_cutoff> # specifies the maximum frequency component of the density to be used in the fitting in units of au.  
+set nwpw_APC:nga `<integer number_gauss>` # specifies the the number of Gaussian functions per atom.
+set nwpw_APC:gamma `<real gamma_list>` # specifies the decay lengths of each atom centered Gaussian. 
 ```
 We suggest using the following parameters.
 ```
-set pspw_APC:Gc 2.5
-set pspw_APC:nga 3 
-set pspw_APC:gamma 0.6 0.9 1.35  
+set nwpw_APC:Gc 2.5
+set nwpw_APC:nga 3 
+set nwpw_APC:gamma 0.6 0.9 1.35  
 ```
 ### PSPW_DPLOT - Generate Gaussian Cube Files
 
