@@ -100,7 +100,7 @@ The keyword <tt>FMO</tt> can be used to compute electronic couplings by means of
 fmo
 ```
 An example input file can be found in  the [etrans-fmo QA directory](../tree/master/QA/tests/etrans-fmo)
-https://github.com/nwchemgit/nwchem/tree/master/QA/tests/etrans-fmo
+
 ## Example
 
 The following example is for a simple electron transfer reaction,
