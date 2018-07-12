@@ -36,104 +36,104 @@ the DFT module can be invoked with no input directives (defaults invoked
 throughout). There are sub-directives which allow for customized
 application; those currently provided as options for the DFT module
 are:
-
-`VECTORS [[input] (<string input_movecs default atomic>) || \`  
-`                  (project <string basisname> <string filename>`)] \`  
-`          [swap [alpha||beta] <integer vec1 vec2> ...] \`  
-`          [output <string output_filename default input_movecs>] \`  
-` XC [[acm] [b3lyp] [beckehandh] [pbe0]\`  
-`    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke97-d] [becke98] \`  
-`     [hcth] [hcth120] [hcth147]\`  
-`     [hcth407] [becke97gga1]  [hcth407p]\`  
-`     [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\`  
-`     [xpkzb99] [cpkzb99] [xtpss03] [ctpss03] [xctpssh]\`  
-`     [b1b95] [bb1k] [mpw1b95] [mpwb1k] [pw6b95] [pwb6k] [m05] [m05-2x] [vs98] \`  
-`     [m06] [m06-hf] [m06-L] [m06-2x] \`  
-`     [HFexch <real prefactor default 1.0>] \`  
-`     [becke88 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xperdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [gill96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [lyp <real prefactor default 1.0>] \`  
-`     [perdew81 <real prefactor default 1.0>] \`  
-`     [perdew86 [nonlocal] <real prefactor default 1.0>] \`  
-`     [perdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [cpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [pw91lda <real prefactor default 1.0>] \`  
-`     [slater <real prefactor default 1.0>] \`  
-`     [vwn_1 <real prefactor default 1.0>] \`  
-`     [vwn_2 <real prefactor default 1.0>] \`  
-`     [vwn_3 <real prefactor default 1.0>] \`  
-`     [vwn_4 <real prefactor default 1.0>] \`  
-`     [vwn_5 <real prefactor default 1.0>] \`  
-`     [vwn_1_rpa <real prefactor default 1.0>] \`  
-`     [xtpss03 [nonlocal] <real prefactor default 1.0>] \`  
-`     [ctpss03 [nonlocal] <real prefactor default 1.0>] \`  
-`     [bc95 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xpw6b95 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xpwb6k [nonlocal] <real prefactor default 1.0>] \`  
-`     [xm05 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xm05-2x [nonlocal] <real prefactor default 1.0>] \`  
-`     [cpw6b95 [nonlocal] <real prefactor default 1.0>] \`  
-`     [cpwb6k [nonlocal] <real prefactor default 1.0>] \`  
-`     [cm05 [nonlocal] <real prefactor default 1.0>] \`  
-`     [cm05-2x [nonlocal] <real prefactor default 1.0>]] \`  
-`     [xvs98 [nonlocal] <real prefactor default 1.0>]] \`  
-`     [cvs98 [nonlocal] <real prefactor default 1.0>]] \`  
-`     [xm06-L [nonlocal] <real prefactor default 1.0>]] \`  
-`     [xm06-hf [nonlocal] <real prefactor default 1.0>]] \`  
-`     [xm06 [nonlocal] <real prefactor default 1.0>]] \`  
-`     [xm06-2x [nonlocal] <real prefactor default 1.0>]] \`  
-`     [cm06-L [nonlocal] <real prefactor default 1.0>]] \`  
-`     [cm06-hf [nonlocal] <real prefactor default 1.0>]] \`  
-`     [cm06 [nonlocal] <real prefactor default 1.0>]] \`  
-`     [cm06-2x [nonlocal] <real prefactor default 1.0>]] `  
-` CONVERGENCE [[energy <real energy default 1e-7>] \`  
-`              [density <real density default 1e-5>] \`  
-`              [gradient <real gradient default 5e-4>] \`  
-`              [dampon <real dampon default 0.0>] \`  
-`              [dampoff <real dampoff default 0.0>] \`  
-`              [diison <real diison default 0.0>] \`  
-`              [diisoff <real diisoff default 0.0>] \`  
-`              [levlon <real levlon default 0.0>] \`  
-`              [levloff <real levloff default 0.0>] \`  
-`              [ncydp <integer ncydp default 2>] \`  
-`              [ncyds <integer ncyds default 30>] \`  
-`              [ncysh <integer ncysh default 30>] \`  
-`              [damp <integer ndamp default 0>] [nodamping] \`  
-`              [diis [nfock <integer nfock default 10>]] \`  
-`              [nodiis] [lshift <real lshift default 0.5>] \`  
-`              [nolevelshifting] \`  
-`              [hl_tol <real hl_tol default 0.1>] \`  
-`              [rabuck [n_rabuck <integer n_rabuck default 25>]]`  
-` GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \`  
-`      [(gausleg||lebedev ) default lebedev ] \`  
-`      [(becke||erf1||erf2||ssf) default erf1] \`  
-`      [(euler||mura||treutler) default mura] \`  
-`      [rm <real rm default 2.0>] \`  
-`      [nodisk]`  
-` TOLERANCES [[tight] [tol_rho <real tol_rho default 1e-10>] \`  
-`             [accCoul <integer accCoul default 8>] \`  
-`             [radius <real radius default 25.0>]]`  
-` [(LB94||CS00 `<real shift default none>`)]`  
-` DECOMP`  
-` ODFT`  
-` DIRECT`  
-` SEMIDIRECT [filesize <integer filesize default disksize>]`  
-`            [memsize  <integer memsize default available>]`  
-`            [filename <string filename default $file_prefix.aoints$>]`
-` INCORE`  
-` ITERATIONS <integer iterations default 30>`  
-` MAX_OVL`  
-` CGMIN`  
-` RODFT`  
-` MULLIKEN`  
-` DISP`  
-` XDM [ a1 <real a1> ]   [ a2 <real a2> ]`  
-` MULT <integer mult default 1>`  
-` NOIO`  
-` PRINT||NOPRINT`
-
+```
+VECTORS [[input] (<string input_movecs default atomic>) || \  
+                  (project <string basisname> <string filename>`)] \` 
+          [swap [alpha||beta] <integer vec1 vec2> ...] \ 
+          [output <string output_filename default input_movecs>] \  
+ XC [[acm] [b3lyp] [beckehandh] [pbe0]\  
+    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke97-d] [becke98] \  
+     [hcth] [hcth120] [hcth147]\  
+     [hcth407] [becke97gga1]  [hcth407p]\  
+     [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\  
+     [xpkzb99] [cpkzb99] [xtpss03] [ctpss03] [xctpssh]\ 
+     [b1b95] [bb1k] [mpw1b95] [mpwb1k] [pw6b95] [pwb6k] [m05] [m05-2x] [vs98] \ 
+     [m06] [m06-hf] [m06-L] [m06-2x] \  
+     [HFexch <real prefactor default 1.0>] \  
+     [becke88 [nonlocal] <real prefactor default 1.0>] \  
+     [xperdew91 [nonlocal] <real prefactor default 1.0>] \  
+     [xpbe96 [nonlocal] <real prefactor default 1.0>] \  
+     [gill96 [nonlocal] <real prefactor default 1.0>] \  
+     [lyp <real prefactor default 1.0>] \  
+     [perdew81 <real prefactor default 1.0>] \  
+     [perdew86 [nonlocal] <real prefactor default 1.0>] \  
+     [perdew91 [nonlocal] <real prefactor default 1.0>] \ 
+     [cpbe96 [nonlocal] <real prefactor default 1.0>] \  
+     [pw91lda <real prefactor default 1.0>] \ 
+     [slater <real prefactor default 1.0>] \  
+     [vwn_1 <real prefactor default 1.0>] \  
+     [vwn_2 <real prefactor default 1.0>] \  
+`     [vwn_3 <real prefactor default 1.0>] \ 
+     [vwn_4 <real prefactor default 1.0>] \  
+     [vwn_5 <real prefactor default 1.0>] \  
+     [vwn_1_rpa <real prefactor default 1.0>] \  
+     [xtpss03 [nonlocal] <real prefactor default 1.0>] \ 
+     [ctpss03 [nonlocal] <real prefactor default 1.0>] \  
+     [bc95 [nonlocal] <real prefactor default 1.0>] \  
+     [xpw6b95 [nonlocal] <real prefactor default 1.0>] \  
+     [xpwb6k [nonlocal] <real prefactor default 1.0>] \  
+     [xm05 [nonlocal] <real prefactor default 1.0>] \  
+     [xm05-2x [nonlocal] <real prefactor default 1.0>] \  
+     [cpw6b95 [nonlocal] <real prefactor default 1.0>] \  
+     [cpwb6k [nonlocal] <real prefactor default 1.0>] \  
+     [cm05 [nonlocal] <real prefactor default 1.0>] \  
+     [cm05-2x [nonlocal] <real prefactor default 1.0>]] \  
+     [xvs98 [nonlocal] <real prefactor default 1.0>]] \  
+     [cvs98 [nonlocal] <real prefactor default 1.0>]] \  
+     [xm06-L [nonlocal] <real prefactor default 1.0>]] \ 
+     [xm06-hf [nonlocal] <real prefactor default 1.0>]] \  
+     [xm06 [nonlocal] <real prefactor default 1.0>]] \ 
+     [xm06-2x [nonlocal] <real prefactor default 1.0>]] \  
+     [cm06-L [nonlocal] <real prefactor default 1.0>]] \  
+     [cm06-hf [nonlocal] <real prefactor default 1.0>]] \  
+     [cm06 [nonlocal] <real prefactor default 1.0>]] \  
+     [cm06-2x [nonlocal] <real prefactor default 1.0>]]   
+ CONVERGENCE [[energy <real energy default 1e-7>] \  
+              [density <real density default 1e-5>] \  
+              [gradient <real gradient default 5e-4>] \  
+              [dampon <real dampon default 0.0>] \  
+              [dampoff <real dampoff default 0.0>] \  
+              [diison <real diison default 0.0>] \  
+              [diisoff <real diisoff default 0.0>] \  
+              [levlon <real levlon default 0.0>] \  
+              [levloff <real levloff default 0.0>] \  
+              [ncydp <integer ncydp default 2>] \  
+              [ncyds <integer ncyds default 30>] \  
+              [ncysh <integer ncysh default 30>] \  
+              [damp <integer ndamp default 0>] [nodamping] \  
+              [diis [nfock <integer nfock default 10>]] \  
+              [nodiis] [lshift <real lshift default 0.5>] \  
+              [nolevelshifting] \  
+              [hl_tol <real hl_tol default 0.1>] \  
+              [rabuck [n_rabuck <integer n_rabuck default 25>]]  
+ GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+      [(gausleg||lebedev ) default lebedev ] \  
+      [(becke||erf1||erf2||ssf) default erf1] \  
+      [(euler||mura||treutler) default mura] \ 
+      [rm <real rm default 2.0>] \  
+      [nodisk] 
+ TOLERANCES [[tight] [tol_rho <real tol_rho default 1e-10>] \  
+             [accCoul <integer accCoul default 8>] \  
+             [radius <real radius default 25.0>]]  
+ [(LB94||CS00 <real shift default none>)]  
+ DECOMP 
+ ODFT 
+ DIRECT  
+ SEMIDIRECT [filesize <integer filesize default disksize>]` 
+            [memsize  <integer memsize default available>]  
+            [filename <string filename default $file_prefix.aoints$>]
+ INCORE 
+ ITERATIONS <integer iterations default 30>` 
+ MAX_OVL  
+ CGMIN  
+ RODFT  
+ MULLIKEN  
+ DISP  
+ XDM [ a1 <real a1> ]   [ a2 <real a2> ]  
+ MULT <integer mult default 1>  
+ NOIO  
+ PRINT||NOPRINT
+```
 The following sections describe these keywords and optional
 sub-directives that can be specified for a DFT calculation in NWChem.
 
@@ -1625,13 +1625,13 @@ Fukui inidces analysis is invked by the keyword:
 When this keyword is encounters, the condensed Fukui indices will be
 calculated and printed in the output. Detailed information about the
 analysis can be obtained using the following
-
-` dft`  
-`   fukui`  
-`   print "Fukui information"`  
-` end`  
-` task dft`
-
+```
+ dft  
+   fukui 
+   print "Fukui information"  
+ end  
+ task dft
+```
 ## BSSE -- Basis Set Superposition Error
 
 Particular care is required to compute BSSE by the counter-poise method
@@ -1660,13 +1660,13 @@ Please note that the \`\`ghost'' oxygen atom has been labeled bqO, and
 not just bq.
 
 ## DISP -- Empirical Long-range Contribution (vdW)
-
-` DISP `  
-`      [ vdw <real vdw integer default 2]]`  
-`      [[s6 `<real s6 default depends on XC functional>`] \`  
-`      [ alpha <real s6 default 20.0d0] \`  
-`      [ off ] \`
-
+```
+ DISP   
+      [ vdw <real vdw integer default 2]]  
+      [[s6 <real s6 default depends on XC functional>] \  
+      [ alpha <real s6 default 20.0d0] \  
+      [ off ] 
+```
 When systems with high dependence on van der Waals interactions are
 computed, the dispersion term may be added empirically through
 long-range contribution DFT-D, i.e. <img alt="$E_{DFT-D}=E_{DFT-KS}+E_{disp}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d77ef4554f554b6ea525e8857f0dd78e.svg?invert_in_darkmode&sanitize=true" align=middle width="217.894545pt" height="22.38192pt"/>,
