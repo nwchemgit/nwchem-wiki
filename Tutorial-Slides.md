@@ -12,3 +12,7 @@
 
 
 [Plane-Wave](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial2018/5_NWChem_NWPW.pdf "wikilink")
+
+[Properties](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial2018/6_NWChem_Props-TDDFT.pdf "wikilink")
+
+[Potential Energy Surfaces](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial2018/7_NWChem_Potential_Energy_Surfaces.pdf "wikilink")
