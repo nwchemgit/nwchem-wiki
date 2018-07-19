@@ -1130,32 +1130,31 @@ task dft energy
 ```
 ### Unrestricted
 ```
-fon alpha partial 3 electrons 0.9 filled 2 fon beta partial 3 electrons
-0.9 filled 2
+fon alpha partial 3 electrons 0.9 filled 2 
+fon beta partial 3 electrons 0.9 filled 2
 ```
 Here 0.9 electrons will be equally divided over 3 alpha valence orbitals
 and 2 alpha orbitals are fully filled. Similarly for beta. The total
 number of electrons here is 5.8
 
 Example input:
-
-`echo`  
-`title "carbon atom"`  
-`start carbon_fon`  
-`geometry units angstrom nocenter`  
-`symmetry c1`  
-` C   0.0 0.0 0.0`  
-`end`  
-`basis`  
-` * library 6-31G`  
-`end`  
-`dft`  
-` odft`  
-` fon alpha partial 3 electrons 0.9 filled 2`  
-` fon beta partial 3 electrons 0.9 filled 2`  
-`end`  
-`task dft energy`
-
+```
+echo  
+title "carbon atom"  
+start carbon_fon 
+geometry  
+ C   0.0 0.0 0.0  
+end  
+basis  
+ * library 6-31G  
+end  
+dft 
+ odft  
+ fon alpha partial 3 electrons 0.9 filled 2  
+ fon beta partial 3 electrons 0.9 filled 2  
+end  
+task dft energy
+```
 To set fractional numbers in the core orbitals, add the following
 directive in the input file:
 ```
