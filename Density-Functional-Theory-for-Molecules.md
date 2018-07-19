@@ -1101,9 +1101,9 @@ to the total energy in order to have energies and gradients consistent.
 ## FON -- Calculations with fractional numbers of electrons
 
   - Restricted
-
+```
 fon partial 3 electrons 1.8 filled 2
-
+```
 Here 1.8 electrons will be equally divided over 3 valence orbitals and 2
 orbitals are fully filled. The total number of electrons here is 5.8
 
