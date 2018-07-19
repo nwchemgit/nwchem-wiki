@@ -1100,7 +1100,7 @@ to the total energy in order to have energies and gradients consistent.
 
 ## FON -- Calculations with fractional numbers of electrons
 
-  - Restricted
+###  Restricted
 ```
 fon partial 3 electrons 1.8 filled 2
 ```
@@ -1108,31 +1108,31 @@ Here 1.8 electrons will be equally divided over 3 valence orbitals and 2
 orbitals are fully filled. The total number of electrons here is 5.8
 
 Example input:
-
-`echo`  
-`title "carbon atom"`  
-`start carbon_fon`  
-`geometry units angstrom nocenter`  
-`symmetry c1`  
-`  C   0.0 0.0 0.0`  
-`end`  
-`basis`  
-` * library 6-31G`  
-`end`  
-`dft`  
-` direct`  
-` grid xfine`  
-` convergence energy 1d-8`  
-` xc pbe0`  
-` fon partial 3 electrons 1.8 filled 2`  
-`end`  
-`task dft energy`
-
-  - Unrestricted
-
+```
+echo 
+title "carbon atom" 
+start carbon_fon 
+geometry  
+symmetry c1  
+  C   0.0 0.0 0.0  
+end  
+basis  
+ * library 6-31G  
+end
+dft 
+ direct  
+ grid xfine  
+ convergence energy 1d-8  
+ xc pbe0  
+ fon partial 3 electrons 1.8 filled 2 
+end
+task dft energy
+```
+### Unrestricted
+```
 fon alpha partial 3 electrons 0.9 filled 2 fon beta partial 3 electrons
 0.9 filled 2
-
+```
 Here 0.9 electrons will be equally divided over 3 alpha valence orbitals
 and 2 alpha orbitals are fully filled. Similarly for beta. The total
 number of electrons here is 5.8
@@ -1158,9 +1158,9 @@ Example input:
 
 To set fractional numbers in the core orbitals, add the following
 directive in the input file:
-
-  - set dft:core\_fon .true.
-
+```
+   set dft:core_fon .true.
+```
 Example input:
 
 `dft`  
