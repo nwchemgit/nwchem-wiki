@@ -17,20 +17,20 @@ El-Khoury, A. L. Mifflin, W. P. Hess, H.F. Wang, C. J. Cramer, N. Govind
 "Infrared and Raman Spectroscopy from Ab Initio Molecular Dynamics and
 Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
 Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015) Publication Date (Web): July 29, 2015
-
-`QMD`  
-`  [dt_nucl <double default 10.0>]`  
-`  [nstep_nucl <integer default 1000>]`  
-`  [targ_temp <double default 298.15>]`  
-`  [thermostat `<string default none>` `<thermostat parameters>`]`  
-`  [rand_seed `<integer default new one generated for each run>`]`  
-`  [com_step <integer default 100>]`  
-`  [print_xyz <integer default 1>]`  
-`  [linear]`   
-`  [property <integer default 1>]`   
-`  [tddft <integer default 1>]`   
-`END`
-
+```
+QMD
+  [dt_nucl <double default 10.0>]  
+  [nstep_nucl <integer default 1000>]  
+  [targ_temp <double default 298.15>]  
+  [thermostat <string default none> <thermostat parameters>]  
+  [rand_seed <integer default new one generated for each run>]  
+  [com_step <integer default 100>]  
+  [print_xyz <integer default 1>]  
+  [linear]   
+  [property <integer default 1>] 
+  [tddft <integer default 1>]   
+END
+```
 The module is called as:
 
 `task `<level of theory>` qmd`
