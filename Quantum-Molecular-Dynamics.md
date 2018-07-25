@@ -2,4 +2,4 @@
 
 <!-- end list -->
 
-  - [Gaussian Basis AIMD](Gaussian-Basis "wikilink")
+  - [Gaussian Basis AIMD](Gaussian-Basis-AIMD "wikilink")
