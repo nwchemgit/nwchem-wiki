@@ -2,17 +2,17 @@ Bq module provides a way to perform QM calculations in the presence of point cha
 Using Bq module versus  geometry block is a recommended way to include point charges in your calculations, in particular if number of charges are big.
 
 The format for including external point charges using the Bq module is shown below, supporting both explicit charge definition in the body of the block and/or loading from external files.
-
-` bq [units au|nm|pm|'''ang'''|...] [namespace]`  
-`   [clear]`  
-`   [force|noforce]`  
-`   [load <file> [charges <chargefile>] [format ix iy iz iq] [units au|nm|pm|'''ang'''|...] [ scale <factor> ]]`  
-`   x  y  z  q`  
-`   ...`  
-`end`  
-
-* '''units''' - specify the global units for the coordinates of point charges. Allowed values are au, bohr, nanometers, nm, pm, picometers, angstrom (note that only first 3 characters are important). The default units are angstrom
-* '''namespace''' - an optional name that can be used to distinguish between potentially several point charge sets. The default value for namespace is "default", and only the set that has this namespace value will be actually used in the calculation. If for example different namespace is used, this point charge set will be processed into the run time database but not actually used unless the following set directive is encountered
+```
+ bq [units au|nm|pm|ang...] [namespace]  
+   [clear] 
+   [force|noforce]  
+   [load <file> [charges <chargefile>] [format ix iy iz iq] [units au|nm|pm|ang|...] [ scale <factor> ]]  
+   x  y  z  q
+   ...  
+end  
+```
+* **units** - specify the global units for the coordinates of point charges. Allowed values are au, bohr, nanometers, nm, pm, picometers, angstrom (note that only first 3 characters are important). The default units are angstrom
+* **namespace** - an optional name that can be used to distinguish between potentially several point charge sets. The default value for namespace is "default", and only the set that has this namespace value will be actually used in the calculation. If for example different namespace is used, this point charge set will be processed into the run time database but not actually used unless the following set directive is encountered
 ` set bq <namespace>`  
 Here is an example that illustrates this 
 ` ...`  
@@ -29,13 +29,13 @@ Here is an example that illustrates this
  `# now DFT calculation will performed in the presence of charges in foo`  
  `task dft energy`  
 
-* '''clear''' - this directive erases all the previously specified point charges in a given namespace, prior to new setup (if any).
-* '''force''' <output_file> | '''noforce''' this directive triggers|disables calculation of forces on Bq charges. Default value is '''noforce''', which disables force calculation. The forces will be written to <output_file> if provided or to <prefix>.bqforce.dat file. The format of the file is
+* **clear** - this directive erases all the previously specified point charges in a given namespace, prior to new setup (if any).
+* **force** <output_file> | '''noforce''' this directive triggers|disables calculation of forces on Bq charges. Default value is '''noforce''', which disables force calculation. The forces will be written to <output_file> if provided or to <prefix>.bqforce.dat file. The format of the file is
  `#comment line`  
  `fx fy fz`  
  `...`  
 
-* '''load''' <file> [charges <chargefile> ] [format ix iy iz iq] [units au|nm|pm|'''ang'''|...] [ scale <factor> ] - this directive allows to load point charges from external file(s). You can load charges and their coordinates from a single file, or from separate files. The files do not have to follow any specific format, but blank lines and comments (starting with #) will be ignored. The actual specification of how the coordinates/charges are laid out in in the file is given by format keyword. Multiple load directives are a supported.  
+* **load** <file> [charges <chargefile> ] [format ix iy iz iq] [units au|nm|pm|'''ang'''|...] [ scale <factor> ] - this directive allows to load point charges from external file(s). You can load charges and their coordinates from a single file, or from separate files. The files do not have to follow any specific format, but blank lines and comments (starting with #) will be ignored. The actual specification of how the coordinates/charges are laid out in in the file is given by format keyword. Multiple load directives are a supported.  
 ** <file> - the name of the file where Bq coordinates and charges are stored.   
 ** charges <chargefile> - this optional keyword allows to load charges (NOT the coordinates) from a separate <chargefile>. In this case, only coordinates would be loaded from <file>  
 
