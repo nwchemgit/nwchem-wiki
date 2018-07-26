@@ -218,17 +218,10 @@ output:[h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
 [h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
 )
 
-<center>
 
 ![H2O Inversion Pathway](h2o.gif "H2O Inversion Pathway")
 
-</center>
 
-<center>
-
-[400px](h2o-neb.png "wikilink")
-
-</center>
 ```
 Title "H2O inversion calculation"
 echo
@@ -269,7 +262,6 @@ neb
   print_shift 1  
 end  
 task dft neb ignore
-
 neb  
   # increase the number of images  
   nbeads 20  
@@ -277,7 +269,7 @@ neb
   stepsize 1.0  
   maxiter 30  
   loose  
-end  
+end 
 task dft neb ignore
 ```
 After each optimization step the path energies are outputed as follows
