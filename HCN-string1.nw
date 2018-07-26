@@ -1,0 +1,65 @@
+# 
+# The initial path has the Carbon moving through the Nitrogen.
+# So for this simulation to work that atom avoidance code needs to work.
+# Because the initial path is so stiff the wavefunction optimizer needs to requires
+# lots of iterations during the early stages of the path optimization.
+#
+#
+Title "HCN --> HNC Zero-Temperature String Simulation"
+echo
+start hcn-hnc-dft
+
+memory 1600 mb
+
+permanent_dir ./perm
+scratch_dir   ./perm
+
+geometry noautoz noautosym
+C         0.00000000     0.00000000    -0.49484657
+N         0.00000000     0.00000000     0.64616359
+H         0.00000000     0.00000000    -1.56151539
+end
+
+geometry endgeom  noautoz noautosym
+C         0.00000000     0.00000000     0.73225318
+N         0.00000000     0.00000000    -0.42552059
+H         0.00000000     0.00000000    -1.42351006
+end
+
+#### Gaussian DFT ####
+basis
+* library 3-21G
+end
+
+dft
+   xc b3lyp
+   maxiter 501
+end
+
+
+string
+   nhist 10
+   nbeads 10
+   maxiter 10
+   stepsize 0.10
+   print_shift 1
+
+   # don't allow the end points of the path to move
+   freeze1 .true.
+   freezeN .true.
+end
+task dft string ignore
+
+
+string
+   # increase the number of images
+   nbeads 20
+   maxiter 20
+
+   # allow the end points of the path to move
+   freeze1 .false.
+   freezeN .false.
+end
+task dft string ignore
+
+
