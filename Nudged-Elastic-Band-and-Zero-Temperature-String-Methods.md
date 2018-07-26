@@ -230,9 +230,9 @@ output:[h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
 
 </center>
 ```
-Title "H2O inversion calculation"  
-echo  
-start h2o-neb  
+Title "H2O inversion calculation"
+echo
+start h2o-neb
   
 memory 1600 mb  
   
@@ -250,7 +250,6 @@ O  0.00000000     0.02293938     0.00000000
 H  0.00000000    -0.55046969     0.75406534  
 H  0.00000000    -0.55046969    -0.75406534  
 end  
-```  
 #### Gaussian DFT ####  
 basis  
 * library 3-21G  
