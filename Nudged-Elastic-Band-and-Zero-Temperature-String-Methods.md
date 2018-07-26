@@ -229,148 +229,148 @@ output:[h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
 [400px](h2o-neb.png "wikilink")
 
 </center>
+```
+Title "H2O inversion calculation"  
+echo  
+start h2o-neb  
+  
+memory 1600 mb  
+  
+permanent_dir ./perm2  
+scratch_dir      ./perm2  
+  
+geometry nocenter noautosym noautoz  
+O  0.00000000    -0.02293938     0.00000000  
+H  0.00000000     0.55046969     0.75406534  
+H  0.00000000     0.55046969    -0.75406534  
+end  
+  
+geometry endgeom nocenter noautosym noautoz  
+O  0.00000000     0.02293938     0.00000000  
+H  0.00000000    -0.55046969     0.75406534  
+H  0.00000000    -0.55046969    -0.75406534  
+end  
+  
+#### Gaussian DFT ####  
+basis  
+* library 3-21G  
+end  
+  
+dft  
+  xc b3lyp  
+  maxiter 5001  
+  cgmin  
+end  
+  
+neb  
+  nbeads 10  
+  kbeads 1.0  
+  maxiter 10  
+  stepsize 0.10  
+  print_shift 1  
+end  
+task dft neb ignore
 
-`Title "H2O inversion calculation"`  
-`echo`  
-`start h2o-neb`  
-  
-`memory 1600 mb`  
-  
-`permanent_dir ./perm2`  
-`scratch_dir      ./perm2`  
-  
-`geometry nocenter noautosym noautoz`  
-`O  0.00000000    -0.02293938     0.00000000`  
-`H  0.00000000     0.55046969     0.75406534`  
-`H  0.00000000     0.55046969    -0.75406534`  
-`end`  
-  
-`geometry endgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.02293938     0.00000000`  
-`H  0.00000000    -0.55046969     0.75406534`  
-`H  0.00000000    -0.55046969    -0.75406534`  
-`end`  
-  
-`#### Gaussian DFT ####`  
-`basis`  
-`* library 3-21G`  
-`end`  
-  
-`dft`  
-`  xc b3lyp`  
-`  maxiter 5001`  
-`  cgmin`  
-`end`  
-  
-`neb`  
-`  nbeads 10`  
-`  kbeads 1.0`  
-`  maxiter 10`  
-`  stepsize 0.10`  
-`  print_shift 1`  
-`end`  
-`task dft neb ignore`
-
-`neb`  
-`  # increase the number of images`  
-`  nbeads 20`  
-`  kbeads 1.0`  
-`  stepsize 1.0`  
-`  maxiter 30`  
-`  loose`  
-`end`  
-`task dft neb ignore`
-
+neb  
+  # increase the number of images  
+  nbeads 20  
+  kbeads 1.0  
+  stepsize 1.0  
+  maxiter 30  
+  loose  
+end  
+task dft neb ignore
+```
 After each optimization step the path energies are outputed as follows
-
-`neb: Path Energy #                    9`  
-`neb:                     1  -75.970000166349976     `  
-`neb:                     2  -75.973958450556779     `  
-`neb:                     3  -75.973964391052448     `  
-`neb:                     4  -75.973965560274110     `  
-`neb:                     5  -75.973961077512683     `  
-`neb:                     6  -75.973087554095144     `  
-`neb:                     7  -75.965847261117744     `  
-`neb:                     8  -75.950292780255126     `  
-`neb:                     9  -75.932932759963109     `  
-`neb:                    10  -75.921912278179292     `  
-`neb:                    11  -75.921834552460439     `  
-`neb:                    12  -75.932680002200939     `  
-`neb:                    13  -75.949868818688529     `  
-`neb:                    14  -75.965372754426866     `  
-`neb:                    15  -75.972788885848303     `  
-`neb:                    16  -75.973958649400714     `  
-`neb:                    17  -75.973965255113598     `  
-`neb:                    18  -75.973964962774133     `  
-`neb:                    19  -75.973959526041568     `  
-`neb:                    20  -75.970000163960066     `
-
+```
+neb: Path Energy #                    9  
+neb:                     1  -75.970000166349976       
+neb:                     2  -75.973958450556779       
+neb:                     3  -75.973964391052448       
+neb:                     4  -75.973965560274110       
+neb:                     5  -75.973961077512683       
+neb:                     6  -75.973087554095144       
+neb:                     7  -75.965847261117744       
+neb:                     8  -75.950292780255126       
+neb:                     9  -75.932932759963109       
+neb:                    10  -75.921912278179292       
+neb:                    11  -75.921834552460439       
+neb:                    12  -75.932680002200939       
+neb:                    13  -75.949868818688529       
+neb:                    14  -75.965372754426866       
+neb:                    15  -75.972788885848303       
+neb:                    16  -75.973958649400714       
+neb:                    17  -75.973965255113598       
+neb:                    18  -75.973964962774133       
+neb:                    19  -75.973959526041568       
+neb:                    20  -75.970000163960066     
+```
 Another way to keep track of the optimization process is to run the
 following grep command on the output
 file.
-
-`[WE24397:NWChem/NEB/Example2] bylaska% grep @ h2o-neb.nwout`  
-`@neb  `  
-`@neb NEB Method`  
-`@neb algorithm      =         0`  
-`@neb maxiter        =        10`  
-`@neb nbeads         =        10`  
-`@neb nhist          =         5`  
-`@neb natoms         =         3`  
-`@neb stepsize       = 0.100E+01`  
-`@neb trust          = 0.100E+00`  
-`@neb kbeads         = 0.100E+00`  
-`@neb Gmax tolerance = 0.450E-03`  
-`@neb Grms tolerance = 0.300E-03`  
-`@neb Xmax tolerance = 0.180E-03`  
-`@neb Xrms tolerance = 0.120E-03`  
-`@neb  `  
-`@neb Step    Intrinsic E    Mid-Point E      Minimum E      Maximum E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`@neb ---- -------------- -------------- -------------- -------------- -------- -------- -------- -------- --------`  
-`@neb    1     -75.951572     -75.921109     -75.970632     -75.921109  0.55875  0.01606  0.14221  1.54029    454.9`  
-`@neb    2     -75.953755     -75.923180     -75.972590     -75.923177  0.38930  0.01116  0.01588  0.45644    624.4`  
-`@neb    3     -75.956726     -75.924391     -75.972861     -75.924387  0.25587  0.00961  0.03673  0.83118    805.2`  
-`@neb    4     -75.957861     -75.924279     -75.973059     -75.924275  0.23572  0.00894  0.01793  0.24399    971.8`  
-`@neb    5     -75.959613     -75.925045     -75.973869     -75.925036  0.10257  0.00464  0.03197  0.20350   1152.8`  
-`@neb    6     -75.959964     -75.925503     -75.973957     -75.925486  0.04762  0.00196  0.00905  0.10433   1316.4`  
-`@neb    7     -75.960068     -75.925822     -75.973956     -75.925791  0.03897  0.00141  0.00308  0.04432   1519.9`  
-`@neb    8     -75.960091     -75.925914     -75.973959     -75.925877  0.03707  0.00127  0.00070  0.01691   2055.8`  
-`@neb    9     -75.960129     -75.926078     -75.973962     -75.926028  0.03353  0.00108  0.00127  0.03707   2297.2`  
-`@neb   10     -75.960142     -75.926142     -75.973963     -75.926085  0.03199  0.00101  0.00054  0.00420   2756.6`  
-`@neb   NEB calculation not converged`  
-`@neb  `  
-`@neb NEB Method`  
-`@neb algorithm      =         0`  
-`@neb maxiter        =        30`  
-`@neb nbeads         =        20`  
-`@neb nhist          =         5`  
-`@neb natoms         =         3`  
-`@neb stepsize       = 0.100E+01`  
-`@neb trust          = 0.100E+00`  
-`@neb kbeads         = 0.100E+01`  
-`@neb Gmax tolerance = 0.450E-02`  
-`@neb Grms tolerance = 0.300E-02`  
-`@neb Xmax tolerance = 0.540E-02`  
-`@neb Xrms tolerance = 0.360E-02`  
-`@neb  `  
-`@neb Step    Intrinsic E    Mid-Point E      Minimum E      Maximum E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`@neb ---- -------------- -------------- -------------- -------------- -------- -------- -------- -------- --------`  
-`@neb    1     -75.960225     -75.921704     -75.973965     -75.921669  0.24799  0.00398  0.00272  0.08741   3966.5`  
-`@neb    2     -75.960339     -75.921782     -75.973965     -75.921745  0.24794  0.00328  0.00199  0.12148   5023.2`  
-`@neb    3     -75.960424     -75.921742     -75.973965     -75.921701  0.19390  0.00286  0.00164  0.08342   5741.4`  
-`@neb    4     -75.960494     -75.921849     -75.973965     -75.921804  0.19681  0.00266  0.00143  0.09030   6079.7`  
-`@neb    5     -75.960646     -75.921874     -75.973965     -75.921820  0.17459  0.00240  0.00241  0.22047   6751.5`  
-`@neb    6     -75.960674     -75.921856     -75.973965     -75.921797  0.14246  0.00165  0.00060  0.00256   7572.3`  
-`@neb    7     -75.960724     -75.921884     -75.973966     -75.921817  0.13004  0.00153  0.00082  0.05401   7893.3`  
-`@neb    8     -75.960747     -75.921892     -75.973966     -75.921822  0.12809  0.00149  0.00038  0.00237   8631.2`  
-`@neb    9     -75.960792     -75.921912     -75.973966     -75.921835  0.12267  0.00142  0.00075  0.05081   9222.0`  
-`@neb   10     -75.960813     -75.921923     -75.973966     -75.921841  0.11902  0.00138  0.00035  0.00212  10163.2`  
-`@neb   11     -75.960834     -75.921934     -75.973966     -75.921846  0.11569  0.00135  0.00035  0.00203  10478.3`  
-`@neb   12     -75.961060     -75.922060     -75.973966     -75.921889  0.07709  0.00104  0.00365  0.30944  10863.8`  
-`@neb   13     -75.961255     -75.922186     -75.973966     -75.921919  0.04600  0.00087  0.00309  0.19999  11357.0`  
-`@neb   14     -75.961405     -75.922286     -75.973966     -75.921927  0.03549  0.00079  0.00244  0.03857  11860.0`  
-`@neb  NEB calculation converged`
-
+```
+[WE24397:NWChem/NEB/Example2] bylaska% grep @ h2o-neb.nwout  
+@neb    
+@neb NEB Method  
+@neb algorithm      =         0  
+@neb maxiter        =        10  
+@neb nbeads         =        10  
+@neb nhist          =         5  
+@neb natoms         =         3  
+@neb stepsize       = 0.100E+01  
+@neb trust          = 0.100E+00  
+@neb kbeads         = 0.100E+00  
+@neb Gmax tolerance = 0.450E-03  
+@neb Grms tolerance = 0.300E-03  
+@neb Xmax tolerance = 0.180E-03  
+@neb Xrms tolerance = 0.120E-03  
+@neb    
+@neb Step    Intrinsic E    Mid-Point E      Minimum E      Maximum E   Gmax     Grms     Xrms     Xmax   Walltime  
+@neb ---- -------------- -------------- -------------- -------------- -------- -------- -------- -------- --------  
+@neb    1     -75.951572     -75.921109     -75.970632     -75.921109  0.55875  0.01606  0.14221  1.54029    454.9  
+@neb    2     -75.953755     -75.923180     -75.972590     -75.923177  0.38930  0.01116  0.01588  0.45644    624.4  
+@neb    3     -75.956726     -75.924391     -75.972861     -75.924387  0.25587  0.00961  0.03673  0.83118    805.2  
+@neb    4     -75.957861     -75.924279     -75.973059     -75.924275  0.23572  0.00894  0.01793  0.24399    971.8  
+@neb    5     -75.959613     -75.925045     -75.973869     -75.925036  0.10257  0.00464  0.03197  0.20350   1152.8  
+@neb    6     -75.959964     -75.925503     -75.973957     -75.925486  0.04762  0.00196  0.00905  0.10433   1316.4  
+@neb    7     -75.960068     -75.925822     -75.973956     -75.925791  0.03897  0.00141  0.00308  0.04432   1519.9  
+@neb    8     -75.960091     -75.925914     -75.973959     -75.925877  0.03707  0.00127  0.00070  0.01691   2055.8  
+@neb    9     -75.960129     -75.926078     -75.973962     -75.926028  0.03353  0.00108  0.00127  0.03707   2297.2  
+@neb   10     -75.960142     -75.926142     -75.973963     -75.926085  0.03199  0.00101  0.00054  0.00420   2756.6  
+@neb   NEB calculation not converged  
+@neb    
+@neb NEB Method  
+@neb algorithm      =         0  
+@neb maxiter        =        30  
+@neb nbeads         =        20  
+@neb nhist          =         5  
+@neb natoms         =         3  
+@neb stepsize       = 0.100E+01  
+@neb trust          = 0.100E+00  
+@neb kbeads         = 0.100E+01  
+@neb Gmax tolerance = 0.450E-02  
+@neb Grms tolerance = 0.300E-02  
+@neb Xmax tolerance = 0.540E-02  
+@neb Xrms tolerance = 0.360E-02  
+@neb    
+@neb Step    Intrinsic E    Mid-Point E      Minimum E      Maximum E   Gmax     Grms     Xrms     Xmax   Walltime  
+@neb ---- -------------- -------------- -------------- -------------- -------- -------- -------- -------- --------  
+@neb    1     -75.960225     -75.921704     -75.973965     -75.921669  0.24799  0.00398  0.00272  0.08741   3966.5  
+@neb    2     -75.960339     -75.921782     -75.973965     -75.921745  0.24794  0.00328  0.00199  0.12148   5023.2  
+@neb    3     -75.960424     -75.921742     -75.973965     -75.921701  0.19390  0.00286  0.00164  0.08342   5741.4  
+@neb    4     -75.960494     -75.921849     -75.973965     -75.921804  0.19681  0.00266  0.00143  0.09030   6079.7  
+@neb    5     -75.960646     -75.921874     -75.973965     -75.921820  0.17459  0.00240  0.00241  0.22047   6751.5  
+@neb    6     -75.960674     -75.921856     -75.973965     -75.921797  0.14246  0.00165  0.00060  0.00256   7572.3  
+@neb    7     -75.960724     -75.921884     -75.973966     -75.921817  0.13004  0.00153  0.00082  0.05401   7893.3  
+@neb    8     -75.960747     -75.921892     -75.973966     -75.921822  0.12809  0.00149  0.00038  0.00237   8631.2  
+@neb    9     -75.960792     -75.921912     -75.973966     -75.921835  0.12267  0.00142  0.00075  0.05081   9222.0  
+@neb   10     -75.960813     -75.921923     -75.973966     -75.921841  0.11902  0.00138  0.00035  0.00212  10163.2  
+@neb   11     -75.960834     -75.921934     -75.973966     -75.921846  0.11569  0.00135  0.00035  0.00203  10478.3  
+@neb   12     -75.961060     -75.922060     -75.973966     -75.921889  0.07709  0.00104  0.00365  0.30944  10863.8  
+@neb   13     -75.961255     -75.922186     -75.973966     -75.921919  0.04600  0.00087  0.00309  0.19999  11357.0  
+@neb   14     -75.961405     -75.922286     -75.973966     -75.921927  0.03549  0.00079  0.00244  0.03857  11860.0  
+@neb  NEB calculation converged
+```
 # Zero Temperature String Method
 
 The STRING module is an implementation of the zero temperature string
@@ -380,17 +380,17 @@ can be used at all levels of theory, including SCF, HF, DFT, PSPW, BAND,
 MP2, RIMP2, CCSD, TCE.
 
 Input to the STRING module is contained with the STRING block
-
-` STRING`  
-`  ...`  
-` END`
-
+```
+ STRING
+  ...
+ END
+```
 To run a STRING calculation the following the following task directives
 is used
-
-`TASK `<theory>` STRING`  
-`TASK `<theory>` STRING ignore`
-
+```
+TASK <theory> STRING
+TASK <theory> STRING ignore
+```
 where <theory> is SCF, HF, DFT, PSPW, BAND, MP2, CCSD, TCE, etc.. The
 Task directive with the ignore option is recommended, otherwise NWChem
 will crash if the path is not optimized in the allowed maximum number of
