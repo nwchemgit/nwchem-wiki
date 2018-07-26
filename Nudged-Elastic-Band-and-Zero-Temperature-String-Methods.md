@@ -205,22 +205,17 @@ control the maximum and root mean square of the Cartesian step.
 
 ## NEB Tutorial 1: H2O Inversion
 
-(input:[Media:h2o-neb.nw](h2o-neb.nw "wikilink"),
-output:[Media:h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
-[Media:h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat "wikilink")
-[Media:h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat "wikilink")
+(input:[h2o-neb.nw](h2o-neb.nw "wikilink"),
+output:[h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
+[h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat "wikilink")
+[h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat "wikilink")
 )
 
-(xyzfiles: [Media:
-h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz "wikilink")
-[Media:
-h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz "wikilink")
-[Media:
-h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz "wikilink")
-[Media:
-h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz "wikilink")
-[Media:
-h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
+(xyzfiles: [h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz "wikilink")
+[h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz "wikilink")
+[h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz "wikilink")
+[h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz "wikilink")
+[h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
 )
 
 <center>
@@ -231,7 +226,7 @@ h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
 
 <center>
 
-[400px](file:h2o-neb.png "wikilink")
+[400px](h2o-neb.png "wikilink")
 
 </center>
 
@@ -531,25 +526,25 @@ The "xyz\_path" option can also be used to define the initial path, e.g.
 
 ## String Tutorial 1:HCN --\> HNC path optimization
 
-(input:[Media:HCN-string1.nw](Media:HCN-string1.nw "wikilink"),
-output:[Media:HCN-string1.nwout](Media:HCN-string1.nwout "wikilink"),
+(input:[HCN-string1.nw](HCN-string1.nw "wikilink"),
+output:[HCN-string1.nwout](HCN-string1.nwout "wikilink"),
 datafiles:
-[Media:HCN-string1.string\_epath.dat](Media:HCN-string1.string_epath.dat "wikilink")
-[Media:HCN-string1.string\_final\_epath.dat](Media:HCN-string1.string_final_epath.dat "wikilink")
+[HCN-string1.string\_epath.dat](HCN-string1.string_epath.dat "wikilink")
+[HCN-string1.string\_final\_epath.dat](HCN-string1.string_final_epath.dat "wikilink")
 )
 
-(xyzfiles: [Media:
-HCN-string1.stringpath\_000001.xyz](Media:_HCN-string1.stringpath_000001.xyz "wikilink")
-[Media:
-HCN-string1.stringpath\_000005.xyz](Media:_HCN-string1.stringpath_000005.xyz "wikilink")
-[Media:
-HCN-string1.stringpath\_000010.xyz](Media:_HCN-string1.stringpath_000010.xyz "wikilink")
-[Media:
-HCN-string1.stringpath\_000020.xyz](Media:_HCN-string1.stringpath_000020.xyz "wikilink")
-[Media:
-HCN-string1.stringpath\_000030.xyz](Media:_HCN-string1.stringpath_000030.xyz "wikilink")
-[Media:
-HCN-string1.stringpath\_final.xyz](Media:_HCN-string1.stringpath_final.xyz "wikilink")
+(xyzfiles: [
+HCN-string1.stringpath\_000001.xyz](HCN-string1.stringpath_000001.xyz "wikilink")
+[
+HCN-string1.stringpath\_000005.xyz](HCN-string1.stringpath_000005.xyz "wikilink")
+[
+HCN-string1.stringpath\_000010.xyz](HCN-string1.stringpath_000010.xyz "wikilink")
+[
+HCN-string1.stringpath\_000020.xyz](HCN-string1.stringpath_000020.xyz "wikilink")
+[
+HCN-string1.stringpath\_000030.xyz](HCN-string1.stringpath_000030.xyz "wikilink")
+[
+HCN-string1.stringpath\_final.xyz](HCN-string1.stringpath_final.xyz "wikilink")
 )
 
 <center>
@@ -560,7 +555,7 @@ HCN-string1.stringpath\_final.xyz](Media:_HCN-string1.stringpath_final.xyz "wiki
 
 <center>
 
-[400px](file:hcn-hnc-dft.png "wikilink")
+[400px](hcn-hnc-dft.png "wikilink")
 
 </center>
 
