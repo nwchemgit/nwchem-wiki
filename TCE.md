@@ -1185,8 +1185,7 @@ of attilesize is recommended (typically between 40-60).
 
 Additional algorithms are numbered 5, 6 and 9. Other values of 2emet are
 not supported and refer to methods which do not function properly.
-Algorithms 5 and 6 were written as out-of-core <img alt="$N^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f56fbac61e4cf5d8984f6b2d8b7fbe49.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> methods (idiskx
-1) and are the most efficient algorithms at the present time. The
+Algorithms 5 and 6 were written as out-of-core <img alt="$N^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f56fbac61e4cf5d8984f6b2d8b7fbe49.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> methods (idiskx1) and are the most efficient algorithms at the present time. The
 corresponding in-core variants (idiskx 0) are available but require
 excessive memory with respect to the methods discussed above, although
 they may be faster if sufficient memory is available (to get enough
