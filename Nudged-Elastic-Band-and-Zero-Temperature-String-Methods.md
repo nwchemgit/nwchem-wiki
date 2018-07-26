@@ -516,14 +516,14 @@ geometries are entered in the geometry blocks "geometry", "midgeom" and
   - Using xyz\_path to explicitly input a path of geometries
 
 The "xyz\_path" option can also be used to define the initial path, e.g.
-
-`...`  
-`STRING`  
-`   ...`  
-`  XYZ_PATH path.xyz`  
-`END`  
-`...`
-
+```
+...
+STRING
+   ...
+  XYZ_PATH path.xyz
+END
+...
+```
 ## String Tutorial 1:HCN --\> HNC path optimization
 
 (input:[HCN-string1.nw](HCN-string1.nw "wikilink"),
@@ -555,7 +555,7 @@ HCN-string1.stringpath\_final.xyz](HCN-string1.stringpath_final.xyz "wikilink")
 
 <center>
 
-[400px](hcn-hnc-dft.png "wikilink")
+![400px](hcn-hnc-dft.png "wikilink")
 
 </center>
 
