@@ -50,23 +50,23 @@ directive,
 
 The following list describes the input for the NEB block
 
-  - <nbeads> - number of beads (or images) used to represent the path
-  - <kbeads> - value for the NEB spring constant
-  - <maxiter> - maximum number of NEB path optimizations to be performed
-  - <stepsize> - value for the stepsize used in the optimization.
+  - **nbeads** - number of beads (or images) used to represent the path
+  - **kbeads** - value for the NEB spring constant
+  - **maxiter** - maximum number of NEB path optimizations to be performed
+  - **stepsize** - value for the stepsize used in the optimization.
     Typically less than 1.
-  - <nhist> - number of histories to use for quasi-Newton optimization
+  - **nhist** - number of histories to use for quasi-Newton optimization
     (algorithm =0)
   - LOOSE|DEFAULT|TIGHT - options specifying thresholds for convergence
-  - <gmax> - value for the maximum gradient used to determine
+  - **gmax** - value for the maximum gradient used to determine
     convergence
-  - <grms> - value for the root mean square gradient used to determine
+  - **grms** - value for the root mean square gradient used to determine
     convergence
-  - <xmax> - value for the maximum cartesian step used to determine
+  - **xmax** - value for the maximum cartesian step used to determine
     convergence
-  - <xrmx> - value for the root mean square cartesian step used to
+  - **xrmx** - value for the root mean square cartesian step used to
     determine convergence
-  - <algorithm> - 0: quasi-Newton Fixed Point optimization, 1: dampled
+  - **algorithm** - 0: quasi-Newton Fixed Point optimization, 1: dampled
     Verlet optimization, 2: refining conjugate gradient optimization
   - IMPOSE - if specified causes the initial geometries used to specify
     the path to be aligned with one another
@@ -75,10 +75,10 @@ The following list describes the input for the NEB block
     is defined as a linear morphing from "geometry" --\> "midgeom" --\>
     "endgeom"
   - XYZ\_PATH - if specified the initial path is defined from the
-    sequence of geometries contained in <xyzfilename>
+    sequence of geometries contained in **xyzfilename**
   - RESET - if specified causes the NEB optimization and path to be
     started from scratch
-  - <print_shift> - setting the PRINT\_SHIFT directive causes the path
+  - **print_shift** - setting the PRINT\_SHIFT directive causes the path
     energies and geometries to be outputed every <print_shift> steps.
     The current path energies are appended to the file
     jobname.neb\_epath and the current geometries are appended to the
