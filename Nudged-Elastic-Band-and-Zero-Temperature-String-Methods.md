@@ -196,13 +196,13 @@ specified to use standard sets of values, or the individual criteria
 adjusted. All criteria are in atomic units. GMAX and GRMS control the
 maximum and root mean square gradient in the coordinates. XMAX and XRMS
 control the maximum and root mean square of the Cartesian step.
-
-`                LOOSE    DEFAULT    TIGHT`  
-`       GMAX   0.0045d0   0.00045   0.000015   `  
-`       GRMS   0.0030d0   0.00030   0.00001`  
-`       XMAX   0.0054d0   0.00180   0.00006`  
-`       XRMS   0.0036d0   0.00120   0.00004`
-
+```
+                LOOSE    DEFAULT    TIGHT  
+       GMAX   0.0045d0   0.00045   0.000015   
+       GRMS   0.0030d0   0.00030   0.00001  
+       XMAX   0.0054d0   0.00180   0.00006  
+       XRMS   0.0036d0   0.00120   0.00004
+```
 ## NEB Tutorial 1: H2O Inversion
 
 (input:[h2o-neb.nw](h2o-neb.nw "wikilink"),
@@ -250,7 +250,7 @@ O  0.00000000     0.02293938     0.00000000
 H  0.00000000    -0.55046969     0.75406534  
 H  0.00000000    -0.55046969    -0.75406534  
 end  
-  
+```  
 #### Gaussian DFT ####  
 basis  
 * library 3-21G  
