@@ -205,22 +205,22 @@ control the maximum and root mean square of the Cartesian step.
 
 ## NEB Tutorial 1: H2O Inversion
 
-(input:[Media:h2o-neb.nw](Media:h2o-neb.nw "wikilink"),
-output:[Media:h2o-neb.nwout](Media:h2o-neb.nwout "wikilink"), datafiles:
-[Media:h2o-neb.neb\_epath.dat](Media:h2o-neb.neb_epath.dat "wikilink")
-[Media:h2o-neb.neb\_final\_epath.dat](Media:h2o-neb.neb_final_epath.dat "wikilink")
+(input:[Media:h2o-neb.nw](h2o-neb.nw "wikilink"),
+output:[Media:h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
+[Media:h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat "wikilink")
+[Media:h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat "wikilink")
 )
 
 (xyzfiles: [Media:
-h2o-neb.nebpath\_000001.xyz](Media:_h2o-neb.nebpath_000001.xyz "wikilink")
+h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz "wikilink")
 [Media:
-h2o-neb.nebpath\_000005.xyz](Media:_h2o-neb.nebpath_000005.xyz "wikilink")
+h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz "wikilink")
 [Media:
-h2o-neb.nebpath\_000010.xyz](Media:_h2o-neb.nebpath_000010.xyz "wikilink")
+h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz "wikilink")
 [Media:
-h2o-neb.nebpath\_000020.xyz](Media:_h2o-neb.nebpath_000020.xyz "wikilink")
+h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz "wikilink")
 [Media:
-h2o-neb.nebpath\_final.xyz](Media:_h2o-neb.nebpath_final.xyz "wikilink")
+h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
 )
 
 <center>
