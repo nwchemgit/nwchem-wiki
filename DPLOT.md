@@ -112,30 +112,30 @@ DENSMAT [<string Name of density matrix file>]
 ### Charge Density
 
 Example of charge density plot (with Gaussian Cube output):
-
-`start n2`  
-`geometry`  
-`  n  0 0   0.53879155`  
-`  n  0 0  -0.53879155`  
-`end`  
-`basis;  n library cc-pvdz;end`  
-`scf`  
-`vectors  output n2.movecs`  
-`end`  
-`dplot`  
-`  TITLE HOMO`  
-`  vectors n2.movecs`  
-`   LimitXYZ`  
-` -3.0 3.0 10  `  
-` -3.0 3.0 10 `  
-` -3.0  3.0  10`  
-`  spin total`  
-`  gaussian`  
-`  output chargedensity.cube`  
-`end`  
-`task scf     `  
-`task dplot`
-
+```
+start n2  
+geometry  
+  n  0 0   0.53879155 
+  n  0 0  -0.53879155  
+end  
+basis;  n library cc-pvdz;end 
+scf  
+vectors  output n2.movecs  
+end  
+dplot  
+  TITLE HOMO  
+  vectors n2.movecs  
+   LimitXYZ  
+ -3.0 3.0 10    
+ -3.0 3.0 10   
+ -3.0  3.0  10  
+  spin total 
+  gaussian  
+  output chargedensity.cube  
+end  
+task scf       
+task dplot
+```
 ### Molecular Orbital
 
 Example of orbital plot (with Insight II contour output):
