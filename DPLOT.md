@@ -22,9 +22,9 @@ The stack memory setting in the input file must be sufficient to hold
 these quantities in local memory on a processor.
 
 ## GAUSSIAN -- Gaussian Cube format
-
-` GAUSSIAN`
-
+```
+ GAUSSIAN
+```
 A outputfile is generate in Gaussian Cube format. You can visualize this
 file using gOpenMol (after converting the Gaussian Cube file with
 gcube2plt), Molden or Molekel.
@@ -167,106 +167,107 @@ task dplot
 
 TDDFT calculation followed by a calculation of the transition density
 for a specific excited state using the DPLOT block
-
-`echo`  
-`start h2o-td`  
-`title h2o-td`  
-`memory total 800 stack 400 heap 50 global 350 mb`  
-`charge 0`  
-`geometry units au noautoz nocenter`  
-`symmetry group c1`  
-` O    0.00000000000000      0.00000000000000      0.00000000000000`  
-` H    0.47043554760291      1.35028113274600      1.06035416576826`  
-` H   -1.74335410533480     -0.23369304784300      0.27360785442967`  
-`end`  
-`basis "ao basis" print`  
-` H    S`  
-`    13.0107010              0.19682158E-01`  
-`     1.9622572              0.13796524`  
-`     0.44453796             0.47831935`  
-` H    S`  
-`     0.12194962             1.0000000`  
-` H    P`  
-`     0.8000000              1.0000000`  
-` O    S`  
-`  2266.1767785             -0.53431809926E-02`  
-`   340.87010191            -0.39890039230E-01`  
-`    77.363135167           -0.17853911985`  
-`    21.479644940           -0.46427684959`  
-`     6.6589433124          -0.44309745172`  
-` O    S`  
-`     0.80975975668          1.0000000`  
-` O    S`  
-`     0.25530772234          1.0000000`  
-` O    P`  
-`    17.721504317            0.43394573193E-01`  
-`     3.8635505440           0.23094120765`  
-`     1.0480920883           0.51375311064`  
-` O    P`  
-`     0.27641544411          1.0000000`  
-` O    D`  
-`     1.2000000              1.0000000`  
-`end`  
-`dft`  
-` xc bhlyp`  
-` grid fine`  
-` direct`  
-` convergence energy 1d-5`  
-`end`  
-`tddft`  
-` rpa`  
-` nroots 5`  
-` thresh 1d-5`  
-` singlet`  
-` notriplet`  
-` civecs`  
-`end`  
-`task tddft energy`  
-`dplot`  
-` civecs h2o-td.civecs_singlet`  
-` root 2`  
-` LimitXYZ`  
-`  -3.74335 2.47044 50`  
-`  -2.23369 3.35028 50`  
-`  -2 3.06035 50`  
-`   gaussian`  
-`   output root-2.cube`  
-`end`  
-`task dplot`
-
+```
+echo  
+start h2o-td  
+title h2o-td  
+memory total 800 stack 400 heap 50 global 350 mb  
+charge 0  
+geometry units au noautoz nocenter  
+symmetry group c1  
+ O    0.00000000000000      0.00000000000000      0.00000000000000  
+ H    0.47043554760291      1.35028113274600      1.06035416576826  
+ H   -1.74335410533480     -0.23369304784300      0.27360785442967  
+end  
+basis "ao basis" print  
+ H    S  
+    13.0107010              0.19682158E-01  
+     1.9622572              0.13796524  
+     0.44453796             0.47831935  
+ H    S  
+     0.12194962             1.0000000  
+ H    P  
+     0.8000000              1.0000000  
+ O    S  
+  2266.1767785             -0.53431809926E-02  
+   340.87010191            -0.39890039230E-01  
+    77.363135167           -0.17853911985  
+    21.479644940           -0.46427684959  
+     6.6589433124          -0.44309745172  
+ O    S  
+     0.80975975668          1.0000000  
+ O    S  
+     0.25530772234          1.0000000  
+ O    P  
+    17.721504317            0.43394573193E-01  
+     3.8635505440           0.23094120765  
+     1.0480920883           0.51375311064  
+ O    P  
+     0.27641544411          1.0000000  
+ O    D  
+     1.2000000              1.0000000  
+end  
+dft  
+ xc bhlyp  
+ grid fine  
+ direct  
+ convergence energy 1d-5  
+end  
+tddft  
+ rpa  
+ nroots 5  
+ thresh 1d-5  
+ singlet  
+ notriplet  
+ civecs  
+end  
+task tddft energy  
+dplot  
+ civecs h2o-td.civecs_singlet  
+ root 2  
+ LimitXYZ  
+  -3.74335 2.47044 50  
+  -2.23369 3.35028 50  
+  -2 3.06035 50  
+   gaussian  
+   output root-2.cube  
+end  
+task dplot
+```
 ### Plot the excited state density
-
-`echo`  
-`start tddftgrad_co_exden`  
-`geometry`  
-` C     0.00000000     0.00000000    -0.64628342`  
-` O     0.00000000     0.00000000     0.48264375`  
-` symmetry c1`  
-`end`  
-`basis spherical`  
-` * library "3-21G"`  
-`end`  
-`dft`  
-` xc pbe0`  
-` direct`  
-`end`  
-`tddft`  
-` nroots 3`  
-` notriplet`  
-` target 1`  
-` civecs`  
-` grad`  
-`  root 1`  
-` end`  
-`end`  
-`task tddft gradient`  
-`dplot`  
-` densmat tddftgrad_co_exden.dmat`  
-` LimitXYZ`  
-`-4.0 4.0 50`  
-`-4.0 4.0 50`  
-`-4.0 4.0 50`  
-` gaussian`  
-` output co_exden.cube`  
-`end`  
-`task dplot`
+```
+echo  
+start tddftgrad_co_exden  
+geometry  
+ C     0.00000000     0.00000000    -0.64628342  
+ O     0.00000000     0.00000000     0.48264375  
+ symmetry c1  
+end  
+basis spherical  
+ * library "3-21G"  
+end  
+dft  
+ xc pbe0  
+ direct  
+end  
+tddft  
+ nroots 3  
+ notriplet  
+ target 1  
+ civecs  
+ grad  
+  root 1  
+ end  
+end  
+task tddft gradient  
+dplot  
+ densmat tddftgrad_co_exden.dmat  
+ LimitXYZ  
+-4.0 4.0 50  
+-4.0 4.0 50  
+-4.0 4.0 50  
+ gaussian  
+ output co_exden.cube  
+end  
+task dplot
+```
