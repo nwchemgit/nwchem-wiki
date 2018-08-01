@@ -139,30 +139,30 @@ task dplot
 ### Molecular Orbital
 
 Example of orbital plot (with Insight II contour output):
-
-`start n2`  
-`geometry`  
-`  n  0 0   0.53879155`  
-`  n  0 0  -0.53879155`  
-`end`  
-`basis;  n library cc-pvdz;end`  
-`scf`  
-`vectors  output n2.movecs`  
-`end`  
-`dplot`  
-`  TITLE HOMO`  
-`  vectors n2.movecs`  
-`   LimitXYZ`  
-` -3.0 3.0 10  `  
-` -3.0 3.0 10 `  
-` -3.0  3.0  10`  
-`  spin total`  
-`  orbitals view; 1; 7`  
-`  output homo.grd`  
-`end`  
-`task scf     `  
-`task dplot`
-
+```
+start n2  
+geometry 
+  n  0 0   0.53879155  
+  n  0 0  -0.53879155  
+end  
+basis;  n library cc-pvdz;end 
+scf 
+vectors  output n2.movecs  
+end  
+dplot  
+  TITLE HOMO  
+  vectors n2.movecs  
+   LimitXYZ  
+ -3.0 3.0 10    
+ -3.0 3.0 10   
+ -3.0  3.0  10  
+  spin total  
+  orbitals view; 1; 7  
+  output homo.grd  
+end  
+task scf       
+task dplot
+```
 ### Transition Density
 
 TDDFT calculation followed by a calculation of the transition density
