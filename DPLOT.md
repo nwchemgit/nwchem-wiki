@@ -9,7 +9,7 @@ densities (or orbitals) of the molecule. The electron density is
 calculated on a specified set of grid points using the molecular
 orbitals from SCF or DFT calculation. The output file is either in MSI
 Insight II contour format (default) or in the Gaussian Cube format.
-DPLOT is not executed until the "task dplot" directive is given.
+DPLOT is not executed until the <tt>task dplot</tt> directive is given.
 Different sub-directives are described below.
 
 The implementation of the dplot functionality uses mostly local memory.
