@@ -65,6 +65,7 @@ feedback on this page content.
     <https://github.com/adrianasupady/fafoom>
   - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
     <http://pymatgen.org>
+  - **PVSCF** A parallel vibrational self-consistent field program <http://pvscf.org>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
