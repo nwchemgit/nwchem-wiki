@@ -30,27 +30,27 @@ file using gOpenMol (after converting the Gaussian Cube file with
 gcube2plt), Molden or Molekel.
 
 ## TITLE -- Title directive
-
-` TITLE `<string Title default Unknown Title>
-
+```
+ TITLE <string Title default Unknown Title>
+```
 This sub-directive specifies a title line for the generated input to the
 Insight program or for the Gaussian cube file. Only one line is allowed.
 
 ## LIMITXYZ -- Plot limits
-
-` LIMITXYZ [units `<string Units default angstroms>`]`  
-` `<real X_From>` `<real X_To>` `<integer No_Of_Spacings_X>  
-` `<real Y_From>` `<real Y_To>` `<integer No_Of_Spacings_Y>  
-` `<real Z_From>` `<real Z_To>` `<integer No_Of_Spacings_Z>
-
+```
+ LIMITXYZ [units <string Units default angstroms>]  
+  <real X_From> <real X_To> <integer No_Of_Spacings_X>  
+   <real Y_From> <real Y_To> <integer No_Of_Spacings_Y>  
+   <real Z_From> <real Z_To> <integer No_Of_Spacings_Z>
+```
 This sub-directive specifies the limits of the cell to be plotted. The
 grid is generated using No\_Of\_Spacings + 1 points along each
 direction. The known names for Units are angstroms, au and bohr.
 
 ## SPIN -- Density to be plotted
-
-` SPIN `<string Spin default total>
-
+```
+ SPIN <string Spin default total>
+```
 This sub-directive specifies, what kind of density is to be computed.
 The known names for Spin are total, alpha, beta and spindens, the last
 being computed as the difference between α and β electron densities.
@@ -100,13 +100,13 @@ of two orbital files conflicts with the view option. alpha orbitals are
 always plotted unless Spin is set to beta.
 
 ## CIVECS -- CI vectors
-
-CIVECS \[<string Name of civecs file>\]
-
+```
+CIVECS [<string Name of civecs file>]
+```
 ## DENSMAT -- Density matrix
-
-DENSMAT \[<string Name of density matrix file>\]
-
+```
+DENSMAT [<string Name of density matrix file>]
+```
 ## Examples
 
 ### Charge Density
