@@ -1,9 +1,9 @@
 # DPLOT
-
-` DPLOT`  
-`   ...`  
-` END`
-
+```
+ DPLOT  
+   ...  
+ END
+```
 This directive is used to obtain the plots of various types of electron
 densities (or orbitals) of the molecule. The electron density is
 calculated on a specified set of grid points using the molecular
@@ -56,26 +56,26 @@ The known names for Spin are total, alpha, beta and spindens, the last
 being computed as the difference between α and β electron densities.
 
 ## OUTPUT -- Filename
-
-` OUTPUT `<string File_Name default dplot>
-
+```
+ OUTPUT <string File_Name default dplot>
+```
 This sub-directive specifies the name of the generated input to the
 Insight program or the generated Gaussian cube file. The name OUTPUT is
 reserved for the standard NWChem output.
 
 ## VECTORS -- MO vector file name
-
-` VECTORS `<string File_Name default movecs>` [`<string File_Name2>`]`
-
+```
+ VECTORS <string File_Name default movecs> [<string File_Name2>]
+```
 This sub-directive specifies the name of the molecular orbital file. If
 the second file is optionally given the density is computed as the
 difference between the corresponding electron densities. The vector
 files have to match.
 
 ## WHERE -- Density evaluation
-
-` WHERE `<string Where default grid>
-
+```
+ WHERE <string Where default grid>
+```
 This sub-directive specifies where the density is to be computed. The
 known names for Where are grid (the calculation of the density is
 performed on the set of a grid points specified by the sub-directive
@@ -84,11 +84,11 @@ generated), nuclei (the density is computed at the position of the
 nuclei and written to the NWChem output) and g+n (both).
 
 ## ORBITAL -- Orbital sub-space
-
-` ORBITALS [`<string Option default density>`]`  
-` `<integer No_Of_Orbitals>  
-` <integer Orb_No_1 Orb_No_2 ...>`
-
+```
+ ORBITALS [<string Option default density>]
+ <integer No_Of_Orbitals>  
+ <integer Orb_No_1 Orb_No_2 ...>
+```
 This sub-directive specifies the subset of the orbital space for the
 calculation of the electron density. The density is computed using the
 occupation numbers from the orbital file modified according to the Spin
