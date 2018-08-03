@@ -126,11 +126,11 @@ Following the Z-matrix center definitions described above, the user can
 specify initial values for any symbolic variables used to define the
 Z-matrix tags. This is done using the optional VARIABLES directive,
 which has the general form:
-
-` VARIABLES`  
-`   `<string symbol>`  `<real value>  
-`   ...`
-
+```
+ VARIABLES 
+   <string symbol>  <real value>  
+   ...
+```
 Each line contains the name of a variable followed by its value.
 Optionally, an equals sign (=) can be included between the symbol and
 its value, for clarity in reading the input file.
@@ -141,11 +141,11 @@ geometry optimizations. To freeze the Cartesian coordinates of an atom,
 refer to [Applying constraints in geometry
 optimizations](#Applying_constraints_in_geometry_optimizations "wikilink").
 The general form of this directive is as follows:
-
-` CONSTANTS`  
-`   `<string symbol>`  `<real value>  
-`   ...`
-
+```
+ CONSTANTS  
+   <string symbol>  <real value>  
+   ...
+```
 Each line contains the name of a variable followed by its value. As with
 the VARIABLES directive, an equals sign (=) can be included between the
 symbol and its value.
@@ -159,53 +159,53 @@ specified numerically, and symbolic tags are used to specify
 connectivity information. This requires that all tags be unique, and
 therefore different tags are used for the two hydrogen atoms, which may
 or may not be identical.
-
-` geometry`  
-`   zmatrix `  
-`     O`  
-`     H1 O 0.95`  
-`     H2 O 0.95 H1 108.0`  
-`   end`  
-` end`
-
+```
+ geometry 
+   zmatrix   
+     O  
+     H1 O 0.95  
+     H2 O 0.95 H1 108.0  
+   end  
+ end
+```
 The following example illustrates the Z-matrix input for the molecule
 <img alt="$CH_3CF_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cdaae9d00c367465fffd1cfa2ee4dead.svg?invert_in_darkmode&sanitize=true" align=middle width="63.8088pt" height="22.38192pt"/>. This input uses the numbers of centers to specify the
 connectivity information (i, j, and k), and uses symbolic variables for
 the Z-matrix parameters R, alpha, and beta, which are defined in the
 inputs for the VARIABLES and CONSTANTS directives.
-
-`geometry `  
-` zmatrix`  
-`  C `  
-`  C 1 CC `  
-`  H 1 CH1 2 HCH1 `  
-`  H 1 CH2 2 HCH2 3  TOR1 `  
-`  H 1 CH3 2 HCH3 3 -TOR2 `  
-`  F 2 CF1 1 CCF1 3  TOR3 `  
-`  F 2 CF2 1 CCF2 6  FCH1 `  
-`  F 2 CF3 1 CCF3 6  -FCH1`  
-`  variables`  
-`    CC    1.4888 `  
-`    CH1   1.0790 `  
-`    CH2   1.0789  `  
-`    CH3   1.0789  `  
-`    CF1   1.3667 `  
-`    CF2   1.3669 `  
-`    CF3   1.3669`  
-`  constants`  
-`    HCH1  104.28 `  
-`    HCH2  104.74 `  
-`    HCH3  104.7 `  
-`    CCF1  112.0713 `  
-`    CCF2  112.0341 `  
-`    CCF3  112.0340 `  
-`    TOR1  109.3996 `  
-`    TOR2  109.3997 `  
-`    TOR3  180.0000 `  
-`    FCH1  106.7846 `  
-` end   `  
-`end`
-
+```
+geometry  
+ zmatrix  
+  C   
+  C 1 CC  
+  H 1 CH1 2 HCH1  
+  H 1 CH2 2 HCH2 3  TOR1   
+  H 1 CH3 2 HCH3 3 -TOR2   
+  F 2 CF1 1 CCF1 3  TOR3   
+  F 2 CF2 1 CCF2 6  FCH1  
+  F 2 CF3 1 CCF3 6  -FCH1 
+  variables 
+    CC    1.4888  
+    CH1   1.0790  
+    CH2   1.0789   
+    CH3   1.0789    
+    CF1   1.3667   
+    CF2   1.3669   
+    CF3   1.3669  
+  constants  
+    HCH1  104.28  
+    HCH2  104.74   
+    HCH3  104.7   
+    CCF1  112.0713   
+    CCF2  112.0341   
+    CCF3  112.0340  
+    TOR1  109.3996   
+    TOR2  109.3997  
+    TOR3  180.0000  
+    FCH1  106.7846  
+ end   
+end
+```
 The input for any centers specified with Cartesian coordinates must be
 specified using the format of the <tag> lines described in [Cartesian
 coordinate input](#Cartesian_coordinate_input "wikilink") above.
