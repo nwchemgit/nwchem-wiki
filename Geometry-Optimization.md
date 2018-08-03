@@ -388,9 +388,9 @@ initial hessian. Once Stepper executes it generates a binary dump file
 by the name of name.stpr41 which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
-[START](Top-level#START_and_RESTART_--_Start-up_mode "wikilink")).
+[START](https://github.com/nwchemgit/nwchem/wiki/Start_Restart "wikilink")).
 It also stores the information for the last valid step in case the
-algorithm must take a ["backstep"](#Backstepping_in_STEPPER "wikilink").
+algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper "wikilink").
 This file is the working data store for all stepper-based optimizations.
 This file is never deleted by default and is the first source of an
 initial hessian. The second source of an inital hessian is an ascii file
