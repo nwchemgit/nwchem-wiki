@@ -15,37 +15,37 @@ block (below) -- even an empty block will force use of DRIVER.
 
 Optional input for this module is specified within the compound
 directive,
-
-` DRIVER `  
-`   (LOOSE || DEFAULT || TIGHT)`  
-`   GMAX `<real value>  
-`   GRMS `<real value>  
-`   XMAX `<real value>  
-`   XRMS `<real value>  
-`   EPREC <real eprec default 1e-7>`  
-`   TRUST <real trust default 0.3>`  
-`   SADSTP <real sadstp default 0.1>`  
-`   CLEAR`  
-`   REDOAUTOZ`  
-`   INHESS <integer inhess default 0>`  
-`   (MODDIR || VARDIR) <integer dir default 0>`  
-`   (FIRSTNEG || NOFIRSTNEG)`  
-`   MAXITER <integer maxiter default 20>`  
-`   BSCALE <real BSCALE default 1.0>`  
-`   ASCALE <real ASCALE default 0.25>`  
-`   TSCALE <real TSCALE default 0.1>`  
-`   HSCALE <real HSCALE default 1.0>`  
-`      PRINT ...`  
-`   XYZ <string xyz default `*`file_prefix`*`>]`  
-`   NOXYZ`  
-` END`
-
+```
+ DRIVER   
+   (LOOSE || DEFAULT || TIGHT)  
+   GMAX <real value>  
+   GRMS <real value>  
+   XMAX <real value>  
+   XRMS <real value>  
+   EPREC <real eprec default 1e-7>  
+   TRUST <real trust default 0.3>  
+   SADSTP <real sadstp default 0.1>  
+   CLEAR  
+   REDOAUTOZ  
+   INHESS <integer inhess default 0>  
+   (MODDIR || VARDIR) <integer dir default 0> 
+   (FIRSTNEG || NOFIRSTNEG)  
+   MAXITER <integer maxiter default 20>  
+   BSCALE <real BSCALE default 1.0>` 
+   ASCALE <real ASCALE default 0.25>  
+   TSCALE <real TSCALE default 0.1> 
+   HSCALE <real HSCALE default 1.0> 
+      PRINT ... 
+   XYZ <string xyz default *file_prefix*>]  
+   NOXYZ  
+ END
+```
 On each optimization step a line search is performed. To speed up
 calculations (up to two times), it may be beneficial to turn off the
 line search using following directive:
-
-` set driver:linopt 0`
-
+```
+ set driver:linopt 0
+```
 ## Convergence criteria
 
 `   (LOOSE || DEFAULT || TIGHT)`  
