@@ -88,17 +88,18 @@ starting coordinates during a geometry optimization.
 
 For example, the following directive specifies that atoms numbered 1, 5,
 6, 7, 8, and 15 are active and all other atoms are frozen:
-
-` set geometry:actlist 1 5:8 15`
-
+```
+ set geometry:actlist 1 5:8 15
+```
 or equivalently,
-
-` set geometry:actlist 1 5 6 7 8 15`
-
+```
+ set geometry:actlist 1 5 6 7 8 15
+```
 If this option is not specified by entering a [SET](SET "wikilink")
 directive, the default behavior in the code is to treat all atoms as
 active. To revert to this default behavior after the option to define
 frozen atoms has been invoked, the [UNSET](UNSET "wikilink") directive
 must be used. The form of the UNSET directive is as follows:
-
-` unset geometry:actlist`
+```
+ unset geometry:actlist
+```
