@@ -1,7 +1,7 @@
 # Geometry Optimization with DRIVER
 
 The DRIVER module is one of two drivers (also see documentation on
-[STEPPER](Geometry-Optimization#Geometry_Optimization_with_STEPPER "wikilink"))
+[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper "wikilink"))
 to perform a geometry optimization function on the molecule defined by
 input using the [GEOMETRY](Geometry "wikilink") directive.
 Geometry optimization is either an energy minimization or a transition
