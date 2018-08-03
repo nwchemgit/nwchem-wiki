@@ -7,18 +7,18 @@ coordinates. The ZMATRIX directive is itself a compound directive that
 can include the VARIABLES and CONSTANTS directives, depending on the
 options selected. The general form of the compound ZMATRIX directive is
 as follows:
-
-`   [ZMATRIX || ZMT || ZMAT`  
-`        `<string tagn>` `<list_of_zmatrix_variables>` `  
-`        ... `  
-`        [VARIABLES`  
-`             `<string symbol>` `<real value>  
-`             ... ]`  
-`        [CONSTANTS`  
-`             `<string symbol>` `<real value>  
-`             ... ]`  
-`   (END || ZEND)]`
-
+```
+   [ZMATRIX || ZMT || ZMAT 
+        <string tagn> <list_of_zmatrix_variables>  
+        ...  
+        [VARIABLES 
+             <string symbol> <real value>  
+             ... ]  
+        [CONSTANTS  
+             <string symbol> <real value>  
+             ... ]  
+   (END || ZEND)]
+```
 The input module recognizes three possible spellings of this directive
 name. It can be invoked with ZMATRIX, ZMT, or ZMAT. The user can specify
 the molecular structure using either Cartesian coordinates or internal
@@ -50,13 +50,13 @@ mixture of numeric data and symbols is acceptable. Bond angles (α) must
 be in the range 0 \< α \< 180.
 
 The Z-matrix input is specified sequentially as follows:
-
-`  tag1`  
-`  tag2 i R`  
-`  tag3 i R j alpha`  
-`  tag4 i R j alpha k beta [orient]`  
-`  ...`
-
+```
+  tag1  
+  tag2 i R  
+  tag3 i R j alpha 
+  tag4 i R j alpha k beta [orient]  
+  ...
+```
 The structure of this input is described in more detail below. In the
 following discussion, the tag or number of the center being currently
 defined is labeled as C (C for current). The values entered for these
