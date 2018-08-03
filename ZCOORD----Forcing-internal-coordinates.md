@@ -40,11 +40,11 @@ attempting to make only small changes in the other internal coordinates.
 If no value is provided the value implicit in the input coordinates is
 kept. If the keyword constant is specified, then that internal variable
 is not modified during a geometry optimization with
-[DRIVER](Geometry-Optimization#Geometry_Optimization_with_DRIVER "wikilink").
+[DRIVER](Geometry-Optimization#geometry-optimization-with-driver "wikilink").
 Each internal coordinate may also be named either for easy
 identification in the output, or for the application of constraints
 ([Applying constraints in geometry
-optimizations](#Applying_constraints_in_geometry_optimizations "wikilink")).
+optimizations](ZCOORD----Forcing-internal-coordinates#applying-constraints-in-geometry-optimizations "wikilink")).
 
 If the keyword adjust is specified on the main GEOMETRY directive, only
 ZCOORD data may be specified and it can be used to change the
@@ -72,7 +72,7 @@ computed. This can result in a big computational saving, since gradients
 associated with frozen atoms are forced to zero (Note, however, that
 this destroys the translational and rotational invariance of the
 gradient. This is not yet fully accommodated by the
-[STEPPER](Geometry_Optimization#Geometry_Optimization_with_STEPPER "wikilink")
+[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper "wikilink")
 geometry optimization software, and can sometimes result in slower
 convergence of the optimization. The DRIVER optimization package does
 not suffer from this problem).
