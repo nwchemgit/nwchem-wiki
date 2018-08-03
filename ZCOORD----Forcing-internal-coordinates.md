@@ -40,7 +40,7 @@ attempting to make only small changes in the other internal coordinates.
 If no value is provided the value implicit in the input coordinates is
 kept. If the keyword constant is specified, then that internal variable
 is not modified during a geometry optimization with
-[DRIVER](Geometry_Optimization#Geometry_Optimization_with_DRIVER "wikilink").
+[DRIVER](Geometry-Optimization#Geometry_Optimization_with_DRIVER "wikilink").
 Each internal coordinate may also be named either for easy
 identification in the output, or for the application of constraints
 ([Applying constraints in geometry
