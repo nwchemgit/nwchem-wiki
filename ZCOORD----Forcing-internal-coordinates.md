@@ -13,24 +13,24 @@ coordinates. This is accomplished by including the optional directive
 ZCOORD within the geometry directive. The general form of the ZCOORD
 directive is as
 follows:
-
-` ZCOORD`  
-`    CVR_SCALING `<real value>  
-`    BOND    `<integer i>` `<integer j>` \`  
-`            [`<real value>`] [`<string name>`] [constant]`  
-`    ANGLE   `<integer i>` `<integer j>` `<integer k>` \`  
-`            [`<real value>`] [`<string name>`] [constant]`  
-`    TORSION `<integer i>` `<integer j>` `<integer k>` `<integer l>` \`  
-`            [`<real value>`] [`<string name>`] [constant]`  
-` END`
-
+```
+ ZCOORD  
+    CVR_SCALING <real value>  
+    BOND    <integer i> <integer j> \  
+            [<real value>] [<string name>] [constant]  
+    ANGLE   <integer i> <integer j> <integer k> \  
+            [<real value>] [<string name>] [constant]` 
+    TORSION <integer i> <integer j> <integer k> <integer l> \  
+            [<real value>] [<string name>] [constant]  
+ END
+```
 The centers i, j, k and l must be specified using the numbers of the
 centers, as supplied in the input for the Cartesian coordinates. The
 ZCOORD input parameters are defined as follows:
 
   - cvr\_scaling -- scaling factor applied to van der Waals radii.
   - bond -- a bond between the two centers.
-  - angle -- a bond angle \(\widehat{ijk}\).
+  - angle -- an angle among the three atoms i, j and k.
   - torsion -- a torsion (or dihedral) angle. The angle between the
     planes i-j-k and j-k-l.
 
@@ -79,9 +79,9 @@ not suffer from this problem).
 
 The [SET](Top-level#SET "wikilink") directive is used to freeze atoms,
 by specifying a directive of the form:
-
-` set geometry:actlist `<integer list_of_center_numbers>
-
+```
+ set geometry:actlist <integer list_of_center_numbers>
+```
 This defines only the centers in the list as active. All other centers
 will have zero force assigned to them, and will remain frozen at their
 starting coordinates during a geometry optimization.
