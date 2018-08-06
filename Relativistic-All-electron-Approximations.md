@@ -35,23 +35,23 @@ The RELATIVISTIC directive provides input for the implemented
 relativistic approximations and is a compound directive that encloses
 additional directives specific to the
 approximations:
-
-` RELATIVISTIC`  
-`  [DOUGLAS-KROLL [<string (ON||OFF) default ON> \`  
-`                <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  ||`  
-`   ZORA [ (ON || OFF) default ON ] || `  
-`   DYALL-MOD-DIRAC [ (ON || OFF) default ON ] `  
-`                 [ (NESC1E || NESC2E) default NESC1E ] ]`  
-`  [CLIGHT <real clight default 137.0359895>]`  
-` END`
-
+```
+ RELATIVISTIC`  
+  [DOUGLAS-KROLL [<string (ON||OFF) default ON> \  
+                <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  || 
+   ZORA [ (ON || OFF) default ON ] ||   
+   DYALL-MOD-DIRAC [ (ON || OFF) default ON ]   
+                 [ (NESC1E || NESC2E) default NESC1E ] ]  
+  [CLIGHT <real clight default 137.0359895>]  
+ END
+```
 Only one of the methods may be chosen at a time. If both methods are
 found to be on in the input block, NWChem will stop and print an error
 message. There is one general option for both methods, the definition of
 the speed of light in atomic units:
-
-` CLIGHT <real clight default 137.0359895>`
-
+```
+ CLIGHT <real clight default 137.0359895>
+```
 The following sections describe the optional sub-directives that can be
 specified within the RELATIVISTIC block.
 
@@ -60,10 +60,10 @@ specified within the RELATIVISTIC block.
 The spin-free and spin-orbit one-electron Douglas-Kroll approximation
 have been implemented. The use of relativistic effects from this
 Douglas-Kroll approximation can be invoked by specifying:
-
-` DOUGLAS-KROLL [<string (ON||OFF) default ON> \`  
-`                <string (FPP||DKH||DKFULL|DK3|DK3FULL) default DKH>]`
-
+```
+ DOUGLAS-KROLL [<string (ON||OFF) default ON> \ 
+                <string (FPP||DKH||DKFULL|DK3|DK3FULL) default DKH>]
+```
 The ON|OFF string is used to turn on or off the Douglas-Kroll
 approximation. By default, if the DOUGLAS-KROLL keyword is found, the
 approximation will be used in the calculation. If the user wishes to
