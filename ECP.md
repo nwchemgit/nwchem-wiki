@@ -65,19 +65,19 @@ essential differences required for ECPs. Because of this, the ECP is
 treated internally as a basis set. The form of the input for the ECP
 directive is as
 follows:
-
-` ECP [<string name default "ecp basis">] \`  
-`       [print || noprint default print]`  
-`    `<string tag>` library [`<string tag_in_lib>`] \`  
-`                 `<string standard_set>` [file `<filename>`] \`  
-`                 [except `<string tag list>`]`  
-`    `<string tag>` [nelec] `<integer number_of_electrons_replaced>  
-`       ...`  
-`    `<string tag>` `<string shell_type>  
-`    `<real r-exponent>` `<real Gaussian-exponent>` `<real list_of_coefficients>  
-`       ...`  
-` END`
-
+```
+ ECP [<string name default "ecp basis">] \  
+       [print || noprint default print]  
+    <string tag> library [`<string tag_in_lib>] \  
+                 <string standard_set> [file `<filename>] \  
+                 [except`<string tag list>]  
+    <string tag> [nelec] <integer number_of_electrons_replaced>  
+       ...  
+    <string tag> <string shell_type>  
+    <real r-exponent>` `<real Gaussian-exponent> <real list_of_coefficients>  
+       ...  
+ END
+```
 ECPs are automatically segmented, even if general contractions are
 input. The projection operators defined in an ECP are spherical by
 default, so there is no need to include the CARTESIAN or SPHERICAL
