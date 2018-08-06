@@ -69,12 +69,12 @@ follows:
  ECP [<string name default "ecp basis">] \  
        [print || noprint default print]  
     <string tag> library [`<string tag_in_lib>] \  
-                 <string standard_set> [file `<filename>] \  
-                 [except`<string tag list>]  
+                 <string standard_set> [file <filename>] \  
+                 [except<string tag list>]  
     <string tag> [nelec] <integer number_of_electrons_replaced>  
        ...  
     <string tag> <string shell_type>  
-    <real r-exponent>` `<real Gaussian-exponent> <real list_of_coefficients>  
+    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
        ...  
  END
 ```
@@ -187,18 +187,18 @@ ECPs except that the directive SO is used instead of ECP. Note that
 there currently are no spin-orbit ECPs defined in the standard NWChem
 library. The SO directive is as
 follows:
-
-` SO [<string name default "so basis">] \`  
-`       [print || noprint default print]`  
-`    `<string tag>` library [`<string tag_in_lib>`] \`  
-`                 `<string standard_set>` [file `<filename>`]`  
-`                 [except `<string tag list>`]`  
-`       ...`  
-`    `<string tag>` `<string shell_type>  
-`    `<real r-exponent>` `<real Gaussian-exponent>` `<real list_of_coefficients>  
-`       ...`  
-` END`
-
+```
+ SO [<string name default "so basis">] \  
+       [print || noprint default print]  
+    <string tag> library [<string tag_in_lib>] \
+                 <string standard_set> [file <filename>]  
+                 [except `<string tag list>]  
+       ... 
+    <string tag> <string shell_type>  
+    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
+       ...  
+ END
+```
 Note: in the literature the coefficients of the spin-orbit potentials
 are NOT always defined in the same manner. The NWChem code assumes that
 the spin-orbit potential defined in the input is of the form:
