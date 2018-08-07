@@ -39,105 +39,15 @@ In a nutshell, running a RT-TDDFT calculation takes the following form:
 Unless specified otherwise, all inputs and outputs are in **atomic
 units**. Some useful conversions are:
 
-<table border="1">
+| Quantity      | Conversion        |
+| ------------- |-------------------| 
+| Time          | 1 au = 0.02419 fs | 
+| Length        | 1 au = 0.5292 A   | 
+| Energy        | 1 au = 27.2114 eV |
+| Electric field| 1 au = 514.2 V/nm |
+| Dipole moment | 1 au = 2.542 D    |
 
-<tr>
 
-<th>
-
-Quantity
-
-</th>
-
-<th>
-
-Conversion
-
-</th>
-
-</tr>
-
-<tr>
-
-<td>
-
-Time
-
-</td>
-
-<td>
-
-1 au = 0.02419 fs
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Length
-
-</td>
-
-<td>
-
-1 au = 0.5292 A
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Energy
-
-</td>
-
-<td>
-
-1 au = 27.2114 eV
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Electric field
-
-</td>
-
-<td>
-
-1 au = 514.2 V/nm
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-Dipole moment
-
-</td>
-
-<td>
-
-1 au = 2.542 D
-
-</td>
-
-</tr>
-
-</table>
 
 ## Syntax
 
