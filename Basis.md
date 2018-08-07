@@ -56,11 +56,8 @@ Examining the keywords on the first line of the BASIS directive:
     eliminate problems with linear
 dependence.
 
-<center>
-
-|    |                 |                                                       |
-| -- | --------------- | ----------------------------------------------------- |
 |    | Cartesian       | Spherical                                             |
+|----|-----------------|-------------------------------------------------------|
 | 1  | s               | s                                                     |
 | 1  | p<sub>x</sub>   | p<sub>x</sub>                                         |
 | 2  | p<sub>y</sub>   | p<sub>y</sub>                                         |
@@ -81,11 +78,9 @@ dependence.
 | 8  | f<sub>yyz</sub> |                                                       |
 | 9  | f<sub>yzz</sub> |                                                       |
 | 10 | f<sub>zzz</sub> |                                                       |
-|  |
 
 Order of functions.
 
-</center>
 
   - PRINT or NOPRINT :  
     The default is for the input module to print all basis sets
@@ -148,12 +143,12 @@ their specifications.
 
 The general form of the input line requesting basis sets from the NWChem
 basis set library is:
-
-`    `<string tag>` library [`<string tag_in_lib>`] \`  
-`                 `<string standard set>` [file < filename> \`  
-`                 [except `<string tag list>`] [rel]`  
-`       ...`
-
+```
+    <string tag> library [<string tag_in_lib>] \  
+                 <string standard set> [file < filename> \  
+                 [except <string tag list>] [rel] 
+       ...
+```
 For example, the NWChem basis set library contains the Dunning cc-pvdz
 basis set. These may be used as follows
 
@@ -249,11 +244,11 @@ If the basis sets in the library or available in other external files
 are not suitable for a given calculation, the basis set may be
 explicitly defined. A generally contracted Gaussian basis function is
 associated with a center using an input line of the following form:
-
-`    `<string tag>` `<string shell_type>` [rel]`  
-`       `<real exponent>` `<real list_of_coefficients>  
-`       ...`
-
+```
+    <string tag> <string shell_type> [rel]  
+       <real exponent> <real list_of_coefficients>  
+       ...
+```
 The variable <shell_type> identifies the angular momentum of the shell,
 *s*, *p*, *d*, .... NWChem is configured to handle up to h shells. The
 keyword rel marks the shell as relativistic -- see Section 9.3 for more
