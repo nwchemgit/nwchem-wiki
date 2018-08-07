@@ -149,31 +149,31 @@ parameters are supplied in the RT\_TDDFT block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
 discussed in detail
 afterwards.
-
-`RT_TDDFT`  
-`  [TMAX <double default 1000>]`  
-`  [DT <double default 0.1>]`  
-`  [TAG <string default "`<rt_tddft>`: "]`  
-`  [LOAD (scf || vectors `<string>`)]`  
-`  [NCHECKS <integer default 10>]`  
-`  [NPRINTS (* || `<integer>`)]`  
-`  [NRESTARTS (* || `<integer>`)]`  
-`  [TOLERANCES (zero <double default 1e-8> || series <double default 1e-10> || interpol <double default 1e-7>)]`  
-`  [PROPAGATOR (euler || rk4 || magnus) default magnus]`  
-`  [EXP (diag || pseries)]`  
-`  [PROF]`  
-`  [NOPROP]`  
-`  [STATIC]`  
-`  [PRINT (*, dipole, quadrupole, field, moocc, field, energy, cputime, charge, convergence, s2)]`  
-`  [EXCITE `<string geomname>` with `<string fieldname>`]`  
-`  [FIELD]`  
-`    ...`  
-`  [END]`  
-`  [VISUALIZATION]`  
-`    ...`  
-`  [END]`  
-`END`
-
+```
+RT_TDDFT 
+  [TMAX <double default 1000>]  
+  [DT <double default 0.1>]  
+  [TAG <string default "<rt_tddft>: "] 
+  [LOAD (scf || vectors <string>)]  
+  [NCHECKS <integer default 10>] 
+  [NPRINTS (* || <integer>)]  
+  [NRESTARTS (* || <integer>)]  
+  [TOLERANCES (zero <double default 1e-8> || series <double default 1e-10> || interpol <double default 1e-7>)]  
+  [PROPAGATOR (euler || rk4 || magnus) default magnus]  
+  [EXP (diag || pseries)]  
+  [PROF]  
+  [NOPROP]  
+  [STATIC]  
+  [PRINT (*, dipole, quadrupole, field, moocc, field, energy, cputime, charge, convergence, s2)] 
+  [EXCITE <string geomname>` with <string fieldname>]  
+  [FIELD] 
+    ...  
+  [END]  
+  [VISUALIZATION]  
+    ...  
+  [END] 
+END`
+```
 ### TMAX -- Simulation time
 
 This option specifies the maximum time (in au) to run the simulation
