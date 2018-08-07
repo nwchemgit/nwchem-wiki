@@ -16,20 +16,20 @@ of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
 The general form of the BASIS directive is as follows:
-
-` BASIS [<string name default "ao basis">] \`  
-`       [(spherical || cartesian) default cartesian] \`  
-`       [(print || noprint) default print]`  
-`       [rel]`  
-`    `<string tag>` library [`<string tag_in_lib>`] \`  
-`                 `<string standard_set>` [file `<filename>`] \`  
-`                 [except `<string tag list>`] [rel]`  
-`       ...`  
-`    `<string tag>` `<string shell_type>` [rel]`  
-`       `<real exponent>` `<real list_of_coefficients>  
-`       ...`  
-` END`
-
+```
+ BASIS [<string name default "ao basis">] \  
+       [(spherical || cartesian) default cartesian] \  
+       [(print || noprint) default print]  
+       [rel]  
+    <string tag> library [<string tag_in_lib>] \  
+                 <string standard_set> [file <filename>] \  
+                 [except <string tag list>] [rel]  
+       ...  
+    <string tag> <string shell_type> [rel]  
+       <real exponent> <real list_of_coefficients>  
+       ...  
+ END
+```
 Examining the keywords on the first line of the BASIS directive:
 
   - name :  
