@@ -36,7 +36,7 @@ relativistic approximations and is a compound directive that encloses
 additional directives specific to the
 approximations:
 ```
- RELATIVISTIC`  
+ RELATIVISTIC
   [DOUGLAS-KROLL [<string (ON||OFF) default ON> \  
                 <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  || 
    ZORA [ (ON || OFF) default ON ] ||   
