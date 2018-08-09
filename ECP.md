@@ -213,8 +213,9 @@ potentials in the published papers are defined as
 have been corrected with the <img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> factor, so make sure the
 appropriate scaling is applied).
 
-For example, to use the Stuttgart/Köln ECP and SO-ECP for Hg  (ECP60MDF) in NWChem
-
+For example, to use the Stuttgart/Köln ECP and SO-ECP for Hg  (ECP60MDF) in NWChem.  
+The following URL will display bot the the ECP and SO parts.
+http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF  
 The highlighted section below is the SO part. The un-highlighted part is the ECP. 
 
 !  Q=20., MEFIT, MCDHF+Breit, Ref 37.  
@@ -279,3 +280,6 @@ Hg G
 2   4.513200   -3.239945
 end
 ```
+### Websites with Spin-Orbits ECPs
+* http://www.tc.uni-koeln.de/PP/clickpse.en.html
+* http://people.clarkson.edu/~pchristi/reps.html
