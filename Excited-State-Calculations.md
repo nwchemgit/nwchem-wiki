@@ -137,7 +137,7 @@ subsections TARGET and TARGETSYM for more detail.
 Individual parameters and keywords may be supplied in the TDDFT input
 block. The syntax is:
 ```
- TDDFT`  
+ TDDFT
    [(CIS||RPA) default RPA]  
    [NROOTS <integer nroots default 1>]  
    [MAXVECS <integer maxvecs default 1000>] 
@@ -160,7 +160,7 @@ block. The syntax is:
    [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
             [virtual <integer nfzv default 0>]]  
    [PRINT (none||low||medium||high||debug)  
-     <string list_of_names ...>]`  
+     <string list_of_names ...>]
  END
 ```
 The user can also specify the reference wave function in the DFT input
@@ -168,15 +168,15 @@ block (even when CIS and TDHF calculations are requested). See the
 section of Sample input and output for more details.
 
 Since each keyword has a default value, a minimal input file will be
-
-` GEOMETRY`  
-` Be 0.0 0.0 0.0`  
-` END`  
-` BASIS`  
-` Be library 6-31G**`  
-` END`  
-` TASK TDDFT ENERGY`
-
+```
+ GEOMETRY
+  Be 0.0 0.0 0.0  
+ END  
+ BASIS  
+  Be library 6-31G**  
+ END  
+ TASK TDDFT ENERGY
+```
 Note that the keyword for the asymptotic correction must be given in the
 DFT input block, since all the effects of the correction (and also
 changes in the computer program) occur in the SCF calculation stage. See
