@@ -410,11 +410,9 @@ This keyword changes the level of output verbosity. One may also request
 some particular items in the table
 below.
 
-<center>
 
-|                       |             |                                                    |
-| --------------------- | ----------- | -------------------------------------------------- |
 | Item                  | Print Level | Description                                        |
+|-----------------------|-------------|----------------------------------------------------|
 | "timings"             | high        | CPU and wall times spent in each step              |
 | "trial vectors"       | high        | Trial CI vectors                                   |
 | "initial guess"       | debug       | Initial guess CI vectors                           |
@@ -432,33 +430,32 @@ below.
 
 Printable items in the TDDFT modules and their default print levels.
 
-</center>
 
 ## Sample input
 
 The following is a sample input for a spin-restricted TDDFT calculation
 of singlet excitation energies for the water molecule at the
 B3LYP/6-31G\*.
-
-`START h2o`  
-`TITLE "B3LYP/6-31G* H2O"`  
-`GEOMETRY`  
-` O     0.00000000     0.00000000     0.12982363`  
-` H     0.75933475     0.00000000    -0.46621158`  
-` H    -0.75933475     0.00000000    -0.46621158`  
-`END`  
-`BASIS`  
-` * library 6-31G*`  
-`END`  
-`DFT`  
-` XC B3LYP`  
-`END`  
-`TDDFT`  
-` RPA`  
-` NROOTS 20`  
-`END`  
-`TASK TDDFT ENERGY`
-
+```
+START h2o  
+TITLE "B3LYP/6-31G* H2O"  
+GEOMETRY 
+ O     0.00000000     0.00000000     0.12982363  
+ H     0.75933475     0.00000000    -0.46621158 
+ H    -0.75933475     0.00000000    -0.46621158  
+END  
+BASIS  
+ * library 6-31G* 
+END  
+DFT  
+ XC B3LYP  
+END  
+TDDFT  
+ RPA 
+ NROOTS 20  
+END  
+TASK TDDFT ENERGY
+```
 To perform a spin-unrestricted TDHF/aug-cc-pVDZ calculation for the CO+
 radical,
 
