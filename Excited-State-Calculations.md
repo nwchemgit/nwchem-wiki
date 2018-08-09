@@ -743,4 +743,35 @@ state as reference.
 
 ## Spectrum parser
 A Python script is available for parsing NWChem output for TDDFT/vspec excitation energies, and optionally Lorentzian broadenening the spectra . The  nw_spectrum.py file can be found at [https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/parsers/nw_spectrum.py](https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/parsers/nw_spectrum.py)
+```
+Usage: nw_spectrum.py [options]
 
+Reads NWChem output from stdin, parses for the linear response TDDFT or DFT
+vspec excitations, and prints the absorption spectrum to stdout.  It will
+optionally broaden peaks using a Lorentzian with FWHM of at least two
+energy/wavelength spacings.  By default, it will automatically determine data
+format (tddft or vspec) and generate a broadened spectrum in eV.
+
+Example:
+
+	nw_spectrum -b0.3 -p5000 -wnm < water.nwo > spectrum.dat
+
+Create absorption spectrum in nm named "spectrum.dat" from the NWChem output
+file "water.nwo" named spectrum.dat with peaks broadened by 0.3 eV and 5000
+points in the spectrum.
+
+
+Options:
+  -h, --help            show this help message and exit
+  -f FMT, --format=FMT  data file format: auto (default), tddft, vspec, dos
+  -b WID, --broad=WID   broaden peaks (FWHM) by WID eV (default 0.1 eV)
+  -n NUM, --nbin=NUM    number of eigenvalue bins for DOS calc (default 20)
+  -p NUM, --points=NUM  create a spectrum with NUM points (default 2000)
+  -w UNT, --units=UNT   units for frequency:  eV (default), au, nm
+  -d STR, --delim=STR   use STR as output separator (four spaces default)
+  -x, --extract         extract unbroadened roots; do not make spectrum
+  -C, --clean           clean output; data only, no header or comments
+  -c CHA, --comment=CHA
+                        comment character for output ('#' default)
+  -v, --verbose         echo warnings and progress to stderr
+```
