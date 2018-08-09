@@ -94,13 +94,13 @@ dynamics (see [Hints and
 Tricks](RT-TDDFT#Hints_and_Tricks "wikilink")). For most
 valence excitations, for example, 1000 au is overkill so you might want
 to automatically stop at 500 au:
-
-`rt_tddft`  
-`  ...`  
-`  tmax 500.0`  
-`  ...`  
-`end`
-
+```
+rt_tddft
+  ...  
+  tmax 500.0 
+  ... 
+end
+```
 ### DT -- Time step
 
 This specifies the electronic time step for time integration. A larger
