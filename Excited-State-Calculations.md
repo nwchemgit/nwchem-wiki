@@ -740,3 +740,7 @@ maximum overlap constraint to prevent core hole collapse during the FCH calculat
 3.  Perform a LR-TDDFT calculation within the TDA is performed with the FCH ionized    
 state as reference. 
 4.  Final spectra is produced by taking the absolute value of the negative eigenvalues.
+
+## Spectrum parser
+A Python script is available for parsing NWChem output for TDDFT/vspec excitation energies, and optionally Lorentzian broadenening the spectra . The  nw_spectrum.py file can be found at [https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/parsers/nw_spectrum.py](https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/parsers/nw_spectrum.py)
+
