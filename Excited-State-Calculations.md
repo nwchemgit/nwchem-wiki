@@ -458,272 +458,272 @@ TASK TDDFT ENERGY
 ```
 To perform a spin-unrestricted TDHF/aug-cc-pVDZ calculation for the CO+
 radical,
-
-`START co`  
-`TITLE "TDHF/aug-cc-pVDZ CO+"`  
-`CHARGE 1`  
-`GEOMETRY`  
-` C  0.0  0.0  0.0`  
-` O  1.5  0.0  0.0`  
-`END`  
-`BASIS`  
-` * library aug-cc-pVDZ`  
-`END`  
-`DFT`  
-` XC HFexch`  
-` MULT 2`  
-`END`  
-`TDDFT`  
-` RPA`  
-` NROOTS 5`  
-`END`  
-`TASK TDDFT ENERGY`
-
+```
+START co  
+TITLE "TDHF/aug-cc-pVDZ CO+"  
+CHARGE 1  
+GEOMETRY  
+ C  0.0  0.0  0.0  
+ O  1.5  0.0  0.0  
+END  
+BASIS  
+ * library aug-cc-pVDZ  
+END  
+DFT  
+ XC HFexch  
+ MULT 2  
+END  
+TDDFT  
+ RPA  
+ NROOTS 5  
+END  
+TASK TDDFT ENERGY
+```
 A geometry optimization followed by a frequency calculation for an
 excited state is carried out for BF at the CIS/6-31G\* level in the
 following sample input.
-
-`START bf`  
-`TITLE "CIS/6-31G* BF optimization frequencies"`  
-`GEOMETRY`  
-` B 0.0 0.0 0.0`  
-` F 0.0 0.0 1.2`  
-`END`  
-`BASIS`  
-` * library 6-31G*`  
-`END`  
-`DFT`  
-` XC HFexch`  
-`END`  
-`TDDFT`  
-` CIS`  
-` NROOTS 3`  
-` NOTRIPLET`  
-` TARGET 1`  
-`END`  
-`TASK TDDFT OPTIMIZE`  
-`TASK TDDFT FREQUENCIES`
-
+```
+START bf  
+TITLE "CIS/6-31G* BF optimization frequencies"  
+GEOMETRY  
+ B 0.0 0.0 0.0  
+ F 0.0 0.0 1.2  
+END  
+BASIS  
+ * library 6-31G*  
+END  
+DFT  
+ XC HFexch  
+END  
+TDDFT  
+ CIS  
+ NROOTS 3  
+ NOTRIPLET  
+ TARGET 1  
+END  
+TASK TDDFT OPTIMIZE  
+TASK TDDFT FREQUENCIES
+```
 TDDFT with an asymptotically corrected SVWN exchange-correlation
 potential. Casida-Salahub scheme has been used with the shift value of
 0.1837 a.u. supplied as an input parameter.
-
-`START tddft_ac_co`  
-`GEOMETRY`  
-` O 0.0 0.0  0.0000`  
-` C 0.0 0.0  1.1283`  
-`END`  
-`BASIS SPHERICAL`  
-` C library aug-cc-pVDZ`  
-` O library aug-cc-pVDZ`  
-`END`  
-`DFT`  
-` XC Slater VWN_5`  
-` CS00 0.1837`  
-`END`  
-`TDDFT`  
-` NROOTS 12`  
-`END`  
-`TASK TDDFT ENERGY`
-
+```
+START tddft_ac_co  
+GEOMETRY  
+ O 0.0 0.0  0.0000  
+ C 0.0 0.0  1.1283  
+END  
+BASIS SPHERICAL  
+ C library aug-cc-pVDZ  
+ O library aug-cc-pVDZ  
+END  
+DFT  
+ XC Slater VWN_5  
+ CS00 0.1837  
+END  
+TDDFT  
+ NROOTS 12  
+END  
+TASK TDDFT ENERGY
+```
 TDDFT with an asymptotically corrected B3LYP exchange-correlation
 potential. Hirata-Zhan-Apra-Windus-Dixon scheme has been used (this is
 only meaningful with B3LYP functional).
-
-`START tddft_ac_co`  
-`GEOMETRY`  
-` O 0.0 0.0  0.0000`  
-` C 0.0 0.0  1.1283`  
-`END`  
-`BASIS SPHERICAL`  
-` C library aug-cc-pVDZ`  
-` O library aug-cc-pVDZ`  
-`END`  
-`DFT`  
-` XC B3LYP`  
-` CS00`  
-`END`  
-`TDDFT`  
-` NROOTS 12`  
-`END`  
-`TASK TDDFT ENERGY`
-
+```
+START tddft_ac_co  
+GEOMETRY  
+ O 0.0 0.0  0.0000  
+ C 0.0 0.0  1.1283  
+END  
+BASIS SPHERICAL  
+ C library aug-cc-pVDZ  
+ O library aug-cc-pVDZ  
+END  
+DFT  
+ XC B3LYP  
+ CS00  
+END  
+TDDFT  
+ NROOTS 12  
+END  
+TASK TDDFT ENERGY
+```
 TDDFT for core states. The following example illustrates the usage of an
 energy cutoff and energy and orbital windows.
 
 K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and    
 Real-Time Time-Dependent Density Functional Theory Studies of Core-Level   
 Near-Edge X-Ray Absorption", J. Chem. Theory Comput., 2012, 8 (9), pp 3284–3292
-
-`echo`  
-`start h2o_core`  
-`memory 1000 mb`  
-`geometry units au noautosym noautoz`  
-`  O 0.00000000     0.00000000     0.22170860`  
-`  H 0.00000000     1.43758081    -0.88575430`  
-`  H 0.00000000    -1.43758081    -0.88575430`  
-`end`  
-`basis`  
-` O library 6-31g*`  
-` H library 6-31g*`  
-`end`  
-`dft`  
-` xc beckehandh`  
-` print "final vector analysis"`  
-`end`  
-`task dft`  
-`tddft`  
-` ecut -10`  
-` nroots 5`  
-` notriplet`  
-` thresh 1d-03`  
-`end`  
-`task tddft`  
-`tddft`  
-` ewin -20.0 -10.0`  
-` cis`  
-` nroots 5`  
-` notriplet`  
-` thresh 1d-03`  
-`end`  
-`task tddft`  
-`dft`  
-` odft`  
-` mult 1`  
-` xc beckehandh`  
-` print "final vector analysis"`  
-`end`  
-`task dft`  
-`tddft`  
-` alpha 1 1`  
-` beta 1 1`  
-` cis`  
-` nroots 10`  
-` notriplet`  
-` thresh 1d-03`  
-`end`  
-`task tddft`
-
+```
+echo  
+start h2o_core  
+memory 1000 mb  
+geometry units au noautosym noautoz  
+  O 0.00000000     0.00000000     0.22170860  
+  H 0.00000000     1.43758081    -0.88575430  
+  H 0.00000000    -1.43758081    -0.88575430  
+end  
+basis  
+ O library 6-31g*  
+ H library 6-31g*  
+end  
+dft  
+ xc beckehandh  
+ print "final vector analysis"  
+end  
+task dft  
+tddft  
+ ecut -10  
+ nroots 5  
+ notriplet  
+ thresh 1d-03  
+end  
+task tddft  
+tddft  
+ ewin -20.0 -10.0  
+ cis  
+ nroots 5  
+ notriplet  
+ thresh 1d-03  
+end  
+task tddft  
+dft  
+ odft  
+ mult 1  
+ xc beckehandh  
+ print "final vector analysis"  
+end  
+task dft  
+tddft  
+ alpha 1 1  
+ beta 1 1  
+ cis  
+ nroots 10  
+ notriplet  
+ thresh 1d-03  
+end  
+task tddft
+```
 TDDFT optimization with LDA of Pyridine with the 6-31G basis
 
 D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon   
 Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State   
 Energy Gradients within Time-Dependent Density Functional Theory"   
 J. Chem. Theory Comput., 2013, 9 (12), pp 5490–5503
-
-`echo`  
-`start tddftgrad_pyridine_opt`  
-`title "TDDFT/LDA geometry optimization of Pyridine with 6-31G"`  
-`geometry nocenter`  
-` N     0.00000000    0.00000000    1.41599295`  
-` C     0.00000000   -1.15372936    0.72067272`  
-` C     0.00000000    1.15372936    0.72067272`  
-` C     0.00000000   -1.20168790   -0.67391011`  
-` C     0.00000000    1.20168790   -0.67391011`  
-` C     0.00000000    0.00000000   -1.38406147`  
-` H     0.00000000   -2.07614628    1.31521089`  
-` H     0.00000000    2.07614628    1.31521089`  
-` H     0.00000000    2.16719803   -1.19243296`  
-` H     0.00000000   -2.16719803   -1.19243296`  
-` H     0.00000000    0.00000000   -2.48042299`  
-` symmetry c1`  
-`end`  
-`basis spherical`  
-`* library "6-31G"`  
-`end`  
-`driver`  
-`  clear`  
-`  maxiter 100`  
-`end`  
-`dft`  
-`  iterations 500`  
-`  xc slater 1.0 vwn_5 1.0`  
-`  grid xfine`  
-`  grid euler`  
-`  direct`  
-`end`  
-`tddft`  
-`  nroots 2`  
-`  algorithm 1`  
-`  notriplet`  
-`  target 1`  
-`  targetsym a`  
-`  civecs`  
-`  grad`  
-`    root 1`  
-`  end`  
-`end`  
-`task tddft optimize`
-
+```
+echo  
+start tddftgrad_pyridine_opt  
+title "TDDFT/LDA geometry optimization of Pyridine with 6-31G"  
+geometry nocenter  
+ N     0.00000000    0.00000000    1.41599295  
+ C     0.00000000   -1.15372936    0.72067272  
+ C     0.00000000    1.15372936    0.72067272  
+ C     0.00000000   -1.20168790   -0.67391011  
+ C     0.00000000    1.20168790   -0.67391011  
+ C     0.00000000    0.00000000   -1.38406147  
+ H     0.00000000   -2.07614628    1.31521089  
+ H     0.00000000    2.07614628    1.31521089  
+ H     0.00000000    2.16719803   -1.19243296  
+ H     0.00000000   -2.16719803   -1.19243296  
+ H     0.00000000    0.00000000   -2.48042299  
+ symmetry c1  
+end  
+basis spherical  
+* library "6-31G"  
+end  
+driver  
+  clear  
+  maxiter 100  
+end  
+dft  
+  iterations 500  
+  xc slater 1.0 vwn_5 1.0  
+  grid xfine  
+  grid euler  
+  direct  
+end  
+tddft  
+  nroots 2  
+  algorithm 1  
+  notriplet  
+  target 1  
+  targetsym a  
+  civecs  
+  grad  
+    root 1  
+  end  
+end  
+task tddft optimize
+```
 TDDFT calculation followed by a calculation of the transition density
 for a specific excited state using the DPLOT block
-
-`echo`  
-`start h2o-td`  
-`title h2o-td`  
-`memory total 800 stack 400 heap 50 global 350 mb`  
-`charge 0`  
-`geometry units au noautoz nocenter`  
-`symmetry group c1`  
-` O    0.00000000000000      0.00000000000000      0.00000000000000`  
-` H    0.47043554760291      1.35028113274600      1.06035416576826`  
-` H   -1.74335410533480     -0.23369304784300      0.27360785442967`  
-`end`  
-`basis "ao basis" print`  
-` H    S`  
-`    13.0107010              0.19682158E-01`  
-`     1.9622572              0.13796524`  
-`     0.44453796             0.47831935`  
-` H    S`  
-`     0.12194962             1.0000000`  
-` H    P`  
-`     0.8000000              1.0000000`  
-` O    S`  
-`  2266.1767785             -0.53431809926E-02`  
-`   340.87010191            -0.39890039230E-01`  
-`    77.363135167           -0.17853911985`  
-`    21.479644940           -0.46427684959`  
-`     6.6589433124          -0.44309745172`  
-` O    S`  
-`     0.80975975668          1.0000000`  
-` O    S`  
-`     0.25530772234          1.0000000`  
-` O    P`  
-`    17.721504317            0.43394573193E-01`  
-`     3.8635505440           0.23094120765`  
-`     1.0480920883           0.51375311064`  
-` O    P`  
-`     0.27641544411          1.0000000`  
-` O    D`  
-`     1.2000000              1.0000000`  
-`end`  
-`dft`  
-` xc bhlyp`  
-` grid fine`  
-` direct`  
-` convergence energy 1d-5`  
-`end`  
-`tddft`  
-` rpa`  
-` nroots 5`  
-` thresh 1d-5`  
-` singlet`  
-` notriplet`  
-` civecs`  
-`end`  
-`task tddft energy`  
-`dplot`  
-` civecs h2o-td.civecs_singlet`  
-` root 2`  
-` LimitXYZ`  
-`  -3.74335 2.47044 50`  
-`  -2.23369 3.35028 50`  
-`  -2 3.06035 50`  
-`   gaussian`  
-`   output root-2.cube`  
-`end`  
-`task dplot`
-
+```
+echo  
+start h2o-td  
+title h2o-td  
+memory total 800 stack 400 heap 50 global 350 mb  
+charge 0  
+geometry units au noautoz nocenter  
+symmetry group c1  
+ O    0.00000000000000      0.00000000000000      0.00000000000000  
+ H    0.47043554760291      1.35028113274600      1.06035416576826  
+ H   -1.74335410533480     -0.23369304784300      0.27360785442967  
+end  
+basis "ao basis" print  
+ H    S  
+    13.0107010              0.19682158E-01  
+     1.9622572              0.13796524  
+     0.44453796             0.47831935  
+ H    S  
+     0.12194962             1.0000000  
+ H    P  
+     0.8000000              1.0000000  
+ O    S  
+  2266.1767785             -0.53431809926E-02  
+   340.87010191            -0.39890039230E-01  
+    77.363135167           -0.17853911985  
+    21.479644940           -0.46427684959  
+     6.6589433124          -0.44309745172  
+ O    S  
+     0.80975975668          1.0000000  
+ O    S  
+     0.25530772234          1.0000000  
+ O    P  
+    17.721504317            0.43394573193E-01  
+     3.8635505440           0.23094120765  
+     1.0480920883           0.51375311064  
+ O    P  
+     0.27641544411          1.0000000  
+ O    D  
+     1.2000000              1.0000000  
+end  
+dft  
+ xc bhlyp  
+ grid fine  
+ direct  
+ convergence energy 1d-5  
+end  
+tddft  
+ rpa  
+ nroots 5  
+ thresh 1d-5  
+ singlet  
+ notriplet  
+ civecs  
+end  
+task tddft energy  
+dplot  
+ civecs h2o-td.civecs_singlet  
+ root 2  
+ LimitXYZ  
+  -3.74335 2.47044 50  
+  -2.23369 3.35028 50  
+  -2 3.06035 50  
+   gaussian  
+   output root-2.cube  
+end  
+task dplot
+```
 TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum 
 
 Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission    
