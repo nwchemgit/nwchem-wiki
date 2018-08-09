@@ -136,33 +136,33 @@ subsections TARGET and TARGETSYM for more detail.
 
 Individual parameters and keywords may be supplied in the TDDFT input
 block. The syntax is:
-
-` TDDFT`  
-`   [(CIS||RPA) default RPA]`  
-`   [NROOTS <integer nroots default 1>]`  
-`   [MAXVECS <integer maxvecs default 1000>]`  
-`   [(SINGLET||NOSINGLET) default SINGLET]`  
-`   [(TRIPLET||NOTRIPLET) default TRIPLET]`  
-`   [THRESH <double thresh default 1e-4>]`  
-`   [MAXITER <integer maxiter default 100>]`  
-`   [TARGET <integer target default 1>]`  
-`   [TARGETSYM <character targetsym default 'none'>]`  
-`   [SYMMETRY]`  
-`   [ECUT] <-cutoff energy>`  
-`   [EWIN] <-lower cutoff energy>  <-higher cutoff energy>`  
-`   [ALPHA] `<integer lower orbital>  <integer upper orbital>`  
-`   [BETA] `<integer lower orbital>  <integer upper orbital>`  
-`   [CIVECS]`  
-`   [GRAD, END]`  
-`   [CDSPECTRUM]`  
-`   [VELOCITY]`  
-`   [ALGORITHM <integer algorithm default 0>]`  
-`   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \`  
-`            [virtual <integer nfzv default 0>]]`  
-`   [PRINT (none||low||medium||high||debug)`  
-`     <string list_of_names ...>]`  
-` END`
-
+```
+ TDDFT`  
+   [(CIS||RPA) default RPA]  
+   [NROOTS <integer nroots default 1>]  
+   [MAXVECS <integer maxvecs default 1000>] 
+   [(SINGLET||NOSINGLET) default SINGLET]  
+   [(TRIPLET||NOTRIPLET) default TRIPLET]  
+   [THRESH <double thresh default 1e-4>]  
+   [MAXITER <integer maxiter default 100>]  
+   [TARGET <integer target default 1>]  
+   [TARGETSYM <character targetsym default 'none'>]  
+   [SYMMETRY]  
+   [ECUT] <-cutoff energy>  
+   [EWIN] <-lower cutoff energy>  <-higher cutoff energy>  
+   [ALPHA] `<integer lower orbital>  <integer upper orbital>  
+   [BETA] <integer lower orbital>  <integer upper orbital>  
+   [CIVECS]  
+   [GRAD, END]  
+   [CDSPECTRUM]  
+   [VELOCITY]  
+   [ALGORITHM <integer algorithm default 0>]  
+   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
+            [virtual <integer nfzv default 0>]]  
+   [PRINT (none||low||medium||high||debug)  
+     <string list_of_names ...>]`  
+ END
+```
 The user can also specify the reference wave function in the DFT input
 block (even when CIS and TDHF calculations are requested). See the
 section of Sample input and output for more details.
