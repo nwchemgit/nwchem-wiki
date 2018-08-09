@@ -215,7 +215,7 @@ appropriate scaling is applied).
 
 For example, to use the Stuttgart/Köln ECP and SO-ECP for Hg  (ECP60MDF) in NWChem
 
-The highlighted section below is the SO part. The unhighlighted part is the ECP. 
+The highlighted section below is the SO part. The un-highlighted part is the ECP. 
 
 !  Q=20., MEFIT, MCDHF+Breit, Ref 37.  
 ECP,Hg,60,5,4;  
@@ -231,3 +231,51 @@ ECP,Hg,60,5,4;
 **2; 2,4.485296,3.169207; 2,4.513200,-3.239945;**  
 ! References:  
 ! [37] D. Figgen, G. Rauhut, M. Dolg, H. Stoll, Chem. Phys. 311, 227 (2005).  
+
+The corresponding NWChem input is 
+
+```
+ecp  
+Hg nelec 60
+Hg ul
+2      1.0000000              0.0000000
+Hg S
+2     12.4130710            275.7747970
+2      6.8979130             49.2678980
+Hg P
+2     11.3103200             80.5069840
+2     10.2107730            161.0348240
+2      5.9398040              9.0834160
+2      5.0197550             18.3677730
+Hg D
+2      8.4078950             51.1372560
+2      8.2140860             76.7074590
+2      4.0126120              6.5618210
+2      3.7953980              9.8180700
+Hg F
+2      3.2731060              9.4290010
+2      3.2083210             12.4948560
+Hg G
+2      4.4852960             -6.3384140
+2      4.5132000             -8.0998630
+end
+
+so
+Hg P
+2  11.310320  161.013967
+2  10.210773  161.034824
+2   5.939804  -18.166832
+2   5.019755   18.367773
+Hg D     
+2   8.407895  -51.137256
+2   8.214086   51.138306
+2   4.012612   -6.561821
+2   3.795398    6.545380
+Hg F      
+2   3.273106   -6.286001
+2   3.208321    6.247428
+Hg G       
+2   4.485296    3.169207
+2   4.513200   -3.239945
+end
+```
