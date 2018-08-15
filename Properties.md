@@ -391,19 +391,20 @@ leave the input coefficients unmodified.
 
 Example input file for a scf calculation. The resulting Molden file will
 be named `h2o.molden`
-
-` start heat`  
-` `  
-` geometry; he 0. 0. 0.; end`  
-` `  
-` basis; * library 6-31g;end`  
-` `  
-` task scf`  
-` `  
-` property`  
-`  vectors heat.movecs`  
-`  moldenfile `  
-`  molden_norm janpa`  
-` end`  
-` `  
-` task scf property`
+```
+ start heat
+    
+ geometry; he 0. 0. 0.; end  
+ 
+ basis; * library 6-31g;end  
+  
+ task scf  
+  
+ property 
+  vectors heat.movec  
+  moldenfile   
+  molden_norm janpa 
+ end
+ 
+ task scf property
+```
