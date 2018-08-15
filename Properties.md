@@ -188,7 +188,7 @@ or
 
 Sample input block:
 ```
-property` 
+property
  response 1 8.8559E-2  
  damping 0.007  
 end  
@@ -259,9 +259,9 @@ electric field (keyword *efield*) on the grid can be generated in the
 form of the Gaussian Cube File. This behavior is triggered by the
 inclusion of grid keyword as shown
 below
-
-`grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]`
-
+```
+ grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]
+```
 where
 
   - pad dx \[dy dz\] - specifies amount of padding (in angstroms) in
@@ -364,10 +364,10 @@ More details at
 <https://sites.google.com/site/alvarovazquezmayagoitia/goals/codes/nwchem-notes/generator-of-aim-wavefunction-files-nwchem>
 
 ## Moldenfile
-
-`MOLDENFILE`  
-`[MOLDEN_NORM (JANPA | | NWCHEM || NONE)]`
-
+```
+MOLDENFILE
+[MOLDEN_NORM (JANPA | | NWCHEM || NONE)]
+```
 This keyword generates files using the [Molden
 format](http://www.cmbi.ru.nl/molden/molden_format.html). The resulting
 Molden file (.molden) should compatible with a variety of codes that can
