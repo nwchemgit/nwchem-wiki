@@ -7,11 +7,11 @@ UNSET <string name>[*]
 ```
 This directive cannot be used with complex objects such as geometries
 and basis sets. Complex objects are stored using a structured naming
-convention that is not matched by a simple wild card. A wild-card (\*)
-specified at the end of the string <name> will cause all entries whose
+convention that is not matched by a simple wild card. A wild-card `(*)`
+specified at the end of the `string <name>` will cause all entries whose
 name begins with that string to be deleted. This is very useful as a way
 to reset modules to their default behavior, since modules typically
-store information in the database with names that begin with module:.
+store information in the database with names that begin with <tt>module:.</tt>
 For example, the SCF program can be restored to its default behavior by
 deleting all database entries beginning with scf:, using the directive
 ```
