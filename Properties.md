@@ -219,7 +219,7 @@ end
 
 Raman spectrum in stick format and smoothed using Lorentzians or
 Gaussians stored in a filename with format \[fname\].normal.  
-The number of points is 1000 by default. This value can be changed by adding the following [SET](#SET "wikilink") directive to the input file
+The number of points is 1000 by default. This value can be changed by adding the following [SET](SET "wikilink") directive to the input file
 
 `set raman:numpts <integer>`
 
