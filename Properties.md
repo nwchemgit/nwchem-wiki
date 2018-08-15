@@ -302,53 +302,53 @@ where
     the run directory (where the input file resides).
 
 Example input file
-
-`  echo`  
-`  start nacl`  
-`  `  
-` `  
-`  geometry nocenter noautoz noautosym`  
-`   Na                   -0.00000000     0.00000000    -0.70428494`  
-`   Cl                    0.00000000    -0.00000000     1.70428494`  
-`  end`  
-`  `  
-`  `  
-`  basis`  
-`    * library 6-31g*`  
-`  end`  
-`  `  
-`  #electric field would be written out to nacl.elf.cube file`  
-`  #with`  
-`  #ngrid     : 20 20 20`  
-`  #rmax      : 4.000     4.000     5.704`  
-`  #rmin      :-4.000    -4.000    -4.704`  
-`  `  
-`  property`  
-`  efield`  
-`  grid pad 4.0 ngrid 20`  
-`  end`  
-`  `  
-`  task dft property`  
-`  `  
-`  #electrostatic potential would be written to esp-pad.cube file`  
-`  # with the same parameters as above`  
-`  `  
-`  property`  
-`  esp`  
-`  grid pad 4.0 ngrid 20 output esp-pad.cube`  
-`  end`  
-`  `  
-`  task dft property`  
-`   `  
-`  #illustrating explicit specification of minumum box coordinates`  
-`  `  
-`  property`  
-`  esp`  
-`  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20`  
-`  end`  
-`  `  
-`  task dft property`
-
+```
+  echo  
+  start nacl  
+    
+   
+  geometry nocenter noautoz noautosym  
+   Na                   -0.00000000     0.00000000    -0.70428494  
+   Cl                    0.00000000    -0.00000000     1.70428494  
+  end  
+    
+    
+  basis  
+    * library 6-31g*  
+  end  
+    
+  #electric field would be written out to nacl.elf.cube file  
+  #with  
+  #ngrid     : 20 20 20  
+  #rmax      : 4.000     4.000     5.704  
+  #rmin      :-4.000    -4.000    -4.704  
+    
+  property  
+  efield  
+  grid pad 4.0 ngrid 20  
+  end  
+    
+  task dft property  
+    
+  #electrostatic potential would be written to esp-pad.cube file  
+  # with the same parameters as above  
+    
+  property  
+  esp  
+  grid pad 4.0 ngrid 20 output esp-pad.cube  
+  end  
+    
+  task dft property  
+     
+  #illustrating explicit specification of minumum box coordinates  
+    
+  property  
+  esp  
+  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20  
+  end  
+    
+  task dft property
+```
 ## Aimfile
 
 This keyword generates AIM Wavefunction files. The resulting AIM
