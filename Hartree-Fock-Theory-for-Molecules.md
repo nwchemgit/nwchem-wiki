@@ -1135,13 +1135,12 @@ The following list describes the items from SCF that are currently under
 direct print control, along with the print level for each
 one.
 
-\[htbp\]
 
-<center>
 
-|                            |                 |                                             |
-| -------------------------- | --------------- | ------------------------------------------- |
+
+
 | **Name**                   | **Print Level** | **Description**                             |
+|----------------------------|-----------------|---------------------------------------------|
 | "atomic guess density"     | debug           | guess density matrix                        |
 | "atomic scf"               | debug           | details of atomic SCF                       |
 | "mo guess"                 | default         | brief info from mo guess                    |
@@ -1166,28 +1165,26 @@ one.
 
 Table 1: SCF Print Control Specifications  
 
-</center>
 
 ## Hartree-Fock or SCF, MCSCF and MP2 Gradients
 
 The input for this directive allows the user to adjust the print control
 for the SCF, UHF, ROHF, MCSCF and MP2 gradients. The form of the
 directive is as follows:
-
-` GRADIENTS `  
-`   [print || noprint] ...`  
-` END`
-
+```
+ GRADIENTS   
+   [print || noprint] ...  
+ END
+```
 The complementary keyword pair print and noprint allows the user some
 additional control on the information that can be included in the print
 output from the SCF calculation. Currently, only a few items can be
 explicitly invoked via print control. These are as follows:
 
-<center>
 
-|               |                 |                             |
-| ------------- | --------------- | --------------------------- |
+
 | **Name**      | **Print Level** | **Description**             |
+| ------------- | --------------- | --------------------------- |
 | "information" | low             | calculation info            |
 | "geometry"    | high            | geometry information        |
 | "basis"       | high            | basis set(s) used           |
@@ -1196,7 +1193,7 @@ explicitly invoked via print control. These are as follows:
 
 Table 2: Gradient Print Control Specifications  
 
-</center>
+
 
 ## References
 
