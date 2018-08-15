@@ -597,7 +597,7 @@ of the fragments. Things to note are:
 Key ingredient needed: definition of both the smaller and the larger
 basis set, plus mention of the small basis set in the "`input project`"
 line.
-
+```
     start he
     
     geometry
@@ -623,7 +623,7 @@ line.
      vectors input project small small.mos output large.mos
     end
     task scf
-
+```
 ### Atomic guess orbitals with charged atoms
 
 As noted above, the default guess vectors are based on superimposing the
@@ -638,10 +638,10 @@ parameters.
 The input specifies a list of tags (i.e., names of atoms in a geometry,
 see [GEOMETRY](Geometry "wikilink")) and the charges to be
 added to those centers. Two parameters must be set as follows:
-
-` set atomscf:tags_z `<string list_of_tags>  
-` set atomscf:z      `<real list_of_charges>
-
+```
+ set atomscf:tags_z <string list_of_tags>  
+ set atomscf:z      <real list_of_charges>
+```
 The array of strings atomscf:tags\_z should be set to the list of tags,
 and the array atomscf:z should be set to the list of charges which must
 be real numbers (not integers). All atoms that have a tag specified in
@@ -651,10 +651,10 @@ of charges.
 For example, the following specifies that all oxygen atoms with tag O be
 assigned a charge of -1 and all iron atoms with tag Fe be assigned a
 charge of +2
-
-` set atomscf:z        -1  2.0`  
-` set atomscf:tags_z    O  Fe`
-
+```
+ set atomscf:z        -1  2.0  
+ set atomscf:tags_z    O  Fe
+```
 There are some limitations to this feature. It is not possible to add
 electrons to closed shell atoms, nor is it possible to remove all
 electrons from a given atom. Attempts to do so will cause the code to
@@ -808,11 +808,11 @@ iteration) is forced by specifying the directive
 Alternatively, the SEMIDIRECT directive can be used to control the
 default semidirect calculation by defining the amount of disk space and
 the cache memory size. The form of this directive is as follows:
-
-`  SEMIDIRECT [filesize `<integer filesize default disksize>`] `  
-`             [memsize  `<integer memsize default available>`]`  
-`             [filename <string filename default $file_prefix.aoints$]`
-
+```
+  SEMIDIRECT [filesize <integer filesize default disksize>]   
+             [memsize  <integer memsize default available>]  
+             [filename <string filename default $file_prefix.aoints$]
+```
 The keyword FILESIZE allows the user to specify the amount of disk space
 to be used per process for storing the integrals in 64-bit words.
 Similarly, the keyword MEMSIZE allows the user to specify the number of
