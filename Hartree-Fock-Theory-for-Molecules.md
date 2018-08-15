@@ -11,11 +11,11 @@ distributed data Fock builders\[2\].
 The SCF directive provides input to the SCF module and is a compound
 directive that encloses additional directives specific to the SCF
 module:
-
-` SCF`  
-`   ...`  
-` END`
-
+```
+ SCF`  
+   ...  
+ END
+```
 ## Wavefunction type
 
 A spin-restricted, closed shell RHF calculation is performed by default.
