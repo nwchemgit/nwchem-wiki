@@ -17,7 +17,8 @@ deleting all database entries beginning with scf:, using the directive
 ```
 unset scf:*
 ```
-Section -sec:fragguess- has an example using unset on a water dimer
+The section on [fragment
+guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals "wikilink") has an example using unset on a water dimer
 calculation.
 
 The following example makes an entry in the database using the SET
