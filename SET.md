@@ -3,9 +3,9 @@
 This top-level directive allows the user to enter data directly into the
 [run-time database](NWChem-Architecture#database-structure "wikilink").
 The format of the directive is as follows:
-
-`SET `<string name>` [`<string type default automatic>`] `<type data>
-
+```
+SET <string name> [<string type default automatic>] <type data>
+```
 The entry for variable <name> is the name of data to be entered into the
 database. This must be specified; there is no default. The variable
 <type>, which is optional, allows the user to define a string specifying
@@ -23,18 +23,18 @@ type **must** be explicitly stated to input integer ranges, unless the
 first element in the list is an integer that is not a
 [range](Getting-Started#input-format-and-syntax-for-directives "wikilink").
 For example,
-
-`set atomid 1 3:7 21`
-
+```
+set atomid 1 3:7 21
+```
 will be interpreted as a list of integers. However,
-
-`set atomid 3:7 21 `
-
+```
+set atomid 3:7 21 
+```
 will not work since the first element will be interpreted as a string
 and not an integer. To work around this feature, use instead
-
-`set atomid integer 3:7 21`
-
+```
+set atomid integer 3:7 21
+```
 which says to write three through seven, as well as twenty-one.
 
 The SET directive is useful for providing indirection by associating the
