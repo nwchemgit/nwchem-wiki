@@ -146,16 +146,16 @@ sufficient for nearly all such
 purposes.
 
 ## VECTORS -- input/output of MO vectors
-
-` VECTORS [[input] (`<string input_movecs default atomic>`) || \`  
-`                  (project `<string basisname>` `<string filename>`) || \`  
-`                  (fragment `<string file1>` [`<string file2>` ...])] \`  
-`         [swap [alpha||beta] `<integer vec1 vec2>` ...] \`  
-`         [reorder `<integer atom1 atom2>` ...] \`  
-`         [output `<string output_filename default input_movecs>`] \`  
-`         [lock]`  
-`         [rotate  `<string input_geometry>` `<string input_movecs>`]`
-
+```
+ VECTORS [[input] (<string input_movecs default atomic>) || \  
+                  (project <string basisname> <string filename>) || \  
+                  (fragment <string file1> [<string file2> ...])] \ 
+         [swap [alpha||beta] <integer vec1 vec2> ...] \  
+         [reorder <integer atom1 atom2> ...] \  
+         [output <string output_filename default input_movecs>] \  
+         [lock]  
+         [rotate  <string input_geometry> <string input_movecs>]
+```
 The VECTORS directive allows the user to specify the source and
 destination of the molecular orbital vectors. In a startup calculation
 (see [START](Top-level#START_and_RESTART_--_Start-up_mode "wikilink")),
