@@ -409,7 +409,7 @@ be named `h2o.molden`
  
  task scf property
 ```
-
+Then, the resulting h2o.molden file can be post processed by Janpa with the following command
 ```
 java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
