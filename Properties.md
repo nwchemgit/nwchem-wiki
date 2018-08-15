@@ -381,13 +381,14 @@ input Molden files, e.g.
   - [Molden2qmc](http://github.com/Konjkov/molden2qmc)
   - [Molden2AIM](http://zorkzou.github.io/Molden2AIM)
 
-he `MOLDEN_NORM` allows the renormalization of the basis set
+the `MOLDEN_NORM` option allows the renormalization of the basis set
 coefficients. By default, the coefficient values from input are not
 modified. Using the `JANPA` value coefficients are normalized following
 [JANPA](https://sourceforge.net/p/janpa/wiki/nwchem2molden/)'s
 convention, while the `NWCHEM` will produce coefficients normalized
-according to NWChem's convention. Using `MOLDEN_NORM` equal `NONE`will
-leave the input coefficients unmodified.
+according to NWChem's convention. Using `MOLDEN_NORM` equal `NONE` will
+leave the input coefficients unmodified.  
+It is strongly recommended to use **spherical** [basis set](Basis "wikilink") when using the NWChem Molden output for JANPA analysis
 
 Example input file for a scf calculation. The resulting Molden file will
 be named `h2o.molden`
@@ -396,7 +397,7 @@ be named `h2o.molden`
     
  geometry; he 0. 0. 0.; end  
  
- basis; * library 6-31g;end  
+ basis spherical; * library 6-31g;end  
   
  task scf  
   
@@ -407,4 +408,8 @@ be named `h2o.molden`
  end
  
  task scf property
+```
+
+```
+java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
