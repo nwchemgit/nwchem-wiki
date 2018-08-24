@@ -1663,7 +1663,7 @@ not just bq.
  DISP   
       [ vdw <real vdw integer default 2]]  
       [[s6 <real s6 default depends on XC functional>] \  
-      [ alpha <real s6 default 20.0d0] \  
+      [ alpha <real alpha default 20.0d0] \  
       [ off ] 
 ```
 When systems with high dependence on van der Waals interactions are
