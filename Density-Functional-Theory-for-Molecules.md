@@ -348,11 +348,8 @@ computed as
 
 <img alt="$\begin{array}{lcl}&#10;  E_{XC} &amp; = &amp; a_0 E^{\rm HF}_X + (1-a_0) E^{\rm Slater}_{X} + a_X\delta E_{X}^{Becke88} + (1-a_C)E_{C}^{VWN\_1\_RPA}  +  a_C\delta E_{C}^{LYP} \\&#10;  &amp; &amp; where \\&#10;  a_0 &amp; = &amp; 0.20, a_X = 0.72, a_C = 0.81  &#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/252b71c145ea8f4cbbb3fc10290d48b1.svg?invert_in_darkmode&sanitize=true" align=middle width="632.56875pt" height="67.48566pt"/>
 
-<center>
-
-|             |    |    |     |      |       |     |        |
-| ----------- | -- | -- | --- | ---- | ----- | --- | ------ |
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
+|-------------|----|----|-----|------|-------|-----|--------|
 | slater      | \* |    |     |      |       | Y   | \[1\]  |
 | vwn\_1      |    | \* |     |      |       | Y   | \[2\]  |
 | vwn\_2      |    | \* |     |      |       | Y   | \[2\]  |
@@ -460,14 +457,17 @@ computed as
 | mpw1k       | \* | \* | \*  |      | \*    | Y   | \[25\] |
 | xmvs15      | \* |    |     | \*   |       | N   | \[55\] |
 | hle16       | \* | \* | \*  |      | \*    | Y   | \[56\] |
-|  |
+| scan        | \* | \* | \*  | \*   |       | N   | \[57\] |
+| scanl       | \* | \* | \*  | \*   |       | N   | \[58\] |
+| revm06-L    | \* | \* | \*  | \*   |       | N   | \[59\] |
+| revm06      | \* | \* | \*  | \*   | \*    | N   | \[60\] |
 
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
 the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
 The column 2nd refers to second derivatives of the energy with respect
 to nuclear position.
 
-</center>
+
 
 1.  J.C. Slater and K. H. Johnson, Phys. Rev. B 5, 844 (1972)
 2.  S.J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980)
@@ -543,7 +543,10 @@ to nuclear position.
 54. A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
 55. J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
 56. P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
-
+57. Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
+58. D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
+59. Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
+60. Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS, accepted Aug. 20 (2018).
 
 ### Meta-GGA Functionals
 
