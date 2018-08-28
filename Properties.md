@@ -361,7 +361,8 @@ codes, e.g.
   - [Postg](https://github.com/aoterodelaroza/postg)
 
 More details at
-<https://sites.google.com/site/alvarovazquezmayagoitia/goals/codes/nwchem-notes/generator-of-aim-wavefunction-files-nwchem>
+<https://sites.google.com/site/alvarovazquezmayagoitia/goals/codes/nwchem-notes/generator-of-aim-wavefunction-files-nwchem>  
+**WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties#Moldenfile) method, then convert the Molden file into a WFN file by using the [Molden2AIM](http://zorkzou.github.io/Molden2AIM) program.
 
 ## Moldenfile
 ```
