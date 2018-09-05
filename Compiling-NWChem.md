@@ -388,6 +388,7 @@ export BLASOPT="-L/usr/local/ATLAS -llapack -lf77blas -latlas"
 ```
 |             |                                                                                                                 |
 | ----------- | --------------------------------------------------------------------------------------------------------------- |
+| BLIS        | <https://github.com/flame/blis>                                                                                 |
 | OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                                            |
 | GotoBLAS    | <http://www.tacc.utexas.edu/tacc-projects/gotoblas2>                                                            |
 | Intel MKL   | <http://www.intel.com/software/products/mkl>                                                                    |
