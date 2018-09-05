@@ -386,18 +386,17 @@ ATLAS
 ```
 export BLASOPT="-L/usr/local/ATLAS -llapack -lf77blas -latlas"
 ```
-|             |                                                                                                                 |
-| ----------- | --------------------------------------------------------------------------------------------------------------- |
-| BLIS        | <https://github.com/flame/blis>                                                                                 |
-| OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                                            |
-| GotoBLAS    | <http://www.tacc.utexas.edu/tacc-projects/gotoblas2>                                                            |
-| Intel MKL   | <http://www.intel.com/software/products/mkl>                                                                    |
-| ATLAS       | <http://math-atlas.sf.net>                                                                                      |
-| Cray LibSci | Available only on Cray x86\_64 hardware, it is automatically linked when compiling on Cray XT and XE computers. |
-|  |
-
 Good choices of optimized BLAS libraries on x86 (e.g. LINUX and LINUX64)
-hardware include:
+hardware include:  
+
+|             |                                                                                               |
+|-------------|-----------------------------------------------------------------------------------------------|
+| BLIS        | <https://github.com/flame/blis>                                                               |    
+| OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                          |
+| GotoBLAS    | <http://www.tacc.utexas.edu/tacc-projects/gotoblas2>                                          |  
+| Intel MKL   | <http://www.intel.com/software/products/mkl>                                                  |
+| ATLAS       | <http://math-atlas.sf.net>                                                                    |
+| Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 
 NWChem can also take advantage of the [ScaLAPACK
 library](http://www.netlib.org/scalapack/) if it is installed on your
