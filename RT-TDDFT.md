@@ -82,6 +82,7 @@ RT_TDDFT
   [VISUALIZATION]  
     ...  
   [END] 
+  [LOAD RESTART]
 END
 ```
 ### TMAX -- Simulation time
