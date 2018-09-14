@@ -82,6 +82,7 @@ RT_TDDFT
   [VISUALIZATION]  
     ...  
   [END] 
+  [LOAD RESTART]
 END
 ```
 ### TMAX -- Simulation time
@@ -388,6 +389,15 @@ files.
 `  tend 100.0        # stop visualization at this time`  
 `  treference 0.0    # subtract density matrix at this time (useful for difference densities)`  
 `  dplot             # post-process density matrices into cube files after propagation`  
+`end`
+
+### LOAD RESTART ###
+This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new tmax
+
+`rt_tddft`  
+`  ...`  
+`  tmax 10.0        # new end time`  
+`  load restart`   
 `end`
 
 ## Worked Examples
