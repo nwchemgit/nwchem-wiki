@@ -1,3 +1,8 @@
+Slides presented at  
+[VΙ-SEEM NAT-GR LS+ : 2018 NWChem Workshop](https://events.hpc.grnet.gr/event/78/ "link")  
+10-11 September 2018   
+National Hellenic Research Foundation (NHRF)    
+
 
 [Introduction](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/1_NWChem_Intro.pdf "wikilink")
 
