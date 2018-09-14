@@ -18,3 +18,5 @@
 [Plane-Wave](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/7_NWChem_NWPW.pdf "wikilink")
 
 [Potential Energy Surfaces](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/8_NWChem_Potential_Energy_Surfaces.pdf "wikilink")
+
+[QMD](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/9_NWChem-QMD-New.pdf "wikilink")
