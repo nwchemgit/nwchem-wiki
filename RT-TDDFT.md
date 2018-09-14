@@ -391,6 +391,15 @@ files.
 `  dplot             # post-process density matrices into cube files after propagation`  
 `end`
 
+### LOAD RESTART ###
+This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new tmax
+
+`rt_tddft`  
+`  ...`  
+`  tmax 10.0        # new end time`  
+`  load restart`   
+`end`
+
 ## Worked Examples
 
 ### Absorption spectrum of water
