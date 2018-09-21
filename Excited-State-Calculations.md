@@ -155,6 +155,7 @@ block. The syntax is:
    [CIVECS]  
    [GRAD, END]  
    [CDSPECTRUM]  
+   [GIAO]
    [VELOCITY]  
    [ALGORITHM <integer algorithm default 0>]  
    [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
@@ -351,6 +352,7 @@ gradients
 ### CDSpectrum -- optical rotation calculations
 
 Perform optical rotation calculations.
+We recommend to use the <tt>GIAO</tt> keyword
 
 ### VELOCITY -- velocity gauge
 
