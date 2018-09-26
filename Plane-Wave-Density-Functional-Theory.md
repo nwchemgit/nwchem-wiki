@@ -5,7 +5,7 @@
       - [1.1.1 PAW Potentials](#paw-potentials "wikilink") 
          - [1.1.1.1 PAW Implementation Notes](#paw-implementation-notes "wikilink")
       - [1.1.2 Exchange-Correlation Potentials](#exchange-correlation-potentials "wikilink")
-         - [1.1.2.1 DFT + U Corrections](#dft-+-u-corrections "wikilink")
+         - [1.1.2.1 DFT + U Corrections](#dft--u-corrections "wikilink")
          - [1.1.2.2 Langreth vdw and vdw2 van der Wall functionals](#langreth-vdw-and-vdw-van-der-wall-functionals "wikilink")
          - [1.1.2.3 Grimme Dispersion Corrections](#grimme-dispersion-corrections "wikilink")
          - [1.1.2.4 Using Exchange-Correlation Potentials Available in the DFT Module](#using-exchange-correlation-potentials-available-in-the-dft-module "wikilink")
