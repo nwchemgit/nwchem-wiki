@@ -71,7 +71,7 @@
    - [1.19 Car-Parrinello Scheme for Ab Initio Molecular Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics  "wikilink")
       - [1.19.1 Verlet Algorithm for Integration](#verlet-algorithm-for-integration  "wikilink")
       - [1.19.2 Constant Temperature Simulations: Nose-Hoover Thermostats](#constant-temperature-simulations-nose-hoover-thermostats  "wikilink")
-   - [1.20 NWPW Tutorial 1: S2 dimer examples with PSPW](#nwpw-tutorial-1-s2-dimer-examples-with-pspw  "wikilink")
+   - [1.20 NWPW Tutorial 1: S2 dimer examples with PSPW](#nwpw-tutorial-1-s-dimer-examples-with-pspw "wikilink")
       - [1.20.1 Total energy of S2 dimer with LDA approximation](#total-energy-of-s2-dimer-with-lda-approximation  "wikilink")
       - [1.20.2 Structural optimization of S2 dimer with LDA approximation](#structural-optimization-of-s2-dimer-with-lda-approximation  "wikilink")
       - [1.20.3 Frequency calculation of S2 dimer with LDA approximation](#frequency-calculation-of-s2-dimer-with-lda-approximation  "wikilink")
