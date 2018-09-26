@@ -734,6 +734,7 @@ end
 These potenials that are used to augment standard exchange-correlation potentials area calculated from a double integral over a nonlocal interaction kernel φ(r,r′),
 
 It is evaluated using the fast Fourier transformation method of Roman-Perez and Soler.
+
 G. Roman-Perez and J. M. Soler, Phys. Rev. Lett. 103, 096102 (2009).
 
 Langreth vdw and vdw2 van der Wall functionals are currently available for the BEEF, PBE96,
@@ -753,7 +754,7 @@ nwpw
    xc beef-vdw2  
 end
 ```
-In these functionals vdw and vdw2 are defined in  
+the vdw and vdw2 functionals are defined in  
  
 (vdw) Dion M, Rydberg H, Schröder E, Langreth DC, Lundqvist BI. Van der Waals density functional for general geometries. Physical review letters. 2004 Jun 16;92(24):246401.
 
