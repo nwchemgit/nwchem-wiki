@@ -1866,44 +1866,44 @@ time
 Datafile that store energies as a function of
 time.
 ```
-`[line 1: ] time, E1,E2,E3,E4,E5,E6,E7,E8,(E9,E10, if Nose-Hoover),eave,evar,have,hvar,ion_Temp`  
-`[line 2: ] ...`
+[line 1: ] time, E1,E2,E3,E4,E5,E6,E7,E8,(E9,E10, if Nose-Hoover),eave,evar,have,hvar,ion_Temp 
+[line 2: ] ...
 ```
 where
 ```
-`E1 = total energy`  
-`E2 = potential energy`  
-`E3 = ficticious kinetic energy`  
-`E4 = ionic kinetic energy`  
-`E5 = orbital energy`  
-`E6 = hartree energy`  
-`E7 = exchange-correlation energy`  
-`E8 = ionic energy`  
-`eave = average potential energy`  
-`evar = variance of potential energy`  
-`have = average total energy`  
-`hvar = variance of total energy`  
-`ion_Temp = temperature`
+E1 = total energy
+E2 = potential energy
+E3 = ficticious kinetic energy
+E4 = ionic kinetic energy
+E5 = orbital energy
+E6 = hartree energy
+E7 = exchange-correlation energy 
+E8 = ionic energy
+eave = average potential energy 
+evar = variance of potential energy
+have = average total energy
+hvar = variance of total energy
+ion_Temp = temperature
 ```
 #### HMOTION motion file
 
 Datafile that stores the rotation matrix as a function of time.
 ```
-`[line 1: ] time`  
-`[line 2: ] ms,ne(ms),ne(ms)`  
-`do i=1,ne(ms)`  
-`[line 2+i: ] (hml(i,j), j=1,ne(ms)`  
-`end do`  
-`[line 3+ne(ms): ] time`  
-`[line 4+ne(ms): ] ....`
+[line 1: ] time
+[line 2: ] ms,ne(ms),ne(ms)
+do i=1,ne(ms)
+[line 2+i: ] (hml(i,j), j=1,ne(ms)
+end do
+[line 3+ne(ms): ] time
+[line 4+ne(ms): ] ....
 ```
 #### EIGMOTION motion file
 
 Datafile that stores the eigenvalues for the one-electron orbitals as a
 function of time.
 ```
-`[line 1: ] time, (eig(i), i=1,number_orbitals)`  
-`[line 2: ] ...`
+[line 1: ] time, (eig(i), i=1,number_orbitals) 
+[line 2: ] ...
 ```
 #### OMOTION motion file
 
