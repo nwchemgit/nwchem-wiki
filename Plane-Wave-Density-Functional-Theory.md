@@ -731,7 +731,12 @@ end
 
 #### Langreth style vdw and vdw van der Wall functionals
 
-Langreth vdw and vdw2 van der Wall functionals   are currently available for the BEEF, PBE96,
+These potenials that are used to augment standard exchange-correlation potentials area calculated from a double integral over a nonlocal interaction kernel φ(r,r′),
+
+It is evaluated using the fast Fourier transformation method of Roman-Perez and Soler.
+G. Roman-Perez and J. M. Soler, Phys. Rev. Lett. 103, 096102 (2009).
+
+Langreth vdw and vdw2 van der Wall functionals are currently available for the BEEF, PBE96,
 revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
 functionals. To use them the following keywords BEEF-vdw, BEEF-vdw2, PBE96-vdw,
 PBE96-vdw2, BLYP-vdw, BLYP-vdw2,
