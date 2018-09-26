@@ -1835,31 +1835,31 @@ Data file that stores ion positions and velocities as a function of time
 in XYZ
 format.
 ```
-`[line 1: ] n_ion`  
-`[line 2: ] do ii=1,n_ion`  
-`[line 2+ii: ] atom_name(ii), x(ii),y(ii),z(ii),vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line n_ion+3 ] n_nion`  
-` do ii=1,n_ion`  
-`[line n_ion+3+ii: ] atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line 2*n_ion+4: ] ....`
+[line 1: ] n_ion
+[line 2: ] do ii=1,n_ion
+[line 2+ii: ] atom_name(ii), x(ii),y(ii),z(ii),vx(ii),vy(ii),vz(ii)
+end do 
+[line n_ion+3 ] n_nion 
+ do ii=1,n_ion
+[line n_ion+3+ii: ] atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii) 
+end do
+[line 2*n_ion+4: ] ....
 ```
 #### ION\_MOTION motion file
 
 Datafile that stores ion positions and velocities as a function of
 time
 ```
-`[line 1: ] it_out, n_ion, omega, a1.x,a1.y,a1.z, a2.x,a2,y,a2.z, a3.x,a3.y,a3.z`  
-`[line 2: ] time`  
-`do ii=1,n_ion`  
-`[line 2+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line n_ion+3 ] time`  
-`do do ii=1,n_ion`  
-`[line n_ion+3+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line 2*n_ion+4: ] ....`
+[line 1: ] it_out, n_ion, omega, a1.x,a1.y,a1.z, a2.x,a2,y,a2.z, a3.x,a3.y,a3.z 
+[line 2: ] time 
+do ii=1,n_ion
+[line 2+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)  
+end do
+[line n_ion+3 ] time 
+do do ii=1,n_ion`  
+[line n_ion+3+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii) 
+end do 
+[line 2*n_ion+4: ] ....
 ```
 #### EMOTION motion file
 
@@ -2006,56 +2006,56 @@ Input to a metadynamics simulation is contained within the METADYNAMICS
 sub-block. Listed below is the the format of a METADYNAMICS
 sub-block,
 ```
-`NWPW`  
-` METADYNAMICS`  
-`    [`  
-`    BOND `<integer atom1_index no default>` `<integer atom2_index no default>` `  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE <real a b default (see input description)>]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    ANGLE `<integer atom1_index no default>` `<integer atom2_index no default>` `<integer atom3_index no default>  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE <real a b default 0 `<img alt="$\pi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f30fdded685c83b0e7b446aa9c9aa120.svg?invert_in_darkmode&sanitize=true" align=middle width="9.922935pt" height="14.10255pt"/>`>]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    COORD_NUMBER [INDEX1 `<integer_list atom1_indexes no default>`][INDEX2 `<integer_list atom2_indexes no default>`]`  
-`         [SPRIK]`  
-`         [N <real n default 6.0>]`  
-`         [M <real m default 12.0>]`  
-`         [R0 <real r0 default 3.0>]`  
-`      `  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE `<real a b no default>`]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    N-PLANE `<integer atom1_index no default>` `<integer_list atom_indexes no default>  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE `<real a b no default>`]`  
-`         [NRANGE <integer nrange default 501>] `  
-`         [NVECTOR <real(3) nx ny nz>]`  
-`    ...]`  
-`    [UPDATE <integer meta_update default 1>]`  
-`    [PRINT_SHIFT <integer print_shift default 0>]`  
-`    [TEMPERED `<real tempered_temperature no default>`]`  
-`  END`  
-`END`
+NWPW  
+ METADYNAMICS
+    [
+    BOND <integer atom1_index no default> <integer atom2_index no default> 
+         [W <real w default 0.00005>]  
+         [SIGMA <real sigma default 0.1>] 
+         [RANGE <real a b default (see input description)>]  
+         [NRANGE <integer nrange default 501>] 
+    ...]  
+    [
+    ANGLE <integer atom1_index no default> <integer atom2_index no default> <integer atom3_index no default>  
+         [W <real w default 0.00005>] 
+         [SIGMA <real sigma default 0.1>]
+         [RANGE <real a b default 0 `<img alt="$\pi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f30fdded685c83b0e7b446aa9c9aa120.svg?invert_in_darkmode&sanitize=true" align=middle width="9.922935pt" height="14.10255pt"/>`>]`  
+         [NRANGE <integer nrange default 501>]  
+    ...]
+    [
+    COORD_NUMBER [INDEX1 <integer_list atom1_indexes no default>][INDEX2 <integer_list atom2_indexes no default>]  
+         [SPRIK] 
+         [N <real n default 6.0>]
+         [M <real m default 12.0>]
+         [R0 <real r0 default 3.0>]  
+       
+         [W <real w default 0.00005>] 
+         [SIGMA <real sigma default 0.1>] 
+         [RANGE <real a b no default>]  
+         [NRANGE <integer nrange default 501>] 
+    ...] 
+    [  
+    N-PLANE  <integer atom1_index no default> <integer_list atom_indexes no default>  
+         [W <real w default 0.00005>]   
+         [SIGMA <real sigma default 0.1>]  
+         [RANGE <real a b no default>] 
+         [NRANGE <integer nrange default 501>]  
+         [NVECTOR <real(3) nx ny nz>] 
+    ...] 
+    [UPDATE <integer meta_update default 1>]  
+    [PRINT_SHIFT <integer print_shift default 0>]
+    [TEMPERED <real tempered_temperature no default>]  
+  END
+END
 ```
 Multiple collective variables can be defined at the same time, e.g.
 ```
-`NWPW`  
-` METADYNAMICS`  
-`    BOND 1 8  W 0.0005 SIGMA 0.1`  
-`    BOND 1 15 W 0.0005 SIGMA 0.1`  
-`  END`  
-`END`
+NWPW  
+ METADYNAMICS 
+    BOND 1 8  W 0.0005 SIGMA 0.1 
+    BOND 1 15 W 0.0005 SIGMA 0.1 
+  END
+END
 ```
 will produce a two-dimensional potential energy surface.
 
