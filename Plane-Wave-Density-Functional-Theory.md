@@ -61,7 +61,7 @@
       - [1.15.3 SEMICORE_RADIUS](#semicore_radius  "wikilink")
    - [1.16 PAW Tasks - Legacy Implementation](#paw_tasks---legacy-implementation  "wikilink")
    - [1.17 Pseudopotential and PAW basis Libraries](#pseudopotential-and-paw-basis-libraries  "wikilink")
-   - [1.18 NWPW RTDB Entries and Miscellaneous DataFiles](#nwpw-rtdb-entries-and-miscellaneous-dataFiles  "wikilink")
+   - [1.18 NWPW RTDB Entries and Miscellaneous DataFiles](#nwpw-rtdb-entries-and-miscellaneous-datafiles  "wikilink")
       - [1.18.1 Ion Positions](#ion-positions  "wikilink")
       - [1.18.2 Ion Velocities](#ion-velocities  "wikilink")
       - [1.18.3 Wavefunction Datafile](#wavefunction-datafile  "wikilink")
