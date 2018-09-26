@@ -729,7 +729,7 @@ nwpw
 end
 ```
 
-#### Langreth vdw and vdw van der Wall functionals
+#### Langreth style vdw and vdw van der Wall functionals
 
 Langreth vdw and vdw2 van der Wall functionals   are currently available for the BEEF, PBE96,
 revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
@@ -748,9 +748,11 @@ nwpw
    xc beef-vdw2  
 end
 ```
-In these functionals Grimme2, Grimme3 and Grimme4 are defined in the
-following papers by S. Grimme.
+In these functionals vdw and vdw2 are defined in  
+ 
+(vdw) Dion M, Rydberg H, Schröder E, Langreth DC, Lundqvist BI. Van der Waals density functional for general geometries. Physical review letters. 2004 Jun 16;92(24):246401.
 
+(vdw2) K. Lee, E. D. Murray, L. Kong, B. I. Lundqvist, and D. C. Langreth, Phys. Rev. B 82, 081101 (2010).
 
 
 #### Grimme Dispersion Corrections
