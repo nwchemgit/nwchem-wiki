@@ -3492,35 +3492,35 @@ output:[Media:s2-example5.nwout](s2-example5.nwout "wikilink")
 this example, a constant energy Born-Oppenheimer simulation of S2 dimer
 using LDA approximation is calculated.
 ```
-` title "AIMD simulation of s2-dimer"`  
-` echo`
+title "AIMD simulation of s2-dimer" 
+echo
 
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` `  
-` start s2-bomd`  
-` `  
-` geometry`  
-` S 0.0 0.0 0.0`  
-` S 0.0 0.0 1.95`  
-` end`  
-` `  
-` nwpw`  
-`   simulation_cell`  
-`     SC 20.0`  
-`   end`  
-`   cutoff 15.0`  
-`   mult 3`  
-`   xc lda`  
-`   lmbfgs`  
-` end`  
-` task pspw energy`  
-` `  
-` nwpw`  
-`    bo_steps 1 500`  
-`    bo_time_step 10.0`  
-` end`  
-` task pspw born-oppenheimer`
+scratch_dir   ./scratch
+permanent_dir ./perm
+  
+start s2-bomd  
+
+geometry
+S 0.0 0.0 0.0
+S 0.0 0.0 1.95
+end
+ 
+nwpw 
+  simulation_cell
+    SC 20.0 
+  end
+  cutoff 15.0  
+  mult 3 
+  xc lda 
+  lmbfgs 
+end
+task pspw energy 
+  
+nwpw 
+   bo_steps 1 500 
+   bo_time_step 10.0  
+end 
+task pspw born-oppenheimer
 ```
 The following plot shows the <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> energy surface
 generated from the
@@ -3589,17 +3589,16 @@ Car-Parrinello simulation.
 
 Key Input
 ```
-` ….`  
-` Car-Parrinello`  
-` fake_mass 500.0`  
-` time_step 5.0`  
-` loop 10 100`  
-` `**`scaling`` ``1.0``
-``2.0`**  
-` emotion_filename b12.00.emotion`  
-` xyz_filename     b12.00.xyz`  
-` end`  
-` ….`
+…. 
+Car-Parrinello  
+fake_mass 500.0
+time_step 5.0 
+loop 10 100`  
+** scaling 1.0 2.0**  
+emotion_filename b12.00.emotion
+xyz_filename     b12.00.xyz
+end 
+….
 ```
 Output
 ```
