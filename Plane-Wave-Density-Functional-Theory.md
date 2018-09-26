@@ -734,7 +734,7 @@ end
 These potenials that are used to augment standard exchange-correlation potentials area calculated from a double integral over a nonlocal interaction kernel,
 ![img](http://latex.codecogs.com/svg.latex?%5Cphi%28%5Cmathbf%7Br%7D%2C%5Cmathbf%7Br%27%7D%29),
 
-![img](http://latex.codecogs.com/svg.latex?E%5E%7Bvdw%7D%3D%5Cfrac%7B1%7D%7B2%7D%5Ciint%5Crho%28%5Cmathbf%7Br%7D%29%5Cphi%28%5Cmathbf%7Br%7D%2C%5Cmathbf%7Br%27%7D%29%5Crho%28%5Cmathbf%7Br%27%7D%29d%5Cmathbf%7Br%7D+d%5Cmathbf%7Br%27%7D)
+![img](http://latex.codecogs.com/svg.latex?E%5E%7Bvdw%7D%3D%5Cfrac%7B1%7D%7B2%7D%5Ciint%5Crho%28%5Cmathbf%7Br%7D%29%5Cphi%28%5Cmathbf%7Br%7D%2C%5Cmathbf%7Br%27%7D%29%5Crho%28%5Cmathbf%7Br%27%7D%29d%5Cmathbf%7Br%7Dd%5Cmathbf%7Br%27%7D)
 
 that is evaluated using the fast Fourier transformation method of Roman-Perez and Soler.
 
