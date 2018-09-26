@@ -727,8 +727,32 @@ nwpw
   uterm d 0.13634 0.0036749 1 
 end
 ```
-#### Grimme Dispersion Corrections
 
+#### Langreth vdw and vdw van der Wall functionals
+
+Langreth vdw and vdw2 van der Wall functionals   are currently available for the BEEF, PBE96,
+revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
+functionals. To use them the following keywords BEEF-vdw, BEEF-vdw2, PBE96-vdw,
+PBE96-vdw2, BLYP-vdw, BLYP-vdw2,
+revPBE-vdw, revPBE-vdw, PBEsol-vdw PBEsol-vdw2, PBE0-vdw, PBE0-vdw2,
+revPBE0-vdw, revPBE0-vdw2, HSE-vdw, HSE-vdw2, B3LYP-vdw, and B3LYP-vdw2
+ can be used in the XC input directive, e.g.
+```
+nwpw
+   xc beef-vdw  
+end
+```
+```
+nwpw
+   xc beef-vdw2  
+end
+```
+In these functionals Grimme2, Grimme3 and Grimme4 are defined in the
+following papers by S. Grimme.
+
+
+
+#### Grimme Dispersion Corrections
 Grimme dispersion corrections are currently available for the PBE96,
 revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
 functionals. To use them the following keywords PBE96-Grimme2,
