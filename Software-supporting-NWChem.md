@@ -22,7 +22,7 @@ feedback on this page content.
     analysis of NWChem output files
     <http://www.scienomics.com/software/>
   - **CULGI** computational platform
-    <http://culgi.com/article/culgi-90-embedded-molecular-database>
+    <https://www.culgi.com/software/features-quantum-chemistry/>
   - **KiSThelP** predicts thermodynamic properties and rate constants
     from NWChem results <http://kisthelp.univ-reims.fr/>
   - **Chemcraft** <http://www.chemcraftprog.com>
