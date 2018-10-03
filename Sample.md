@@ -26,7 +26,7 @@ calculation is performed and then restarted to perform the optimization
 The final energy should be -75.983998.
 
 ### Job 2. Restarting and perform a geometry optimization
-``
+```
  restart h2o
  title "Water geometry optimization"
  
