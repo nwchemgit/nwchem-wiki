@@ -53,7 +53,7 @@ The final energy should be -128.496350.
 ### Job 2. Compute the energy with applied field
 
 An external field may be simulated with point charges. The charges here
-apply a field of magnitude 0.01 atomic units to the atom at the origin (Coulomb Law F=q/r<sup>2</sup>).
+apply a field of magnitude 0.01 atomic units to the atom at the origin.
 Since the basis functions have not been reordered by the additional
 centers we can also restart from the previous vectors, which is the
 default for a restart job.
@@ -69,7 +69,7 @@ default for a restart job.
 ```
 The final energy should be -128.496441, which together with the previous
 field-free result yields an estimate for the polarizability of 1.83
-atomic units (since E=E<sub>0</sub> - 1/2\*alpha*F<sup>2</sup>). Note that by [default](Geometry "wikilink") NWChem does
+atomic units. Note that by [default](Geometry "wikilink") NWChem does
 not include the interaction between the two point charges in the total
 energy.
 
