@@ -8,21 +8,21 @@ calculation is performed and then restarted to perform the optimization
 (both could of course be performed in a single task).
 
 ### Job 1. Single point SCF energy
-
-` start h2o`  
-` title "Water in 6-31g basis set"`  
-` `  
-` geometry units au`  
-`   O      0.00000000    0.00000000    0.00000000`  
-`   H      0.00000000    1.43042809   -1.10715266`  
-`   H      0.00000000   -1.43042809   -1.10715266`  
-` end`  
-` basis`  
-`   H library 6-31g`  
-`   O library 6-31g`  
-` end`  
-` task scf`
-
+```
+ start h2o 
+ title "Water in 6-31g basis set" 
+ 
+ geometry units au  
+   O      0.00000000    0.00000000    0.00000000  
+   H      0.00000000    1.43042809   -1.10715266  
+   H      0.00000000   -1.43042809   -1.10715266 
+ end  
+ basis  
+   H library 6-31g  
+   O library 6-31g  
+ end
+ task scf
+```
 The final energy should be -75.983998.
 
 ### Job 2. Restarting and perform a geometry optimization
