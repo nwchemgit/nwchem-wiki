@@ -2,7 +2,7 @@
 
 ## Water SCF calculation and geometry optimization in a 6-31g basis
 
-The [Getting Started](Getting_Started "wikilink") input file performs a
+The [Getting Started](Getting-Started "wikilink") input file performs a
 geometry optimization in a single task. A single point SCF energy
 calculation is performed and then restarted to perform the optimization
 (both could of course be performed in a single task).
