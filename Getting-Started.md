@@ -382,7 +382,7 @@ conventions are used in the generic descriptions of the NWChem input.
   - () is used to group items (the parentheses and other special symbols
     should not appear in the input).
   - || separate exclusive options, parameters, or formats.
-  - [ ] enclose optional entries that have a default value.
+  - \[  \] enclose optional entries that have a default value.
   - < > enclose a type, a name of a value to be specified, or a
     default value, if any.
   - \\ is used to concatenate lines in a description.
