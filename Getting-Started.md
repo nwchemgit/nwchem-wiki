@@ -382,8 +382,8 @@ conventions are used in the generic descriptions of the NWChem input.
   - () is used to group items (the parentheses and other special symbols
     should not appear in the input).
   - || separate exclusive options, parameters, or formats.
-  - \[ \] enclose optional entries that have a default value.
-  - \< \> enclose a type, a name of a value to be specified, or a
+  - [ ] enclose optional entries that have a default value.
+  - < > enclose a type, a name of a value to be specified, or a
     default value, if any.
   - \\ is used to concatenate lines in a description.
   - ... is used to indicate indefinite continuation of a list.
@@ -404,32 +404,32 @@ In addition, integer lists may be specified using Fortran triplet
 notation, which interprets lo:hi:inc as lo, lo+inc, lo+2\*inc, ..., hi.
 For example, where a list of integers is expected in the input, the
 following two lines are equivalent
-
-`  7 10 21:27:2 1:3 99`  
-`  7 10 21 23 25 27 1 2 3 99`
-
+```
+  7 10 21:27:2 1:3 99  
+  7 10 21 23 25 27 1 2 3 99
+```
 (In Fortran triplet notation, the increment, if unstated, is 1; e.g.,
 1:3 = 1:3:1.)
 
 The directive VECTORS (Section 10.5) is presented here as an example of
 an NWChem input directive. The general form of the directive is as
 follows:
-
-` VECTORS [input (`<string input_movecs default atomic>`) || \`  
-`                  (project `<string basisname>` `<string filename>`)] \`  
-`         [swap [(alpha||beta)] `<integer vec1 vec2>` ...] \`  
-`         [output <string output_movecs default $file_prefix$.movecs>]`
-
+```
+ VECTORS [input (<string input_movecs default atomic>) || \  
+                  (project <string basisname> <string filename>)] \ 
+         [swap [(alpha||beta)] <integer vec1 vec2> ...] \ 
+         [output <string output_movecs default $file_prefix$.movecs>]
+```
 This directive contains three optional keywords, as indicated by the
 three main sets of square brackets enclosing the keywords input, swap,
 and output. The keyword input allows the user to specify the source of
 the molecular orbital vectors. There are two mutually exclusive options
 for specifying the vectors, as indicated by the || symbol separating the
 option descriptions;
-
-` (`<string input_movecs default atomic>`) || \`  
-`                 (project `<string basisname>` `<string filename>`) \`
-
+```
+ (<string input_movecs default atomic>) || \ 
+                 (project <string basisname> <string filename>) \
+```
 The first option, (<string input_movecs default atomic>), allows the
 user to specify an ASCII character string for the parameter
 input\_movecs. If no entry is specified, the code uses the default
