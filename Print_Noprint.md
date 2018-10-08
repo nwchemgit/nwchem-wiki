@@ -15,17 +15,18 @@ In addition, it is possible to enable the printing of specific items by naming t
 
 The list of items that can be printed for each module is documented as part of the input instructions for that module. The items recognized by the top level of the code, and their thresholds, are:
 
-Name	'Print Level;'	Description
-"total time";	medium	Print cpu and wall time at job end
-"task time"	high	Print cpu and wall time for each task
-"rtdb"	high	Print names of RTDB entries
-"rtdbvalues"	high	Print name and values of RTDB entries
-"ga summary"	medium	Summarize GA allocations at job end
-"ga stats"	high	Print GA usage statistics at job end
-"ma summary"	medium	Summarize MA allocations at job end
-"ma stats"	high	Print MA usage statistics at job end
-"version"	debug	Print version number of all compiled routines
-"tcgmsg"	never	Print TCGMSG debug information
+Name|Print Level|Description
+---|---|---
+"total time" | medium | Print cpu and wall time at job end
+"task time" | high | Print cpu and wall time for each task
+"rtdb" | high | Print names of RTDB entries
+"rtdbvalues" | high | Print name and values of RTDB entries
+"ga summary" | medium | Summarize GA allocations at job end
+"ga stats" | high | Print GA usage statistics at job end
+"ma summary" | medium | Summarize MA allocations at job end
+"ma stats" | high | Print MA usage statistics at job end
+"version" | debug | Print version number of all compiled routines
+"tcgmsg" | never | Print TCGMSG debug information
 
 # Top Level Print Control Specifications
 
