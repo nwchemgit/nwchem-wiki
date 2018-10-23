@@ -1068,7 +1068,7 @@ export SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_il
 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
 export SCALAPACK_SIZE=8  
 export SCALAPACK_LIB="$SCALAPACK" 
-export BLAS_SIZE=8` 
+export BLAS_SIZE=8
 export BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lmkl_core -liomp5 -lpthread -ldmapp -lm"  
 export USE_NOIO=y  
 export CRAYPE_LINK_TYPE=dynamic
