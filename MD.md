@@ -185,9 +185,9 @@ Specifies the use of parameter set <iset> for the molecular dynamics simulation.
 `lambda `<integer ilambda>` `<integer ilambda>
 
 Specifies the use of parameter set for the ilambda-th of mlambda steps.
-
-`pset `<integer isetp1>` [`<integer isetp2>`]`
-
+```
+pset <integer isetp1> [<integer isetp2>]
+```
 Specifies the parameter sets to be used as perturbation potentials in single step thermodynamic perturbation free energy evaluations, where <isetp1> specifies the first perturbation parameter set and <isetp2> specifies the second perturbation parameter set. Legal values for <isetp1> are 2 and 3. Legal value for <isetp2> is 3, in which case <isetp1> can only be 2. If specified, <iset> is automatically set to 1.
 
 `pmf [ equilharm `<integer npmfc>` | scale `<real facpmf>`]`
