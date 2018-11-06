@@ -686,27 +686,27 @@ Specifies if data are communicated in packed or unpacked form. The default is pa
 ```
    procs <integer npx> <integer npy> <integer npz>
 ```
-Specifies the distribution of the available processors over the three Cartesian dimensions. The default distribution is chosen such that, <npx>\*<npy>\*<npz>=<np> and <npx> &lt;= <npy> &lt;= <npz>, where <npx>, <npy> and <npz> are the processors in the x, y and z dimension respectively, and <np> is the number of processors allocated for the calculation. Where more than one combination of <npx>, <npy> and <npz> are possible, the combination is chosen with the minimum value of <npx>+<npy>+<npz>. To change the default setting the following optional input option is provided.
+Specifies the distribution of the available processors over the three Cartesian dimensions. The default distribution is chosen such that, `<npx>`\*`<npy>`\*`<npz>`=`<np>` and `<npx>` `<=` `<npy>` `<= <npz>`, where `<npx>`, `<npy>` and `<npz>` are the processors in the x, y and z dimension respectively, and `<np>` is the number of processors allocated for the calculation. Where more than one combination of `<npx>`, `<npy>` and `<npz>` are possible, the combination is chosen with the minimum value of `<npx>+<npy>+<npz>`. To change the default setting the following optional input option is provided.
 ```
    cells <integer nbx> <integer nby> <integer nbz>
 ```
-Specifies the distribution of cells, where <nbx>, <nby> and <nbz> are the number of cells in x, y and z direction, respectively. The molecular system is decomposed into cells that form the smallest unit for communication of atomic data between nodes. The size of the cells is per default set to the short-range cutoff radius. If long-range cutoff radii are used the cell size is set to half the long-range cutoff radius if it is larger than the short-range cutoff. If the number of cells in a dimension is less than the number of processors in that dimension, the number of cells is set to the number of processors.
+Specifies the distribution of cells, where `<nbx>`, `<nby>` and `<nbz>` are the number of cells in x, y and z direction, respectively. The molecular system is decomposed into cells that form the smallest unit for communication of atomic data between nodes. The size of the cells is per default set to the short-range cutoff radius. If long-range cutoff radii are used the cell size is set to half the long-range cutoff radius if it is larger than the short-range cutoff. If the number of cells in a dimension is less than the number of processors in that dimension, the number of cells is set to the number of processors.
 ```
    extra <integer madbox>
 ```
-Sets the number of additional cells for which memory is allocated. In rare events the amount of memory set aside per node is insufficient to hold all atomic coordinates assigned to that node. This leads to execution which aborts with the message that mwm or msa is too small. Jobs may be restarted with additional space allocated by where <madbox> is the number of additional cells that are allocated on each node. The default for <madbox> is 6. In some cases <madbox> can be reduced to 4 if memory usage is a concern. Values of 2 or less will almost certainly result in memory shortage.
+Sets the number of additional cells for which memory is allocated. In rare events the amount of memory set aside per node is insufficient to hold all atomic coordinates assigned to that node. This leads to execution which aborts with the message that mwm or msa is too small. Jobs may be restarted with additional space allocated by where `<madbox>` is the number of additional cells that are allocated on each node. The default for `<madbox>` is 6. In some cases `<madbox>` can be reduced to 4 if memory usage is a concern. Values of 2 or less will almost certainly result in memory shortage.
 ```
    mwm <integer mwmreq>
 ```
-Sets the maximum number of solvent molecules <mwmreq> per node, allowing increased memory to be allocated for solvent molecules. This option can be used if execution aborted because mwm was too small.
+Sets the maximum number of solvent molecules `<mwmreq>` per node, allowing increased memory to be allocated for solvent molecules. This option can be used if execution aborted because mwm was too small.
 ```
    msa <integer msareq>
 ```
-Sets the maximum number of solute atoms <msareq> per node, allowing increased memory to be allocated for solute atoms. This option can be used if execution aborted because msa was too small.
+Sets the maximum number of solute atoms `<msareq>` per node, allowing increased memory to be allocated for solute atoms. This option can be used if execution aborted because msa was too small.
 ```
    mcells <integer mbbreq>
 ```
-Sets the maximum number of cell pairs <mbbreq> per node, allowing increased memory to be allocated for the cell pair lists. This option can be used if execution aborted because mbbl was too small.
+Sets the maximum number of cell pairs `<mbbreq>` per node, allowing increased memory to be allocated for the cell pair lists. This option can be used if execution aborted because mbbl was too small.
 ```
    boxmin <real rbox>
 ```
@@ -718,7 +718,7 @@ Sets the maximum size of a segment. This value is used to determine which segmen
 ```
    memory <integer memlim>
 ```
-Sets a limit <memlim> in kB on the allocated amount of memory used by the molecular dynamics module. Per default all available memory is allocated. Use of this command is required for QM/MM simulations only.
+Sets a limit `<memlim>` in kB on the allocated amount of memory used by the molecular dynamics module. Per default all available memory is allocated. Use of this command is required for QM/MM simulations only.
 ```
    expert
 ```
