@@ -143,9 +143,9 @@ Molecular simulations
 ---------------------
 
 The type of molecular dynamics simulation is specified by the NWChem task directive.
-
-`task md [ energy | optimize | dynamics | thermodynamics ]`
-
+```
+task md [ energy | optimize | dynamics | thermodynamics ]
+```
 where the theory keyword md specifies use of the molecular dynamics module, and the operation keyword is one of
 
 -   *energy* for single configuration energy evaluation
@@ -157,47 +157,46 @@ System specification
 --------------------
 
 The chemical system for a calculation is specified in the topology and restart files. These files should be created using the utilities nwtop and nwrst before a simulation can be performed. The names of these files are determined from the required system directive.
-
-`system `<string systemid>`_`<string calcid>
-
+```
+system <string systemid>_<string calcid>
+```
 where the strings systemid and calcid are user defined names for the chemical system and the type of calculation to ber performed, respectively. These names are used to derive the filenames used for the calculation. The topoly file used will be systemid.top, while all other files are named systemid\_calcid.ext.
 
 Restarting and continuing simulations
 -------------------------------------
-
-`   finish`
-`   `
-
+```
+   finish
+```
 Specifies that the current job will finish a previous, incomplete simulation, using the input data that have been recorded by that previous run in the restart file. Most of the input in the current md input block will be ignored.
-
-`   resume`
-`    `
+```
+   resume
+```
 
 Specifies that the current job will be an extension of a previous simulation, using most of the input data that have been recorded by that previous run in the restart file. Typically the input in the current md input block defines a larger number of steps than the previous job.
 
 Parameter set
 -------------
-
-`set `<integer iset>
-
+```
+set <integer iset>
+```
 Specifies the use of parameter set <iset> for the molecular dynamics simulation. The topology file contains three separate parameters sets that can be used. The default for <iset> is 1.
-
-`lambda `<integer ilambda>` `<integer ilambda>
-
+```
+lambda <integer ilambda> <integer ilambda>
+```
 Specifies the use of parameter set for the ilambda-th of mlambda steps.
 ```
 pset <integer isetp1> [<integer isetp2>]
 ```
 Specifies the parameter sets to be used as perturbation potentials in single step thermodynamic perturbation free energy evaluations, where <isetp1> specifies the first perturbation parameter set and <isetp2> specifies the second perturbation parameter set. Legal values for <isetp1> are 2 and 3. Legal value for <isetp2> is 3, in which case <isetp1> can only be 2. If specified, <iset> is automatically set to 1.
-
-`pmf [ equilharm `<integer npmfc>` | scale `<real facpmf>`]`
-
+```
+pmf [ equilharm <integer npmfc> | scale <real facpmf>]
+```
 Specifies that any potential of mean force functions defined in the topology files are to be used. If equilharm is specified, the first npmfc dynamics steps will use a harmonic potential in stead of any pmf constraint. If scale is specified, all pmf force constants are scaled by a factor facpmf.
-
-`distar [draver [`<integer ndaver default 1>`]] `
-`  [scale `<real drsscl>`]`
-`  [after `<integer nfdrss>`]`
-
+```
+distar [draver [<integer ndaver default 1>]] 
+  [scale <real drsscl>]
+  [after <integer nfdrss>]
+```
 Specifies that any distance restraint functions defined in the topology files are to be used.
 
 `qhop [`<integer nfhop default 10>`] `
