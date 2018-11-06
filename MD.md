@@ -198,27 +198,26 @@ distar [draver [<integer ndaver default 1>]] 
   [after <integer nfdrss>]
 ```
 Specifies that any distance restraint functions defined in the topology files are to be used.
-
-`qhop [`<integer nfhop default 10>`] `
-`  [`<real rhop default 0.35>`]`
-`  [`<real thop default 0.02>`]`
-
+```
+qhop [<integer nfhop default 10>] 
+  [<real rhop default 0.35>]
+  [<real thop default 0.02>]
+```
 Specifies that a Q-HOP simulation is to be carried out with attempted proton hops every *nfhop* steps, a cutoff for the donor-acceptor pair distance of *rhop* nm, and a minimum time before back hopping can occur of *thop* ps.
 
 Energy minimization algorithms
 ------------------------------
 
 The energy minimization of the system as found in the restart file is performed with the following directives. If both are specified, steepest descent energy minimization precedes conjugate gradient minimization.
-
-`   sd `<integer msdit>` [init `<real dx0sd>`] [min `<real dxsdmx>`] \`
-`                      [max `<real dxmsd>`]`
-`   `
-
+```
+   sd <integer msdit> [init <real dx0sd>] [min <real dxsdmx>] \
+                      [max <real dxmsd>]
+```
 Specifies the variables for steepest descent energy minimizations, where <msdit> is the maximum number of steepest descent steps taken, for which the default is 100, <dx0sd> is the initial step size in nm for which the default is 0.001, <dxsdmx> is the threshold for the step size in nm for which the default is 0.0001, and <dxmsd> is the maximum allowed step size in nm for which the default is 0.05.
-
-`   cg `<integer mcgit>` [init `<real dx0cg>`] [min `<real dxcgmx>`] \`
-`                      [cy `<integer ncgcy>`]`
-`   `
+```
+   cg <integer mcgit> [init <real dx0cg>] [min <real dxcgmx>] \
+                      [cy <integer ncgcy>]
+```
 
 Specifies the variables for conjugate gradient energy minimizations, where <mcgit> is the maximum number of conjugate gradient steps taken, for which the default is 100, <dx0cg> is the initial search interval size in nm for which the default is 0.001, <dxcgmx> is the threshold for the step size in nm for which the default is 0.0001, and <ncgcy> is the number of conjugate gradient steps after which the gradient history is discarded for which the default is 10. If conjugate gradient energy minimization is preceded by steepest descent energy minimization, the search interval is set to twice the final step of the steepest descent energy minimization.
 
@@ -226,39 +225,39 @@ Multi-configuration thermodynamic integration
 ---------------------------------------------
 
 The following keywords control free energy difference simulations. Multi-configuration thermodynamic integrations are always combined with multiple step thermodynamic perturbations.
-
-`   (forward | reverse) [[<integer mrun> of] <integer maxlam>]`
-`   `
+```
+   (forward | reverse) [[<integer mrun> of] <integer maxlam>]
+```
 
 Specifies the direction and number of integration steps in free energy evaluations, with forward being the default direction. <mrun> is the number of ensembles that will be generated in this calculation, and <maxlam> is the total number of ensembles to complete the thermodynamic integration. The default value for <maxlam> is 21. The default value of <mrun> is the value of <maxlam>.
-
-`   error <real edacq>`
-`   `
+```
+   error <real edacq>
+```
 
 Specifies the maximum allowed statistical error in each generated ensemble, where <edacq> is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9e6f26ffa9c11ec7fc178fb4ec8dd59f.svg?invert_in_darkmode&sanitize=true" align=middle width="63.9969pt" height="26.70657pt"/>.
-
-`   drift <real ddacq>`
-`   `
+```
+   drift <real ddacq>
+```
 
 Specifies the maximum allowed drift in the free energy result, where <ddacq> is the maximum drift allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1} ps^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/31a9d30a29fa0f4c5923496e777ab5c2.svg?invert_in_darkmode&sanitize=true" align=middle width="97.561695pt" height="26.70657pt"/>.
-
-`   factor <real fdacq>`
-`   `
+```
+   factor <real fdacq>
+```
 
 Specifies the maximum allowed change in ensemble size where <fdacq> is the minimum size of an ensemble relative to the previous ensemble in the calculation with a default value of 0.75.
-
-`   decomp`
-`   `
+```
+   decomp
+```
 
 Specifies that a free energy decomposition is to be carried out. Since free energy contributions are path dependent, results from a decomposition analysis can no be unambiguously interpreted, and the default is not to perform this decomposition.
-
-`   sss [delta <real delta>]`
-`   `
+```
+   sss [delta <real delta>]
+```
 
 Specifies that atomic non-bonded interactions describe a dummy atom in either the initial or final state of the thermodynamic calculation will be calculated using separation-shifted scaling, where <delta> is the separation-shifted scaling factor with a default of <img alt="$0.075 nm^2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde6b54b6723ccfc3b0293826bfcfd13.svg?invert_in_darkmode&sanitize=true" align=middle width="68.040555pt" height="26.70657pt"/>. This scaling method prevents problems associated with singularities in the interaction potentials.
-
-`   new | renew | extend`
-`   `
+```
+   new | renew | extend
+```
 
 Specifies the initial conditions for thermodynamic calculations. new indicates that this is an initial mcti calculation, which is the default. renew instructs to obtain the initial conditions for each λ from the mro-file from a previous mcti calculation, which has to be renamed to an mri-file. The keyword extend will extend a previous mcti calculation from the data read from an mri-file.
 
@@ -266,14 +265,14 @@ Time and integration algorithm directives
 -----------------------------------------
 
 Following directives control the integration of the equations of motion.
-
-`   leapfrog | leapfrog_bc`
-`   `
+```
+   leapfrog | leapfrog_bc
+```
 
 Specifies the integration algorithm, where leapfrog specifies the default leap frog integration, and leapfrog\_bc specifies the Brown-Clarke leap frog integrator.
-
-`   guided [`<real fguide default 0.2>` [`<real tguide default 0.2>`]]`
-`   `
+```
+   guided [<real fguide default 0.2> [<real tguide default 0.2>]]
+```
 
 Specifies the use of the guided molecular dynamics simulation technique. Variable *fguide* defines the fraction of the averaged forces *g* to be added to the forces <img alt="$f^{f}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aac399a766fd66ec52ce651f8dbc7e3a.svg?invert_in_darkmode&sanitize=true" align=middle width="17.458485pt" height="27.85299pt"/> evaluated using the force field functions to obtain the forces *f* used to advance the coordinates.
 
@@ -284,24 +283,24 @@ Variable tguide defines the length of the averaging relative to the timestep Δ 
 <img alt="$g_i = {\Delta t\over tguide} f_i + \left(1- {\Delta t\over tguide}\right) g_{i-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cd0fbec5c477acca717650497fc6753f.svg?invert_in_darkmode&sanitize=true" align=middle width="231.061545pt" height="37.80348pt"/>
 
 The current implementation is still under development.
-
-`   equil `<integer mequi>
-`   `
+```
+   equil <integer mequi>
+```
 
 Specifies the number of equilibration steps <mequi>, with a default of 100.
-
-`   data `<integer mdacq>` [over `<integer ldacq>`]]`
-`   `
+```
+   data <integer mdacq> [over <integer ldacq>]]
+```
 
 Specifies the number of data gathering steps <mdacq> with a default of 500. In multi-configuration thermodynamic integrations <mequi> and <mdacq> are for each of the ensembles, and variable <ldacq> specifies the minimum number of data gathering steps in each ensemble. In regular molecular dynamics simulations <ldacq> is not used. The default value for <ldacq> is the value of <mdacq>.
-
-`   time `<real stime>
-`   `
+```
+   time <real stime>
+```
 
 Specifies the initial time <stime> of a molecular simulation in ps, with a default of 0.0.
-
-`   step `<real tstep>
-`   `
+```
+   step <real tstep>
+```
 
 Specifies the time step <tstep> in ps, with 0.001 as the default value.
 
@@ -309,38 +308,38 @@ Ensemble selection
 ------------------
 
 Following directives control the ensemble type.
-
-`   isotherm [`<real tmpext>` [`<real tmpext2>`]] [trelax `<real tmprlx>` [`<real tmsrlx>`]] \`
-`            [anneal [`<real tann1>`] `<real tann2>`]`
-`   `
+```
+   isotherm [<real tmpext> [<real tmpext2>]] [trelax <real tmprlx> [<real tmsrlx>]] \
+            [anneal [<real tann1>] <real tann2>]
+```
 
 Specifies a constant temperature ensemble using Berendsen's thermostat, where <tmpext> is the external temperature with a default of 298.15 K, and <tmprlx> and <tmsrlx> are temperature relaxation times in ps with a default of 0.1. If only <tmprlx> is given the complete system is coupled to the heat bath with relaxation time <tmprlx>. If both relaxation times are supplied, solvent and solute are independently coupled to the heat bath with relaxation times <tmprlx> and <tmsrlx>, respectively. If keyword anneal is specified, the external temperature will change from tmpext to tempext2 between simulation time tann1 and tann2
-
-`   isobar [`<real prsext>`] [trelax `<real prsrlx>` ] \`
-`          [compress `<real compr>`] [anisotropic] [xy | z | xy-z]`
-
+```
+   isobar [<real prsext>] [trelax <real prsrlx> ] \
+          [compress <real compr>] [anisotropic] [xy | z | xy-z]
+```
 Specifies a constant pressure ensemble using Berendsen's piston, where <prsext> is the external pressure with a default of <img alt="$1.025 10^{5} Pa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7104a9cbf96d125d88749351b5c33f4.svg?invert_in_darkmode&sanitize=true" align=middle width="82.508745pt" height="26.70657pt"/>, <prsrlx> is the pressure relaxation time in ps with a default of 0.5, and <compr> is the system compressibility in <img alt="$m{^2}N^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e2c5efb4ab2a30c085dc8485b09a9d54.svg?invert_in_darkmode&sanitize=true" align=middle width="53.468085pt" height="26.70657pt"/> with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
 
 Velocity reassignments
 ----------------------
 
 Velocities can be periodically reassigned to reflect a certain temperature.
-
-`   vreass `<integer nfgaus>` `<real tgauss>
-`          [fraction [<real frgaus default 0.5]]`
-`          [once]`
-`          [(first | initial)] [(last | final)]`
-
+```
+   vreass <integer nfgaus> <real tgauss>
+          [fraction [<real frgaus default 0.5]]
+          [once]
+          [(first | initial)] [(last | final)]
+```
 Specifies that velocities will be reassigned every <nfgaus> molecular dynamics steps, reflecting a temperature of <tgauss> K. The default is not to reassign velocities, i.e. <nfgaus> is 0. Keyword fraction allows the specification of the fraction of the new velocities are random. Keyword once specifies that velocity reassignment only should be done in the first step. Keywords first or initial and last or final specify that velocity reassigment should only be applied in the first and last window of multiple run simulations.
 
 Cutoff radii
 ------------
 
 Cutoff radii can be specified for short range and long range interactions.
-
-`   cutoff [short] `<real rshort>` [long `<real rlong>`] \`
-`          [qmmm `<real rqmmm>`]`
-
+```
+   cutoff [short] <real rshort> [long <real rlong>] \
+          [qmmm <real rqmmm>]
+```
 Specifies the short range cutoff radius <rshort>, and the long range cutoff radius <rlong> in nm. If the long range cutoff radius is larger than the short range cutoff radius the twin range method will be used, in which short range forces and energies are evaluated every molecular dynamics step, and long range forces and energies with a frequency of <nflong> molecular dynamics steps. Keyword qmmm specifies the radius of the zone around quantum atoms defining the QM/MM bare charges. The default value for <rshort>, <rlong> and <rqmmm> is 0.9 nm.
 
 Polarization
