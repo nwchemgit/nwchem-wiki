@@ -297,12 +297,12 @@ Specifies the number of data gathering steps `<mdacq>` with a default of 500. In
    time <real stime>
 ```
 
-Specifies the initial time <stime> of a molecular simulation in ps, with a default of 0.0.
+Specifies the initial time `<stime>` of a molecular simulation in ps, with a default of 0.0.
 ```
    step <real tstep>
 ```
 
-Specifies the time step <tstep> in ps, with 0.001 as the default value.
+Specifies the time step `<tstep>` in ps, with 0.001 as the default value.
 
 Ensemble selection
 ------------------
@@ -313,12 +313,12 @@ Following directives control the ensemble type.
             [anneal [<real tann1>] <real tann2>]
 ```
 
-Specifies a constant temperature ensemble using Berendsen's thermostat, where <tmpext> is the external temperature with a default of 298.15 K, and <tmprlx> and <tmsrlx> are temperature relaxation times in ps with a default of 0.1. If only <tmprlx> is given the complete system is coupled to the heat bath with relaxation time <tmprlx>. If both relaxation times are supplied, solvent and solute are independently coupled to the heat bath with relaxation times <tmprlx> and <tmsrlx>, respectively. If keyword anneal is specified, the external temperature will change from tmpext to tempext2 between simulation time tann1 and tann2
+Specifies a constant temperature ensemble using Berendsen's thermostat, where `<tmpext>` is the external temperature with a default of 298.15 K, and `<tmprlx>` and `<tmsrlx>` are temperature relaxation times in ps with a default of 0.1. If only `<tmprlx>` is given the complete system is coupled to the heat bath with relaxation time `<tmprlx>`. If both relaxation times are supplied, solvent and solute are independently coupled to the heat bath with relaxation times `<tmprlx>` and `<tmsrlx>`, respectively. If keyword anneal is specified, the external temperature will change from tmpext to tempext2 between simulation time tann1 and tann2
 ```
    isobar [<real prsext>] [trelax <real prsrlx> ] \
           [compress <real compr>] [anisotropic] [xy | z | xy-z]
 ```
-Specifies a constant pressure ensemble using Berendsen's piston, where <prsext> is the external pressure with a default of <img alt="$1.025 10^{5} Pa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7104a9cbf96d125d88749351b5c33f4.svg?invert_in_darkmode&sanitize=true" align=middle width="82.508745pt" height="26.70657pt"/>, <prsrlx> is the pressure relaxation time in ps with a default of 0.5, and <compr> is the system compressibility in <img alt="$m{^2}N^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e2c5efb4ab2a30c085dc8485b09a9d54.svg?invert_in_darkmode&sanitize=true" align=middle width="53.468085pt" height="26.70657pt"/> with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
+Specifies a constant pressure ensemble using Berendsen's piston, where `<prsext>` is the external pressure with a default of <img alt="$1.025 10^{5} Pa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7104a9cbf96d125d88749351b5c33f4.svg?invert_in_darkmode&sanitize=true" align=middle width="82.508745pt" height="26.70657pt"/>, `<prsrlx>` is the pressure relaxation time in ps with a default of 0.5, and `<compr>` is the system compressibility in <img alt="$m{^2}N^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e2c5efb4ab2a30c085dc8485b09a9d54.svg?invert_in_darkmode&sanitize=true" align=middle width="53.468085pt" height="26.70657pt"/> with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
 
 Velocity reassignments
 ----------------------
@@ -330,7 +330,7 @@ Velocities can be periodically reassigned to reflect a certain temperature.
           [once]
           [(first | initial)] [(last | final)]
 ```
-Specifies that velocities will be reassigned every <nfgaus> molecular dynamics steps, reflecting a temperature of <tgauss> K. The default is not to reassign velocities, i.e. <nfgaus> is 0. Keyword fraction allows the specification of the fraction of the new velocities are random. Keyword once specifies that velocity reassignment only should be done in the first step. Keywords first or initial and last or final specify that velocity reassigment should only be applied in the first and last window of multiple run simulations.
+Specifies that velocities will be reassigned every `<nfgaus>` molecular dynamics steps, reflecting a temperature of `<tgauss>` K. The default is not to reassign velocities, i.e. `<nfgaus>` is 0. Keyword fraction allows the specification of the fraction of the new velocities are random. Keyword once specifies that velocity reassignment only should be done in the first step. Keywords first or initial and last or final specify that velocity reassigment should only be applied in the first and last window of multiple run simulations.
 
 Cutoff radii
 ------------
@@ -340,7 +340,7 @@ Cutoff radii can be specified for short range and long range interactions.
    cutoff [short] <real rshort> [long <real rlong>] \
           [qmmm <real rqmmm>]
 ```
-Specifies the short range cutoff radius <rshort>, and the long range cutoff radius <rlong> in nm. If the long range cutoff radius is larger than the short range cutoff radius the twin range method will be used, in which short range forces and energies are evaluated every molecular dynamics step, and long range forces and energies with a frequency of <nflong> molecular dynamics steps. Keyword qmmm specifies the radius of the zone around quantum atoms defining the QM/MM bare charges. The default value for <rshort>, <rlong> and <rqmmm> is 0.9 nm.
+Specifies the short range cutoff radius `<rshort>`, and the long range cutoff radius `<rlong>` in nm. If the long range cutoff radius is larger than the short range cutoff radius the twin range method will be used, in which short range forces and energies are evaluated every molecular dynamics step, and long range forces and energies with a frequency of `<nflong>` molecular dynamics steps. Keyword qmmm specifies the radius of the zone around quantum atoms defining the QM/MM bare charges. The default value for `<rshort>`, `<rlong>` and `<rqmmm>` is 0.9 nm.
 
 Polarization
 ------------
@@ -349,14 +349,14 @@ First order and self consistent electronic polarization models have been impleme
 ```
    polar (first | scf [[<integer mpolit>] <real ptol>])
 ```
-Specifies the use of polarization potentials, where the keyword first specifies the first order polarization model, and scf specifies the self consistent polarization field model, iteratively determined with a maximum of <mpolit> iterations to within a tolerance of <ptol> D in the generated induced dipoles. The default is not to use polarization models.
+Specifies the use of polarization potentials, where the keyword first specifies the first order polarization model, and scf specifies the self consistent polarization field model, iteratively determined with a maximum of `<mpolit>` iterations to within a tolerance of `<ptol>` D in the generated induced dipoles. The default is not to use polarization models.
 
 External electrostatic field
 ----------------------------
 ```
    field <real xfield> [freq <real xffreq>] [vector <real xfvect(1:3)>]
 ```
-Specifies an external electrostatic field, where <xfield> is the field strength, <xffreq> is the frequency in MHz and <xfvect> is the external field vector.
+Specifies an external electrostatic field, where `<xfield>` is the field strength, `<xffreq>` is the frequency in MHz and `<xfvect>` is the external field vector.
 
 Constraints
 -----------
@@ -366,7 +366,7 @@ Constraints are satisfied using the SHAKE coordinate resetting procedure.
    shake [<integer mshitw> [<integer mshits>]]  \
          [<real tlwsha> [<real tlssha>]]
 ```
-Specifies the use of SHAKE constraints, where <mshitw> is the maximum number of solvent SHAKE iterations, and <mshits> is the maximum number of solute SHAKE iterations. If only <mshitw> is specified, the value will also be used for <mshits>. The default maximum number of iterations is 100 for both. <tlwsha> is the solvent SHAKE tolerance in nm, and <tlssha> is the solute SHAKE tolerance in nm. If only <tlwsha> is specified, the value given will also be used for <tlssha>. The default tolerance is 0.001 nm for both.
+Specifies the use of SHAKE constraints, where `<mshitw>` is the maximum number of solvent SHAKE iterations, and `<mshits>` is the maximum number of solute SHAKE iterations. If only `<mshitw>` is specified, the value will also be used for `<mshits>`. The default maximum number of iterations is 100 for both. `<tlwsha>` is the solvent SHAKE tolerance in nm, and `<tlssha>` is the solute SHAKE tolerance in nm. If only `<tlwsha>` is specified, the value given will also be used for `<tlssha>`. The default tolerance is 0.001 nm for both.
 ```
    noshake (solvent | solute)
 ```
@@ -444,7 +444,7 @@ For the evaluation of the statistical error of multi-configuration thermodynamic
 ```
    auto <integer lacf> [fit <integer nfit>] [weight <real weight>]
 ```
-Controls the calculation of the autocorrelation, where <lacf> is the length of the autocorrelation function, with a default of 1000, <nfit> is the number of functions used in the fit of the autocorrelation function, with a default of 15, and <weight> is the weight factor for the autocorrelation function, with a default value of 0.0.
+Controls the calculation of the autocorrelation, where `<lacf>` is the length of the autocorrelation function, with a default of 1000, `<nfit>` is the number of functions used in the fit of the autocorrelation function, with a default of 15, and `<weight>` is the weight factor for the autocorrelation function, with a default value of 0.0.
 
 Print options
 -------------
@@ -471,7 +471,7 @@ Keywords that control print to the output file, with extension out. Print direct
 
 <!-- -->
 
--   Keyword stat specifies the frequency <nfstat> of printing statistical information of properties that are calculated during the simulation. For molecular dynamics simulation this frequency is in time steps, for multi-configuration thermodynamic integration in λ-steps.
+-   Keyword stat specifies the frequency `<nfstat>` of printing statistical information of properties that are calculated during the simulation. For molecular dynamics simulation this frequency is in time steps, for multi-configuration thermodynamic integration in λ-steps.
 
 <!-- -->
 
@@ -522,27 +522,27 @@ Following keywords control periodic events during a molecular dynamics or thermo
 
                   [range <real rrdf>] [bins <integer ngl>]    \
 ```
--   Keyword pairs specifies the frequency <nfpair> in molecular dynamics steps of updating the pair lists. The default for the frequency is 1. In addition, pair lists are also updated after each step in which recording of the restart or trajectory files is performed. Updating the pair lists includes the redistribution of atoms that changed domain and load balancing, if specified.
+-   Keyword pairs specifies the frequency `<nfpair>` in molecular dynamics steps of updating the pair lists. The default for the frequency is 1. In addition, pair lists are also updated after each step in which recording of the restart or trajectory files is performed. Updating the pair lists includes the redistribution of atoms that changed domain and load balancing, if specified.
 
 <!-- -->
 
--   Keyword long specifies the frequency <nflong> in molecular dynamics steps of updating the long range forces. The default frequency is 1. The distinction of short range and long range forces is only made if the long range cutoff radius was specified to be larger than the short range cutoff radius. Updating the long range forces is also done in every molecular dynamics step in which the pair lists are regenerated.
+-   Keyword long specifies the frequency `<nflong>` in molecular dynamics steps of updating the long range forces. The default frequency is 1. The distinction of short range and long range forces is only made if the long range cutoff radius was specified to be larger than the short range cutoff radius. Updating the long range forces is also done in every molecular dynamics step in which the pair lists are regenerated.
 
 <!-- -->
 
--   Keywrod center specifies the frequency <nfcntr> in molecular dynamics steps in which the center of geometry of the solute(s) is translated to the center of the simulation volume. Optional keyword zonly or xyonly can be used to specify that centering will take place in the z-direction or in the xy-plane only. The solute fractions determining the solutes that will be centered are specified by the keyword fraction and the vector <idscb>, with a maximum of 5 entries. This translation is implemented such that it has no effect on any aspect of the simulation. The default is not to center, i.e. nfcntr is 0. The default fraction used to center solute is 1.
+-   Keywrod center specifies the frequency `<nfcntr>` in molecular dynamics steps in which the center of geometry of the solute(s) is translated to the center of the simulation volume. Optional keyword zonly or xyonly can be used to specify that centering will take place in the z-direction or in the xy-plane only. The solute fractions determining the solutes that will be centered are specified by the keyword fraction and the vector `<idscb>`, with a maximum of 5 entries. This translation is implemented such that it has no effect on any aspect of the simulation. The default is not to center, i.e. nfcntr is 0. The default fraction used to center solute is 1.
 
 <!-- -->
 
--   Keyword motion specifies the frequency <nfslow> in molecular dynamics steps of removing the overall rotational and center of mass translational motion.
+-   Keyword motion specifies the frequency `<nfslow>` in molecular dynamics steps of removing the overall rotational and center of mass translational motion.
 
 <!-- -->
 
--   Keyword analysis specifies the frequency <nfanal> in molecular dynamics steps of invoking the analysis module. This option is obsolete.
+-   Keyword analysis specifies the frequency `<nfanal>` in molecular dynamics steps of invoking the analysis module. This option is obsolete.
 
 <!-- -->
 
--   Keyword rdf specifies the frequency <nfrdf> in molecular dynamics steps of calculating contributions to the radial distribution functions. The default is 0. The range of the radial distribution functions is given by <rrdf> in nm, with a default of the short range cutoff radius. Note that radial distribution functions are not evaluated beyond the short range cutoff radius. The number of bins in each radial distribution function is given by <ngl>, with a default of 1000. This option is no longer supported. If radial distribution function are to be calculated, a rdi files needs to be available in which the contributions are specified as follows.
+-   Keyword rdf specifies the frequency `<nfrdf>` in molecular dynamics steps of calculating contributions to the radial distribution functions. The default is 0. The range of the radial distribution functions is given by `<rrdf>` in nm, with a default of the short range cutoff radius. Note that radial distribution functions are not evaluated beyond the short range cutoff radius. The number of bins in each radial distribution function is given by `<ngl>`, with a default of 1000. This option is no longer supported. If radial distribution function are to be calculated, a rdi files needs to be available in which the contributions are specified as follows.
 
 |      |        |                                                            |
 |------|--------|------------------------------------------------------------|
@@ -589,63 +589,63 @@ The following keywords control recording data to file. Record directives may be 
 
           [binary] [ascii] [ecce] [argos]
 ```
--   Keyword rest specifies the frequency <nfrest> in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in λ. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
+-   Keyword rest specifies the frequency `<nfrest>` in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in λ. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
 
 <!-- -->
 
--   Keyword coord specifies the frequency <nfcoor> in molecular dynamics steps of writing coordinates to the trajectory file. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
+-   Keyword coord specifies the frequency `<nfcoor>` in molecular dynamics steps of writing coordinates to the trajectory file. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
 
 <!-- -->
 
--   Keyword wcoor specifies the frequency <nfcoor> in molecular dynamics steps of writing solvent coordinates to the trajectory file. This keyword takes precedent over coord. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
+-   Keyword wcoor specifies the frequency `<nfcoor>` in molecular dynamics steps of writing solvent coordinates to the trajectory file. This keyword takes precedent over coord. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
 
 <!-- -->
 
--   Keyword scoor specifies the frequency <nfscoo> in molecular dynamics steps of writing solute coordinates to the trajectory file. This keyword takes precedent over coord. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
+-   Keyword scoor specifies the frequency `<nfscoo>` in molecular dynamics steps of writing solute coordinates to the trajectory file. This keyword takes precedent over coord. This directive redefines previous coord, wcoor and scoor directives. The default is not to record.
 
 <!-- -->
 
--   Keyword veloc specifies the frequency <nfvelo> in molecular dynamics steps of writing velocities to the trajectory file. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
+-   Keyword veloc specifies the frequency `<nfvelo>` in molecular dynamics steps of writing velocities to the trajectory file. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
 
 <!-- -->
 
--   Keyword wvelo specifies the frequency <nfvelo> in molecular dynamics steps of writing solvent velocitiesto the trajectory file. This keyword takes precedent over veloc. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
+-   Keyword wvelo specifies the frequency `<nfvelo>` in molecular dynamics steps of writing solvent velocitiesto the trajectory file. This keyword takes precedent over veloc. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
 
 <!-- -->
 
--   Keyword svelo specifies the frequency <nfsvel> in molecular dynamics steps of writing solute velocities to the trajectory file. This keyword takes precedent over veloc. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
+-   Keyword svelo specifies the frequency `<nfsvel>` in molecular dynamics steps of writing solute velocities to the trajectory file. This keyword takes precedent over veloc. This directive redefines previous veloc, wvelo and svelo directives. The default is not to record.
 
 <!-- -->
 
--   Keyword force specifies the frequency <nfvelo> in molecular dynamics steps of writing forces to the trajectory file. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
+-   Keyword force specifies the frequency `<nfvelo>` in molecular dynamics steps of writing forces to the trajectory file. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
 
 <!-- -->
 
--   Keyword wforc specifies the frequency <nfvelo> in molecular dynamics steps of writing solvent forcesto the trajectory file. This keyword takes precedent over force. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
+-   Keyword wforc specifies the frequency `<nfvelo>` in molecular dynamics steps of writing solvent forcesto the trajectory file. This keyword takes precedent over force. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
 
 <!-- -->
 
--   Keyword sforc specifies the frequency <nfsvel> in molecular dynamics steps of writing solute forces to the trajectory file. This keyword takes precedent over force. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
+-   Keyword sforc specifies the frequency `<nfsvel>` in molecular dynamics steps of writing solute forces to the trajectory file. This keyword takes precedent over force. This directive redefines previous vforce, wforc and sforc directives. The default is not to record.
 
 <!-- -->
 
--   Keyword prop specifies the frequency <nfprop> in molecular dynamics steps of writing information to the property file, with extension prp. The default is not to record.
+-   Keyword prop specifies the frequency `<nfprop>` in molecular dynamics steps of writing information to the property file, with extension prp. The default is not to record.
 
 <!-- -->
 
--   Keyword prop\_average specifies the frequency <nfprop> in molecular dynamics steps of writing average information to the property file, with extension prp. The default is not to record.
+-   Keyword prop\_average specifies the frequency `<nfprop>` in molecular dynamics steps of writing average information to the property file, with extension prp. The default is not to record.
 
 <!-- -->
 
--   Keyword free specifies the frequency <nffree> in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every λ. This option is obsolete. All data are required to do the final analysis.
+-   Keyword free specifies the frequency `<nffree>` in multi-configuration thermodynamic integration steps to record data to the free energy data file, with extension gib. The default is 1, i.e. to record at every λ. This option is obsolete. All data are required to do the final analysis.
 
 <!-- -->
 
--   Keyword sync specifies the frequency <nfsync> in molecular dynamics steps of writing information to the synchronization file, with extension syn. The default is not to record. The information written is the simulation time, the wall clock time of the previous MD step, the wall clock time of the previous force evaluation, the total synchronization time, the largest synchronization time and the node on which the largest synchronization time was found. The recording of synchronization times is part of the load balancing algorithm. Since load balancing is only performed when pair-lists are updated, the frequency <nfsync> is correlated with the frequency of pair-list updates <nfpair>. This directive is only needed for analysis of the load balancing performance. For normal use this directive is not used.
+-   Keyword sync specifies the frequency `<nfsync>` in molecular dynamics steps of writing information to the synchronization file, with extension syn. The default is not to record. The information written is the simulation time, the wall clock time of the previous MD step, the wall clock time of the previous force evaluation, the total synchronization time, the largest synchronization time and the node on which the largest synchronization time was found. The recording of synchronization times is part of the load balancing algorithm. Since load balancing is only performed when pair-lists are updated, the frequency `<nfsync>` is correlated with the frequency of pair-list updates `<nfpair>`. This directive is only needed for analysis of the load balancing performance. For normal use this directive is not used.
 
 <!-- -->
 
--   Keyword times specifies the frequency <nfsync> in molecular dynamics steps of writing information to the timings file, with extension tim. The default is not to record. The information written is wall clock time used by each of the processors for the different components in the force evaluation. This directive is only needed for analysis of the wall clock time distribution. For normal use this directive is not used.
+-   Keyword times specifies the frequency `<nfsync>` in molecular dynamics steps of writing information to the timings file, with extension tim. The default is not to record. The information written is wall clock time used by each of the processors for the different components in the force evaluation. This directive is only needed for analysis of the wall clock time distribution. For normal use this directive is not used.
 
 <!-- -->
 
