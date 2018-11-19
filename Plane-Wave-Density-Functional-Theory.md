@@ -2330,7 +2330,7 @@ END
 Finally, the lattice vectors from the unit cell can also be defined
 using the fractional coordinate input in the GEOMETRY input (see section
 [Geometry Lattice
-Parameters](Geometry#SYSTEM_--_Lattice_parameters_for_periodic_systems "wikilink")).
+Parameters](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")).
 Listed below is an example of the format of this type of input for an 8
 atom silicon carbide unit cell.
 ```
