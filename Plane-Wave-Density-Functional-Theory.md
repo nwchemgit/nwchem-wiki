@@ -1256,7 +1256,7 @@ NWPW 
  [ITERATIONS integer inner_iterations default 5]  
  [OUTER_ITERATIONS integer outer_iterations default 0]
 
- SIMULATION_CELL 
+ SIMULATION_CELL  [units <string units default bohrs>]
    ... (see input description)   
  END 
  BRILLOUIN_ZONE 
@@ -2262,13 +2262,15 @@ format of a simulation\_cell sub-block.
 ```
 NWPW 
 ...   
- SIMULATION_CELL CELL_NAME <string name default 'cell_default'>  
- BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) 
- LATTICE_VECTORS   
-   <real a1.x a1.y a1.z default 20.0 0.0 0.0> 
-   <real a2.x a2.y a2.z default 0.0 20.0 0.0>   
-   <real a3.x a3.y a3.z default 0.0 0.0 20.0> 
- NGRID <integer na1 na2 na3 default 32 32 32> END 
+ SIMULATION_CELL  [units <string units default bohrs>]
+    CELL_NAME <string name default 'cell_default'>  
+    BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) 
+    LATTICE_VECTORS   
+      <real a1.x a1.y a1.z default 20.0 0.0 0.0> 
+      <real a2.x a2.y a2.z default 0.0 20.0 0.0>   
+      <real a3.x a3.y a3.z default 0.0 0.0 20.0> 
+    NGRID <integer na1 na2 na3 default 32 32 32> 
+  END 
 ...  
 `END
 ```
@@ -2299,7 +2301,7 @@ format for input is as follows:
 ```
 NWPW 
 ... 
- SIMULATION_CELL `  
+ SIMULATION_CELL [units <string units default bohrs>]  
    ...   
    LATTICE   
      [lat_a <real a default 20.0>]  
@@ -2321,7 +2323,8 @@ format of this type of input.
 ```
 NWPW 
 ... 
- SIMULATION_CELL SC 20.0 
+ SIMULATION_CELL [units <string units default bohrs>]
+   SC 20.0 
    .... 
  END
 ...
