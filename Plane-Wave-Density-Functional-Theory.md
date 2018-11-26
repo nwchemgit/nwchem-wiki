@@ -5147,33 +5147,33 @@ optimization calculation. The default unit cell parameters are used
 (SC=20.0, ngrid 32 32 32). In this simulation, the first PAW run
 optimizes the wavefunction and the second PAW run optimizes the
 wavefunction and geometry in tandem.
-
-`title "paw steepest descent test"`  
-`start paw_test`  
-`charge 0`  
-`geometry units au nocenter noautoz noautosym`  
-`O      0.00000    0.00000    0.01390`  
-`H     -1.49490    0.00000   -1.18710`  
-`H      1.49490    0.00000   -1.18710`  
-`end`  
-`nwpw`  
-`  time_step 15.8`  
-`  ewald_rcut 1.50`  
-`  tolerances 1.0d-8 1.0d-8`  
-`end`  
-`set nwpw:lcao_iterations 1`  
-`set nwpw:minimizer 2`  
-`task pspw energy`  
-`task paw energy`  
-`nwpw`  
-`  time_step 5.8`  
-`  geometry_optimize`  
-`  ewald_rcut 1.50`  
-`  tolerances 1.0d-7 1.0d-7 1.0d-4`  
-`end`  
-`task paw steepest_descent`  
-`task paw optimize`
-
+```
+title "paw steepest descent test"  
+start paw_test 
+charge 0 
+geometry units au nocenter noautoz noautosym  
+O      0.00000    0.00000    0.01390 
+H     -1.49490    0.00000   -1.18710  
+H      1.49490    0.00000   -1.18710  
+end 
+nwpw  
+  time_step 15.8  
+  ewald_rcut 1.50  
+  tolerances 1.0d-8 1.0d-8  
+end  
+set nwpw:lcao_iterations 1  
+set nwpw:minimizer 2  
+task pspw energy  
+task paw energy  
+nwpw  
+  time_step 5.8  
+  geometry_optimize  
+  ewald_rcut 1.50  
+  tolerances 1.0d-7 1.0d-7 1.0d-4  
+end
+task paw steepest_descent 
+task paw optimize
+```
 ### Optimizing a unit cell and geometry for Silicon-Carbide
 
 The following example demonstrates how to uses the PAW module to
