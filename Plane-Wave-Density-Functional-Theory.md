@@ -95,7 +95,7 @@
    - [1.28 NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations](#nwpw-tutorial-9:-npt-metropolis-monte-carlo-simulations  "wikilink")
    - [1.29 NWPW Tutorial 9: Free Energy Simulations](#nwpw-tutorial-9:-free-energy-simulations  "wikilink")
    - [1.30 PAW Tutorial](#paw-tutorial  "wikilink")
-      - [1.30.1 Optimizing a water molecule](#optimizing-a-water molecule  "wikilink")
+      - [1.30.1 Optimizing a water molecule](#optimizing-a-water-molecule  "wikilink")
       - [1.30.2 Optimizing a unit cell and geometry for Silicon-Carbide](#optimizing-a-unit-cell-and-geometry-for-silicon-carbide  "wikilink")
       - [1.30.3 Running a Car-Parrinello Simulation](#running-a-car-parrinello-simulation "wikilink")
    - [1.31 NWPW Capabilities and Limitations](#nwpw-capabilities-and-limitations  "wikilink")
