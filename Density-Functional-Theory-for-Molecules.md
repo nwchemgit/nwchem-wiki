@@ -546,7 +546,7 @@ to nuclear position.
 57. Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
 58. D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
 59. Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
-60. Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS, accepted Aug. 20 (2018).
+60. Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
 
 ### Meta-GGA Functionals
 
