@@ -6,24 +6,24 @@ The NWChem multiconfiguration SCF (MCSCF) module can currently perform
 complete active space SCF (CASSCF) calculations with at most 20 active
 orbitals and about 500 basis
 functions.
-
-` MCSCF`  
-`   STATE `<string state>  
-`   ACTIVE `<integer nactive>  
-`   ACTELEC `<integer nactelec>  
-`   MULTIPLICITY `<integer multiplicity>  
-`   [SYMMETRY <integer symmetry default 1>]`  
-`   [VECTORS [[input] <string input_file default file_prefix.movecs>] `  
-`          [swap `<integer vec1 vec2>` ...] \`  
-`          [output `<string output_file default input_file>`] \`  
-`          [lock]`  
-`   [HESSIAN (exact||onel)]`  
-`   [MAXITER <integer maxiter default 20>]`  
-`   [THRESH  <real thresh default 1.0e-4>]`  
-`   [TOL2E <real tol2e default 1.0e-9>]`  
-`   [LEVEL <real shift default 0.1d0>]`  
-` END`
-
+```
+ MCSCF  
+   STATE <string state>  
+   ACTIVE <integer nactive>  
+   ACTELEC <integer nactelec>  
+   MULTIPLICITY `<integer multiplicity>  
+   [SYMMETRY <integer symmetry default 1>]  
+   [VECTORS [[input] <string input_file default file_prefix.movecs>]   
+          [swap <integer vec1 vec2> ...] \  
+          [output <string output_file default input_file>] \  
+          [lock]  
+   [HESSIAN (exact||onel)]  
+   [MAXITER <integer maxiter default 20>]  
+   [THRESH  <real thresh default 1.0e-4>]  
+   [TOL2E <real tol2e default 1.0e-9>] 
+   [LEVEL <real shift default 0.1d0>]  
+ END
+```
 Note that the ACTIVE, ACTELEC, and MULTIPLICITY directives are required.
 The symmetry and multiplicity may alternatively be entered using the
 STATE directive.
@@ -63,9 +63,9 @@ The spin multiplicity must be specified and is enforced by projection of
 the determinant wavefunction.
 
 E.g., to obtain a triplet state
-
-` multiplicity 3`
-
+```
+ multiplicity 3
+```
 ## SYMMETRY -- Spatial symmetry of the wavefunction
 
 This species the irreducible representation of the wavefunction as an
@@ -74,23 +74,23 @@ output by the SCF program. Note that only Abelian point groups are
 supported.
 
 E.g., to specify a <img alt="$B_1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fe468915e44d9e34d437fbf99b371809.svg?invert_in_darkmode&sanitize=true" align=middle width="18.95025pt" height="22.38192pt"/> state when using the <img alt="$C_{2v}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fbae2e8884819f6fd147d3039ef3a9bc.svg?invert_in_darkmode&sanitize=true" align=middle width="25.19517pt" height="22.38192pt"/> group
-
-` symmetry 3`
-
+```
+ symmetry 3
+```
 ## STATE -- Symmetry and multiplicity
 
 The electronic state (spatial symmetry and multiplicity) may
 alternatively be specified using the conventional notation for an
 electronic state, such as <img alt="$^3B_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6e2161ad2ba92369ce803c5813cce493.svg?invert_in_darkmode&sanitize=true" align=middle width="26.324595pt" height="26.70657pt"/> for a triplet state of <img alt="$B_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2b7de9b9b655b068f97484efba8812fb.svg?invert_in_darkmode&sanitize=true" align=middle width="18.95025pt" height="22.38192pt"/>
 symmetry. This would be accomplished with the input
-
-` state 3b2`
-
+```
+ state 3b2
+```
 which is equivalent to
-
-` symmetry 4`  
-` multiplicity 3`
-
+```
+ symmetry 4 
+ multiplicity 3
+```
 ## VECTORS -- Input/output of MO vectors
 
 Calculations are best started from RHF/ROHF molecular orbitals (see
@@ -136,9 +136,9 @@ macro iterations. Either choice may be forced throughout the calculation
 by specifying the appropriate keyword on the HESSIAN directive.
 
 E.g., to specify the one-electron approximation throughout
-
-` hessian onel`
-
+```
+ hessian onel
+```
 ## LEVEL -- Level shift for convergence
 
 The [Hessian](Hessians-and-Vibrational-Frequencies "wikilink")
@@ -149,9 +149,9 @@ the LEVEL directive. Increasing the level shift may make convergence
 more stable in some instances.
 
 E.g., to set the initial level shift to 0.5
-
-` level 0.5`
-
+```
+ level 0.5
+```
 ## PRINT and NOPRINT
 
 Specific output items can be selectively enabled or disabled using the
