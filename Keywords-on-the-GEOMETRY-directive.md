@@ -82,14 +82,14 @@ list describes all options and their defaults.
     optimizations. The noautoz keyword disables use of internal
     coordinates. The autoz keyword is provided only for backward
     compatibility. See [Forcing internal
-    coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink") for
+    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink") for
     a more detailed description of redundant internal coordinates,
     including how to force the definition of specific internal variables
     in combination with automatically generated variables.
   - adjust - This indicates that an existing geometry is to be adjusted.
     Only new input for the redundant internal coordinates may be
     provided ([ZCOORD -- Forcing internal
-    coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink")). It
+    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink")). It
     is not possible to define new centers or to modify the point group
     using this keyword. See [Forcing internal
     coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink") for
