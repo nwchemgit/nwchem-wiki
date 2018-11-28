@@ -66,12 +66,12 @@ singly occupied orbitals corresponds to the difference between the
 number of alpha-spin and beta-spin orbitals. For example, a UHF
 calculation with 2 more alpha-spin orbitals than beta-spin orbitals can
 be obtained by specifying
-
-` scf`  
-`    triplet ; uhf    # (Note: two logical lines of input)`  
-`    ...`  
-` end`
-
+```
+ scf  
+    triplet ; uhf    # (Note: two logical lines of input)  
+    ...  
+ end`
+```
 The user should be aware that, by default, molecular orbitals are
 symmetry adapted in NWChem. This may not be desirable for fully
 unrestricted wavefunctions. In such cases, the user has the option of
@@ -342,18 +342,18 @@ instances:
     often wrong for systems with heavy metals which may have partially
     occupied orbitals with lower energy than some doubly occupied
     orbitals. The fragment initial guess avoids this problem.
-
-` VECTORS [input] fragment `<string file1>` [`<string file2>` ...]`
-
+```
+ VECTORS [input] fragment <string file1> [<string file2> ...]
+```
 The molecular orbitals are formed by superimposing the previously
 generated orbitals of fragments of the molecule being studied. These
 fragment molecular orbitals must be in the same basis as the current
 calculation. The input specifies the files containing the fragment
 molecular orbitals. For instance, in a calculation on the water dimer,
 one might specify
-
-` vectors fragment h2o1.movecs h2o2.movecs`
-
+```
+ vectors fragment h2o1.movecs h2o2.movecs
+```
 where h2o1.movecs contains the orbitals for the first fragment, and
 h2o2.movecs contains the orbitals for the second fragment.
 
@@ -1207,6 +1207,6 @@ Table 2: Gradient Print Control Specifications
     Harrison, R. J.; Kendall, R. A. and Littlefield, R. J. (1996)
     "Toward high-performance computational chemistry: I. Scalable Fock
     matrix construction algorithms", *J. Comp. Chem.* **17**, 109-123,
-    doi:
-    \[<http://dx.doi.org/10.1002/(SICI)1096-987X(19960115)17:1%3C109>::AID-JCC9%3E3.0.CO;2-V
-    10.1002/(SICI)1096-987X(19960115)17:1\<109::AID-JCC9\>3.0.CO;2-V\]
+    doi:[10.1002/(SICI)1096-987X(19960115)17:1%3C109::AID-JCC9%3E3.0.CO;2-V]
+(https://doi.org/10.1002/(SICI)1096-987X(19960115)17:1%3C109::AID-JCC9%3E3.0.CO;2-V)
+   
