@@ -62,7 +62,7 @@ list describes all options and their defaults.
   - autosym and noautosym - keyword to specify that the symmetry of the
     geometric system should be automatically determined. This option is
     on by default, but can be turned off with noautosym. Only groups up
-    to and including \(O_{h}\) are recognized. Occasionally NWChem will
+    to and including O<sub>h</sub> are recognized. Occasionally NWChem will
     be unable to determine the full symmetry of a molecular system, but
     will find a proper subgroup of the full symmetry. The default
     tolerance is set to work for most cases, but may need to be
@@ -101,7 +101,7 @@ list describes all options and their defaults.
       - finite or fi -- finite nuclear charge distribution with a
         Gaussian shape. The RMS radius of the Gaussian is determined
         from the nuclear mass number A by the expression
-        \(r_{\rm RMS} = 0.836*A^{1/3}+0.57\) fm.
+        <pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
 
 NOTE: If you specify a finite nuclear size, you should ensure that the
 [basis set](Basis "wikilink") you use is contracted for a finite nuclear
@@ -111,7 +111,7 @@ The following examples illustrate some of the various options that the
 user can specify on the first input line of the GEOMETRY directive,
 using the keywords and input options described above.
 
-The following directives all specify the same geometry for \(H_2\) (a
+The following directives all specify the same geometry for  H<sub>2</sub> (a
 bond length of 0.732556 Å):
 ```
  geometry                           geometry units nm     
