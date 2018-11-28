@@ -69,7 +69,7 @@ list describes all options and their defaults.
     decreased to find the full symmetry of a geometry. Note that autosym
     will be turned off if the SYMMETRY group input is given (See
     [Symmetry Group
-    Input](#SYMMETRY_--_Symmetry_Group_Input "wikilink")). Also note
+    Input](SYMMETRY----Symmetry-Group-Input "wikilink")). Also note
     that if symmetry equivalent atoms have different tags in the
     geometry they will not be detected as symmetry equivalent by the
     autosym capability. The reason for this is that atoms with different
