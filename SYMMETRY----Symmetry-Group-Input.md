@@ -27,7 +27,7 @@ expected input for the variable group\_name include such entries as:
 The SYMMETRY directive is optional. The default is no symmetry (i.e.,
 *C*<sub>1</sub> point group). Automatic detection of point group
 symmetry is available through the use of autosym in the GEOMETRY
-directive main line (discussed in [Keywords on the GEOMETRY directive]).
+directive main line (discussed in [Keywords on the GEOMETRY directive](Keywords-on-the-GEOMETRY-directive "wikilink").
 Note: if the SYMMETRY directive is present the autosym keyword is
 ignored.
 
