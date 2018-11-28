@@ -4,17 +4,17 @@ This section presents the options that can be specified using the
 keywords and optional input on the main line of the GEOMETRY directive.
 As described above, the first line of the directive has the general
 form,
-
-` GEOMETRY [`<string name default geometry>`] \`  
-`          [units `<string units default angstroms>`] \`  
-`          [bqbq] \`  
-`          [print [xyz] || noprint] \`  
-`          [center || nocenter] \`  
-`          [autosym [real tol default 1d-2] || noautosym] \`  
-`          [autoz || noautoz] \`  
-`          [adjust] \`  
-`          [(nuc || nucl || nucleus) `<string nucmodel>`]`
-
+```
+ GEOMETRY [<string name default geometry>] \  
+          [units <string units default angstroms>] \  
+          [bqbq] \  
+          [print [xyz] || noprint] \ 
+          [center || nocenter] \
+          [autosym [real tol default 1d-2] || noautosym]  
+          [autoz || noautoz] \  
+          [adjust] \  
+          [(nuc || nucl || nucleus) <string nucmodel>]
+```
 All of the keywords and input on this line are optional. The following
 list describes all options and their defaults.
 
@@ -113,13 +113,14 @@ using the keywords and input options described above.
 
 The following directives all specify the same geometry for \(H_2\) (a
 bond length of 0.732556 Å):
+```
+ geometry                           geometry units nm     
+   h 0 0 0                            h 0 0 0             
+   h 0 0 0.732556                     h 0 0 0.0732556     
+ end                                end                  
 
-` geometry                           geometry units nm    `  
-`   h 0 0 0                            h 0 0 0            `  
-`   h 0 0 0.732556                     h 0 0 0.0732556    `  
-` end                                end                  `
-
-` geometry units pm                  geometry units atomic `  
-`   h 0 0 0                            h 0 0 0             `  
-`   h 0 0 73.2556                      h 0 0 1.3843305     `  
-` end                                end`
+ geometry units pm                  geometry units atomic  
+   h 0 0 0                            h 0 0 0               
+   h 0 0 73.2556                      h 0 0 1.3843305       
+ end                                end
+```
