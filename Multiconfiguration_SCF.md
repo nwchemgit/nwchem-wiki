@@ -1,5 +1,3 @@
-\_\_NOTITLE\_\_
-
 # MCSCF
 
 The NWChem multiconfiguration SCF (MCSCF) module can currently perform
@@ -34,9 +32,9 @@ The number of orbitals in the CASSCF active space must be specified
 using the ACTIVE directive.
 
 E.g.,
-
-` active 10`
-
+```
+ active 10
+```
 The input molecular orbitals (see the vectors directive in [MCSCF
 Vectors](#VECTORS_--_Input/output_of_MO_vectors "wikilink") and [SCF
 Vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink"))
