@@ -12,7 +12,7 @@ CONSTRAINTS [string name ] \
           [enable||disable] \  
           [fix atom <integer list>] \  
           [spring bond `<integer atom1> <integer atom2> <real k> <real r0> ]  
-          [spring bondings <real K0> <real gamma0> [<real ca> <integer atom1a> <integer atom2a> 
+          [penalty bondings <real K0> <real gamma0> [<real ca> <integer atom1a> <integer atom2a> 
                                              <real cb> <integer atom1b> <integer atom2b>
                                              ...]]
           [gaussian pbondings <real K0> <real gcut0> <real gamma0> [<real ca> <integer atom1a> <integer atom2a> 
