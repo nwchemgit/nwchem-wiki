@@ -58,7 +58,7 @@ feedback on this page content.
     <http://hase-group.ttu.edu/venus.html>
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
-    <http://www.win.tue.nl/~bbaumeie/votca-xtp.shtml>
+    <http://www.votca.org> <http://doc.votca.org/xtp-manual.pdf>
   - **PyDP4** is Python workflow for DP4 analysis of organic molecules
     <https://github.com/KristapsE/PyDP4>
   - **Fafoom** Flexible algorithm for optimization of molecules
@@ -66,6 +66,7 @@ feedback on this page content.
   - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
     <http://pymatgen.org>
   - **PVSCF** A parallel vibrational self-consistent field program <http://pvscf.org>
+  - **ResLibCal** A tool to compute triple-axis neutron spectrometer resolution <http://ifit.mccode.org/Applications/ResLibCal/doc/ResLibCal.html>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
