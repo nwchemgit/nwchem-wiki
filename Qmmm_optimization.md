@@ -34,27 +34,27 @@ The optimization process is controlled by the following keywords:
 Here is an example QM/MM block that provides practical illustration of
 all these keywords for a generic optimization case where QM molecule(s)
 are embedded in the solvent
-
+```
 `qmmm`
-`  `[`region`](/Release66:qmmm_region "wikilink")` qm   solvent`
-`  `[`maxiter`](/Release66:qmmm_maxiter "wikilink")` 10   3000`
-`  `[`ncycles`](/Release66:qmmm_ncycles "wikilink")` 5`
-`  `[`density`](/Release66:qmmm_density "wikilink")` espfit`
-`  `[`xyz`](/Release66:qmmm_xyz "wikilink")` foo`
-`end`
-
+  [`region](/Release66:qmmm_region "wikilink") qm   solvent
+  [`maxiter](/Release66:qmmm_maxiter "wikilink") 10   3000
+  [ncycles](/Release66:qmmm_ncycles "wikilink") 5
+  [density](/Release66:qmmm_density "wikilink") espfit
+  [xyz](/Release66:qmmm_xyz "wikilink") foo
+end
+```
 We have two regions in the system "qm" and "solvent" and we would like
 to optimize them both, thus the line
-
-` `[`region`](/Release66:qmmm_region "wikilink")` qm   solvent`
-
+```
+ [region](/Release66:qmmm_region "wikilink") qm   solvent
+```
 Our QM region is presumably small and the maximum number of iterations
 (within a single optimization pass) is set to 10. The solvent region is
 typically much larger (thousands of atoms) and the maximum number of
 iterations is set to a much large number 3000:
-
-[`maxiter`](/Release66:qmmm_maxiter "wikilink")` 10   3000`
-
+```
+[maxiter](/Release66:qmmm_maxiter "wikilink") 10   3000
+```
 We would like to perform a total of 5 optimization passes, giving us a
 total of 5\*10=50 optimization steps for QM region and 5\*3000=15000
 optimization steps for solvent region:
