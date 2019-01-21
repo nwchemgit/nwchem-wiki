@@ -7,11 +7,11 @@ used at all levels of theory, including SCF, HF, DFT, PSPW, BAND, MP2,
 RIMP2, CCSD, TCE.
 
 Input to the NEB modules is contained with the NEB block
-
-` NEB`  
-`  ...`  
-` END`
-
+```
+ NEB  
+  ...  
+ END
+```
 To run a NEB calculation the following the following task directives is
 used
 
@@ -25,29 +25,29 @@ iterations.
 
 Optional input for this module is specified within the compound
 directive,
-
-` NEB`  
-`    NBEADS <integer nbeads default 5>`  
-`    KBEADS <float kbeads default 0.1>`  
-`    MAXITER <integer maxiter default 5>`  
+```
+ NEB 
+    NBEADS <integer nbeads default 5>  
+    KBEADS <float kbeads default 0.1> 
+    MAXITER <integer maxiter default 5>  
   
-`    STEPSIZE <integer stepsize default 1.0>`  
-`    NHIST <integer nhist default 5>`  
-`    ALGORITHM <integer algorithm default 0>`  
+    STEPSIZE <integer stepsize default 1.0>  
+    NHIST <integer nhist default 5> 
+    ALGORITHM <integer algorithm default 0>  
   
-`    [loose | default | tight]`  
-`    GMAX <float gmax default 0.00045>`  
-`    GRMS <float grms default 0.00030>`  
-`    XMAX <float xmax default 0.00018>`  
-`    XMRS <float xmrs default 0.00012>`  
-` `  
-`    [IMPOSE]`  
-`    [HASMIDDLE]`  
-`    [XYZ_PATH `<string xyzfilename>`]`  
-`    [RESET]`  
-`    [PRINT_SHIFT <integer print_shift default 0>]`  
-` END`
-
+    [loose | default | tight]  
+    GMAX <float gmax default 0.00045>  
+    GRMS <float grms default 0.00030>  
+    XMAX <float xmax default 0.00018>  
+    XMRS <float xmrs default 0.00012>  
+  
+    [IMPOSE]  
+    [HASMIDDLE]  
+    [XYZ_PATH <string xyzfilename>]  
+    [RESET]  
+    [PRINT_SHIFT <integer print_shift default 0>]  
+ END
+```
 The following list describes the input for the NEB block
 
   - **nbeads** - number of beads (or images) used to represent the path
@@ -151,14 +151,14 @@ geometries are entered in the geometry blocks "geometry", "midgeom" and
   - Using xyz\_path to explicitly input a path of geometries
 
 The "xyz\_path" option can also be used to define the initial path.
-
-`...`  
-`NEB`  
-`   ...`  
-`  XYZ_PATH path.xyz`  
-`END`  
-`...`
-
+```
+...  
+NEB  
+   ...  
+  XYZ_PATH path.xyz
+END  
+...
+```
 where path.xyz contains a list of geometries in xyz format, e.g.
 
 `--------------- path.xyz ------------------`  
@@ -389,41 +389,41 @@ iterations.
 
 Optional input for this module is specified within the compound
 directive,
-
-` STRING`  
-`    NBEADS <integer nbeads default 5>`  
-`    MAXITER <integer maxiter default 5>`  
+```
+ STRING 
+    NBEADS <integer nbeads default 5> 
+    MAXITER <integer maxiter default 5> 
   
-`    STEPSIZE <integer stepsize default 1.0>`  
-`    NHIST <integer nhist default 5>`  
-`    INTERPOL <integer algorithm default 1>`  
+    STEPSIZE <integer stepsize default 1.0> 
+    NHIST <integer nhist default 5>  
+    INTERPOL <integer algorithm default 1>  
   
-`    FREEZE1 <logical freeze1 default .false.>`  
-`    FREEZEN <logical freezen default .false.>`  
+    FREEZE1 <logical freeze1 default .false.>  
+    FREEZEN <logical freezen default .false.>  
   
-`    TOL <float tol default 0.00045>`  
-` `  
-`    [IMPOSE]`  
-`    [HASMIDDLE]`  
-`    [XYZ_PATH `<string xyzfilename>`]`  
-`    [RESET]`  
-`    PRINT_SHIFT <integer print_shift default 0>`  
-` END`
+    TOL <float tol default 0.00045>  
+  
+    [IMPOSE]  
+    [HASMIDDLE]  
+    [XYZ_PATH <string xyzfilename>]  
+    [RESET]  
+    PRINT_SHIFT <integer print_shift default 0>  
+ END
+```
+The following list describes the input for the STRING block
 
-The following list describes the input for the NEB block
-
-  - <nbeads> - number of beads (or images) used to represent the path
-  - <maxiter> - maximum number of NEB path optimizations to be performed
-  - <stepsize> - value for the stepsize used in the optimization.
+  - **nbeads** - number of beads (or images) used to represent the path
+  - **maxiter** - maximum number of NEB path optimizations to be performed
+  - **stepsize** - value for the stepsize used in the optimization.
     Typically less than 1.
-  - <nhist> - number of histories to use for quasi-Newton optimization
+  - **nhist** - number of histories to use for quasi-Newton optimization
     (algorithm =0)
-  - <tol> - value for the maximum gradient used to determine convergence
-  - <freeze1> - .true.: first bead of simulation frozen, .false.:first
+  - **tol** - value for the maximum gradient used to determine convergence
+  - **freeze1** - .true.: first bead of simulation frozen, .false.:first
     bead of simulation not frozen.
-  - <freezen> - .true.:last bead of simulation frozen, .false.:last bead
+  - **freezeN** - .true.:last bead of simulation frozen, .false.:last bead
     of simulation not frozen
-  - <interpol> - 1: linear, 2: spline, 3: Akima spline
+  - **interpol** - 1: linear, 2: spline, 3: Akima spline
   - IMPOSE - if specified causes the initial geometries used to specify
     the path to be aligned with one another
   - HASMIDDLE - if specified causes the initial path to use the the
@@ -431,10 +431,10 @@ The following list describes the input for the NEB block
     is defined as a linear morphing from "geometry" --\> "midgeom" --\>
     "endgeom"
   - XYZ\_PATH - if specified the initial path is defined from the
-    sequence of geometries contained in <xyzfilename>
+    sequence of geometries contained in **xyzfilename**
   - RESET - if specified causes the NEB optimization and path to be
     started from scratch
-  - <print_shift> - setting the PRINT\_SHIFT directive causes the path
+  - **print_shift** - setting the PRINT\_SHIFT directive causes the path
     energies and geometries to be outputed every <print_shift> steps.
     The current path energies are appended to the file
     jobname.neb\_epath and the current geometries are appended to the
