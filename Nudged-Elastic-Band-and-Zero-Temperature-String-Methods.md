@@ -129,25 +129,25 @@ where the starting (<img alt="$\vec{R}^{1}_{xyz}$" src="https://raw.githubuserco
 (<img alt="$\vec{R}^{nbeads/2}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/453f3d4dced1ad74ee548d8c7ed9ea82.svg?invert_in_darkmode&sanitize=true" align=middle width="65.97096pt" height="34.27314pt"/>) and last (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>)
 geometries are entered in the geometry blocks "geometry", "midgeom" and
 "endgeom" respectively, e.g.
+```
+geometry nocenter noautosym noautoz  
+O  0.00000000    -0.02293938     0.00000000  
+H  0.00000000     0.55046969     0.75406534  
+H  0.00000000     0.55046969    -0.75406534  
+end
 
-`geometry nocenter noautosym noautoz`  
-`O  0.00000000    -0.02293938     0.00000000`  
-`H  0.00000000     0.55046969     0.75406534`  
-`H  0.00000000     0.55046969    -0.75406534`  
-`end`
+geometry midgeom nocenter noautosym noautoz  
+O  0.00000000     0.00000000     0.00000000  
+H  0.00000000     0.00000000     1.00000000  
+H  0.00000000     0.00000000    -1.00000000  
+end
 
-`geometry midgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.00000000     0.00000000`  
-`H  0.00000000     0.00000000     1.00000000`  
-`H  0.00000000     0.00000000    -1.00000000`  
-`end`
-
-`geometry endgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.02293938     0.00000000`  
-`H  0.00000000    -0.55046969     0.75406534`  
-`H  0.00000000    -0.55046969    -0.75406534`  
-`end`
-
+geometry endgeom nocenter noautosym noautoz  
+O  0.00000000     0.02293938     0.00000000  
+H  0.00000000    -0.55046969     0.75406534  
+H  0.00000000    -0.55046969    -0.75406534  
+end
+```
   - Using xyz\_path to explicitly input a path of geometries
 
 The "xyz\_path" option can also be used to define the initial path.
@@ -160,35 +160,35 @@ END
 ...
 ```
 where path.xyz contains a list of geometries in xyz format, e.g.
-
-`--------------- path.xyz ------------------`  
-`                   3`  
-`energy=  -17.107207699285738     `  
-`O           0.000000   -0.022939    0.000000`  
-`H           0.000000    0.550469    0.754065`  
-`H           0.000000    0.550469   -0.754065`  
-`                   3`  
-`energy=  -17.094903833074170     `  
-`O          -0.000003   -0.110080   -0.000000`  
-`H          -0.000000    0.273180    0.847029`  
-`H          -0.000000    0.273180   -0.847029`  
-`                   3`  
-`energy=  -17.063823686395292     `  
-`O          -0.000000   -0.000080   -0.000000`  
-`H           0.000000   -0.000002    0.941236`  
-`H           0.000000   -0.000002   -0.941236`  
-`                   3`  
-`energy=  -17.094944036147005     `  
-`O          -0.000000    0.110472   -0.000000`  
-`H          -0.000000   -0.273172    0.846957`  
-`H          -0.000000   -0.273172   -0.846957`  
-`                   3`  
-`energy=  -17.107208157343706     `  
-`O           0.000000    0.022939    0.000000`  
-`H           0.000000   -0.550469    0.754065`  
-`H           0.000000   -0.550469   -0.754065`  
-`--------------- path.xyz ------------------`
-
+```
+--------------- path.xyz ------------------  
+                   3  
+energy=  -17.107207699285738       
+O           0.000000   -0.022939    0.000000  
+H           0.000000    0.550469    0.754065  
+H           0.000000    0.550469   -0.754065  
+                   3  
+energy=  -17.094903833074170       
+O          -0.000003   -0.110080   -0.000000  
+H          -0.000000    0.273180    0.847029  
+H          -0.000000    0.273180   -0.847029  
+                   3  
+energy=  -17.063823686395292       
+O          -0.000000   -0.000080   -0.000000  
+H           0.000000   -0.000002    0.941236  
+H           0.000000   -0.000002   -0.941236  
+                   3  
+energy=  -17.094944036147005       
+O          -0.000000    0.110472   -0.000000  
+H          -0.000000   -0.273172    0.846957  
+H          -0.000000   -0.273172   -0.846957  
+                   3  
+energy=  -17.107208157343706       
+O           0.000000    0.022939    0.000000  
+H           0.000000   -0.550469    0.754065  
+H           0.000000   -0.550469   -0.754065  
+--------------- path.xyz ------------------
+```
 ## Convergence criteria
 
 The defaults may be used, or the directives LOOSE, DEFAULT, or TIGHT
@@ -454,22 +454,22 @@ by
 
 where the starting geometry (<img alt="$\vec{R}^1_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7dc52b1db4d25dcafee366bb155dc435.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>) is entered in the
 geometry block labeled "geometry", e.g.
-
-`geometry nocenter noautosym noautoz`  
-`O  0.00000000    -0.02293938     0.00000000`  
-`H  0.00000000     0.55046969     0.75406534`  
-`H  0.00000000     0.55046969    -0.75406534`  
-`end`
-
+```
+geometry nocenter noautosym noautoz  
+O  0.00000000    -0.02293938     0.00000000  
+H  0.00000000     0.55046969     0.75406534  
+H  0.00000000     0.55046969    -0.75406534  
+end
+```
 and the last geometry in the path (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>) in
 entered in the geometry block label "endgeom", e.g.
-
-`geometry endgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.02293938     0.00000000`  
-`H  0.00000000    -0.55046969     0.75406534`  
-`H  0.00000000    -0.55046969    -0.75406534`  
-`end`
-
+```
+geometry endgeom nocenter noautosym noautoz  
+O  0.00000000     0.02293938     0.00000000  
+H  0.00000000    -0.55046969     0.75406534  
+H  0.00000000    -0.55046969    -0.75406534  
+end
+```
   - Linear interpolation between three geometries
 
 The geometries for this path are defined
@@ -485,25 +485,25 @@ where the starting (<img alt="$\vec{R}^{1}_{xyz}$" src="https://raw.githubuserco
 (<img alt="$\vec{R}^{nbeads/2}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/453f3d4dced1ad74ee548d8c7ed9ea82.svg?invert_in_darkmode&sanitize=true" align=middle width="65.97096pt" height="34.27314pt"/>) and last (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>)
 geometries are entered in the geometry blocks "geometry", "midgeom" and
 "endgeom" respectively, e.g.
+```
+geometry nocenter noautosym noautoz  
+O  0.00000000    -0.02293938     0.00000000  
+H  0.00000000     0.55046969     0.75406534  
+H  0.00000000     0.55046969    -0.75406534  
+end
 
-`geometry nocenter noautosym noautoz`  
-`O  0.00000000    -0.02293938     0.00000000`  
-`H  0.00000000     0.55046969     0.75406534`  
-`H  0.00000000     0.55046969    -0.75406534`  
-`end`
+geometry midgeom nocenter noautosym noautoz  
+O  0.00000000     0.00000000     0.00000000  
+H  0.00000000     0.00000000     1.00000000  
+H  0.00000000     0.00000000    -1.00000000  
+end
 
-`geometry midgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.00000000     0.00000000`  
-`H  0.00000000     0.00000000     1.00000000`  
-`H  0.00000000     0.00000000    -1.00000000`  
-`end`
-
-`geometry endgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.02293938     0.00000000`  
-`H  0.00000000    -0.55046969     0.75406534`  
-`H  0.00000000    -0.55046969    -0.75406534`  
-`end`
-
+geometry endgeom nocenter noautosym noautoz  
+O  0.00000000     0.02293938     0.00000000  
+H  0.00000000    -0.55046969     0.75406534  
+H  0.00000000    -0.55046969    -0.75406534  
+end
+```
   - Using xyz\_path to explicitly input a path of geometries
 
 The "xyz\_path" option can also be used to define the initial path, e.g.
