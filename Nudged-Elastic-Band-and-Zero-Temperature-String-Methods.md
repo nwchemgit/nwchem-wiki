@@ -98,22 +98,22 @@ by
 
 where the starting geometry (<img alt="$\vec{R}^1_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7dc52b1db4d25dcafee366bb155dc435.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>) is entered in the
 geometry block labeled "geometry", e.g.
-
-`geometry nocenter noautosym noautoz`  
-`O  0.00000000    -0.02293938     0.00000000`  
-`H  0.00000000     0.55046969     0.75406534`  
-`H  0.00000000     0.55046969    -0.75406534`  
-`end`
-
+```
+geometry nocenter noautosym noautoz  
+O  0.00000000    -0.02293938     0.00000000  
+H  0.00000000     0.55046969     0.75406534  
+H  0.00000000     0.55046969    -0.75406534  
+end
+```
 and the last geometry in the path (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>) in
 entered in the geometry block label "endgeom", e.g.
-
-`geometry endgeom nocenter noautosym noautoz`  
-`O  0.00000000     0.02293938     0.00000000`  
-`H  0.00000000    -0.55046969     0.75406534`  
-`H  0.00000000    -0.55046969    -0.75406534`  
-`end`
-
+```
+geometry endgeom nocenter noautosym noautoz  
+O  0.00000000     0.02293938     0.00000000  
+H  0.00000000    -0.55046969     0.75406534  
+H  0.00000000    -0.55046969    -0.75406534  
+end
+```
   - Linear interpolation between three geometries
 
 The geometries for this path are defined
