@@ -47,13 +47,13 @@ line search using following directive:
  set driver:linopt 0
 ```
 ## Convergence criteria
-
-`   (LOOSE || DEFAULT || TIGHT)`  
-`   GMAX `<real value>  
-`   GRMS `<real value>  
-`   XMAX `<real value>  
-`   XRMS `<real value>
-
+```
+   (LOOSE || DEFAULT || TIGHT)  
+   GMAX <real value>  
+   GRMS <real value>  
+   XMAX <real value>  
+   XRMS <real value>
+```
 The defaults may be used, or the directives LOOSE, DEFAULT, or TIGHT
 specified to use standard sets of values, or the individual criteria
 adjusted. All criteria are in atomic units. GMAX and GRMS control the
@@ -77,13 +77,13 @@ coordinates, which insures convergence to the same geometry in different
 coordinate systems.
 
 The old criterion may be recovered with the input
-
-`  gmax 0.0008; grms 1; xrms 1; xmax 1`
-
+```
+  gmax 0.0008; grms 1; xrms 1; xmax 1
+```
 ## Available precision
-
-`   EPREC <real eprec default 1e-7>`
-
+```
+   EPREC <real eprec default 1e-7>
+```
 In performing a line search the optimizer must know the precision of the
 energy (this has nothing to do with convergence criteria). The default
 value of 1e-7 should be adjusted if less, or more, precision is
@@ -103,9 +103,9 @@ the mode being maximized during a saddle-point search and defaults to
 0.1.
 
 ## Maximum number of steps
-
-`   MAXITER <integer maxiter default 20>`
-
+```
+   MAXITER <integer maxiter default 20>
+```
 By default at most 20 geometry optimization steps will be taken, but
 this may be modified with this directive.
 
@@ -139,11 +139,11 @@ has rendered the current set of coordinates invalid or non-optimal.
 In addition, the diagonal elements of the initial Hessian for internal
 coordinates may be scaled using separate factors for bonds, angles and
 torsions with the following
-
-`   BSCALE <real bscale default 1.0>`  
-`   ASCALE <real ascale default 0.25>`  
-`   TSCALE <real tscale default 0.1>`
-
+```
+   BSCALE <real bscale default 1.0>  
+   ASCALE <real ascale default 0.25>  
+   TSCALE <real tscale default 0.1>
+```
 These values typically give a two-fold speedup over unit values, based
 on about 100 test cases up to 15 atoms using 3-21g and 6-31g\* SCF.
 However, if doing many optimizations on physically similar systems it
@@ -151,19 +151,19 @@ may be worth fine tuning these parameters.
 
 Finally, the entire Hessian from any source may be scaled by a factor
 using the directive
-
-`   HSCALE <real hscale default 1.0>`
-
+```
+   HSCALE <real hscale default 1.0>
+```
 It might be of utility, for instance, when computing an initial Hessian
 using SCF to start a large MP2 optimization. The SCF vibrational modes
 are expected to be stiffer than the MP2, so scaling the initial Hessian
 by a number less than one might be beneficial.
 
 ## Mode or variable to follow to saddle point
-
-`   (MODDIR || VARDIR) <integer dir default 0>`  
-`   (FIRSTNEG || NOFIRSTNEG)`
-
+```
+   (MODDIR || VARDIR) <integer dir default 0>  
+   (FIRSTNEG || NOFIRSTNEG)
+```
 When searching for a transition state the program, by default, will take
 an initial step uphill and then do mode following using a fuzzy maximum
 overlap (the lowest eigen-mode with an overlap with the previous search
@@ -192,19 +192,19 @@ the first negative direction and will continue doing mode-following
 until that mode goes negative.
 
 ## Optimization history as XYZ files
-
-`   XYZ [<string xyz default $fileprefix>]`  
-`   NOXYZ`
-
+```
+   XYZ [<string xyz default $fileprefix>] 
+   NOXYZ
+```
 The XYZ directive causes the geometry at each step (but not intermediate
 points of a line search) to be output into separate files in the
 permanent directory in XYZ format. The optional string will prefix the
 filename. The NOXYZ directive turns this off.
 
 For example, the input
-
-`   driver; xyz test; end`
-
+```
+   driver; xyz test; end
+```
 will cause files test-000.xyz, test-001.xyz, ... to be created in the
 permanent directory.
 
@@ -217,11 +217,11 @@ The UNIX command "egrep '^@' \< output" will extract a pretty table
 summarizing the optimization.
 
 If you specify the NWChem input
-
-`     scf; print none; end`  
-`     driver; print low; end`  
-`     task scf optimize`
-
+```
+     scf; print none; end  
+     driver; print low; end  
+     task scf optimize
+```
 you'll obtain a pleasantly terse output.
 
 For more control, these options for the standard print directive are
@@ -256,11 +256,11 @@ directive is required; the
 [DRIVER](Geometry_Optimization "wikilink") module is the
 default. Input for this module is specified within the compound
 directive,
-
-` STEPPER`  
-`   ...`  
-` END`
-
+```
+ STEPPER  
+   ...  
+ END
+```
 The presence of the STEPPER compound directive automatically turns off
 the default geometry optimization tool DRIVER. Input specified for the
 STEPPER module must appear in the input file after the GEOMETRY
@@ -285,17 +285,17 @@ input for these options is described in the following sections.
 The default is for STEPPER to minimize the energy with respect to the
 geometry of the system. This default behavior may be forced with the
 directive
-
-` MIN`
-
+```
+ MIN
+```
 STEPPER can also be used to find the transition state by following the
 lowest eigenvector of the nuclear Hessian. This is usually invoked by
 using the saddle keyword on the [TASK
 directive](Top-level#TASK "wikilink"), but it may also be
 selected by specifying the directive
-
-` TS`
-
+```
+ TS
+```
 in the STEPPER input.
 
 ## TRACK -- Mode selection
@@ -304,9 +304,9 @@ STEPPER has the ability to \`\`track'' a specific mode during an
 optimization for a transition state search, the user can also have the
 module track the eigenvector corresponding to a specific mode. This is
 done by specifying the directive
-
-` TRACK [nmode <integer nmode default 1>]`
-
+```
+ TRACK [nmode <integer nmode default 1>]
+```
 The keyword TRACK tells STEPPER to track the eigenvector corresponding
 to the integer value of <nmode> during a transition state walk. (Note:
 this input is invalid for a minimization walk since following a specific
@@ -319,9 +319,9 @@ down in all other degrees of freedom.
 In most applications, 20 stepper iterations will be sufficient to obtain
 the energy minimization. However, the user has the option of specifying
 the maximum number of iterations allowed, using the input line,
-
-` MAXITER <integer maxiter default 20>`
-
+```
+ MAXITER <integer maxiter default 20>
+```
 The value specified for the integer <maxiter> defines the maximum number
 of geometry optimization steps. The geometry optimization will restart
 automatically.
@@ -333,9 +333,9 @@ trust radius which has a default value of 0.1. Steps are constrained to
 be no larger than the trust radius. The user has the option of
 overriding this default using the keyword TRUST, with the following
 input line,
-
-` TRUST <real radius default 0.1>`
-
+```
+ TRUST <real radius default 0.1>
+```
 The larger the value specified for the variable radius, the larger the
 steps that can be taken by STEPPER. Experience has shown that for larger
 systems (i.e., those with 20 or more atoms), a value of 0.5, or greater,
@@ -350,24 +350,24 @@ the primary convergence criterion, as per the default settings, although
 all three criteria are in effect. this default setting is consistent
 with the other optimizer module DRIVER. The input line for CONVGGM has
 the following form,
-
-`  CONVGGM <real convggm default 8.0d-04>`
-
+```
+  CONVGGM <real convggm default 8.0d-04>
+```
 The keyword CONVGG allows the user to specify the convergence tolerance
 for the gradient norm for all degrees of freedom. The input line is of
 the following form,
-
-`  CONVGG <real convgg default 1.0d-02>`
-
+```
+  CONVGG <real convgg default 1.0d-02>
+```
 The entry for the real variable <convgg> should be approximately equal
 to the square root of the energy convergence tolerance.
 
 The energy convergence tolerance is the convergence criterion for the
 energy difference in the geometry optimization in STEPPER. It can be
 specified by input using a line of the following form,
-
-`  CONVGE <real convge default 1.0d-04>`
-
+```
+  CONVGE <real convge default 1.0d-04>
+```
 ## Backstepping in STEPPER
 
 If a step taken during the optimization is too large (e.g., the step
