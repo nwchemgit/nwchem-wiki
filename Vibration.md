@@ -3,7 +3,7 @@
 The nuclear hessian which is used to compute the vibrational frequencies
 can be computed by finite difference for any ab initio wave-function
 that has analytic gradients or by analytic methods for SCF and DFT (see
-[Hessians](Hessians "wikilink") for details). The appropriate nuclear
+[Hessians](Hessians-and-Vibrational-Frequencies "wikilink") for details). The appropriate nuclear
 hessian generation algorithm is chosen based on the user input when TASK
 <theory> frequencies is the task directive.
 
@@ -27,7 +27,7 @@ equal, the mass of the isotope with the longest half life was used.
 In addition, the vibrational analysis is given at the default standard
 temperature of 298.15 degrees.
 
-1.  1.  Vibrational Module Input
+#  Vibrational Module Input
 
 All input for the Vibrational Module is optional since the default
 definitions will compute the frequencies and IR intensities. The generic
@@ -160,8 +160,8 @@ along the eigenvector of each nuclear hessian mode in atomic units.
 ### An Example Input Deck
 
 This example input deck will optimize the geometry for the given basis
-set, compute the frequencies for \(H_{2}O\), \(H_{2}O\) at different
-temperatures, \(D_{2}O\), HDO, and TDO.
+set, compute the frequencies for H<sub>2</sub>O, H<sub>2</sub>O at different
+temperatures, D<sub>2</sub>O, HDO, and TDO.
 ```
 start  h2o  
 title Water   
