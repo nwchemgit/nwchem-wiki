@@ -295,7 +295,7 @@ where
 <!-- end list -->
 
   - output filename - specifies name of the output cube file. The
-    default behavior is to use <prefix>-elp.cube or <prefix>-elf.cube
+    default behavior is to use \<prefix\>-elp.cube or \<prefix\>-elf.cube
     file names for electrostatic potential or electric field
     respectively. Here <prefix> denotes the system name as specified in
     start directive. Note that Gaussian cube files will be written in
