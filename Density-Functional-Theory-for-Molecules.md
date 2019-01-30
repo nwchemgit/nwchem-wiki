@@ -606,10 +606,10 @@ Range separated functionals (or long-range corrected or LC) can be
 specified as follows:
 
 CAM-B3LYP:
-
-`xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00`  
-`cam 0.33 cam_alpha 0.19 cam_beta 0.46`
-
+```
+xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00  
+cam 0.33 cam_alpha 0.19 cam_beta 0.46
+```
 LC-BLYP:
 
 `xc xcamb88 1.00 lyp 1.0 hfexch 1.00`  
@@ -637,15 +637,15 @@ LC-wPBE:
 `cam 0.4 cam_alpha 0.00 cam_beta 1.00`
 
 LRC-wPBEh:
-
-`xc xwpbe 0.80 cpbe96 1.0 hfexch 1.00`  
-`cam 0.2 cam_alpha 0.20 cam_beta 0.80`
-
+```
+xc xwpbe 0.80 cpbe96 1.0 hfexch 1.00 
+cam 0.2 cam_alpha 0.20 cam_beta 0.80
+```
 QTP-00
-
-`xc xcamb88 1.00 lyp 0.80 vwn_5 0.2 hfexch 1.00`  
-`cam 0.29 cam_alpha 0.54 cam_beta 0.37`
-
+```
+xc xcamb88 1.00 lyp 0.80 vwn_5 0.2 hfexch 1.00 
+cam 0.29 cam_alpha 0.54 cam_beta 0.37
+```
 rCAM-B3LYP
 
 `xc xcamb88 1.00 lyp 1.0 vwn_5 0. hfexch 1.00 becke88 nonlocal 0.13590`  
@@ -748,9 +748,9 @@ stacked adenine dimers), and for NMR chemical shieldings.
     69 (2009)
 
 It can be specified as
-
-`xc ssb-d`
-
+```
+xc ssb-d
+```
 ### Semi-empirical hybrid DFT combined with perturbative MP2
 
 This theory combines hybrid density functional theory with MP2
@@ -1033,10 +1033,10 @@ the following line
 This option enables the constrained DFT formalism by Wu and Van Voorhis
 described in the paper: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502
 (2005).
-
-` CDFT `<integer fatom1 latom1>` [`<integer fatom2 latom2>`] (charge||spin `<real constaint_value>`) \`  
-`      [pop (becke||mulliken||lowdin) default lowdin]`
-
+```
+ CDFT <integer fatom1 latom1> [<integer fatom2 latom2>] (charge||spin <real constaint_value>) \ 
+      [pop (becke||mulliken||lowdin) default lowdin]
+```
 Variables fatom1 and latom1 define the first and last atom of the group
 of atoms to which the constraint will be applied. Therefore the atoms in
 the same group should be placed continuously in the geometry input. If
@@ -1067,34 +1067,34 @@ avoid issues with gradient calculations and convergence in CDFT. Use
 orbital swap to get a broken-symmetry solution.
 
 An input example is given below.
-
-`geometry`  
-`symmetry`  
-` C  0.0  0.0  0.0`  
-` O  1.2  0.0  0.0`  
-` C  0.0  0.0  2.0`  
-` O  1.2  0.0  2.0`  
-`end`  
-`basis`  
-` * library 6-31G*`  
-`end`  
-`dft`  
-` xc b3lyp`  
-` convergence nolevelshifting`  
-` odft`  
-` mult 1`  
-` vectors swap beta 14 15`  
-` cdft 1 2 charge 1.0`  
-`end`  
-`task dft`
-
+```
+geometry 
+symmetry 
+ C  0.0  0.0  0.0  
+ O  1.2  0.0  0.0  
+ C  0.0  0.0  2.0  
+ O  1.2  0.0  2.0  
+end  
+basis  
+ * library 6-31G* 
+end  
+dft  
+ xc b3lyp  
+ convergence nolevelshifting  
+ odft  
+ mult 1  
+ vectors swap beta 14 15  
+ cdft 1 2 charge 1.0  
+end  
+task dft
+```
 ## SMEAR -- Fractional Occupation of the Molecular Orbitals
 
 The SMEAR keyword is useful in cases with many degenerate states near
 the HOMO (eg metallic clusters)
-
-` SMEAR <real smear default 0.001>`
-
+```
+ SMEAR <real smear default 0.001>
+```
 This option allows fractional occupation of the molecular orbitals. A
 Gaussian broadening function of exponent smear is used as described in
 the paper: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384
