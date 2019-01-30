@@ -589,9 +589,9 @@ Therefore the long-range HF Exchange energy
 becomes
 
 <img alt="$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>
-
-` cam `<real cam>` cam_alpha `<real cam_alpha>` cam_beta `<cam_beta>
-
+```
+ cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
+```
 `cam` represents the attenuation parameter <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> , `cam_alpha` and
 `cam_beta` are parameters <img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> and <img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/> that control the
 amount of short-range DFT and long-range HF Exchange according to the
@@ -611,31 +611,31 @@ xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00
 cam 0.33 cam_alpha 0.19 cam_beta 0.46
 ```
 LC-BLYP:
-
-`xc xcamb88 1.00 lyp 1.0 hfexch 1.00`  
-`cam 0.33 cam_alpha 0.0 cam_beta 1.0`
-
+```
+xc xcamb88 1.00 lyp 1.0 hfexch 1.00  
+cam 0.33 cam_alpha 0.0 cam_beta 1.0
+```
 LC-PBE:
-
-`xc xcampbe96 1.0 cpbe96 1.0 HFexch 1.0`  
-`cam 0.30 cam_alpha 0.0 cam_beta 1.0`
-
+```
+xc xcampbe96 1.0 cpbe96 1.0 HFexch 1.0 
+cam 0.30 cam_alpha 0.0 cam_beta 1.0
+```
 LC-PBE0 or CAM-PBE0:
-
-`xc xcampbe96 1.0 cpbe96 1.0 HFexch 1.0`  
-`cam 0.30 cam_alpha 0.25 cam_beta 0.75`
-
+```
+xc xcampbe96 1.0 cpbe96 1.0 HFexch 1.0
+cam 0.30 cam_alpha 0.25 cam_beta 0.75
+```
 BNL (Baer, Neuhauser,
 Lifshifts):
-
-`xc xbnl07 0.90 lyp 1.00 hfexch 1.00`  
-`cam 0.33 cam_alpha 0.0 cam_beta 1.0`
-
+```
+xc xbnl07 0.90 lyp 1.00 hfexch 1.00  
+cam 0.33 cam_alpha 0.0 cam_beta 1.0
+```
 LC-wPBE:
-
-`xc xwpbe 1.00 cpbe96 1.0 hfexch 1.00`  
-`cam 0.4 cam_alpha 0.00 cam_beta 1.00`
-
+```
+xc xwpbe 1.00 cpbe96 1.0 hfexch 1.00  
+cam 0.4 cam_alpha 0.00 cam_beta 1.00
+```
 LRC-wPBEh:
 ```
 xc xwpbe 0.80 cpbe96 1.0 hfexch 1.00 
