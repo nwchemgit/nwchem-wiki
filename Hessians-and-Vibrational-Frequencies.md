@@ -16,13 +16,13 @@ frequencies, please see the [Vibrational](Vibration "wikilink") module.
 All input for the Hessian Module is optional since the default
 definitions are usually correct for most purposes. The generic module
 input begins with hessian and has the form:
-
-` hessian`  
-`   thresh <real tol default 1d-6>`  
-`   print ...`  
-`   profile`  
-` end`
-
+```
+ hessian  
+   thresh <real tol default 1d-6>
+   print ... 
+   profile  
+ end
+```
 ### Defining the wavefunction threshold
 
 You may modify the default threshold for the wavefunction. This keyword
@@ -35,9 +35,9 @@ wavefunction for single point and gradient calculations is generally not
 tight enough for analytic hessians. Therefore, the hessian, by default,
 tightens these up to 1d-6 and runs an additional energy point if needed.
 If, during an analytic hessian calculation, you encounter an error:
-
-` cphf_solve:the available MOs do not satisfy the SCF equations`
-
+```
+ cphf_solve:the available MOs do not satisfy the SCF equations
+```
 the convergence criteria of the wavefunction generally needs to be
 tightened.
 
@@ -105,18 +105,18 @@ temperature of 298.15 degrees.
 All input for the Vibrational Module is optional since the default
 definitions will compute the frequencies and IR intensities. The generic
 module input can begin with vib, freq, frequency and has the form:
-
-` {freq || vib || frequency}`  
-`   [reuse [`<string hessian_filename>`]]`  
-`   [mass `<integer lexical_index>` `<real new_mass>`]`  
-`   [mass `<string tag_identifier>` `<real new_mass>`]`  
-`   [{temp || temperature} `<integer number_of_temperatures>` \`  
-`         <real temperature1 temperature2 ...>]`  
-`   [animate [`<real step_size_for_animation>`]]`  
-`   [fd_delta [`<real step_size_for_fd_hessian>`]]`  
-`   [filename `<string file_set_name>` [overwrite]]`  
-` end`
-
+```
+ {freq || vib || frequency}` 
+   [reuse [<string hessian_filename>]]  
+   [mass <integer lexical_index> <real new_mass>]  
+   [mass <string tag_identifier> <real new_mass>]  
+   [{temp || temperature} <integer number_of_temperatures>\ 
+         <real temperature1 temperature2 ...>] 
+   [animate [<real step_size_for_animation>]]  
+   [fd_delta [<real step_size_for_fd_hessian>]]  
+   [filename <string file_set_name> [overwrite]]  
+ end
+```
 ### Hessian File Reuse
 
 By default the task <theory> frequencies directive will recompute the
