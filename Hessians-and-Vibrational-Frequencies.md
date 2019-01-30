@@ -27,9 +27,9 @@ input begins with hessian and has the form:
 
 You may modify the default threshold for the wavefunction. This keyword
 is identical to
-[THRESH](Hartree-Fock_Theory_for_Molecules#THRESH_--_convergence_threshold "wikilink")
+[THRESH](Hartree-Fock-Theory-for-Molecules#THRESH_--_convergence_threshold "wikilink")
 in the SCF, and the
-[CONVERGENCE](Density_Functional_Theory_for_Molecules#CONVERGENCE_--_SCF_Convergence_Control "wikilink")
+[CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence----scf-convergence-control "wikilink")
 gradient in the DFT. The usual defaults for the convergence of the
 wavefunction for single point and gradient calculations is generally not
 tight enough for analytic hessians. Therefore, the hessian, by default,
