@@ -1848,9 +1848,9 @@ implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
 encounters the TASK directive ([TASK](TASK "wikilink")).
-
-` TASK SODFT`
-
+```
+ TASK SODFT
+```
 Input parameters are the same as for the DFT. Some of the DFT options
 are not available in the SODFT. These are max\_ovl and sic.
 
@@ -1858,7 +1858,7 @@ Besides using the standard ECP and basis sets, see [Effective Core
 Potentials](ECP "wikilink") for details, one also has to specify a
 spin-orbit (SO) potential. The input specification for the SO potential
 can be found in [Effective Core
-Potentials](ECP#Spin-orbit_ECPs "wikilink"). At this time we have not
+Potentials](ECP#spin-orbit-ecps "wikilink"). At this time we have not
 included any spin-orbit potentials in the basis set library. However,
 one can get these from the Stuttgart/Köln web pages    
 (http://www.tc.uni-koeln.de/PP/clickpse.en.html).  See [Effective Core
