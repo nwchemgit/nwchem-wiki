@@ -1847,7 +1847,7 @@ effective core potential (ECP) and a matching spin-orbit potential (SO). The cur
 implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
-encounters the TASK directive ([TASK](Top-level#TASK "wikilink")).
+encounters the TASK directive ([TASK](TASK "wikilink")).
 
 ` TASK SODFT`
 
