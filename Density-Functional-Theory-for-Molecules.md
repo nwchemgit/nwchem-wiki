@@ -588,7 +588,8 @@ we can split the the Exchange interaction as
 Therefore the long-range HF Exchange energy
 becomes
 
-<img alt="$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>
+<img alt="$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>  
+  
 ```
  cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
 ```
@@ -1364,9 +1365,9 @@ A second quadrature is the Lebedev scheme for the angular
 components11.6. Within this numerical integration procedure various
 levels of accuracy have also been defined and are available to the user.
 The input for this type of grid takes the form,
-
-` GRID lebedev `<integer radpts >` `<integer iangquad >
-
+```
+ GRID lebedev <integer radpts > <integer iangquad >
+```
 In this context the variable iangquad specifies a certain number of
 angular points as indicated by the table below:
 
@@ -1417,13 +1418,13 @@ The user can also specify grid parameters specific for a given atom
 type: parameters that must be supplied are: atom tag and number of
 radial points. As an example, here is a grid input line for the water
 molecule
-
-`grid lebedev 80 11 H 70 8  O 90 11`
-
+```
+grid lebedev 80 11 H 70 8  O 90 11
+```
 ### Partitioning functions
-
-`GRID [(becke||erf1||erf2||ssf) default erf1]`
-
+```
+GRID [(becke||erf1||erf2||ssf) default erf1]
+```
   - becke : A. D. Becke, J. Chem. Phys. 88, 1053 (1988).
   - ssf : R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett.
     257, 213 (1996).
@@ -1435,9 +1436,9 @@ Erf<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/s
 <img alt="$\begin{array}{lcl}&#10;  w_A(r) &amp; = &amp; \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\&#10;  \mu^\prime_{AB} &amp; = &amp; \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\&#10;  \mu_{AB} &amp; = &amp; \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|}&#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a6929e5f4f1fbe470b2d9bf0fe184888.svg?invert_in_darkmode&sanitize=true" align=middle width="268.96155pt" height="75.55119pt"/>
 
 ### Radial grids
-
-` GRID [[euler||mura||treutler]  default mura]`
-
+```
+ GRID [[euler||mura||treutler]  default mura]
+```
   - euler : Euler-McLaurin quadrature wih the transformation devised by
     C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993).
   - mura : Modification of the Murray-Handy-Laming scheme by M.E.Mura
@@ -1453,11 +1454,11 @@ Erf<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/s
 This keyword turns off storage of grid points and weights on disk.
 
 ## TOLERANCES -- Screening tolerances
-
-` TOLERANCES [[tight] [tol_rho <real tol_rho default 1e-10>] \`  
-`             [accCoul <integer accCoul default 8>] \`  
-`             [radius <real radius default 25.0>]]`
-
+```
+ TOLERANCES [[tight] [tol_rho <real tol_rho default 1e-10>] \  
+             [accCoul <integer accCoul default 8>] \  
+             [radius <real radius default 25.0>]]
+```
 The user has the option of controlling screening for the tolerances in
 the integral evaluations for the DFT module. In most applications, the
 default values will be adequate for the calculation, but different
@@ -1467,22 +1468,22 @@ keywords described below.
 The input parameter accCoul is used to define the tolerance in Schwarz
 screening for the Coulomb integrals. Only integrals with estimated
 values greater than <img alt="$10^{(-accCoul)}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/564fa44e7bfa893835654c63524ec3fd.svg?invert_in_darkmode&sanitize=true" align=middle width="84.27243pt" height="29.12679pt"/> are evaluated.
-
-` TOLERANCES accCoul <integer accCoul default 8>`
-
+```
+ TOLERANCES accCoul <integer accCoul default 8>
+```
 Screening away needless computation of the XC functional (on the grid)
 due to negligible density is also possible with the use of,
-
-` TOLERANCES tol_rho <real tol_rho default 1e-10>`
-
+```
+ TOLERANCES tol_rho <real tol_rho default 1e-10>
+```
 XC functional computation is bypassed if the corresponding density
 elements are less than tol\_rho.
 
 A screening parameter, radius, used in the screening of the Becke or
 Delley spatial weights is also available as,
-
-` TOLERANCES radius <real radius default 25.0>`
-
+```
+ TOLERANCES radius <real radius default 25.0>
+```
 where radius is the cutoff value in bohr.
 
 The tolerances as discussed previously are insured at convergence. More
@@ -1490,28 +1491,28 @@ sleazy tolerances are invoked early in the iterative process which can
 speed things up a bit. This can also be problematic at times because it
 introduces a discontinuity in the convergence process. To avoid use of
 initial sleazy tolerances the user can invoke the tight option:
-
-` TOLERANCES tight`
-
+```
+ TOLERANCES tight
+```
 This option sets all tolerances to their default/user specified values
 at the very first
 iteration.
 
 ## DIRECT, SEMIDIRECT and NOIO -- Hardware Resource Control
-
-` DIRECT||INCORE`  
-` SEMIDIRECT [filesize `<integer filesize default disksize>`]`  
-`            [memsize  `<integer memsize default available>`]`  
-`            [filename <string filename default $file_prefix.aoints$]`  
-` NOIO`
-
+```
+ DIRECT||INCORE  
+ SEMIDIRECT [filesize <integer filesize default disksize>]  
+            [memsize  <integer memsize default available>]  
+            [filename <string filename default $file_prefix.aoints$]  
+ NOIO
+```
 The inverted charge-density and exchange-correlation matrices for a DFT
 calculation are normally written to disk storage. The user can prevent
 this by specifying the keyword noio within the input for the DFT
 directive. The input to exercise this option is as follows,
-
-`  noio`
-
+```
+  noio
+```
 If this keyword is encountered, then the two matrices (inverted
 charge-density and exchange-correlation) are computed \`\`on-the-fly''
 whenever needed.
@@ -1526,17 +1527,17 @@ which is only compatible with the DIRECT option will not, at present,
 work when using SEMIDIRECT.
 
 ## ODFT and MULT -- Open shell systems
-
-` ODFT`  
-` MULT <integer mult default 1>`
-
+```
+ ODFT
+ MULT <integer mult default 1>
+```
 Both closed-shell and open-shell systems can be studied using the DFT
 module. Specifying the keyword MULT within the DFT directive allows the
 user to define the spin multiplicity of the system. The form of the
 input line is as follows;
-
-`  MULT <integer mult default 1>`
-
+```
+  MULT <integer mult default 1>
+```
 When the keyword MULT is specified, the user can define the integer
 variable mult, where mult is equal to the number of alpha electrons
 minus beta electrons, plus 1.
@@ -1562,12 +1563,11 @@ The rodft keyword will perform restricted open-shell calculations. This
 keyword can only be used with the CGMIN keyword.
 
 ## SIC -- Self-Interaction Correction
-
-`sic [perturbative || oep || oep-loc `
-
+```
+sic [perturbative || oep || oep-loc ]
 <default perturbative>
+```
 
-\]
 
 The Perdew and Zunger (see J. P. Perdew and A. Zunger, Phys. Rev. B 23,
 5048 (1981)) method to remove the self-interaction contained in many
@@ -1763,14 +1763,14 @@ self-consistent set of vectors calculated at the Hartree-Fock level.
 `task dft energy`
 
 ## XDM -- Exchange-hole dipole moment dispersion model
-
-`XDM `  
-`      [ a1 `<real a1>` ]   [ a2 `<real a2>` ]`
-
+```
+XDM 
+      [ a1 <real a1> ]   [ a2 <real a2> ]
+```
 See details (including list of a1 and a2 parameters) in A.
 Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
 and the website <http://gatsby.ucmerced.edu/wiki/XDM>
-
+```
     geometry 
       O         -0.190010095135     -1.168397415155      0.925531922479
       H         -0.124425719598     -0.832776238160      1.818190662986
@@ -1791,11 +1791,11 @@ and the website <http://gatsby.ucmerced.edu/wiki/XDM>
     end
     
     task dft optimize
-
+```
 ## Print Control
-
-` PRINT||NOPRINT`
-
+```
+ PRINT||NOPRINT
+```
 The PRINT||NOPRINT options control the level of output in the DFT.
 Please see some examples using this directive in [Sample input
 file](#Sample_input_file "wikilink"). Known controllable print options
