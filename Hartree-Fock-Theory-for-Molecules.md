@@ -96,13 +96,13 @@ default is to use symmetry if it is specified in the [geometry
 directive](Geometry "wikilink").
 
 For example, to disable use of symmetry in Fock matrix construction:
-
-` sym off`
-
+```
+ sym off
+```
 ## ADAPT - symmetry adaptation of MOs
-
-` ADAPT <string (ON||OFF) default ON>`
-
+```
+ ADAPT <string (ON||OFF) default ON>
+```
 The default in the SCF module calculation is to force symmetry adaption
 of the molecular orbitals. This does not affect the speed of the
 calculation, but without explicit adaption the resulting orbitals may be
@@ -117,9 +117,9 @@ calculation. It is thus advisable when specifying ADAPT OFF to also
 specify SYM OFF ([Use of Symmetry](#sym----use-of-symmetry "wikilink")).
 
 ## TOL2E -- integral screening threshold
-
-` TOL2E <real tol2e default min(10e-7 , 0.01*thresh)>`
-
+```
+ TOL2E <real tol2e default min(10e-7 , 0.01*thresh)>
+```
 The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the energy and related Fock-like
 matrices. The Schwarz inequality is used to screen the product of
@@ -131,17 +131,17 @@ It is generally not necessary to set this parameter directly. Specify
 instead the required precision in the wavefunction, using the THRESH
 directive ([Convergence
 threshold](#thresh----convergence-threshold "wikilink")). The default
-threshold is the minimum of <img alt="$10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f7ed66ae8d8f913f33d096b40bf1fcfd.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> and 0.01 times the requested
+threshold is the minimum of 10<sup>-7</sup> and 0.01 times the requested
 convergence threshold for the SCF calculation ([Convergence
 threshold](#thresh----convergence-threshold "wikilink")).
 
 The input to specify the threshold explicitly within the SCF directive
 is, for example:
-
-` tol2e 1e-9`
-
+```
+ tol2e 1e-9
+```
 For very diffuse basis sets, or for high-accuracy calculations it might
-be necessary to set this parameter. A value of <img alt="$10^{-12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aeab78344f8b0fe0d6b7163980cf8ff1.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/> is
+be necessary to set this parameter. A value of 10<sup>-12</sup> is
 sufficient for nearly all such
 purposes.
 
