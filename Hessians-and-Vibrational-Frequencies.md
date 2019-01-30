@@ -27,7 +27,7 @@ input begins with hessian and has the form:
 
 You may modify the default threshold for the wavefunction. This keyword
 is identical to
-[THRESH](Hartree-Fock-Theory-for-Molecules#THRESH_--_convergence_threshold "wikilink")
+[THRESH](Hartree-Fock-Theory-for-Molecules#thresh----convergence-threshold "wikilink")
 in the SCF, and the
 [CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence----scf-convergence-control "wikilink")
 gradient in the DFT. The usual defaults for the convergence of the
