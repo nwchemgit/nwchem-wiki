@@ -174,18 +174,18 @@ RAMAN
  [ (NORMAL | | RESONANCE) default NORMAL ]  
  [ (LORENTZIAN | | GAUSSIAN) default LORENTZIAN ]  
  [ LOW <double low default 0.0> ]  
- [ HIGH <double high default ‘highest normal mode’> ]  
- [ FIRST <integer first default ‘7’> ]  
- [ LAST < integer last default ‘number of normal modes’ > ]  
+ [ HIGH <double high default highest normal mode> ]  
+ [ FIRST <integer first default 7> ]  
+ [ LAST < integer last default number of normal modes > ]  
  [ WIDTH <double width default 20.0> ]  
  [ DQ <double dq default 0.01> ]  
 END  
 task dft raman
 ```
 or
-
-`task dft raman numerical`
-
+```
+task dft raman numerical
+```
 Sample input block:
 ```
 property
@@ -220,9 +220,9 @@ end
 Raman spectrum in stick format and smoothed using Lorentzians or
 Gaussians stored in a filename with format \[fname\].normal.  
 The number of points is 1000 by default. This value can be changed by adding the following [SET](SET "wikilink") directive to the input file
-
-`set raman:numpts <integer>`
-
+```
+set raman:numpts <integer>
+```
 
 #### Raman References
 
