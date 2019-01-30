@@ -1764,8 +1764,7 @@ self-consistent set of vectors calculated at the Hartree-Fock level.
 
 ## XDM -- Exchange-hole dipole moment dispersion model
 ```
-XDM 
-      [ a1 <real a1> ]   [ a2 <real a2> ]
+XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 See details (including list of a1 and a2 parameters) in A.
 Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
