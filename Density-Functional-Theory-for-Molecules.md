@@ -797,7 +797,7 @@ For details of the theory, please see the following reference:
 
 ### LB94 and CS00 -- Asymptotic correction
 
-The keyword LB94 will correct the asymptotic region of the XC definition
+The keyword `LB94` will correct the asymptotic region of the XC definition
 of exchange-correlation potential by the van-Leeuwen-Baerends
 exchange-correlation potential that has the correct <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> asymptotic
 behavior. The total energy will be computed by the XC definition of
@@ -805,14 +805,14 @@ exchange-correlation functional. This scheme is known to tend to
 overcorrect the deficiency of most uncorrected exchange-correlation
 potentials.
 
-The keyword CS00, when supplied with a real value of shift (in atomic
+The keyword `CS00`, when supplied with a real value of shift (in atomic
 units), will perform Casida-Salahub '00 asymptotic correction. This is
 primarily intended for use in conjunction with
 [TDDFT](Excited-State_Calculations "wikilink"). The shift is normally
 positive (which means that the original uncorrected exchange-correlation
 potential must be shifted down).
 
-When the keyword CS00 is specified without the value of shift, the
+When the keyword `CS00` is specified without the value of shift, the
 program will automatically supply it according to the semi-empirical
 formula of Zhan, Nichols, and Dixon (again, see
 [TDDFT](Excited-State_Calculations "wikilink") for more details and
@@ -893,7 +893,7 @@ metaGGAs:
 
 The default optimization in the DFT module is to iterate on the
 Kohn-Sham (SCF) equations for a specified number of iterations (default
-30). The keyword that controls this optimization is ITERATIONS, and has
+30). The keyword that controls this optimization is `ITERATIONS`, and has
 the following general form,
 ```
   iterations <integer iterations default 30>
@@ -939,13 +939,13 @@ Convergence is satisfied by meeting any or all of three criteria;
   - convergence of the total density; this is defined to be when the
     total DFT density matrix at iteration N and at iteration N-1 have a
     RMS difference less than some value (the default is 1e-5). This
-    value can be modified using the key word,
+    value can be modified using the keyword,
 ```
        CONVERGENCE density <real density default 1e-5>
 ```
   - convergence of the orbital gradient; this is defined to be when the
     DIIS error vector becomes less than some value (the default is
-    5e-4). This value can be modified using the key word,
+    5e-4). This value can be modified using the keyword,
 ```
        CONVERGENCE gradient <real gradient default 5e-4>
 ```
@@ -999,7 +999,7 @@ iteration density.
 
 Level-Shifting is defined as the amount of shift applied to the diagonal
 elements of the unoccupied block of the Fock matrix. The shift is
-specified by the keyword lshift. For example the directive,
+specified by the keyword `lshift`. For example the directive,
 ```
  CONVERGENCE lshift 0.5
 ```
@@ -1238,8 +1238,8 @@ scheme for the radial components (with a modified Mura-Knowles
 transformation) and a Lebedev scheme for the angular components. Within
 this numerical integration procedure various levels of accuracy have
 been defined and are available to the user. The user can specify the
-level of accuracy with the keywords; xcoarse, coarse, medium, fine, and
-xfine. The default is medium.
+level of accuracy with the keywords; `xcoarse`, `coarse`, `medium`, `fine`, and
+`xfine`. The default is `medium`.
 ```
  GRID [xcoarse||coarse||medium||fine||xfine]
 ```
@@ -1521,7 +1521,7 @@ iteration.
 ```
 The inverted charge-density and exchange-correlation matrices for a DFT
 calculation are normally written to disk storage. The user can prevent
-this by specifying the keyword noio within the input for the DFT
+this by specifying the keyword `noio` within the input for the DFT
 directive. The input to exercise this option is as follows,
 ```
   noio
@@ -1530,14 +1530,14 @@ If this keyword is encountered, then the two matrices (inverted
 charge-density and exchange-correlation) are computed \`\`on-the-fly''
 whenever needed.
 
-The INCORE option is always assumed to be true but can be overridden
-with the option DIRECT in which case all integrals are computed
+The `INCORE` option is always assumed to be true but can be overridden
+with the option `DIRECT` in which case all integrals are computed
 \`\`on-the-fly''.
 
-The SEMIDIRECT option controls caching of integrals. A full description
+The `SEMIDIRECT` option controls caching of integrals. A full description
 of this option is described in User Manual 10.8. Some functionality
-which is only compatible with the DIRECT option will not, at present,
-work when using SEMIDIRECT.
+which is only compatible with the `DIRECT` option will not, at present,
+work when using `SEMIDIRECT`.
 
 ## ODFT and MULT -- Open shell systems
 ```
@@ -1545,22 +1545,22 @@ work when using SEMIDIRECT.
  MULT <integer mult default 1>
 ```
 Both closed-shell and open-shell systems can be studied using the DFT
-module. Specifying the keyword MULT within the DFT directive allows the
+module. Specifying the keyword `MULT` within the `DFT` directive allows the
 user to define the spin multiplicity of the system. The form of the
 input line is as follows;
 ```
   MULT <integer mult default 1>
 ```
-When the keyword MULT is specified, the user can define the integer
+When the keyword `MULT` is specified, the user can define the integer
 variable mult, where mult is equal to the number of alpha electrons
 minus beta electrons, plus 1.
 
-When MULT is set to a negative number. For example, if MULT = -3, a
+When `MULT` is set to a negative number. For example, if `MULT = -3`, a
 triplet calculation will be performed with the beta electrons
-preferentially occupied. For MULT = 3, the alpha electrons will be
+preferentially occupied. For `MULT = 3`, the alpha electrons will be
 preferentially occupied.
 
-The keyword ODFT is unnecessary except in the context of forcing a
+The keyword `ODFT` is unnecessary except in the context of forcing a
 singlet system to be computed as an open shell system (i.e., using a
 spin-unrestricted wavefunction).
 
