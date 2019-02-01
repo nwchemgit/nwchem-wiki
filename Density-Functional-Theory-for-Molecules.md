@@ -574,7 +574,7 @@ is, self-consistently or with GGA/LDA orbitals and densities. However,
 since second derivatives are not available for metaGGAs, in order to
 calculate frequencies, one must use task dft freq numerical. A sample
 file with this is shown below, in [Sample input
-file](#Sample_input_file "wikilink"). In this instance, the energy is
+file](#sample-input-file "wikilink"). In this instance, the energy is
 calculated self-consistently and geometry is optimized using the
 analytical gradients.
 
@@ -866,31 +866,31 @@ functionals xtpss03 and ctpss03. This also highlights some of the print
 features in the DFT module. Note that you must use the line task dft
 freq numerical because analytic hessians are not available for the
 metaGGAs:
-
-`title "WATER 6-311G* meta-GGA XC geometry"`  
-`echo`  
-`geometry units angstroms`  
-` O       0.0  0.0  0.0`  
-` H       0.0  0.0  1.0`  
-` H       0.0  1.0  0.0`  
-`end`  
-`basis`  
-` H library 6-311G*`  
-` O library 6-311G*`  
-`end`  
-`dft`  
-` iterations 50`  
-` print  kinetic_energy`  
-` xc xtpss03 ctpss03`  
-` decomp`  
-`end`  
-`task dft optimize `  
-`task dft freq numerical`
-
+```
+title "WATER 6-311G* meta-GGA XC geometry"  
+echo  
+geometry units angstroms  
+ O       0.0  0.0  0.0  
+ H       0.0  0.0  1.0  
+ H       0.0  1.0  0.0  
+end  
+basis  
+ H library 6-311G*  
+ O library 6-311G*  
+end  
+dft  
+ iterations 50  
+ print  kinetic_energy  
+ xc xtpss03 ctpss03  
+ decomp  
+end  
+task dft optimize   
+task dft freq numerical
+```
 ## ITERATIONS or MAXITER -- Number of SCF iterations
-
-` ITERATIONS or MAXITER <integer iterations default 30>`
-
+```
+ ITERATIONS or MAXITER <integer iterations default 30>
+```
 The default optimization in the DFT module is to iterate on the
 Kohn-Sham (SCF) equations for a specified number of iterations (default
 30). The keyword that controls this optimization is `ITERATIONS`, and has
@@ -1810,7 +1810,7 @@ and the website <http://gatsby.ucmerced.edu/wiki/XDM>
 ```
 The PRINT||NOPRINT options control the level of output in the DFT.
 Please see some examples using this directive in [Sample input
-file](#Sample_input_file "wikilink"). Known controllable print options
+file](#sample-input-file "wikilink"). Known controllable print options
 are:
 
 <center>
