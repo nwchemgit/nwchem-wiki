@@ -27,7 +27,7 @@ DFT input is provided using the compound DFT directive
  END
 ```
 The actual DFT calculation will be performed when the input module
-encounters the [TASK](Top-level#TASK "wikilink") directive.
+encounters the [TASK](Task "wikilink") directive.
 ```
  TASK DFT
 ```
@@ -142,7 +142,7 @@ sub-directives that can be specified for a DFT calculation in NWChem.
 The DFT module requires at a minimum the basis set for the Kohn-Sham
 molecular orbitals. This basis set must be in the default basis set
 named "ao basis", or it must be assigned to this default name using the
-[SET](Top-level#SET "wikilink") directive.
+[SET](Set "wikilink") directive.
 
 In addition to the basis set for the Kohn-Sham orbitals, the charge
 density fitting basis set can also be specified in the input directives
@@ -150,7 +150,7 @@ for the DFT module. This basis set is used for the evaluation of the
 Coulomb potential in the Dunlap scheme. The charge density fitting basis
 set must have the name "cd basis". This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
-[SET](Top-level#SET "wikilink") directive. If this basis set is not
+[SET](Set "wikilink") directive. If this basis set is not
 defined by input, the <img alt="$O(N^4)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/> exact Coulomb contribution is computed.
 
 The user also has the option of specifying a third basis set for the
@@ -239,7 +239,7 @@ The DECOMP directive causes the components of the energy corresponding
 to each functional to be printed, rather than just the total
 exchange-correlation energy which is the default. You can see an example
 of this directive in the [sample
-input](DFT#Sample_input_file "wikilink").
+input](#sample-input-file "wikilink").
 
 Many alternative exchange and correlation functionals are available to
 the user as listed in the table below. The following sections describe
@@ -905,7 +905,7 @@ or
 The optimization procedure will stop when the specified number of
 iterations is reached or convergence is met. See an example that uses
 this directive in [Sample input
-file](#Sample_input_file "wikilink").
+file](#sample-input-file "wikilink").
 
 ## CONVERGENCE -- SCF Convergence Control
 ```
@@ -1860,7 +1860,7 @@ effective core potential (ECP) and a matching spin-orbit potential (SO). The cur
 implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
-encounters the TASK directive ([TASK](TASK "wikilink")).
+encounters the TASK directive ([TASK](Task "wikilink")).
 ```
  TASK SODFT
 ```
