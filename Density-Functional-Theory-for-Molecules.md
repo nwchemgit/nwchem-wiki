@@ -1281,7 +1281,7 @@ generate the desired energy accuracy (with utter disregard for speed).
 |  |
 
 Program default number of radial and angular shells empirically
-determined for Row 1 atoms (Li <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> F) to reach the desired
+determined for Row 1 atoms (Li &rarr; F) to reach the desired
 accuracies.
 
 </center>
@@ -1299,7 +1299,7 @@ accuracies.
 |  |
 
 Program default number of radial and angular shells empirically
-determined for Row 2 atoms (Na <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> Cl) to reach the desired
+determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
 accuracies.
 
 </center>
@@ -1317,7 +1317,7 @@ accuracies.
 |  |
 
 Program default number of radial and angular shells empirically
-determined for Row 3 atoms (K <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> Br) to reach the desired
+determined for Row 3 atoms (K &rarr; Br) to reach the desired
 accuracies.
 
 </center>
@@ -1335,7 +1335,7 @@ accuracies.
 |  |
 
 Program default number of radial and angular shells empirically
-determined for Row 4 atoms (Rb <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> I) to reach the desired
+determined for Row 4 atoms (Rb &rarr; I) to reach the desired
 accuracies.
 
 </center>
