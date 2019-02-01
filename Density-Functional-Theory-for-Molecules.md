@@ -823,7 +823,7 @@ use of any other functional.
 
 Sample input files of asymptotically corrected TDDFT calculations can be
 found in the corresponding
-[section](Excited-State_Calculations "wikilink").
+[section](Excited-State-Calculations "wikilink").
 
 ### NWXC -- higher order derivatives for density functionals
 
@@ -1535,7 +1535,7 @@ with the option `DIRECT` in which case all integrals are computed
 \`\`on-the-fly''.
 
 The `SEMIDIRECT` option controls caching of integrals. A full description
-of this option is described in User Manual 10.8. Some functionality
+of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect----recomputation-of-integrals "wikilink") section. Some functionality
 which is only compatible with the `DIRECT` option will not, at present,
 work when using `SEMIDIRECT`.
 
