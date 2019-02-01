@@ -326,27 +326,40 @@ Becke, J. Chem. Phys. 98, 1372 (1992)), the adiabatic connection method
 Gaussian9X), Becke 1997 ("Becke V" paper: A.D.Becke, J. Chem. Phys.,
 107, 8554 (1997)).
 
-The keyword beckehandh specifies that the exchange-correlation energy
+The keyword `beckehandh` specifies that the exchange-correlation energy
 will be computed
 as
 
-<img alt="$E_{XC} \,\! \approx \frac{1}{2} E^{\rm HF}_X + \frac{1}{2} E^{\rm Slater}_{X} + \frac{1}{2} E^{\rm PW91LDA}_{C}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2c82a18810a5431295a20d39049f7ae7.svg?invert_in_darkmode&sanitize=true" align=middle width="283.185045pt" height="27.85299pt"/>
+E<sub>XC</sub> &asymp; &frac12;E<sub>X</sub><sup>HF</sup> + &frac12;E<sub>X</sub><sup>Slater</sup> + &frac12;E<sub>C</sub><sup>PW91LDA</sup>  
 
 We know this is NOT the correct Becke prescribed implementation which
 requires the XC potential in the energy expression. But this is what is
 currently implemented as an approximation to it.
 
-The keyword acm specifies that the exchange-correlation energy is
+The keyword `acm` specifies that the exchange-correlation energy is
+computed as  
+
+E<sub>XC</sub> = a<sub>0</sub>E<sub>X</sub><sup>HF</sup> + (1 - a<sub>0</sub>)E<sub>X</sub><sup>Slater</sup> + a<sub>X</sub>&delta;E<sub>X</sub><sup>Becke88</sup> + E<sub>C</sub><sup>VWN</sup> +
+ a<sub>C</sub>&delta;E<sub>C</sub><sup>Perdew91</sup>  
+
+where  
+
+ a<sub>0</sub> = 0.20, a<sub>X</sub> = 0.72, a<sub>C</sub> = 0.81  
+
+
+and &delta; stands for a non-local component.
+
+The keyword `b3lyp` specifies that the exchange-correlation energy is
 computed as
 
-<img alt="$\begin{array}{lcl}&#10;  E_{XC} &amp; = &amp; a_0 E^{\rm HF}_X + (1-a_0) E^{\rm Slater}_{X} + a_X\delta E_{X}^{Becke88} + E_{C}^{VWN} + a_C\delta E_{C}^{Perdew91} \\&#10;  &amp; &amp; where \\&#10;  a_0 &amp; = &amp; 0.20, a_X = 0.72, a_C = 0.81  &#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8cb8a436911d6ac7c7f25dfba0964860.svg?invert_in_darkmode&sanitize=true" align=middle width="554.92305pt" height="67.48566pt"/>
+E<sub>XC</sub> = a<sub>0</sub>E<sub>X</sub><sup>HF</sup> + (1 - a<sub>0</sub>)E<sub>X</sub><sup>Slater</sup> + a<sub>X</sub>&delta;E<sub>X</sub><sup>Becke88</sup> + (1 - a<sub>C</sub>)E<sub>C</sub><sup>VWN_1_RPA</sup> +
+ a<sub>C</sub>&delta;E<sub>C</sub><sup>LYP</sup>  
 
-and Δ stands for a non-local component.
+where  
 
-The keyword b3lyp specifies that the exchange-correlation energy is
-computed as
+ a<sub>0</sub> = 0.20, a<sub>X</sub> = 0.72, a<sub>C</sub> = 0.81  
 
-<img alt="$\begin{array}{lcl}&#10;  E_{XC} &amp; = &amp; a_0 E^{\rm HF}_X + (1-a_0) E^{\rm Slater}_{X} + a_X\delta E_{X}^{Becke88} + (1-a_C)E_{C}^{VWN\_1\_RPA}  +  a_C\delta E_{C}^{LYP} \\&#10;  &amp; &amp; where \\&#10;  a_0 &amp; = &amp; 0.20, a_X = 0.72, a_C = 0.81  &#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/252b71c145ea8f4cbbb3fc10290d48b1.svg?invert_in_darkmode&sanitize=true" align=middle width="632.56875pt" height="67.48566pt"/>
+
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
