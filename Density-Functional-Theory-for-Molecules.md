@@ -38,7 +38,7 @@ application; those currently provided as options for the DFT module
 are:
 ```
 VECTORS [[input] (<string input_movecs default atomic>) || \  
-                  (project <string basisname> <string filename>`)] \` 
+                  (project <string basisname> <string filename>)] \ 
           [swap [alpha||beta] <integer vec1 vec2> ...] \ 
           [output <string output_filename default input_movecs>] \  
  XC [[acm] [b3lyp] [beckehandh] [pbe0]\  
@@ -63,7 +63,7 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
      [slater <real prefactor default 1.0>] \  
      [vwn_1 <real prefactor default 1.0>] \  
      [vwn_2 <real prefactor default 1.0>] \  
-`     [vwn_3 <real prefactor default 1.0>] \ 
+     [vwn_3 <real prefactor default 1.0>] \ 
      [vwn_4 <real prefactor default 1.0>] \  
      [vwn_5 <real prefactor default 1.0>] \  
      [vwn_1_rpa <real prefactor default 1.0>] \  
@@ -119,11 +119,11 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
  DECOMP 
  ODFT 
  DIRECT  
- SEMIDIRECT [filesize <integer filesize default disksize>]` 
+ SEMIDIRECT [filesize <integer filesize default disksize>] 
             [memsize  <integer memsize default available>]  
             [filename <string filename default $file_prefix.aoints$>]
  INCORE 
- ITERATIONS <integer iterations default 30>` 
+ ITERATIONS <integer iterations default 30> 
  MAX_OVL  
  CGMIN  
  RODFT  
@@ -175,38 +175,38 @@ given calculation can be summarized as follows;
 The VECTORS directive is the same as that in the SCF module (Section
 10.5). Currently, the LOCK keyword is not supported by the DFT module,
 however the directive
-
-` MAX_OVL`
-
+```
+ MAX_OVL
+```
 has the same
 effect.
 
 ## XC and DECOMP -- Exchange-Correlation Potentials
-
-` XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\`  
-`    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \`  
-`     [hcth407] [becke97gga1] [hcth407p] \`  
-`     [optx] [hcthp14] [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\`  
-`     [m05] [m05-2x] [m06] [m06-l] [m06-2x] [m06-hf] [m08-hx] [m08-so] [m11] [m11-l]\`  
-`     [HFexch <real prefactor default 1.0>] \`  
-`     [becke88 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xperdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [xpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [gill96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [lyp <real prefactor default 1.0>] \`  
-`     [perdew81 <real prefactor default 1.0>] \`  
-`     [perdew86 [nonlocal] <real prefactor default 1.0>] \`  
-`     [perdew91 [nonlocal] <real prefactor default 1.0>] \`  
-`     [cpbe96 [nonlocal] <real prefactor default 1.0>] \`  
-`     [pw91lda <real prefactor default 1.0>] \`  
-`     [slater <real prefactor default 1.0>] \`  
-`     [vwn_1 <real prefactor default 1.0>] \`  
-`     [vwn_2 <real prefactor default 1.0>] \`  
-`     [vwn_3 <real prefactor default 1.0>] \`  
-`     [vwn_4 <real prefactor default 1.0>] \`  
-`     [vwn_5 <real prefactor default 1.0>] \`  
-`     [vwn_1_rpa <real prefactor default 1.0>]]`
-
+```
+ XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\  
+    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \  
+     [hcth407] [becke97gga1] [hcth407p] \  
+     [optx] [hcthp14] [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\  
+     [m05] [m05-2x] [m06] [m06-l] [m06-2x] [m06-hf] [m08-hx] [m08-so] [m11] [m11-l]\  
+     [HFexch <real prefactor default 1.0>] \  
+     [becke88 [nonlocal] <real prefactor default 1.0>] \  
+     [xperdew91 [nonlocal] <real prefactor default 1.0>] \  
+     [xpbe96 [nonlocal] <real prefactor default 1.0>] \  
+     [gill96 [nonlocal] <real prefactor default 1.0>] \  
+     [lyp <real prefactor default 1.0>] \  
+     [perdew81 <real prefactor default 1.0>] \  
+     [perdew86 [nonlocal] <real prefactor default 1.0>] \  
+     [perdew91 [nonlocal] <real prefactor default 1.0>] \  
+     [cpbe96 [nonlocal] <real prefactor default 1.0>] \  
+     [pw91lda <real prefactor default 1.0>] \  
+     [slater <real prefactor default 1.0>] \  
+     [vwn_1 <real prefactor default 1.0>] \  
+     [vwn_2 <real prefactor default 1.0>] \  
+     [vwn_3 <real prefactor default 1.0>] \  
+     [vwn_4 <real prefactor default 1.0>] \  
+     [vwn_5 <real prefactor default 1.0>] \  
+     [vwn_1_rpa <real prefactor default 1.0>]]
+```
 The user has the option of specifying the exchange-correlation treatment
 in the DFT Module (see table below for full list of functionals). The
 default exchange-correlation functional is defined as the local density
@@ -225,16 +225,16 @@ These defaults can be invoked explicitly by specifying the following
 keywords within the DFT module input directive, XC slater vwn\_5.
 
 That is, this statement in the input file
-
-`dft`  
-` XC slater vwn_5`  
-`end`  
-`task dft`
-
+```
+dft  
+ XC slater vwn_5  
+end  
+task dft
+```
 is equivalent to the simple line
-
-`task dft`
-
+```
+task dft
+```
 The DECOMP directive causes the components of the energy corresponding
 to each functional to be printed, rather than just the total
 exchange-correlation energy which is the default. You can see an example
@@ -254,37 +254,37 @@ table below.
 
 The Hartree-Fock exact exchange functional, (which has <img alt="$O(N^4)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/>
 computation expense), is invoked by specifying
-
-`  XC HFexch`
-
+```
+  XC HFexch
+```
 Note that the user also has the ability to include only the local or
 nonlocal contributions of a given functional. In addition the user can
 specify a multiplicative prefactor (the variable <prefactor> in the
 input) for the local/nonlocal component or total. An example of this
 might be,
-
-`  XC becke88 nonlocal 0.72`
-
+```
+  XC becke88 nonlocal 0.72
+```
 The user should be aware that the Becke88 local component is simply the
 Slater exchange and should be input as such.
 
 Any combination of the supported exchange functional options can be
 used. For example the popular Gaussian B3 exchange could be specified
 as:
-
-`  XC slater 0.8 becke88 nonlocal 0.72 HFexch 0.2`
-
+```
+  XC slater 0.8 becke88 nonlocal 0.72 HFexch 0.2
+```
 Any combination of the supported correlation functional options can be
 used. For example B3LYP could be specified
 as:
-
-`XC vwn_1_rpa 0.19 lyp 0.81 HFexch 0.20  slater 0.80 becke88 nonlocal 0.72`
-
+```
+XC vwn_1_rpa 0.19 lyp 0.81 HFexch 0.20  slater 0.80 becke88 nonlocal 0.72
+```
 and X3LYP as:
-
-`xc vwn_1_rpa 0.129 lyp 0.871 hfexch 0.218 slater 0.782 \`  
-`becke88 nonlocal 0.542  xperdew91 nonlocal 0.167`
-
+```
+xc vwn_1_rpa 0.129 lyp 0.871 hfexch 0.218 slater 0.782 \
+becke88 nonlocal 0.542  xperdew91 nonlocal 0.167
+```
 ### Setting up common exchange-correlation functionals
 
   - B3LYP: xc b3lyp
@@ -687,51 +687,51 @@ details about the theory behind these functionals and applications.
 14. P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
 
 Example illustrating the CAM-B3LYP functional:
-
-`start h2o-camb3lyp`  
-`geometry units angstrom`  
-`   O      0.00000000     0.00000000     0.11726921`  
-`   H      0.75698224     0.00000000    -0.46907685`  
-`   H     -0.75698224     0.00000000    -0.46907685`  
-`end`  
-`basis spherical`  
-` * library aug-cc-pvdz`  
-`end`  
-`dft`  
-` xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00`  
-` cam 0.33 cam_alpha 0.19 cam_beta 0.46`  
-` direct`  
-` iterations 100`  
-`end`  
-`task dft energy`
-
+```
+start h2o-camb3lyp  
+geometry units angstrom  
+   O      0.00000000     0.00000000     0.11726921  
+   H      0.75698224     0.00000000    -0.46907685  
+   H     -0.75698224     0.00000000    -0.46907685  
+end  
+basis spherical  
+ * library aug-cc-pvdz  
+end  
+dft  
+ xc xcamb88 1.00 lyp 0.81 vwn_5 0.19 hfexch 1.00  
+ cam 0.33 cam_alpha 0.19 cam_beta 0.46  
+ direct  
+ iterations 100  
+end  
+task dft energy
+```
 Example illustrating the HSE03 functional:
-
-`echo`  
-`start h2o-hse`  
-`geometry units angstrom`  
-`O      0.00000000     0.00000000     0.11726921`  
-`H      0.75698224     0.00000000    -0.46907685`  
-`H     -0.75698224     0.00000000    -0.46907685`  
-`end`  
-`basis spherical`  
-` * library aug-cc-pvdz`  
-`end`  
-`dft`  
-` xc hse03`  
-` iterations 100`  
-` direct`  
-` end`  
-`task dft energy`  
-`#or alternatively`  
-`dft`  
-` xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25`  
-` cam 0.33 cam_alpha 0.0 cam_beta 1.0`  
-` iterations 100`  
-` direct`  
-`end`  
-`task dft energy`
-
+```
+echo  
+start h2o-hse  
+geometry units angstrom  
+O      0.00000000     0.00000000     0.11726921  
+H      0.75698224     0.00000000    -0.46907685  
+H     -0.75698224     0.00000000    -0.46907685  
+end  
+basis spherical  
+ * library aug-cc-pvdz  
+end  
+dft  
+ xc hse03  
+ iterations 100  
+ direct  
+ end  
+task dft energy  
+#or alternatively  
+dft  
+ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25  
+ cam 0.33 cam_alpha 0.0 cam_beta 1.0  
+ iterations 100  
+ direct  
+end  
+task dft energy
+```
 ### SSB-D functional
 
 The recently developed SSB-D is a small correction to the non-empirical
@@ -757,25 +757,25 @@ xc ssb-d
 This theory combines hybrid density functional theory with MP2
 semi-empirically. The B2PLYP functional, which is an example of this
 approximation, can be specified as:
-
-`dft`  
-` xc HFexch 0.53 becke88 0.47 lyp 0.73 mp2 0.27`  
-` dftmp2 direct`  
-` direct`  
-` convergence energy 1e-8`  
-` iterations 100`  
-`end`
-
+```
+dft  
+ xc HFexch 0.53 becke88 0.47 lyp 0.73 mp2 0.27  
+ dftmp2 direct  
+ direct  
+ convergence energy 1e-8  
+ iterations 100  
+end
+```
 This can also be performed in semidirect mode as
-
-`dft`  
-` xc HFexch 0.53 becke88 0.47 lyp 0.73 mp2 0.27`  
-` dftmp2 semidirect`  
-` direct`  
-` convergence energy 1e-8`  
-` iterations 100`  
-`end`
-
+```
+dft  
+ xc HFexch 0.53 becke88 0.47 lyp 0.73 mp2 0.27  
+ dftmp2 semidirect  
+ direct  
+ convergence energy 1e-8  
+ iterations 100  
+end
+```
 For details of the theory, please see the following reference:
 
 1.  S. Grimme, "Semiempirical hybrid density functional with
@@ -882,60 +882,60 @@ The default optimization in the DFT module is to iterate on the
 Kohn-Sham (SCF) equations for a specified number of iterations (default
 30). The keyword that controls this optimization is ITERATIONS, and has
 the following general form,
-
-`  iterations <integer iterations default 30>`
-
+```
+  iterations <integer iterations default 30>
+```
 or
-
-`  maxiter <integer iterations default 30>`
-
+```
+  maxiter <integer iterations default 30>
+```
 The optimization procedure will stop when the specified number of
 iterations is reached or convergence is met. See an example that uses
 this directive in [Sample input
 file](#Sample_input_file "wikilink").
 
 ## CONVERGENCE -- SCF Convergence Control
-
-` CONVERGENCE [energy <real energy default 1e-6>] \`  
-`             [density <real density default 1e-5>] \`  
-`             [gradient <real gradient default 5e-4>] \`  
-`             [hl_tol <real hl_tol default 0.1>]`  
-`             [dampon <real dampon default 0.0>] \`  
-`             [dampoff <real dampoff default 0.0>] \`  
-`             [ncydp <integer ncydp default 2>] \`  
-`             [ncyds <integer ncyds default 30>] \`  
-`             [ncysh <integer ncysh default 30>] \`  
-`             [damp <integer ndamp default 0>] [nodamping] \`  
-`             [diison <real diison default 0.0>] \`  
-`             [diisoff <real diisoff default 0.0>] \`  
-`             [(diis [nfock <integer nfock default 10>]) || nodiis] \`  
-`             [levlon <real levlon default 0.0>] \`  
-`             [levloff <real levloff default 0.0>] \`  
-`             [(lshift <real lshift default 0.5>) || nolevelshifting] \`  
-`             [rabuck [n_rabuck <integer n_rabuck default 25>]]`
-
+```
+ CONVERGENCE [energy <real energy default 1e-6>] \  
+             [density <real density default 1e-5>] \  
+             [gradient <real gradient default 5e-4>] \  
+             [hl_tol <real hl_tol default 0.1>]  
+             [dampon <real dampon default 0.0>] \  
+             [dampoff <real dampoff default 0.0>] \  
+             [ncydp <integer ncydp default 2>] \  
+             [ncyds <integer ncyds default 30>] \  
+             [ncysh <integer ncysh default 30>] \  
+             [damp <integer ndamp default 0>] [nodamping] \  
+             [diison <real diison default 0.0>] \  
+             [diisoff <real diisoff default 0.0>] \  
+             [(diis [nfock <integer nfock default 10>]) || nodiis] \  
+             [levlon <real levlon default 0.0>] \  
+             [levloff <real levloff default 0.0>] \  
+             [(lshift <real lshift default 0.5>) || nolevelshifting] \  
+             [rabuck [n_rabuck <integer n_rabuck default 25>]]
+```
 Convergence is satisfied by meeting any or all of three criteria;
 
   - convergence of the total energy; this is defined to be when the
     total DFT energy at iteration N and at iteration N-1 differ by a
     value less than some value (the default is 1e-6). This value can be
     modified using the key word,
-
-`       CONVERGENCE energy <real energy default 1e-6>`
-
+```
+       CONVERGENCE energy <real energy default 1e-6>
+```
   - convergence of the total density; this is defined to be when the
     total DFT density matrix at iteration N and at iteration N-1 have a
     RMS difference less than some value (the default is 1e-5). This
     value can be modified using the key word,
-
-`       CONVERGENCE density <real density default 1e-5>`
-
+```
+       CONVERGENCE density <real density default 1e-5>
+```
   - convergence of the orbital gradient; this is defined to be when the
     DIIS error vector becomes less than some value (the default is
     5e-4). This value can be modified using the key word,
-
-`       CONVERGENCE gradient <real gradient default 5e-4>`
-
+```
+       CONVERGENCE gradient <real gradient default 5e-4>
+```
 The default optimization strategy is to immediately begin direct
 inversion of the iterative subspace. Damping is also initiated (using
 70% of the previous density) for the first 2 iteration. In addition, if
@@ -947,14 +947,14 @@ An alternative optimization strategy is to specify, by using the change
 in total energy (from iterations when N and N-1), when to turn damping,
 level-shifting, and/or DIIS on/off. Start and stop keywords for each of
 these is available as,
-
-` CONVERGENCE  [dampon <real dampon default 0.0>] \`  
-`              [dampoff <real dampoff default 0.0>] \`  
-`              [diison <real diison default 0.0>] \`  
-`              [diisoff <real diisoff default 0.0>] \`  
-`              [levlon <real levlon default 0.0>] \`  
-`              [levloff <real levloff default 0.0>]`
-
+```
+ CONVERGENCE  [dampon <real dampon default 0.0>] \  
+              [dampoff <real dampoff default 0.0>] \  
+              [diison <real diison default 0.0>] \  
+              [diisoff <real diisoff default 0.0>] \  
+              [levlon <real levlon default 0.0>] \  
+              [levloff <real levloff default 0.0>]
+```
 So, for example, damping, DIIS, and/or level-shifting can be turned
 on/off as desired.
 
@@ -962,43 +962,43 @@ Another strategy can be to simply specify how many iterations (cycles)
 you wish each type of procedure to be used. The necessary keywords to
 control the number of damping cycles (ncydp), the number of DIIS cycles
 (ncyds), and the number of level-shifting cycles (ncysh) are input as,
-
-` CONVERGENCE  [ncydp <integer ncydp default 2>] \`  
-`              [ncyds <integer ncyds default 30>] \`  
-`              [ncysh <integer ncysh default 0>]`
-
+```
+ CONVERGENCE  [ncydp <integer ncydp default 2>] \  
+              [ncyds <integer ncyds default 30>] \  
+              [ncysh <integer ncysh default 0>]
+```
 The amount of damping, level-shifting, time at which level-shifting is
 automatically imposed, and Fock matrices used in the DIIS extrapolation
 can be modified by the following keywords
-
-` CONVERGENCE  [damp <integer ndamp default 0>] \`  
-`              [diis [nfock <integer nfock default 10>]] \`  
-`              [lshift <real lshift default 0.5>] \`  
-`              [hl_tol <real hl_tol default 0.1>]]`
-
+```
+ CONVERGENCE  [damp <integer ndamp default 0>] \  
+              [diis [nfock <integer nfock default 10>]] \  
+              [lshift <real lshift default 0.5>] \  
+              [hl_tol <real hl_tol default 0.1>]]
+```
 Damping is defined to be the percentage of the previous iterations
 density mixed with the current iterations density. So, for example
-
-` CONVERGENCE damp 70`
-
+```
+ CONVERGENCE damp 70
+```
 would mix 30% of the current iteration density with 70% of the previous
 iteration density.
 
 Level-Shifting is defined as the amount of shift applied to the diagonal
 elements of the unoccupied block of the Fock matrix. The shift is
 specified by the keyword lshift. For example the directive,
-
-` CONVERGENCE lshift 0.5`
-
+```
+ CONVERGENCE lshift 0.5
+```
 causes the diagonal elements of the Fock matrix corresponding to the
 virtual orbitals to be shifted by 0.5 a.u. By default, this
 level-shifting procedure is switched on whenever the HOMO-LUMO gap is
 small. Small is defined by default to be 0.05 au but can be modified by
 the directive hl\_tol. An example of changing the HOMO-LUMO gap
 tolerance to 0.01 would be,
-
-` CONVERGENCE hl_tol 0.01`
-
+```
+ CONVERGENCE hl_tol 0.01
+```
 Direct inversion of the iterative subspace with extrapolation of up to
 10 Fock matrices is a default optimization procedure. For large
 molecular systems the amount of available memory may preclude the
@@ -1007,28 +1007,28 @@ user may then specify the number of Fock matrices to be used in the
 extrapolation (must be greater than three (3) to be effective). To set
 the number of Fock matrices stored and used in the extrapolation
 procedure to 3 would take the form,
-
-` CONVERGENCE diis 3`
-
+```
+ CONVERGENCE diis 3
+```
 The user has the ability to simply turn off any optimization procedures
 deemed undesirable with the obvious keywords,
-
-` CONVERGENCE [nodamping] [nodiis] [nolevelshifting]`
-
+```
+ CONVERGENCE [nodamping] [nodiis] [nolevelshifting]
+```
 For systems where the initial guess is very poor, the user can try using
 fractional occupation of the orbital levels during the initial cycles of
 the SCF convergence (A. D. Rabuck and G. E. Scuseria, J. Chem. Phys
 110,695 (1999)). The input has the following form
-
-` CONVERGENCE rabuck [n_rabuck <integer n_rabuck default 25>]]`
-
+```
+ CONVERGENCE rabuck [n_rabuck <integer n_rabuck default 25>]]
+```
 where the optional value n\_rabuck determines the number of SCF cycles
 during which the method will be active. For example, to set equal to 30
 the number of cycles where the Rabuck method is active, you need to use
 the following line
-
-` CONVERGENCE rabuck 30`
-
+```
+ CONVERGENCE rabuck 30
+```
 ## CDFT -- Constrained DFT
 
 This option enables the constrained DFT formalism by Wu and Van Voorhis
@@ -1180,44 +1180,44 @@ Example input:
 ## OCCUP -- Controlling the occupations of molecular orbitals
 
 Example:
-
-`echo`  
-`start h2o_core_hole`  
-`memory 1000 mb`  
-`geometry units au`  
-` O 0       0        0`  
-` H 0       1.430   -1.107`  
-` H 0      -1.430   -1.107`  
-`end`  
-`basis`  
-` O library 6-31g*`  
-` H library 6-31g*`  
-`end`  
-`occup   `  
-` 6 6 # core-hole in beta`  
-` 1.0 0.0`  
-` 1.0 1.0`  
-` 1.0 1.0`  
-` 1.0 1.0`  
-` 1.0 1.0`  
-` 0.0 0.0`  
-`end`  
-`dft`  
-` odft`  
-` mult 1`  
-` xc beckehandh`  
-`end`  
-`task dft`
-
+```
+echo  
+start h2o_core_hole  
+memory 1000 mb  
+geometry units au  
+ O 0       0        0  
+ H 0       1.430   -1.107  
+ H 0      -1.430   -1.107  
+end  
+basis  
+ O library 6-31g*  
+ H library 6-31g*  
+end  
+occup     
+ 6 6 # core-hole in beta  
+ 1.0 0.0  
+ 1.0 1.0  
+ 1.0 1.0  
+ 1.0 1.0  
+ 1.0 1.0  
+ 0.0 0.0  
+end  
+dft  
+ odft  
+ mult 1  
+ xc beckehandh  
+end  
+task dft
+```
 ## GRID -- Numerical Integration of the XC Potential
-
-` GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \`  
-`      [(gausleg||lebedev ) default lebedev ] \`  
-`      [(becke||erf1||erf2||ssf) default erf1] \`  
-`      [(euler||mura||treutler) default mura] \`  
-`      [rm <real rm default 2.0>] \`  
-`      [nodisk]`
-
+```
+ GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+      [(gausleg||lebedev ) default lebedev ] \  
+      [(becke||erf1||erf2||ssf) default erf1] \  
+      [(euler||mura||treutler) default mura] \  
+      [rm <real rm default 2.0>] \  
+      [nodisk]
+```
 A numerical integration is necessary for the evaluation of the
 exchange-correlation contribution to the density functional. The default
 quadrature used for the numerical integration is an Euler-MacLaurin
@@ -1227,9 +1227,9 @@ this numerical integration procedure various levels of accuracy have
 been defined and are available to the user. The user can specify the
 level of accuracy with the keywords; xcoarse, coarse, medium, fine, and
 xfine. The default is medium.
-
-` GRID [xcoarse||coarse||medium||fine||xfine]`
-
+```
+ GRID [xcoarse||coarse||medium||fine||xfine]
+```
 Our intent is to have a numerical integration scheme which would give us
 approximately the accuracy defined below regardless of molecular
 composition.
@@ -1870,128 +1870,129 @@ potential with a large core SO potential (it will produce erroneous
 results).
 
 The following is an example of a calculation of <img alt="$UO_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06f075d510ceac444f473cefd7f488b2.svg?invert_in_darkmode&sanitize=true" align=middle width="31.993995pt" height="22.38192pt"/>:
-
-`start uo2_sodft`  
-`echo`  
-`Memory 32 mw`  
-`charge 2`  
-`geometry noautoz noautosym units angstrom`  
-` U     0.00000      0.00000     0.00000`  
-` O     0.00000      0.00000     1.68000`  
-` O     0.00000      0.00000    -1.68000`  
-`end`  
-`basis "ao basis" cartesian print`  
-`U    S`  
-`       12.12525300         0.02192100`  
-`        7.16154500        -0.22516000`  
-`        4.77483600         0.56029900`  
-`        2.01169300        -1.07120900`  
-`U    S`  
-`        0.58685200         1.00000000`  
-`U    S`  
-`        0.27911500         1.00000000`  
-`U    S`  
-`        0.06337200         1.00000000`  
-`U    S`  
-`        0.02561100         1.00000000`  
-`U    P`  
-`       17.25477000         0.00139800`  
-`        7.73535600        -0.03334600`  
-`        5.15587800         0.11057800`  
-`        2.24167000        -0.31726800`  
-`U    P`  
-`        0.58185800         1.00000000`  
-`U    P`  
-`        0.26790800         1.00000000`  
-`U    P`  
-`        0.08344200         1.00000000`  
-`U    P`  
-`        0.03213000         1.00000000`  
-`U    D`  
-`        4.84107000         0.00573100`  
-`        2.16016200        -0.05723600`  
-`        0.57563000         0.23882800`  
-`U    D`  
-`        0.27813600         1.00000000`  
-`U    D`  
-`        0.12487900         1.00000000`  
-`U    D`  
-`        0.05154800         1.00000000`  
-`U    F`  
-`        2.43644100         0.35501100`  
-`        1.14468200         0.40084600`  
-`        0.52969300         0.30467900`  
-`U    F`  
-`        0.24059600         1.00000000`  
-`U    F`  
-`        0.10186700         1.00000000`  
-`O    S`  
-`       47.10551800        -0.01440800`  
-`        5.91134600         0.12956800`  
-`        0.97648300        -0.56311800`  
-`O    S`  
-`        0.29607000         1.00000000`  
-`O    P`  
-`       16.69221900         0.04485600`  
-`        3.90070200         0.22261300`  
-`        1.07825300         0.50018800`  
-`O    P`  
-`        0.28418900         1.00000000`  
-`O    P`  
-`        0.07020000         1.00000000`  
-`END`  
-`ECP`  
-` U nelec 78`  
-` U s`  
-`   2          4.06365300        112.92010300`  
-`   2          1.88399500         15.64750000`  
-`   2          0.88656700         -3.68997100`  
-` U p`  
-`   2          3.98618100        118.75801600`  
-`   2          2.00016000         15.07722800`  
-`   2          0.96084100          0.55672000`  
-` U d`  
-`   2          4.14797200         60.85589200`  
-`   2          2.23456300         29.28004700`  
-`   2          0.91369500          4.99802900`  
-` U f`  
-`   2          3.99893800         49.92403500`  
-`   2          1.99884000        -24.67404200`  
-`   2          0.99564100          1.38948000`  
-` U g`  
-`   2          3.81742200        -36.04097700`  
-`   2          0.26250100          -0.09051100`  
-` O nelec 2`  
-` O s`  
-`   2         10.44567000         50.77106900`  
-` O p`  
-`   2         18.04517400         -4.90355100`  
-` O d`  
-`   2          8.16479800         -3.31212400`  
-`END`  
-`SO`  
-` U p`  
-` 2    3.986181      1.816350`  
-` 2    2.000160     11.543940`  
-` 2    0.960841      0.794644`  
-` U d`  
-` 2    4.147972      0.353683`  
-` 2    2.234563      3.499282`  
-` 2    0.913695      0.514635`  
-` U f`  
-` 2    3.998938      4.744214`  
-` 2    1.998840     -5.211731`  
-` 2    0.995641      1.867860`  
-`END`  
-`dft`  
-` mult 1`  
-` xc hfexch`  
-` odft`  
-` grid fine`  
-` convergence energy 1.000000E-06`  
-` convergence density 1.000000E-05`  
-` convergence gradient 1E-05`  
-` iterations 100`  
-` mulliken`  
-`end`  
-`task sodft`
+```
+start uo2_sodft  
+echo  
+Memory 32 mw  
+charge 2  
+geometry noautoz noautosym units angstrom  
+ U     0.00000      0.00000     0.00000  
+ O     0.00000      0.00000     1.68000  
+ O     0.00000      0.00000    -1.68000  
+end  
+basis "ao basis" cartesian print  
+U    S  
+       12.12525300         0.02192100  
+        7.16154500        -0.22516000  
+        4.77483600         0.56029900  
+        2.01169300        -1.07120900  
+U    S  
+        0.58685200         1.00000000  
+U    S  
+        0.27911500         1.00000000  
+U    S  
+        0.06337200         1.00000000  
+U    S  
+        0.02561100         1.00000000  
+U    P  
+       17.25477000         0.00139800  
+        7.73535600        -0.03334600  
+        5.15587800         0.11057800  
+        2.24167000        -0.31726800  
+U    P  
+        0.58185800         1.00000000  
+U    P  
+        0.26790800         1.00000000  
+U    P  
+        0.08344200         1.00000000  
+U    P  
+        0.03213000         1.00000000  
+U    D  
+        4.84107000         0.00573100  
+        2.16016200        -0.05723600  
+        0.57563000         0.23882800  
+U    D  
+        0.27813600         1.00000000  
+U    D  
+        0.12487900         1.00000000  
+U    D  
+        0.05154800         1.00000000  
+U    F  
+        2.43644100         0.35501100  
+        1.14468200         0.40084600  
+        0.52969300         0.30467900  
+U    F  
+        0.24059600         1.00000000  
+U    F  
+        0.10186700         1.00000000  
+O    S  
+       47.10551800        -0.01440800  
+        5.91134600         0.12956800  
+        0.97648300        -0.56311800  
+O    S  
+        0.29607000         1.00000000  
+O    P  
+       16.69221900         0.04485600  
+        3.90070200         0.22261300  
+        1.07825300         0.50018800  
+O    P  
+        0.28418900         1.00000000  
+O    P  
+        0.07020000         1.00000000  
+END  
+ECP  
+ U nelec 78  
+ U s  
+   2          4.06365300        112.92010300  
+   2          1.88399500         15.64750000  
+   2          0.88656700         -3.68997100  
+ U p  
+   2          3.98618100        118.75801600  
+   2          2.00016000         15.07722800  
+   2          0.96084100          0.55672000  
+ U d  
+   2          4.14797200         60.85589200  
+   2          2.23456300         29.28004700  
+   2          0.91369500          4.99802900  
+ U f  
+   2          3.99893800         49.92403500  
+   2          1.99884000        -24.67404200  
+   2          0.99564100          1.38948000  
+ U g  
+   2          3.81742200        -36.04097700  
+   2          0.26250100          -0.09051100  
+ O nelec 2  
+ O s  
+   2         10.44567000         50.77106900  
+ O p  
+   2         18.04517400         -4.90355100  
+ O d  
+   2          8.16479800         -3.31212400  
+END  
+SO  
+ U p  
+ 2    3.986181      1.816350  
+ 2    2.000160     11.543940  
+ 2    0.960841      0.794644  
+ U d  
+ 2    4.147972      0.353683  
+ 2    2.234563      3.499282  
+ 2    0.913695      0.514635  
+ U f  
+ 2    3.998938      4.744214  
+ 2    1.998840     -5.211731  
+ 2    0.995641      1.867860  
+END  
+dft  
+ mult 1  
+ xc hfexch  
+ odft  
+ grid fine  
+ convergence energy 1.000000E-06  
+ convergence density 1.000000E-05  
+ convergence gradient 1E-05  
+ iterations 100  
+ mulliken  
+end  
+task sodft
+```
