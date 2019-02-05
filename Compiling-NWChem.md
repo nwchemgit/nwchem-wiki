@@ -406,19 +406,20 @@ export USE_SCALAPACK=y
   
 export SCALAPACK="location of Scalapack and BLACS library"
 ```
-WARNING: In the case of 64-bit platforms, most vendors optimized BLAS
+### How to deal with with  integer size of Linear Algebra libraries 
+In the case of 64-bit platforms, most vendors optimized BLAS
 libraries cannot be used. This is due to the fact that while NWChem uses
 64-bit integers (i.e. integer\*8) on 64-bit platforms, most of the
 vendors optimized BLAS libraries used 32-bit integers. The same holds
 for the ScaLAPACK libraries, which internally use 32-bit integers.
 
-A method is now available to link against the libraries mentioned above,
+A method is available to link against the libraries mentioned above,
 using the following procedure:
 ```
    cd $NWCHEM_TOP/src
    make clean
    make 64_to_32
-   make USE_64TO32=y  BLASOPT=" optimized BLAS"
+   make USE_64TO32=y  BLASOPT=" optimized BLAS" SCALAPACK="location of Scalapack and BLACS library"
 ```
 E.g., for IBM64 this looks like
 
@@ -881,79 +882,79 @@ Library](ARMCI "wikilink") for details on ARMCI-MPI
 
 Common environmental variables for building and running on the Cray XT
 and XE:
-
-`  % setenv NWCHEM_TOP `*<your path>*`/nwchem`  
-`  % setenv NWCHEM_TARGET LINUX64`  
-`  % setenv NWCHEM_MODULES all`  
-`  % setenv USE_MPI y`  
-`  % setenv USE_MPIF y`  
-`  % setenv USE_MPIF4 y`  
-`  % setenv USE_SCALAPACK y`  
-`  % setenv USE_64TO32 y`  
-`  % setenv LIBMPI " "`
-
+```
+  % setenv NWCHEM_TOP <your path>/nwchem  
+  % setenv NWCHEM_TARGET LINUX64  
+  % setenv NWCHEM_MODULES all  
+  % setenv USE_MPI y
+  % setenv USE_MPIF y 
+  % setenv USE_MPIF4 y 
+  % setenv USE_SCALAPACK y 
+  % setenv USE_64TO32 y  
+  % setenv LIBMPI " "
+```
   - **Compiling the code on Cray once all variables (described below)
     are set**
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src
   
-`  % make nwchem_config`  
+  % make nwchem_config  
   
-`  % make 64_to_32`  
+  % make 64_to_32
   
-`  % make FC=ftn >& make.log`
-
+  % make FC=ftn >& make.log
+```
 The step `make 64_to_32` is required only if either SCALAPACK\_SIZE or
 BLAS\_SIZE are set equal to 4.
 
 ### Portals, e.g. XT3, XT4, XT5
 
 Set the following environmental variable for compilation:
-
-`  % setenv ARMCI_NETWORK PORTALS`
-
+```
+  % setenv ARMCI_NETWORK PORTALS
+```
 ### Gemini, e.g. XE6, XK7
 
-\==== Method \#1: ARMCI\_NETWORK=GEMINI ====
+#### Method \#1: ARMCI\_NETWORK=GEMINI  
 
 Load the onsided module by executing the command
-
-`  % module load onesided`
-
+```
+  % module load onesided
+```
 Note: Preferred version of onesided is 1.5.0 or later ones.
 
 Set the environmental variables for compilation:
-
-`  % setenv ARMCI_NETWORK GEMINI`  
-`  % setenv ONESIDED_USE_UDREG 1`  
-`  % setenv ONESIDED_UDREG_ENTRIES 2048`
-
-\==== Method \#2: ARMCI\_NETWORK=MPI-PR ====
+```
+  % setenv ARMCI_NETWORK GEMINI  
+  % setenv ONESIDED_USE_UDREG 1  
+  % setenv ONESIDED_UDREG_ENTRIES 2048
+```
+#### Method \#2: ARMCI\_NETWORK=MPI-PR
 
 This is a **<span style="color:#FF0000">new option available in NWChem
 6.6.</span>**
 
 Set the environmental variables for compilation:
-
-`  % setenv ARMCI_NETWORK MPI-PR`
-
+```
+  % setenv ARMCI_NETWORK MPI-PR
+```
 #### Example: OLCF Titan
 
 These are variables used for compilation on the [OLCF Titan, a Cray
 XK7](https://www.olcf.ornl.gov/computing-resources/titan-cray-xk7/) We
 assume use of Portland Group compilers programming environment (`module
 load PrgEnv-pgi`)
-
-`NWCHEM_TARGET=LINUX64`  
-`ARMCI_NETWORK=MPI-PR`  
-`USE_64TO32=y`  
-`USE_MPI=y`  
-`BLAS_SIZE=4`  
-`LAPACK_SIZE=4`  
-`SCALAPACK_SIZE=4`  
-`SCALAPACK=-lsci_pgi_mp`  
-`BLASOPT=-lsci_pgi_mp`
-
+```
+NWCHEM_TARGET=LINUX64  
+ARMCI_NETWORK=MPI-PR  
+USE_64TO32=y  
+USE_MPI=y  
+BLAS_SIZE=4 
+LAPACK_SIZE=4  
+SCALAPACK_SIZE=4  
+SCALAPACK=-lsci_pgi_mp  
+BLASOPT=-lsci_pgi_mp
+```
 To enable the GPU part, set
 
 `TCE_CUDA=y`
