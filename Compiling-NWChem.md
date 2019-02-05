@@ -880,8 +880,7 @@ Library](ARMCI "wikilink") for details on ARMCI-MPI
 
 # How-to: Cray platforms
 
-Common environmental variables for building and running on the Cray XT
-and XE:
+Common environmental variables for building and running on the Cray XT, XE, XC and XK:
 ```
   % setenv NWCHEM_TOP <your path>/nwchem  
   % setenv NWCHEM_TARGET LINUX64  
