@@ -964,7 +964,7 @@ and load the cudatoolkit module
 
 ### Aries, e.g. XC30/XC40
 
-\==== Method \#1: ARMCI\_NETWORK=MPI-PR ====
+#### Method \#1: ARMCI\_NETWORK=MPI-PR  
 
 This is a **<span style="color:#FF0000">new option available in NWChem
 6.6.</span>**
@@ -973,7 +973,7 @@ Set the environmental variables for compilation:
 
 `  % setenv ARMCI_NETWORK MPI-PR`
 
-\==== Method \#2: ARMCI\_NETWORK=DMAPP (deprecated) ====
+#### Method \#2: ARMCI\_NETWORK=DMAPP (deprecated) 
 
 This method is now **<span style="color:#FF0000">deprecated</span>** in
 favor of method \#1 ARMCI\_NETWORK=MPI-PR
@@ -982,7 +982,7 @@ Might need to execute
 
 ` % module load craype-hugepages64M`
 
-Strongly recommended: replace ga-5-3 (or ga-5-4) with GA/ARMCI developed
+Recommended: replace ga-5-3 (or ga-5-4) with GA/ARMCI developed
 by Cray. The software is hosted on github at
 <https://github.com/ryanolson/ga>.
 
@@ -997,19 +997,19 @@ Instructions:
 ```
 
 Load the dmapp module by executing the command
-
-`  % module load dmapp`
-
+```
+  % module load dmapp
+```
 Set the environmental variable for compilation:
-
-`  % setenv ARMCI_NETWORK DMAPP`
-
+```
+  % setenv ARMCI_NETWORK DMAPP
+```
 in the PBS script, add the following env. variables definitions
-
-`  % setenv HUGETLB_MORECORE yes`  
-`  % setenv HUGETLB_DEFAULT_PAGE_SIZE 8M`  
-`  % setenv UGNI_CDM_MDD_DEDICATED 2`
-
+```
+  % setenv HUGETLB_MORECORE yes 
+  % setenv HUGETLB_DEFAULT_PAGE_SIZE 8M  
+  % setenv UGNI_CDM_MDD_DEDICATED 2
+```
 #### Example: NERSC Edison
 
 These are variables used for compilation on [NERSC Edison, a Cray
@@ -1018,37 +1018,37 @@ October 23rd 2015, when using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu PrgEnv-intel`). Very similar settings
 can be applied to other Cray XC30 computers, such as [the UK ARCHER
 computer](http://www.archer.ac.uk)
-
-`CRAY_CPU_TARGET=sandybridge`  
-`NWCHEM_TARGET=LINUX64`  
-`ARMCI_NETWORK=MPI-PR`  
-`USE_MPI=y`  
-`SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\`  
-`-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"`  
-`SCALAPACK_SIZE=8`  
-`BLAS_SIZE=8`  
-`BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lpthread -lm"`  
-`LD_LIBRARY_PATH=/opt/gcc/4.9.2/snos/lib64:$LD_LIBRARY_PATH`  
-`PATH=/opt/gcc/4.9.2/bin:$PATH`  
-`CRAYPE_LINK_TYPE=dynamic`  
-
+```
+CRAY_CPU_TARGET=sandybridge 
+NWCHEM_TARGET=LINUX64  
+ARMCI_NETWORK=MPI-PR  
+USE_MPI=y
+SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\  
+-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
+SCALAPACK_SIZE=8  
+BLAS_SIZE=8  
+BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lpthread -lm"  
+LD_LIBRARY_PATH=/opt/gcc/4.9.2/snos/lib64:$LD_LIBRARY_PATH 
+PATH=/opt/gcc/4.9.2/bin:$PATH  
+CRAYPE_LINK_TYPE=dynamic 
+```
 To compile
-
-`make nwchem_config`  
-`make FC=ftn`
-
+```
+make nwchem_config 
+make FC=ftn
+```
 The following env. variables needs to added to the batch queue
 submission script
-
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=16384 `  
-`MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000 `  
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=131072 `  
-`MPICH_GNI_NUM_BUFS=300 `  
-`MPICH_GNI_NDREG_MAXSIZE=16777216 `  
-`MPICH_GNI_MBOX_PLACEMENT=nic `  
-`MPICH_GNI_LMT_PATH=disabled `  
-`COMEX_MAX_NB_OUTSTANDING=6`
-
+```
+MPICH_GNI_MAX_EAGER_MSG_SIZE=16384  
+MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000  
+MPICH_GNI_MAX_EAGER_MSG_SIZE=131072   
+MPICH_GNI_NUM_BUFS=300   
+MPICH_GNI_NDREG_MAXSIZE=16777216  
+MPICH_GNI_MBOX_PLACEMENT=nic  
+MPICH_GNI_LMT_PATH=disabled   
+COMEX_MAX_NB_OUTSTANDING=6
+```
 #### Example: NERSC Cori
 
 These are variables used for compilation on the Haswell partition of
@@ -1108,12 +1108,12 @@ Required for compilation: Intel compilers, version 16+ (17+ is strongly
 recommended).
 
 Environmental variables required for compilation:
-
-`% setenv USE_KNL 1`  
-`% setenv USE_OPENMP 1`  
-`% setenv USE_F90_ALLOCATABLE T`  
-`% setenv USE_FASTMEM T`
-
+```
+% setenv USE_KNL 1 
+% setenv USE_OPENMP 1  
+% setenv USE_F90_ALLOCATABLE T  
+% setenv USE_FASTMEM T
+```
 The latter two options are required to allocate temporaries in MCDRAM
 when running in flat mode. Please do not use cache mode for NWChem
 CCSD(T) codes. Note that using Fortran heap allocations means the memory
@@ -1131,29 +1131,29 @@ communication overhead and memory footprint of NWChem.
 
 When using MKL and Intel 16+, please use the following
 settings
-
-`% setenv BLASOPT   "-mkl -qopenmp"`  
-`% setenv SCALAPACK "-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"`
-
+```
+% setenv BLASOPT   "-mkl -qopenmp" 
+% setenv SCALAPACK "-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"
+```
 The command require for compilation is
-
-`$ make FC=ifort CC=icc`
-
+```
+$ make FC=ifort CC=icc
+```
 Environmental variables recommended at runtime (assuming Intel OpenMP
 and MPI):
-
-`% setenv I_MPI_PIN 1`  
-`% setenv I_MPI_DEBUG 4`  
-`% setenv KMP_BLOCKTIME 1`  
-`% setenv KMP_AFFINITY scatter,verbose`
-
+```
+% setenv I_MPI_PIN 1  
+% setenv I_MPI_DEBUG 4  
+% setenv KMP_BLOCKTIME 1 
+% setenv KMP_AFFINITY scatter,verbose
+```
 Once you are comfortable with the affinity settings, you can use these
 instead:
-
-`% setenv I_MPI_PIN 1`  
-`% setenv KMP_BLOCKTIME 1`  
-`% setenv KMP_AFFINITY scatter`
-
+```
+% setenv I_MPI_PIN 1
+% setenv KMP_BLOCKTIME 1  
+% setenv KMP_AFFINITY scatter
+```
 Please consult the Intel or similar documentation regarding MPI+OpenMP
 affinity on your system. This is a complicated issue that depends on the
 software you use; it is impossible to document all the different
@@ -1163,10 +1163,10 @@ NWChem.
 If you encounter segfaults not related to ARMCI, you may need to set the
 following or recompile with `-heap-arrays`. Please create thread in the
 Forum if you observe this.
-
-`% ulimit -s unlimited`  
-`% setenv OMP_STACKSIZE 32M`
-
+```
+% ulimit -s unlimited  
+% setenv OMP_STACKSIZE 32M
+```
   - **Compiling NWChem on hosts equipped with Intel Xeon Phi Knights
     Corner coprocessors**
 
@@ -1178,21 +1178,21 @@ Required for compilation: Intel Composer XE version 14.0.3 (or later
 versions)
 
 Environmental variables required for compilation:
-
-`% setenv USE_OPENMP 1`  
-`% setenv USE_OFFLOAD 1`
-
+```
+% setenv USE_OPENMP 1 
+% setenv USE_OFFLOAD 1
+```
 When using MKL and Intel Composer XE version 14 (or later versions),
 please use the following
 settings
-
-`% setenv BLASOPT   "-mkl -openmp   -lpthread -lm"`  
-`% setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"`
-
+```
+% setenv BLASOPT   "-mkl -openmp   -lpthread -lm"  
+% setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"
+```
 The command require for compilation is
-
-`$ make FC=ifort `
-
+```
+$ make FC=ifort 
+```
   - **Examples of recommended configurations**
 
 From our experience using the CCSD(T) TCE module, we have determined
@@ -1356,39 +1356,34 @@ To compile, the following commands should be used:
 
 Common environmental variables for building and running on most
 Infiniband clusters are:
-
-`  % setenv NWCHEM_TOP `<your path>`/nwchem`  
-`  % setenv NWCHEM_TARGET LINUX64`  
-`  % setenv NWCHEM_MODULES "all`  
-`  % setenv USE_MPI y`  
-`  % setenv USE_MPIF y`  
-`  % setenv USE_MPIF4 y`  
-`  % setenv MPI_LIB `*<Location of MPI library>*`/lib`  
-`  % setenv MPI_INCLUDE `*<Location of MPI library>*`/include`  
-`  % setenv LIBMPI `*`<MPI`` ``library,`` ``e.g`` ``-lmtmpi`` ``or``
-``-lmpich>`*
-
+```
+  % setenv NWCHEM_TOP <your path>/nwchem  
+  % setenv NWCHEM_TARGET LINUX64 
+  % setenv NWCHEM_MODULES "all"  
+  % setenv USE_MPI y 
+  % setenv USE_MPIF y 
+  % setenv USE_MPIF4 y  
+```
   - On Infiniband clusters with the OpenIB software stack, the following
     environment variables should be defined
-
-`  % setenv ARMCI_NETWORK OPENIB`  
-`  % setenv IB_INCLUDE `*<Location of Infiniband libraries>*`/include`  
-`  % setenv MSG_COMMS MPI`
-
+```
+  % setenv ARMCI_NETWORK OPENIB 
+  % setenv IB_INCLUDE <Location of Infiniband libraries>/include  
+```
   - On Infiniband clusters that do not support OpenIB, such as Myrinet
     MX, the MPI2 protocol can be used
-
-`  % setenv ARMCI_NETWORK MPI-MT`
-
+```
+  % setenv ARMCI_NETWORK MPI-MT
+```
   - Compiling the code on an Infiniband cluster once all variables are
     set
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src  
   
-`  % make nwchem_config`  
+  % make nwchem_config  
   
-`  % make >& make.log`
-
+  % make >& make.log
+```
 # How-to: Windows Platforms
 ## MingW
 The current recommended approach for building a NWChem binary for a
