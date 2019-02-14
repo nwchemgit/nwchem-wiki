@@ -1722,8 +1722,10 @@ some functionals and triple-zeta plus double polarization basis set
 Grimme's DFT-D3 is also available. Here the dispersion term has the
 following
 form:
+ 
 
-<img alt="$E_{disp}=\sum_{ij}\sum_{n=6,8} s_{n} \frac{C_{n}^{ij}}{R_{ij}^{n}} \left( 1+6(R_{ij}/(s_{r,n} R^{ij}_{0}))^-\alpha_{n}\right)^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14898efab2ad476cd83e15161536a456.svg?invert_in_darkmode&sanitize=true" align=middle width="402.963495pt" height="44.45628pt"/>
+E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> (1 + 6 (r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>))<sup>-&alpha;n</sup> &rpar;<sup>-1</sup>
+
 
 This new dispersion correction covers elements through Z=94.
 <img alt="$C^{ij}_{n} (n=6,8)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4ac510c831b43d15c8ac9326e45069b3.svg?invert_in_darkmode&sanitize=true" align=middle width="92.56137pt" height="27.10224pt"/> are coordination and geometry dependent. Details
