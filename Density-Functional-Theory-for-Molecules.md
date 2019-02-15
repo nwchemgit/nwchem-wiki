@@ -1724,7 +1724,7 @@ following
 form:
  
 
-E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> (1 + 6 (r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>))<sup>-&alpha;n</sup> &rpar;<sup>-1</sup>
+E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup>
 
 
 This new dispersion correction covers elements through Z=94.
