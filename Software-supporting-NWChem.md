@@ -67,6 +67,7 @@ feedback on this page content.
     <http://pymatgen.org>
   - **PVSCF** A parallel vibrational self-consistent field program <http://pvscf.org>
   - **ResLibCal** A tool to compute triple-axis neutron spectrometer resolution <http://ifit.mccode.org/Applications/ResLibCal/doc/ResLibCal.html>
+  - **SMFA**  General program package for performing quantum chemistry calculations on large molecules using an energy-based fragmentation approach <https://github.com/mickcollins/SMFAPAC>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
