@@ -46,7 +46,7 @@ feedback on this page content.
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
   - **JANPA** performs Natural Population Analysis <http://janpa.sf.net>
   - **CamCASP** Cambridge package for Calculation of Anisotropic Site
-    Properties <http://www-stone.ch.cam.ac.uk/programs/camcasp.html>
+    Properties <http://www-stone.ch.cam.ac.uk/documentation/camcasp/users_guide.pdf>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
     <http://community.hartree.stfc.ac.uk/wiki/site/admin/chemshell.html>
