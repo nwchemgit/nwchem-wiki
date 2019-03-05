@@ -68,6 +68,7 @@ feedback on this page content.
   - **PVSCF** A parallel vibrational self-consistent field program <http://pvscf.org>
   - **ResLibCal** A tool to compute triple-axis neutron spectrometer resolution <http://ifit.mccode.org/Applications/ResLibCal/doc/ResLibCal.html>
   - **SMFA**  General program package for performing quantum chemistry calculations on large molecules using an energy-based fragmentation approach <https://github.com/mickcollins/SMFAPAC>
+  - **OCLIMAX** Free program for simulation of inelastic neutron scattering <https://sites.google.com/site/ornliceman/download>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
