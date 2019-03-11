@@ -107,31 +107,31 @@ vdw radii: 1.17 (+/- 0.02) \* Bondi radius\[3\]
 optimal vdw radii for H, C, N, O, F, S, Cl, Br, I\[4\]
 
 for heavy elements: 1.17\*1.9
-
-`     data (vander(i),i=1,102)`  
-`    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,`  
-`    2   1.830,1.720,1.720,1.8018,1.755,1.638,`  
-`    3   1.404,2.457,2.106,2.160,2.05,2.223,`  
-`    4   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    5   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    6   2.223,2.223,2.223,2.223,2.160,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    8   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    9   2.223,2.223,2.223,2.223,2.320,2.223,`  
-`    1   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    2   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    3   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    4   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    5   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    6   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223/`
-
+```
+     data (vander(i),i=1,102)  
+    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,  
+    2   1.830,1.720,1.720,1.8018,1.755,1.638,  
+    3   1.404,2.457,2.106,2.160,2.05,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.160,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    8   2.223,2.223,2.223,2.223,2.223,2.223,  
+    9   2.223,2.223,2.223,2.223,2.320,2.223,  
+    1   2.223,2.223,2.223,2.223,2.223,2.223,  
+    2   2.223,2.223,2.223,2.223,2.223,2.223,  
+    3   2.223,2.223,2.223,2.223,2.223,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223/
+```
 For examples see Stefanovich et al.\[5\] and Barone et al.\[6\]
 
 "Rsolv" is no longer used.
 
-"Iscren' is a flag to define the dielectric charge scaling option.
+"Iscren" is a flag to define the dielectric charge scaling option.
 "iscren 1" implies the original scaling from Klamt and Schüürmann,
 mainly "\((\epsilon-1)/(\epsilon+1/2)\)", where \(\epsilon\) is the
 dielectric constant. "iscren 0" implies the modified scaling suggested
@@ -200,65 +200,65 @@ distributions.
 The following example is for a water molecule in \`water', using the
 HF/6-31G\*\* level of
 theory:
-
-`start`  
-`echo`  
-` title "h2o"`  
-`geometry`  
-` o                  .0000000000         .0000000000        -.0486020332`  
-` h                  .7545655371         .0000000000         .5243010666`  
-` h                 -.7545655371         .0000000000         .5243010666`  
-`end`  
-`basis segment cartesian`  
-` o library 6-31g**`  
-` h library 6-31g**`  
-`end`  
-`cosmo`  
-` dielec 78.0`  
-` radius 1.40`  
-`        1.16`  
-`        1.16`  
-` lineq  0`  
-`end`  
-`task scf energy`
-
+```
+start  
+echo  
+ title "h2o"  
+geometry  
+ o                  .0000000000         .0000000000        -.0486020332  
+ h                  .7545655371         .0000000000         .5243010666  
+ h                 -.7545655371         .0000000000         .5243010666  
+end  
+basis segment cartesian  
+ o library 6-31g**  
+ h library 6-31g**  
+end  
+cosmo  
+ dielec 78.0  
+ radius 1.40  
+        1.16  
+        1.16  
+ lineq  0  
+end  
+task scf energy
+```
 Alternatively, instead of listing COSMO radii parameters in the input,
 the former can be loaded using an external file through the "parameters"
 directive
+```
+start  
+echo  
+ title "h2o"  
+geometry  
+ ow                  .0000000000         .0000000000        -.0486020332  
+ hw                  .7545655371         .0000000000         .5243010666  
+ h                  -.7545655371         .0000000000         .5243010666  
+end  
+basis segment cartesian  
+ * library 6-31g**  
+end
 
-`start`  
-`echo`  
-` title "h2o"`  
-`geometry`  
-` ow                  .0000000000         .0000000000        -.0486020332`  
-` hw                  .7545655371         .0000000000         .5243010666`  
-` h                  -.7545655371         .0000000000         .5243010666`  
-`end`  
-`basis segment cartesian`  
-` * library 6-31g**`  
-`end`
+cosmo  
+ dielec 78.0  
+ lineq  0  
+ parameters water.par  
+end
 
-`cosmo`  
-` dielec 78.0`  
-` lineq  0`  
-` parameters water.par`  
-`end`
-
-`task scf energy`
-
+task scf energy
+```
 where "water.par" may the following form:
-
-`O 1.40`  
-`H 1.16`
-
+```
+O 1.40
+H 1.16
+```
 This will set radii of all oxygen atoms to 1.4 and all hydrogen atoms to
 1.16. More fine grained control may be achieved using specific atom
 names. For example, the following parameter file
-
-`O    1.40`  
-`H    1.16`  
-`HW  1.06`
-
+```
+O    1.40
+H    1.16
+HW  1.06
+```
 will set a different radii of 1.06 to hydrogen atoms named HW. Note
 that, as per general rule in NWChem, all names are case insensitive.
 
