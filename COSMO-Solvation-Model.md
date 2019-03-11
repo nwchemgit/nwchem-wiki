@@ -133,9 +133,9 @@ For examples see Stefanovich et al.\[5\] and Barone et al.\[6\]
 
 "Iscren" is a flag to define the dielectric charge scaling option.
 "iscren 1" implies the original scaling from Klamt and Schüürmann,
-mainly "\((\epsilon-1)/(\epsilon+1/2)\)", where \(\epsilon\) is the
+mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. "iscren 0" implies the modified scaling suggested
-by Stefanovich and Truong\[7\], mainly "\((\epsilon-1)/\epsilon\)".
+by Stefanovich and Truong\[7\], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
