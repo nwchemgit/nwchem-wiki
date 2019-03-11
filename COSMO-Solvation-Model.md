@@ -65,7 +65,7 @@ cosmo
   [zeta <real zeta default 0.98>]  
   [gamma_s <real gammas default 1.0>]  
   [sw_tol <real swtol default 1.0e-4>]  
-  [do_gasphase `<logical do_gasphase default True>] 
+  [do_gasphase  <logical do_gasphase default True>] 
   [do_cosmo_ks]  
 end
 ```
