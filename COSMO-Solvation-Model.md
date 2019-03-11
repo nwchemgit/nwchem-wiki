@@ -49,26 +49,26 @@ experimental data is made.
 
 Invoking the COSMO solvation model is done by specifying the input COSMO
 input block with the input options as:
-
-`cosmo`  
-`  [off]`  
-`  [dielec  <real dielec default 78.4>]`  
-`  [parameters `<filename>`]`  
-`  [radius  `<real atom1>  
-`           `<real atom2>  
-`      . . .`  
-`           `<real atomN>`]`  
-`  [iscren  <integer iscren default 0>]`  
-`  [minbem  <integer minbem default 2>]`  
-`  [ificos  <integer ificos default 0>]`  
-`  [lineq   <integer lineq default 1>]`  
-`  [zeta <real zeta default 0.98>]`  
-`  [gamma_s <real gammas default 1.0>]`  
-`  [sw_tol <real swtol default 1.0e-4>]`  
-`  [do_gasphase `<logical do_gasphase default True>`]`  
-`  [do_cosmo_ks]`  
-`end`
-
+```
+cosmo  
+  [off]  
+  [dielec  <real dielec default 78.4>]  
+  [parameters <filename>]  
+  [radius  <real atom1>  
+           <real atom2>  
+      . . .  
+           <real atomN>]  
+  [iscren  <integer iscren default 0>]  
+  [minbem  <integer minbem default 2>]  
+  [ificos  <integer ificos default 0>]  
+  [lineq   <integer lineq default 1>]  
+  [zeta <real zeta default 0.98>]  
+  [gamma_s <real gammas default 1.0>]  
+  [sw_tol <real swtol default 1.0e-4>]  
+  [do_gasphase `<logical do_gasphase default True>] 
+  [do_cosmo_ks]  
+end
+```
 followed by the task directive specifying the wavefunction and type of
 calculation, e.g., "task scf energy", "task mp2 energy", "task dft
 optimize", etc.
