@@ -135,7 +135,7 @@ Variable qscale specifies the factor with which SCF/RESP determined charges will
 ```
 modify sequence { <integer sgmnum>:<string sgmnam> }
 ```
-This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N<img alt="$\_\\epsilon$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26431b1adf65f1245b514d3adb6777fa.svg?invert_in_darkmode&sanitize=true" align=middle width="52.162275pt" height="45.82083pt"/> site and residue 202 is a hystidine protonated at the N<img alt="$\_\\delta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bb53c313e75a9cc3ea9078408022f26.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76378pt" height="39.45183pt"/> site:
+This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N<sub>&epsilon;</sub> site and residue 202 is a hystidine protonated at the N<sub>&delta;</sub> site:
 ```
 modify sequence 114:HIE 202:HID
 ```
