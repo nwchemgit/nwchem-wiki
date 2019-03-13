@@ -241,15 +241,15 @@ Appending to an existing topology file
 ` <real dist1> <real dist2>  <real dist3> <real forc1> <real forc2>`
 
 This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in <img alt="$kJ mol^{-1} nm^{-2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/56c2c4cf32fcf191f3e45838c1bc1a89.svg?invert_in_darkmode&sanitize=true" align=middle width="105.854595pt" height="26.70657pt"/>.
-
-`select <integer isel> { <string atoms> }`
-
+```
+select <integer isel> { <string atoms> }
+```
 Directive select specifies a group of atoms used in the definition of potential of mean force potentials.
 
 The selected atoms are specified by the string atoms which takes the form
-
-`[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]`
-
+```
+[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]
+```
 For example, all carbon and oxygen atoms in segments 3 and 6 through 12 are selected for group 1 by
 
 `3,6-12:_C????,_O????`
@@ -266,128 +266,128 @@ For example, all carbon and oxygen atoms in segments 3 and 6 through 12 are sele
 `pmf [bias] (zaxis | zaxis-cog) `<integer isel>` `<integer jsel>` `<integer ksel>` \`
 `            `<real dist1>` `<real dist2>` `<real forcon1>` `<real forcon2>
 
-Directive pmf specifies a potential of mean force potential in terms of the specified atom selection. Option zalign specifies the atoms in the selection to be restrained to a line parallel to the z-axis. Option xyplane specifies the atoms in the selection to be restrained to a plane perpendicular to the z-axis. Options distance, angle and torsion, are defined in terms of the center of geometry of the specified atom selections. Keyword basepair is used to specify a harmonic potential between residues isel and jsel. Keywords zaxis and zaxis-cog can be used to pull atoms toward the z-axis. Option all may be specified to apply an equivalent pmf to each of the equivalent solute molecules in the system. Option combine may be specified to apply the specified pmf to the atoms in all of the equivalent solute molecules. Option constraint may be specified to a distance pmf to treat the distance as a contraint. Option bias may be specified to indicate that this function should be treated as a biasing potential. Appropriate corrections to free energy results will be evaluated.
+Directive pmf specifies a potential of mean force potential in terms of the specified atom selection. Option zalign specifies the atoms in the selection to be restrained to a line parallel to the z-axis. Option xyplane specifies the atoms in the selection to be restrained to a plane perpendicular to the z-axis. Options distance, angle and torsion, are defined in terms of the center of geometry of the specified atom selections. Keyword basepair is used to specify a harmonic potential between residues isel and jsel. Keywords zaxis and zaxis-cog can be used to pull atoms toward the z-axis. Option all may be specified to apply an equivalent pmf to each of the equivalent solute molecules in the system. Option combine may be specified to apply the specified pmf to the atoms in all of the equivalent solute molecules. Option constraint may be specified to a distance pmf to treat the distance as a constraint. Option bias may be specified to indicate that this function should be treated as a biasing potential. Appropriate corrections to free energy results will be evaluated.
 
 Generating a restart file
 -------------------------
-
-`new_rst`
-
+```
+new_rst
+```
 Keyword new\_rst will cause an existing restart file to be overwritten with a new file.
 
 The follwing directives control the manipulation of restart files, and are executed in the order in which they appear in the prepare input deck.
-
-``` solvent name <string*3 slvnam default ``HOH''> \ ```
-```         model <string slvmdl default ``spce''> ```
-
+```
+ solvent name <string*3 slvnam default 'HOH'> \  
+         model <string slvmdl default 'spce'>  
+```
 The solvent keyword can be used to specify the three letter solvent name as expected on the PDB formatted file, and the name of the solvent model for which solvent coordinates will be used.
-
-`solvate   [ < real rshell default 1.2 > ] \`
-`        ( [ cube [ `<real edge>` ]] |  \`
-`          [ box [ `<real xedge>` [ `<real xedge>` [ `<real xedge>` ]]]] | \`
-`          [ sphere `<real radius>` ] |`
-`          [ troct `<real edge>` ])`
-
+```
+solvate   [ < real rshell default 1.2 > ] \
+        ( [ cube [ <real edge> ]] |  \
+          [ box [ <real xedge> [ <real xedge> [ <real xedge> ]]]] | \
+          [ sphere <real radius> ] |
+          [ troct <real edge> ])`
+```
 Solvation can be specified to be in a cubic box with specified edge, rectangular box with specified edges, or in a sphere with specified radius. Solvation in a cube or rectangular box will automatically also set periodic boundary conditions. Solvation in a sphere will only allow simulations without periodic boundary conditions. The size of the cubic and rectangular boxes will be expanded by a length specified by the expand variable. If no shape is specified, solvation will be done for a cubic box with an edge that leaves rshell nm between any solute atom and a periodic image of any solute atom after the solute has been centered. An explicit write is not needed to write the restart file. The solvate will write out a file sys\_calc.rst. If not specified, the dimension of the solvation cell will be as large as to have at least a distance of rshell nm between any solute atom and the edge of the cell. The experimental troct directive generates a truncated octrahedral box.
-
-`touch `<real touch default 0.23>
-
+```
+touch <real touch default 0.23>
+```
 The variable touch specifies the minimum distance between a solvent and solute atom for which a solvent molecule will be accepted for solvation.
-
-`envelope `<real xpndw default 0.0>
-
+```
+envelope `<real xpndw default 0.0>
+```
 sets the expand vealues to be used in solvate operations.
-
-`expand `<real xpndw default 0.1>
-
+```
+expand <real xpndw default 0.1>
+```
 The variable xpndw specifies the size in nm with which the simulation volume will be increased after solvation.
-
-`read [rst | rst_old | pdb] `<string filename>
-`write [rst | [solute [`<integer nsolvent>`]] ( [large] pdb | xyz)] `<string filename>
-
+```
+read [rst | rst_old | pdb] `<string filename>
+write [rst | [solute [<integer nsolvent>]] ( [large] pdb | xyz)] <string filename>
+```
 These directives read and write the file filename in the specified format. The solute option instructs to write out the coordinates for solute and all, or if specified the first nsolvent, crystal solvent molecules only. If no format is specified, it will be derived from the extension of the filename. Recognized extensions are rst, rst\_old (read only), pdb, xyz (write only) and pov (write only). Reading and then writing the same restart file will cause the sub-block size information to be lost. If this information needs to be retained a shell copy command needs to be used. The large keyword allows PDB files to be written with more than 9999 residues. Since the PDB file will not conform to the PDB convention, this option should only be used if required. NWChem will be able to read the resulting PDB file, but other codes may not.
-
-`scale `<real scale default -1.0>
-
+```
+scale <real scale default -1.0>
+```
 This directive scales the volume and coordinates written to povray files. A negative value of scale (default) scales the coordinates to lie in \[-1:1\].
-
-`cpk [`<real cpk default 1.0>`]`
-
+```
+cpk [<real cpk default 1.0>]
+```
 This directive causes povray files to contain cpk model output. The optional value is used to scale the atomic radii. A neagtive value of cpk resets the rendering to stick.
-
-`center | centerx | centery | centerz`
-
+```
+center | centerx | centery | centerz
+```
 These directives center the solute center of geometry at the origin, in the y-z plane, in the x-z plane or in the x-y plane, respectively.
-
-`orient`
-
+```
+orient
+```
 This directive orients the solute principal axes.
-
-`translate [atom | segment | molecule] \`
-`    `<integer itran>` `<integer itran>` `<real xtran(3)>
-
+```
+translate [atom | segment | molecule] \
+    <integer itran> <integer itran> <real xtran(3)>
+```
 This directive translates solute atoms in the indicated range by xtran, without checking for bad contacts in the resulting structure.
+```
+rotate [atom | segment | molecule] \
 
-rotate \[atom | segment | molecule\] \\
-
-`    `<integer itran>` `<integer itran>` `<real angle>` `<real xrot(3)>
-
+    <integer itran> <integer itran> <real angle> <real xrot(3)>
+```
 This directive rotates solute atoms in the indicated range by angle around the vector given by xrot,, without checking for bad contacts in the resulting structure.
-
-`remove solvent [inside | outside] [x `<real xmin>` `<real xmax>`] \`
-`[y `<real ymin>` `<real ymax>`] [z `<real zmin>` `<real zmax>`]`
-
+```
+remove solvent [inside | outside] [x <real xmin> <real xmax>] \
+[y <real ymin> <real ymax>] [z <real zmin> <real zmax>]
+```
 This directive removes solvent molecules inside or outside the specified coordinate range.
-
-`periodic`
-
+```
+periodic
+```
 This directive enables periodic boundary conditions.
-
-`vacuo`
-
+```
+vacuo
+```
 This directive disables periodic boundary conditions.
-
-`grid `<integer mgrid default 24>` `<real rgrid default 0.2>
-
+```
+grid <integer mgrid default 24> <real rgrid default 0.2>
+```
 This directive specifies the grid size of trial counter-ion positions and minimum distance between an atom in the system and a counter-ion.
-
-`crop`
-
+```
+crop
+```
 prints minimum and maximum solute coordinates.
-
-`boxsize`
-
+```
+boxsize
+```
 specifies to redetermine the box size.
-
-`cube`
-
+```
+cube
+```
 specifies to redetermine the smallest cubic box size.
-
-`box `<real xsize>` `<real ysize>`  `<real zsize>
-
+```
+box <real xsize> <real ysize>`  <real zsize>
+```
 The box directive resets the box size.
-
-`align `<string atomi>` `<string atomj>` `<string atomk>
-
+```
+align <string atomi> <string atomj> <string atomk>
+```
 The align directive orients the system such that atomi and atomj are on the z-axis, and atomk in the x=y plane.
-
-`repeat [randomx | randomy | randomz] [chains | molecules | fractions ] \`
-` `<integer nx>` `<integer ny>` `<integer nz>` [`<real dist>`] [`<real zdist>`]`
-
+```
+repeat [randomx | randomy | randomz] [chains | molecules | fractions ] \
+ <integer nx> <integer ny> <integer nz> [<real dist>] [<real zdist>]
+```
 The repeat directive causes a subsequent write pdb directive to write out multiple copies of the system, with nx copies in the x, ny copies in the y, and nz copies in the z-direction, with a minimum distance of dist between any pair of atoms from different copies. If nz is -2, an inverted copy is placed in the z direction, with a separation of zdist nm. If dist is negative, the box dimensions will be used. For systems with solvent, this directive should be used with a negative dist. Optional keywords chains, molecules and fractions specify to write each repeating solute unit as a chain, to repeat each solute molecule, or each solute fraction separately. Optional keywords randomx, randomy, and randomz can be used to apply random rotations for each repeat unit around a vector through the center of geometry of the solute in the x, y or z direction.
-
-`skip `<integer ix>` `<integer iy>` `<integer iz>
-
+```
+skip <integer ix> <integer iy> <integer iz>
+```
 The skip directive can be used to skip single repeat unit from the repeat directive. Up to 100 skip directives may be specified, and will only apply to the previously specified repeat directive.
-
-`(collapsexy | collapsez) [ `<integer nmoves>`]`
-
+```
+(collapsexy | collapsez) [ <integer nmoves>]
+```
 specifies to move all solute molecules toward the z-axis or x=y-plane, respectively, to within a distance of touch nm between any pair of atoms from different solute molecules. Parameter nmoves specifies the number of collapse moves that will be made. Monatomic ions will move with the nearest multi-atom molecule.
-
-`collapse_group `<integer imol>` `<integer jmol>
-
+```
+collapse_group <integer imol> <integer jmol>
+```
 specifies that molecule jmol will move together with molecule imol in collapse operations.
-
-`merge `<real xtran(3)>` `<string pdbfile>
-
+```
+merge <real xtran(3)> <string pdbfile>
+```
 specifies to merge the coordinates found on the specified pdb file into the current structure after translation by xtran(3).
