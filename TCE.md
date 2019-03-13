@@ -996,7 +996,7 @@ used). When zero or negative value is specified, the DIIS is turned off.
 It is not recommended to perform DIIS every iteration, whereas setting a
 large value for this parameter necessitates a large memory (disk) space
 to keep the excitation amplitudes of previous iterations. In 5.0 version
-we significantly improved the DIIS solver by re-organizing the itrative
+we significantly improved the DIIS solver by re-organizing the iterative
 process and by introducing the level shift option (lshift) that enable
 to increase small orbital energy differences used in calculating the
 up-dates for cluster amplitudes. Typical values for lshift oscillates
