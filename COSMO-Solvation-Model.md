@@ -1,6 +1,6 @@
 # COSMO Solvation Model
 
-COSMO is the continuum solvation \`COnductor-like Screening MOdel' of A.
+COSMO is the continuum solvation 'COnductor-like Screening MOdel' of A.
 Klamt and G. Schüürmann to describe dielectric screening effects in
 solvents\[1\]. This model has been enhanced by D.M. York and M.
 Karplus\[2\] to create a smooth potential energy surface. The latter
