@@ -6,11 +6,11 @@ The prepare module is used to set up the necessary files for a molecular dynamic
 Without any input, the prepare module checks the existence of a topology and restart file for the molecular systems. If these files exist, the module returns to the main task level without action. The module will generate these files when they do not exist. Without any input to the module, the generated system will be for a non-solvated isolated solute system.
 
 To update existing files, including solvation, the module requires input directives read from an input deck,
-
-`prepare`
-`  ...`
-`end`
-
+```
+prepare
+  ...
+end
+```
 The prepare module performs three sub-tasks:
 
 -   sequence generation :
@@ -52,17 +52,17 @@ Default database directories
 ----------------------------
 
 The file $HOME/.nwchemrc may contain the following entries that determine which files are used by the prepare module.
-
-`ffield <string ffname>`
-
+```
+ffield <string ffname>
+```
 This entry specifies the default force field. Database files supplied with NWChem currently support values for ffname of amber, referring to AMBER95, and charmm, referring to the academic CHARMM22 force field.
-
-`<string ffname>_(1-9) <string ffdir>[\{<string parfile>\}]`
-
+```
+<string ffname>_(1-9) <string ffdir>[\{<string parfile>\}]
+```
 Entries of this type specify the directory ffdir in which force field database files can be found. Optionally the parameterfile in this directory may be specified as parfile. The prepare module will only use files in directories specified here. One exception is that files in the current work directory will be used if no directory with current files is specified. The directories are read in the order 1-9 with duplicate parameters taken from the last occurrence found. Note that multiple parameter files may be specified that will be read in the order in which they are specified.
-
-`<string solvnam> <string solvfil>`
-
+```
+<string solvnam> <string solvfil>
+```
 This entry may be used to identify a pure solvent restart file solvfil by a name solvnam
 
 An example file $HOME/.nwchemrc is:
@@ -83,29 +83,29 @@ An example file $HOME/.nwchemrc is:
 
 System name and coordinate source
 ---------------------------------
-
-`system `<string sys_calc>
-
+```
+system <string sys_calc>
+```
 The system name can be explicitly specified for the prepare module. If not specified, the system name will be taken from a specification in a previous md input block, or derived from the run time database name.
-
-`source ( pdb | rtdb )`
-
+```
+source ( pdb | rtdb )
+```
 The source of the coordinates can be explicitly specified to be from a PDB formatted file sys.pdb, or from a geometry object in the run time database. If not specified, a pdb file will be used when it exists in the current directory or the rtdb geometry otherwise.
-
-`model `<integer modpdb default 0>
-
+```
+model <integer modpdb default 0>
+```
 If a PDB formatted source file contains different MODELs, the model keyword can be used to specify which MODEL will be used to generate the topology and restart file. If not specified, the first MODEL found on the PDB file will be read.
-
-`altloc <character locpdb default ' '>`
-
+```
+altloc <character locpdb default ' '>
+```
 The altloc keyword may be used to specify the use of alternate location coordinates on a PDB file.
-
-`chain <character chnpdb default ' '>`
-
+```
+chain <character chnpdb default ' '>
+```
 The chain keyword may be used to specify the chain identifier for coordinates on a PDB file.
-
-`histidine ( hid | hie | hip )`
-
+```
+histidine ( hid | hie | hip )
+```
 specifies the default protonation state of histidine.
 
 `sscyx`
@@ -117,44 +117,44 @@ Keyword sscyx may be used to rename cysteine residues that form sulphur bridges 
 Keyword hbuild may be used to add hydrogen atoms to the unknown segments of the structure found on the pdb file. Placement of hydrogen atoms is based on geometric criteria, and the resulting fragment and segment files should be carefully examined for correctness.
 
 The database directories are used as specified in the file .nwchemrc. Specific definitions for the force field used may be changed in the input file using
-
-`directory_(1-9) <string ffdir> [<string parfile>]`
-
+```
+directory_(1-9) <string ffdir> [<string parfile>]
+```
 Sequence file generation
 ------------------------
 
 If no existing sequence file is present in the current directory, or if the new\_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
-
-`maxscf <integer maxscf default 20>`
-
+```
+maxscf <integer maxscf default 20>
+```
 Variable maxscf specifies the maximum number of atoms in a segment for which partial atomic charges will be determined from an SCF calculation followed by RESP charge fitting. For larger segments a crude partial charge guestimation will be done.
-
-`qscale <real qscale default 1.0>`
-
+```
+qscale <real qscale default 1.0>
+```
 Variable qscale specifies the factor with which SCF/RESP determined charges will be multiplied.
-
-`modify sequence { `<integer sgmnum>:<string sgmnam> }`
-
+```
+modify sequence { <integer sgmnum>:<string sgmnam> }
+```
 This command specifies that segment sgmnam should be used for segment with number sgmnum. This command can be used to specify a particular protonation state. For example, the following command specifies that residue 114 is a hystidine protonated at the N<img alt="$\_\\epsilon$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26431b1adf65f1245b514d3adb6777fa.svg?invert_in_darkmode&sanitize=true" align=middle width="52.162275pt" height="45.82083pt"/> site and residue 202 is a hystidine protonated at the N<img alt="$\_\\delta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bb53c313e75a9cc3ea9078408022f26.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76378pt" height="39.45183pt"/> site:
-
-`modify sequence 114:HIE 202:HID`
-
+```
+modify sequence 114:HIE 202:HID
+```
 Links between atoms can be enforced with
-
-`link <string atomname> <string atomname>`
-
+```
+link <string atomname> <string atomname>
+```
 For example, to link atom SG in segment 20 with atom FE in segment 55, use:
-
-`link 20:_SG 55:FE`
-
+```
+link 20:_SG 55:FE
+```
 The format of the sequence file is given in Table 36.9. In addition to the list of segments this file also includes links between non-standard segments or other non-standard links. These links are generated based on distances found between atoms on the pdb file. When atoms are involved in such non-standard links that have not been identified in the fragment of segment files as a non-chain link atom, the prepare module will ignore these links and report them as skipped. If one or more of these links are required, the user has to include them with explicit link directives in the sequence file, making them forced links. Alternatively, these links can be made forced-links by changing link into LINK in the sequence file.
-
-`fraction { <integer imol> }`
-
+```
+fraction { <integer imol> }
+```
 Directive fraction can be used to separate solute molecules into fractions for which energies will be separately reported during molecular dynamics simulations. The listed molecules will be the last molecule in a fraction. Up to 10 molecules may be specified in this directive.
-
-`counter <integer num> <string ion>`
-
+```
+counter <integer num> <string ion>
+```
 Directive counter adds num counter ions of type ion to the sequence file. Up to 10 counter directives may appear in the input block.
 
 `counter <real factor>`
