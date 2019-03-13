@@ -66,21 +66,21 @@ Entries of this type specify the directory ffdir in which force field database f
 This entry may be used to identify a pure solvent restart file solvfil by a name solvnam
 
 An example file $HOME/.nwchemrc is:
+```
+ffield amber
 
-`ffield amber`
+amber_1 /soft/nwchem/share/amber/amber_s/amber99.par,spce.par
 
-`amber_1 /soft/nwchem/share/amber/amber_s/amber99.par,spce.par`
+amber_2 /soft/nwchem/share/amber/amber_x/
 
-`amber_2 /soft/nwchem/share/amber/amber_x/`
+amber_3 /usr/people/username/data/amber/amber_u/
 
-`amber_3 /usr/people/username/data/amber/amber_u/`
+spce /soft/nwchem/share/solvents/spce.rst
 
-`spce /soft/nwchem/share/solvents/spce.rst`
+charmm_1 /soft/nwchem/share/charmm/charmm_s/
 
-`charmm_1 /soft/nwchem/share/charmm/charmm_s/`
-
-`charmm_2 /soft/nwchem/share/charmm/charmm_x/`
-
+charmm_2 /soft/nwchem/share/charmm/charmm_x/
+```
 System name and coordinate source
 ---------------------------------
 ```
