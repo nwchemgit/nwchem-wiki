@@ -57,7 +57,7 @@ ffield <string ffname>
 ```
 This entry specifies the default force field. Database files supplied with NWChem currently support values for ffname of amber, referring to AMBER95, and charmm, referring to the academic CHARMM22 force field.
 ```
-<string ffname>_(1-9) <string ffdir>[\{<string parfile>\}]
+<string ffname>_(1-9) <string ffdir>[{<string parfile>}]
 ```
 Entries of this type specify the directory ffdir in which force field database files can be found. Optionally the parameterfile in this directory may be specified as parfile. The prepare module will only use files in directories specified here. One exception is that files in the current work directory will be used if no directory with current files is specified. The directories are read in the order 1-9 with duplicate parameters taken from the last occurrence found. Note that multiple parameter files may be specified that will be read in the order in which they are specified.
 ```
