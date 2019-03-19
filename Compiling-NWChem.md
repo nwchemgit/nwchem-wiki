@@ -481,24 +481,24 @@ input file directly:
 
 Once all required and optional environment variables have been set,
 NWChem can be compiled:
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src  
   
-`  % make nwchem_config`  
+  % make nwchem_config 
   
-`  % make >& make.log`
-
+  % make >& make.log
+```
 The make above will use the standard compilers available on your system.
 To use compilers different from the default one can either set
 environment variables:
-
-`  % setenv FC `*`<fortran`` ``compiler`*`>`  
-`  % setenv CC `*<c compiler>*
-
-Or one can supply the compiler options to the make command, e.g:
-
-`  % make FC=ifort CC=icc`
-
+```
+  % export FC=<fortran compiler>  
+  % export CC=<c compiler>
+```
+Or one can supply the compiler options to the make command (_recommended_ option), e.g:
+```
+  % make FC=ifort 
+```
 For example, on Linux FC could be set either equal to ifort, gfortran or pgf90
 
 **Nota bene:** NWChem does NOT support usage of the full path in FC and
