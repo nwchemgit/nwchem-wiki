@@ -411,7 +411,15 @@ In the case of 64-bit platforms, most vendors optimized BLAS
 libraries cannot be used. This is due to the fact that while NWChem uses
 64-bit integers (i.e. integer\*8) on 64-bit platforms, most of the
 vendors optimized BLAS libraries used 32-bit integers. The same holds
-for the ScaLAPACK libraries, which internally use 32-bit integers.
+for the ScaLAPACK libraries, which internally use 32-bit integers.  
+The BLAS_SIZE environment variable is used at compile time to set the size of integer arguments in BLAS calls.  
+
+
+| BLAS_SIZE  |  size of integer arguments in BLAS routines  |
+|:--:| -- |
+ 4 |  32-bit   (most common default)  |
+  8  |   64-bit   |
+
 
 A method is available to link against the libraries mentioned above,
 using the following procedure:
@@ -419,11 +427,11 @@ using the following procedure:
    cd $NWCHEM_TOP/src
    make clean
    make 64_to_32
-   make USE_64TO32=y  BLASOPT=" optimized BLAS" SCALAPACK="location of Scalapack and BLACS library"
+   make USE_64TO32=y  BLAS_SIZE=4 BLASOPT=" optimized BLAS" SCALAPACK="location of Scalapack and BLACS library"
 ```
 E.g., for IBM64 this looks like
 
-`  % make  USE_64TO32=y  BLASOPT="-lessl -lmass"`
+`  % make  USE_64TO32=y BLAS_SIZE=4 BLASOPT="-lessl -lmass"`
 
 Notes:
 
@@ -453,22 +461,22 @@ code that can be linked into computational chemistry packages such as
 NWChem. To utilize this functionality, follow the instructions in the
 NBO 5 package to generate an nwnbo.f file. Linking NBO into NWChem can
 be done using the following procedure:
-
-`  % cd $NWCHEM_TOP/src`  
-`  % cp nwnbo.f $NWCHEM_TOP/src/nbo/.`  
-`  % make nwchem_config NWCHEM_MODULES="all nbo"`  
-`  % make`
-
+```
+  % cd $NWCHEM_TOP/src 
+  % cp nwnbo.f $NWCHEM_TOP/src/nbo/.  
+  % make nwchem_config NWCHEM_MODULES="all nbo" 
+  % make
+```
 One can now use "task nbo" and incorporate NBO input into the NWChem
 input file directly:
-
-` nbo`  
-`   $NBO NRT $END`  
-`   ...`  
-` end`  
+```
+ nbo  
+   $NBO NRT $END  
+   ... 
+ end  
   
-` task nbo`
-
+ task nbo
+```
 ## Building the NWChem binary
 
 Once all required and optional environment variables have been set,
