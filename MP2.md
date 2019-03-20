@@ -62,10 +62,9 @@ input would be
 
 ` freeze atomic`
 
-For example, in a calculation on <img alt="$Si(OH)_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/56460a327da6644551e50c5f9d3b347b.svg?invert_in_darkmode&sanitize=true" align=middle width="63.795105pt" height="24.56553pt"/>, by default the lowest
-seven orbitals would be frozen (the oxygen 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>, and the silicon
-1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>, 2<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/> and
-2<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>).
+For example, in a calculation on Si(OH)<sub>2</sub>, by default the lowest
+seven orbitals would be frozen (the oxygen 1*s*, and the silicon
+1*s*, 2*s* and 2*p*).
 
 <center>
 
@@ -95,7 +94,7 @@ seems that special attention should be paid to systems including third-
 and higher- period atoms.
 
 The user may also specify the number of orbitals to be frozen by atom.
-Following the <img alt="$Si(OH)_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/56460a327da6644551e50c5f9d3b347b.svg?invert_in_darkmode&sanitize=true" align=middle width="63.795105pt" height="24.56553pt"/> example, the user could specify
+Following the  Si(OH)<sub>2</sub> example, the user could specify
 
 `freeze atomic O 1 Si 3`
 
@@ -421,8 +420,33 @@ closely\[5\]\[6\]\[7\]\[8\].
 Only dipole moments are printed by the MP2 gradient code, but natural
 orbitals are produced and stored in the permanent directory with a file
 extension of ".mp2nos". These may be fed into the [property
-package](Properties "wikilink") to compute more general properties. Note
-that the MP2 linear response density matrix is not necessarily positive
+package](Properties "wikilink") to compute more general properties as in the following example.
+```
+start h2o
+geometry
+   O        2.15950        0.88132        0.00000
+   H        3.12950        0.88132        0.00000
+   H        1.83617        0.89369       -0.91444
+end
+
+basis spherical
+  * library aug-cc-pVDZ
+end
+
+mp2
+  freeze atomic
+end
+
+task mp2 gradient
+
+property
+  vectors  h2o.mp2nos
+  mulliken
+end
+
+task mp2 property
+```
+Note that the MP2 linear response density matrix is not necessarily positive
 definite so it is not unusual to see a few small negative natural
 orbital occupation numbers. Significant negative occupation numbers have
 been argued to be a sign that the system might be near degenerate\[9\].
