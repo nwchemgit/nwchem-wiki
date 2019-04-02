@@ -776,8 +776,8 @@ Options:
 ```
 ## References
 
-1. J. B. Foreman, M. Head-Gordon, J. A. Pople, and M. J. Frisch, J. Phys. Chem. **96**, 135 (1992).
-2. C. Jamorski, M. E. Casida, and D. R. Salahub, J. Chem. Phys. **104**, 5134 (1996);
-R. Bauernschmitt and R. Ahlrichs, Chem. Phys. Lett. **256**, 454 (1996);
-R. Bauernschmitt, M. Haeser, O. Treutler, and R. Ahlrichs, Chem. Phys. Lett. **264**, 573 (1997).
-3. S. Hirata and M. Head-Gordon, Chem. Phys. Lett. {\bf 314,} 291 (1999).
+1. J. B. Foreman, M. Head-Gordon, J. A. Pople, and M. J. Frisch, *J. Phys. Chem.* **96**, 135 (1992).
+2. C. Jamorski, M. E. Casida, and D. R. Salahub, *J. Chem. Phys.* **104**, 5134 (1996);
+R. Bauernschmitt and R. Ahlrichs, *Chem. Phys. Lett.* **256**, 454 (1996);
+R. Bauernschmitt, M. Häser, O. Treutler, and R. Ahlrichs, *Chem. Phys. Lett.* **264**, 573 (1997).
+3. S. Hirata and M. Head-Gordon, *Chem. Phys. Lett.* **314**, 291 (1999).
