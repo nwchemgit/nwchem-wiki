@@ -31,14 +31,9 @@ follows:
   - Multiple and single trial-vector processing algorithms,
   - Frozen core and virtual approximation,
   - Asymptotically correct exchange-correlation potential by van Leeuwen
-    and Baerends (R. van Leeuwen and E. J. Baerends, Phys. Rev. A 49,
-    2421 (1994)),
-  - Asymptotic correction by Casida and Salahub (M. E. Casida, C.
-    Jamorski, K. C. Casida, and D. R. Salahub, J. Chem. Phys. 108, 4439
-    (1998)),
-  - Asymptotic correction by Hirata, Zhan, Aprà, Windus, and Dixon (S.
-    Hirata, C.-G. Zhan, E. Aprà, T. L. Windus, and D. A. Dixon, J. Phys.
-    Chem. A 107, 10154 (2003)).
+    and Baerends[4],
+  - Asymptotic correction by Casida and Salahub[5],
+  - Asymptotic correction by Hirata, Zhan, Aprà, Windus, and Dixon[6].
 
 These are very effective way to rectify the shortcomings of TDDFT when
 applied to Rydberg excited states (see below).
@@ -84,9 +79,8 @@ scales as the same as the ground state DFT calculations, although the
 prefactor of the scaling may be much greater in the former.
 
 A very simple and effecive way to rectify the TDDFT's failure for
-Rydberg excited states has been proposed by Tozer and Handy (D. J. Tozer
-and N. C. Handy, J. Chem. Phys. 109, 10180 (1998)) and by Casida and
-Salahub (see previous reference). They proposed to splice a <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/>
+Rydberg excited states has been proposed by Tozer and Handy[8] and by Casida and
+Salahub[5]. They proposed to splice a <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/>
 asymptotic tail to an exchange-correlation potential that does not have
 the correct asymptotic behavior. Because the approximate
 exchange-correlation potentials are too shallow everywhere, a negative
@@ -99,8 +93,7 @@ or from a ΔSCF calculation. Recently, we proposed a new, expedient, and
 self-contained asymptotic correction that does not require an ionization
 potential (or shift) as an external parameter from a separate
 calculation. In this scheme, the shift is computed by a semi-empirical
-formula proposed by Zhan, Nichols, and Dixon (C.-G. Zhan, J. A. Nichols,
-and D. A. Dixon, J. Phys. Chem. A 107, 4184 (2003)). Both Casida-Salahub
+formula proposed by Zhan, Nichols, and Dixon[6]. Both Casida-Salahub
 scheme and this new asymptotic correction scheme give considerably
 improved (Koopmans type) ionization potentials and Rydberg excitation
 energies. The latter, however, supply the shift by itself unlike to
@@ -781,3 +774,7 @@ Options:
 R. Bauernschmitt and R. Ahlrichs, *Chem. Phys. Lett.* **256**, 454 (1996);
 R. Bauernschmitt, M. Häser, O. Treutler, and R. Ahlrichs, *Chem. Phys. Lett.* **264**, 573 (1997).
 3. S. Hirata and M. Head-Gordon, *Chem. Phys. Lett.* **314**, 291 (1999).
+4. R. van Leeuwen and E. J. Baerends, *Phys. Rev. A* **49**,  2421 (1994).
+5. M. E. Casida, C. Jamorski, K. C. Casida, and D. R. Salahub, *J. Chem. Phys.* **108**, 4439 (1998).
+6. S. Hirata, C.-G. Zhan, E. Aprà, T. L. Windus, and D. A. Dixon, *J. Phys. Chem. A* **107**, 10154 (2003).
+8. D. J. Tozer and N. C. Handy, *J. Chem. Phys.* **109**, 10180 (1998).
