@@ -4,9 +4,9 @@
 
 NWChem supports a spectrum of single excitation theories for vertical
 excitation energy calculations, namely, configuration interaction
-singles (CIS), time-dependent Hartree-Fock (TDHF or also known as
+singles (CIS)[1], time-dependent Hartree-Fock (TDHF or also known as
 random-phase approximation RPA), time-dependent density functional
-theory (TDDFT),\[ref\] and Tamm-Dancoff approximation to TDDFT. These
+theory (TDDFT)[2], and Tamm-Dancoff approximation[3] to TDDFT. These
 methods are implemented in a single framework that invokes Davidson's
 trial vector algorithm (or its modification for a non-Hermitian
 eigenvalue problem). The capabilities of the module are summarized as
@@ -774,3 +774,10 @@ Options:
                         comment character for output ('#' default)
   -v, --verbose         echo warnings and progress to stderr
 ```
+## References
+
+1. J. B. Foreman, M. Head-Gordon, J. A. Pople, and M. J. Frisch, J. Phys. Chem. **96**, 135 (1992).
+2. C. Jamorski, M. E. Casida, and D. R. Salahub, J. Chem. Phys. **104**, 5134 (1996);
+R. Bauernschmitt and R. Ahlrichs, Chem. Phys. Lett. **256**, 454 (1996);
+R. Bauernschmitt, M. Haeser, O. Treutler, and R. Ahlrichs, Chem. Phys. Lett. **264**, 573 (1997).
+3. S. Hirata and M. Head-Gordon, Chem. Phys. Lett. {\bf 314,} 291 (1999).
