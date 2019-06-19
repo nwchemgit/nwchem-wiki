@@ -69,8 +69,9 @@ feedback on this page content.
   - **ResLibCal** A tool to compute triple-axis neutron spectrometer resolution <http://ifit.mccode.org/Applications/ResLibCal/doc/ResLibCal.html>
   - **SMFA**  General program package for performing quantum chemistry calculations on large molecules using an energy-based fragmentation approach <https://github.com/mickcollins/SMFAPAC>
   - **OCLIMAX** Free program for simulation of inelastic neutron scattering <https://sites.google.com/site/ornliceman/download>
-  -  **Artaios** is a code for calculating spin-dependent electron transport properties for molecular junctions in the coherent tunneling regime<https://www.chemie.uni-hamburg.de/institute/ac/arbeitsgruppen/herrmann/software/artaios.html>
-  -  **Cuby**  is a computational chemistry framework that provides  access to various computational methods available in different software package <http://cuby.molecular.cz/?page=Interfaces>
+  -  **Artaios** A code for calculating spin-dependent electron transport properties for molecular junctions in the coherent tunneling regime<https://www.chemie.uni-hamburg.de/institute/ac/arbeitsgruppen/herrmann/software/artaios.html>
+  -  **Cuby**  A computational chemistry framework that provides  access to various computational methods available in different software package <http://cuby.molecular.cz/?page=Interfaces>
+  - **autoDIAS** A python tool for an automated Distortion/Interaction Activation Strain Analysis <https://github.com/dsvatunek/autoDIAS>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
