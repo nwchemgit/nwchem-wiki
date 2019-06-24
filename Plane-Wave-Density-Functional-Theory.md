@@ -3672,7 +3672,7 @@ Input
 ```
  ….
  Car-Parrinello`  
- SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=4.1889e-17seconds)  
+ SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=2.41889e-17seconds)  
  ….
 ```
 ## NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics
