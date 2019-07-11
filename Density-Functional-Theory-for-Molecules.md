@@ -808,14 +808,14 @@ potentials.
 The keyword `CS00`, when supplied with a real value of shift (in atomic
 units), will perform Casida-Salahub '00 asymptotic correction. This is
 primarily intended for use in conjunction with
-[TDDFT](Excited-State_Calculations "wikilink"). The shift is normally
+[TDDFT](Excited-State-Calculations "wikilink"). The shift is normally
 positive (which means that the original uncorrected exchange-correlation
 potential must be shifted down).
 
 When the keyword `CS00` is specified without the value of shift, the
 program will automatically supply it according to the semi-empirical
 formula of Zhan, Nichols, and Dixon (again, see
-[TDDFT](Excited-State_Calculations "wikilink") for more details and
+[TDDFT](Excited-State-Calculations "wikilink") for more details and
 references). As the Zhan's formula is calibrated against B3LYP results,
 it is most meaningful to use this in conjunction with the B3LYP
 functional, although the program does not prohibit (or even warn) the
