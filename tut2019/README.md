@@ -1,8 +1,10 @@
 **Material for the 2019 EMSL/ARM Aerosol Summer School**  
 https://pnnl.cvent.com/events/aerosol-summer-school/agenda-a5619d0658f24e799567a97dbb6ef20d.aspx
 
-*Instruction for installing NWChem on Mac with Homebrew* 
-* In Terminl App  
+*Instruction for installing NWChem on Mac with Homebrew*   
+
+In Terminal App,  
+either use the script https://github.com/nwchemgit/nwchem-wiki/blob/master/tut2019/macinstall.bash or follow these instructions  
 * If Homebrew is not installed yet, type
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -31,3 +33,4 @@ wget https://github.com/nwchemgit/nwchem/releases/download/6.8.1-release/nwchem_
 sudo dpkg -i nwchem_6.8.1+133+gitge032219-2_amd64.ubuntu_bionic.deb \ 
 nwchem-data_6.8.1+133+gitge032219-2_all.ubuntu_bionic.deb
 ```
+Alternative: use the script https://github.com/nwchemgit/nwchem-wiki/blob/master/tut2019/ubuntu18install.bash
