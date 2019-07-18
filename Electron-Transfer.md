@@ -116,55 +116,84 @@ to move the electron from the first helium to the second.
 
 Example input :
 ```
-#ET reactants:  
-charge 1  
-scf   
-  doublet; uhf; vectors input fragment HeP.mo He.mo output HeA.mo  
-# HeP.mo are the vectors for He(+),   
-# He.mo  are the vectors for neutral He.  
-end  
-task scf  
-  
-#ET products: 
-charge 1  
-scf   
-  doublet; uhf; vectors input HeA.mo reorder 2 1 output HeB.mo  
-end  
-task scf  
-  
-et  
- vectors reactants HeA.mo   
- vectors products HeB.mo  
-end  
-task scf et
+basis "ao basis" 
+ * library aug-cc-pvtz
+end
+
+geometry
+ He 0 0 0
+end
+
+charge 1
+
+scf
+ tol2e 1d-9
+ uhf
+ doublet
+ vectors output HeP.movecs
+end
+task scf
+
+charge 0
+
+scf
+ uhf
+ singlet
+ vectors output He.movecs
+end
+task scf
+
+geometry noautosym noautoz
+  He 0.0   0.0   0.0
+  He 5.0   0.0   0.0
+end
+
+charge 1
+#ET reactants:
+scf
+  doublet; uhf; vectors input fragment HeP.movecs He.movecs output HeA.movecs
+end
+task scf
+
+#ET products:
+scf
+  doublet; uhf; vectors input HeA.movecs reorder 2 1 output HeB.movecs
+end
+task scf
+
+et
+ vectors reactants HeA.movecs
+ vectors products HeB.movecs
+end
+task scf et
 ```
 Here is what the output looks like for this example:
 ```
-                          Electron Transfer Calculation  
-                          -----------------------------  
-  
-MO vectors for reactants: HeA.mo  
-MO vectors for products : HeB.mo  
-  
-Electronic energy of reactants     H(RR)      -5.3402392824  
-Electronic energy of products      H(PP)      -5.3402392824  
-  
-Reactants/Products overlap         S(RP)      -0.0006033839  
-  
-Reactants/Products interaction energy:  
--------------------------------------  
-One-electron contribution         H1(RP)       0.0040314092  
-  
-Beginning calculation of 2e contribution  
-Two-electron integral screening (tol2e) : 6.03E-11  
-  
-Two-electron contribution         H2(RP)      -0.0007837138  
-Total interaction energy           H(RP)       0.0032476955  
-  
-Electron Transfer Coupling Energy |V(RP)|      0.0000254810  
-                                                      5.592 cm-1  
-                                                   0.000693 eV  
-                                                      0.016 kcal/mol
+                           Electron Transfer Calculation
+                           -----------------------------
+
+ MO vectors for reactants: HeA.movecs
+ MO vectors for products : HeB.movecs
+
+ Electronic energy of reactants     H(RR)      -5.2836825646
+ Electronic energy of products      H(PP)      -5.2836825646
+
+ Reactants/Products overlap S(RP) : -4.20D-04
+
+ Reactants/Products interaction energy:    
+ -------------------------------------           
+ One-electron contribution         H1(RP)       0.0027017960
+
+ Beginning calculation of 2e contribution
+ Two-electron integral screening (tol2e) : 4.20D-11
+
+ Two-electron contribution         H2(RP)      -0.0004625156
+ Total interaction energy           H(RP)       0.0022392804
+
+ Electron Transfer Coupling Energy |V(RP)|      0.0000220152
+                                                       4.832 cm-1
+                                                    0.000599 eV
+                                                       0.014 kcal/mol
 ```
 The overlap between the ET reactant and product states (<img alt="$S_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/09e2ae89de9087b174958724cbf3e4e9.svg?invert_in_darkmode&sanitize=true" align=middle width="30.06795pt" height="22.38192pt"/>) is
 small, so the magnitude of the coupling between the states is also
