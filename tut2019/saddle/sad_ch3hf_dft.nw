@@ -1,0 +1,28 @@
+title "Find the saddle point for CH3 + HF <-> CH4 + F with DFT"
+
+echo
+
+start ch3hf_dft_
+
+geometry 
+  c    0.000   0.000  -1.220
+  h    0.000   0.000   0.029
+  h    1.063   0.000  -1.407
+  h   -0.531  -0.921  -1.407
+  h   -0.531   0.921  -1.407
+  f    0.000   0.000   1.279
+end
+
+basis
+  c library 3-21g; h library 3-21g; f library 3-21g
+end
+
+dft; mult 2; xc b3lyp; smear; direct; end
+
+driver
+ xyz
+end
+
+task dft saddle
+
+task dft freq
