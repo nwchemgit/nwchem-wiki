@@ -5,7 +5,7 @@ https://pnnl.cvent.com/events/aerosol-summer-school/agenda-a5619d0658f24e799567a
 * In Terminl App  
 * If Homebrew is not installed yet, type
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 * type
 ```
