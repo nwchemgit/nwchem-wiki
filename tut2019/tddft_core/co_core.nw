@@ -1,0 +1,31 @@
+echo
+
+start co_core
+
+title co_core
+
+memory 1000 mb
+
+geometry units angstrom noautosym nocenter
+ O 0       0        0
+ C 0       0.00     1.13356
+end
+
+basis
+  * library aug-cc-pvdz
+end
+
+
+dft
+  xc beckehandh
+end
+task dft 
+
+tddft
+  cis
+  ecut -15
+  nroots 30
+  notriplet
+  thresh 1e-04
+end 
+task tddft

@@ -1,0 +1,2039 @@
+ argument  1 = sad_ch3hf.nw
+  NWChem w/ OpenMP: maximum threads =    4
+
+
+
+============================== echo of input deck ==============================
+echo
+
+start ch3hf
+# $Id$
+
+title "Find the saddle point for CH3 + HF <-> CH4 + F"
+
+geometry autosym
+  c    0.000   0.000  -1.220
+  h    0.000   0.000   0.029
+  h    1.063   0.000  -1.407
+  h   -0.531  -0.921  -1.407
+  h   -0.531   0.921  -1.407
+  f    0.000   0.000   1.279
+end
+
+basis
+  c library 3-21g; h library 3-21g; f library 3-21g
+end
+
+scf; doublet; uhf; thresh 1e-6; print none; end
+
+task scf saddle
+
+task scf freq
+================================================================================
+
+
+                                         
+                                         
+
+
+              Northwest Computational Chemistry Package (NWChem) 6.8
+              ------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2018
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = durian
+    program         = ../nwchem.last/bin/LINUX64/nwchem
+    date            = Wed Jul 17 18:53:53 2019
+
+    compiled        = Wed_Jul_17_09:24:12_2019
+    source          = /home/edo/nwchem/nwchem.last
+    nwchem branch   = Development
+    nwchem revision = nwchem_on_git-980-g32d152c54
+    ga revision     = 5.7.0
+    use scalapack   = T
+    input           = sad_ch3hf.nw
+    prefix          = ch3hf.
+    data base       = ./ch3hf.db
+    status          = startup
+    nproc           =        3
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =  259919006 doubles =   1983.0 Mbytes
+    stack    =  259919003 doubles =   1983.0 Mbytes
+    global   =  519838016 doubles =   3966.0 Mbytes (distinct from heap & stack)
+    total    = 1039676025 doubles =   7932.1 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+                  Find the saddle point for CH3 + HF <-> CH4 + F
+                  ----------------------------------------------
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+ C3V symmetry detected
+
+          ------
+          auto-z
+          ------
+  autoz: The atoms group into disjoint clusters
+ cluster   1:    1    2    3    4    5
+ cluster   2:    6
+ Connecting clusters   1   2 via atoms    2    6 r = 1.25
+  autoz: regenerating connections with new bonds
+  Looking for out-of-plane bends
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.21994737
+    2 h                    1.0000     0.00000000    -0.00000000     0.02905263
+    3 h                    1.0000     0.75170608     0.75170608    -1.40694738
+    4 h                    1.0000     0.27514352    -1.02684960    -1.40694738
+    5 h                    1.0000    -1.02684960     0.27514352    -1.40694738
+    6 f                    9.0000     0.00000000     0.00000000     1.27905263
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.3083049854
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       1.24900
+    2 Stretch                  1     3                       1.07939
+    3 Stretch                  1     4                       1.07939
+    4 Stretch                  1     5                       1.07939
+    5 Stretch                  2     6                       1.25000
+    6 Bend                     2     1     3                99.97656
+    7 Bend                     2     1     4                99.97656
+    8 Bend                     2     1     5                99.97656
+    9 Bend                     3     1     4               117.06359
+   10 Bend                     3     1     5               117.06359
+   11 Bend                     4     1     5               117.06359
+   12 Bend                     6     1     3                99.97656
+   13 Bend                     6     1     4                99.97656
+   14 Bend                     6     1     5                99.97656
+   15 Torsion                  1     3     2     6        -180.00000
+   16 Torsion                  1     4     2     6         180.00000
+   17 Torsion                  1     5     2     6        -180.00000
+
+
+            XYZ format geometry
+            -------------------
+     6
+ geometry
+ c                     0.00000000     0.00000000    -1.21994737
+ h                     0.00000000    -0.00000000     0.02905263
+ h                     0.75170608     0.75170608    -1.40694738
+ h                     0.27514352    -1.02684960    -1.40694738
+ h                    -1.02684960     0.27514352    -1.40694738
+ f                     0.00000000     0.00000000     1.27905263
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    3 h                |   1 c                |     2.03976  |     1.07939
+    4 h                |   1 c                |     2.03976  |     1.07939
+    5 h                |   1 c                |     2.03976  |     1.07939
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          3
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    3 h                |   1 c                |   4 h                |   117.06
+    3 h                |   1 c                |   5 h                |   117.06
+    4 h                |   1 c                |   5 h                |   117.06
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          3
+ ==============================================================================
+
+
+
+                      Basis "ao basis" -> "" (cartesian)
+                      -----
+  c (Carbon)
+  ----------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.72256000E+02  0.061767
+  1 S  2.59109000E+01  0.358794
+  1 S  5.53335000E+00  0.700713
+
+  2 S  3.66498000E+00 -0.395897
+  2 S  7.70545000E-01  1.215840
+
+  3 P  3.66498000E+00  0.236460
+  3 P  7.70545000E-01  0.860619
+
+  4 S  1.95857000E-01  1.000000
+
+  5 P  1.95857000E-01  1.000000
+
+  h (Hydrogen)
+  ------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  5.44717800E+00  0.156285
+  1 S  8.24547000E-01  0.904691
+
+  2 S  1.83192000E-01  1.000000
+
+  f (Fluorine)
+  ------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  4.13801000E+02  0.058548
+  1 S  6.22446000E+01  0.349308
+  1 S  1.34340000E+01  0.709632
+
+  2 S  9.77759000E+00 -0.407327
+  2 S  2.08617000E+00  1.223140
+
+  3 P  9.77759000E+00  0.246680
+  3 P  2.08617000E+00  0.852321
+
+  4 S  4.82383000E-01  1.000000
+
+  5 P  4.82383000E-01  1.000000
+
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ c                           3-21g                   5        9   3s2p
+ h                           3-21g                   2        2   2s
+ f                           3-21g                   5        9   3s2p
+
+
+
+
+                           NWChem Geometry Optimization
+                           ----------------------------
+
+
+
+
+                  Find the saddle point for CH3 + HF <-> CH4 + F
+
+
+  no constraints, skipping    0.0000000000000000     
+ maximum gradient threshold         (gmax) =   0.000450
+ rms gradient threshold             (grms) =   0.000300
+ maximum cartesian step threshold   (xmax) =   0.001800
+ rms cartesian step threshold       (xrms) =   0.001200
+ fixed trust radius                (trust) =   0.100000
+ maximum step size to saddle      (sadstp) =   0.100000
+ energy precision                  (eprec) =   1.0D-07
+ maximum number of steps          (nptopt) =   20
+ initial hessian option           (inhess) =    0
+ line search option               (linopt) =    0
+ hessian update option            (modupd) =    2
+ saddle point option              (modsad) =    1
+ initial eigen-mode to follow     (moddir) =    0
+ initial variable to follow       (vardir) =    0
+ follow first negative mode     (firstneg) =    T
+ apply conjugacy                    (opcg) =    F
+ source of zmatrix                         =   autoz   
+
+
+          -----------------------
+          Transition State Search
+          -----------------------
+
+
+ Names of Z-matrix variables 
+    1              2              3              4              5         
+    6              7              8              9             10         
+   11             12             13             14             15         
+   16             17         
+
+ Variables with the same non-blank name are constrained to be equal
+
+
+ Using old Hessian from previous optimization
+
+          --------
+          Step   0
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.21994737
+    2 h                    1.0000     0.00000000    -0.00000000     0.02905263
+    3 h                    1.0000     0.75170608     0.75170608    -1.40694738
+    4 h                    1.0000     0.27514352    -1.02684960    -1.40694738
+    5 h                    1.0000    -1.02684960     0.27514352    -1.40694738
+    6 f                    9.0000     0.00000000     0.00000000     1.27905263
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.3083049854
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+@ ---- ---------------- -------- -------- -------- -------- -------- --------
+@    0    -138.77951200  0.0D+00  0.01611  0.00622  0.00000  0.00000      1.6
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.24900    0.01263
+    2 Stretch                  1     3                       1.07939    0.00197
+    3 Stretch                  1     4                       1.07939    0.00197
+    4 Stretch                  1     5                       1.07939    0.00197
+    5 Stretch                  2     6                       1.25000   -0.01611
+    6 Bend                     2     1     3                99.97656   -0.00571
+    7 Bend                     2     1     4                99.97656   -0.00571
+    8 Bend                     2     1     5                99.97656   -0.00571
+    9 Bend                     3     1     4               117.06359    0.00328
+   10 Bend                     3     1     5               117.06359    0.00328
+   11 Bend                     4     1     5               117.06359    0.00328
+   12 Bend                     6     1     3                99.97656   -0.00571
+   13 Bend                     6     1     4                99.97656   -0.00571
+   14 Bend                     6     1     5                99.97656   -0.00571
+   15 Torsion                  1     3     2     6        -180.00000   -0.00000
+   16 Torsion                  1     4     2     6         180.00000   -0.00000
+   17 Torsion                  1     5     2     6        -180.00000   -0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Initial step taken uphill
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.24900    0.49667
+    2 Stretch                  1     3                       1.07939    0.00000
+    3 Stretch                  1     4                       1.07939    0.00000
+    4 Stretch                  1     5                       1.07939    0.00000
+    5 Stretch                  2     6                       1.25000   -0.63339
+    6 Bend                     2     1     3                99.97656   -0.22443
+    7 Bend                     2     1     4                99.97656   -0.22443
+    8 Bend                     2     1     5                99.97656   -0.22443
+    9 Bend                     3     1     4               117.06359    0.12900
+   10 Bend                     3     1     5               117.06359    0.12900
+   11 Bend                     4     1     5               117.06359    0.12900
+   12 Bend                     6     1     3                99.97656   -0.22443
+   13 Bend                     6     1     4                99.97656   -0.22443
+   14 Bend                     6     1     5                99.97656   -0.22443
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6         180.00000    0.00000
+   17 Torsion                  1     5     2     6        -180.00000    0.00000
+
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   1
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000    -0.00000000    -1.22236245
+    2 h                    1.0000    -0.00000000     0.00000000     0.03332204
+    3 h                    1.0000     0.75210247     0.75210247    -1.40614711
+    4 h                    1.0000     0.27528861    -1.02739108    -1.40614711
+    5 h                    1.0000    -1.02739108     0.27528861    -1.40614711
+    6 f                    9.0000     0.00000000     0.00000000     1.27479752
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.3350607238
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000    -0.0871471569
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    1    -138.77889531  6.2D-04  0.01374  0.00567  0.00299  0.00807      2.5
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.25568    0.01114
+    2 Stretch                  1     3                       1.07939    0.00208
+    3 Stretch                  1     4                       1.07939    0.00208
+    4 Stretch                  1     5                       1.07939    0.00208
+    5 Stretch                  2     6                       1.24148   -0.01374
+    6 Bend                     2     1     3                99.80331   -0.00562
+    7 Bend                     2     1     4                99.80331   -0.00562
+    8 Bend                     2     1     5                99.80331   -0.00562
+    9 Bend                     3     1     4               117.16239    0.00318
+   10 Bend                     3     1     5               117.16239    0.00318
+   11 Bend                     4     1     5               117.16239    0.00318
+   12 Bend                     6     1     3                99.80331   -0.00562
+   13 Bend                     6     1     4                99.80331   -0.00562
+   14 Bend                     6     1     5                99.80331   -0.00562
+   15 Torsion                  1     3     2     6         180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000    0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Hessian has correct structure - following negative mode, overlap=-9.0D-01
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.25568   -0.56485
+    2 Stretch                  1     3                       1.07939    0.00792
+    3 Stretch                  1     4                       1.07939    0.00792
+    4 Stretch                  1     5                       1.07939    0.00792
+    5 Stretch                  2     6                       1.24148    0.80349
+    6 Bend                     2     1     3                99.80331    0.07108
+    7 Bend                     2     1     4                99.80331    0.07108
+    8 Bend                     2     1     5                99.80331    0.07108
+    9 Bend                     3     1     4               117.16239   -0.04021
+   10 Bend                     3     1     5               117.16239   -0.04021
+   11 Bend                     4     1     5               117.16239   -0.04021
+   12 Bend                     6     1     3                99.80331    0.07108
+   13 Bend                     6     1     4                99.80331    0.07108
+   14 Bend                     6     1     5                99.80331    0.07108
+   15 Torsion                  1     3     2     6         180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000    0.00000
+
+ Restricting large step in mode    1 eval=-1.2D-01 step=-1.6D-01 new=-1.0D-01
+ Restricting large step in mode    2 eval= 2.4D-02 step= 3.8D-01 new= 1.0D-01
+ Search mode= 1 eval=-1.2D-01 grad=-2.0D-02 step=-1.0D-01
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   2
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000    -0.00000000     0.00000000    -1.21623156
+    2 h                    1.0000    -0.00000000    -0.00000000     0.07174803
+    3 h                    1.0000     0.74754939     0.74754939    -1.41618735
+    4 h                    1.0000     0.27362207    -1.02117146    -1.41618735
+    5 h                    1.0000    -1.02117146     0.27362207    -1.41618735
+    6 f                    9.0000     0.00000000    -0.00000000     1.26036137
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.5647819597
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000    -0.0000000000    -0.2474616931
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    2    -138.77854950  3.5D-04  0.00342  0.00247  0.02068  0.07279      3.7
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.28798    0.00305
+    2 Stretch                  1     3                       1.07594   -0.00032
+    3 Stretch                  1     4                       1.07594   -0.00032
+    4 Stretch                  1     5                       1.07594   -0.00032
+    5 Stretch                  2     6                       1.18861   -0.00329
+    6 Bend                     2     1     3               100.71030   -0.00342
+    7 Bend                     2     1     4               100.71030   -0.00342
+    8 Bend                     2     1     5               100.71030   -0.00342
+    9 Bend                     3     1     4               116.62784    0.00209
+   10 Bend                     3     1     5               116.62784    0.00209
+   11 Bend                     4     1     5               116.62784    0.00209
+   12 Bend                     6     1     3               100.71030   -0.00342
+   13 Bend                     6     1     4               100.71030   -0.00342
+   14 Bend                     6     1     5               100.71030   -0.00342
+   15 Torsion                  1     3     2     6         180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000   -0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Hessian has correct structure - following negative mode, overlap= 1.0D+00
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.28798   -0.56278
+    2 Stretch                  1     3                       1.07594    0.00646
+    3 Stretch                  1     4                       1.07594    0.00646
+    4 Stretch                  1     5                       1.07594    0.00646
+    5 Stretch                  2     6                       1.18861    0.80847
+    6 Bend                     2     1     3               100.71030    0.06437
+    7 Bend                     2     1     4               100.71030    0.06437
+    8 Bend                     2     1     5               100.71030    0.06437
+    9 Bend                     3     1     4               116.62784   -0.03945
+   10 Bend                     3     1     5               116.62784   -0.03945
+   11 Bend                     4     1     5               116.62784   -0.03945
+   12 Bend                     6     1     3               100.71030    0.06437
+   13 Bend                     6     1     4               100.71030    0.06437
+   14 Bend                     6     1     5               100.71030    0.06437
+   15 Torsion                  1     3     2     6         180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000    0.00000
+
+ Restricting large step in mode    4 eval= 3.3D-02 step= 2.3D-01 new= 1.0D-01
+ Search mode= 1 eval=-1.4D-01 grad=-5.9D-03 step=-4.3D-02
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   3
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.20725651
+    2 h                    1.0000    -0.00000000     0.00000000     0.09622867
+    3 h                    1.0000     0.74543977     0.74543977    -1.42624258
+    4 h                    1.0000     0.27284989    -1.01828966    -1.42624258
+    5 h                    1.0000    -1.01828966     0.27284989    -1.42624258
+    6 f                    9.0000     0.00000000    -0.00000000     1.25707134
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.6633701910
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.0000000000    -0.0000000000    -0.2123977590
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    3    -138.77910875 -5.6D-04  0.00193  0.00132  0.01428  0.04641      5.2
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.30349   -0.00122
+    2 Stretch                  1     3                       1.07672    0.00013
+    3 Stretch                  1     4                       1.07672    0.00013
+    4 Stretch                  1     5                       1.07672    0.00013
+    5 Stretch                  2     6                       1.16084    0.00085
+    6 Bend                     2     1     3               101.73488   -0.00193
+    7 Bend                     2     1     4               101.73488   -0.00193
+    8 Bend                     2     1     5               101.73488   -0.00193
+    9 Bend                     3     1     4               115.97333    0.00128
+   10 Bend                     3     1     5               115.97333    0.00128
+   11 Bend                     4     1     5               115.97333    0.00128
+   12 Bend                     6     1     3               101.73488   -0.00193
+   13 Bend                     6     1     4               101.73488   -0.00193
+   14 Bend                     6     1     5               101.73488   -0.00193
+   15 Torsion                  1     3     2     6         180.00000   -0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000   -0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Hessian has correct structure - following negative mode, overlap= 1.0D+00
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.30349   -0.57056
+    2 Stretch                  1     3                       1.07672    0.00770
+    3 Stretch                  1     4                       1.07672    0.00770
+    4 Stretch                  1     5                       1.07672    0.00770
+    5 Stretch                  2     6                       1.16084    0.80744
+    6 Bend                     2     1     3               101.73488    0.05520
+    7 Bend                     2     1     4               101.73488    0.05520
+    8 Bend                     2     1     5               101.73488    0.05520
+    9 Bend                     3     1     4               115.97333   -0.03668
+   10 Bend                     3     1     5               115.97333   -0.03668
+   11 Bend                     4     1     5               115.97333   -0.03668
+   12 Bend                     6     1     3               101.73488    0.05520
+   13 Bend                     6     1     4               101.73488    0.05520
+   14 Bend                     6     1     5               101.73488    0.05520
+   15 Torsion                  1     3     2     6         180.00000   -0.00000
+   16 Torsion                  1     4     2     6        -180.00000    0.00000
+   17 Torsion                  1     5     2     6         180.00000   -0.00000
+
+ Restricting large step in mode    2 eval= 3.0D-02 step= 1.7D-01 new= 1.0D-01
+ Search mode= 1 eval=-1.4D-01 grad= 6.1D-04 step= 4.3D-03
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   4
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.19757262
+    2 h                    1.0000    -0.00000000     0.00000000     0.10955582
+    3 h                    1.0000     0.74241534     0.74241534    -1.43691168
+    4 h                    1.0000     0.27174287    -1.01415822    -1.43691168
+    5 h                    1.0000    -1.01415822     0.27174287    -1.43691168
+    6 f                    9.0000    -0.00000000     0.00000000     1.26606762
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.6408564520
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.0000000000     0.0000000000     0.0151057399
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    4    -138.77950544 -4.0D-04  0.00094  0.00064  0.01226  0.02537      6.3
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.30713    0.00024
+    2 Stretch                  1     3                       1.07687   -0.00006
+    3 Stretch                  1     4                       1.07687   -0.00006
+    4 Stretch                  1     5                       1.07687   -0.00006
+    5 Stretch                  2     6                       1.15651    0.00032
+    6 Bend                     2     1     3               102.84150   -0.00094
+    7 Bend                     2     1     4               102.84150   -0.00094
+    8 Bend                     2     1     5               102.84150   -0.00094
+    9 Bend                     3     1     4               115.20791    0.00068
+   10 Bend                     3     1     5               115.20791    0.00068
+   11 Bend                     4     1     5               115.20791    0.00068
+   12 Bend                     6     1     3               102.84150   -0.00094
+   13 Bend                     6     1     4               102.84150   -0.00094
+   14 Bend                     6     1     5               102.84150   -0.00094
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6         180.00000   -0.00000
+   17 Torsion                  1     5     2     6        -180.00000    0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Hessian has correct structure - following negative mode, overlap= 1.0D+00
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.30713   -0.56965
+    2 Stretch                  1     3                       1.07687    0.00782
+    3 Stretch                  1     4                       1.07687    0.00782
+    4 Stretch                  1     5                       1.07687    0.00782
+    5 Stretch                  2     6                       1.15651    0.80506
+    6 Bend                     2     1     3               102.84150    0.06003
+    7 Bend                     2     1     4               102.84150    0.06003
+    8 Bend                     2     1     5               102.84150    0.06003
+    9 Bend                     3     1     4               115.20791   -0.04313
+   10 Bend                     3     1     5               115.20791   -0.04313
+   11 Bend                     4     1     5               115.20791   -0.04313
+   12 Bend                     6     1     3               102.84150    0.06003
+   13 Bend                     6     1     4               102.84150    0.06003
+   14 Bend                     6     1     5               102.84150    0.06003
+   15 Torsion                  1     3     2     6        -180.00000   -0.00000
+   16 Torsion                  1     4     2     6         180.00000    0.00000
+   17 Torsion                  1     5     2     6        -180.00000   -0.00000
+
+ Search mode= 1 eval=-1.4D-01 grad=-3.1D-04 step=-2.2D-03
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   5
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000    -0.00000000    -0.00000000    -1.18801625
+    2 h                    1.0000    -0.00000000    -0.00000000     0.12253730
+    3 h                    1.0000     0.73965184     0.73965184    -1.44577602
+    4 h                    1.0000     0.27073137    -1.01038321    -1.44577602
+    5 h                    1.0000    -1.01038321     0.27073137    -1.44577602
+    6 f                    9.0000    -0.00000000     0.00000000     1.27012278
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.6668838594
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.0000000000     0.0000000000     0.1667054927
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    5    -138.77962925 -1.2D-04  0.00008  0.00003  0.01057  0.02468      7.5
+                                     ok       ok                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.31055   -0.00008
+    2 Stretch                  1     3                       1.07732   -0.00002
+    3 Stretch                  1     4                       1.07732   -0.00002
+    4 Stretch                  1     5                       1.07732   -0.00002
+    5 Stretch                  2     6                       1.14759    0.00005
+    6 Bend                     2     1     3               103.84293   -0.00002
+    7 Bend                     2     1     4               103.84293   -0.00002
+    8 Bend                     2     1     5               103.84293   -0.00002
+    9 Bend                     3     1     4               114.46462    0.00002
+   10 Bend                     3     1     5               114.46462    0.00002
+   11 Bend                     4     1     5               114.46462    0.00002
+   12 Bend                     6     1     3               103.84293   -0.00002
+   13 Bend                     6     1     4               103.84293   -0.00002
+   14 Bend                     6     1     5               103.84293   -0.00002
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000    0.00000
+
+ Hessian eigenvalues: positive=  16 negative=  1 zero=  0
+ Hessian has correct structure - following negative mode, overlap= 1.0D+00
+
+ The mode being followed to the saddle point
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value      Sadmode
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.31055   -0.56996
+    2 Stretch                  1     3                       1.07732    0.00776
+    3 Stretch                  1     4                       1.07732    0.00776
+    4 Stretch                  1     5                       1.07732    0.00776
+    5 Stretch                  2     6                       1.14759    0.80579
+    6 Bend                     2     1     3               103.84293    0.05751
+    7 Bend                     2     1     4               103.84293    0.05751
+    8 Bend                     2     1     5               103.84293    0.05751
+    9 Bend                     3     1     4               114.46462   -0.04404
+   10 Bend                     3     1     5               114.46462   -0.04404
+   11 Bend                     4     1     5               114.46462   -0.04404
+   12 Bend                     6     1     3               103.84293    0.05751
+   13 Bend                     6     1     4               103.84293    0.05751
+   14 Bend                     6     1     5               103.84293    0.05751
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6        -180.00000   -0.00000
+   17 Torsion                  1     5     2     6         180.00000   -0.00000
+
+ Search mode= 1 eval=-1.4D-01 grad= 7.5D-05 step= 5.3D-04
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+          --------
+          Step   6
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.18774006
+    2 h                    1.0000     0.00000000     0.00000000     0.12282784
+    3 h                    1.0000     0.73958663     0.73958663    -1.44608104
+    4 h                    1.0000     0.27070750    -1.01029413    -1.44608104
+    5 h                    1.0000    -1.01029413     0.27070750    -1.44608104
+    6 f                    9.0000     0.00000000     0.00000000     1.27047112
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.6648058388
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.1745812163
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+  no constraints, skipping    0.0000000000000000     
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    6    -138.77962934 -9.2D-08  0.00001  0.00000  0.00034  0.00066      8.3
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.31057    0.00000
+    2 Stretch                  1     3                       1.07737    0.00000
+    3 Stretch                  1     4                       1.07737    0.00000
+    4 Stretch                  1     5                       1.07737    0.00000
+    5 Stretch                  2     6                       1.14764    0.00001
+    6 Bend                     2     1     3               103.87412    0.00000
+    7 Bend                     2     1     4               103.87412    0.00000
+    8 Bend                     2     1     5               103.87412    0.00000
+    9 Bend                     3     1     4               114.44072   -0.00000
+   10 Bend                     3     1     5               114.44072   -0.00000
+   11 Bend                     4     1     5               114.44072   -0.00000
+   12 Bend                     6     1     3               103.87412    0.00000
+   13 Bend                     6     1     4               103.87412    0.00000
+   14 Bend                     6     1     5               103.87412    0.00000
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6         180.00000   -0.00000
+   17 Torsion                  1     5     2     6        -180.00000    0.00000
+
+
+      ----------------------
+      Optimization converged
+      ----------------------
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    6    -138.77962934 -9.2D-08  0.00001  0.00000  0.00034  0.00066      8.3
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.31057    0.00000
+    2 Stretch                  1     3                       1.07737    0.00000
+    3 Stretch                  1     4                       1.07737    0.00000
+    4 Stretch                  1     5                       1.07737    0.00000
+    5 Stretch                  2     6                       1.14764    0.00001
+    6 Bend                     2     1     3               103.87412    0.00000
+    7 Bend                     2     1     4               103.87412    0.00000
+    8 Bend                     2     1     5               103.87412    0.00000
+    9 Bend                     3     1     4               114.44072   -0.00000
+   10 Bend                     3     1     5               114.44072   -0.00000
+   11 Bend                     4     1     5               114.44072   -0.00000
+   12 Bend                     6     1     3               103.87412    0.00000
+   13 Bend                     6     1     4               103.87412    0.00000
+   14 Bend                     6     1     5               103.87412    0.00000
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6         180.00000   -0.00000
+   17 Torsion                  1     5     2     6        -180.00000    0.00000
+
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 c                    6.0000     0.00000000     0.00000000    -1.18774006
+    2 h                    1.0000     0.00000000     0.00000000     0.12282784
+    3 h                    1.0000     0.73958663     0.73958663    -1.44608104
+    4 h                    1.0000     0.27070750    -1.01029413    -1.44608104
+    5 h                    1.0000    -1.01029413     0.27070750    -1.44608104
+    6 f                    9.0000     0.00000000     0.00000000     1.27047112
+
+      Atomic Mass 
+      ----------- 
+
+      c                 12.000000
+      h                  1.007825
+      f                 18.998400
+
+
+ Effective nuclear repulsion energy (a.u.)      33.6648058388
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.1745812163
+
+      Symmetry information
+      --------------------
+
+ Group name             C3v       
+ Group number             17
+ Group order               6
+ No. of unique centers     4
+
+      Symmetry unique atoms
+
+     1    2    3    6
+
+
+                Final and change from initial internal coordinates
+                --------------------------------------------------
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value       Change
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.31057    0.06157
+    2 Stretch                  1     3                       1.07737   -0.00203
+    3 Stretch                  1     4                       1.07737   -0.00203
+    4 Stretch                  1     5                       1.07737   -0.00203
+    5 Stretch                  2     6                       1.14764   -0.10236
+    6 Bend                     2     1     3               103.87412    3.89756
+    7 Bend                     2     1     4               103.87412    3.89756
+    8 Bend                     2     1     5               103.87412    3.89756
+    9 Bend                     3     1     4               114.44072   -2.62287
+   10 Bend                     3     1     5               114.44072   -2.62287
+   11 Bend                     4     1     5               114.44072   -2.62287
+   12 Bend                     6     1     3               103.87412    3.89756
+   13 Bend                     6     1     4               103.87412    3.89756
+   14 Bend                     6     1     5               103.87412    3.89756
+   15 Torsion                  1     3     2     6        -180.00000    0.00000
+   16 Torsion                  1     4     2     6         180.00000    0.00000
+   17 Torsion                  1     5     2     6        -180.00000    0.00000
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    3 h                |   1 c                |     2.03593  |     1.07737
+    4 h                |   1 c                |     2.03593  |     1.07737
+    5 h                |   1 c                |     2.03593  |     1.07737
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          3
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    3 h                |   1 c                |   4 h                |   114.44
+    3 h                |   1 c                |   5 h                |   114.44
+    4 h                |   1 c                |   5 h                |   114.44
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          3
+ ==============================================================================
+
+
+
+
+ Task  times  cpu:        6.3s     wall:        8.3s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+
+
+
+                              NWChem Analytic Hessian
+                              -----------------------
+
+  stpr_wrt_fd_from_sq: overwrite of existing file:./ch3hf.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./ch3hf.fd_ddipole
+
+ HESSIAN: the one electron contributions are done in       0.0s
+
+
+ HESSIAN: 2-el 1st deriv. term done in                     0.2s
+
+
+ HESSIAN: 2-el 2nd deriv. term done in                     0.1s
+
+  stpr_wrt_fd_from_sq: overwrite of existing file:./ch3hf.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./ch3hf.fd_ddipole
+
+ HESSIAN: the two electron contributions are done in       0.3s
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+  scftype          =     UHF 
+  nalpha           =       10
+  nbeta            =        9
+  variables        =      313
+  # of vectors     =       18
+  tolerance        = 0.10D-03
+  level shift      = 0.00D+00
+  max iterations   =       50
+  max subspace     =      180
+
+
+ #quartets = 1.306D+04 #integrals = 4.005D+04 #direct =  0.0% #cached =100.0%
+
+
+ Integral file          = ./ch3hf.aoints.0
+ Record size in doubles =    65536    No. of integs per rec  =    43688
+ Max. records in memory =        2    Max. records in file   = 63333331
+ No. of bits per label  =        8    No. of bits per value  =       64
+
+
+File balance: exchanges=     0  moved=     0  time=   0.0
+
+ SCF residual:    7.1061985630837902E-007
+
+
+Iterative solution of linear equations
+  No. of variables      313
+  No. of equations       18
+  Maximum subspace      180
+        Iterations       50
+       Convergence  1.0D-04
+        Start time      9.7
+
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     1     18    2.01D-01      10.3
+     2     36    1.55D-01      12.1
+     3     54    8.15D-02      12.7
+     4     72    6.11D-03      13.1
+     5     90    1.08D-03      13.7
+     6    108    2.23D-04      14.2
+     7    126    1.90D-05      14.8
+
+ Parallel integral file used       3 records with       0 large values
+
+ HESSIAN: the CPHF contributions are done
+  stpr_wrt_fd_from_sq: overwrite of existing file:./ch3hf.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./ch3hf.fd_ddipole
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =    -0.0138     [   -0.0665]
+ d_dipole_x/<atom=   1,y> =    -0.0000     [   -0.0000]
+ d_dipole_x/<atom=   1,z> =    -0.0000     [   -0.0000]
+ d_dipole_x/<atom=   2,x> =     0.2175     [    1.0447]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0208     [    0.0999]
+ d_dipole_x/<atom=   3,y> =    -0.0678     [   -0.3258]
+ d_dipole_x/<atom=   3,z> =     0.0418     [    0.2009]
+ d_dipole_x/<atom=   4,x> =     0.0795     [    0.3821]
+ d_dipole_x/<atom=   4,y> =     0.0339     [    0.1629]
+ d_dipole_x/<atom=   4,z> =     0.0153     [    0.0735]
+ d_dipole_x/<atom=   5,x> =    -0.0379     [   -0.1822]
+ d_dipole_x/<atom=   5,y> =     0.0339     [    0.1629]
+ d_dipole_x/<atom=   5,z> =    -0.0571     [   -0.2744]
+ d_dipole_x/<atom=   6,x> =    -0.2661     [   -1.2780]
+ d_dipole_x/<atom=   6,y> =    -0.0000     [   -0.0000]
+ d_dipole_x/<atom=   6,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   1,y> =    -0.0138     [   -0.0665]
+ d_dipole_y/<atom=   1,z> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =     0.2175     [    1.0447]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =    -0.0678     [   -0.3258]
+ d_dipole_y/<atom=   3,y> =     0.0208     [    0.0999]
+ d_dipole_y/<atom=   3,z> =     0.0418     [    0.2009]
+ d_dipole_y/<atom=   4,x> =     0.0339     [    0.1629]
+ d_dipole_y/<atom=   4,y> =    -0.0379     [   -0.1822]
+ d_dipole_y/<atom=   4,z> =    -0.0571     [   -0.2744]
+ d_dipole_y/<atom=   5,x> =     0.0339     [    0.1629]
+ d_dipole_y/<atom=   5,y> =     0.0795     [    0.3821]
+ d_dipole_y/<atom=   5,z> =     0.0153     [    0.0735]
+ d_dipole_y/<atom=   6,x> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   6,y> =    -0.2661     [   -1.2780]
+ d_dipole_y/<atom=   6,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     1.2724     [    6.1115]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =    -2.2362     [  -10.7409]
+ d_dipole_z/<atom=   3,x> =     0.0027     [    0.0128]
+ d_dipole_z/<atom=   3,y> =     0.0027     [    0.0128]
+ d_dipole_z/<atom=   3,z> =    -0.0680     [   -0.3266]
+ d_dipole_z/<atom=   4,x> =     0.0010     [    0.0047]
+ d_dipole_z/<atom=   4,y> =    -0.0036     [   -0.0175]
+ d_dipole_z/<atom=   4,z> =    -0.0680     [   -0.3266]
+ d_dipole_z/<atom=   5,x> =    -0.0036     [   -0.0175]
+ d_dipole_z/<atom=   5,y> =     0.0010     [    0.0047]
+ d_dipole_z/<atom=   5,z> =    -0.0680     [   -0.3266]
+ d_dipole_z/<atom=   6,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   6,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   6,z> =     1.1678     [    5.6091]
+  
+  
+ HESSIAN: the Hessian is done
+
+
+  Vibrational analysis via the FX method 
+
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+
+  Vib: Default input used 
+
+  Nuclear Hessian passed symmetry test 
+
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    C        1  1.2660757D-65  3.1651892D-66 -2.2445033D+00  1.2000000D+01
+    H        2  7.9129731D-67  1.9782433D-67  2.3211096D-01  1.0078250D+00
+    H        3  1.3976161D+00  1.3976161D+00 -2.7326969D+00  1.0078250D+00
+    H        4  5.1156299D-01 -1.9091791D+00 -2.7326969D+00  1.0078250D+00
+    H        5 -1.9091791D+00  5.1156299D-01 -2.7326969D+00  1.0078250D+00
+    F        6  0.0000000D+00  0.0000000D+00  2.4008423D+00  1.8998400D+01
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+               1            2            3            4            5            6            7            8            9           10
+   ----- ----- ----- ----- -----
+    1    5.31211D+01
+    2    3.07275D-09  5.31211D+01
+    3   -9.11427D-08 -9.11411D-08  1.02050D+01
+    4   -7.45398D+00 -9.14708D-08  2.51204D-07  3.48620D+01
+    5   -9.14516D-08 -7.45398D+00  2.51202D-07  1.01731D-06  3.48620D+01
+    6    2.45385D-07  2.45386D-07  6.37728D+01 -1.95660D-06 -1.95647D-06 -2.91535D+02
+    7   -5.87911D+01 -4.10673D+01  1.50062D+01 -1.16579D+00 -6.44270D-01 -3.64312D+00  2.11780D+02
+    8   -4.10673D+01 -5.87911D+01  1.50062D+01 -6.44270D-01 -1.16579D+00 -3.64312D+00  1.57294D+02  2.11780D+02
+    9    1.67160D+01  1.67160D+01 -1.35447D+01  1.47472D+01  1.47472D+01 -3.28062D+01 -5.69638D+01 -5.69638D+01  5.53399D+01
+   10   -2.32257D+01  2.05337D+01  5.49263D+00 -6.07832D-01  3.22135D-01 -1.33347D+00  9.37807D+00 -2.36436D+01 -7.90298D+00  7.55597D+01
+   11    2.05337D+01 -9.43564D+01 -2.04988D+01  3.22134D-01 -1.72374D+00  4.97659D+00  8.13746D+00 -1.74794D+01 -7.17246D+00 -7.86471D+01
+   12    6.11847D+00 -2.28345D+01 -1.35447D+01  5.39784D+00 -2.01450D+01 -3.28062D+01 -3.25794D+00  1.01630D+01  5.33384D+00 -2.08502D+01
+   13   -9.43564D+01  2.05337D+01 -2.04988D+01 -1.72374D+00  3.22134D-01  4.97659D+00 -1.74794D+01  8.13746D+00 -7.17246D+00 -4.05065D+00
+   14    2.05337D+01 -2.32257D+01  5.49263D+00  3.22135D-01 -6.07832D-01 -1.33347D+00 -2.36436D+01  9.37807D+00 -7.90298D+00  3.13967D+01
+   15   -2.28345D+01  6.11847D+00 -1.35447D+01 -2.01450D+01  5.39784D+00 -3.28062D+01  1.01630D+01 -3.25794D+00  5.33384D+00  1.04304D+01
+   16    1.21172D-01  2.44727D-08 -6.62990D-08 -1.29987D+00 -3.17698D-08  2.55365D-07  8.12455D-02  1.29958D-01 -8.94871D-02 -3.13018D-02
+   17    2.44669D-08  1.21172D-01 -6.63002D-08 -3.17869D-08 -1.29987D+00  2.55371D-07  1.29958D-01  8.12455D-02 -8.94871D-02 -6.49793D-02
+   18    1.51744D-09  1.51754D-09 -1.34398D+01  5.44371D-07  5.44353D-07  3.91308D+01  4.42455D-01  4.42455D-01  3.11765D+00  1.61949D-01
+
+
+              11           12           13           14           15           16           17           18
+   ----- ----- ----- ----- -----
+   11    3.48001D+02
+   12    7.78140D+01  5.53399D+01
+   13   -3.84381D-01 -2.26004D+00  3.48001D+02
+   14   -4.05065D+00  1.04304D+01 -7.86471D+01  7.55597D+01
+   15   -2.26005D+00  5.33384D+00  7.78140D+01 -2.08502D+01  5.53399D+01
+   16   -6.49792D-02 -3.27547D-02  1.93793D-01 -6.49793D-02  1.22242D-01  1.46948D-01
+   17    1.93793D-01  1.22242D-01 -6.49792D-02 -3.13018D-02 -3.27547D-02  1.76569D-08  1.46948D-01
+   18   -6.04405D-01  3.11765D+00 -6.04405D-01  1.61949D-01  3.11765D+00  1.81027D-08  1.81083D-08 -4.85479D-01
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency      -2897.59       -0.96        0.12        0.14        1.52        1.53
+ 
+           1     0.00000     0.00232    -0.08272    -0.14507    -0.08978    -0.16080
+           2     0.00000     0.00064    -0.14582     0.08230    -0.16012     0.09018
+           3     0.05390    -0.16895    -0.00121    -0.00122    -0.00045    -0.00047
+           4    -0.00000     0.00168    -0.08354    -0.14678    -0.00292    -0.00633
+           5    -0.00000     0.00046    -0.14681     0.08353    -0.00564     0.00332
+           6    -0.95935    -0.16895    -0.00121    -0.00122    -0.00045    -0.00047
+           7    -0.01493     0.00253    -0.08260    -0.14469    -0.10699    -0.19122
+           8    -0.01493     0.00059    -0.14559     0.08202    -0.19049     0.10727
+           9    -0.08039    -0.16849    -0.00020    -0.00095    -0.13664    -0.03862
+          10    -0.00546     0.00234    -0.08251    -0.14479    -0.10678    -0.19129
+          11     0.02040     0.00064    -0.14562     0.08204    -0.19054     0.10729
+          12    -0.08039    -0.16895    -0.00180     0.00009     0.10068    -0.09932
+          13     0.02040     0.00248    -0.08258    -0.14472    -0.10693    -0.19124
+          14    -0.00546     0.00078    -0.14568     0.08211    -0.19069     0.10734
+          15    -0.08039    -0.16941    -0.00164    -0.00279     0.03459     0.13655
+          16     0.00000     0.00112    -0.08426    -0.14827     0.07315     0.12895
+          17     0.00000     0.00030    -0.14767     0.08461     0.12964    -0.07274
+          18     0.02964    -0.16895    -0.00121    -0.00122    -0.00046    -0.00047
+
+                    7           8           9          10          11          12
+ 
+ Frequency          5.98      334.57      334.57      534.04     1215.66     1215.66
+ 
+           1     0.00000    -0.00101    -0.03876    -0.00000     0.04969     0.06397
+           2     0.00006    -0.03876     0.00101    -0.00000    -0.06397     0.04969
+           3    -0.00003    -0.00000    -0.00000    -0.19250     0.00000     0.00000
+           4    -0.00001    -0.01609    -0.61739     0.00000    -0.46454    -0.59812
+           5     0.00002    -0.61739     0.01609     0.00000     0.59812    -0.46454
+           6    -0.00003     0.00000     0.00000     0.00898     0.00000     0.00000
+           7    -0.40666    -0.00296     0.11239    -0.00018    -0.09898    -0.04668
+           8     0.40673     0.11208    -0.00881    -0.00018     0.10745    -0.02073
+           9    -0.00001     0.42939     0.40758    -0.19524     0.05617    -0.44686
+          10     0.55551     0.00600     0.11726    -0.00007    -0.06661    -0.12614
+          11     0.14892     0.10722     0.00015     0.00024     0.02799    -0.05310
+          12    -0.00006    -0.56767     0.16808    -0.19524    -0.41508     0.17478
+          13    -0.14885     0.00573     0.10706     0.00024    -0.01398    -0.05838
+          14    -0.55544     0.11741    -0.00012    -0.00007     0.09575    -0.10573
+          15    -0.00003     0.13828    -0.57565    -0.19524     0.35890     0.27207
+          16    -0.00001     0.00103     0.03937     0.00000     0.00278     0.00358
+          17    -0.00001     0.03937    -0.00103     0.00000    -0.00358     0.00278
+          18    -0.00003     0.00000     0.00000     0.15218     0.00000    -0.00000
+
+                   13          14          15          16          17          18
+ 
+ Frequency       1372.22     1590.87     1590.87     3236.83     3367.82     3367.82
+ 
+           1    -0.00000    -0.05916    -0.04084     0.00000     0.06904     0.05936
+           2    -0.00000     0.04084    -0.05916     0.00000    -0.05936     0.06904
+           3     0.11769     0.00000     0.00000     0.03122     0.00000    -0.00000
+           4     0.00000    -0.07587    -0.05237     0.00000     0.01070     0.00920
+           5     0.00000     0.05237    -0.07587     0.00000    -0.00920     0.01070
+           6     0.20740     0.00000     0.00000     0.01526     0.00000     0.00000
+           7    -0.09806     0.50161    -0.17151     0.39438    -0.02725    -0.52852
+           8    -0.09806    -0.52984     0.01745     0.39438    -0.05230    -0.52663
+           9    -0.49182    -0.04139    -0.22590    -0.12543     0.01415     0.18764
+          10    -0.03589     0.44218     0.56415     0.14435    -0.15028     0.12334
+          11     0.13396     0.20582     0.07688    -0.53873     0.59955    -0.40359
+          12    -0.49182    -0.17495     0.14879    -0.12543     0.15543    -0.10607
+          13     0.13396    -0.16520     0.14485    -0.53873    -0.65328    -0.30914
+          14    -0.03589    -0.21348     0.68426     0.14435     0.16707     0.09941
+          15    -0.49182     0.21633     0.07711    -0.12543    -0.16957    -0.08157
+          16     0.00000     0.00009     0.00006     0.00000    -0.00010    -0.00009
+          17     0.00000    -0.00006     0.00009     0.00000     0.00009    -0.00010
+          18    -0.00707    -0.00000    -0.00000    -0.00057    -0.00000     0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1    -2897.587 ||      -0.000              -0.000            10.878
+    2       -0.960 ||      -0.001              -0.000             0.000
+    3        0.121 ||      -0.001              -0.002             0.000
+    4        0.142 ||       0.003              -0.002            -0.000
+    5        1.523 ||      -0.152              -0.271             0.000
+    6        1.529 ||      -0.271               0.152             0.000
+    7        5.978 ||       0.000               0.000             0.000
+    8      334.569 ||      -0.010              -0.401            -0.000
+    9      334.569 ||      -0.401               0.010            -0.000
+   10      534.036 ||       0.000               0.000            -0.228
+   11     1215.665 ||      -0.658               0.847            -0.000
+   12     1215.665 ||      -0.847              -0.658            -0.000
+   13     1372.216 ||      -0.000              -0.000             1.074
+   14     1590.868 ||       0.265              -0.183            -0.000
+   15     1590.868 ||       0.183               0.265            -0.000
+   16     3236.833 ||       0.000               0.000             0.177
+   17     3367.822 ||       0.268              -0.231            -0.000
+   18     3367.822 ||       0.231               0.268             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1    -2897.587 ||    5.128626         118.321      4999.639     173.396
+    2       -0.960 ||    0.000000           0.000         0.000       0.000
+    3        0.121 ||    0.000000           0.000         0.000       0.000
+    4        0.142 ||    0.000001           0.000         0.001       0.000
+    5        1.523 ||    0.004177           0.096         4.072       0.141
+    6        1.529 ||    0.004177           0.096         4.072       0.141
+    7        5.978 ||    0.000000           0.000         0.000       0.000
+    8      334.569 ||    0.006979           0.161         6.804       0.236
+    9      334.569 ||    0.006979           0.161         6.804       0.236
+   10      534.036 ||    0.002253           0.052         2.196       0.076
+   11     1215.665 ||    0.049807           1.149        48.554       1.684
+   12     1215.665 ||    0.049807           1.149        48.554       1.684
+   13     1372.216 ||    0.049977           1.153        48.720       1.690
+   14     1590.868 ||    0.004480           0.103         4.367       0.151
+   15     1590.868 ||    0.004480           0.103         4.367       0.151
+   16     3236.833 ||    0.001356           0.031         1.322       0.046
+   17     3367.822 ||    0.005427           0.125         5.291       0.183
+   18     3367.822 ||    0.005427           0.125         5.291       0.183
+ ----------------------------------------------------------------------------
+
+
+
+
+
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Projected Nuclear Hessian trans-rot subspace norm:1.0667D-33
+                         (should be close to zero!) 
+
+          --------------------------------------------------------
+          MASS-WEIGHTED PROJECTED HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          --------------------------------------------------------
+
+
+               1            2            3            4            5            6            7            8            9           10
+   ----- ----- ----- ----- -----
+    1    5.31211D+01
+    2   -5.52088D-09  5.31211D+01
+    3   -6.30290D-08 -8.98553D-08  1.02050D+01
+    4   -7.45401D+00 -1.53333D-07  3.52967D-07  3.48623D+01
+    5   -7.82920D-08 -7.45401D+00  3.13526D-07  9.39730D-07  3.48623D+01
+    6    3.85928D-07  2.93359D-07  6.37728D+01 -1.84951D-06 -1.98551D-06 -2.91535D+02
+    7   -5.87911D+01 -4.10673D+01  1.50062D+01 -1.16595D+00 -6.44272D-01 -3.64309D+00  2.11780D+02
+    8   -4.10673D+01 -5.87911D+01  1.50062D+01 -6.44272D-01 -1.16595D+00 -3.64309D+00  1.57294D+02  2.11780D+02
+    9    1.67160D+01  1.67160D+01 -1.35447D+01  1.47471D+01  1.47471D+01 -3.28061D+01 -5.69639D+01 -5.69639D+01  5.53396D+01
+   10   -2.32257D+01  2.05337D+01  5.49264D+00 -6.07991D-01  3.22136D-01 -1.33346D+00  9.37840D+00 -2.36439D+01 -7.90304D+00  7.55593D+01
+   11    2.05337D+01 -9.43564D+01 -2.04988D+01  3.22136D-01 -1.72390D+00  4.97655D+00  8.13754D+00 -1.74794D+01 -7.17257D+00 -7.86472D+01
+   12    6.11847D+00 -2.28344D+01 -1.35447D+01  5.39781D+00 -2.01449D+01 -3.28061D+01 -3.25794D+00  1.01631D+01  5.33399D+00 -2.08502D+01
+   13   -9.43564D+01  2.05337D+01 -2.04988D+01 -1.72390D+00  3.22135D-01  4.97655D+00 -1.74794D+01  8.13754D+00 -7.17257D+00 -4.05052D+00
+   14    2.05337D+01 -2.32257D+01  5.49264D+00  3.22136D-01 -6.07991D-01 -1.33346D+00 -2.36439D+01  9.37840D+00 -7.90304D+00  3.13971D+01
+   15   -2.28344D+01  6.11847D+00 -1.35447D+01 -2.01449D+01  5.39782D+00 -3.28061D+01  1.01631D+01 -3.25794D+00  5.33399D+00  1.04305D+01
+   16    1.21175D-01  4.03641D-09 -4.18995D-08 -1.29980D+00 -7.58847D-08  2.03828D-07  8.12621D-02  1.29957D-01 -8.94174D-02 -3.12847D-02
+   17    3.64436D-08  1.21175D-01 -4.02667D-08 -2.36657D-08 -1.29980D+00  2.09455D-07  1.29958D-01  8.12621D-02 -8.94174D-02 -6.49790D-02
+   18    4.46554D-08  2.33340D-08 -1.34398D+01  5.08517D-07  4.77147D-07  3.91308D+01  4.42462D-01  4.42462D-01  3.11765D+00  1.61952D-01
+
+
+              11           12           13           14           15           16           17           18
+   ----- ----- ----- ----- -----
+   11    3.48001D+02
+   12    7.78141D+01  5.53396D+01
+   13   -3.84351D-01 -2.26011D+00  3.48001D+02
+   14   -4.05052D+00  1.04305D+01 -7.86472D+01  7.55593D+01
+   15   -2.26011D+00  5.33399D+00  7.78141D+01 -2.08502D+01  5.53396D+01
+   16   -6.49784D-02 -3.27291D-02  1.93809D-01 -6.49791D-02  1.22147D-01  1.46919D-01
+   17    1.93809D-01  1.22147D-01 -6.49788D-02 -3.12846D-02 -3.27291D-02  1.19940D-08  1.46919D-01
+   18   -6.04414D-01  3.11765D+00 -6.04414D-01  1.61952D-01  3.11765D+00 -2.74065D-08 -2.61050D-08 -4.85481D-01
+
+ center of mass
+ --------------
+ x =   0.00000000 y =   0.00000000 z =   0.30402228
+
+ moments of inertia (a.u.)
+ ------------------
+         195.261711304765          -0.000000000000           0.000000000000
+          -0.000000000000         195.261711304765           0.000000000000
+           0.000000000000           0.000000000000          11.811693081060
+
+ Rotational Constants
+ --------------------
+ A=   5.096659 cm-1  (  7.332792 K)
+ B=   0.308305 cm-1  (  0.443572 K)
+ C=   0.308305 cm-1  (  0.443572 K)
+
+
+ Temperature                      =   298.15K
+ frequency scaling parameter      =   1.0000
+
+ Zero-Point correction to Energy  =   25.950 kcal/mol  (  0.041354 au)
+ Thermal correction to Energy     =   28.356 kcal/mol  (  0.045189 au)
+ Thermal correction to Enthalpy   =   28.949 kcal/mol  (  0.046133 au)
+
+ Total Entropy                    =   58.287 cal/mol-K
+   - Translational                =   36.575 cal/mol-K (mol. weight =  35.0297)
+   - Rotational                   =   18.546 cal/mol-K (symmetry #  =        3)
+   - Vibrational                  =    3.166 cal/mol-K
+
+ Cv (constant volume heat capacity) =   10.959 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    2.979 cal/mol-K
+   - Vibrational                    =    5.000 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency    -2897.59       -0.00       -0.00        0.00        0.00        0.00
+ 
+           1     0.00000    -0.00851    -0.00588     0.00068     0.00190    -0.24837
+           2     0.00000     0.10732     0.00109    -0.00559    -0.00570    -0.00101
+           3     0.05390    -0.00123    -0.00028    -0.00334    -0.16887    -0.00130
+           4    -0.00000    -0.00354    -0.12322     0.00077     0.00106    -0.11564
+           5    -0.00000     0.05016     0.00006    -0.12306    -0.00027    -0.00078
+           6    -0.95935    -0.00123    -0.00028    -0.00334    -0.16887    -0.00130
+           7    -0.01493    -0.37601     0.01656     0.00019     0.00070    -0.25982
+           8    -0.01493     0.48511     0.00199     0.01804    -0.00540    -0.01577
+           9    -0.08039     0.02822     0.06652     0.06290    -0.17146    -0.07634
+          10    -0.00546     0.49119     0.01819     0.00132     0.00394    -0.29464
+          11     0.02040     0.25275     0.00155     0.01774    -0.00626    -0.00644
+          12    -0.08039    -0.04632     0.02316    -0.09391    -0.16452    -0.02854
+          13     0.02040    -0.14364     0.01700     0.00049     0.00157    -0.26915
+          14    -0.00546    -0.38209     0.00036     0.01691    -0.00863     0.01904
+          15    -0.08039     0.01440    -0.09052     0.02100    -0.17064     0.10097
+          16     0.00000     0.00080    -0.22597     0.00085     0.00033     0.00059
+          17     0.00000     0.00011    -0.00085    -0.22593     0.00447    -0.00057
+          18     0.02964    -0.00123    -0.00028    -0.00334    -0.16887    -0.00130
+
+                    7           8           9          10          11          12
+ 
+ P.Frequency        0.00      334.57      334.57      534.04     1215.66     1215.66
+ 
+           1     0.00305    -0.02676     0.02806     0.00000     0.05811     0.05643
+           2     0.22411     0.02806     0.02676    -0.00000    -0.05643     0.05811
+           3    -0.00379    -0.00000    -0.00000    -0.19250     0.00000     0.00000
+           4     0.00182    -0.42621     0.44695    -0.00000    -0.54330    -0.52761
+           5     0.10447     0.44695     0.42621    -0.00000     0.52761    -0.54330
+           6    -0.00379    -0.00000    -0.00000     0.00898     0.00000     0.00000
+           7     0.17883     0.08174    -0.07719    -0.00018    -0.10451    -0.03244
+           8     0.07215    -0.08531    -0.07322    -0.00018     0.10352    -0.03549
+           9     0.06442    -0.01406    -0.59186    -0.19524    -0.00660    -0.45032
+          10    -0.23651     0.07887    -0.08697    -0.00007    -0.08352    -0.11564
+          11     0.18344    -0.07553    -0.07609     0.00024     0.02032    -0.05648
+          12    -0.09577     0.51960     0.28376    -0.19524    -0.38669     0.23087
+          13     0.06754     0.07183    -0.07959     0.00024    -0.02197    -0.05586
+          14     0.48749    -0.08291    -0.08313    -0.00007     0.08010    -0.11803
+          15     0.01998    -0.50554     0.30811    -0.19524     0.39329     0.21945
+          16     0.00075     0.02718    -0.02851     0.00000     0.00326     0.00316
+          17    -0.00031    -0.02851    -0.02718     0.00000    -0.00316     0.00326
+          18    -0.00379     0.00000     0.00000     0.15218    -0.00000    -0.00000
+
+                   13          14          15          16          17          18
+ 
+ P.Frequency     1372.22     1590.87     1590.87     3236.83     3367.82     3367.82
+ 
+           1    -0.00000    -0.05976     0.03995     0.00000    -0.08527    -0.03192
+           2    -0.00000     0.03995     0.05976     0.00000     0.03192    -0.08527
+           3     0.11769     0.00000    -0.00000     0.03122     0.00000     0.00000
+           4     0.00000    -0.07664     0.05124    -0.00000    -0.01321    -0.00495
+           5     0.00000     0.05124     0.07664     0.00000     0.00495    -0.01321
+           6     0.20740     0.00000    -0.00000     0.01526    -0.00000    -0.00000
+           7    -0.09806     0.49901     0.17895     0.39438     0.20777     0.48673
+           8    -0.09806    -0.52952    -0.02532     0.39438     0.23064     0.47632
+           9    -0.49182    -0.04474     0.22526    -0.12543    -0.07796    -0.17126
+          10    -0.03589     0.45052    -0.55751     0.14435     0.09855    -0.16758
+          11     0.13396     0.20694    -0.07381    -0.53873    -0.42367     0.58553
+          12    -0.49182    -0.17272    -0.15138    -0.12543    -0.10933     0.15315
+          13     0.13396    -0.16303    -0.14729    -0.53873     0.71981     0.06499
+          14    -0.03589    -0.20328    -0.68736     0.14435    -0.19110    -0.03572
+          15    -0.49182     0.21745    -0.07389    -0.12543     0.18730     0.01811
+          16     0.00000     0.00009    -0.00006    -0.00000     0.00013     0.00005
+          17     0.00000    -0.00006    -0.00009    -0.00000    -0.00005     0.00013
+          18    -0.00707     0.00000     0.00000    -0.00057    -0.00000    -0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1    -2897.586 ||      -0.000              -0.000            10.878
+    2       -0.000 ||      -0.009               0.100            -0.000
+    3       -0.000 ||      -0.206              -0.002             0.000
+    4        0.000 ||       0.000              -0.206             0.000
+    5        0.000 ||      -0.001               0.009            -0.000
+    6        0.000 ||      -0.232              -0.000             0.000
+    7        0.000 ||       0.002               0.210            -0.000
+    8      334.569 ||      -0.277               0.290             0.000
+    9      334.569 ||       0.290               0.277             0.000
+   10      534.036 ||      -0.000              -0.000            -0.228
+   11     1215.663 ||      -0.769               0.747            -0.000
+   12     1215.664 ||      -0.747              -0.769            -0.000
+   13     1372.216 ||      -0.000              -0.000             1.074
+   14     1590.869 ||       0.267              -0.179            -0.000
+   15     1590.869 ||      -0.179              -0.267             0.000
+   16     3236.833 ||       0.000               0.000             0.177
+   17     3367.823 ||      -0.331               0.124             0.000
+   18     3367.823 ||      -0.124              -0.331            -0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1    -2897.586 ||    5.128627         118.322      4999.640     173.396
+    2       -0.000 ||    0.000438           0.010         0.427       0.015
+    3       -0.000 ||    0.001831           0.042         1.785       0.062
+    4        0.000 ||    0.001835           0.042         1.789       0.062
+    5        0.000 ||    0.000004           0.000         0.004       0.000
+    6        0.000 ||    0.002343           0.054         2.284       0.079
+    7        0.000 ||    0.001904           0.044         1.856       0.064
+    8      334.569 ||    0.006979           0.161         6.804       0.236
+    9      334.569 ||    0.006979           0.161         6.804       0.236
+   10      534.036 ||    0.002253           0.052         2.196       0.076
+   11     1215.663 ||    0.049807           1.149        48.554       1.684
+   12     1215.664 ||    0.049807           1.149        48.554       1.684
+   13     1372.216 ||    0.049976           1.153        48.719       1.690
+   14     1590.869 ||    0.004480           0.103         4.367       0.151
+   15     1590.869 ||    0.004480           0.103         4.367       0.151
+   16     3236.833 ||    0.001356           0.031         1.322       0.046
+   17     3367.823 ||    0.005427           0.125         5.291       0.183
+   18     3367.823 ||    0.005427           0.125         5.291       0.183
+ ----------------------------------------------------------------------------
+
+
+
+
+
+
+ ===============================================================================
+      Negative Nuclear Hessian Mode    1  Eigenvalue =  -2897.59 cm**(-1)
+ -------------------------------------------------------------------------------
+   Raw step length:  0.514 angstroms ;  The Raw step for this mode is:
+    1 c                    6.0000    -0.00000000    -0.00000000    -0.02852034
+    2 h                    1.0000     0.00000000     0.00000000     0.50766791
+    3 h                    1.0000     0.00790092     0.00790092     0.04254156
+    4 h                    1.0000     0.00289193    -0.01079285     0.04254156
+    5 h                    1.0000    -0.01079285     0.00289193     0.04254156
+    6 f                    9.0000    -0.00000000    -0.00000000    -0.01568657
+
+
+  Geometry after  100.0% step for mode  1; Step length =  0.514 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.959
+    1 c                    6.0000    -0.00000000    -0.00000000    -1.21626040
+    2 h                    1.0000     0.00000000     0.00000000     0.63049575
+    3 h                    1.0000     0.74748755     0.74748755    -1.40353948
+    4 h                    1.0000     0.27359943    -1.02108698    -1.40353948
+    5 h                    1.0000    -1.02108698     0.27359943    -1.40353948
+    6 f                    9.0000    -0.00000000    -0.00000000     1.25478455
+
+
+  Geometry after -100.0% step for mode  1; Step length =  0.514 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.959
+    1 c                    6.0000     0.00000000     0.00000000    -1.15921973
+    2 h                    1.0000    -0.00000000    -0.00000000    -0.38484008
+    3 h                    1.0000     0.73168571     0.73168571    -1.48862260
+    4 h                    1.0000     0.26781556    -0.99950127    -1.48862260
+    5 h                    1.0000    -0.99950127     0.26781556    -1.48862260
+    6 f                    9.0000     0.00000000     0.00000000     1.28615769
+
+
+  Geometry after   50.0% step for mode  1; Step length =  0.257 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.480
+    1 c                    6.0000    -0.00000000    -0.00000000    -1.20200023
+    2 h                    1.0000     0.00000000     0.00000000     0.37666179
+    3 h                    1.0000     0.74353709     0.74353709    -1.42481026
+    4 h                    1.0000     0.27215346    -1.01569055    -1.42481026
+    5 h                    1.0000    -1.01569055     0.27215346    -1.42481026
+    6 f                    9.0000    -0.00000000    -0.00000000     1.26262783
+
+
+  Geometry after  -50.0% step for mode  1; Step length =  0.257 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.480
+    1 c                    6.0000     0.00000000     0.00000000    -1.17347990
+    2 h                    1.0000    -0.00000000    -0.00000000    -0.13100612
+    3 h                    1.0000     0.73563617     0.73563617    -1.46735182
+    4 h                    1.0000     0.26926153    -1.00489770    -1.46735182
+    5 h                    1.0000    -1.00489770     0.26926153    -1.46735182
+    6 f                    9.0000     0.00000000     0.00000000     1.27831440
+
+
+  Geometry after   20.8% step for mode  1; Step length =  0.107 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.200
+    1 c                    6.0000    -0.00000000    -0.00000000    -1.19368581
+    2 h                    1.0000     0.00000000     0.00000000     0.22866329
+    3 h                    1.0000     0.74123377     0.74123377    -1.43721224
+    4 h                    1.0000     0.27131039    -1.01254415    -1.43721224
+    5 h                    1.0000    -1.01254415     0.27131039    -1.43721224
+    6 f                    9.0000    -0.00000000    -0.00000000     1.26720088
+
+
+  Geometry after  -20.8% step for mode  1; Step length =  0.107 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.200
+    1 c                    6.0000     0.00000000     0.00000000    -1.18179432
+    2 h                    1.0000    -0.00000000    -0.00000000     0.01699239
+    3 h                    1.0000     0.73793950     0.73793950    -1.45494984
+    4 h                    1.0000     0.27010460    -1.00804410    -1.45494984
+    5 h                    1.0000    -1.00804410     0.27010460    -1.45494984
+    6 f                    9.0000     0.00000000     0.00000000     1.27374136
+
+
+  Geometry after   10.4% step for mode  1; Step length =  0.054 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.100
+    1 c                    6.0000    -0.00000000    -0.00000000    -1.19071293
+    2 h                    1.0000     0.00000000     0.00000000     0.17574556
+    3 h                    1.0000     0.74041020     0.74041020    -1.44164664
+    4 h                    1.0000     0.27100894    -1.01141914    -1.44164664
+    5 h                    1.0000    -1.01141914     0.27100894    -1.44164664
+    6 f                    9.0000    -0.00000000    -0.00000000     1.26883600
+
+
+  Geometry after  -10.4% step for mode  1; Step length =  0.054 angstroms 
+   Maximum component (any atom: x,y, or z) displacement:  0.100
+    1 c                    6.0000     0.00000000     0.00000000    -1.18476719
+    2 h                    1.0000    -0.00000000    -0.00000000     0.06991011
+    3 h                    1.0000     0.73876306     0.73876306    -1.45051544
+    4 h                    1.0000     0.27040605    -1.00916911    -1.45051544
+    5 h                    1.0000    -1.00916911     0.27040605    -1.45051544
+    6 f                    9.0000     0.00000000     0.00000000     1.27210624
+
+
+ vib:animation  F
+
+ Task  times  cpu:        5.2s     wall:        6.5s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls: 8356     8356     1.69e+05 3.92e+04 9.72e+04 2681        0     8842     
+number of processes/call -4.13e+13 2.53e+13 6.07e+13 0.00e+00 0.00e+00
+bytes total:             1.29e+08 2.89e+07 1.20e+08 0.00e+00 0.00e+00 7.07e+04
+bytes remote:            6.68e+07 4.48e+06 8.63e+07 -1.22e+03 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 903136 bytes
+
+MA_summarize_allocated_blocks: starting scan ...
+MA_summarize_allocated_blocks: scan completed: 0 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         0	         0
+	maximum number of blocks	        26	        36
+	current total bytes		         0	         0
+	maximum total bytes		   1062728	  67393144
+	maximum total K-bytes		      1063	     67394
+	maximum total M-bytes		         2	        68
+
+
+                                     CITATION
+                                     --------
+                Please cite the following reference when publishing
+                           results obtained with NWChem:
+
+                 M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,
+              T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,
+                        E. Apra, T.L. Windus, W.A. de Jong
+                 "NWChem: a comprehensive and scalable open-source
+                  solution for large scale molecular simulations"
+                      Comput. Phys. Commun. 181, 1477 (2010)
+                           doi:10.1016/j.cpc.2010.04.018
+
+                                      AUTHORS
+                                      -------
+          E. Apra, E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski,
+       T. P. Straatsma, M. Valiev, H. J. J. van Dam, D. Wang, T. L. Windus,
+        J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec, K. Lopata,
+    S. A. Fischer, S. Krishnamoorthy, M. Jacquelin, W. Ma, M. Klemm, O. Villa,
+      Y. Chen, V. Anisimov, F. Aquino, S. Hirata, M. T. Hackler, V. Konjkov,
+            D. Mejia-Rodriguez, T. Risthaus, M. Malagoli, A. Marenich,
+   A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,
+        P.-D. Fan, A. Fonari, M. J. Williamson, R. J. Harrison, J. R. Rehr,
+      M. Dupuis, D. Silverstein, D. M. A. Smith, J. Nieplocha, V. Tipparaju,
+    M. Krishnan, B. E. Van Kuiken, A. Vazquez-Mayagoitia, L. Jensen, M. Swart,
+      Q. Wu, T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown,
+      G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall,
+      J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell, D. E. Bernholdt,
+      P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. J. O. Deegan, K. Dyall,
+    D. Elwood, E. Glendening, M. Gutowski, A. C. Hess, J. Jaffe, B. G. Johnson,
+     J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,
+      T. Nakajima, S. Niu, L. Pollack, M. Rosing, K. Glaesemann, G. Sandrone,
+      M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. T. Wong, Z. Zhang.
+       Aggregate GFloating-point ops:  1.8498E-02
+        Aggregate GFLOPS (Real_time):  1.2470E-03
+        Aggregate GFLOPS (Proc_time):  1.6034E-03
+                    Average   GFLOPS:  4.1567E-04
+                    Max       GFLOPS:  4.3107E-04
+                    Min       GFLOPS:  3.9948E-04
+
+ Total times  cpu:       11.5s     wall:       14.8s
