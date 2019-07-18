@@ -1,6 +1,9 @@
 **Material for the 2019 EMSL/ARM Aerosol Summer School**  
 https://pnnl.cvent.com/events/aerosol-summer-school/agenda-a5619d0658f24e799567a97dbb6ef20d.aspx
 
+__This webpage can be reached by using the following URL__  
+https://tinyurl.com/nwaero19
+
 *Instruction for installing NWChem on Mac with Homebrew*   
 
 In Terminal App,  
