@@ -61,7 +61,7 @@ is the only required input in the ET module, although there are other
 optional keywords described
 below.
 
-## FOCK/NOFOCK -- method for calculating the two-electron contribution to <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>
+## FOCK/NOFOCK -- method for calculating the two-electron contribution to  <i>V<sub>RP</sub></i>
 ```
   <string (FOCK||NOFOCK) default FOCK>
 ```
