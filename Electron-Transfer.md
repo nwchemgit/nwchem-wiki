@@ -3,7 +3,7 @@
 The NWChem electron transfer (ET) module calculates the electronic
 coupling energy (also called the electron transfer matrix element)
 between ET reactant and product states. The electronic coupling
-(<img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>), activation energy (<img alt="$\Delta G^{*}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d4b6f1efc7506d98c4c1182d400b8b19.svg?invert_in_darkmode&sanitize=true" align=middle width="33.23397pt" height="22.59873pt"/>), and nuclear
+(<i>V<sub>RP</sub></i>), and nuclear
 reorganization energy (λ) are all components of the electron transfer
 rate defined by Marcus' theory, which also depends on the temperature
 (see Reference 1
@@ -12,13 +12,13 @@ below):
 <img alt="${k_{ET}}= \frac{2\pi}{\hbar} V_{RP}^{2} \frac{1}{\sqrt{4\pi \lambda k_{B}T}} \exp \left( \frac{- \Delta G^{*}}{k_{B} T} \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/534ce113598ba681e3cbb214b4ef4072.svg?invert_in_darkmode&sanitize=true" align=middle width="255.900645pt" height="37.80348pt"/>
 
 The ET module utilizes the method of *Corresponding Orbital
-Transformation* to calculate <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>. The only input required are the
+Transformation* to calculate <i>V<sub>RP</sub></i>. The only input required are the
 names of the files containing the open-shell (UHF) MO vectors for the ET
 reactant and product states (*R* and *P*).
 
-The basis set used in the calculation of <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> must be the same as
+The basis set used in the calculation of <i>V<sub>RP</sub></i> must be the same as
 the basis set used to calculate the MO vectors of *R* and *P*. The
-magnitude of <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> depends on the amount of overlap between *R* and
+magnitude of <i>V<sub>RP</sub></i>> depends on the amount of overlap between *R* and
 *P*, which is important to consider when choosing the basis set. Diffuse
 functions may be necessary to fill in the overlap, particularly when the
 ET distance is long.
@@ -83,7 +83,7 @@ The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the two-electron contribution to the
 Hamiltonian between the electron transfer reactant and product states.
 As a default, tol2e is set depending on the magnitude of the overlap
-between the ET reactant and product states (<img alt="$S_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/09e2ae89de9087b174958724cbf3e4e9.svg?invert_in_darkmode&sanitize=true" align=middle width="30.06795pt" height="22.38192pt"/>), and is not less
+between the ET reactant and product states (<i>S<sub>RP</sub></i>), and is not less
 than 1.0d-12 or greater than 1.0d-7.
 
 The input to specify the threshold explicitly within the ET directive
@@ -195,9 +195,9 @@ Here is what the output looks like for this example:
                                                     0.000599 eV
                                                        0.014 kcal/mol
 ```
-The overlap between the ET reactant and product states (<img alt="$S_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/09e2ae89de9087b174958724cbf3e4e9.svg?invert_in_darkmode&sanitize=true" align=middle width="30.06795pt" height="22.38192pt"/>) is
+The overlap between the ET reactant and product states (<i>S<sub>RP</sub></i>) is
 small, so the magnitude of the coupling between the states is also
 small. If the fragment guess or charged atomic density guess were not
 used, the Mulliken spin population would be 0.5 on both He atoms, the
 overlap between the ET reactant and product states would be 100 % and an
-infinite <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/> would result.
+infinite <i>V<sub>RP</sub></i> would result.
