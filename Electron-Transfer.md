@@ -50,10 +50,10 @@ third reference details the method used in the ET module.
     Soc., 112, 4206 (1990).
 
 ## VECTORS -- input of MO vectors for ET reactant and product states
-
-` VECTORS [reactants] `<string reactants_filename>  
-` VECTORS [products ] `<string products_filename>
-
+```
+ VECTORS [reactants] <string reactants_filename>  
+ VECTORS [products ] <string products_filename>
+```
 In the VECTORS directive the user specifies the source of the molecular
 orbital vectors for the ET reactant and product states. This is required
 input, as no default filename will be set by the program. In fact, this
@@ -62,9 +62,9 @@ optional keywords described
 below.
 
 ## FOCK/NOFOCK -- method for calculating the two-electron contribution to <img alt="$V_{RP}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cb79cac616f73ccf51965af40c2b949.svg?invert_in_darkmode&sanitize=true" align=middle width="29.57889pt" height="22.38192pt"/>
-
-`  <string (FOCK||NOFOCK) default FOCK>`
-
+```
+  <string (FOCK||NOFOCK) default FOCK>
+```
 This directive enables/disables the use of the NWChem's Fock matrix
 routine in the calculation of the two-electron portion of the ET
 Hamiltonian. Since the Fock matrix routine has been optimized for speed,
@@ -76,9 +76,9 @@ for systems with a small number of basis functions, although it is
 slower.
 
 ## TOL2E -- integral screening threshold
-
-` TOL2E <real tol2e default max(10e-12,min(10e-7, S(RP)*10e-7 )>`
-
+```
+ TOL2E <real tol2e default max(10e-12,min(10e-7, S(RP)*10e-7 )>
+```
 The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the two-electron contribution to the
 Hamiltonian between the electron transfer reactant and product states.
