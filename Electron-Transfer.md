@@ -18,13 +18,13 @@ reactant and product states (*R* and *P*).
 
 The basis set used in the calculation of <i>V<sub>RP</sub></i> must be the same as
 the basis set used to calculate the MO vectors of *R* and *P*. The
-magnitude of <i>V<sub>RP</sub></i>> depends on the amount of overlap between *R* and
+magnitude of <i>V<sub>RP</sub></i> depends on the amount of overlap between *R* and
 *P*, which is important to consider when choosing the basis set. Diffuse
 functions may be necessary to fill in the overlap, particularly when the
 ET distance is long.
 
 The MO's of *R* and *P* must correspond to localized states. for
-instance, in the reaction <img alt="$A^{ -} B \rightarrow  A B^{ -}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/15728481d59878d0e5ad1e52c3c03e12.svg?invert_in_darkmode&sanitize=true" align=middle width="97.899945pt" height="26.12412pt"/> the
+instance, in the reaction A<sup>-</sup> + B &rarr; A + B<sup>-</sup>  the
 transferring electron is localized on A in the reactant state and is
 localized on B in the product state. To verify the localization of the
 electron in the calculation of the vectors, carefully examine the
