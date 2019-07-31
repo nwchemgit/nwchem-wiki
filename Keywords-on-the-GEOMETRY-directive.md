@@ -30,9 +30,10 @@ list describes all options and their defaults.
     code, regardless of the option specified for the input units. The
     default conversion factor used in the code to convert from Angstrøms
     to Bohr is 1.8897265 which may be overidden with the
-    `angstrom_to_au` keyword described below.). The code recognizes the
+    `angstrom_to_au` keyword described below.).  
+     The code recognizes the
     following possible values for the string variable <units>:
-      - `angstroms` or an -- Angstroms , the default (converts to A.U.
+      - `angstroms` or `an` -- Angstroms , the default (converts to A.U.
         using the Angstrom to A.U. conversion factor)
       - `au` or `atomic` or `bohr` -- Atomic units (A.U.)
       - `nm` or `nanometers` -- nanometers (converts to A.U. using a
@@ -47,7 +48,7 @@ list describes all options and their defaults.
   - `bqbq` - keyword to specify the treatment of interactions between
     dummy centers. The default in NWChem is to ignore such interactions
     when computing energies or energy derivatives. These interactions
-    will be included if the keyword bqbq is specified.
+    will be included if the keyword `bqbq` is specified.
   - `print` and `noprint` - complementary keyword pair to enable or disable
     printing of the geometry. The default is to print the output
     associated with the geometry. In addition, the keyword print may be
