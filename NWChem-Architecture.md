@@ -69,18 +69,18 @@ As an illustration of what comprises a geometry object, the following
 table contains a partial listing of the database contents for a water
 molecule geometry named "test geom". Each entry contains the field test
 geom, which is the unique name of the object.
-
-`Contents of RTDB h2o.db`  
-`-----------------------`  
-`Entry                                   Type[nelem]`  
-`---------------------------  ----------------------`  
-`geometry:test geom:efield             double[3]    `  
-`geometry:test geom:coords             double[9]    `  
-`geometry:test geom:ncenter               int[1]    `  
-`geometry:test geom:charges            double[3]    `  
-`geometry:test geom:tags                 char[6]`  
-`...`
-
+```
+Contents of RTDB h2o.db  
+-----------------------  
+Entry                                   Type[nelem]  
+---------------------------  ----------------------  
+geometry:test geom:efield             double[3]      
+geometry:test geom:coords             double[9]      
+geometry:test geom:ncenter               int[1]      
+geometry:test geom:charges            double[3]      
+geometry:test geom:tags                 char[6] 
+...
+```
 Using this convention, multiple instances of objects may be stored with
 different names in the same database. For example, if a user needed to
 do calculations considering alternative geometries for the water
@@ -90,13 +90,13 @@ names.
 
 The runtime database contents for the file h2o.db listed above were
 generated from the user-specified input directive,
-
-` geometry "test geom"`  
-`   O     0.00000000    0.00000000    0.00000000`  
-`   H     0.00000000    1.43042809   -1.10715266`  
-`   H     0.00000000   -1.43042809   -1.10715266`  
-` end`
-
+```
+ geometry "test geom"  
+   O     0.00000000    0.00000000    0.00000000 
+   H     0.00000000    1.43042809   -1.10715266 
+   H     0.00000000   -1.43042809   -1.10715266  
+ end
+```
 The [GEOMETRY](Geometry "wikilink") directive allows the user to specify
 the coordinates of the atoms (or centers), and identify the geometry
 with a unique name.
@@ -108,9 +108,9 @@ for when executing a calculation. The SET directive can be used in the
 input to force NWChem to look for a geometry with a name other than
 geometry. For example, to specify use of the geometry with the name
 "test geom" in the example above, the SET directive is as follows:
-
-`set geometry "test geom"`
-
+```
+set geometry "test geom"
+```
 NWChem will automatically check for such indirections when loading
 geometries. Storage of data associated with basis sets, the other
 database resident object, functions in a similar fashion, using the
