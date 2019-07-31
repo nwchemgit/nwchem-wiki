@@ -18,48 +18,48 @@ form,
 All of the keywords and input on this line are optional. The following
 list describes all options and their defaults.
 
-  - <name> - user-supplied name for the geometry; the default name is
+  - `<name>` - user-supplied name for the geometry; the default name is
     geometry, and all NWChem modules look for a geometry with this name.
     However, multiple geometries may be specified by using a different
     name for each. Subsequently, the user can direct a module to a named
     geometry by using the SET directive (see the example in Section 5.7)
     to associate the default name of geometry with the alternate name.
-  - units - keyword specifying that a value will be entered by the user
+  - `units` - keyword specifying that a value will be entered by the user
     for the string variable <units>. The default units for the geometry
     input are Angstrøms (Note: atomic units or Bohr are used within the
     code, regardless of the option specified for the input units. The
     default conversion factor used in the code to convert from Angstrøms
     to Bohr is 1.8897265 which may be overidden with the
-    angstrom\_to\_au keyword described below.). The code recognizes the
+    `angstrom_to_au` keyword described below.). The code recognizes the
     following possible values for the string variable <units>:
-      - angstroms or an -- Angstroms , the default (converts to A.U.
+      - `angstroms` or an -- Angstroms , the default (converts to A.U.
         using the Angstrom to A.U. conversion factor)
-      - au or atomic or bohr -- Atomic units (A.U.)
-      - nm or nanometers -- nanometers (converts to A.U. using a
+      - `au` or `atomic` or `bohr` -- Atomic units (A.U.)
+      - `nm` or `nanometers` -- nanometers (converts to A.U. using a
         conversion factor computed as 10.0 times the Angstrom to A.U.
         conversion factor)
-      - pm or picometers -- picometers (converts to A.U. using a
+      - `pm` or `picometers` -- `picometers` (converts to A.U. using a
         conversion factor computed as 0.01 times the Angstrom to A.U.
         conversion factor)
-  - angstrom\_to\_au - may also be specified as ang2au. This enables the
+  - `angstrom_to_au` - may also be specified as `ang2au`. This enables the
     user to modify the conversion factors used to convert between
     Angstrom and A.U.. The default value is 1.8897265.
-  - bqbq - keyword to specify the treatment of interactions between
+  - `bqbq` - keyword to specify the treatment of interactions between
     dummy centers. The default in NWChem is to ignore such interactions
     when computing energies or energy derivatives. These interactions
     will be included if the keyword bqbq is specified.
-  - print and noprint - complementary keyword pair to enable or disable
+  - `print` and `noprint` - complementary keyword pair to enable or disable
     printing of the geometry. The default is to print the output
     associated with the geometry. In addition, the keyword print may be
     qualified by the additional keyword xyz, which specifies that the
     coordinates should be printed in the XYZ format of molecular
     graphics program XMol
-  - center and nocenter - complementary keyword pair to enable or
+  - `center` and `nocenter` - complementary keyword pair to enable or
     disable translation of the center of nuclear charge to the origin.
     With the origin at this position, all three components of the
     nuclear dipole are zero. The default is to move the center of
     nuclear charge to the origin.
-  - autosym and noautosym - keyword to specify that the symmetry of the
+  - `autosym` and `noautosym` - keyword to specify that the symmetry of the
     geometric system should be automatically determined. This option is
     on by default, but can be turned off with noautosym. Only groups up
     to and including O<sub>h</sub> are recognized. Occasionally NWChem will
@@ -72,21 +72,21 @@ list describes all options and their defaults.
     Input](SYMMETRY----Symmetry-Group-Input "wikilink")). Also note
     that if symmetry equivalent atoms have different tags in the
     geometry they will not be detected as symmetry equivalent by the
-    autosym capability. The reason for this is that atoms with different
+    `autosym` capability. The reason for this is that atoms with different
     tags might be assigned different basis sets, for example, after
     which they are no longer symmetry equivalent. Therefore autosym
     chooses to make the save choice.
-  - noautoz - by default NWChem (release 3.3 and later) will generate
+  - `noautoz` - by default NWChem (release 3.3 and later) will generate
     redundant internal coordinates from user input Cartesian
     coordinates. The internal coordinates will be used in geometry
-    optimizations. The noautoz keyword disables use of internal
-    coordinates. The autoz keyword is provided only for backward
+    optimizations. The `noautoz` keyword disables use of internal
+    coordinates. The `autoz` keyword is provided only for backward
     compatibility. See [Forcing internal
     coordinates](ZCOORD----Forcing-internal-coordinates "wikilink") for
     a more detailed description of redundant internal coordinates,
     including how to force the definition of specific internal variables
     in combination with automatically generated variables.
-  - adjust - This indicates that an existing geometry is to be adjusted.
+  - `adjust` - This indicates that an existing geometry is to be adjusted.
     Only new input for the redundant internal coordinates may be
     provided ([ZCOORD -- Forcing internal
     coordinates](ZCOORD----Forcing-internal-coordinates "wikilink")). It
@@ -94,11 +94,11 @@ list describes all options and their defaults.
     using this keyword. See [Forcing internal
     coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink") for
     an example of its usage.
-  - nucleus - keyword to specify the default model for the nuclear
+  - `nucleus` - keyword to specify the default model for the nuclear
     charge distribution. The following values are recognized:
-      - point or pt -- point nuclear charge distribution. This is the
+      - `point` or `pt` -- point nuclear charge distribution. This is the
         default.
-      - finite or fi -- finite nuclear charge distribution with a
+      - `finite` or `fi` -- finite nuclear charge distribution with a
         Gaussian shape. The RMS radius of the Gaussian is determined
         from the nuclear mass number A by the expression
         <pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
