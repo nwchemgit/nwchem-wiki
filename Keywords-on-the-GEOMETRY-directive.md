@@ -22,7 +22,7 @@ list describes all options and their defaults.
     geometry, and all NWChem modules look for a geometry with this name.
     However, multiple geometries may be specified by using a different
     name for each. Subsequently, the user can direct a module to a named
-    geometry by using the SET directive (see the example in Section 5.7)
+    geometry by using the SET directive (see the example in the [SET Section](SET "wikilink")))
     to associate the default name of geometry with the alternate name.
   - `units` - keyword specifying that a value will be entered by the user
     for the string variable <units>. The default units for the geometry
