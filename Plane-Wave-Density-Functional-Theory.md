@@ -2045,6 +2045,7 @@ NWPW
     [UPDATE <integer meta_update default 1>]  
     [PRINT_SHIFT <integer print_shift default 0>]
     [TEMPERED <real tempered_temperature no default>]  
+    [BOUNDARY <real w_boundary sigma_boundary no default>]
   END
 END
 ```
