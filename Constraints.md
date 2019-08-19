@@ -96,3 +96,5 @@ directive can be repeated within a given constraints block. If the
 spring between the same pair of atoms is defined more than once, it will
 be replaced by the latest specification in the order it appears in the
 input block.
+
+- spring dihedral places a spring with....
