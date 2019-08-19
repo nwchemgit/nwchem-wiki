@@ -11,7 +11,8 @@ CONSTRAINTS [string name ] \
           [clear] \  
           [enable||disable] \  
           [fix atom <integer list>] \  
-          [spring bond `<integer atom1> <integer atom2> <real k> <real r0> ]  
+          [spring bond <integer atom1> <integer atom2> <real k> <real r0> ]  
+          [spring dihedral <integer atom1> <integer atom2> <integer atom3> <integer atom4> <real k> <real phi0 in degrees> ] 
           [spring bondings <real K0> <real gamma0> [<real ca> <integer atom1a> <integer atom2a> 
                                              <real cb> <integer atom1b> <integer atom2b>
                                              ...]]
