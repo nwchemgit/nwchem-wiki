@@ -398,8 +398,7 @@ hardware include:
 | ATLAS       | <http://math-atlas.sf.net>                                                                    |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 
-**New after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e:** )  
-If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containg the LAPACK toutines.
+**Newafter commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e )**:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containg the LAPACK toutines.
 
 NWChem can also take advantage of the [ScaLAPACK
 library](http://www.netlib.org/scalapack/) if it is installed on your
