@@ -1,6 +1,6 @@
 
 
-# Density Functional Theory
+# Density Functional Theory (DFT)
 
 The NWChem density functional theory (DFT) module uses the Gaussian
 basis set approach to compute closed shell and open shell densities and
