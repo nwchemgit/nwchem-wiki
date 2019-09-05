@@ -44,7 +44,7 @@ Examining the keywords on the first line of the BASIS directive:
     The user can associate the "ao basis" with another named basis using
     the SET directive (see [SET](Top-level#SET "wikilink")).
 
-  -   [SPHERICAL or CARTESIAN](#spherical-or-cartesian):  
+  -   [SPHERICAL or CARTESIAN](#-spherical-or-cartesian)   
     The keywords spherical and cartesian offer the option of using
     either spherical-harmonic (5 d, 7 f, 9 g, ...) or Cartesian (6 d, 10
     f, 15 g, ...) angular functions. The default is Cartesian. Note that
