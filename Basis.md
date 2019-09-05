@@ -10,8 +10,8 @@ Potential](ECP "wikilink") (ECP) that is associated with a
 basis set.
 
 The basis functions to be used for a given calculation can be drawn from
-a standard set in the [EMSL basis set
-library](https://bse.pnl.gov/bse/portal) that is included in the release
+a standard set in the [Basis set
+library](https://www.basissetexchange.org/) that is included in the release
 of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
