@@ -72,6 +72,8 @@ feedback on this page content.
   -  **Artaios** A code for calculating spin-dependent electron transport properties for molecular junctions in the coherent tunneling regime<https://www.chemie.uni-hamburg.de/institute/ac/arbeitsgruppen/herrmann/software/artaios.html>
   -  **Cuby**  A computational chemistry framework that provides  access to various computational methods available in different software package <http://cuby.molecular.cz/?page=Interfaces>
   - **autoDIAS** A python tool for an automated Distortion/Interaction Activation Strain Analysis <https://github.com/dsvatunek/autoDIAS>
+  - **PolyParGen** provides OPLS-AA and Amber force field parameters for polymers or large molecules <http://polypargen.com>
+  - **BiKi Life Sciences** is a suite for Molecular Dynamics and related methods in Drug Discovery <http://www.bikitech.com/products/>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
