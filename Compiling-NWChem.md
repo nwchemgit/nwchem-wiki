@@ -1448,6 +1448,16 @@ Then, you can start the compilation by typing
 % make nwchem_config  
 % make FC=gfortran DEPEND_CC=gcc
 ```
+### MSYS2
+
+https://github.com/msys2/msys2/wiki/MSYS2-installation
+```
+pacman -Syuu
+pacman -S mingw32/mingw-w64-i686-gcc-fortran
+pacman -S mingw32/mingw-w64-i686-python3
+pacman -S msys/make
+```
+
 ## WSL on Windows 10
 A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL). 
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
