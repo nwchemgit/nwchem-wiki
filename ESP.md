@@ -129,7 +129,7 @@ default of 0.001 e.
 ## Plotting
 
 The electrostatic potential computed on a grid can be displayed using
-the gOpenMol [1](http://www.csc.fi/english/pages/g0penMol) code.
+the  [gOpenMol](https://research.csc.fi/-/gopenmol_download)  code.
 
 A necessary step requires to convert the .plt file computed by the ESP
 module from human readable to machine readable format; this can be

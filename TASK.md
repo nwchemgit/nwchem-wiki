@@ -38,9 +38,9 @@ for the TASK directive are discussed in the following sections.
 
 This is the most commonly used version of the TASK directive, and it has
 the following form:
-
-`TASK `<string theory>` [`<string operation default energy>`] [ignore]`
-
+```
+TASK <string theory> [<string operation default energy>] [ignore]
+```
 The string <theory> specifies the level of theory to be used in the
 calculations for this task. NWChem currently supports ten different
 options. These are listed below, with the corresponding entry for the
@@ -116,19 +116,19 @@ single point energy evaluation using any level of theory, the directive
 is very simple, since the energy evaluation is the default for the
 string operation. For an SCF energy calculation, the input line is
 simply
-
-`task scf`
-
+```
+task scf
+```
 Equivalently, the operation can be specified explicitly, using the
 directive
-
-`task scf energy`
-
+```
+task scf energy
+```
 Similarly, to perform a geometry optimization using density functional
 theory, the TASK directive is
-
-`task dft optimize`
-
+```
+task dft optimize
+```
 The optional keyword ignore can be used to allow execution to continue
 even if the task fails, as discussed above. An example with the keyword
 ignore can be found in the [DFT
@@ -143,9 +143,9 @@ has not yet been implemented in a fashion that applies to a wide range
 of theories (e.g., property evaluation). Instead of requiring theory and
 operation as input, the directive needs only a string identifying the
 task. The form of the directive in such cases is as follows:
-
-`TASK `<string task>` [ignore]`
-
+```
+TASK <string task> [ignore]
+```
 The supported tasks that can be accessed with this form of the TASK
 directive are listed below, with the corresponding entries for string
 variable
@@ -169,9 +169,9 @@ This form of the TASK directive is supported only on machines with a
 fully UNIX-style operating system. This directive causes specified
 processes to be executed using the Bourne shell. This form of the task
 directive is:
-
-`TASK shell [(`<integer-range process = 0>`||all)]  `<string command>
-
+```
+TASK shell [(<integer-range process = 0>||all)]  <string command>
+```
 The keyword shell is required for this directive. It specifies that the
 given command will be executed in the Bourne shell. The user can also
 specify which process(es) will execute this command by entering values
@@ -185,19 +185,19 @@ string includes white space, it must be enclosed in double quotes.
 For example, the TASK directive to tell process zero to copy the
 molecular orbitals file to a backup location /piofs/save can be input as
 follows:
-
-`task shell "cp *.movecs /piofs/save"`
-
+```
+task shell "cp *.movecs /piofs/save"
+```
 The TASK directive to tell all processes to list the contents of their
 /scratch directories is as follows:
-
-`task shell all "ls -l /scratch"`
-
+```
+task shell all "ls -l /scratch"
+```
 The TASK directive to tell processes 0 to 10 to remove the contents of
 the current directory is as follows:
-
-`task shell 0:10:1 "/bin/rm -f *"`
-
+```
+task shell 0:10:1 "/bin/rm -f *"
+```
 Note that NWChem's ability to quote special input characters is very
 limited when compared with that of the Bourne shell. To execute all but
 the simplest UNIX commands, it is usually much easier to put the shell
@@ -209,9 +209,9 @@ This is very similar to the most commonly used version of the [TASK
 directive](TASK "wikilink"),
 and it has the following
 form:
-
-`TASK QMMM `<string theory>` [`<string operation default energy>`] [ignore]`
-
+```
+TASK QMMM <string theory> [<string operation default energy>] [ignore]
+```
 The string <theory> specifies the QM theory to be used in the QM/MM
 simulation. If theory is "md" this is not a QM/MM simulation and will
 result in an appropriate error. The level of theory may be any QM method
@@ -345,7 +345,7 @@ mp2; end
 bsse   
  mon metal 1   
  charge 2   
- input_wghost "scf\; maxiter 200\; end"   
+ input_wghost "scf; maxiter 200; end"   
  mon water 2 3 4  
 end  
 task mp2 optimize

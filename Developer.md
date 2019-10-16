@@ -167,7 +167,7 @@ The archive of the NWChem Mailing list can be found
 ## NWChem Wiki Page Guidelines
 
 Follow the link to the [NWChem Wiki Page
-Guidelines](Guidelines_for_Authors "wikilink").
+Guidelines](Guidelines-for-Authors "wikilink").
 
 ## NWChem Doxygen documentation
 

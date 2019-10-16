@@ -1,0 +1,25 @@
+echo
+
+start opt_ch3hf
+# $Id$
+
+title "Find the saddle point for CH3 + HF <-> CH4 + F"
+
+geometry autosym
+  c    0.000   0.000  -1.220
+  h    0.000   0.000   0.029
+  h    1.063   0.000  -1.407
+  h   -0.531  -0.921  -1.407
+  h   -0.531   0.921  -1.407
+  f    0.000   0.000   1.279
+end
+
+basis
+  c library 3-21g; h library 3-21g; f library 3-21g
+end
+
+scf; doublet; uhf; thresh 1e-6; print none; end
+
+task scf optimize
+
+task scf freq

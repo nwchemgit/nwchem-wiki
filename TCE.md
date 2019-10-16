@@ -996,7 +996,7 @@ used). When zero or negative value is specified, the DIIS is turned off.
 It is not recommended to perform DIIS every iteration, whereas setting a
 large value for this parameter necessitates a large memory (disk) space
 to keep the excitation amplitudes of previous iterations. In 5.0 version
-we significantly improved the DIIS solver by re-organizing the itrative
+we significantly improved the DIIS solver by re-organizing the iterative
 process and by introducing the level shift option (lshift) that enable
 to increase small orbital energy differences used in calculating the
 up-dates for cluster amplitudes. Typical values for lshift oscillates
@@ -1144,8 +1144,12 @@ while the buffer root is determined with relax conv. criterion 1.0d-3.
 In the 5.0 version a new option has been added in order to provide more
 economical way of storing two-electron integrals used in CC calculations
 based on the RHF and ROHF references. The 2EORB keyword can be used for
-all CC methods except for those using an active-space (CCSDt). All
-two-electron integrals are transformed and subsequently stored in a way
+all CC methods except for those using an active-space (CCSDt) up to NWChem version 
+6.3. After that, further optimization restricted the use of 2EORB to 
+CCSD-based methods. Note that the four-index transformation is usually
+an insignificant amount of the wall time for methods involving iterative
+triples anyway. 
+With 2EORB, all two-electron integrals are transformed and subsequently stored in a way
 which is compatible with assumed tiling scheme. The transformation from
 orbital to spinorbital form of the two-electron integrals is performed
 on-the-fly during execution of the CC module. This option, although
@@ -1163,8 +1167,9 @@ of the 5.0 2EORB 4-index transformation. In order to give the user a
 full control over this part of the TCE code several keywords were
 designed to define the most vital parameters that determine the
 perfromance of 4-index transformation. All new keywords must be used
-with the 2EORB keyword. The 2emet keyword (default value 1 or 2emet 1,
-refers to the older 4-index transformation), defines the algorithm to be
+with the 2EORB keyword, and thus will not work beyond CCSD methods after 
+NWChem 6.3 (see explanation for 2EORB above). The 2emet keyword (default 
+value 1 or 2emet 1, refers to the older 4-index transformation), defines the algorithm to be
 used. By putting 2emet 2 the TCE code will execute the algoritm based on
 the two step procedure with two intermediate files. In some instances
 this algorithm is characterized by better timings compared to algorithms

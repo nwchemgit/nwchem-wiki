@@ -13,5 +13,6 @@ The PERMANENT_DIR directives enable the user to specify a single
 directory for all processes or different directories for different
 processes. The general form of the directive is as
 follows:
-
-`(PERMANENT_DIR) [(<string host>||`<integer process>`):]  `<string directory>`  [...]`
+```
+(PERMANENT_DIR) [(<string host>||<integer process>):]  <string directory>  [...]
+```
