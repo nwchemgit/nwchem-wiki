@@ -265,7 +265,7 @@ Note:
 When MPI is used, the appropriate MPI run command should be used to
 start an NWChem calculation, e.g.
 ```
-  % mpirun -np 8 $NWCHEM_TOP/bin/${NWCHEM_TARGET}}/nwchem h2o.nw
+  % mpirun -np 8 $NWCHEM_TOP/bin/${NWCHEM_TARGET}/nwchem h2o.nw
 ```
 When all nodes are connected via shared memory and the ch\_shmem version
 of MPICH is installed and used, NWChem can be called directly, e.g.
