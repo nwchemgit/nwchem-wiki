@@ -1,6 +1,6 @@
 # COSMO Solvation Model
 
-COSMO is the continuum solvation \`COnductor-like Screening MOdel' of A.
+COSMO is the continuum solvation 'COnductor-like Screening MOdel' of A.
 Klamt and G. Schüürmann to describe dielectric screening effects in
 solvents\[1\]. This model has been enhanced by D.M. York and M.
 Karplus\[2\] to create a smooth potential energy surface. The latter
@@ -49,26 +49,26 @@ experimental data is made.
 
 Invoking the COSMO solvation model is done by specifying the input COSMO
 input block with the input options as:
-
-`cosmo`  
-`  [off]`  
-`  [dielec  <real dielec default 78.4>]`  
-`  [parameters `<filename>`]`  
-`  [radius  `<real atom1>  
-`           `<real atom2>  
-`      . . .`  
-`           `<real atomN>`]`  
-`  [iscren  <integer iscren default 0>]`  
-`  [minbem  <integer minbem default 2>]`  
-`  [ificos  <integer ificos default 0>]`  
-`  [lineq   <integer lineq default 1>]`  
-`  [zeta <real zeta default 0.98>]`  
-`  [gamma_s <real gammas default 1.0>]`  
-`  [sw_tol <real swtol default 1.0e-4>]`  
-`  [do_gasphase `<logical do_gasphase default True>`]`  
-`  [do_cosmo_ks]`  
-`end`
-
+```
+cosmo  
+  [off]  
+  [dielec  <real dielec default 78.4>]  
+  [parameters <filename>]  
+  [radius  <real atom1>  
+           <real atom2>  
+      . . .  
+           <real atomN>]  
+  [iscren  <integer iscren default 0>]  
+  [minbem  <integer minbem default 2>]  
+  [ificos  <integer ificos default 0>]  
+  [lineq   <integer lineq default 1>]  
+  [zeta <real zeta default 0.98>]  
+  [gamma_s <real gammas default 1.0>]  
+  [sw_tol <real swtol default 1.0e-4>]  
+  [do_gasphase  <logical do_gasphase default True>] 
+  [do_cosmo_ks]  
+end
+```
 followed by the task directive specifying the wavefunction and type of
 calculation, e.g., "task scf energy", "task mp2 energy", "task dft
 optimize", etc.
@@ -107,35 +107,35 @@ vdw radii: 1.17 (+/- 0.02) \* Bondi radius\[3\]
 optimal vdw radii for H, C, N, O, F, S, Cl, Br, I\[4\]
 
 for heavy elements: 1.17\*1.9
-
-`     data (vander(i),i=1,102)`  
-`    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,`  
-`    2   1.830,1.720,1.720,1.8018,1.755,1.638,`  
-`    3   1.404,2.457,2.106,2.160,2.05,2.223,`  
-`    4   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    5   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    6   2.223,2.223,2.223,2.223,2.160,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    8   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    9   2.223,2.223,2.223,2.223,2.320,2.223,`  
-`    1   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    2   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    3   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    4   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    5   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    6   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223,`  
-`    7   2.223,2.223,2.223,2.223,2.223,2.223/`
-
+```
+     data (vander(i),i=1,102)  
+    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,  
+    2   1.830,1.720,1.720,1.8018,1.755,1.638,  
+    3   1.404,2.457,2.106,2.160,2.05,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.160,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    8   2.223,2.223,2.223,2.223,2.223,2.223,  
+    9   2.223,2.223,2.223,2.223,2.320,2.223,  
+    1   2.223,2.223,2.223,2.223,2.223,2.223,  
+    2   2.223,2.223,2.223,2.223,2.223,2.223,  
+    3   2.223,2.223,2.223,2.223,2.223,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223/
+```
 For examples see Stefanovich et al.\[5\] and Barone et al.\[6\]
 
 "Rsolv" is no longer used.
 
-"Iscren' is a flag to define the dielectric charge scaling option.
+"Iscren" is a flag to define the dielectric charge scaling option.
 "iscren 1" implies the original scaling from Klamt and Schüürmann,
-mainly "\((\epsilon-1)/(\epsilon+1/2)\)", where \(\epsilon\) is the
+mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. "iscren 0" implies the modified scaling suggested
-by Stefanovich and Truong\[7\], mainly "\((\epsilon-1)/\epsilon\)".
+by Stefanovich and Truong\[7\], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
@@ -200,65 +200,65 @@ distributions.
 The following example is for a water molecule in \`water', using the
 HF/6-31G\*\* level of
 theory:
-
-`start`  
-`echo`  
-` title "h2o"`  
-`geometry`  
-` o                  .0000000000         .0000000000        -.0486020332`  
-` h                  .7545655371         .0000000000         .5243010666`  
-` h                 -.7545655371         .0000000000         .5243010666`  
-`end`  
-`basis segment cartesian`  
-` o library 6-31g**`  
-` h library 6-31g**`  
-`end`  
-`cosmo`  
-` dielec 78.0`  
-` radius 1.40`  
-`        1.16`  
-`        1.16`  
-` lineq  0`  
-`end`  
-`task scf energy`
-
+```
+start  
+echo  
+ title "h2o"  
+geometry  
+ o                  .0000000000         .0000000000        -.0486020332  
+ h                  .7545655371         .0000000000         .5243010666  
+ h                 -.7545655371         .0000000000         .5243010666  
+end  
+basis segment cartesian  
+ o library 6-31g**  
+ h library 6-31g**  
+end  
+cosmo  
+ dielec 78.0  
+ radius 1.40  
+        1.16  
+        1.16  
+ lineq  0  
+end  
+task scf energy
+```
 Alternatively, instead of listing COSMO radii parameters in the input,
 the former can be loaded using an external file through the "parameters"
 directive
+```
+start  
+echo  
+ title "h2o"  
+geometry  
+ ow                  .0000000000         .0000000000        -.0486020332  
+ hw                  .7545655371         .0000000000         .5243010666  
+ h                  -.7545655371         .0000000000         .5243010666  
+end  
+basis segment cartesian  
+ * library 6-31g**  
+end
 
-`start`  
-`echo`  
-` title "h2o"`  
-`geometry`  
-` ow                  .0000000000         .0000000000        -.0486020332`  
-` hw                  .7545655371         .0000000000         .5243010666`  
-` h                  -.7545655371         .0000000000         .5243010666`  
-`end`  
-`basis segment cartesian`  
-` * library 6-31g**`  
-`end`
+cosmo  
+ dielec 78.0  
+ lineq  0  
+ parameters water.par  
+end
 
-`cosmo`  
-` dielec 78.0`  
-` lineq  0`  
-` parameters water.par`  
-`end`
-
-`task scf energy`
-
+task scf energy
+```
 where "water.par" may the following form:
-
-`O 1.40`  
-`H 1.16`
-
+```
+O 1.40
+H 1.16
+```
 This will set radii of all oxygen atoms to 1.4 and all hydrogen atoms to
 1.16. More fine grained control may be achieved using specific atom
 names. For example, the following parameter file
-
-`O    1.40`  
-`H    1.16`  
-`HW  1.06`
-
+```
+O    1.40
+H    1.16
+HW  1.06
+```
 will set a different radii of 1.06 to hydrogen atoms named HW. Note
 that, as per general rule in NWChem, all names are case insensitive.
 
@@ -270,10 +270,10 @@ run directory.
 
 <references/>
 
-1.  <refbase>514</refbase>
-2.  <refbase>520</refbase>
-3.  <refbase>515</refbase>
-4.  <refbase>516</refbase>
-5.  <refbase>517</refbase>
-6.  <refbase>518</refbase>
-7.  <refbase>517</refbase>
+1.  Klamt, A; Schuurmann, G (1993). "COSMO: A new approach to dielectric screening in solvents with explicit expressions for the screening energy and its gradient". Journal of the Chemical Society, Perkin Transactions 2: 799-805. doi:10.1039/P29930000799. 
+2. York, D.M.; Karplus, M. (1999). "A smooth solvation potential based on the conductor-like screening model". Journal of physical chemistry A 103: 11060-11079. doi:10.1021/jp992097l. 
+3. A. Bondi (1964). "van der Waals volums and radii". Journal of Physical Chemistry 68: 441-451. doi:10.1021/j100785a001. 
+4. A. Klamt, V. Jonas (1998). "Refinement and parametrization of COSMO-RS". Journal of physical chemistry A 102: 5074-5085. doi:10.1021/jp980017s. 
+5. E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E. 
+6. V. Barone, M. Cossi (1997). "A new definition of cavities for the computation of solvation free energies by the polarizable continuum model". Journal of Chemical Physics 107: 3210-3221. doi:10.1063/1.474671. 
+7. E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E. 

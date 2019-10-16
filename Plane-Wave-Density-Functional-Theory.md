@@ -5,9 +5,10 @@
       - [1.1.1 PAW Potentials](#paw-potentials "wikilink") 
          - [1.1.1.1 PAW Implementation Notes](#paw-implementation-notes "wikilink")
       - [1.1.2 Exchange-Correlation Potentials](#exchange-correlation-potentials "wikilink")
-         - [1.1.2.1 DFT + U Corrections](#dft-+-u-corrections "wikilink")
-         - [1.1.2.2 Grimme Dispersion Corrections](#grimme-dispersion-corrections "wikilink")
-         - [1.1.2.3 Using Exchange-Correlation Potentials Available in the DFT Module](#using-exchange-correlation-potentials-available-in-the-dft-module "wikilink")
+         - [1.1.2.1 DFT + U Corrections](#dft--u-corrections "wikilink")
+         - [1.1.2.2 Langreth style vdw and vdw2 van der Wall functionals](#langreth-style-vdw-and-vdw-van-der-wall-functionals "wikilink")
+         - [1.1.2.3 Grimme Dispersion Corrections](#grimme-dispersion-corrections "wikilink")
+         - [1.1.2.4 Using Exchange-Correlation Potentials Available in the DFT Module](#using-exchange-correlation-potentials-available-in-the-dft-module "wikilink")
          - [1.1.2.4 Exact Exchange](#exact-exchange "wikilink")
          - [1.1.2.5 Self-Interaction Corrections](#self-interaction-corrections "wikilink")
       - [1.1.3 Wannier](#wannier "wikilink")
@@ -60,7 +61,7 @@
       - [1.15.3 SEMICORE_RADIUS](#semicore_radius  "wikilink")
    - [1.16 PAW Tasks - Legacy Implementation](#paw_tasks---legacy-implementation  "wikilink")
    - [1.17 Pseudopotential and PAW basis Libraries](#pseudopotential-and-paw-basis-libraries  "wikilink")
-   - [1.18 NWPW RTDB Entries and Miscellaneous DataFiles](#nwpw-rtdb-entries-and-miscellaneous-dataFiles  "wikilink")
+   - [1.18 NWPW RTDB Entries and Miscellaneous DataFiles](#nwpw-rtdb-entries-and-miscellaneous-datafiles  "wikilink")
       - [1.18.1 Ion Positions](#ion-positions  "wikilink")
       - [1.18.2 Ion Velocities](#ion-velocities  "wikilink")
       - [1.18.3 Wavefunction Datafile](#wavefunction-datafile  "wikilink")
@@ -70,7 +71,7 @@
    - [1.19 Car-Parrinello Scheme for Ab Initio Molecular Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics  "wikilink")
       - [1.19.1 Verlet Algorithm for Integration](#verlet-algorithm-for-integration  "wikilink")
       - [1.19.2 Constant Temperature Simulations: Nose-Hoover Thermostats](#constant-temperature-simulations-nose-hoover-thermostats  "wikilink")
-   - [1.20 NWPW Tutorial 1: S2 dimer examples with PSPW](#nwpw-tutorial-1-s2-dimer-examples-with-pspw  "wikilink")
+   - [1.20 NWPW Tutorial 1: S2 dimer examples with PSPW](#nwpw-tutorial-1-s-dimer-examples-with-pspw "wikilink")
       - [1.20.1 Total energy of S2 dimer with LDA approximation](#total-energy-of-s2-dimer-with-lda-approximation  "wikilink")
       - [1.20.2 Structural optimization of S2 dimer with LDA approximation](#structural-optimization-of-s2-dimer-with-lda-approximation  "wikilink")
       - [1.20.3 Frequency calculation of S2 dimer with LDA approximation](#frequency-calculation-of-s2-dimer-with-lda-approximation  "wikilink")
@@ -79,7 +80,7 @@
    - [1.21 NWPW Tutorial 2: Using PSPW Car-Parrinello Simulated Annealing Simulations to Optimize Structures](#nwpw-tutorial-2:-using-pspw-car-parrinello-simulated-annealing-simulations-to-optimize-structures  "wikilink")
       - [1.21.1 Simulated Annealing Using Constant Energy Simulation](#simulated-annealing-using-constant-energy-simulation  "wikilink")
       - [1.21.2 Simulated Annealing Using Constant Temperature Simulation](#simulated-annealing-using-constant-temperature-simulation  "wikilink")
-   - [1.22 NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics](#nwpw-tutorial-3:-using-isodesmic-reaction-energies-to-estimate-gas-phase-thermodynamics  "wikilink")
+   - [1.22 NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics](#nwpw-tutorial-3-using-isodesmic-reaction-energies-to-estimate-gas-phase-thermodynamics "wikilink")
    - [1.23 NWPW Tutorial 4: AIMD/MM simulation of CCl4 + 64 H2O](#nwpw-tutorial-4:-aimdmm-simulation-of-ccl4-+-64-h2o  "wikilink")
    - [1.24 NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond](#nwpw-tutorial-5:-optimizing-the-unit-cell-and-geometry-of-diamond  "wikilink")
       - [1.24.1 Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW](#optimizing-the-unit-cell-and-geometry-for-an-8-atom-supercell-of-diamond-with-pspw  "wikilink")
@@ -94,7 +95,7 @@
    - [1.28 NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations](#nwpw-tutorial-9:-npt-metropolis-monte-carlo-simulations  "wikilink")
    - [1.29 NWPW Tutorial 9: Free Energy Simulations](#nwpw-tutorial-9:-free-energy-simulations  "wikilink")
    - [1.30 PAW Tutorial](#paw-tutorial  "wikilink")
-      - [1.30.1 Optimizing a water molecule](#optimizing-a-water molecule  "wikilink")
+      - [1.30.1 Optimizing a water molecule](#optimizing-a-water-molecule  "wikilink")
       - [1.30.2 Optimizing a unit cell and geometry for Silicon-Carbide](#optimizing-a-unit-cell-and-geometry-for-silicon-carbide  "wikilink")
       - [1.30.3 Running a Car-Parrinello Simulation](#running-a-car-parrinello-simulation "wikilink")
    - [1.31 NWPW Capabilities and Limitations](#nwpw-capabilities-and-limitations  "wikilink")
@@ -727,8 +728,43 @@ nwpw
   uterm d 0.13634 0.0036749 1 
 end
 ```
-#### Grimme Dispersion Corrections
 
+#### Langreth style vdw and vdw van der Wall functionals
+
+These potenials that are used to augment standard exchange-correlation potentials area calculated from a double integral over a nonlocal interaction kernel,
+![img](http://latex.codecogs.com/svg.latex?%5Cphi%28%5Cmathbf%7Br%7D%2C%5Cmathbf%7Br%27%7D%29),
+
+![img](http://latex.codecogs.com/svg.latex?E%5E%7Bvdw%7D%3D%5Cfrac%7B1%7D%7B2%7D%5Ciint%5Crho%28%5Cmathbf%7Br%7D%29%5Cphi%28%5Cmathbf%7Br%7D%2C%5Cmathbf%7Br%27%7D%29%5Crho%28%5Cmathbf%7Br%27%7D%29d%5Cmathbf%7Br%7Dd%5Cmathbf%7Br%27%7D)
+
+that is evaluated using the fast Fourier transformation method of Roman-Perez and Soler.
+
+G. Roman-Perez and J. M. Soler, Phys. Rev. Lett. 103, 096102 (2009).
+
+Langreth vdw and vdw2 van der Wall functionals are currently available for the BEEF, PBE96,
+revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
+functionals. To use them the following keywords BEEF-vdw, BEEF-vdw2, PBE96-vdw,
+PBE96-vdw2, BLYP-vdw, BLYP-vdw2,
+revPBE-vdw, revPBE-vdw, PBEsol-vdw PBEsol-vdw2, PBE0-vdw, PBE0-vdw2,
+revPBE0-vdw, revPBE0-vdw2, HSE-vdw, HSE-vdw2, B3LYP-vdw, and B3LYP-vdw2
+ can be used in the XC input directive, e.g.
+```
+nwpw
+   xc beef-vdw  
+end
+```
+```
+nwpw
+   xc beef-vdw2  
+end
+```
+the vdw and vdw2 functionals are defined in  
+ 
+(vdw) Dion M, Rydberg H, Schröder E, Langreth DC, Lundqvist BI. Van der Waals density functional for general geometries. Physical review letters. 2004 Jun 16;92(24):246401.
+
+(vdw2) K. Lee, E. D. Murray, L. Kong, B. I. Lundqvist, and D. C. Langreth, Phys. Rev. B 82, 081101 (2010).
+
+
+#### Grimme Dispersion Corrections
 Grimme dispersion corrections are currently available for the PBE96,
 revPBE, PBEsol, BLYP, PBE0, revPBE0, HSE, and B3LYP exchange-correlation
 functionals. To use them the following keywords PBE96-Grimme2,
@@ -1220,7 +1256,7 @@ NWPW 
  [ITERATIONS integer inner_iterations default 5]  
  [OUTER_ITERATIONS integer outer_iterations default 0]
 
- SIMULATION_CELL 
+ SIMULATION_CELL  [units <string units default bohrs>]
    ... (see input description)   
  END 
  BRILLOUIN_ZONE 
@@ -1799,75 +1835,75 @@ Data file that stores ion positions and velocities as a function of time
 in XYZ
 format.
 ```
-`[line 1: ] n_ion`  
-`[line 2: ] do ii=1,n_ion`  
-`[line 2+ii: ] atom_name(ii), x(ii),y(ii),z(ii),vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line n_ion+3 ] n_nion`  
-` do ii=1,n_ion`  
-`[line n_ion+3+ii: ] atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line 2*n_ion+4: ] ....`
+[line 1: ] n_ion
+[line 2: ] do ii=1,n_ion
+[line 2+ii: ] atom_name(ii), x(ii),y(ii),z(ii),vx(ii),vy(ii),vz(ii)
+end do 
+[line n_ion+3 ] n_nion 
+ do ii=1,n_ion
+[line n_ion+3+ii: ] atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii) 
+end do
+[line 2*n_ion+4: ] ....
 ```
 #### ION\_MOTION motion file
 
 Datafile that stores ion positions and velocities as a function of
 time
 ```
-`[line 1: ] it_out, n_ion, omega, a1.x,a1.y,a1.z, a2.x,a2,y,a2.z, a3.x,a3.y,a3.z`  
-`[line 2: ] time`  
-`do ii=1,n_ion`  
-`[line 2+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line n_ion+3 ] time`  
-`do do ii=1,n_ion`  
-`[line n_ion+3+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)`  
-`end do`  
-`[line 2*n_ion+4: ] ....`
+[line 1: ] it_out, n_ion, omega, a1.x,a1.y,a1.z, a2.x,a2,y,a2.z, a3.x,a3.y,a3.z 
+[line 2: ] time 
+do ii=1,n_ion
+[line 2+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii)  
+end do
+[line n_ion+3 ] time 
+do do ii=1,n_ion`  
+[line n_ion+3+ii: ] ii, atom_symbol(ii),atom_name(ii), x(ii),y(ii),z(ii), vx(ii),vy(ii),vz(ii) 
+end do 
+[line 2*n_ion+4: ] ....
 ```
 #### EMOTION motion file
 
 Datafile that store energies as a function of
 time.
 ```
-`[line 1: ] time, E1,E2,E3,E4,E5,E6,E7,E8,(E9,E10, if Nose-Hoover),eave,evar,have,hvar,ion_Temp`  
-`[line 2: ] ...`
+[line 1: ] time, E1,E2,E3,E4,E5,E6,E7,E8,(E9,E10, if Nose-Hoover),eave,evar,have,hvar,ion_Temp 
+[line 2: ] ...
 ```
 where
 ```
-`E1 = total energy`  
-`E2 = potential energy`  
-`E3 = ficticious kinetic energy`  
-`E4 = ionic kinetic energy`  
-`E5 = orbital energy`  
-`E6 = hartree energy`  
-`E7 = exchange-correlation energy`  
-`E8 = ionic energy`  
-`eave = average potential energy`  
-`evar = variance of potential energy`  
-`have = average total energy`  
-`hvar = variance of total energy`  
-`ion_Temp = temperature`
+E1 = total energy
+E2 = potential energy
+E3 = ficticious kinetic energy
+E4 = ionic kinetic energy
+E5 = orbital energy
+E6 = hartree energy
+E7 = exchange-correlation energy 
+E8 = ionic energy
+eave = average potential energy 
+evar = variance of potential energy
+have = average total energy
+hvar = variance of total energy
+ion_Temp = temperature
 ```
 #### HMOTION motion file
 
 Datafile that stores the rotation matrix as a function of time.
 ```
-`[line 1: ] time`  
-`[line 2: ] ms,ne(ms),ne(ms)`  
-`do i=1,ne(ms)`  
-`[line 2+i: ] (hml(i,j), j=1,ne(ms)`  
-`end do`  
-`[line 3+ne(ms): ] time`  
-`[line 4+ne(ms): ] ....`
+[line 1: ] time
+[line 2: ] ms,ne(ms),ne(ms)
+do i=1,ne(ms)
+[line 2+i: ] (hml(i,j), j=1,ne(ms)
+end do
+[line 3+ne(ms): ] time
+[line 4+ne(ms): ] ....
 ```
 #### EIGMOTION motion file
 
 Datafile that stores the eigenvalues for the one-electron orbitals as a
 function of time.
 ```
-`[line 1: ] time, (eig(i), i=1,number_orbitals)`  
-`[line 2: ] ...`
+[line 1: ] time, (eig(i), i=1,number_orbitals) 
+[line 2: ] ...
 ```
 #### OMOTION motion file
 
@@ -1970,56 +2006,57 @@ Input to a metadynamics simulation is contained within the METADYNAMICS
 sub-block. Listed below is the the format of a METADYNAMICS
 sub-block,
 ```
-`NWPW`  
-` METADYNAMICS`  
-`    [`  
-`    BOND `<integer atom1_index no default>` `<integer atom2_index no default>` `  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE <real a b default (see input description)>]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    ANGLE `<integer atom1_index no default>` `<integer atom2_index no default>` `<integer atom3_index no default>  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE <real a b default 0 `<img alt="$\pi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f30fdded685c83b0e7b446aa9c9aa120.svg?invert_in_darkmode&sanitize=true" align=middle width="9.922935pt" height="14.10255pt"/>`>]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    COORD_NUMBER [INDEX1 `<integer_list atom1_indexes no default>`][INDEX2 `<integer_list atom2_indexes no default>`]`  
-`         [SPRIK]`  
-`         [N <real n default 6.0>]`  
-`         [M <real m default 12.0>]`  
-`         [R0 <real r0 default 3.0>]`  
-`      `  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE `<real a b no default>`]`  
-`         [NRANGE <integer nrange default 501>] `  
-`    ...]`  
-`    [`  
-`    N-PLANE `<integer atom1_index no default>` `<integer_list atom_indexes no default>  
-`         [W <real w default 0.00005>] `  
-`         [SIGMA <real sigma default 0.1>] `  
-`         [RANGE `<real a b no default>`]`  
-`         [NRANGE <integer nrange default 501>] `  
-`         [NVECTOR <real(3) nx ny nz>]`  
-`    ...]`  
-`    [UPDATE <integer meta_update default 1>]`  
-`    [PRINT_SHIFT <integer print_shift default 0>]`  
-`    [TEMPERED `<real tempered_temperature no default>`]`  
-`  END`  
-`END`
+NWPW  
+ METADYNAMICS
+    [
+    BOND <integer atom1_index no default> <integer atom2_index no default> 
+         [W <real w default 0.00005>]  
+         [SIGMA <real sigma default 0.1>] 
+         [RANGE <real a b default (see input description)>]  
+         [NRANGE <integer nrange default 501>] 
+    ...]  
+    [
+    ANGLE <integer atom1_index no default> <integer atom2_index no default> <integer atom3_index no default>  
+         [W <real w default 0.00005>] 
+         [SIGMA <real sigma default 0.1>]
+         [RANGE <real a b default 0 `<img alt="$\pi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f30fdded685c83b0e7b446aa9c9aa120.svg?invert_in_darkmode&sanitize=true" align=middle width="9.922935pt" height="14.10255pt"/>`>]`  
+         [NRANGE <integer nrange default 501>]  
+    ...]
+    [
+    COORD_NUMBER [INDEX1 <integer_list atom1_indexes no default>][INDEX2 <integer_list atom2_indexes no default>]  
+         [SPRIK] 
+         [N <real n default 6.0>]
+         [M <real m default 12.0>]
+         [R0 <real r0 default 3.0>]  
+       
+         [W <real w default 0.00005>] 
+         [SIGMA <real sigma default 0.1>] 
+         [RANGE <real a b no default>]  
+         [NRANGE <integer nrange default 501>] 
+    ...] 
+    [  
+    N-PLANE  <integer atom1_index no default> <integer_list atom_indexes no default>  
+         [W <real w default 0.00005>]   
+         [SIGMA <real sigma default 0.1>]  
+         [RANGE <real a b no default>] 
+         [NRANGE <integer nrange default 501>]  
+         [NVECTOR <real(3) nx ny nz>] 
+    ...] 
+    [UPDATE <integer meta_update default 1>]  
+    [PRINT_SHIFT <integer print_shift default 0>]
+    [TEMPERED <real tempered_temperature no default>]  
+    [BOUNDARY <real w_boundary sigma_boundary no default>]
+  END
+END
 ```
 Multiple collective variables can be defined at the same time, e.g.
 ```
-`NWPW`  
-` METADYNAMICS`  
-`    BOND 1 8  W 0.0005 SIGMA 0.1`  
-`    BOND 1 15 W 0.0005 SIGMA 0.1`  
-`  END`  
-`END`
+NWPW  
+ METADYNAMICS 
+    BOND 1 8  W 0.0005 SIGMA 0.1 
+    BOND 1 15 W 0.0005 SIGMA 0.1 
+  END
+END
 ```
 will produce a two-dimensional potential energy surface.
 
@@ -2226,13 +2263,15 @@ format of a simulation\_cell sub-block.
 ```
 NWPW 
 ...   
- SIMULATION_CELL CELL_NAME <string name default 'cell_default'>  
- BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) 
- LATTICE_VECTORS   
-   <real a1.x a1.y a1.z default 20.0 0.0 0.0> 
-   <real a2.x a2.y a2.z default 0.0 20.0 0.0>   
-   <real a3.x a3.y a3.z default 0.0 0.0 20.0> 
- NGRID <integer na1 na2 na3 default 32 32 32> END 
+ SIMULATION_CELL  [units <string units default bohrs>]
+    CELL_NAME <string name default 'cell_default'>  
+    BOUNDARY_CONDITIONS (periodic || aperiodic default periodic) 
+    LATTICE_VECTORS   
+      <real a1.x a1.y a1.z default 20.0 0.0 0.0> 
+      <real a2.x a2.y a2.z default 0.0 20.0 0.0>   
+      <real a3.x a3.y a3.z default 0.0 0.0 20.0> 
+    NGRID <integer na1 na2 na3 default 32 32 32> 
+  END 
 ...  
 `END
 ```
@@ -2263,7 +2302,7 @@ format for input is as follows:
 ```
 NWPW 
 ... 
- SIMULATION_CELL `  
+ SIMULATION_CELL [units <string units default bohrs>]  
    ...   
    LATTICE   
      [lat_a <real a default 20.0>]  
@@ -2285,7 +2324,8 @@ format of this type of input.
 ```
 NWPW 
 ... 
- SIMULATION_CELL SC 20.0 
+ SIMULATION_CELL [units <string units default bohrs>]
+   SC 20.0 
    .... 
  END
 ...
@@ -2294,7 +2334,7 @@ END
 Finally, the lattice vectors from the unit cell can also be defined
 using the fractional coordinate input in the GEOMETRY input (see section
 [Geometry Lattice
-Parameters](Geometry#SYSTEM_--_Lattice_parameters_for_periodic_systems "wikilink")).
+Parameters](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")).
 Listed below is an example of the format of this type of input for an 8
 atom silicon carbide unit cell.
 ```
@@ -3456,35 +3496,35 @@ output:[Media:s2-example5.nwout](s2-example5.nwout "wikilink")
 this example, a constant energy Born-Oppenheimer simulation of S2 dimer
 using LDA approximation is calculated.
 ```
-` title "AIMD simulation of s2-dimer"`  
-` echo`
+title "AIMD simulation of s2-dimer" 
+echo
 
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` `  
-` start s2-bomd`  
-` `  
-` geometry`  
-` S 0.0 0.0 0.0`  
-` S 0.0 0.0 1.95`  
-` end`  
-` `  
-` nwpw`  
-`   simulation_cell`  
-`     SC 20.0`  
-`   end`  
-`   cutoff 15.0`  
-`   mult 3`  
-`   xc lda`  
-`   lmbfgs`  
-` end`  
-` task pspw energy`  
-` `  
-` nwpw`  
-`    bo_steps 1 500`  
-`    bo_time_step 10.0`  
-` end`  
-` task pspw born-oppenheimer`
+scratch_dir   ./scratch
+permanent_dir ./perm
+  
+start s2-bomd  
+
+geometry
+S 0.0 0.0 0.0
+S 0.0 0.0 1.95
+end
+ 
+nwpw 
+  simulation_cell
+    SC 20.0 
+  end
+  cutoff 15.0  
+  mult 3 
+  xc lda 
+  lmbfgs 
+end
+task pspw energy 
+  
+nwpw 
+   bo_steps 1 500 
+   bo_time_step 10.0  
+end 
+task pspw born-oppenheimer
 ```
 The following plot shows the <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> energy surface
 generated from the
@@ -3553,17 +3593,16 @@ Car-Parrinello simulation.
 
 Key Input
 ```
-` ….`  
-` Car-Parrinello`  
-` fake_mass 500.0`  
-` time_step 5.0`  
-` loop 10 100`  
-` `**`scaling`` ``1.0``
-``2.0`**  
-` emotion_filename b12.00.emotion`  
-` xyz_filename     b12.00.xyz`  
-` end`  
-` ….`
+…. 
+Car-Parrinello  
+fake_mass 500.0
+time_step 5.0 
+loop 10 100`  
+** scaling 1.0 2.0**  
+emotion_filename b12.00.emotion
+xyz_filename     b12.00.xyz
+end 
+….
 ```
 Output
 ```
@@ -3634,7 +3673,7 @@ Input
 ```
  ….
  Car-Parrinello`  
- SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=4.1889e-17seconds)  
+ SA_decay 4.134d4 4.134d4 #decay rate in units of au (1au=2.41889e-17seconds)  
  ….
 ```
 ## NWPW Tutorial 3: using isodesmic reaction energies to estimate gas-phase thermodynamics
@@ -5109,33 +5148,33 @@ optimization calculation. The default unit cell parameters are used
 (SC=20.0, ngrid 32 32 32). In this simulation, the first PAW run
 optimizes the wavefunction and the second PAW run optimizes the
 wavefunction and geometry in tandem.
-
-`title "paw steepest descent test"`  
-`start paw_test`  
-`charge 0`  
-`geometry units au nocenter noautoz noautosym`  
-`O      0.00000    0.00000    0.01390`  
-`H     -1.49490    0.00000   -1.18710`  
-`H      1.49490    0.00000   -1.18710`  
-`end`  
-`nwpw`  
-`  time_step 15.8`  
-`  ewald_rcut 1.50`  
-`  tolerances 1.0d-8 1.0d-8`  
-`end`  
-`set nwpw:lcao_iterations 1`  
-`set nwpw:minimizer 2`  
-`task pspw energy`  
-`task paw energy`  
-`nwpw`  
-`  time_step 5.8`  
-`  geometry_optimize`  
-`  ewald_rcut 1.50`  
-`  tolerances 1.0d-7 1.0d-7 1.0d-4`  
-`end`  
-`task paw steepest_descent`  
-`task paw optimize`
-
+```
+title "paw steepest descent test"  
+start paw_test 
+charge 0 
+geometry units au nocenter noautoz noautosym  
+O      0.00000    0.00000    0.01390 
+H     -1.49490    0.00000   -1.18710  
+H      1.49490    0.00000   -1.18710  
+end 
+nwpw  
+  time_step 15.8  
+  ewald_rcut 1.50  
+  tolerances 1.0d-8 1.0d-8  
+end  
+set nwpw:lcao_iterations 1  
+set nwpw:minimizer 2  
+task pspw energy  
+task paw energy  
+nwpw  
+  time_step 5.8  
+  geometry_optimize  
+  ewald_rcut 1.50  
+  tolerances 1.0d-7 1.0d-7 1.0d-4  
+end
+task paw steepest_descent 
+task paw optimize
+```
 ### Optimizing a unit cell and geometry for Silicon-Carbide
 
 The following example demonstrates how to uses the PAW module to

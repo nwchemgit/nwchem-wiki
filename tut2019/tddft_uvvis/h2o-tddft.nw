@@ -1,0 +1,27 @@
+echo
+
+start h2o-uv-vis
+
+title h2o-uv-vis
+
+geometry
+ O     0.00000000     0.00000000     0.12982363
+ H     0.75933475     0.00000000    -0.46621158
+ H    -0.75933475     0.00000000    -0.46621158
+end
+
+basis
+ O library 6-31G**
+ H library 6-31G**
+end
+
+dft
+ xc b3lyp
+end
+
+tddft
+ nroots 10
+ notriplet
+end
+
+task tddft energy

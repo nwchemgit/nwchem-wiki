@@ -398,6 +398,8 @@ hardware include:
 | ATLAS       | <http://math-atlas.sf.net>                                                                    |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 
+**Newafter commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e )**:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containg the LAPACK toutines.
+
 NWChem can also take advantage of the [ScaLAPACK
 library](http://www.netlib.org/scalapack/) if it is installed on your
 system. The following environment variables need to be set:
@@ -406,23 +408,32 @@ export USE_SCALAPACK=y
   
 export SCALAPACK="location of Scalapack and BLACS library"
 ```
-WARNING: In the case of 64-bit platforms, most vendors optimized BLAS
+### How to deal with with  integer size of Linear Algebra libraries 
+In the case of 64-bit platforms, most vendors optimized BLAS
 libraries cannot be used. This is due to the fact that while NWChem uses
 64-bit integers (i.e. integer\*8) on 64-bit platforms, most of the
 vendors optimized BLAS libraries used 32-bit integers. The same holds
-for the ScaLAPACK libraries, which internally use 32-bit integers.
+for the ScaLAPACK libraries, which internally use 32-bit integers.  
+The BLAS_SIZE environment variable is used at compile time to set the size of integer arguments in BLAS calls.  
 
-A method is now available to link against the libraries mentioned above,
+
+| BLAS_SIZE  |  size of integer arguments in BLAS routines  |
+|:--:| -- |
+ 4 |  32-bit   (most common default)  |
+  8  |   64-bit   |
+
+
+A method is available to link against the libraries mentioned above,
 using the following procedure:
 ```
    cd $NWCHEM_TOP/src
    make clean
    make 64_to_32
-   make USE_64TO32=y  BLASOPT=" optimized BLAS"
+   make USE_64TO32=y  BLAS_SIZE=4 BLASOPT=" optimized BLAS" SCALAPACK="location of Scalapack and BLACS library"
 ```
 E.g., for IBM64 this looks like
 
-`  % make  USE_64TO32=y  BLASOPT="-lessl -lmass"`
+`  % make  USE_64TO32=y BLAS_SIZE=4 BLASOPT="-lessl -lmass"`
 
 Notes:
 
@@ -452,44 +463,44 @@ code that can be linked into computational chemistry packages such as
 NWChem. To utilize this functionality, follow the instructions in the
 NBO 5 package to generate an nwnbo.f file. Linking NBO into NWChem can
 be done using the following procedure:
-
-`  % cd $NWCHEM_TOP/src`  
-`  % cp nwnbo.f $NWCHEM_TOP/src/nbo/.`  
-`  % make nwchem_config NWCHEM_MODULES="all nbo"`  
-`  % make`
-
+```
+  % cd $NWCHEM_TOP/src 
+  % cp nwnbo.f $NWCHEM_TOP/src/nbo/.  
+  % make nwchem_config NWCHEM_MODULES="all nbo" 
+  % make
+```
 One can now use "task nbo" and incorporate NBO input into the NWChem
 input file directly:
-
-` nbo`  
-`   $NBO NRT $END`  
-`   ...`  
-` end`  
+```
+ nbo  
+   $NBO NRT $END  
+   ... 
+ end  
   
-` task nbo`
-
+ task nbo
+```
 ## Building the NWChem binary
 
 Once all required and optional environment variables have been set,
 NWChem can be compiled:
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src  
   
-`  % make nwchem_config`  
+  % make nwchem_config 
   
-`  % make >& make.log`
-
+  % make >& make.log
+```
 The make above will use the standard compilers available on your system.
 To use compilers different from the default one can either set
 environment variables:
-
-`  % setenv FC `*`<fortran`` ``compiler`*`>`  
-`  % setenv CC `*<c compiler>*
-
-Or one can supply the compiler options to the make command, e.g:
-
-`  % make FC=ifort CC=icc`
-
+```
+  % export FC=<fortran compiler>  
+  % export CC=<c compiler>
+```
+Or one can supply the compiler options to the make command (_recommended_ option), e.g:
+```
+  % make FC=ifort 
+```
 For example, on Linux FC could be set either equal to ifort, gfortran or pgf90
 
 **Nota bene:** NWChem does NOT support usage of the full path in FC and
@@ -879,81 +890,80 @@ Library](ARMCI "wikilink") for details on ARMCI-MPI
 
 # How-to: Cray platforms
 
-Common environmental variables for building and running on the Cray XT
-and XE:
-
-`  % setenv NWCHEM_TOP `*<your path>*`/nwchem`  
-`  % setenv NWCHEM_TARGET LINUX64`  
-`  % setenv NWCHEM_MODULES all`  
-`  % setenv USE_MPI y`  
-`  % setenv USE_MPIF y`  
-`  % setenv USE_MPIF4 y`  
-`  % setenv USE_SCALAPACK y`  
-`  % setenv USE_64TO32 y`  
-`  % setenv LIBMPI " "`
-
+Common environmental variables for building and running on the Cray XT, XE, XC and XK:
+```
+  % setenv NWCHEM_TOP <your path>/nwchem  
+  % setenv NWCHEM_TARGET LINUX64  
+  % setenv NWCHEM_MODULES all  
+  % setenv USE_MPI y
+  % setenv USE_MPIF y 
+  % setenv USE_MPIF4 y 
+  % setenv USE_SCALAPACK y 
+  % setenv USE_64TO32 y  
+  % setenv LIBMPI " "
+```
   - **Compiling the code on Cray once all variables (described below)
     are set**
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src
   
-`  % make nwchem_config`  
+  % make nwchem_config  
   
-`  % make 64_to_32`  
+  % make 64_to_32
   
-`  % make FC=ftn >& make.log`
-
+  % make FC=ftn >& make.log
+```
 The step `make 64_to_32` is required only if either SCALAPACK\_SIZE or
 BLAS\_SIZE are set equal to 4.
 
 ### Portals, e.g. XT3, XT4, XT5
 
 Set the following environmental variable for compilation:
-
-`  % setenv ARMCI_NETWORK PORTALS`
-
+```
+  % setenv ARMCI_NETWORK PORTALS
+```
 ### Gemini, e.g. XE6, XK7
 
-\==== Method \#1: ARMCI\_NETWORK=GEMINI ====
+#### Method \#1: ARMCI\_NETWORK=GEMINI  
 
 Load the onsided module by executing the command
-
-`  % module load onesided`
-
+```
+  % module load onesided
+```
 Note: Preferred version of onesided is 1.5.0 or later ones.
 
 Set the environmental variables for compilation:
-
-`  % setenv ARMCI_NETWORK GEMINI`  
-`  % setenv ONESIDED_USE_UDREG 1`  
-`  % setenv ONESIDED_UDREG_ENTRIES 2048`
-
-\==== Method \#2: ARMCI\_NETWORK=MPI-PR ====
+```
+  % setenv ARMCI_NETWORK GEMINI  
+  % setenv ONESIDED_USE_UDREG 1  
+  % setenv ONESIDED_UDREG_ENTRIES 2048
+```
+#### Method \#2: ARMCI\_NETWORK=MPI-PR
 
 This is a **<span style="color:#FF0000">new option available in NWChem
 6.6.</span>**
 
 Set the environmental variables for compilation:
-
-`  % setenv ARMCI_NETWORK MPI-PR`
-
+```
+  % setenv ARMCI_NETWORK MPI-PR
+```
 #### Example: OLCF Titan
 
 These are variables used for compilation on the [OLCF Titan, a Cray
 XK7](https://www.olcf.ornl.gov/computing-resources/titan-cray-xk7/) We
 assume use of Portland Group compilers programming environment (`module
 load PrgEnv-pgi`)
-
-`NWCHEM_TARGET=LINUX64`  
-`ARMCI_NETWORK=MPI-PR`  
-`USE_64TO32=y`  
-`USE_MPI=y`  
-`BLAS_SIZE=4`  
-`LAPACK_SIZE=4`  
-`SCALAPACK_SIZE=4`  
-`SCALAPACK=-lsci_pgi_mp`  
-`BLASOPT=-lsci_pgi_mp`
-
+```
+NWCHEM_TARGET=LINUX64  
+ARMCI_NETWORK=MPI-PR  
+USE_64TO32=y  
+USE_MPI=y  
+BLAS_SIZE=4 
+LAPACK_SIZE=4  
+SCALAPACK_SIZE=4  
+SCALAPACK=-lsci_pgi_mp  
+BLASOPT=-lsci_pgi_mp
+```
 To enable the GPU part, set
 
 `TCE_CUDA=y`
@@ -964,7 +974,7 @@ and load the cudatoolkit module
 
 ### Aries, e.g. XC30/XC40
 
-\==== Method \#1: ARMCI\_NETWORK=MPI-PR ====
+#### Method \#1: ARMCI\_NETWORK=MPI-PR  
 
 This is a **<span style="color:#FF0000">new option available in NWChem
 6.6.</span>**
@@ -973,7 +983,7 @@ Set the environmental variables for compilation:
 
 `  % setenv ARMCI_NETWORK MPI-PR`
 
-\==== Method \#2: ARMCI\_NETWORK=DMAPP (deprecated) ====
+#### Method \#2: ARMCI\_NETWORK=DMAPP (deprecated) 
 
 This method is now **<span style="color:#FF0000">deprecated</span>** in
 favor of method \#1 ARMCI\_NETWORK=MPI-PR
@@ -982,7 +992,7 @@ Might need to execute
 
 ` % module load craype-hugepages64M`
 
-Strongly recommended: replace ga-5-3 (or ga-5-4) with GA/ARMCI developed
+Recommended: replace ga-5-3 (or ga-5-4) with GA/ARMCI developed
 by Cray. The software is hosted on github at
 <https://github.com/ryanolson/ga>.
 
@@ -997,19 +1007,19 @@ Instructions:
 ```
 
 Load the dmapp module by executing the command
-
-`  % module load dmapp`
-
+```
+  % module load dmapp
+```
 Set the environmental variable for compilation:
-
-`  % setenv ARMCI_NETWORK DMAPP`
-
+```
+  % setenv ARMCI_NETWORK DMAPP
+```
 in the PBS script, add the following env. variables definitions
-
-`  % setenv HUGETLB_MORECORE yes`  
-`  % setenv HUGETLB_DEFAULT_PAGE_SIZE 8M`  
-`  % setenv UGNI_CDM_MDD_DEDICATED 2`
-
+```
+  % setenv HUGETLB_MORECORE yes 
+  % setenv HUGETLB_DEFAULT_PAGE_SIZE 8M  
+  % setenv UGNI_CDM_MDD_DEDICATED 2
+```
 #### Example: NERSC Edison
 
 These are variables used for compilation on [NERSC Edison, a Cray
@@ -1018,37 +1028,35 @@ October 23rd 2015, when using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu PrgEnv-intel`). Very similar settings
 can be applied to other Cray XC30 computers, such as [the UK ARCHER
 computer](http://www.archer.ac.uk)
-
-`CRAY_CPU_TARGET=sandybridge`  
-`NWCHEM_TARGET=LINUX64`  
-`ARMCI_NETWORK=MPI-PR`  
-`USE_MPI=y`  
-`SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\`  
-`-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"`  
-`SCALAPACK_SIZE=8`  
-`BLAS_SIZE=8`  
-`BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lpthread -lm"`  
-`LD_LIBRARY_PATH=/opt/gcc/4.9.2/snos/lib64:$LD_LIBRARY_PATH`  
-`PATH=/opt/gcc/4.9.2/bin:$PATH`  
-`CRAYPE_LINK_TYPE=dynamic`  
-
+```
+CRAY_CPU_TARGET=sandybridge 
+NWCHEM_TARGET=LINUX64  
+ARMCI_NETWORK=MPI-PR  
+USE_MPI=y
+SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\  
+-lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
+SCALAPACK_SIZE=8  
+BLAS_SIZE=8  
+BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lpthread -lm"  
+LD_LIBRARY_PATH=/opt/gcc/4.9.2/snos/lib64:$LD_LIBRARY_PATH 
+PATH=/opt/gcc/4.9.2/bin:$PATH  
+CRAYPE_LINK_TYPE=dynamic 
+```
 To compile
-
-`make nwchem_config`  
-`make FC=ftn`
-
+```
+make nwchem_config 
+make FC=ftn
+```
 The following env. variables needs to added to the batch queue
 submission script
-
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=16384 `  
-`MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000 `  
-`MPICH_GNI_MAX_EAGER_MSG_SIZE=131072 `  
-`MPICH_GNI_NUM_BUFS=300 `  
-`MPICH_GNI_NDREG_MAXSIZE=16777216 `  
-`MPICH_GNI_MBOX_PLACEMENT=nic `  
-`MPICH_GNI_LMT_PATH=disabled `  
-`COMEX_MAX_NB_OUTSTANDING=6`
-
+```  
+MPICH_GNI_MAX_VSHORT_MSG_SIZE=8192
+MPICH_GNI_MAX_EAGER_MSG_SIZE=131072   
+MPICH_GNI_NUM_BUFS=300   
+MPICH_GNI_NDREG_MAXSIZE=16777216  
+MPICH_GNI_MBOX_PLACEMENT=nic    
+COMEX_MAX_NB_OUTSTANDING=6
+```
 #### Example: NERSC Cori
 
 These are variables used for compilation on the Haswell partition of
@@ -1068,7 +1076,7 @@ export SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_il
 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
 export SCALAPACK_SIZE=8  
 export SCALAPACK_LIB="$SCALAPACK" 
-export BLAS_SIZE=8` 
+export BLAS_SIZE=8
 export BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lmkl_core -liomp5 -lpthread -ldmapp -lm"  
 export USE_NOIO=y  
 export CRAYPE_LINK_TYPE=dynamic
@@ -1108,12 +1116,12 @@ Required for compilation: Intel compilers, version 16+ (17+ is strongly
 recommended).
 
 Environmental variables required for compilation:
-
-`% setenv USE_KNL 1`  
-`% setenv USE_OPENMP 1`  
-`% setenv USE_F90_ALLOCATABLE T`  
-`% setenv USE_FASTMEM T`
-
+```
+% setenv USE_KNL 1 
+% setenv USE_OPENMP 1  
+% setenv USE_F90_ALLOCATABLE T  
+% setenv USE_FASTMEM T
+```
 The latter two options are required to allocate temporaries in MCDRAM
 when running in flat mode. Please do not use cache mode for NWChem
 CCSD(T) codes. Note that using Fortran heap allocations means the memory
@@ -1131,29 +1139,29 @@ communication overhead and memory footprint of NWChem.
 
 When using MKL and Intel 16+, please use the following
 settings
-
-`% setenv BLASOPT   "-mkl -qopenmp"`  
-`% setenv SCALAPACK "-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"`
-
+```
+% setenv BLASOPT   "-mkl -qopenmp" 
+% setenv SCALAPACK "-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"
+```
 The command require for compilation is
-
-`$ make FC=ifort CC=icc`
-
+```
+$ make FC=ifort CC=icc
+```
 Environmental variables recommended at runtime (assuming Intel OpenMP
 and MPI):
-
-`% setenv I_MPI_PIN 1`  
-`% setenv I_MPI_DEBUG 4`  
-`% setenv KMP_BLOCKTIME 1`  
-`% setenv KMP_AFFINITY scatter,verbose`
-
+```
+% setenv I_MPI_PIN 1  
+% setenv I_MPI_DEBUG 4  
+% setenv KMP_BLOCKTIME 1 
+% setenv KMP_AFFINITY scatter,verbose
+```
 Once you are comfortable with the affinity settings, you can use these
 instead:
-
-`% setenv I_MPI_PIN 1`  
-`% setenv KMP_BLOCKTIME 1`  
-`% setenv KMP_AFFINITY scatter`
-
+```
+% setenv I_MPI_PIN 1
+% setenv KMP_BLOCKTIME 1  
+% setenv KMP_AFFINITY scatter
+```
 Please consult the Intel or similar documentation regarding MPI+OpenMP
 affinity on your system. This is a complicated issue that depends on the
 software you use; it is impossible to document all the different
@@ -1163,10 +1171,10 @@ NWChem.
 If you encounter segfaults not related to ARMCI, you may need to set the
 following or recompile with `-heap-arrays`. Please create thread in the
 Forum if you observe this.
-
-`% ulimit -s unlimited`  
-`% setenv OMP_STACKSIZE 32M`
-
+```
+% ulimit -s unlimited  
+% setenv OMP_STACKSIZE 32M
+```
   - **Compiling NWChem on hosts equipped with Intel Xeon Phi Knights
     Corner coprocessors**
 
@@ -1178,21 +1186,21 @@ Required for compilation: Intel Composer XE version 14.0.3 (or later
 versions)
 
 Environmental variables required for compilation:
-
-`% setenv USE_OPENMP 1`  
-`% setenv USE_OFFLOAD 1`
-
+```
+% setenv USE_OPENMP 1 
+% setenv USE_OFFLOAD 1
+```
 When using MKL and Intel Composer XE version 14 (or later versions),
 please use the following
 settings
-
-`% setenv BLASOPT   "-mkl -openmp   -lpthread -lm"`  
-`% setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"`
-
+```
+% setenv BLASOPT   "-mkl -openmp   -lpthread -lm"  
+% setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"
+```
 The command require for compilation is
-
-`$ make FC=ifort `
-
+```
+$ make FC=ifort 
+```
   - **Examples of recommended configurations**
 
 From our experience using the CCSD(T) TCE module, we have determined
@@ -1356,39 +1364,34 @@ To compile, the following commands should be used:
 
 Common environmental variables for building and running on most
 Infiniband clusters are:
-
-`  % setenv NWCHEM_TOP `<your path>`/nwchem`  
-`  % setenv NWCHEM_TARGET LINUX64`  
-`  % setenv NWCHEM_MODULES "all`  
-`  % setenv USE_MPI y`  
-`  % setenv USE_MPIF y`  
-`  % setenv USE_MPIF4 y`  
-`  % setenv MPI_LIB `*<Location of MPI library>*`/lib`  
-`  % setenv MPI_INCLUDE `*<Location of MPI library>*`/include`  
-`  % setenv LIBMPI `*`<MPI`` ``library,`` ``e.g`` ``-lmtmpi`` ``or``
-``-lmpich>`*
-
+```
+  % setenv NWCHEM_TOP <your path>/nwchem  
+  % setenv NWCHEM_TARGET LINUX64 
+  % setenv NWCHEM_MODULES "all"  
+  % setenv USE_MPI y 
+  % setenv USE_MPIF y 
+  % setenv USE_MPIF4 y  
+```
   - On Infiniband clusters with the OpenIB software stack, the following
     environment variables should be defined
-
-`  % setenv ARMCI_NETWORK OPENIB`  
-`  % setenv IB_INCLUDE `*<Location of Infiniband libraries>*`/include`  
-`  % setenv MSG_COMMS MPI`
-
+```
+  % setenv ARMCI_NETWORK OPENIB 
+  % setenv IB_INCLUDE <Location of Infiniband libraries>/include  
+```
   - On Infiniband clusters that do not support OpenIB, such as Myrinet
     MX, the MPI2 protocol can be used
-
-`  % setenv ARMCI_NETWORK MPI-MT`
-
+```
+  % setenv ARMCI_NETWORK MPI-MT
+```
   - Compiling the code on an Infiniband cluster once all variables are
     set
-
-`  % cd $NWCHEM_TOP/src`  
+```
+  % cd $NWCHEM_TOP/src  
   
-`  % make nwchem_config`  
+  % make nwchem_config  
   
-`  % make >& make.log`
-
+  % make >& make.log
+```
 # How-to: Windows Platforms
 ## MingW
 The current recommended approach for building a NWChem binary for a
@@ -1445,6 +1448,16 @@ Then, you can start the compilation by typing
 % make nwchem_config  
 % make FC=gfortran DEPEND_CC=gcc
 ```
+### MSYS2
+
+https://github.com/msys2/msys2/wiki/MSYS2-installation
+```
+pacman -Syuu
+pacman -S mingw32/mingw-w64-i686-gcc-fortran
+pacman -S mingw32/mingw-w64-i686-python3
+pacman -S msys/make
+```
+
 ## WSL on Windows 10
 A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL). 
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide

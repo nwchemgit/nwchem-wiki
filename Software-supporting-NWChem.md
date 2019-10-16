@@ -22,7 +22,7 @@ feedback on this page content.
     analysis of NWChem output files
     <http://www.scienomics.com/software/>
   - **CULGI** computational platform
-    <http://culgi.com/article/culgi-90-embedded-molecular-database>
+    <https://www.culgi.com/software/features-quantum-chemistry/>
   - **KiSThelP** predicts thermodynamic properties and rate constants
     from NWChem results <http://kisthelp.univ-reims.fr/>
   - **Chemcraft** <http://www.chemcraftprog.com>
@@ -46,7 +46,7 @@ feedback on this page content.
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
   - **JANPA** performs Natural Population Analysis <http://janpa.sf.net>
   - **CamCASP** Cambridge package for Calculation of Anisotropic Site
-    Properties <http://www-stone.ch.cam.ac.uk/programs/camcasp.html>
+    Properties <http://www-stone.ch.cam.ac.uk/documentation/camcasp/users_guide.pdf>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
     <http://community.hartree.stfc.ac.uk/wiki/site/admin/chemshell.html>
@@ -58,7 +58,7 @@ feedback on this page content.
     <http://hase-group.ttu.edu/venus.html>
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
-    <http://www.win.tue.nl/~bbaumeie/votca-xtp.shtml>
+    <http://www.votca.org> <http://doc.votca.org/xtp-manual.pdf>
   - **PyDP4** is Python workflow for DP4 analysis of organic molecules
     <https://github.com/KristapsE/PyDP4>
   - **Fafoom** Flexible algorithm for optimization of molecules
@@ -66,6 +66,15 @@ feedback on this page content.
   - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
     <http://pymatgen.org>
   - **PVSCF** A parallel vibrational self-consistent field program <http://pvscf.org>
+  - **ResLibCal** A tool to compute triple-axis neutron spectrometer resolution <http://ifit.mccode.org/Applications/ResLibCal/doc/ResLibCal.html>
+  - **SMFA**  General program package for performing quantum chemistry calculations on large molecules using an energy-based fragmentation approach <https://github.com/mickcollins/SMFAPAC>
+  - **OCLIMAX** Free program for simulation of inelastic neutron scattering <https://sites.google.com/site/ornliceman/download>
+  -  **Artaios** A code for calculating spin-dependent electron transport properties for molecular junctions in the coherent tunneling regime<https://www.chemie.uni-hamburg.de/institute/ac/arbeitsgruppen/herrmann/software/artaios.html>
+  -  **Cuby**  A computational chemistry framework that provides  access to various computational methods available in different software package <http://cuby.molecular.cz/?page=Interfaces>
+  - **autoDIAS** A python tool for an automated Distortion/Interaction Activation Strain Analysis <https://github.com/dsvatunek/autoDIAS>
+  - **PolyParGen** provides OPLS-AA and Amber force field parameters for polymers or large molecules <http://polypargen.com>
+  - **BiKi Life Sciences** is a suite for Molecular Dynamics and related methods in Drug Discovery <http://www.bikitech.com/products/>
+
 
 ## Programs that can display or manipulate cube and/or Molden files
 
@@ -94,7 +103,7 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
   - **NCIPLOT** <http://github.com/aoterodelaroza/nciplot>
   - **Multiwfn** <http://sobereva.com/multiwfn/>
   - **Postg** <http://github.com/aoterodelaroza/postg>
-
+  - **GPUAM** <http://www.fqt.izt.uam.mx/html/Profes/JGO/GPUAM/GPUAM.html>
 <!-- end list -->
 
 1.  No longer been actively developed at PNNL. New development effort at

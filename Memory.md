@@ -9,15 +9,15 @@ for most calculations, since the defaults usually correspond to the
 total amount of memory available on the machine.
 
 The general form of the directive is as follows:
-
-`MEMORY [[total] `<integer total_size>`]        \`  
-`        [stack `<integer stack_size>`]         \`  
-`        [heap `<integer heap_size>`]           \`  
-`        [global `<integer global_size>`]       \ `  
-`        [units `<string units default real>`]  \ `  
-`        [(verify||noverify)]                 \`  
-`        [(nohardfail||hardfail)]`
-
+```
+MEMORY [[total] <integer total_size>]        \ 
+        [stack <integer stack_size>]         \  
+        [heap <integer heap_size>`]           \ 
+        [global <integer global_size>]       \   
+        [units <string units default real>]  \  
+        [(verify||noverify)]                 \  
+        [(nohardfail||hardfail)]
+```
 NWChem recognizes the following memory units:
 
   - real and double (synonyms)

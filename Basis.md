@@ -10,8 +10,8 @@ Potential](ECP "wikilink") (ECP) that is associated with a
 basis set.
 
 The basis functions to be used for a given calculation can be drawn from
-a standard set in the [EMSL basis set
-library](https://bse.pnl.gov/bse/portal) that is included in the release
+a standard set in the [Basis set
+library](https://www.basissetexchange.org/) that is included in the release
 of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
@@ -44,17 +44,14 @@ Examining the keywords on the first line of the BASIS directive:
     The user can associate the "ao basis" with another named basis using
     the SET directive (see [SET](Top-level#SET "wikilink")).
 
-<!-- end list -->
-
-  - SPHERICAL or CARTESIAN :  
+  -   [SPHERICAL or CARTESIAN](#-spherical-or-cartesian)   
     The keywords spherical and cartesian offer the option of using
     either spherical-harmonic (5 d, 7 f, 9 g, ...) or Cartesian (6 d, 10
     f, 15 g, ...) angular functions. The default is Cartesian. Note that
     the correlation-consistent basis sets were designed using spherical
     harmonics and to use these, the spherical keyword should be present
     in the BASIS directive. The use of spherical functions also helps
-    eliminate problems with linear
-dependence.
+    eliminate problems with linear dependence.
 
 |    | Cartesian       | Spherical                                             |
 |----|-----------------|-------------------------------------------------------|
