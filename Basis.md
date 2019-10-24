@@ -234,13 +234,19 @@ specified in the geometry object. The specification of a finite nucleus
 basis set does NOT automatically set the nuclear type for that atom to
 be finite. See [Geometries](Geometry "wikilink") for
 information.
-## How to download NWChem basis files from https://www.basissetexchange.org
+## How to use basis files from https://www.basissetexchange.org (NEW in 2019)
 
 In order to ensure compatibility with the existing basis libraries available in NWChem, the user is encourage to 
 select the "Advanced Options" menu and tick the boxes "Optimize General Contractions" and "Uncontract General",
-as in the image below
+as in the image below, when dowlading basis files from https://www.basissetexchange.org
 ![How to download](BSE_NWChem_selection.png)
 
+As an alternative,  basis set files downloaded from the basissetexchange.org are available in
+the NWChem source code (after release 7.0.0). In order to switch from the default basis libraries,
+the following environment variable setting is requires
+```
+NWCHEM_BASIS_LIBRARY=$NWCHEM_TOP/src/basis/libraries.bse/
+```
 ## Explicit basis set definition
 
 If the basis sets in the library or available in other external files
@@ -303,9 +309,7 @@ The following example defines basis sets for the water molecule:
  end
 ```
 Explicit basis set specifications are available from the [basis set
-exchange](https://www.basissetexchange.org/). We strive to provide all the
-basis sets from the exchange as an integral part of the internal basis
-set library.
+exchange](https://www.basissetexchange.org/). 
 
 ## Combinations of library and explicit basis set input
 
