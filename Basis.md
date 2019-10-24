@@ -11,7 +11,7 @@ basis set.
 
 The basis functions to be used for a given calculation can be drawn from
 a standard set in the [Basis set
-library](https://www.basissetexchange.org/) that is included in the release
+library](#Basis_set_library) that is included in the release
 of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
