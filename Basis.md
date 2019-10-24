@@ -148,22 +148,22 @@ basis set library is:
 ```
 For example, the NWChem basis set library contains the Dunning cc-pvdz
 basis set. These may be used as follows
-
-` basis`  
-`   oxygen library cc-pvdz`  
-`   hydrogen library cc-pvdz`  
-` end`
-
+```
+ basis  
+   oxygen library cc-pvdz  
+   hydrogen library cc-pvdz  
+ end
+```
 A default path of the NWChem basis set libraries is provided on
 installation of the code, but a different path can be defined by
 specifying the keyword file, and one can explicitly name the file to be
 accessed for the basis functions. For example,
-
-` basis`  
-`   o  library 3-21g file /usr/d3g681/nwchem/library`  
-`   si library 6-31g file /usr/d3g681/nwchem/libraries/`  
-` end`
-
+```
+ basis 
+   o  library 3-21g file /usr/d3g681/nwchem/library 
+   si library 6-31g file /usr/d3g681/nwchem/libraries/  
+ end
+```
 This directive tells the code to use the basis set 3-21g in the file
 /usr/d3g681/nwchem/library for atom o and to use the basis set 6-31g in
 the directory /usr/d3g681/nwchem/libraries/ for atom si, rather than
@@ -172,29 +172,29 @@ code will search for the basis set in a file with the name 6-31g.
 
 The "\*" tag can be used to efficiently define basis set input
 directives for large numbers of atoms. An example is:
-
-` basis`  
-`   *  library 3-21g`  
-` end`
-
+```
+ basis  
+   *  library 3-21g 
+ end
+```
 This directive tells the code to assign the basis sets 3-21g to all the
 atom tags defined in the geometry. If one wants to place a different
 basis set on one of the atoms defined in the geometry, the following
 directive can be used:
-
-` basis`  
-`   *  library 3-21g except H`  
-` end`
-
+```
+ basis  
+   *  library 3-21g except H 
+ end
+```
 This directive tells the code to assign the basis sets 3-21g to all the
 atoms in the geometry, except the hydrogen atoms. Remember that the user
 will have to explicitly define the hydrogen basis set in this
 directive\! One may also define tags that end with a "\*":
-
-` basis`  
-`   oxy*  library 3-21g `  
-` end`
-
+```
+ basis  
+   oxy*  library 3-21g   
+ end`
+```
 This directive tells the code to assign the basis sets 3-21g to all atom
 tags in the geometry that start with "oxy".
 
@@ -206,14 +206,14 @@ For example: To specify the cc-pvdz basis for a calculation on the water
 monomer in the dimer basis, where the dummy oxygen and dummy hydrogen
 centers have been identified as bqo and bqh respectively, the BASIS
 directive is as follows:
-
-` basis`  
-`   o   library cc-pvdz`  
-`   h   library cc-pvdz`  
-`   bqo library o cc-pvdz`  
-`   bqh library h cc-pvdz`  
-` end`
-
+```
+ basis  
+   o   library cc-pvdz  
+   h   library cc-pvdz  
+   bqo library o cc-pvdz  
+   bqh library h cc-pvdz  
+ end`
+```
 A special dummy center tag is bq\*, which will assign the same basis set
 to all bq centers in the geometry. Just as with the "\*" tag, the except
 list can be used to assign basis sets to unique dummy centers.
@@ -307,14 +307,14 @@ to define the basis sets used on the various atoms.
 For example, the following BASIS directive augments the Dunning cc-pvdz
 basis set for the water molecule with a diffuse s-shell on oxygen and
 adds the aug-cc-pVDZ diffuse functions onto the hydrogen.
-
-` basis spherical `  
-`   oxygen library cc-pvdz`  
-`   hydrogen library cc-pvdz`  
-`   oxygen s`  
-`     0.01 1.0`  
-`   hydrogen library "aug-cc-pVDZ Diffuse"`  
-` end`
-
+```
+ basis spherical   
+   oxygen library cc-pvdz  
+   hydrogen library cc-pvdz  
+   oxygen s  
+     0.01 1.0  
+   hydrogen library "aug-cc-pVDZ Diffuse"  
+ end
+```
 The resulting basis set defined is identical to the one defined above in
 the explicit basis set input.
