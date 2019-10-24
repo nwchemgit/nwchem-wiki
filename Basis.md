@@ -193,7 +193,7 @@ directive\! One may also define tags that end with a "\*":
 ```
  basis  
    oxy*  library 3-21g   
- end`
+ end
 ```
 This directive tells the code to assign the basis sets 3-21g to all atom
 tags in the geometry that start with "oxy".
@@ -212,7 +212,7 @@ directive is as follows:
    h   library cc-pvdz  
    bqo library o cc-pvdz  
    bqh library h cc-pvdz  
- end`
+ end
 ```
 A special dummy center tag is bq\*, which will assign the same basis set
 to all bq centers in the geometry. Just as with the "\*" tag, the except
@@ -262,46 +262,46 @@ contraction coefficients. General contractions are specified by
 including multiple columns of coefficients.
 
 The following example defines basis sets for the water molecule:
-
-` basis spherical `  
-`   oxygen s`  
-`     11720.0000    0.000710  -0.000160`  
-`      1759.0000    0.005470  -0.001263`  
-`       400.8000    0.027837  -0.006267`  
-`       113.7000    0.104800  -0.025716`  
-`        37.0300    0.283062  -0.070924`  
-`        13.2700    0.448719  -0.165411`  
-`         5.0250    0.270952  -0.116955`  
-`         1.0130    0.015458   0.557368`  
-`         0.3023   -0.002585   0.572759`  
-`   oxygen s                `  
-`         0.3023    1.000000`  
-`   oxygen p                `  
-`        17.7000    0.043018`  
-`         3.8540    0.228913`  
-`         1.0460    0.508728`  
-`         0.2753    0.460531`  
-`   oxygen p                `  
-`         0.2753    1.000000`  
-`   oxygen d`  
-`         1.1850    1.000000`  
-`   hydrogen s`  
-`        13.0100    0.019685`  
-`         1.9620    0.137977`  
-`         0.4446    0.478148`  
-`         0.1220    0.501240`  
-`   hydrogen s  `  
-`         0.1220    1.000000`  
-`   hydrogen p  `  
-`         0.7270    1.000000`  
-`   oxygen s`  
-`         0.01      1.0`  
-`   hydrogen s`  
-`         0.02974   1.0`  
-`   hydrogen p`  
-`         0.141      1.0`  
-` end`
-
+```
+ basis spherical   
+   oxygen s  
+     11720.0000    0.000710  -0.000160  
+      1759.0000    0.005470  -0.001263  
+       400.8000    0.027837  -0.006267  
+       113.7000    0.104800  -0.025716  
+        37.0300    0.283062  -0.070924  
+        13.2700    0.448719  -0.165411  
+         5.0250    0.270952  -0.116955  
+         1.0130    0.015458   0.557368  
+         0.3023   -0.002585   0.572759  
+   oxygen s                  
+         0.3023    1.000000  
+   oxygen p                  
+        17.7000    0.043018  
+         3.8540    0.228913  
+         1.0460    0.508728  
+         0.2753    0.460531  
+   oxygen p                  
+         0.2753    1.000000  
+   oxygen d  
+         1.1850    1.000000  
+   hydrogen s  
+        13.0100    0.019685  
+         1.9620    0.137977  
+         0.4446    0.478148  
+         0.1220    0.501240  
+   hydrogen s    
+         0.1220    1.000000  
+   hydrogen p    
+         0.7270    1.000000  
+   oxygen s  
+         0.01      1.0  
+   hydrogen s  
+         0.02974   1.0  
+   hydrogen p  
+         0.141      1.0  
+ end
+```
 Explicit basis set specifications are available from the [basis set
 exchange](https://www.basissetexchange.org/). We strive to provide all the
 basis sets from the exchange as an integral part of the internal basis
