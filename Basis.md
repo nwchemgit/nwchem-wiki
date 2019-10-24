@@ -39,7 +39,7 @@ Examining the keywords on the first line of the BASIS directive:
     database. Also, the
     [DFT](Density_Functional_Theory_for_Molecules "wikilink")
     and [RI-MP2](MP2 "wikilink") modules and the
-    [Dyall-modified-Dirac](Relativistic_All-electron_Approximations#Dyall's_Modified_Dirac_Hamitonian_approximation "wikilink")
+    [Dyall-modified-Dirac](Relativistic-All-electron-Approximations#Dyall's_Modified_Dirac_Hamitonian_approximation "wikilink")
     relativistic method require multiple basis sets with specific names.
     The user can associate the "ao basis" with another named basis using
     the SET directive (see [SET](Top-level#SET "wikilink")).
