@@ -236,9 +236,9 @@ be finite. See [Geometries](Geometry "wikilink") for
 information.
 ## How to use basis files from https://www.basissetexchange.org (NEW in 2019)
 
-In order to ensure compatibility with the existing basis libraries available in NWChem, the user is encourage to 
+In order to ensure compatibility with the existing basis libraries available in NWChem, we suggest the user  to 
 select the "Advanced Options" menu and tick the boxes "Optimize General Contractions" and "Uncontract General",
-as in the image below, when dowlading basis files from https://www.basissetexchange.org
+as in the image below, when downloading basis files from https://www.basissetexchange.org
 ![How to download](BSE_NWChem_selection.png)
 
 As an alternative,  basis set files downloaded from the basissetexchange.org website are available in
