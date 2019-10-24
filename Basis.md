@@ -95,7 +95,7 @@ Order of functions.
     only necessary for basis sets which are to be used as the ao basis.
     The user is referred to the section on [Dyall's modified
     Dirac-Hamiltonian
-    approximation](Relativistic_All-electron_Approximations#Dyall-Mod-Dirac-Hamiltonian "wikilink")
+    approximation](Relativistic-All-electron-Approximations#Dyall-Mod-Dirac-Hamiltonian "wikilink")
     for more details.
 
 Basis sets are associated with centers by using the tag of a center in a
@@ -221,7 +221,7 @@ list can be used to assign basis sets to unique dummy centers.
 The library basis sets can also be marked as relativistic by adding the
 rel keyword to the tag line. See the section on [relativistic
 all-electron
-approximations](Relativistic_All-electron_Approximations "wikilink")
+approximations](Relativistic-All-electron-Approximations "wikilink")
 for more details. The correlation consistent basis sets have been
 contracted for relativistic effects and are included in the standard
 library.
