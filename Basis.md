@@ -11,7 +11,7 @@ basis set.
 
 The basis functions to be used for a given calculation can be drawn from
 a standard set in the [Basis set
-library](#Basis_set_library) that is included in the release
+library](#basis-set-library) that is included in the release
 of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
@@ -116,7 +116,7 @@ message.
 
 A special set of tags, "\*" and tags ending with a "\*" (E.g. "H\*") can
 be used in combination with the keyword
-[library](#Basis_set_library "wikilink"). These tags facilitate the
+[library](#basis-set-library "wikilink"). These tags facilitate the
 definition of a certain type of basis set of all atoms, or a group of
 atoms, in a geometry using only a single or very few basis set entries.
 The "\*" tag will not place basis sets on dummy atoms, Bq\* can be used
