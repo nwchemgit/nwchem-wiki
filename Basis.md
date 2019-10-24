@@ -243,7 +243,7 @@ as in the image below, when dowlading basis files from https://www.basissetexcha
 
 As an alternative,  basis set files downloaded from the basissetexchange.org are available in
 the NWChem source code (after release 7.0.0). In order to switch from the default basis libraries,
-the following environment variable setting is requires
+the following environment variable setting is required
 ```
 NWCHEM_BASIS_LIBRARY=$NWCHEM_TOP/src/basis/libraries.bse/
 ```
