@@ -235,8 +235,12 @@ basis set does NOT automatically set the nuclear type for that atom to
 be finite. See [Geometries](Geometry "wikilink") for
 information.
 ## How to download NWChem basis files from https://www.basissetexchange.org
+
 In order to ensure compatibility with the existing basis libraries available in NWChem, the user is encourage to 
-select the "Advanced Options" menu and tick the boxes "Optimize General Contractions" and "Uncontract General"
+select the "Advanced Options" menu and tick the boxes "Optimize General Contractions" and "Uncontract General",
+as in the image below
+![How to download](BSE_NWChem_selection.png)
+
 ## Explicit basis set definition
 
 If the basis sets in the library or available in other external files
