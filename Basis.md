@@ -134,8 +134,8 @@ center. The variable <standard_set> is the name that identifies the
 functions in the library. The names of standard basis sets are not case
 sensitive. For a complete list of basis sets and associated ECPs in the
 NWChem library see the [available basis
-sets](AvailableBasisSets "wikilink") or the [EMSL Basis Set
-Exchange](https://bse.pnl.gov/bse/portal) for naming conventions and
+sets](AvailableBasisSets "wikilink") or the [Basis Set
+Exchange](https://www.basissetexchange.org/) for naming conventions and
 their specifications.
 
 The general form of the input line requesting basis sets from the NWChem
@@ -294,8 +294,8 @@ The following example defines basis sets for the water molecule:
 `         0.141      1.0`  
 ` end`
 
-Explicit basis set specifications are available from [the basis set
-exchange](https://bse.pnl.gov/bse/portal). We strive to provide all the
+Explicit basis set specifications are available from the [basis set
+exchange](https://www.basissetexchange.org/). We strive to provide all the
 basis sets from the exchange as an integral part of the internal basis
 set library.
 
