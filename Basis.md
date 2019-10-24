@@ -241,8 +241,8 @@ select the "Advanced Options" menu and tick the boxes "Optimize General Contract
 as in the image below, when dowlading basis files from https://www.basissetexchange.org
 ![How to download](BSE_NWChem_selection.png)
 
-As an alternative,  basis set files downloaded from the basissetexchange.org are available in
-the NWChem source code (after release 7.0.0). In order to switch from the default basis libraries,
+As an alternative,  basis set files downloaded from the basissetexchange.org website are available in
+the NWChem source code (after release 7.0.0). In order to switch from the default basis libraries to the library formed by files downloaded from basissetexchange.org,
 the following environment variable setting is required
 ```
 NWCHEM_BASIS_LIBRARY=$NWCHEM_TOP/src/basis/libraries.bse/
