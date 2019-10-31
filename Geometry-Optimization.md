@@ -38,6 +38,7 @@ directive,
       PRINT ... 
    XYZ <string xyz default *file_prefix*>]  
    NOXYZ  
+   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
  END
 ```
 On each optimization step a line search is performed. To speed up
@@ -210,6 +211,31 @@ permanent directory.
 
 The script rasmolmovie in the NWChem contrib directory can be used to
 turn these into an animated GIF movie.
+
+
+## i-PI Socket communication
+```
+   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
+```
+The SOCKET directive enables NWChem to communicate with other software
+packages -- such as [i-PI](http://ipi-code.org/) or
+[ASE](https://wiki.fysik.dtu.dk/ase/dev/ase/calculators/socketio/socketio.html) --
+via the i-PI socket protocol.
+
+Communication is done either over Unix sockets (`SOCKET UNIX`) or IP
+sockets (`SOCKET IPI_CLIENT`):
+
+  - Unix sockets - NWChem will create and bind to a UNIX socket
+    file located at `/tmp/ipi_<socketname>`. If not specified,
+    `<socketname>` will default to `nwchem`.
+  - IP sockets - NWChem will bind to the IP address and port
+    specified by `<socketname>`. If not specified, `<socketname>`
+    will default to `127.0.0.1:31415`.
+
+The `SOCKET` directive is only useful when used in conjunction with other
+software packages that support communication via the i-PI socket
+protocol. For more information, see the
+[i-PI documentation](http://ipi-code.org/resources/documentation/).
 
 ## Print options
 
