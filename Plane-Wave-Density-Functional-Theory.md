@@ -1938,6 +1938,9 @@ provided by the `DRIVER` module.
 The `NWPW` implementation of the `SOCKET` directive is better optimized for
 plane-wave calculations.
 
+For proper behavior, the `TASK` directive should be set to `GRADIENT`,
+e.g. `TASK PSPW GRADIENT` or `TASK BAND GRADIENT`.
+
 ## Metropolis Monte-Carlo
 ```
 NWPW
