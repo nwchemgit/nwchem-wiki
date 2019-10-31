@@ -1933,7 +1933,7 @@ END
 
 The `NWPW` module provides native communication via the i-PI socket protocol.
 The behavior is identical to the
-[i-PI socket communication](Geometry-Optimization.md#i-pi-socket-communication "wikilink")
+[i-PI socket communication](Geometry-Optimization#i-pi-socket-communication "wikilink")
 provided by the `DRIVER` module.
 The `NWPW` implementation of the `SOCKET` directive is better optimized for
 plane-wave calculations.
