@@ -659,7 +659,7 @@ sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epe
 required:
 
 `python-devel gcc-gfortran  openblas-devel openblas-serial64 openmpi-devel scalapack-openmpi-devel \`  
-`elpa-openmpi-devel tcsh openssh-clients which tar`
+`elpa-openmpi-devel tcsh openssh-clients which tar bzip2`
 
   - Settings
 ```
