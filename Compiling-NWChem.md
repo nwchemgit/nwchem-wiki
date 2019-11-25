@@ -613,7 +613,8 @@ export NWCHEM_TARGET=LINUX64
 export USE_PYTHONCONFIG=y  
 export PYTHONVERSION=2.7  
 export PYTHONHOME=/usr 
-export BLASOPT="-lopenblas -lpthread -lrt"  
+export BLASOPT="-lopenblas -lpthread -lrt"
+export LAPACK_LIB=$BLASOPT
 export BLAS_SIZE=4  
 export USE_64TO32=y
 ```
