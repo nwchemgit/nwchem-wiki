@@ -171,7 +171,7 @@ for a specific excited state using the DPLOT block
 echo  
 start h2o-td  
 title h2o-td  
-memory total 800 stack 400 heap 50 global 350 mb  
+memory stack 400 mb heap 50 mb global 350 mb  
 charge 0  
 geometry units au noautoz nocenter  
 symmetry group c1  
