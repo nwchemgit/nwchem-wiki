@@ -172,8 +172,7 @@ given calculation can be summarized as follows;
 
 ## VECTORS and MAX\_OVL -- KS-MO Vectors
 
-The VECTORS directive is the same as that in the SCF module (Section
-10.5). Currently, the LOCK keyword is not supported by the DFT module,
+The VECTORS directive is the same as that in the [SCF module] (Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink"). Currently, the LOCK keyword is not supported by the DFT module,
 however the directive
 ```
  MAX_OVL
