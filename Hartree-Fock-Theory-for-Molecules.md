@@ -247,7 +247,7 @@ Example 3:
 This directive will cause the calculation to start from vectors in the
 file "small.movecs" which are in a basis named "small basis". The output
 vectors will be written to the default file "\<file\_prefix.movecs\>".
-
+### VECTORS SWAP keyword
 Once starting vectors have been obtained using any of the possible
 options, they may be reordered through use of the SWAP keyword. This
 optional keyword requires a list of orbital pairs that will be swapped.
@@ -282,6 +282,7 @@ This input will result in the swapping of the 5-6 alpha orbital pair and
 the 4-5 beta orbital pair. (All other items in the input use the default
 values.)
 
+### VECTORS LOCK keyword
 The LOCK keyword allows the user to specify that the ordering of
 orbitals will be locked to that of the initial vectors, insofar as
 possible. The default is to order by ascending orbital energies within
@@ -290,7 +291,7 @@ a calculation where it is necessary to preserve the ordering of a
 previous geometry, despite flipping of the orbital energies. For such a
 case, the LOCK directive can be used to prevent the SCF calculation from
 changing the ordering, even if the orbital energies change.
-
+### VECTORS REORDER keyword
 The mapping of the MO's to the nuclei can be changed using the REORDER
 keyword. Once starting vectors have been obtained using any of the
 possible options, the REORDER keyword moves the MO coefficients between
