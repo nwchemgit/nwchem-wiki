@@ -1271,7 +1271,7 @@ NWPW 
  MAPPING <integer mapping default 1>  
  SMEAR <sigma default 0.001> 
  [TEMPERATURE `<temperature>`] 
- [FERMI || GAUSSIAN default FERMI] 
+ [FERMI || GAUSSIAN || MARZARI-VANDERBILT default FERMI] 
  [ORBITALS <integer orbitals default 4>] 
 END 
 ```
@@ -2396,10 +2396,11 @@ The smear keyword to turn on fractional occupation of the molecular
 orbitals in PSPW and BAND
 calculations
 ```
-SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`] [FERMI || GAUSSIAN default FERMI]   
+SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`]
+                            [FERMI || GAUSSIAN || MARZARI-VANDERBILT default FERMI]
                             [ORBITALS <integer orbitals default 4>]
 ```
-Both Fermi-Dirac (FERMI) and Gaussian broadening functions are
+Fermi-Dirac (FERMI), Gaussian, and Marzari-Vanderbilt broadening functions are
 available. The ORBITALS keyword is used to change the number of virtual
 orbitals to be used in the calculation. Note to use this option the user
 must currently use the SCF minimizer. The following SCF options are
