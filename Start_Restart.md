@@ -96,7 +96,7 @@ file contained the directive,
 restart water
 ```
 ### Use of permanent_dir
-We suggest the use to add the [permanent directory](#Permanent_Dir "wikilink") line to the input file. This allows to store files in a specific directory for easy re-use between start and restart stages.  
+We suggest the user to add the [permanent directory](#Permanent_Dir "wikilink") line to the input file. This allows to store files in a specific directory for easy re-use between start and restart stages.  
 The start file then becomes
 
 ```
