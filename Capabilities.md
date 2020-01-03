@@ -1,4 +1,4 @@
-# Comprehensive Suite of Scalable Capabilities
+# Introduction
 
 NWChem provides many methods for computing the properties of molecular
 and periodic systems using standard quantum mechanical descriptions of
