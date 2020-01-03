@@ -89,15 +89,15 @@ The input consists of keywords for NWChem and keywords related to
 POLYRATE input. The first set of inputs are for NWChem with the general
 input block of the
 form:
-
-` DIRDYVTST [autosym [real tol default 1d-2] | noautosym]`  
-`   [THEORY `<string theory>` [basis <string basis default "ao basis">] \`  
-`                        [ecp `<string ecp>`] [input `<string input>`]]`  
-`   [SPTHEORY `<string theory>` [basis <string basis default "ao basis">] \`  
-`                        [ecp `<string ecp>`] [input `<string input>`]]`  
-`   ...`  
-` END`
-
+```
+ DIRDYVTST [autosym [real tol default 1d-2] | noautosym]  
+   [THEORY <string theory> [basis <string basis default "ao basis">] \  
+                        [ecp <string ecp>] [input <string input>]]  
+   [SPTHEORY <string theory> [basis <string basis default "ao basis">]   
+                        [ecp <string ecp>] [input <string input>`]]  
+   ...`  
+ END`
+```
 #### Use of symmetry
 
 The use of symmetry in the calculation is controlled by the keyword
@@ -152,13 +152,13 @@ strings should fully define the calculation you wish to have happen.
 
 For instance, if the theory model is DFT/LDA/3-21g and the sptheory
 model is DFT/B3LYP/6-311g\*\*, the DIRDYVTST input might look like this
-
-`   dirdyvtst`  
-`     theory  dft basis 3-21g    input "dft\; xc\; end"`  
-`     sptheory dft basis 6-311g** input "dft\; xc b3lyp\; end"`  
-`     ....`  
-`   end`
-
+```
+   dirdyvtst  
+     theory  dft basis 3-21g    input "dft\; xc\; end"  
+     sptheory dft basis 6-311g** input "dft\; xc b3lyp\; end"  
+     ....  
+   end`
+```
 The empty XC directive restores the default [LDA exchange-correlation
 functional](Release66:Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink").
 Note that semi-colons and other quotation marks inside the input string
@@ -175,15 +175,15 @@ sections.
 The GENERAL section has the following format:
 
   - GENERAL
-
-` [TITLE `<string title>`]`  
-` ATOMS`  
-`   `<integer num>` `<string tag>` [`<real mass>`]`  
-`   ...`  
-` END`  
-` [SINGLEPOINT]`  
-` [SAVEFILE (vecs || hess || spc)`
-
+```
+ [TITLE <string title>]  
+ ATOMS  
+   <integer num> <string tag> [<real mass>]  
+   ...  
+ END  
+ [SINGLEPOINT]  
+ [SAVEFILE (vecs || hess || spc)
+```
 Descriptions
 
 TITLE is a keyword that allows the user to input a description of the
@@ -221,14 +221,14 @@ calculation movecs.
 
 These sections have the following
 format:
-
-`*(REACT1 || REACT2 || PROD1 || PROD2 || START)`  
-`  GEOM`  
-`    `<integer num>` `<real x y z>  
-`    ...`  
-`  END`  
-`  SPECIES (ATOMIC || LINRP || NONLINRP || LINTS || NONLINTS default NONLINRP)`
-
+```
+*(REACT1 || REACT2 || PROD1 || PROD2 || START)  
+  GEOM  
+    <integer num> <real x y z>  
+    ...  
+  END  
+  SPECIES (ATOMIC || LINRP || NONLINRP || LINTS || NONLINTS default NONLINRP)
+```
 REACT1 and REACT2 are input for each of the reactants and PROD1 and
 PROD2 are input for each of the products. REACT1 and PROD1 are required.
 START is the input for the transition state if one exists, or starting
@@ -258,18 +258,18 @@ For example:
 ##### PATH section
 
 The Path section has the format:
-
-`*PATH`  
-` [SCALEMASS <real scalemass default 1.0>]`  
-` [SSTEP <real sstep default 0.01>]`  
-` [SSAVE <real ssave default 0.1>]`  
-` [SHESS `<real shess default SSAVE>`]`  
-` [SLP <real slp default 1.0>]`  
-` [SLM <real slm default -1.0>]`  
-` [SIGN (REACTANT || PRODUCT default REACTANT)]`  
-` [INTEGRA (EULER || LQA || CLQA || CUBE default EULER)]`  
-` [PRINTFREQ (on || off default off)]`
-
+```
+*PATH  
+ [SCALEMASS <real scalemass default 1.0>]  
+ [SSTEP <real sstep default 0.01>]  
+ [SSAVE <real ssave default 0.1>]  
+ [SHESS `<real shess default SSAVE>]  
+ [SLP <real slp default 1.0>]  
+ [SLM <real slm default -1.0>]  
+ [SIGN (REACTANT || PRODUCT default REACTANT)]  
+ [INTEGRA (EULER || LQA || CLQA || CUBE default EULER)] 
+ [PRINTFREQ (on || off default off)]
+```
 Descriptions
 
 SCALEMASS is a variable keyword that indicates the arbitrary mass (in
