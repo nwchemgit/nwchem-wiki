@@ -658,24 +658,25 @@ xc xcamb88 1.00 lyp 0.80 vwn_5 0.2 hfexch 1.00
 cam 0.29 cam_alpha 0.54 cam_beta 0.37
 ```
 rCAM-B3LYP
-
-`xc xcamb88 1.00 lyp 1.0 vwn_5 0. hfexch 1.00 becke88 nonlocal 0.13590`  
-`cam 0.33 cam_alpha 0.18352 cam_beta 0.94979`
-
+```
+xc xcamb88 1.00 lyp 1.0 vwn_5 0. hfexch 1.00 becke88 nonlocal 0.13590
+cam 0.33 cam_alpha 0.18352 cam_beta 0.94979
+```
 HSE03 functional: 0.25\*Ex(HF-SR) - 0.25\*Ex(PBE-SR) + Ex(PBE) +
 Ec(PBE), where gamma(HF-SR) = gamma(PBE-SR)
 
 `xc hse03`
 
 or it can be explicitly set as
-
-`xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25`  
-`cam 0.33 cam_alpha 0.0 cam_beta 1.0`
-
+```
+xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
+cam 0.33 cam_alpha 0.0 cam_beta 1.0
+```
 HSE06 functional:
-
-`xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25`  
-`cam 0.11 cam_alpha 0.0 cam_beta 1.0`
+```
+xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
+cam 0.11 cam_alpha 0.0 cam_beta 1.0
+```
 
 Please see the following papers (not a complete list) for further
 details about the theory behind these functionals and applications.
@@ -1246,15 +1247,13 @@ composition.
 
 <center>
 
-|         |                              |
-| ------- | ---------------------------- |
 | Keyword | Total Energy Target Accuracy |
+| ------- | ---------------------------- |
 | xcoarse | <img alt="$1x10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9204e6ea06c5d60eb28d4f0d8dbf698.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
 | coarse  | <img alt="$1x10^{-5}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06402e7d4ac92f15928568757dcca7c1.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
 | medium  | <img alt="$1x10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f8b99c7c9adab0a75d75d910a35583b4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
 | fine    | <img alt="$1x10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/419ab033df52905a0129c4813abc9c5b.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
 | xfine   | <img alt="$1x10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8658f05cb7be04ba551e8e6d9a85d8a4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-|  |
 
 </center>
 
@@ -1280,15 +1279,13 @@ generate the desired energy accuracy (with utter disregard for speed).
 
 <center>
 
-|         |        |         |
-| ------- | ------ | ------- |
 | Keyword | Radial | Angular |
+| ------- | ------ | ------- |
 | xcoarse | 21     | 194     |
 | coarse  | 35     | 302     |
 | medium  | 49     | 434     |
 | fine    | 70     | 590     |
 | xfine   | 100    | 1202    |
-|  |
 
 Program default number of radial and angular shells empirically
 determined for Row 1 atoms (Li &rarr; F) to reach the desired
@@ -1298,15 +1295,13 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 42      |
-| coarse  | 70      |
-| medium  | 88      |
-| fine    | 123     |
-| xfine   | 125     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 42      | 194     |
+| coarse  | 70      | 302     |
+| medium  | 88      | 434     |
+| fine    | 123     | 770     |
+| xfine   | 125     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
@@ -1316,15 +1311,13 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 75      |
-| coarse  | 95      |
-| medium  | 112     |
-| fine    | 130     |
-| xfine   | 160     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 75      | 194     |
+| coarse  | 95      | 302     |
+| medium  | 112     | 590     |
+| fine    | 130     | 974     |
+| xfine   | 160     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
@@ -1334,15 +1327,13 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 84      |
-| coarse  | 104     |
-| medium  | 123     |
-| fine    | 141     |
-| xfine   | 205     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 84      | 194     |
+| coarse  | 104     | 302     |
+| medium  | 123     | 590     |
+| fine    | 141     | 974     |
+| xfine   | 205     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
@@ -1383,9 +1374,8 @@ angular points as indicated by the table below:
 
 <center>
 
-|              |                 |       |
-| ------------ | --------------- | ----- |
 | <img alt="$IANGQUAD$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1155c630b831ae7b88cb7f5dea440245.svg?invert_in_darkmode&sanitize=true" align=middle width="100.81599pt" height="22.38192pt"/> | <img alt="$N_{angular}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d8da1653fe865d485d10dc0e3051ed3f.svg?invert_in_darkmode&sanitize=true" align=middle width="60.64839pt" height="22.38192pt"/> | <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/> |
+| ------------ | --------------- | ----- |
 | 1            | 38              | 9     |
 | 2            | 50              | 11    |
 | 3            | 74              | 13    |
@@ -1415,7 +1405,6 @@ angular points as indicated by the table below:
 | 27           | 4802            | 119   |
 | 28           | 5294            | 125   |
 | 29           | 5810            | 131   |
-|  |
 
 List of Lebedev quadratures
 
@@ -1622,11 +1611,13 @@ density as well as the output density will occur. For example, to
 perform a mulliken analysis and print the explicit population analysis
 of the basis functions, use the following
 
-`dft`  
-` mulliken`  
-` print "mulliken ao"`  
-`end`  
-`task dft`
+```
+dft
+ mulliken
+ print "mulliken ao"
+end
+task dft
+```
 
 ## FUKUI -- Fukui Indices
 
@@ -1653,30 +1644,32 @@ atoms not just bq, but bq followed by the given atomic symbol. For
 example, the first component needed to compute the BSSE for the water
 dimer, should be written as follows
 
-`geometry h2o autosym units au`  
-` O        0.00000000     0.00000000     0.22143139`  
-` H        1.43042868     0.00000000    -0.88572555`  
-` H       -1.43042868     0.00000000    -0.88572555`  
-` bqH      0.71521434     0.00000000    -0.33214708`  
-` bqH     -0.71521434     0.00000000    -0.33214708`  
-` bqO      0.00000000     0.00000000    -0.88572555`  
-`end`  
-`basis`  
-` H library aug-cc-pvdz`  
-` O library aug-cc-pvdz`  
-` bqH library H aug-cc-pvdz`  
-` bqO library O aug-cc-pvdz`  
-`end`
+```
+geometry h2o autosym units au
+ O        0.00000000     0.00000000     0.22143139
+ H        1.43042868     0.00000000    -0.88572555
+ H       -1.43042868     0.00000000    -0.88572555
+ bqH      0.71521434     0.00000000    -0.33214708
+ bqH     -0.71521434     0.00000000    -0.33214708
+ bqO      0.00000000     0.00000000    -0.88572555
+end
+basis
+ H library aug-cc-pvdz
+ O library aug-cc-pvdz
+ bqH library H aug-cc-pvdz
+ bqO library O aug-cc-pvdz
+end
+```
 
 Please note that the \`\`ghost'' oxygen atom has been labeled bqO, and
 not just bq.
 
 ## DISP -- Empirical Long-range Contribution (vdW)
 ```
- DISP   
-      [ vdw <real vdw integer default 2]]  
-      [[s6 <real s6 default depends on XC functional>] \  
-      [ alpha <real alpha default 20.0d0] \  
+ DISP \
+      [ vdw <real vdw integer default 2]] \
+      [[s6 <real s6 default depends on XC functional>] \
+      [ alpha <real alpha default 20.0d0] \
       [ off ] 
 ```
 When systems with high dependence on van der Waals interactions are
@@ -1751,28 +1744,30 @@ for a set of input vectors. For example, the following input shows how a
 non self-consistent B3LYP energy can be calculated using a
 self-consistent set of vectors calculated at the Hartree-Fock level.
 
-`start h2o-noscf`
+```
+start h2o-noscf
 
-`geometry units angstrom`  
-`  O      0.00000000     0.00000000     0.11726921`  
-`  H      0.75698224     0.00000000    -0.46907685`  
-`  H     -0.75698224     0.00000000    -0.46907685`  
-`end`
+geometry units angstrom
+  O      0.00000000     0.00000000     0.11726921
+  H      0.75698224     0.00000000    -0.46907685
+  H     -0.75698224     0.00000000    -0.46907685
+end
 
-`basis spherical`  
-` * library aug-cc-pvdz`  
-`end`  
-`dft`  
-` xc hfexch`  
-` vectors output hf.movecs `  
-`end`  
-`task dft energy`  
-`dft`  
-` xc b3lyp`  
-` vectors input hf.movecs `  
-` noscf `  
-`end`  
-`task dft energy`
+basis spherical
+  * library aug-cc-pvdz
+end
+dft
+  xc hfexch
+  vectors output hf.movecs 
+end
+task dft energy
+dft
+  xc b3lyp
+  vectors input hf.movecs 
+  noscf 
+end
+task dft energy
+```
 
 ## XDM -- Exchange-hole dipole moment dispersion model
 ```
@@ -1814,9 +1809,8 @@ are:
 
 <center>
 
-|                            |                 |                                                      |
+| Name                       | Print Level     | Description                                          |
 | -------------------------- | --------------- | ---------------------------------------------------- |
-| **Name**                   | **Print Level** | **Description**                                      |
 | "all vector symmetries"    | high            | symmetries of all molecular orbitals                 |
 | "alpha partner info"       | high            | unpaired alpha orbital analysis                      |
 | "common"                   | debug           | dump of common blocks                                |
@@ -1844,7 +1838,6 @@ are:
 | "schwarz"                  | high            | integral screening info & stats at completion        |
 | "screening parameters"     | high            | integral accuracies                                  |
 | "semi-direct info"         | default         | semi direct algorithm                                |
-|  |
 
 DFT Print Control Specifications
 
