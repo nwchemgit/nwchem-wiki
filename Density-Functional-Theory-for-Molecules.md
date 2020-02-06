@@ -1249,12 +1249,12 @@ composition.
 
 | Keyword | Total Energy Target Accuracy |
 | ------- | ---------------------------- |
-| xcoarse | <img alt="$1x10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9204e6ea06c5d60eb28d4f0d8dbf698.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| coarse  | <img alt="$1x10^{-5}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06402e7d4ac92f15928568757dcca7c1.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| medium  | <img alt="$1x10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f8b99c7c9adab0a75d75d910a35583b4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| fine    | <img alt="$1x10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/419ab033df52905a0129c4813abc9c5b.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| xfine   | <img alt="$1x10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8658f05cb7be04ba551e8e6d9a85d8a4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-
+| xcoarse |   1&sdot;10<sup>-4</sup>          |
+| coarse  |   1&sdot;10<sup>-5</sup>          |
+| medium  |   1&sdot;10<sup>-6</sup>          |
+| fine    |   1&sdot;10<sup>-7</sup>          |
+| xfine   |   1&sdot;10<sup>-8</sup>          |
+| huge    |   1&sdot;10<sup>-10</sup>          |
 </center>
 
 In order to determine the level of radial and angular quadrature needed
