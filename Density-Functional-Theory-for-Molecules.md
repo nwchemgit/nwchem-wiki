@@ -106,7 +106,7 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
               [nolevelshifting] \  
               [hl_tol <real hl_tol default 0.1>] \  
               [rabuck [n_rabuck <integer n_rabuck default 25>]]  
- GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+ GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
       [(becke||erf1||erf2||ssf) default erf1] \  
       [(euler||mura||treutler) default mura] \ 
@@ -1222,7 +1222,7 @@ task dft
 ```
 ## GRID -- Numerical Integration of the XC Potential
 ```
- GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+ GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
       [(becke||erf1||erf2||ssf) default erf1] \  
       [(euler||mura||treutler) default mura] \  
@@ -1236,10 +1236,10 @@ scheme for the radial components (with a modified Mura-Knowles
 transformation) and a Lebedev scheme for the angular components. Within
 this numerical integration procedure various levels of accuracy have
 been defined and are available to the user. The user can specify the
-level of accuracy with the keywords; `xcoarse`, `coarse`, `medium`, `fine`, and
-`xfine`. The default is `medium`.
+level of accuracy with the keywords; `xcoarse`, `coarse`, `medium`, `fine`, `xfine` and
+`huge`. The default is `medium`.
 ```
- GRID [xcoarse||coarse||medium||fine||xfine]
+ GRID [xcoarse||coarse||medium||fine||xfine||huge]
 ```
 Our intent is to have a numerical integration scheme which would give us
 approximately the accuracy defined below regardless of molecular
@@ -1275,7 +1275,7 @@ angular shells which the DFT module will use for for a given atom
 depending on the row it is in (in the periodic table) and the desired
 accuracy. Note, differing atom types in a given molecular system will
 most likely have differing associated numerical grids. The intent is to
-generate the desired energy accuracy (with utter disregard for speed).
+generate the desired energy accuracy (at the expense of speed of the calculation).
 
 <center>
 
@@ -1302,6 +1302,7 @@ accuracies.
 | medium  | 88      | 434     |
 | fine    | 123     | 770     |
 | xfine   | 125     | 1454    |
+| huge    | 300     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
@@ -1318,6 +1319,7 @@ accuracies.
 | medium  | 112     | 590     |
 | fine    | 130     | 974     |
 | xfine   | 160     | 1454    |
+| huge    | 400     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
@@ -1334,6 +1336,7 @@ accuracies.
 | medium  | 123     | 590     |
 | fine    | 141     | 974     |
 | xfine   | 205     | 1454    |
+| huge    | 400     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
