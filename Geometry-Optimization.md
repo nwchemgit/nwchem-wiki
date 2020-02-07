@@ -62,11 +62,12 @@ maximum and root mean square gradient in the coordinates being used
 (Z-matrix, redundant internals, or Cartesian). XMAX and XRMS control the
 maximum and root mean square of the Cartesian step.
 
-`                 LOOSE    DEFAULT    TIGHT`  
-`        GMAX   0.00450    0.00045   0.000015   `  
-`        GRMS   0.00300    0.00030   0.00001`  
-`        XMAX   0.01800    0.00180   0.00006`  
-`        XRMS   0.01200    0.00120   0.00004`
+|      | LOOSE   | DEFAULT | TIGHT    |
+|------|---------|---------|----------|
+| GMAX | 0.00450 | 0.00045 | 0.000015 |
+| GRMS | 0.00300 | 0.00030 | 0.00001  |
+| XMAX | 0.01800 | 0.00180 | 0.00006  |
+| XRMS | 0.01200 | 0.00120 | 0.00004  |
 
 Note that GMAX and GRMS used for convergence of geometry may
 significantly vary in different coordinate systems such as Z-matrix,
@@ -93,8 +94,10 @@ instead of 1e-7.
 
 ## Controlling the step length
 
-`   TRUST <real trust default 0.3>`  
-`   SADSTP <real sadstp default 0.1>`
+```
+   TRUST <real trust default 0.3>
+   SADSTP <real sadstp default 0.1>
+```
 
 A fixed trust radius (trust) is used to control the step during
 minimizations, and is also used for modes being minimized during
@@ -112,7 +115,9 @@ this may be modified with this directive.
 
 ## Discard restart information
 
-`   CLEAR`
+```
+   CLEAR
+```
 
 By default Driver reuses Hessian information from a previous
 optimization, and, to facilitate a restart also stores which mode is
@@ -121,7 +126,9 @@ restart data.
 
 ## Regenerate internal coordinates
 
-`   REDOAUTOZ`
+```
+   REDOAUTOZ
+```
 
 Deletes Hessian data and regenerates internal coordinates at the current
 geometry. Useful if there has been a large change in the geometry that
@@ -129,7 +136,9 @@ has rendered the current set of coordinates invalid or non-optimal.
 
 ## Initial Hessian
 
-`   INHESS <integer inhess default 0>`
+```
+   INHESS <integer inhess default 0>
+```
 
   - 0 = Default ... use restart data if available, otherwise use
     diagonal guess.
@@ -182,7 +191,9 @@ Note that the eigen-modes in the optimizer have next-to-nothing to do
 with the output from a frequency calculation. You can examine the
 eigen-modes used by the optimizer with
 
-`  driver; print hvecs; end`
+```
+  driver; print hvecs; end
+```
 
 The selection of the first negative mode is usually a good choice if the
 search is started in the vicinity of the transition state and the

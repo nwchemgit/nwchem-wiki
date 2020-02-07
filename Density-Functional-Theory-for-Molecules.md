@@ -665,7 +665,9 @@ cam 0.33 cam_alpha 0.18352 cam_beta 0.94979
 HSE03 functional: 0.25\*Ex(HF-SR) - 0.25\*Ex(PBE-SR) + Ex(PBE) +
 Ec(PBE), where gamma(HF-SR) = gamma(PBE-SR)
 
-`xc hse03`
+```
+xc hse03
+```
 
 or it can be explicitly set as
 ```
@@ -1177,16 +1179,18 @@ directive in the input file:
 ```
 Example input:
 
-`dft`  
-` print "final vectors analysis"`  
-` odft`  
-` direct`  
-` fon alpha partial 2 electrons 1.0 filled 2`  
-` fon beta partial 2 electrons 1.0 filled 2`  
-` xc pbe0`  
-` convergence energy 1d-8`  
-`end`  
-`task dft`
+```
+dft
+ print "final vectors analysis"
+ odft
+ direct
+ fon alpha partial 2 electrons 1.0 filled 2
+ fon beta partial 2 electrons 1.0 filled 2
+ xc pbe0
+ convergence energy 1d-8
+end
+task dft
+```
 
 ## OCCUP -- Controlling the occupations of molecular orbitals
 
@@ -1353,12 +1357,16 @@ specification. This is accomplished by using the gausleg keyword.
 
 #### Gauss-Legendre angular grid
 
-` GRID gausleg <integer nradpts default 50> <integer nagrid default 10>`
+```
+ GRID gausleg <integer nradpts default 50> <integer nagrid default 10>
+```
 
 In this type of grid, the number of phi points is twice the number of
 theta points. So, for example, a specification of,
 
-` GRID gausleg 80 20`
+```
+ GRID gausleg 80 20
+```
 
 would be interpreted as 80 radial points, 20 theta points, and 40 phi
 points per center (or 64000 points per center before pruning).
@@ -1451,7 +1459,9 @@ Erf<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/s
 
 ### Disk usage for Grid
 
-` NODISK`
+```
+ NODISK
+```
 
 This keyword turns off storage of grid points and weights on disk.
 
@@ -1601,13 +1611,17 @@ implementation of this method can be found in J. Garza, J. A. Nichols
 and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000). The components of the
 sic energy can be printed out using:
 
-`print "SIC information"`
+```
+print "SIC information"
+```
 
 ## MULLIKEN -- Mulliken analysis
 
 Mulliken analysis of the charge distribution is invoked by the keyword:
 
-` MULLIKEN`
+```
+ MULLIKEN
+```
 
 When this keyword is encountered, Mulliken analysis of both the input
 density as well as the output density will occur. For example, to
@@ -1626,7 +1640,9 @@ task dft
 
 Fukui inidces analysis is invked by the keyword:
 
-` FUKUI`
+```
+ FUKUI
+```
 
 When this keyword is encounters, the condensed Fukui indices will be
 calculated and printed in the output. Detailed information about the
@@ -1664,7 +1680,7 @@ basis
 end
 ```
 
-Please note that the \`\`ghost'' oxygen atom has been labeled bqO, and
+Please note that the <q>ghost</q> oxygen atom has been labeled bqO, and
 not just bq.
 
 ## DISP -- Empirical Long-range Contribution (vdW)

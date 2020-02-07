@@ -56,9 +56,8 @@ below:
 
 <center>
 
-|                |                 |                                                 |
+| Name           | Print Level     | Description                                     |
 | -------------- | --------------- | ----------------------------------------------- |
-| **Name**       | **Print Level** | **Description**                                 |
 | "hess\_follow" | high            | more information about where the calculation is |
 | "cphf\_cont"   | debug           | detailed CPHF information                       |
 | "nucdd\_cont"  | debug           | detailed nuclear contribution information       |
@@ -125,7 +124,9 @@ reuse in the module input block. If you have stored the hessian in an
 alternate place you may redirect the reuse directive to that file by
 specifying the path to that file.
 
-` reuse /path_to_hessian_file`
+```
+ reuse /path_to_hessian_file
+```
 
 This will reuse your saved Hessian data but one caveat is that the
 geometry specification at the point where the hessian is computed must
@@ -139,7 +140,9 @@ via the input.
 
 To modify the mass of a specific center you can simply use:
 
-` mass 3 4.00260324`
+```
+ mass 3 4.00260324
+```
 
 which will set the mass of center 3 to 4.00260324 AMUs. The lexical
 index of centers is determined by the geometry object.
@@ -147,7 +150,9 @@ index of centers is determined by the geometry object.
 To modify all Hydrogen atoms in a molecule you may use the tag based
 mechanism:
 
-` mass hydrogen 2.014101779`
+```
+ mass hydrogen 2.014101779
+```
 
 The mass redefinitions always start with the default masses and change
 the masses in the order given in the input. Care must be taken to change
@@ -162,33 +167,37 @@ run-time-data-base. Each input block that redefines masses will
 invalidate the mass definitions of the previous input block. For
 example,
 
-`freq`  
-`  reuse`  
-`  mass hydrogen 2.014101779`  
-`end`  
-`task scf frequencies`  
-`freq`  
-`  reuse`  
-`  mass oxygen 17.9991603`  
-`end`  
-`task scf frequencies`
+```
+freq
+  reuse
+  mass hydrogen 2.014101779
+end
+task scf frequencies
+freq
+  reuse
+  mass oxygen 17.9991603
+end
+task scf frequencies
+```
 
 will use the new mass for all hydrogens in the first frequency analysis.
 The mass of the oxygen atoms will be redefined in the second frequency
 analysis but the hydrogen atoms will use the default mass. To get a
 modified oxygen and hydrogen analysis you would have to use:
 
-`freq`  
-`  reuse`  
-`  mass hydrogen 2.014101779`  
-`end`  
-`task scf frequencies`  
-`freq`  
-`  reuse`  
-`  mass hydrogen 2.014101779`  
-`  mass oxygen 17.9991603`  
-`end`  
-`task scf frequencies`
+```
+freq
+  reuse
+  mass hydrogen 2.014101779
+end
+task scf frequencies
+freq
+  reuse
+  mass hydrogen 2.014101779
+  mass oxygen 17.9991603
+end
+task scf frequencies
+```
 
 ### Temp or Temperature
 
@@ -198,27 +207,33 @@ temperature can be used to initiate this command.
 
 To modify the temperature of the computation you can simply use:
 
-` temp 4 298.15 300.0 350.0 400.0`
+```
+ temp 4 298.15 300.0 350.0 400.0
+```
 
 At this point, the temperatures are persistant and so the user must
 "reset" the temperature if the standard behavior is required after
 setting the temperatures in a previous "VIB" command, i.e.
 
-` temp 1 298.15`
+```
+ temp 1 298.15
+```
 
 ### Animation
 
 The "VIB" module also can generate mode animation input files in the
 standard xyz file format for graphics packages like RasMol or XMol There
 are scripts to automate this for RasMol in
-$NWCHEM_TOP/contrib/rasmolmovie. Each mode will have 20 xyz files
+`$NWCHEM_TOP/contrib/rasmolmovie`. Each mode will have 20 xyz files
 generated that cycle from the equilibrium geometry to 5 steps in the
 positive direction of the mode vector, back to 5 steps in the negative
 direction of the mode vector, and finally back to the equilibrium
 geometry. By default these files are not generated. To activate this
 mechanism simply use the following input directive
 
-` animate`
+```
+ animate
+```
 
 anywhere in the frequency/vib input block.
 
@@ -228,12 +243,14 @@ of the six possible views down a Cartesian axis.
 
 It uses the free utilities
 
-` - rasmol `  
-`   (http://www.umass.edu/microbio/rasmol) `  
-`   to manipulate the molecule and generate the individual frames`  
-` - convert from ImageMagick `  
-`   (http://www.imagemagick.org/)`  
-`   to combine the frames into an animated gif`
+```
+ - rasmol 
+   (http://www.umass.edu/microbio/rasmol) 
+   to manipulate the molecule and generate the individual frames
+ - convert from ImageMagick 
+   (http://www.imagemagick.org/)
+   to combine the frames into an animated gif
+```
 
 It should be easy to modify the script to other file formats or
 animation tools.
@@ -244,9 +261,11 @@ By default, the step size used is 0.15 a.u. which will give reliable
 animations for most systems. This can be changed via the animate input
 directive, e.g.
 
-`vib`  
-`   animate 0.20`  
-`end`
+```
+vib
+   animate 0.20
+end
+```
 
 where <step_size> is the real number that is the magnitude of each step
 along the eigenvector of each nuclear hessian mode in atomic units.
@@ -258,7 +277,9 @@ By default, normal modes will be stored in files that start with
 analysis is run in a single input file. To specify different filename
 for a particular vibrational analysis use the directive
 
-`filename `<file_set_name>` [overwrite]`
+```
+filename <file_set_name> [overwrite]
+```
 
 where <file_set_name> is the name that will be prepended to the usual
 filenames. In addition the code by default requires all files to be new
@@ -271,9 +292,11 @@ By default, the step size used for calculating the finite difference
 Hessian is 0.010 a.u. for DFT and NWPW modules, and 0.001 a.u. otherwise
 This can be changed via the fd\_delta input directive, e.g.
 
-`vib`  
-`   fd_delta 0.005`  
-`end`
+```
+vib
+   fd_delta 0.005
+end
+```
 
 where <fd_hessian_step_size> is the real number that is the magnitude of
 each displacement in atomic units for the calculation of the finite
@@ -281,7 +304,9 @@ difference Hessian. For older versions of NWChem without the fd\_delta
 option just set the "stpr\_gen:delta" value on the runtime database,
 e.g.
 
-`set stpr_gen:delta 0.005`
+```
+set stpr_gen:delta 0.005
+```
 
 ### An Example Input Deck
 
@@ -289,44 +314,46 @@ This example input deck will optimize the geometry for the given basis
 set, compute the frequencies for <img alt="$H_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7fc8f229a929f93c03b951b7fe40bf0.svg?invert_in_darkmode&sanitize=true" align=middle width="33.934725pt" height="22.38192pt"/>, <img alt="$H_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7fc8f229a929f93c03b951b7fe40bf0.svg?invert_in_darkmode&sanitize=true" align=middle width="33.934725pt" height="22.38192pt"/> at different
 temperatures, <img alt="$D_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ce64a0239658825eb59f2dbb21363632.svg?invert_in_darkmode&sanitize=true" align=middle width="33.88011pt" height="22.38192pt"/>, HDO, and TDO.
 
-`start  h2o`  
-`title Water `  
-`geometry units au autosym`  
-`  O      0.00000000    0.00000000    0.00000000`  
-`  H      0.00000000    1.93042809   -1.10715266`  
-`  H      0.00000000   -1.93042809   -1.10715266`  
-`end`  
-`basis noprint`  
-`  H library sto-3g `  
-`  O library sto-3g`  
-`end`  
-`scf; thresh 1e-6; end`  
-`driver; tight; end`  
-`task scf optimize`  
-  
-`scf; thresh 1e-8; print none; end`  
-`task scf freq `  
-  
-`freq`  
-` reuse; temp 4 298.15 300.0 350.0 400.0`  
-`end`  
-`task scf freq`  
-  
-`freq `  
-` reuse; mass H 2.014101779`  
-` temp 1 298.15`  
-`end`  
-`task scf freq`  
-  
-`freq`  
-` reuse; mass 2 2.014101779`  
-`end`  
-`task scf freq`  
-  
-`freq`  
-` reuse; mass 2 2.014101779 ; mass 3 3.01604927`  
-`end`  
-`task scf freq`
+```
+start  h2o
+title Water 
+geometry units au autosym
+  O      0.00000000    0.00000000    0.00000000
+  H      0.00000000    1.93042809   -1.10715266
+  H      0.00000000   -1.93042809   -1.10715266
+end
+basis noprint
+  H library sto-3g 
+  O library sto-3g
+end
+scf; thresh 1e-6; end
+driver; tight; end
+task scf optimize
+
+scf; thresh 1e-8; print none; end
+task scf freq 
+
+freq
+ reuse; temp 4 298.15 300.0 350.0 400.0
+end
+task scf freq
+
+freq 
+ reuse; mass H 2.014101779
+ temp 1 298.15
+end
+task scf freq
+
+freq
+ reuse; mass 2 2.014101779
+end
+task scf freq
+
+freq
+ reuse; mass 2 2.014101779 ; mass 3 3.01604927
+end
+task scf freq
+```
 
 ## References
 

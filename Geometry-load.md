@@ -51,20 +51,26 @@ explicit coordinates are specified.
     single name match. Atom and residue index allow both multiple single
     number and multiple range selection. For example
 
-` select id 2 4:6 9`
+```
+ select id 2 4:6 9
+```
 
 will result in the selection of atom id's 2 4 5 6 9.
 
 Multiple selection criteria are always combined as **AND** selections.
 For example
 
-`  select name O  id 2:4`
+```
+  select name O  id 2:4
+```
 
 will select atoms that are named **O** *and* whose id/index is between 2
 and 4. Each selection criteria can be inverted by prepending **not**
 keyword. For example
 
-`  select not name O  id 2:4`
+```
+  select not name O  id 2:4
+```
 
 will select all atoms that are *not* named **O** *and* whose id/index is
 between 2 and 4.
