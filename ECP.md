@@ -122,56 +122,62 @@ calculation on uranyl (<img alt="$UO_{2}^{2+}$" src="https://raw.githubuserconte
 (aug-cc-pvdz basis), and uranium with an ARECP and using the
 corresponding basis the following input can be used
 
-` geometry`  
-`   U 0 0  0`  
-`   O 0 0  1.65`  
-`   O 0 0 -1.65`  
-` end`  
-` basis `  
-`   U library crenbl_ecp`  
-`   O library aug-cc-pvdz`  
-` end`  
-` ecp`  
-`   U library crenbl_ecp`  
-` end`
+```
+ geometry
+   U 0 0  0
+   O 0 0  1.65
+   O 0 0 -1.65
+ end
+ basis 
+   U library crenbl_ecp
+   O library aug-cc-pvdz
+ end
+ ecp
+   U library crenbl_ecp
+ end
+```
 
 The following is an example of explicit input of an ECP for <img alt="$H_2CO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f7266bc89ebc0cca21bb8ad490bab33e.svg?invert_in_darkmode&sanitize=true" align=middle width="46.81545pt" height="22.38192pt"/>.
 It defines an ECP for the carbon and oxygen atoms in the molecule.
 
-` ecp`  
-`   C nelec 2 # ecp replaces 2 electrons on C`  
-`   C ul      # d`  
-`           1       80.0000000       -1.60000000`  
-`           1       30.0000000       -0.40000000`  
-`           2        0.5498205       -0.03990210`  
-`  C s        # s - d `  
-`           0        0.7374760        0.63810832`  
-`           0      135.2354832       11.00916230`  
-`           2        8.5605569       20.13797020`  
-`   C p       # p - d`  
-`           2       10.6863587       -3.24684280`  
-`           2       23.4979897        0.78505765`  
-`   O nelec 2 # ecp replaces 2 electrons on O`  
-`   O ul      # d `  
-`           1       80.0000000       -1.60000000`  
-`           1       30.0000000       -0.40000000`  
-`           2        1.0953760       -0.06623814`  
-`   O s       # s - d`  
-`           0        0.9212952        0.39552179`  
-`           0       28.6481971        2.51654843`  
-`           2        9.3033500       17.04478500`  
-`   O p       # p - s `  
-`           2       52.3427019       27.97790770`  
-`           2       30.7220233      -16.49630500`  
-` end`
+```
+ ecp
+   C nelec 2 # ecp replaces 2 electrons on C
+   C ul      # d
+           1       80.0000000       -1.60000000
+           1       30.0000000       -0.40000000
+           2        0.5498205       -0.03990210
+  C s        # s - d 
+           0        0.7374760        0.63810832
+           0      135.2354832       11.00916230
+           2        8.5605569       20.13797020
+   C p       # p - d
+           2       10.6863587       -3.24684280
+           2       23.4979897        0.78505765
+   O nelec 2 # ecp replaces 2 electrons on O
+   O ul      # d 
+           1       80.0000000       -1.60000000
+           1       30.0000000       -0.40000000
+           2        1.0953760       -0.06623814
+   O s       # s - d
+           0        0.9212952        0.39552179
+           0       28.6481971        2.51654843
+           2        9.3033500       17.04478500
+   O p       # p - s 
+           2       52.3427019       27.97790770
+           2       30.7220233      -16.49630500
+ end
+```
 
 Various ECPs without a local function are available, including those of
 the Stuttgart group. For those, no "ul" part needs to be defined. To
 define the absence of the local potential, simply specify one
 contraction with a zero coefficient:
 
-`    `<string tag>` ul`  
-`    2     1.00000     0.00000`
+```
+    <string tag> ul
+    2     1.00000     0.00000
+```
 
 ## Spin-orbit ECPs
 

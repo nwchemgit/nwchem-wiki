@@ -7,15 +7,17 @@ Input](Getting-Started#water-molecule-sample-input-file "wikilink")).
 Each center (usually an atom) is identified on a line of the following
 form:
 
-`   `<string tag>` `<real x y z>` [vx vy vz] \`  
-`       [charge `<real charge>`] [mass `<real mass>`] \`  
-`       [(nuc || nucl || nucleus) `<string nucmodel>`]`
+```
+   <string tag> <real x y z> [vx vy vz] \
+       [charge <real charge>] [mass <real mass>] \
+       [(nuc || nucl || nucleus) <string nucmodel>]
+```
 
-The string <tag> is the name of the atom or center, and its case (upper
+The string `<tag>` is the name of the atom or center, and its case (upper
 or lower) is important. The tag is limited to 16 characters and is
 interpreted as follows:
 
-  - If the entry for <tag> begins with either the symbol or name of an
+  - If the entry for `<tag>` begins with either the symbol or name of an
     element (regardless of case), then the center is treated as an atom
     of that type. The default charge is the atomic number (adjusted for
     the presence of ECPs by the ECP NELEC directive ; see Section 8).
@@ -23,7 +25,7 @@ interpreted as follows:
     between atoms of the same element (For example, the tags oxygen, O,
     o34, olonepair, and Oxygen-ether, will all be interpreted as oxygen
     atoms.).
-  - If the entry for <tag> begins with the characters bq or x
+  - If the entry for `<tag>` begins with the characters bq or x
     (regardless of case), then the center is treated as a dummy center
     with a default zero charge (Note: a tag beginning with the
     characters xe will be interpreted as a xenon atom rather than as a

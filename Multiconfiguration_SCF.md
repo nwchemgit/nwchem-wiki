@@ -47,7 +47,7 @@ must be arranged in order
 ## ACTELEC -- Number of active electrons
 
 The number of electrons in the CASSCF active space must be specified
-using the the ACTELEC directive. An error is reported if the number of
+using the ACTELEC directive. An error is reported if the number of
 active electrons and the multiplicity are inconsistent.
 
 The number of closed shells is determined by subtracting the number of
@@ -160,9 +160,8 @@ below.
 
 <center>
 
-|                     |         |                                        |          |
-| ------------------- | ------- | -------------------------------------- | -------- |
 | MCSCF Print Options | Option  | Class                                  | Synopsis |
+| ------------------- | ------- | -------------------------------------- | -------- |
 | ci energy           | default | CI energy eigenvalue                   |
 | fock energy         | default | Energy derived from Fock matrices      |
 | gradient norm       | default | Gradient norm                          |

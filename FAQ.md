@@ -35,10 +35,12 @@ three variables above and c) point your `PATH` env. variable to the
 location of mpif90. If bash is your shell choice, this can be
 accomplished by typing
 
-`unset MPI_LIB`  
-`unset MPI_INCLUDE `  
-`unset LIBMPI`  
-`export PATH="directory where mpif90 is located":$PATH`
+```
+unset MPI_LIB
+unset MPI_INCLUDE 
+unset LIBMPI
+export PATH="directory where mpif90 is located":$PATH
+```
 
 ## What's this business with ARMCI and ARMCI\_NETWORK?
 
@@ -129,7 +131,9 @@ which can make optimization in redundant internals less efficient than
 in Cartesians. For systems such as clusters of atoms or small molecules,
 try using a smaller value of the scaling factor for covalent radii
 
-`zcoord; cvr_scaling 0.9; end`
+```
+zcoord; cvr_scaling 0.9; end
+```
 
 In addition to this you can also try specifying a minimal set of bonds
 to connect the fragments.
@@ -202,7 +206,9 @@ Some ARMCI\_NETWORK values (e.g. OPENIB) depend on the
 `ARMCI_DEFAULT_SHMMAX` value for large allocations of Global memory. We
 recommend a value of -- at least -- 2048, e.g. in bash shell parlance
 
-`export ARMCI_DEFAULT_SHMMAX=2048`
+```
+export ARMCI_DEFAULT_SHMMAX=2048
+```
 
 A value of 2048 for ARMCI\_DEFAULT\_SHMMAX corresponds to 2048 GBytes,
 equal to 2048\*1024\*1024=2147483648 bytes. For
@@ -210,7 +216,9 @@ ARMCI\_DEFAULT\_SHMMAX=2048 to work, it is necessary that kernel
 parameter `kernel.shmmax` to be greater than 2147483648. You can check
 the current value of `kernel.shmmax` on your system by typing
 
-`sysctl kernel.shmmax`
+```
+sysctl kernel.shmmax
+```
 
 More detail about kernel.shmmax can be found at the webpage
 <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html>
