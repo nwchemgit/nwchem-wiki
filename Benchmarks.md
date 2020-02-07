@@ -131,39 +131,45 @@ C1 symmetry; 98 nodes: 8 cores per node + 1GPU)
 
 **Using 8 CPU cores**
 
-`Using CUDA CCSD(T) code `  
-`Using 0 device(s) per node `  
-`CCSD[T] correction energy / hartree = -0.150973754992986 `  
-`CCSD[T] correlation energy / hartree = -3.067917061062492 `  
-`CCSD[T] total energy / hartree = -844.403376796441080 `  
-`CCSD(T) correction energy / hartree = -0.147996460406684 `  
-`CCSD(T) correlation energy / hartree = -3.064939766476190 `  
-`CCSD(T) total energy / hartree = -844.400399501854849 `  
-`Cpu & wall time / sec 9229.9 9240.3 `
+```
+Using CUDA CCSD(T) code 
+Using 0 device(s) per node 
+CCSD[T] correction energy / hartree = -0.150973754992986 
+CCSD[T] correlation energy / hartree = -3.067917061062492 
+CCSD[T] total energy / hartree = -844.403376796441080 
+CCSD(T) correction energy / hartree = -0.147996460406684 
+CCSD(T) correlation energy / hartree = -3.064939766476190 
+CCSD(T) total energy / hartree = -844.400399501854849 
+Cpu & wall time / sec 9229.9 9240.3 
+```
 
 **Using 7 CPU cores and one GPU**
 
-`Using CUDA CCSD(T) code `  
-`Using 1 device(s) per node  `  
-`CCSD[T] correction energy / hartree = -0.150973754993019 `  
-`CCSD[T] correlation energy / hartree = -3.067917061062597 `  
-`CCSD[T] total energy / hartree = -844.403376796441307 `  
-`CCSD(T) correction energy / hartree = -0.147996460406693 `  
-`CCSD(T) correlation energy / hartree = -3.064939766476270 `  
-`CCSD(T) total energy / hartree = -844.400399501854963 `  
-`Cpu & wall time / sec 1468.0 1630.7 `
+```
+Using CUDA CCSD(T) code 
+Using 1 device(s) per node  
+CCSD[T] correction energy / hartree = -0.150973754993019 
+CCSD[T] correlation energy / hartree = -3.067917061062597 
+CCSD[T] total energy / hartree = -844.403376796441307 
+CCSD(T) correction energy / hartree = -0.147996460406693 
+CCSD(T) correlation energy / hartree = -3.064939766476270 
+CCSD(T) total energy / hartree = -844.400399501854963 
+Cpu & wall time / sec 1468.0 1630.7 
+```
 
 **Using 1 CPU core and one GPU**
 
-`Using CUDA CCSD(T) code`  
-`Using 1 device(s) per node`  
-`CCSD[T] correction energy / hartree = -0.150973754993069`  
-`CCSD[T] correlation energy / hartree = -3.067917061063028`  
-`CCSD[T] total energy / hartree =  -844.***************`  
-`CCSD(T) correction energy / hartree = -0.147996460406749`  
-`CCSD(T) correlation energy / hartree = -3.064939766476708`  
-`CCSD(T) total energy / hartree = -844.400399501861216`  
-`Cpu & wall time / sec 1410.9 1756.5`
+```
+Using CUDA CCSD(T) code
+Using 1 device(s) per node
+CCSD[T] correction energy / hartree = -0.150973754993069
+CCSD[T] correlation energy / hartree = -3.067917061063028
+CCSD[T] total energy / hartree =  -844.***************
+CCSD(T) correction energy / hartree = -0.147996460406749
+CCSD(T) correlation energy / hartree = -3.064939766476708
+CCSD(T) total energy / hartree = -844.400399501861216
+Cpu & wall time / sec 1410.9 1756.5
+```
 
 Without GPU 9240.3 sec. With GPU 1630.7 sec.
 
@@ -203,13 +209,11 @@ Titan system at ORNL (NVIDIA Tesla® K20X).
 
 ([ input file](pentacene_ccsdt.nw "wikilink"))
 
-|          |                      |             |
-| -------- | -------------------- | ----------- |
 | Tilesize | Intel Xeon Phi 5110P | Nvidia K20X |
+| -------- | -------------------- | ----------- |
 | 18       | 1806.4               | 1824.9      |
 | 21       | 1652.2               | 1699.3      |
 | 24       | 1453.3               | 1554.4      |
-|  |
 
 # Current developments for high accuracy: alternative task schedulers (ATS)
 
@@ -268,30 +272,40 @@ Performance tests for water clusters
 Luciferin (aug-cc-pVDZ basis set; RHF reference; frozen core) - time per
 CCSD iteration ([ input file](luciferin.nw "wikilink"))
 
-` tilesize = 30 `  
-`   256 cores      644 sec.`  
-`   512            378 sec.`  
-`   664            314 sec.`  
-`  1020            278 sec.`  
-`  1300            237 sec.`
+```
+ tilesize = 30 
+   256 cores      644 sec.
+   512            378 sec.
+   664            314 sec.
+  1020            278 sec.
+  1300            237 sec.
+```
 
-` tilesize = 40`  
-`    128             998 sec.`  
-`    256             575 sec.`
+```
+ tilesize = 40
+    128             998 sec.
+    256             575 sec.
+```
 
 Sucrose (6-311G\*\* basis set; RHF reference; frozen core) - time per
 CCSD iteration ([ input file](sucrose.nw "wikilink"))
 
-`tilesize = 40`  
-`   256 cores   1486 sec. `  
-`   512          910 sec.`  
-`  1024          608 sec.`
+```
+tilesize = 40
+   256 cores   1486 sec. 
+   512          910 sec.
+  1024          608 sec.
+```
 
 Cytosine-OH (POL1; UHF reference; frozen core) - time per EOMCCSD
 iteration ([ input file](cytosine_oh_pol1.nw "wikilink"))
 
-` tilesize = 30`  
-` 256 cores    44.5 sec.`
+```
+ tilesize = 30
+ 256 cores    44.5 sec.
+```
 
-` tilesize = 40 `  
-` 128 cores    55.6 sec.`
+```
+ tilesize = 40
+ 128 cores    55.6 sec.
+```
