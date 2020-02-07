@@ -113,7 +113,9 @@ approximation (ZORA) have been implemented. ZORA can be accessed only
 via the DFT and SO-DFT modules. The use of relativistic
 effects with ZORA can be invoked by specifying:
 
-` ZORA [<string (ON||OFF) default ON>`
+```
+ ZORA [<string (ON||OFF) default ON>
+```
 
 The ON|OFF string is used to turn on or off ZORA. By default, if the
 ZORA keyword is found, the approximation will be used in the
@@ -126,26 +128,32 @@ turned off.
 To increase the accuracy of ZORA calculations, the following settings may be used 
 in the relativistic block
 
-` relativistic`  
-`     zora on`  
-`     zora:cutoff 1d-30`  
-` end`
+```
+ relativistic
+     zora on
+     zora:cutoff 1d-30
+ end
+```
 
 To invoke the relativistic ZORA model potential approach due to van Wullen (references 16 & 17).
 
 For model potentials constructed from 4-component densities:  
-` relativistic`  
-`     zora on`  
-`     zora:cutoff 1d-30`  
-`     modelpotential  1`  
-` end`  
+```
+ relativistic
+     zora on
+     zora:cutoff 1d-30
+     modelpotential  1
+ end
+```
 
 For model potentials constructed from 2-component densities:  
-` relativistic`  
-`     zora on`  
-`     zora:cutoff 1d-30`  
-`     modelpotential  2`  
-` end`  
+```
+ relativistic
+     zora on
+     zora:cutoff 1d-30
+     modelpotential  2
+ end
+```
 
 Both approaches are comparable in accuracy and depends on the system.
 
@@ -185,8 +193,10 @@ The use of these approximations can be invoked with the use of the
 DYALL-MOD-DIRAC directive in the RELATIVISTIC directive block. The
 syntax is as follows.
 
-` DYALL-MOD-DIRAC [ (ON || OFF) default ON ] `  
-`                 [ (NESC1E || NESC2E) default NESC1E ]`
+```
+ DYALL-MOD-DIRAC [ (ON || OFF) default ON ] 
+                 [ (NESC1E || NESC2E) default NESC1E ]
+```
 
 The ON|OFF string is used to turn on or off the Dyall's modified Dirac
 approximation. By default, if the DYALL-MOD-DIRAC keyword is found, the
@@ -203,8 +213,10 @@ some sub options which are placed on the same logical line as the
 DYALL-MOD-DIRAC directive, with the following
 syntax:
 
-` NESC2E [ (SS1CENT [ (ON || OFF) default ON ] || SSALL) default SSALL ]`  
-`        [ (SSSS [ (ON || OFF) default ON ] || NOSSSS) default SSSS ]`
+```
+ NESC2E [ (SS1CENT [ (ON || OFF) default ON ] || SSALL) default SSALL ]
+        [ (SSSS [ (ON || OFF) default ON ] || NOSSSS) default SSSS ]
+```
 
 The first sub-option gives the capability to limit the two-electron
 corrections to those in which the small components in any density must
@@ -254,68 +266,72 @@ Some examples follow. The first example sets up the data for
 relativistic calculations on water with the one-electron approximation
 and the two-electron approximation, using the library basis sets.
 
-` start h2o-dmd`  
-` geometry units bohr`  
-` symmetry c2v`  
-`   O       0.000000000    0.000000000   -0.009000000`  
-`   H       1.515260000    0.000000000   -1.058900000`  
-`   H      -1.515260000    0.000000000   -1.058900000`  
-` end`  
-` basis "fw" rel`  
-`   oxygen library cc-pvdz_pt_sf_fw`  
-`   hydrogen library cc-pvdz_pt_sf_fw`  
-` end`  
-` basis "large"`  
-`   oxygen library cc-pvdz_pt_sf_lc`  
-`   hydrogen library cc-pvdz_pt_sf_lc`  
-` end`  
-` basis "large2" rel`  
-`   oxygen library cc-pvdz_pt_sf_lc`  
-`   hydrogen library cc-pvdz_pt_sf_lc`  
-` end`  
-` basis "small"`  
-`   oxygen library cc-pvdz_pt_sf_sc`  
-`   hydrogen library cc-pvdz_pt_sf_sc`  
-` end`  
-` set "ao basis" fw`  
-` set "large component" large`  
-` set "small component" small`  
-` relativistic`  
-`   dyall-mod-dirac`  
-` end`  
-` task scf`  
-` set "ao basis" large2`  
-` unset "large component"`  
-` set "small component" small`  
-` relativistic`  
-`   dyall-mod-dirac nesc2e`  
-` end`  
-` task scf`
+```
+ start h2o-dmd
+ geometry units bohr
+ symmetry c2v
+   O       0.000000000    0.000000000   -0.009000000
+   H       1.515260000    0.000000000   -1.058900000
+   H      -1.515260000    0.000000000   -1.058900000
+ end
+ basis "fw" rel
+   oxygen library cc-pvdz_pt_sf_fw
+   hydrogen library cc-pvdz_pt_sf_fw
+ end
+ basis "large"
+   oxygen library cc-pvdz_pt_sf_lc
+   hydrogen library cc-pvdz_pt_sf_lc
+ end
+ basis "large2" rel
+   oxygen library cc-pvdz_pt_sf_lc
+   hydrogen library cc-pvdz_pt_sf_lc
+ end
+ basis "small"
+   oxygen library cc-pvdz_pt_sf_sc
+   hydrogen library cc-pvdz_pt_sf_sc
+ end
+ set "ao basis" fw
+ set "large component" large
+ set "small component" small
+ relativistic
+   dyall-mod-dirac
+ end
+ task scf
+ set "ao basis" large2
+ unset "large component"
+ set "small component" small
+ relativistic
+   dyall-mod-dirac nesc2e
+ end
+ task scf
+```
 
 The second example has oxygen as a relativistic atom and hydrogen
 nonrelativistic.
 
-` start h2o-dmd2`  
-` geometry units bohr`  
-` symmetry c2v`  
-`   O       0.000000000    0.000000000   -0.009000000`  
-`   H       1.515260000    0.000000000   -1.058900000`  
-`   H      -1.515260000    0.000000000   -1.058900000`  
-` end`  
-` basis "ao basis"`  
-`   oxygen library cc-pvdz_pt_sf_fw rel`  
-`   hydrogen library cc-pvdz`  
-` end`  
-` basis "large component"`  
-`   oxygen library cc-pvdz_pt_sf_lc`  
-` end`  
-` basis "small component"`  
-`   oxygen library cc-pvdz_pt_sf_sc`  
-` end`  
-` relativistic`  
-`   dyall-mod-dirac`  
-` end`  
-` task scf`
+```
+ start h2o-dmd2
+ geometry units bohr
+ symmetry c2v
+   O       0.000000000    0.000000000   -0.009000000
+   H       1.515260000    0.000000000   -1.058900000
+   H      -1.515260000    0.000000000   -1.058900000
+ end
+ basis "ao basis"
+   oxygen library cc-pvdz_pt_sf_fw rel
+   hydrogen library cc-pvdz
+ end
+ basis "large component"
+   oxygen library cc-pvdz_pt_sf_lc
+ end
+ basis "small component"
+   oxygen library cc-pvdz_pt_sf_sc
+ end
+ relativistic
+   dyall-mod-dirac
+ end
+ task scf
+```
 
 ### References 
 

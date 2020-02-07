@@ -105,16 +105,22 @@ The module is called TDDFT as TDDFT employing a hybrid HF-DFT functional
 encompasses all of the above-mentioned methods implemented. To use this
 module, one needs to specify TDDFT on the task directive, e.g.,
 
-`     TASK TDDFT ENERGY`
+```
+     TASK TDDFT ENERGY
+```
 
 for a single-point excitation energy calculation, and
 
-`     TASK TDDFT OPTIMIZE`
+```
+     TASK TDDFT OPTIMIZE
+```
 
 for an excited-state geometry optimization (and perhaps an adiabatic
 excitation energy calculation), and
 
-`     TASK TDDFT FREQUENCIES`
+```
+     TASK TDDFT FREQUENCIES
+```
 
 for an excited-state vibrational frequency calculation. The TDDFT module
 first invokes DFT module for a ground-state calculation (regardless of
@@ -323,18 +329,20 @@ input example is given the Sample Inputs section. A TDDFT gradients
 calculation allows one to calculate the excited state density of a
 specific excited state. This is written to a file with the dmat suffix.
 
-` tddft`  
-`  nroots 2`  
-`  algorithm 1`  
-`  notriplet`  
-`  target 1`  
-`  targetsym a`  
-`  civecs`  
-`  grad`  
-`    root 1`  
-`  end`  
-` end`  
-` task tddft optimize`
+```
+tddft
+ nroots 2
+ algorithm 1
+ notriplet
+ target 1
+ targetsym a
+ civecs
+ grad
+   root 1
+ end
+end
+task tddft optimize
+```
 
 At the moment the following exchange-correlation functionals are
 supported with TDDFT
@@ -345,7 +353,7 @@ gradients
 ### CDSpectrum -- optical rotation calculations
 
 Perform optical rotation calculations.
-We recommend to use the <tt>GIAO</tt> keyword
+We recommend to use the `GIAO` keyword
 
 ### VELOCITY -- velocity gauge
 
@@ -382,22 +390,30 @@ calculations by this keyword (this does not affect the ground state HF
 or DFT calculation). No orbitals are frozen by default. To exclude the
 atom-like core regions altogether, one may request
 
-` FREEZE atomic`
+```
+ FREEZE atomic
+```
 
 To specify the number of lowest-lying occupied orbitals be excluded, one
 may use
 
-` FREEZE 10`
+```
+ FREEZE 10
+```
 
 which causes 10 lowest-lying occupied orbitals excluded. This is
 equivalent to writing
 
-` FREEZE core 10`
+```
+ FREEZE core 10
+```
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
 
-` FREEZE virtual 5`
+```
+ FREEZE virtual 5
+```
 
 ### PRINT -- the verbosity
 

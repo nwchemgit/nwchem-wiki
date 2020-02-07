@@ -3,7 +3,9 @@
 This is an optional top-level directive that allows the user to specify
 the total charge of the system. The form of the directive is as follows:
 
-`CHARGE <real charge default 0>`
+```
+CHARGE <real charge default 0>
+```
 
 The charge directive, in conjunction with the charges of atomic nuclei
 (which can be changed via the geometry input, cf. Section [Geometry](Geometry "wikilink")),
@@ -14,7 +16,9 @@ this directive is omitted. An example of a case where the directive
 would be needed is for a calculation on a doubly charged cation. In such
 a case, the directive is simply,
 
-`charge 2`
+```
+charge 2
+```
 
 If centers with [fractional charge](Geometry "wikilink") have been
 specified the net charge of the system should be adjusted to ensure that
