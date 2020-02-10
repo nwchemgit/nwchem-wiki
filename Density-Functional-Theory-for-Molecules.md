@@ -356,7 +356,7 @@ where
 
  a<sub>0</sub> = 0.20, a<sub>X</sub> = 0.72, a<sub>C</sub> = 0.81  
 
-
+## XC Functionals Summary
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
