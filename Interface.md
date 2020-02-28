@@ -65,13 +65,13 @@ is updated.
 ### Files
 
 Test runs are located in directories in $NWCHEM\_TOP/QA/tests. Test runs
-are available for two systems: <img alt="$H + H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02508d1f3e87e1ce4a2f42a9cb8e8fc1.svg?invert_in_darkmode&sanitize=true" align=middle width="55.13376pt" height="22.38192pt"/> and <img alt="$OH + H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dbab384c24923efa2133c309e925768b.svg?invert_in_darkmode&sanitize=true" align=middle width="68.082465pt" height="22.38192pt"/>.
+are available for two systems: H + H<sub>2</sub> and OH + H<sub>2</sub>.
 
-The <img alt="$H + H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02508d1f3e87e1ce4a2f42a9cb8e8fc1.svg?invert_in_darkmode&sanitize=true" align=middle width="55.13376pt" height="22.38192pt"/> test uses the Euler integration method at the SCF/3-21G
+The H + H<sub>2</sub> test uses the Euler integration method at the SCF/3-21G
 level of theory to calculate points along the reaction path. This test
 is located in the $NWCHEM\_TOP/QA/tests/h3tr1 directory.
 
-The <img alt="$OH + H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dbab384c24923efa2133c309e925768b.svg?invert_in_darkmode&sanitize=true" align=middle width="68.082465pt" height="22.38192pt"/> test uses the Page-McIver CUBE algorithm to calculate
+The OH + H<sub>2</sub> test uses the Page-McIver CUBE algorithm to calculate
 points on the SCF/3-21G surface and does additional single point
 calculations at the SCF/6-31G\* level of theory. This test is located in
 the $NWCHEM\_TOP/QA/tests/oh3tr3 directory.
@@ -172,9 +172,9 @@ sections.
 ##### GENERAL section
 
 The GENERAL section has the following format:
-
-  - GENERAL
 ```
+  - GENERAL
+
  [TITLE <string title>]  
  ATOMS  
    <integer num> <string tag> [<real mass>]  
