@@ -25,12 +25,12 @@ Northwest Laboratory, Richland, Washington
 If you use the DIRDYVTST portion of NWChem, please use following
 citation in addition to the usual NWChem
 citation:
-
-`   DIRDYVTST, Yao-Yuan Chuang and Donald G. Truhlar, Department of Chemistry and Super Computer Institute, `  
-`   University of Minnesota; Ricky A. Kendall,Scalable Computing Laboratory, Ames Laboratory and Iowa State `  
-`   University; Bruce C. Garrett and Theresa L. Windus, Environmental Molecular Sciences Laboratory, `  
-`   Pacific Northwest Laboratory. `
-
+```
+   DIRDYVTST, Yao-Yuan Chuang and Donald G. Truhlar, Department of Chemistry and Super Computer Institute,   
+   University of Minnesota; Ricky A. Kendall,Scalable Computing Laboratory, Ames Laboratory and Iowa State   
+   University; Bruce C. Garrett and Theresa L. Windus, Environmental Molecular Sciences Laboratory,  
+   Pacific Northwest Laboratory. `
+```
 ### Introduction
 
 By using DIRDYVTST, a user can carry out electronic structure
