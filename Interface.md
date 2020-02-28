@@ -173,7 +173,7 @@ sections.
 
 The GENERAL section has the following format:
 ```
-  - GENERAL
+  * GENERAL
 
  [TITLE <string title>]  
  ATOMS  
