@@ -159,7 +159,7 @@ model is DFT/B3LYP/6-311g\*\*, the DIRDYVTST input might look like this
    end
 ```
 The empty XC directive restores the default [LDA exchange-correlation
-functional](Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink").
+functional](Density-Functional-Theory-for-Molecules#XC-and-DECOMP----Exchange-Correlation-Potentials "wikilink").
 Note that semi-colons and other quotation marks inside the input string
 must be preceded by a backslash to avoid special interpretation.
 
