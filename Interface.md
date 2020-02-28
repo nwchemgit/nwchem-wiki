@@ -44,7 +44,7 @@ Cartesian geometries for the reactants, products, and saddle points need
 to be input to this program; optimization of geometries is not performed
 in this program. Note that DIRDYVTST is based on the DIRDYGAUSS program
 and is similar to two other programs: DDUTILITIES and GAUSSRATE. Users
-of this module are encouraged to read the POLYRATE manual since they
+of this module are encouraged to read the [POLYRATE manual](https://comp.chem.umn.edu/polyrate/190727_Polyrate_17-C_manuall.pdf "link") since they
 will need to create the file fu5 input to run calculations with
 POLYRATE.
 
