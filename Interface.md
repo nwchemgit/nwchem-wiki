@@ -4,8 +4,7 @@
 NWChem has interfaces to several different packages which are listed
 below. In general, the NWChem authors work with the authors of the other
 packages to make sure that the interface works. However, any problems
-with the interface should be reported to the nwchem-users@emsl.pnl.gov
-e-mail list.
+with the interface should be reported through the github issue page https://github.com/nwchemgit/nwchem/issues
 
 ## DIRDYVTST -- DIRect Dynamics for Variational Transition State Theory
 
@@ -95,7 +94,7 @@ form:
                         [ecp <string ecp>] [input <string input>]]  
    [SPTHEORY <string theory> [basis <string basis default "ao basis">]   
                         [ecp <string ecp>] [input <string input>`]]  
-   ...`  
+   ...
  END`
 ```
 #### Use of symmetry
@@ -157,7 +156,7 @@ model is DFT/B3LYP/6-311g\*\*, the DIRDYVTST input might look like this
      theory  dft basis 3-21g    input "dft\; xc\; end"  
      sptheory dft basis 6-311g** input "dft\; xc b3lyp\; end"  
      ....  
-   end`
+   end
 ```
 The empty XC directive restores the default [LDA exchange-correlation
 functional](Release66:Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink").
@@ -200,13 +199,13 @@ are required in a single line. If isotope of the element is considered
 then the atomic mass is required in units of amu.
 
 For example:
-
-`                         ATOMS`  
-`                           1     H     2.014`  
-`                           2     H `  
-`                           3     Cl`  
-`                         END`
-
+```
+                         ATOMS  
+                           1     H     2.014  
+                           2     H  
+                           3     Cl  
+                         END`
+```
 SINGLEPOINT is a keyword that specifies that a single point calculation
 is to be performed at the reactants, products and saddle point
 geometries. The type of single point calculation is specified in the
@@ -240,12 +239,12 @@ GEOM is a list keyword that indicates the geometry of the molecule in
 Cartesian coordinates with atomic unit.
 
 For example:
-
-`                         GEOM`  
-`                            1      0.0     0.0     0.0`  
-`                            2      0.0     0.0     1.5`  
-`                         END`
-
+```
+                         GEOM  
+                            1      0.0     0.0     0.0  
+                            2      0.0     0.0     1.5  
+                         END
+```
 SPECIES is a variable keyword that indicates the type of the molecule.
 Options are: ATOMIC (atomic reactant or product), LINRP (linear reactant
 or product), NONLINRP (nonlinear reactant or product), LINTS (linear
@@ -263,7 +262,7 @@ The Path section has the format:
  [SCALEMASS <real scalemass default 1.0>]  
  [SSTEP <real sstep default 0.01>]  
  [SSAVE <real ssave default 0.1>]  
- [SHESS `<real shess default SSAVE>]  
+ [SHESS <real shess default SSAVE>]  
  [SLP <real slp default 1.0>]  
  [SLM <real slm default -1.0>]  
  [SIGN (REACTANT || PRODUCT default REACTANT)]  
@@ -333,87 +332,88 @@ supermolecule, a doublet. In this example, the initial energies,
 gradients, and Hessians are calculated at the UHF/3-21G level of theory
 and the singlepoint calculations are calculated at the MP2/cc-pVDZ level
 of theory with a tighter convergence threshold than the first SCF.
-
-`start h3test`  
+```
+start h3test  
   
-`basis`  
-` h library 3-21G`  
-`end `  
+basis  
+ h library 3-21G  
+end  
   
-`basis singlepoint`  
-` h library cc-pVDZ`  
-`end`  
+basis singlepoint  
+ h library cc-pVDZ  
+end  
+ 
+scf  
+  uhf  
+  doublet  
+  thresh 1.0e-6  
+end  
   
-`scf`  
-`  uhf`  
-`  doublet`  
-`  thresh 1.0e-6`  
-`end`  
+dirdyvtst autosym 0.001  
+  theory scf input "scf\; uhf\; doublet\; thresh 1.0e-06\; end"  
+  sptheory mp2 basis singlepoint input \  
+    "scf\; uhf\; doublet\; thresh 1.0e-07\; end"  
+*GENERAL  
+  TITLE  
+    Test run: H+H2 reaction, Page-McIver CLQA algorithm, no restart  
   
-`dirdyvtst autosym 0.001`  
-`  theory scf input "scf\; uhf\; doublet\; thresh 1.0e-06\; end"`  
-`  sptheory mp2 basis singlepoint input \`  
-`    "scf\; uhf\; doublet\; thresh 1.0e-07\; end"`  
-`*GENERAL`  
-`  TITLE`  
-`    Test run: H+H2 reaction, Page-McIver CLQA algorithm, no restart`  
+  ATOMS 
+     1    H 
+     2    H  
+     3    H  
+  END 
   
-`  ATOMS`  
-`     1    H`  
-`     2    H`  
-`     3    H`  
-`  END`  
+  SINGLEPOINT  
   
-`  SINGLEPOINT`  
+*REACT1  
+   GEOM  
+     1  0.0   0.0   0.0  
+     2  0.0   0.0   1.3886144 
+   END  
   
-`*REACT1`  
-`   GEOM`  
-`     1  0.0   0.0   0.0`  
-`     2  0.0   0.0   1.3886144`  
-`   END `  
+   SPECIES LINRP  
   
-`   SPECIES LINRP`  
+*REACT2  
+  GEOM  
+    3    0.0   0.0 190.3612132  
+  END  
   
-`*REACT2`  
-`  GEOM`  
-`    3    0.0   0.0 190.3612132`  
-`  END`  
+  SPECIES  ATOMIC  
   
-`  SPECIES  ATOMIC`  
+*PROD2  
+  GEOM  
+    1   0.0   0.0 190.3612132  
+  END  
   
-`*PROD2`  
-`  GEOM`  
-`    1   0.0   0.0 190.3612132`  
-`  END`  
+  SPECIES   ATOMIC  
   
-`  SPECIES   ATOMIC`  
+*PROD1  
   
-`*PROD1`  
+  GEOM  
+    2  0.0   0.0   1.3886144 
+    3   0.0   0.0   0.0  
+  END  
   
-`  GEOM`  
-`    2  0.0   0.0   1.3886144`  
-`    3   0.0   0.0   0.0`  
-`  END`  
+  SPECIES  LINRP  
   
-`  SPECIES  LINRP`  
+*START  
   
-`*START`  
+  GEOM  
+    1  0.0   0.0  -1.76531973  
+    2  0.0   0.0   0.0  
+    3  0.0   0.0   1.76531973  
+  END  
   
-`  GEOM`  
-`    1  0.0   0.0  -1.76531973`  
-`    2  0.0   0.0   0.0`  
-`    3  0.0   0.0   1.76531973`  
-`  END`  
+  SPECIES  LINTS  
   
-`  SPECIES  LINTS`  
+*PATH  
+  SSTEP  0.05  
+  SSAVE  0.05  
+  SLP    0.50  
+  SLM   -0.50  
+  SCALEMASS 0.6718993  
+  INTEGRA   CLQA  
+end  
   
-`*PATH`  
-`  SSTEP  0.05`  
-`  SSAVE  0.05`  
-`  SLP    0.50`  
-`  SLM   -0.50`  
-`  SCALEMASS 0.6718993`  
-`  INTEGRA   CLQA`  
-`end`  
-  
-`task dirdyvtst`
+task dirdyvtst
+```
