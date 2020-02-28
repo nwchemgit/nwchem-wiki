@@ -35,7 +35,8 @@ citation:
 
 By using DIRDYVTST, a user can carry out electronic structure
 calculations with NWChem and use the resulting energies, gradients, and
-Hessians for direct dynamics calculations with POLYRATE. This program
+Hessians for direct dynamics calculations with [POLYRATE](https://comp.chem.umn.edu/polyrate/ "link"). 
+This program
 prepares the file30 input for POLYRATE from NWChem electronic structure
 calculations of energies, gradients and Hessians at the reactant,
 product, and saddle point geometries and along the minimum energy path.
