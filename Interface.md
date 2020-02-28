@@ -328,7 +328,7 @@ properly.
 #### Example
 
 This is an example that creates the file30 file for POLYRATE for
-<img alt="$H + H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02508d1f3e87e1ce4a2f42a9cb8e8fc1.svg?invert_in_darkmode&sanitize=true" align=middle width="55.13376pt" height="22.38192pt"/>. Note that the multiplicity is that of the entire
+H + H<sub>2</sub>. Note that the multiplicity is that of the entire
 supermolecule, a doublet. In this example, the initial energies,
 gradients, and Hessians are calculated at the UHF/3-21G level of theory
 and the singlepoint calculations are calculated at the MP2/cc-pVDZ level
