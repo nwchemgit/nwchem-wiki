@@ -95,21 +95,21 @@ form:
    [SPTHEORY <string theory> [basis <string basis default "ao basis">]   
                         [ecp <string ecp>] [input <string input>`]]  
    ...
- END`
+ END
 ```
 #### Use of symmetry
 
 The use of symmetry in the calculation is controlled by the keyword
-autosym | noautosym which is used as described in the
-[geometry](Release66:Geometry "wikilink") directive. Autosym is on by
+`autosym | noautosym` which is used as described in the
+[geometry](Geometry "wikilink") directive. `Autosym` is on by
 default. A couple words of warning here. The tolerance related to
-autosym can cause problems when taking the initial step off of the
+`autosym` can cause problems when taking the initial step off of the
 transition state. If the tolerance is too large and the initial step
 relatively small, the resulting geometry will be close to a higher
 symmetry than is really wanted and the molecule will be symmetrized into
 the higher symmetry. To check this, the code prints out the symmetry at
 each geometry along the path. It is up to the user to check the symmetry
-and make sure that it is the required one. In preverse cases, the user
+and make sure that it is the required one. In perverse cases, the user
 may need to turn autosym off (noautosym) if changing the tolerance
 doesn't produce the desired results. In the case that autosym is used,
 the user does not need to worry about the different alignment of the
@@ -159,7 +159,7 @@ model is DFT/B3LYP/6-311g\*\*, the DIRDYVTST input might look like this
    end
 ```
 The empty XC directive restores the default [LDA exchange-correlation
-functional](Release66:Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink").
+functional](Density_Functional_Theory_for_Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials "wikilink").
 Note that semi-colons and other quotation marks inside the input string
 must be preceded by a backslash to avoid special interpretation.
 
