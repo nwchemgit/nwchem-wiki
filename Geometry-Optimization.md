@@ -409,7 +409,7 @@ specified by input using a line of the following form,
 
 If a step taken during the optimization is too large (e.g., the step
 causes the energy to go up for a minimization or down for a transition
-state search), the STEPPER optimizer will automatically \`\`backstep''
+state search), the STEPPER optimizer will automatically "backstep"
 and correct the step based on information prior to the faulty step. If
 you have an optimization that "backsteps" frequently then the initial
 trust radius should most likely be decreased.
@@ -425,7 +425,7 @@ initial hessian. Once Stepper executes it generates a binary dump file
 by the name of name.stpr41 which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
-[START](https://github.com/nwchemgit/nwchem/wiki/Start_Restart "wikilink")).
+[START](Start_Restart "wikilink")).
 It also stores the information for the last valid step in case the
 algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper "wikilink").
 This file is the working data store for all stepper-based optimizations.
