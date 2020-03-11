@@ -417,12 +417,14 @@ trust radius should most likely be decreased.
 ## Initial Nuclear Hessian Options
 
 Stepper uses a modified Fletcher-Powell algorithm to find the transition
-state or energy minimum on the potential energy hypersurface. There are
+state or energy minimum on the potential energy hypersurface.  
+There are
 two files left in the user's permanent directory that are used to
 provide an initial hessian to the critical point search algorithm. If
 these files do not exist then the default is to use a unit matrix as the
-initial hessian. Once Stepper executes it generates a binary dump file
-by the name of name.stpr41 which will be used on all subsequent stepper
+initial hessian.  
+Once Stepper executes it generates a binary dump file
+by the name of `name.stpr41` which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
 [START](Start_Restart "wikilink")).
@@ -430,13 +432,14 @@ It also stores the information for the last valid step in case the
 algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper "wikilink").
 This file is the working data store for all stepper-based optimizations.
 This file is never deleted by default and is the first source of an
-initial hessian. The second source of an inital hessian is an ascii file
+initial hessian.  
+The second source of an initial hessian is an ASCII file
 that contains the lower triangular values of the initial hessian. This
-is stored in file name.hess, where "name" is again the default file
+is stored in file `name.hess`, where "name" is again the default file
 prefix. This is the second source of an initial hessian and is the
 method used to incorporate an initial hessian from any other source
 (e.g., another ab initio code, a molecular mechanics code, etc.,). To
 get a decent starting hessian at a given point you can use the task
 specification task scf hessian, with a smaller basis set, which will by
-default generate the name.hess file. Then you may define your basis set
+default generate the `name.hess` file. Then you may define your basis set
 of choice and proceed with the optimization you desire.
