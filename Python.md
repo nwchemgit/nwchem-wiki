@@ -352,14 +352,14 @@ task python
 ```
 
 This program illustrates evaluating the energy and gradient by calling
-task\_gradient(). A water molecule is scanned through several $C\_{2v}$
+task\_gradient(). A water molecule is scanned through several C<sub>2v</sub>
 geometries by varying the y and z coordinates of the two hydrogen atoms.
 At each geometry the coordinates, energy and gradient are printed.
 
 The basis set (sto-3g) is input as usual. The two while loops vary the y
 and z coordinates. These are then substituted into a geometry which is
-parsed by NWChem using input\_parse(). The energy and gradient are then
-evaluated by calling task\_gradient() which returns a tuple containing
+parsed by NWChem using `input_parse()`. The energy and gradient are then
+evaluated by calling `task_gradient()` which returns a tuple containing
 the energy (a scalar) and the gradient (a vector or list). These are
 printed out exploiting the Python convention that a print statement
 ending in a comma does not print end-of-line.
@@ -395,8 +395,8 @@ ending in a comma does not print end-of-line.
 `  `  
 ` task python`
 
-In this example the reaction energy for $2H\_2 + C\_2H\_4 \\rightarrow
-2CH\_4$ is evaluated using MP2 in several basis sets. The geometries are
+In this example the reaction energy for  2H<sub>2</sub> + C<sub>2</sub>H<sub>4</sub> &rarr;
+2CH\_4 is evaluated using MP2 in several basis sets. The geometries are
 fixed, but could be re-optimized in each basis. To illustrate the useful
 associative arrays in Python, the reaction energies are put into the
 associative array energies -- note its declaration at the top of the
