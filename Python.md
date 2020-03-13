@@ -148,27 +148,27 @@ This input prints the traditional greeting from each parallel
 process.
 
 ### Scanning a basis exponent
+```
+geometry units au
+ O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107
+end
 
-` geometry units au`  
-`   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107`  
-` end`  
-` `  
-` python`  
-`   exponent = 0.1`  
-`   while (exponent <= 2.01):`  
-`      input_parse('''`  
-`         basis noprint`  
-`            H library 3-21g; O library 3-21g; O d; %f 1.0`  
-`         end`  
-`      ''' % (exponent))`  
-`      print ' exponent = ', exponent, ' energy = ', task_energy('scf')`  
-`      exponent = exponent + 0.1`  
-` end`  
-` `  
-` print none`  
-` `  
-` task python`
+python
+exponent = 0.1
+while (exponent <= 2.01):
+    input_parse('''                                                                                                
+    basis noprint                                                                                                  
+     H library 3-21g; O library 3-21g; O d; %f 1.0                                                                 
+    end                                                                                                            
+    ''' % (exponent))
+    print (' exponent = %5.4f,' % exponent, ', energy = %16.10f' % task_energy('scf'))
+    exponent = exponent + 0.1
+end
 
+print none
+
+task python
+```
 This program augments a 3-21g basis for water with a d-function on
 oxygen and varies the exponent from 0.1 to 2.0 in steps of 0.1, printing
 the exponent and energy at each step.
