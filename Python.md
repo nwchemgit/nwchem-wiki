@@ -316,39 +316,40 @@ foundation of a BSSE corrected geometry optimization
 package.
 
 ### Scan the geometry and compute the energy and gradient
-
-` basis noprint; H library sto-3g; O library sto-3g; end`  
-`  `  
-` python noprint`  
-`   print '   y     z     energy                gradient'`  
-`   print ' ----- ----- ---------- ------------------------------------'`  
-`   y = 1.2`  
-`   while y <= 1.61:`  
-`      z = 1.0`  
-`      while z <= 1.21:`  
-`         input_parse('''`  
-`            geometry noprint units atomic`  
-`               O 0   0   0`  
-`               H 0  %f -%f`  
-`               H 0 -%f -%f`  
-`            end`  
-`         ''' % (y, z, y, z))`  
-`    `  
-`         (energy,gradient) = task_gradient('scf')`  
-`  `  
-`         print ' %5.2f %5.2f %9.6f' % (y, z, energy),`  
-`         i = 0`  
-`         while (i < len(gradient)):`  
-`            print '%5.2f' % gradient[i],`  
-`            i = i + 1`  
-`         print ''`  
-`         z = z + 0.1`  
-`      y = y + 0.1`  
-` end`  
-`  `  
-` print none`  
-`  `  
-` task python`
+```
+ basis noprint; H library sto-3g; O library sto-3g; end
+  
+ python
+ print ('   y     z     energy                gradient')
+ print (' ----- ----- ---------- ------------------------------------')
+ y = 1.2
+ while y <= 1.61:
+     z = 1.0
+     while z <= 1.21:
+         input_parse('''
+           geometry noprint units atomic
+             O 0   0   0
+             H 0  %f -%f
+             H 0 -%f -%f
+           end
+         ''' % (y, z, y, z))
+         
+         (energy,gradient) = task_gradient('scf')
+         
+         print (' %5.2f %5.2f %9.6f' % (y, z, energy)),
+         i = 0
+         while (i < len(gradient)):
+             print ('%5.2f' % gradient[i]),
+             i = i + 1
+         print ('')
+     z = z + 0.1
+ y = y + 0.1
+end
+  
+print none
+  
+task python
+```
 
 This program illustrates evaluating the energy and gradient by calling
 task\_gradient(). A water molecule is scanned through several $C\_{2v}$
