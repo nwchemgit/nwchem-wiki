@@ -62,9 +62,9 @@ end
 ```
 The Python program is not executed until the following directive is
 encountered
-
-` task python`
-
+```
+ task python
+```
 which is to maintain consistency with the behavior of NWChem in general.
 The program is executed by all nodes. This enables the full
 functionality and speed of NWChem to be accessible from Python, but
@@ -137,13 +137,13 @@ Several examples will provide the best explanation of how the extensions
 are used, and how Python might prove useful.
 
 ### Hello world
+```
+python
+  print ('Hello world from process %i'  % ga_nodeid())
+end
 
-` python`  
-`   print 'Hello world from process ', ga_nodeid()`  
-` end`  
-` `  
-` task python`
-
+task python
+```
 This input prints the traditional greeting from each parallel
 process.
 
