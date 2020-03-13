@@ -231,27 +231,27 @@ results to standard output and to the file. When the loop is finished
 the additional output file is closed.
 
 ### Scanning a geometric variable
+```
+python
+   geometry = '''
+     geometry noprint; symmetry d2h
+        C 0 0 %f; H 0  0.916 1.224
+     end
+   '''
+   x = 0.6
+   while (x < 0.721):
+     input_parse(geometry % x)
+     energy = task_energy('scf')
+     print (' x = %5.2f   energy = %10.6f' % (x, energy))
+     x = x + 0.01
+end
 
-` python`  
-`   geometry = '''`  
-`     geometry noprint; symmetry d2h`  
-`        C 0 0 %f; H 0  0.916 1.224`  
-`     end`  
-`   '''`  
-`   x = 0.6`  
-`   while (x < 0.721):`  
-`     input_parse(geometry % x)`  
-`     energy = task_energy('scf')`  
-`     print ' x = %5.2f   energy = %10.6f' % (x, energy)`  
-`     x = x + 0.01`  
-` end`  
-`  `  
-` basis; C library 6-31g*; H library 6-31g*; end`  
-` `  
-` print none`  
-`  `  
-` task python`
+basis; C library 6-31g*; H library 6-31g*; end
 
+print none
+
+task python
+```
 This scans the bond length in ethene from 1.2 to 1.44 in steps of 0.2
 computing the energy at each geometry. Since it is using $D\_{2h}$
 symmetry the program actually uses a variable (x) that is half the bond
