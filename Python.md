@@ -262,39 +262,38 @@ task
 easier.
 
 ### Scan using the BSSE counterpoise corrected energy
+```
+basis spherical
+  Ne library cc-pvdz; BqNe library Ne cc-pvdz
+  He library cc-pvdz; BqHe library He cc-pvdz
+end
 
-` basis spherical`  
-`   Ne library cc-pvdz; BqNe library Ne cc-pvdz`  
-`   He library cc-pvdz; BqHe library He cc-pvdz`  
-` end`  
-`  `  
-` mp2; tight; freeze core atomic; end`  
-`  `  
-` print none`  
-`  `  
-` python noprint`  
-`   supermolecule = 'geometry noprint;   Ne 0 0 0;   He 0 0 %f; end\n'`  
-`   fragment1     = 'geometry noprint;   Ne 0 0 0; BqHe 0 0 %f; end\n'`  
-`   fragment2     = 'geometry noprint; BqNe 0 0 0;   He 0 0 %f; end\n'`  
-`  `  
-`   def energy(geometry):`  
-`     input_parse(geometry + 'scf; vectors atomic; end\n')`  
-`     return task_energy('mp2')`  
-`  `  
-`   def bsse_energy(z):`  
-`     return energy(supermolecule % z) - \`  
-`            energy(fragment1 % z) - \`  
-`            energy(fragment2 % z)`  
-`   z = 3.3`  
-`   while (z < 4.301):`  
-`     e = bsse_energy(z)`  
-`     if (ga_nodeid() == 0):`  
-`       print ' z = %5.2f   energy = %10.7f ' % (z, e)`  
-`     z = z + 0.1`  
-` end`  
-`  `  
-` task python`
+mp2; tight; freeze core atomic; end
 
+print none
+
+python
+  supermolecule = 'geometry noprint;   Ne 0 0 0;   He 0 0 %f; end\n'
+  fragment1     = 'geometry noprint;   Ne 0 0 0; BqHe 0 0 %f; end\n'
+  fragment2     = 'geometry noprint; BqNe 0 0 0;   He 0 0 %f; end\n'
+
+  def energy(geometry):
+    input_parse(geometry + 'scf; vectors atomic; end\n')
+    return task_energy('mp2')
+
+  def bsse_energy(z):
+    return energy(supermolecule % z) - \
+        energy(fragment1 % z) - \
+        energy(fragment2 % z)
+  z = 3.3
+  while (z < 4.301):
+    e = bsse_energy(z)
+    if (ga_nodeid() == 0): print (' z = %5.2f   energy = %10.7f ' % (z, e))
+    z = z + 0.1
+end
+
+task python
+```
 This example scans the He--Ne bond-length from 3.3 to 4.3 and prints out
 the BSSE counterpoise corrected MP2 energy.
 
