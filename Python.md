@@ -188,37 +188,37 @@ Look in the NWChem contrib directory for a routine that makes the above
 task easier.
 
 ### Scanning a basis exponent revisited
+```
+geometry units au
+O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107
+end
 
-` geometry units au`  
-`   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107`  
-` end`  
-` `  
-` print none`  
-` `  
-` python`  
-`   if (ga_nodeid() == 0): plotdata = open("plotdata",'w')`  
-`    `  
-`   def energy_at_exponent(exponent):`  
-`      input_parse('''`  
-`         basis noprint`  
-`            H library 3-21g; O library 3-21g; O d; %f 1.0`  
-`         end`  
-`      ''' % (exponent))`  
-`      return task_energy('scf')`  
-`   `  
-`   exponent = 0.1`  
-`   while exponent <= 2.01:`  
-`      energy = energy_at_exponent(exponent)`  
-`      if (ga_nodeid() == 0):`  
-`         print ' exponent = ', exponent, ' energy = ', energy`  
-`         plotdata.write('%f %f\n' % (exponent , energy))`  
-`      exponent = exponent + 0.1`  
-`    `  
-`   if (ga_nodeid() == 0): plotdata.close()`  
-` end`  
-`  `  
-` task python`
 
+python
+  if (ga_nodeid() == 0): plotdata = open("plotdata",'w')
+
+  def energy_at_exponent(exponent):
+    input_parse('''                                                                                                
+    basis noprint                                                                                                  
+      H library 3-21g; O library 3-21g; O d; %f 1.0                                                                
+    end                                                                                                            
+    ''' % (exponent))
+    return task_energy('scf')
+
+  exponent = 0.1
+  while exponent <= 2.01:
+    energy = energy_at_exponent(exponent)
+    if (ga_nodeid() == 0):
+        print (' exponent = %5.4f,' % exponent, ', energy = %16.10f' % energy)
+        plotdata.write('%f %f\n' % (exponent , energy))
+    exponent = exponent + 0.1
+
+  if (ga_nodeid() == 0): plotdata.close()
+end
+
+print none
+task python
+```
 This input performs exactly the same calculation as the previous one,
 but uses a slightly more sophisticated Python program, also writes the
 data out to a file for easy visualization with a package such as
