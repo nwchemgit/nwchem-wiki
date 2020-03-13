@@ -41,25 +41,25 @@ NWChem input, while satisfying the constraint that when given to Python
 the first line has zero indentation.
 
 E.g., the following two sets of input specify the same Python program.
+```
+python  
+  print ("Hello")
+  print ("Goodbye")
+end
 
-` python`  
-`   print 'Hello'`  
-`   print 'Goodbye'`  
-` end`
-
-` python`  
-` print 'Hello'`  
-` print 'Goodbye'`  
-` end`
-
+python  
+print ("Hello")
+print ("Goodbye")
+end
+```
 whereas this program is in error since the indentation of the second
 line is less than that of the first.
-
-` python`  
-`   print 'Hello'`  
-` print 'Goodbye'`  
-` end`
-
+```
+python  
+  print ("Hello")
+print ("Goodbye")
+end
+```
 The Python program is not executed until the following directive is
 encountered
 
