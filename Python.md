@@ -365,38 +365,38 @@ printed out exploiting the Python convention that a print statement
 ending in a comma does not print end-of-line.
 
 ### Reaction energies varying the basis set
-
-` mp2; freeze atomic; end`  
-`  `  
-` print none`  
-`  `  
-` python`  
-`   energies = {}`  
-`   c2h4 = 'geometry noprint; symmetry d2h; \`  
-`           C 0 0 0.672; H 0 0.935 1.238; end\n'`  
-`   ch4  = 'geometry noprint; symmetry td; \`  
-`           C 0 0 0; H 0.634 0.634 0.634; end\n'`  
-`   h2   = 'geometry noprint; H 0 0 0.378; H 0 0 -0.378; end\n'`  
-`   `  
-`   def energy(basis, geometry):`  
-`     input_parse('''`  
-`       basis spherical noprint`  
-`         c library %s ; h library %s `  
-`       end`  
-`     ''' % (basis, basis))`  
-`     input_parse(geometry)`  
-`     return task_energy('mp2')`  
-`    `  
-`   for basis in ('sto-3g', '6-31g', '6-31g*', 'cc-pvdz', 'cc-pvtz'):`  
-`      energies[basis] =   2*energy(basis, ch4) \`  
-`                        - 2*energy(basis, h2) - energy(basis, c2h4)`  
-`      if (ga_nodeid() == 0): print basis, ' %8.6f' % energies[basis]`  
-` end `  
-`  `  
-` task python`
-
+```
+mp2; freeze atomic; end
+ 
+print none
+ 
+python
+  energies = {}
+  c2h4 = 'geometry noprint; symmetry d2h; \
+          C 0 0 0.672; H 0 0.935 1.238; end\n'
+  ch4  = 'geometry noprint; symmetry td; \
+          C 0 0 0; H 0.634 0.634 0.634; end\n'
+  h2   = 'geometry noprint; H 0 0 0.378; H 0 0 -0.378; end\n'
+  
+  def energy(basis, geometry):
+    input_parse('''
+      basis spherical noprint
+        c library %s ; h library %s 
+      end
+    ''' % (basis, basis))
+    input_parse(geometry)
+    return task_energy('mp2')
+   
+  for basis in ('sto-3g', '6-31g', '6-31g*', 'cc-pvdz', 'cc-pvtz'):
+     energies[basis] =   2*energy(basis, ch4) \
+                       - 2*energy(basis, h2) - energy(basis, c2h4)
+     if (ga_nodeid() == 0): print (basis, ' %8.6f' % energies[basis])
+end 
+ 
+task python
+```
 In this example the reaction energy for  2H<sub>2</sub> + C<sub>2</sub>H<sub>4</sub> &rarr;
-2CH\_4 is evaluated using MP2 in several basis sets. The geometries are
+2CH<sub>4</sub> is evaluated using MP2 in several basis sets. The geometries are
 fixed, but could be re-optimized in each basis. To illustrate the useful
 associative arrays in Python, the reaction energies are put into the
 associative array energies -- note its declaration at the top of the
