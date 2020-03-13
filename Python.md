@@ -253,7 +253,7 @@ print none
 task python
 ```
 This scans the bond length in ethene from 1.2 to 1.44 in steps of 0.2
-computing the energy at each geometry. Since it is using $D\_{2h}$
+computing the energy at each geometry. Since it is using D<sub>2h</sub>
 symmetry the program actually uses a variable (x) that is half the bond
 length.
 
