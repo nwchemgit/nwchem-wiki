@@ -8,8 +8,8 @@ for quantum algorithms. There are currently two options for integrals:
 ## Bare Hamiltonian
 
 To print the bare Hamiltonian, you must set up a CCSD calculation with the following parameters:   
-The symmetry must be declared as 'C1'   
-In the TCE block, you must include the following:   
+* The symmetry must be declared as 'C1'   
+* In the TCE block, you must include the following:   
 ```
         2eorb
         2emet 13
@@ -55,8 +55,8 @@ release](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release "wikili
 
 To print the DUCC Hamiltonian, you must set up a CCSD calculation with the following parameters:  
 
-The symmetry must be declared as 'C1'  
-In the TCE block, you must include the following:  
+* The symmetry must be declared as 'C1'  
+* In the TCE block, you must include the following:  
 ```
         2eorb
         2emet 13
@@ -68,16 +68,16 @@ You must set the printing parameters at the end of the input file:
 ```
 _Notes:_
 
-The full form of the DUCC Hamiltonian is intractable and the equations defining the approximation that is currently implemented can be found in "N. P. Bauman, E. J. Bylaska, S. Krishnamoorthy, G. H. Low, N. Wiebe, C. E. Granade, M. Roetteler, M. Troyer, and K. Kowalski, J. Chem. Phys. 151, 014107 (2019)" and "N. P. Bauman, G. H. Low, and K. Kowalski, J. Chem. Phys. 151, 234114 (2019)." In contrast to these early publications, the full form of the two-electron integral is printed.    
-The entire two-electron integral is printed out since the DUCC Hamiltonian does not have the same symmetry as the bare Hamiltonian. Instead of the 8-fold symmetry, it has dual 4-fold symmetries    
+* The full form of the DUCC Hamiltonian is intractable and the equations defining the approximation that is currently implemented can be found in "N. P. Bauman, E. J. Bylaska, S. Krishnamoorthy, G. H. Low, N. Wiebe, C. E. Granade, M. Roetteler, M. Troyer, and K. Kowalski, J. Chem. Phys. 151, 014107 (2019)" and "N. P. Bauman, G. H. Low, and K. Kowalski, J. Chem. Phys. 151, 234114 (2019)." In contrast to these early publications, the full form of the two-electron integral is printed.    
+* The entire two-electron integral is printed out since the DUCC Hamiltonian does not have the same symmetry as the bare Hamiltonian. Instead of the 8-fold symmetry, it has dual 4-fold symmetries    
 ```
         (IJ|KL) = (JI|LK) = (KL|IJ) = (LK|JI)  
         Separately, (IJ|LK) = (JI|KL) = (KL|JI) = (LK|IJ)  
         But (IJ|KL) /= (IJ|LK)    
 ```  
-When utilizing the [YAML interpreter](yaml-interpreter "wikilink"), the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
-Frozen core calculations should not be performed. There is nothing preventing such calculation from being executed, but the integrals will be incorrect.   
-Since the all-orbital coupled-cluster calculation must be performed, then there is a chance that a leading excitation outside of the active-space will be printed and therefore included in the initial wave function description in the YAML file. The user ought to be aware of this risk and make changes to the YAML file to exclude these excitations, which would include renormalizing the remaining amplitudes of the initial guess.  
+*  When utilizing the [YAML interpreter](yaml-interpreter "wikilink"), the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
+* Frozen core calculations should not be performed. There is nothing preventing such calculation from being executed, but the integrals will be incorrect.   
+* Since the all-orbital coupled-cluster calculation must be performed, then there is a chance that a leading excitation outside of the active-space will be printed and therefore included in the initial wave function description in the YAML file. The user ought to be aware of this risk and make changes to the YAML file to exclude these excitations, which would include renormalizing the remaining amplitudes of the initial guess.  
 
 ## YAML Interpreter
 Once the calculation is completed, the integrals and basic information including initial wavefunction guesses for quantum algorithms can be extracted into a YAML file. To generate the YAML file, executed the following command:
@@ -85,7 +85,7 @@ Once the calculation is completed, the integrals and basic information including
 python $NWCHEM_TOP/contrib/quasar/export_chem_library_yaml.py < {NWChem output file} > {YAML file name}
 ```
 _Note:_
-the 'fci_energy' in the YAML file is taken to be the energy of the correlated method, which, in either case, is the CCSD energy.
+* the 'fci_energy' in the YAML file is taken to be the energy of the correlated method, which, in either case, is the CCSD energy.
 
 
 ## Example input file for Bare Hamiltonian
