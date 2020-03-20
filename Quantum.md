@@ -1,10 +1,10 @@
-The quantum features are routines for printing out one- and two-electron integrals that can be utilized in quantum algorithms. The outputs can be interpreted and formatted in YAML files that include the integrals and basic information including initial wavefunction guesses for quantum algorithms. There are currently two options for integrals:
+The quantum features are routines for printing out one- and two-electron integrals that can be utilized in quantum algorithms. The outputs can be interpreted and formatted in [YAML](https://en.wikipedia.org/wiki/YAML) files that include the integrals and basic information including initial wavefunction guesses for quantum algorithms. There are currently two options for integrals:
 
-**Bare Hamiltonian**
+## Bare Hamiltonian
 
 To print the bare Hamiltonian, you must set up a CCSD calculation with the following parameters:   
-The symmetry must be declared as 'C1' 
-In the TCE block, you must include the following:
+The symmetry must be declared as 'C1'   
+In the TCE block, you must include the following:   
 ```
         2eorb
         2emet 13
@@ -23,7 +23,7 @@ The two-electron integrals are printed out in compact Mulliken notation (each pr
 The number of alpha and beta electrons that are set in the printing does not need to correspond to the total number of alpha and beta electrons. Rather it is the number of electrons included in the printing, starting from the HOMO and counting down. This allows you to 'freeze' core orbitals. However, this is not recommended, because unlike freezing Fock matrix elements and two-electron integrals in correlated calculations, this procedure is dropping core orbitals of the standard one- and two-electron integrals and can lead to an imbalance of the correlation energy.   
 If the number of electrons and orbitals do not correspond to the total numbers of electrons and orbitals, then the calculation will perform a corresponding frozen core/frozen virtual CC/EOMCC calculation. This is to ensure that leading CC/EOMCC excitations do not correspond to orbitals outside of the printed integrals.  
 
-**DUCC Hamiltonian**
+## DUCC Hamiltonian 
 The double unitary coupled-cluster (DUCC) Hamiltonian is a way of incorporating correlation effects (mainly dynamical) into a reduced dimensionality Hamiltonian based on a defined active space. The procedure currently only reduces the virtual space and all occupied orbitals are considered active. Only the ground-state implementation is currently available in the NWChem release.  
 
 To print the DUCC Hamiltonian, you must set up a CCSD calculation with the following parameters:  
@@ -43,14 +43,16 @@ _Notes:_
 
 The full form of the DUCC Hamiltonian is intractable and the equations defining the approximation that is currently implemented can be found in "N. P. Bauman, E. J. Bylaska, S. Krishnamoorthy, G. H. Low, N. Wiebe, C. E. Granade, M. Roetteler, M. Troyer, and K. Kowalski, J. Chem. Phys. 151, 014107 (2019)" and "N. P. Bauman, G. H. Low, and K. Kowalski, J. Chem. Phys. 151, 234114 (2019)." In contrast to these early publications, the full form of the two-electron integral is printed.    
 The entire two-electron integral is printed out since the DUCC Hamiltonian does not have the same symmetry as the bare Hamiltonian. Instead of the 8-fold symmetry, it has dual 4-fold symmetries    
+```
         (IJ|KL) = (JI|LK) = (KL|IJ) = (LK|JI)  
         Separately, (IJ|LK) = (JI|KL) = (KL|JI) = (LK|IJ)  
         But (IJ|KL) /= (IJ|LK)    
-When utilizing the YAML interpreter, the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
+```  
+When utilizing the [YAML interpreter](yaml-interpreter "wikilink"), the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
 Frozen core calculations should not be performed. There is nothing preventing such calculation from being executed, but the integrals will be incorrect.   
 Since the all-orbital coupled-cluster calculation must be performed, then there is a chance that a leading excitation outside of the active-space will be printed and therefore included in the initial wave function description in the YAML file. The user ought to be aware of this risk and make changes to the YAML file to exclude these excitations, which would include renormalizing the remaining amplitudes of the initial guess.  
 
-**YAML Interpreter**
+## YAML Interpreter
 Once the calculation is completed, the integrals and basic information including initial wavefunction guesses for quantum algorithms can be extracted into a YAML file. To generate the YAML file, executed the following command:
 ```
 python $NWCHEM_TOP/contrib/quasar/export_chem_library_yaml.py < {NWChem output file} > {YAML file name}
