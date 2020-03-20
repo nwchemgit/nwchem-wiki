@@ -1,4 +1,9 @@
-The quantum features are routines for printing out one- and two-electron integrals that can be utilized in quantum algorithms. The outputs can be interpreted and formatted in [YAML](https://en.wikipedia.org/wiki/YAML) files that include the integrals and basic information including initial wavefunction guesses for quantum algorithms. There are currently two options for integrals:
+The quantum features are routines for printing out one- and
+two-electron integrals that can be utilized in quantum algorithms. The
+outputs can be interpreted and formatted in
+[YAML](https://en.wikipedia.org/wiki/YAML) files that include the
+integrals and basic information including initial wavefunction guesses
+for quantum algorithms. There are currently two options for integrals:
 
 ## Bare Hamiltonian
 
@@ -19,12 +24,32 @@ You must set the printing parameters at the end of the input file:
 ```
 _Notes:_  
 
-The two-electron integrals are printed out in compact Mulliken notation (each printed element corresponds to (ij|kl), (ij|lk), (ji|kl), (ji|lk), (kl|ij), (kl|ji), (lk|ij), and (lk|ji) )   
-The number of alpha and beta electrons that are set in the printing does not need to correspond to the total number of alpha and beta electrons. Rather it is the number of electrons included in the printing, starting from the HOMO and counting down. This allows you to 'freeze' core orbitals. However, this is not recommended, because unlike freezing Fock matrix elements and two-electron integrals in correlated calculations, this procedure is dropping core orbitals of the standard one- and two-electron integrals and can lead to an imbalance of the correlation energy.   
-If the number of electrons and orbitals do not correspond to the total numbers of electrons and orbitals, then the calculation will perform a corresponding frozen core/frozen virtual CC/EOMCC calculation. This is to ensure that leading CC/EOMCC excitations do not correspond to orbitals outside of the printed integrals.  
+The two-electron integrals are printed out in compact Mulliken
+notation (each printed element corresponds to (ij|kl), (ij|lk),
+(ji|kl), (ji|lk), (kl|ij), (kl|ji), (lk|ij), and (lk|ji) ) The number
+of alpha and beta electrons that are set in the printing does not need
+to correspond to the total number of alpha and beta electrons. Rather
+it is the number of electrons included in the printing, starting from
+the HOMO and counting down. This allows you to 'freeze' core
+orbitals. However, this is not recommended, because unlike freezing
+Fock matrix elements and two-electron integrals in correlated
+calculations, this procedure is dropping core orbitals of the standard
+one- and two-electron integrals and can lead to an imbalance of the
+correlation energy.  If the number of electrons and orbitals do not
+correspond to the total numbers of electrons and orbitals, then the
+calculation will perform a corresponding frozen core/frozen virtual
+CC/EOMCC calculation. This is to ensure that leading CC/EOMCC
+excitations do not correspond to orbitals outside of the printed
+integrals.  
 
-## DUCC Hamiltonian 
-The double unitary coupled-cluster (DUCC) Hamiltonian is a way of incorporating correlation effects (mainly dynamical) into a reduced dimensionality Hamiltonian based on a defined active space. The procedure currently only reduces the virtual space and all occupied orbitals are considered active. Only the ground-state implementation is currently available in the NWChem release.  
+## DUCC Hamiltonian
+The double unitary coupled-cluster (DUCC)
+Hamiltonian is a way of incorporating correlation effects (mainly
+dynamical) into a reduced dimensionality Hamiltonian based on a
+defined active space. The procedure currently only reduces the virtual
+space and all occupied orbitals are considered active. Only the
+ground-state implementation is available in the current [NWChem
+release](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release "wikilink").  
 
 To print the DUCC Hamiltonian, you must set up a CCSD calculation with the following parameters:  
 
@@ -61,3 +86,78 @@ _Note:_
 the 'fci_energy' in the YAML file is taken to be the energy of the correlated method, which, in either case, is the CCSD energy.
 
 
+## Example input file for Bare Hamiltonian
+
+```
+echo
+
+start Lih
+
+geometry units angstroms
+symmetry C1
+ Li 0 0   0.000
+ H  0 0   1.600
+end
+
+basis spherical
+ * library sto-3g
+end
+
+scf
+  singlet
+  rhf
+  thresh 1e-10
+end
+
+tce
+  2eorb
+  2emet 13
+  ccsd
+  thresh 1.0d-8
+  maxiter 150
+  nroots 2
+end
+
+set tce:print_integrals T
+set tce:qorb 6
+set tce:qela 2
+set tce:qelb 2
+
+task tce energy
+```
+
+## Example input file for DUCC
+```
+echo
+
+start Lih
+
+geometry units angstroms
+symmetry C1
+ Li 0 0   0.000
+ H  0 0   1.600
+end
+
+basis spherical
+ * library sto-3g
+end
+
+scf
+  singlet
+  rhf
+  thresh 1e-10
+end
+
+tce
+  2eorb
+  2emet 13
+  ccsd
+  thresh 1.0d-8
+  maxiter 150
+end
+
+set tce:qducc T
+set tce:nactv 4
+
+task tce energy
+```
