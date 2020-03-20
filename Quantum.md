@@ -24,9 +24,10 @@ You must set the printing parameters at the end of the input file:
 ```
 _Notes:_  
 
-The two-electron integrals are printed out in compact Mulliken
+* The two-electron integrals are printed out in compact Mulliken
 notation (each printed element corresponds to (ij|kl), (ij|lk),
-(ji|kl), (ji|lk), (kl|ij), (kl|ji), (lk|ij), and (lk|ji) ) The number
+(ji|kl), (ji|lk), (kl|ij), (kl|ji), (lk|ij), and (lk|ji) )  
+* The number
 of alpha and beta electrons that are set in the printing does not need
 to correspond to the total number of alpha and beta electrons. Rather
 it is the number of electrons included in the printing, starting from
@@ -35,7 +36,8 @@ orbitals. However, this is not recommended, because unlike freezing
 Fock matrix elements and two-electron integrals in correlated
 calculations, this procedure is dropping core orbitals of the standard
 one- and two-electron integrals and can lead to an imbalance of the
-correlation energy.  If the number of electrons and orbitals do not
+correlation energy.  
+* If the number of electrons and orbitals do not
 correspond to the total numbers of electrons and orbitals, then the
 calculation will perform a corresponding frozen core/frozen virtual
 CC/EOMCC calculation. This is to ensure that leading CC/EOMCC
