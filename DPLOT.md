@@ -8,7 +8,7 @@ This directive is used to obtain the plots of various types of electron
 densities (or orbitals) of the molecule. The electron density is
 calculated on a specified set of grid points using the molecular
 orbitals from SCF or DFT calculation. The output file is either in MSI
-Insight II contour format (default) or in the Gaussian Cube format.
+Insight II contour format (default) or in the [Gaussian Cube format](http://paulbourke.net/dataformats/cube/).
 DPLOT is not executed until the <tt>task dplot</tt> directive is given.
 Different sub-directives are described below.
 
