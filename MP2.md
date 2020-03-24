@@ -565,4 +565,4 @@ CCSD.
 10. S. Grimme, "Improved second-order Møller-Plesset perturbation theory
     by separate scaling of parallel- and antiparallel-spin pair
     correlation energies", J. Chem. Phys., 118, (2003), 9095-9102,
-    doi:[http://dx.doi.org/10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).
+    doi:[10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).
