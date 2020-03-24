@@ -527,22 +527,19 @@ CCSD.
 1.  Møller, C. and Plesset, M.S. (1934) "Note on an approximation
     treatment for many-electron systems", *Physical Review* **46**
     618-622,
-    [doi:\[http://dx.doi.org/10.1103/PhysRev.46.618](doi:%5Bhttp://dx.doi.org/10.1103/PhysRev.46.618)
-    10.1103/PhysRev.46.618\].
+    doi:[http://dx.doi.org/10.1103/PhysRev.46.618](http://dx.doi.org/10.1103/PhysRev.46.618).
 2.  Wong, A.T.; Harrison, R.J. and Rendell, A.P. (1996) "Parallel direct
     four-index transformations", *Theoretica Chimica Acta* **93**
     317-331,
-    [doi:\[http://dx.doi.org/10.1007/BF01129213](doi:%5Bhttp://dx.doi.org/10.1007/BF01129213)
-    10.1007/BF01129213\]
+    doi:[http://dx.doi.org/10.1007/BF01129213](http://dx.doi.org/10.1007/BF01129213).
 3.  Bernholdt, D.E. and Harrison, R.J. (1996) "Large-scale correlated
     electronic structure calculations: the RI-MP2 method on parallel
     computers", *Chemical Physics Letters* **250** (5-6) 477-484,
-    [doi:\[http://dx.doi.org/10.1016/0009-2614(96)00054-1](doi:%5Bhttp://dx.doi.org/10.1016/0009-2614$96$00054-1)
-    10.1016/0009-2614(96)00054-1\]
+    doi:[http://dx.doi.org/10.1016/0009-2614(96)00054-1](http://dx.doi.org/10.1016/0009-2614(96)00054-1)
 4.  Vahtras, O.; Almlöf, J. and Feyereisen, M. W. (1993) "Integral
     approximations for LCAO-SCF calculations", *Chem. Phys. Lett.*
     **213**, 514-518, doi:
-    [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614$93$89151-7)
+    [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614(93)89151-7)
 5.  Raghavachari, K. and Pople, J. A. (1981) "Calculation of
     one-electron properties using limited configuration interaction
     techniques", *Int. J. Quantum Chem.* **20**, 1067-1071, doi:
@@ -551,11 +548,11 @@ CCSD.
     "Legitimate calculation of first-order molecular properties in the
     case of limited CI functions. Dipole moments", *Chem. Phys.* **59**,
     29-39, doi:
-    [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104$81$80082-1).
+    [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104(81)80082-1).
 7.  Rice, J. E. and Amos, R. D. (1985) "On the efficient evaluation of
     analytic energy gradients", *Chem. Phys. Lett.* **122**, 585-590,
     doi:
-    [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614$85$87275-4).
+    [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614(85)87275-4).
 8.  Wiberg, K. B.; Hadad, C. M.; LePage, T. J.; Breneman, C. M. and
     Frisch, M. J. (1992) "Analysis of the effect of electron correlation
     on charge density distributions", *J. Phys. Chem.* **96**, 671-679,
@@ -568,5 +565,4 @@ CCSD.
 10. S. Grimme, "Improved second-order Møller-Plesset perturbation theory
     by separate scaling of parallel- and antiparallel-spin pair
     correlation energies", J. Chem. Phys., 118, (2003), 9095-9102,
-    [doi:\[http://dx.doi.org/10.1063/1.1569242](doi:%5Bhttp://dx.doi.org/10.1063/1.1569242)
-    10.1063/1.1569242\].
+    doi:[http://dx.doi.org/10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).
