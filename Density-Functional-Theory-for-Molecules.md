@@ -825,40 +825,6 @@ Sample input files of asymptotically corrected TDDFT calculations can be
 found in the corresponding
 [section](Excited-State-Calculations "wikilink").
 
-### NWXC -- higher order derivatives for density functionals
-
-Whereas first order derivatives of density functionals are sufficient to
-calculate the Kohn-Sham energy and perform geometry optimizations,
-higher order derivatives are required for many properties. These
-properties include commonly used vibrational frequencies and excitation
-energies as well as others. To address the need for these derivatives a
-new library of density functionals was added that generates derivatives
-using either automatic differentiation or symbolic algebra approaches.
-
-To request a functional from this library add the NEW keyword to the XC
-line. By default this will use the automatic differentiation based
-implementation. However, the automatic differentiation based
-implementation can also be requested explicitly by adding the AUTODIFF
-keyword. The alternative symbolic algebra implementation can be
-requested by adding the MAXIMA keyword.
-
-Examples:
-
-` xc new b3lyp`
-
-` xc new autodiff b3lyp`
-
-` xc new maxima b3lyp`
-
-All three these examples request the B3LYP functional. The first two
-examples are equivalent in that they both use the automatic
-differentiation approach. The third example uses the symbolic algebra
-generated code.
-
-The library in question is also available in the NWPW module providing
-the same set of functionals to the plane wave capabilities as are
-available in the local basis set DFT capabilities.
-
 ## Sample input file
 
 A simple example calculates the geometry of water, using the metaGGA
