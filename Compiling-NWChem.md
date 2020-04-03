@@ -381,9 +381,9 @@ $NWCHEM\_TOP/QA/tests/pyqa and $NWCHEM\_TOP/contrib/python directories.
 By default NWChem uses its own basic linear algebra subroutines (BLAS).
 To include faster BLAS routines, the environment variable BLASOPT needs
 to be set before building the code. For example, with
-ATLAS
+OpenBLAS
 ```
-export BLASOPT="-L/usr/local/ATLAS -llapack -lf77blas -latlas"
+export BLASOPT="-lopenblas"
 ```
 Good choices of optimized BLAS libraries on x86 (e.g. LINUX and LINUX64)
 hardware include:  
@@ -397,7 +397,7 @@ hardware include:
 | ATLAS       | <http://math-atlas.sf.net>                                                                    |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 
-_**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore in this case LAPACK_LIB can be set to the same vale as BLASOPT
+_**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT
 ```
 export BLASOPT=-lopenblas
 export LAPACK_LIB=-lopenblas
@@ -411,7 +411,7 @@ export USE_SCALAPACK=y
   
 export SCALAPACK="location of Scalapack and BLACS library"
 ```
-### How to deal with with  integer size of Linear Algebra libraries 
+### How to deal with integer size of Linear Algebra libraries 
 In the case of 64-bit platforms, most vendors optimized BLAS
 libraries cannot be used. This is due to the fact that while NWChem uses
 64-bit integers (i.e. integer\*8) on 64-bit platforms, most of the
@@ -443,7 +443,7 @@ E.g., for IBM64 this looks like
 Notes:
 
   - GotoBLAS2 (or OpenBLAS) can be installed with 64bit integers. This
-    is accomplished by compiling the GotoBLAS2 library after having by
+    is accomplished by compiling the GotoBLAS2 library after having
     edited the GotoBLAS2 Makefile.rule file and un-commenting the line
     containing the INTERFACE64 definition. In other words, the line
 ```
