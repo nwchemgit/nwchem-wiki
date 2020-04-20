@@ -35,7 +35,7 @@ The module is called as:
 ```
 task <level of theory> qmd
 ```
-where <level of theory> is any Gaussian basis set method in NWChem
+where \<level of theory\> is any Gaussian basis set method in NWChem
 
 ## QMD Keywords
 
