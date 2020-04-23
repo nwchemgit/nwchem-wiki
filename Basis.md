@@ -219,10 +219,10 @@ to all bq centers in the geometry. Just as with the "\*" tag, the except
 list can be used to assign basis sets to unique dummy centers.
 
 The library basis sets can also be marked as relativistic by adding the
-rel keyword to the tag line. See the section on [relativistic
+`rel` keyword to the tag line. See the section on [relativistic
 all-electron
 approximations](Relativistic-All-electron-Approximations "wikilink")
-for more details. The correlation consistent basis sets have been
+ for more details. The correlation consistent basis sets have been
 contracted for relativistic effects and are included in the standard
 library.
 
