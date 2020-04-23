@@ -106,7 +106,7 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
               [nolevelshifting] \  
               [hl_tol <real hl_tol default 0.1>] \  
               [rabuck [n_rabuck <integer n_rabuck default 25>]]  
- GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+ GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
       [(becke||erf1||erf2||ssf) default erf1] \  
       [(euler||mura||treutler) default mura] \ 
@@ -172,14 +172,11 @@ given calculation can be summarized as follows;
 
 ## VECTORS and MAX\_OVL -- KS-MO Vectors
 
-The VECTORS directive is the same as that in the SCF module (Section
-10.5). Currently, the LOCK keyword is not supported by the DFT module,
-however the directive
+The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink") module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules#vectors-lock-keyword "wikilink") keyword is not supported by the DFT module, however the directive
 ```
  MAX_OVL
 ```
-has the same
-effect.
+has the same effect.
 
 ## XC and DECOMP -- Exchange-Correlation Potentials
 ```
@@ -359,7 +356,7 @@ where
 
  a<sub>0</sub> = 0.20, a<sub>X</sub> = 0.72, a<sub>C</sub> = 0.81  
 
-
+## XC Functionals Summary
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
@@ -661,24 +658,27 @@ xc xcamb88 1.00 lyp 0.80 vwn_5 0.2 hfexch 1.00
 cam 0.29 cam_alpha 0.54 cam_beta 0.37
 ```
 rCAM-B3LYP
-
-`xc xcamb88 1.00 lyp 1.0 vwn_5 0. hfexch 1.00 becke88 nonlocal 0.13590`  
-`cam 0.33 cam_alpha 0.18352 cam_beta 0.94979`
-
+```
+xc xcamb88 1.00 lyp 1.0 vwn_5 0. hfexch 1.00 becke88 nonlocal 0.13590
+cam 0.33 cam_alpha 0.18352 cam_beta 0.94979
+```
 HSE03 functional: 0.25\*Ex(HF-SR) - 0.25\*Ex(PBE-SR) + Ex(PBE) +
 Ec(PBE), where gamma(HF-SR) = gamma(PBE-SR)
 
-`xc hse03`
+```
+xc hse03
+```
 
 or it can be explicitly set as
-
-`xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25`  
-`cam 0.33 cam_alpha 0.0 cam_beta 1.0`
-
+```
+xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
+cam 0.33 cam_alpha 0.0 cam_beta 1.0
+```
 HSE06 functional:
-
-`xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25`  
-`cam 0.11 cam_alpha 0.0 cam_beta 1.0`
+```
+xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
+cam 0.11 cam_alpha 0.0 cam_beta 1.0
+```
 
 Please see the following papers (not a complete list) for further
 details about the theory behind these functionals and applications.
@@ -824,40 +824,6 @@ use of any other functional.
 Sample input files of asymptotically corrected TDDFT calculations can be
 found in the corresponding
 [section](Excited-State-Calculations "wikilink").
-
-### NWXC -- higher order derivatives for density functionals
-
-Whereas first order derivatives of density functionals are sufficient to
-calculate the Kohn-Sham energy and perform geometry optimizations,
-higher order derivatives are required for many properties. These
-properties include commonly used vibrational frequencies and excitation
-energies as well as others. To address the need for these derivatives a
-new library of density functionals was added that generates derivatives
-using either automatic differentiation or symbolic algebra approaches.
-
-To request a functional from this library add the NEW keyword to the XC
-line. By default this will use the automatic differentiation based
-implementation. However, the automatic differentiation based
-implementation can also be requested explicitly by adding the AUTODIFF
-keyword. The alternative symbolic algebra implementation can be
-requested by adding the MAXIMA keyword.
-
-Examples:
-
-` xc new b3lyp`
-
-` xc new autodiff b3lyp`
-
-` xc new maxima b3lyp`
-
-All three these examples request the B3LYP functional. The first two
-examples are equivalent in that they both use the automatic
-differentiation approach. The third example uses the symbolic algebra
-generated code.
-
-The library in question is also available in the NWPW module providing
-the same set of functionals to the plane wave capabilities as are
-available in the local basis set DFT capabilities.
 
 ## Sample input file
 
@@ -1179,16 +1145,18 @@ directive in the input file:
 ```
 Example input:
 
-`dft`  
-` print "final vectors analysis"`  
-` odft`  
-` direct`  
-` fon alpha partial 2 electrons 1.0 filled 2`  
-` fon beta partial 2 electrons 1.0 filled 2`  
-` xc pbe0`  
-` convergence energy 1d-8`  
-`end`  
-`task dft`
+```
+dft
+ print "final vectors analysis"
+ odft
+ direct
+ fon alpha partial 2 electrons 1.0 filled 2
+ fon beta partial 2 electrons 1.0 filled 2
+ xc pbe0
+ convergence energy 1d-8
+end
+task dft
+```
 
 ## OCCUP -- Controlling the occupations of molecular orbitals
 
@@ -1224,7 +1192,7 @@ task dft
 ```
 ## GRID -- Numerical Integration of the XC Potential
 ```
- GRID [(xcoarse||coarse||medium||fine||xfine) default medium] \  
+ GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
       [(becke||erf1||erf2||ssf) default erf1] \  
       [(euler||mura||treutler) default mura] \  
@@ -1238,10 +1206,10 @@ scheme for the radial components (with a modified Mura-Knowles
 transformation) and a Lebedev scheme for the angular components. Within
 this numerical integration procedure various levels of accuracy have
 been defined and are available to the user. The user can specify the
-level of accuracy with the keywords; `xcoarse`, `coarse`, `medium`, `fine`, and
-`xfine`. The default is `medium`.
+level of accuracy with the keywords; `xcoarse`, `coarse`, `medium`, `fine`, `xfine` and
+`huge`. The default is `medium`.
 ```
- GRID [xcoarse||coarse||medium||fine||xfine]
+ GRID [xcoarse||coarse||medium||fine||xfine||huge]
 ```
 Our intent is to have a numerical integration scheme which would give us
 approximately the accuracy defined below regardless of molecular
@@ -1249,16 +1217,14 @@ composition.
 
 <center>
 
-|         |                              |
-| ------- | ---------------------------- |
 | Keyword | Total Energy Target Accuracy |
-| xcoarse | <img alt="$1x10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9204e6ea06c5d60eb28d4f0d8dbf698.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| coarse  | <img alt="$1x10^{-5}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06402e7d4ac92f15928568757dcca7c1.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| medium  | <img alt="$1x10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f8b99c7c9adab0a75d75d910a35583b4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| fine    | <img alt="$1x10^{-7}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/419ab033df52905a0129c4813abc9c5b.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-| xfine   | <img alt="$1x10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8658f05cb7be04ba551e8e6d9a85d8a4.svg?invert_in_darkmode&sanitize=true" align=middle width="50.689155pt" height="26.70657pt"/>                |
-|  |
-
+| ------- | ---------------------------- |
+| xcoarse |   1&sdot;10<sup>-4</sup>          |
+| coarse  |   1&sdot;10<sup>-5</sup>          |
+| medium  |   1&sdot;10<sup>-6</sup>          |
+| fine    |   1&sdot;10<sup>-7</sup>          |
+| xfine   |   1&sdot;10<sup>-8</sup>          |
+| huge    |   1&sdot;10<sup>-10</sup>          |
 </center>
 
 In order to determine the level of radial and angular quadrature needed
@@ -1279,19 +1245,17 @@ angular shells which the DFT module will use for for a given atom
 depending on the row it is in (in the periodic table) and the desired
 accuracy. Note, differing atom types in a given molecular system will
 most likely have differing associated numerical grids. The intent is to
-generate the desired energy accuracy (with utter disregard for speed).
+generate the desired energy accuracy (at the expense of speed of the calculation).
 
 <center>
 
-|         |        |         |
-| ------- | ------ | ------- |
 | Keyword | Radial | Angular |
+| ------- | ------ | ------- |
 | xcoarse | 21     | 194     |
 | coarse  | 35     | 302     |
 | medium  | 49     | 434     |
 | fine    | 70     | 590     |
 | xfine   | 100    | 1202    |
-|  |
 
 Program default number of radial and angular shells empirically
 determined for Row 1 atoms (Li &rarr; F) to reach the desired
@@ -1301,15 +1265,14 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 42      |
-| coarse  | 70      |
-| medium  | 88      |
-| fine    | 123     |
-| xfine   | 125     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 42      | 194     |
+| coarse  | 70      | 302     |
+| medium  | 88      | 434     |
+| fine    | 123     | 770     |
+| xfine   | 125     | 1454    |
+| huge    | 300     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
@@ -1319,15 +1282,14 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 75      |
-| coarse  | 95      |
-| medium  | 112     |
-| fine    | 130     |
-| xfine   | 160     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 75      | 194     |
+| coarse  | 95      | 302     |
+| medium  | 112     | 590     |
+| fine    | 130     | 974     |
+| xfine   | 160     | 1454    |
+| huge    | 400     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
@@ -1337,15 +1299,14 @@ accuracies.
 
 <center>
 
-|         |         |
-| ------- | ------- |
-| Radial  | Angular |
-| xcoarse | 84      |
-| coarse  | 104     |
-| medium  | 123     |
-| fine    | 141     |
-| xfine   | 205     |
-|  |
+| Keyword | Radial  | Angular |
+| ------- | ------- | ------- |
+| xcoarse | 84      | 194     |
+| coarse  | 104     | 302     |
+| medium  | 123     | 590     |
+| fine    | 141     | 974     |
+| xfine   | 205     | 1454    |
+| huge    | 400     | 1454    |
 
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
@@ -1362,12 +1323,16 @@ specification. This is accomplished by using the gausleg keyword.
 
 #### Gauss-Legendre angular grid
 
-` GRID gausleg <integer nradpts default 50> <integer nagrid default 10>`
+```
+ GRID gausleg <integer nradpts default 50> <integer nagrid default 10>
+```
 
 In this type of grid, the number of phi points is twice the number of
 theta points. So, for example, a specification of,
 
-` GRID gausleg 80 20`
+```
+ GRID gausleg 80 20
+```
 
 would be interpreted as 80 radial points, 20 theta points, and 40 phi
 points per center (or 64000 points per center before pruning).
@@ -1386,9 +1351,8 @@ angular points as indicated by the table below:
 
 <center>
 
-|              |                 |       |
-| ------------ | --------------- | ----- |
 | <img alt="$IANGQUAD$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1155c630b831ae7b88cb7f5dea440245.svg?invert_in_darkmode&sanitize=true" align=middle width="100.81599pt" height="22.38192pt"/> | <img alt="$N_{angular}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d8da1653fe865d485d10dc0e3051ed3f.svg?invert_in_darkmode&sanitize=true" align=middle width="60.64839pt" height="22.38192pt"/> | <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/> |
+| ------------ | --------------- | ----- |
 | 1            | 38              | 9     |
 | 2            | 50              | 11    |
 | 3            | 74              | 13    |
@@ -1418,7 +1382,6 @@ angular points as indicated by the table below:
 | 27           | 4802            | 119   |
 | 28           | 5294            | 125   |
 | 29           | 5810            | 131   |
-|  |
 
 List of Lebedev quadratures
 
@@ -1462,7 +1425,9 @@ Erf<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/s
 
 ### Disk usage for Grid
 
-` NODISK`
+```
+ NODISK
+```
 
 This keyword turns off storage of grid points and weights on disk.
 
@@ -1612,30 +1577,38 @@ implementation of this method can be found in J. Garza, J. A. Nichols
 and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000). The components of the
 sic energy can be printed out using:
 
-`print "SIC information"`
+```
+print "SIC information"
+```
 
 ## MULLIKEN -- Mulliken analysis
 
 Mulliken analysis of the charge distribution is invoked by the keyword:
 
-` MULLIKEN`
+```
+ MULLIKEN
+```
 
 When this keyword is encountered, Mulliken analysis of both the input
 density as well as the output density will occur. For example, to
 perform a mulliken analysis and print the explicit population analysis
 of the basis functions, use the following
 
-`dft`  
-` mulliken`  
-` print "mulliken ao"`  
-`end`  
-`task dft`
+```
+dft
+ mulliken
+ print "mulliken ao"
+end
+task dft
+```
 
 ## FUKUI -- Fukui Indices
 
 Fukui inidces analysis is invked by the keyword:
 
-` FUKUI`
+```
+ FUKUI
+```
 
 When this keyword is encounters, the condensed Fukui indices will be
 calculated and printed in the output. Detailed information about the
@@ -1656,30 +1629,32 @@ atoms not just bq, but bq followed by the given atomic symbol. For
 example, the first component needed to compute the BSSE for the water
 dimer, should be written as follows
 
-`geometry h2o autosym units au`  
-` O        0.00000000     0.00000000     0.22143139`  
-` H        1.43042868     0.00000000    -0.88572555`  
-` H       -1.43042868     0.00000000    -0.88572555`  
-` bqH      0.71521434     0.00000000    -0.33214708`  
-` bqH     -0.71521434     0.00000000    -0.33214708`  
-` bqO      0.00000000     0.00000000    -0.88572555`  
-`end`  
-`basis`  
-` H library aug-cc-pvdz`  
-` O library aug-cc-pvdz`  
-` bqH library H aug-cc-pvdz`  
-` bqO library O aug-cc-pvdz`  
-`end`
+```
+geometry h2o autosym units au
+ O        0.00000000     0.00000000     0.22143139
+ H        1.43042868     0.00000000    -0.88572555
+ H       -1.43042868     0.00000000    -0.88572555
+ bqH      0.71521434     0.00000000    -0.33214708
+ bqH     -0.71521434     0.00000000    -0.33214708
+ bqO      0.00000000     0.00000000    -0.88572555
+end
+basis
+ H library aug-cc-pvdz
+ O library aug-cc-pvdz
+ bqH library H aug-cc-pvdz
+ bqO library O aug-cc-pvdz
+end
+```
 
-Please note that the \`\`ghost'' oxygen atom has been labeled bqO, and
+Please note that the <q>ghost</q> oxygen atom has been labeled bqO, and
 not just bq.
 
 ## DISP -- Empirical Long-range Contribution (vdW)
 ```
- DISP   
-      [ vdw <real vdw integer default 2]]  
-      [[s6 <real s6 default depends on XC functional>] \  
-      [ alpha <real alpha default 20.0d0] \  
+ DISP \
+      [ vdw <real vdw integer default 2]] \
+      [[s6 <real s6 default depends on XC functional>] \
+      [ alpha <real alpha default 20.0d0] \
       [ off ] 
 ```
 When systems with high dependence on van der Waals interactions are
@@ -1754,28 +1729,30 @@ for a set of input vectors. For example, the following input shows how a
 non self-consistent B3LYP energy can be calculated using a
 self-consistent set of vectors calculated at the Hartree-Fock level.
 
-`start h2o-noscf`
+```
+start h2o-noscf
 
-`geometry units angstrom`  
-`  O      0.00000000     0.00000000     0.11726921`  
-`  H      0.75698224     0.00000000    -0.46907685`  
-`  H     -0.75698224     0.00000000    -0.46907685`  
-`end`
+geometry units angstrom
+  O      0.00000000     0.00000000     0.11726921
+  H      0.75698224     0.00000000    -0.46907685
+  H     -0.75698224     0.00000000    -0.46907685
+end
 
-`basis spherical`  
-` * library aug-cc-pvdz`  
-`end`  
-`dft`  
-` xc hfexch`  
-` vectors output hf.movecs `  
-`end`  
-`task dft energy`  
-`dft`  
-` xc b3lyp`  
-` vectors input hf.movecs `  
-` noscf `  
-`end`  
-`task dft energy`
+basis spherical
+  * library aug-cc-pvdz
+end
+dft
+  xc hfexch
+  vectors output hf.movecs 
+end
+task dft energy
+dft
+  xc b3lyp
+  vectors input hf.movecs 
+  noscf 
+end
+task dft energy
+```
 
 ## XDM -- Exchange-hole dipole moment dispersion model
 ```
@@ -1817,9 +1794,8 @@ are:
 
 <center>
 
-|                            |                 |                                                      |
+| Name                       | Print Level     | Description                                          |
 | -------------------------- | --------------- | ---------------------------------------------------- |
-| **Name**                   | **Print Level** | **Description**                                      |
 | "all vector symmetries"    | high            | symmetries of all molecular orbitals                 |
 | "alpha partner info"       | high            | unpaired alpha orbital analysis                      |
 | "common"                   | debug           | dump of common blocks                                |
@@ -1847,7 +1823,6 @@ are:
 | "schwarz"                  | high            | integral screening info & stats at completion        |
 | "screening parameters"     | high            | integral accuracies                                  |
 | "semi-direct info"         | default         | semi direct algorithm                                |
-|  |
 
 DFT Print Control Specifications
 

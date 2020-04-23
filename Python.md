@@ -41,30 +41,30 @@ NWChem input, while satisfying the constraint that when given to Python
 the first line has zero indentation.
 
 E.g., the following two sets of input specify the same Python program.
+```
+python  
+  print ("Hello")
+  print ("Goodbye")
+end
 
-` python`  
-`   print 'Hello'`  
-`   print 'Goodbye'`  
-` end`
-
-` python`  
-` print 'Hello'`  
-` print 'Goodbye'`  
-` end`
-
+python  
+print ("Hello")
+print ("Goodbye")
+end
+```
 whereas this program is in error since the indentation of the second
 line is less than that of the first.
-
-` python`  
-`   print 'Hello'`  
-` print 'Goodbye'`  
-` end`
-
+```
+python  
+  print ("Hello")
+print ("Goodbye")
+end
+```
 The Python program is not executed until the following directive is
 encountered
-
-` task python`
-
+```
+ task python
+```
 which is to maintain consistency with the behavior of NWChem in general.
 The program is executed by all nodes. This enables the full
 functionality and speed of NWChem to be accessible from Python, but
@@ -137,38 +137,38 @@ Several examples will provide the best explanation of how the extensions
 are used, and how Python might prove useful.
 
 ### Hello world
+```
+python
+  print ('Hello world from process %i'  % ga_nodeid())
+end
 
-` python`  
-`   print 'Hello world from process ', ga_nodeid()`  
-` end`  
-` `  
-` task python`
-
+task python
+```
 This input prints the traditional greeting from each parallel
 process.
 
 ### Scanning a basis exponent
+```
+geometry units au
+ O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107
+end
 
-` geometry units au`  
-`   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107`  
-` end`  
-` `  
-` python`  
-`   exponent = 0.1`  
-`   while (exponent <= 2.01):`  
-`      input_parse('''`  
-`         basis noprint`  
-`            H library 3-21g; O library 3-21g; O d; %f 1.0`  
-`         end`  
-`      ''' % (exponent))`  
-`      print ' exponent = ', exponent, ' energy = ', task_energy('scf')`  
-`      exponent = exponent + 0.1`  
-` end`  
-` `  
-` print none`  
-` `  
-` task python`
+python
+exponent = 0.1
+while (exponent <= 2.01):
+    input_parse('''                                                                                                
+    basis noprint                                                                                                  
+     H library 3-21g; O library 3-21g; O d; %f 1.0                                                                 
+    end                                                                                                            
+    ''' % (exponent))
+    print (' exponent = %5.4f,' % exponent, ', energy = %16.10f' % task_energy('scf'))
+    exponent = exponent + 0.1
+end
 
+print none
+
+task python
+```
 This program augments a 3-21g basis for water with a d-function on
 oxygen and varies the exponent from 0.1 to 2.0 in steps of 0.1, printing
 the exponent and energy at each step.
@@ -188,37 +188,37 @@ Look in the NWChem contrib directory for a routine that makes the above
 task easier.
 
 ### Scanning a basis exponent revisited
+```
+geometry units au
+O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107
+end
 
-` geometry units au`  
-`   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107`  
-` end`  
-` `  
-` print none`  
-` `  
-` python`  
-`   if (ga_nodeid() == 0): plotdata = open("plotdata",'w')`  
-`    `  
-`   def energy_at_exponent(exponent):`  
-`      input_parse('''`  
-`         basis noprint`  
-`            H library 3-21g; O library 3-21g; O d; %f 1.0`  
-`         end`  
-`      ''' % (exponent))`  
-`      return task_energy('scf')`  
-`   `  
-`   exponent = 0.1`  
-`   while exponent <= 2.01:`  
-`      energy = energy_at_exponent(exponent)`  
-`      if (ga_nodeid() == 0):`  
-`         print ' exponent = ', exponent, ' energy = ', energy`  
-`         plotdata.write('%f %f\n' % (exponent , energy))`  
-`      exponent = exponent + 0.1`  
-`    `  
-`   if (ga_nodeid() == 0): plotdata.close()`  
-` end`  
-`  `  
-` task python`
 
+python
+  if (ga_nodeid() == 0): plotdata = open("plotdata",'w')
+
+  def energy_at_exponent(exponent):
+    input_parse('''                                                                                                
+    basis noprint                                                                                                  
+      H library 3-21g; O library 3-21g; O d; %f 1.0                                                                
+    end                                                                                                            
+    ''' % (exponent))
+    return task_energy('scf')
+
+  exponent = 0.1
+  while exponent <= 2.01:
+    energy = energy_at_exponent(exponent)
+    if (ga_nodeid() == 0):
+        print (' exponent = %5.4f,' % exponent, ', energy = %16.10f' % energy)
+        plotdata.write('%f %f\n' % (exponent , energy))
+    exponent = exponent + 0.1
+
+  if (ga_nodeid() == 0): plotdata.close()
+end
+
+print none
+task python
+```
 This input performs exactly the same calculation as the previous one,
 but uses a slightly more sophisticated Python program, also writes the
 data out to a file for easy visualization with a package such as
@@ -231,29 +231,29 @@ results to standard output and to the file. When the loop is finished
 the additional output file is closed.
 
 ### Scanning a geometric variable
+```
+python
+   geometry = '''
+     geometry noprint; symmetry d2h
+        C 0 0 %f; H 0  0.916 1.224
+     end
+   '''
+   x = 0.6
+   while (x < 0.721):
+     input_parse(geometry % x)
+     energy = task_energy('scf')
+     print (' x = %5.2f   energy = %10.6f' % (x, energy))
+     x = x + 0.01
+end
 
-` python`  
-`   geometry = '''`  
-`     geometry noprint; symmetry d2h`  
-`        C 0 0 %f; H 0  0.916 1.224`  
-`     end`  
-`   '''`  
-`   x = 0.6`  
-`   while (x < 0.721):`  
-`     input_parse(geometry % x)`  
-`     energy = task_energy('scf')`  
-`     print ' x = %5.2f   energy = %10.6f' % (x, energy)`  
-`     x = x + 0.01`  
-` end`  
-`  `  
-` basis; C library 6-31g*; H library 6-31g*; end`  
-` `  
-` print none`  
-`  `  
-` task python`
+basis; C library 6-31g*; H library 6-31g*; end
 
+print none
+
+task python
+```
 This scans the bond length in ethene from 1.2 to 1.44 in steps of 0.2
-computing the energy at each geometry. Since it is using $D\_{2h}$
+computing the energy at each geometry. Since it is using D<sub>2h</sub>
 symmetry the program actually uses a variable (x) that is half the bond
 length.
 
@@ -262,39 +262,38 @@ task
 easier.
 
 ### Scan using the BSSE counterpoise corrected energy
+```
+basis spherical
+  Ne library cc-pvdz; BqNe library Ne cc-pvdz
+  He library cc-pvdz; BqHe library He cc-pvdz
+end
 
-` basis spherical`  
-`   Ne library cc-pvdz; BqNe library Ne cc-pvdz`  
-`   He library cc-pvdz; BqHe library He cc-pvdz`  
-` end`  
-`  `  
-` mp2; tight; freeze core atomic; end`  
-`  `  
-` print none`  
-`  `  
-` python noprint`  
-`   supermolecule = 'geometry noprint;   Ne 0 0 0;   He 0 0 %f; end\n'`  
-`   fragment1     = 'geometry noprint;   Ne 0 0 0; BqHe 0 0 %f; end\n'`  
-`   fragment2     = 'geometry noprint; BqNe 0 0 0;   He 0 0 %f; end\n'`  
-`  `  
-`   def energy(geometry):`  
-`     input_parse(geometry + 'scf; vectors atomic; end\n')`  
-`     return task_energy('mp2')`  
-`  `  
-`   def bsse_energy(z):`  
-`     return energy(supermolecule % z) - \`  
-`            energy(fragment1 % z) - \`  
-`            energy(fragment2 % z)`  
-`   z = 3.3`  
-`   while (z < 4.301):`  
-`     e = bsse_energy(z)`  
-`     if (ga_nodeid() == 0):`  
-`       print ' z = %5.2f   energy = %10.7f ' % (z, e)`  
-`     z = z + 0.1`  
-` end`  
-`  `  
-` task python`
+mp2; tight; freeze core atomic; end
 
+print none
+
+python
+  supermolecule = 'geometry noprint;   Ne 0 0 0;   He 0 0 %f; end\n'
+  fragment1     = 'geometry noprint;   Ne 0 0 0; BqHe 0 0 %f; end\n'
+  fragment2     = 'geometry noprint; BqNe 0 0 0;   He 0 0 %f; end\n'
+
+  def energy(geometry):
+    input_parse(geometry + 'scf; vectors atomic; end\n')
+    return task_energy('mp2')
+
+  def bsse_energy(z):
+    return energy(supermolecule % z) - \
+        energy(fragment1 % z) - \
+        energy(fragment2 % z)
+  z = 3.3
+  while (z < 4.301):
+    e = bsse_energy(z)
+    if (ga_nodeid() == 0): print (' z = %5.2f   energy = %10.7f ' % (z, e))
+    z = z + 0.1
+end
+
+task python
+```
 This example scans the He--Ne bond-length from 3.3 to 4.3 and prints out
 the BSSE counterpoise corrected MP2 energy.
 
@@ -317,86 +316,87 @@ foundation of a BSSE corrected geometry optimization
 package.
 
 ### Scan the geometry and compute the energy and gradient
-
-` basis noprint; H library sto-3g; O library sto-3g; end`  
-`  `  
-` python noprint`  
-`   print '   y     z     energy                gradient'`  
-`   print ' ----- ----- ---------- ------------------------------------'`  
-`   y = 1.2`  
-`   while y <= 1.61:`  
-`      z = 1.0`  
-`      while z <= 1.21:`  
-`         input_parse('''`  
-`            geometry noprint units atomic`  
-`               O 0   0   0`  
-`               H 0  %f -%f`  
-`               H 0 -%f -%f`  
-`            end`  
-`         ''' % (y, z, y, z))`  
-`    `  
-`         (energy,gradient) = task_gradient('scf')`  
-`  `  
-`         print ' %5.2f %5.2f %9.6f' % (y, z, energy),`  
-`         i = 0`  
-`         while (i < len(gradient)):`  
-`            print '%5.2f' % gradient[i],`  
-`            i = i + 1`  
-`         print ''`  
-`         z = z + 0.1`  
-`      y = y + 0.1`  
-` end`  
-`  `  
-` print none`  
-`  `  
-` task python`
+```
+ basis noprint; H library sto-3g; O library sto-3g; end
+  
+ python
+ print ('   y     z     energy                gradient')
+ print (' ----- ----- ---------- ------------------------------------')
+ y = 1.2
+ while y <= 1.61:
+     z = 1.0
+     while z <= 1.21:
+         input_parse('''
+           geometry noprint units atomic
+             O 0   0   0
+             H 0  %f -%f
+             H 0 -%f -%f
+           end
+         ''' % (y, z, y, z))
+         
+         (energy,gradient) = task_gradient('scf')
+         
+         print (' %5.2f %5.2f %9.6f' % (y, z, energy)),
+         i = 0
+         while (i < len(gradient)):
+             print ('%5.2f' % gradient[i]),
+             i = i + 1
+         print ('')
+     z = z + 0.1
+ y = y + 0.1
+end
+  
+print none
+  
+task python
+```
 
 This program illustrates evaluating the energy and gradient by calling
-task\_gradient(). A water molecule is scanned through several $C\_{2v}$
+task\_gradient(). A water molecule is scanned through several C<sub>2v</sub>
 geometries by varying the y and z coordinates of the two hydrogen atoms.
 At each geometry the coordinates, energy and gradient are printed.
 
 The basis set (sto-3g) is input as usual. The two while loops vary the y
 and z coordinates. These are then substituted into a geometry which is
-parsed by NWChem using input\_parse(). The energy and gradient are then
-evaluated by calling task\_gradient() which returns a tuple containing
+parsed by NWChem using `input_parse()`. The energy and gradient are then
+evaluated by calling `task_gradient()` which returns a tuple containing
 the energy (a scalar) and the gradient (a vector or list). These are
 printed out exploiting the Python convention that a print statement
 ending in a comma does not print end-of-line.
 
 ### Reaction energies varying the basis set
-
-` mp2; freeze atomic; end`  
-`  `  
-` print none`  
-`  `  
-` python`  
-`   energies = {}`  
-`   c2h4 = 'geometry noprint; symmetry d2h; \`  
-`           C 0 0 0.672; H 0 0.935 1.238; end\n'`  
-`   ch4  = 'geometry noprint; symmetry td; \`  
-`           C 0 0 0; H 0.634 0.634 0.634; end\n'`  
-`   h2   = 'geometry noprint; H 0 0 0.378; H 0 0 -0.378; end\n'`  
-`   `  
-`   def energy(basis, geometry):`  
-`     input_parse('''`  
-`       basis spherical noprint`  
-`         c library %s ; h library %s `  
-`       end`  
-`     ''' % (basis, basis))`  
-`     input_parse(geometry)`  
-`     return task_energy('mp2')`  
-`    `  
-`   for basis in ('sto-3g', '6-31g', '6-31g*', 'cc-pvdz', 'cc-pvtz'):`  
-`      energies[basis] =   2*energy(basis, ch4) \`  
-`                        - 2*energy(basis, h2) - energy(basis, c2h4)`  
-`      if (ga_nodeid() == 0): print basis, ' %8.6f' % energies[basis]`  
-` end `  
-`  `  
-` task python`
-
-In this example the reaction energy for $2H\_2 + C\_2H\_4 \\rightarrow
-2CH\_4$ is evaluated using MP2 in several basis sets. The geometries are
+```
+mp2; freeze atomic; end
+ 
+print none
+ 
+python
+  energies = {}
+  c2h4 = 'geometry noprint; symmetry d2h; \
+          C 0 0 0.672; H 0 0.935 1.238; end\n'
+  ch4  = 'geometry noprint; symmetry td; \
+          C 0 0 0; H 0.634 0.634 0.634; end\n'
+  h2   = 'geometry noprint; H 0 0 0.378; H 0 0 -0.378; end\n'
+  
+  def energy(basis, geometry):
+    input_parse('''
+      basis spherical noprint
+        c library %s ; h library %s 
+      end
+    ''' % (basis, basis))
+    input_parse(geometry)
+    return task_energy('mp2')
+   
+  for basis in ('sto-3g', '6-31g', '6-31g*', 'cc-pvdz', 'cc-pvtz'):
+     energies[basis] =   2*energy(basis, ch4) \
+                       - 2*energy(basis, h2) - energy(basis, c2h4)
+     if (ga_nodeid() == 0): print (basis, ' %8.6f' % energies[basis])
+end 
+ 
+task python
+```
+In this example the reaction energy for  2H<sub>2</sub> + C<sub>2</sub>H<sub>4</sub> &rarr;
+2CH<sub>4</sub> is evaluated using MP2 in several basis sets. The geometries are
 fixed, but could be re-optimized in each basis. To illustrate the useful
 associative arrays in Python, the reaction energies are put into the
 associative array energies -- note its declaration at the top of the

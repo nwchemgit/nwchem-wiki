@@ -14,14 +14,18 @@ approximations
     derivatives. This is selected by specifying mp2 on the task
     directive, e.g.
 
-`TASK MP2`
+```
+TASK MP2
+```
 
   - Fully-direct\[2\] -- this is of utility if only limited I/O
     resources are available (up to about 2800 functions). Only RHF
     references and energies are available. This is selected by
     specifying direct\_mp2 on the task directive, e.g.
 
-`TASK DIRECT_MP2`
+```
+TASK DIRECT_MP2
+```
 
   - Resolution of the identity (RI) approximation MP2 (RI-MP2)\[3\] --
     this uses the RI approximation and is therefore only exact in the
@@ -32,7 +36,9 @@ approximations
     only energies are available. This is selected by specifying rimp2 on
     the task directive, e.g.,
 
-`TASK RIMP2`
+```
+TASK RIMP2
+```
 
 All three MP2 tasks share the same input block.
 ```
@@ -60,7 +66,9 @@ orbitals are frozen on atoms on which the nuclear charge has been
 modified either by the user or due to the presence of an ECP. The actual
 input would be
 
-` freeze atomic`
+```
+ freeze atomic
+```
 
 For example, in a calculation on Si(OH)<sub>2</sub>, by default the lowest
 seven orbitals would be frozen (the oxygen 1*s*, and the silicon
@@ -68,9 +76,8 @@ seven orbitals would be frozen (the oxygen 1*s*, and the silicon
 
 <center>
 
-|        |          |                                                                                            |                |
-| ------ | -------- | ------------------------------------------------------------------------------------------ | -------------- |
 | Period | Elements | Core Orbitals                                                                              | Number of Core |
+| ------ | -------- | ------------------------------------------------------------------------------------------ | -------------- |
 | 0      | H - He   | \-                                                                                         | 0              |
 | 1      | Li - Ne  | 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>                                                                                     | 1              |
 | 2      | Na - Ar  | 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>                                                                         | 5              |
@@ -78,7 +85,6 @@ seven orbitals would be frozen (the oxygen 1*s*, and the silicon
 | 4      | Rb - Xe  | 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>3<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>4<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>4<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>                                           | 18             |
 | 5      | Cs - Rn  | 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>3<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>4<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>4<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>5<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>4<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>5<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>                         | 27             |
 | 6      | Fr - Lr  | 1<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>2<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>3<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>4<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>3<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>4<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>5<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>4<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>5<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/>6<img alt="$s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6f9bad7347b91ceebebd3ad7e6f6f2d1.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6767405pt" height="14.10255pt"/>4<img alt="$f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width="9.780705pt" height="22.74591pt"/>5<img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>6<img alt="$p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width="8.2397205pt" height="14.10255pt"/> | 43             |
-|  |
 
 Number of orbitals considered "core" in the "freeze by atoms" algorithm
 
@@ -96,7 +102,9 @@ and higher- period atoms.
 The user may also specify the number of orbitals to be frozen by atom.
 Following the  Si(OH)<sub>2</sub> example, the user could specify
 
-`freeze atomic O 1 Si 3`
+```
+freeze atomic O 1 Si 3
+```
 
 In this case only the lowest four orbitals would be frozen. If the user
 does not specify the orbitals by atom, the rules default to Table 16.1.
@@ -109,11 +117,15 @@ a logical number of orbitals to be frozen for the atom.
 The FREEZE directive may also be used to specify the number of core
 orbitals to freeze. For instance, to freeze the first 10 orbitals
 
-` freeze 10`
+```
+ freeze 10
+```
 
 or equivalently, using the optional keyword core
 
-` freeze core 10`
+```
+ freeze core 10
+```
 
 Again, note that if the 10 orbitals to be frozen do not correspond to
 the first 10 orbitals, then the swap keyword of the VECTORS directive
@@ -123,7 +135,9 @@ vectors](#vectors----mo-vectors "wikilink")).
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
 
-` freeze virtual 5`
+```
+ freeze virtual 5
+```
 
 Again, note that this only works for the direct-MP2 and RI-MP2 energy
 codes.
@@ -151,7 +165,9 @@ This directive - used only in the semi-direct algorithm - allows to
 limit the per process disk usage. Mandatory argument for this keyword is
 the maximum number of MBytes. For example, the following input line
 
-` scratchdisk 512`
+```
+ scratchdisk 512
+```
 
 puts an upper limit of 512 MBytes to the semi-direct MP2 usage of disk
 (again, on a per process base).
@@ -164,9 +180,8 @@ below.
 
 <center>
 
-|                         |             |                                            |
-| ----------------------- | ----------- | ------------------------------------------ |
 | Item                    | Print Level | Description                                |
+| ----------------------- | ----------- | ------------------------------------------ |
 |                         |             |                                            |
 | **RI-MP2**              |             |                                            |
 |                         |             |                                            |
@@ -200,7 +215,9 @@ default obtained from the preceding SCF calculation, but it is possible
 to specify a different source using the VECTORS directive. For instance,
 to obtain vectors from the file /tmp/h2o.movecs, use the directive
 
-` vectors /tmp/h2o.movecs`
+```
+ vectors /tmp/h2o.movecs
+```
 
 As noted above ([FREEZE](#freeze----freezing-orbitals "wikilink")) if
 the SCF orbitals are not in the correct order, it is necessary to
@@ -209,7 +226,9 @@ directive. For instance, if it is desired to freeze a total six orbitals
 corresponding to the SCF orbitals 1-5, and 7, it is necessary to swap
 orbital 7 into the 6th position. This is accomplished by
 
-` vectors swap 6 7`
+```
+ vectors swap 6 7
+```
 
 The swap capability is examined in more detail in [Input/output of MO
 vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink").
@@ -219,12 +238,14 @@ vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors 
 The RI-MP2 method requires a fitting basis, which must be specified with
 the name "ri-mp2 basis" (see [Basis](Basis "wikilink")). For instance,
 
-` basis "ri-mp2 basis"`  
-`   O s; 10000.0 1`  
-`   O s;  1000.0 1`  
-`   O s;   100.0 1`  
-`   ...`  
-` end`
+```
+ basis "ri-mp2 basis"
+   O s; 10000.0 1
+   O s;  1000.0 1
+   O s;   100.0 1
+   ...
+ end
+```
 
 Alternatively, using a standard capability of basis sets
 ([Basis](Basis "wikilink")) another named basis may be associated with
@@ -232,15 +253,19 @@ the fitting basis. For instance, the following input specifies a basis
 with the name "small fitting basis" and then defines this to be the
 "ri-mp2 basis".
 
-` basis "small fitting basis"`  
-`   H s; 10    1`  
-`   H s;  3    1`  
-`   H s;  1    1`  
-`   H s;  0.1  1`  
-`   H s;  0.01 1`  
-` end`
+```
+ basis "small fitting basis"
+   H s; 10    1
+   H s;  3    1
+   H s;  1    1
+   H s;  0.1  1
+   H s;  0.01 1
+ end
+```
 
-` set "ri-mp2 basis" "small fitting basis"`
+```
+ set "ri-mp2 basis" "small fitting basis"
+```
 
 ## FILE3C -- RI-MP2 3-center integral filename
 
@@ -249,7 +274,9 @@ integrals is "<img alt="$file\_prefix$" src="https://raw.githubusercontent.com/w
 be overridden using the FILE3C directive. For instance, to specify the
 file /scratch/h2o.3c, use this directive
 
-` file3c /scratch/h2o.3c`
+```
+ file3c /scratch/h2o.3c
+```
 
 ## RIAPPROX -- RI-MP2 Approximation
 
@@ -274,7 +301,9 @@ eigenvalue is less than <img alt="$mineval$" src="https://raw.githubusercontent.
 parameter may be changed by setting the a parameter in the database. For
 instance, to set it to <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>
 
-` set "mp2:fit min eval" 1e-10`
+```
+ set "mp2:fit min eval" 1e-10
+```
 
 ### Reference Spin Mapping for RI-MP2 Calculations
 
@@ -282,7 +311,9 @@ The user has the option of specifying that the RI-MP2 calculations are
 to be done with variations of the SCF reference wavefunction. This is
 accomplished with a SET directive of the form,
 
-` set "mp2:reference spin mapping" <integer array default 0>`
+```
+ set "mp2:reference spin mapping" <integer array default 0>
+```
 
 Each element specified for array is the SCF spin case to be used for the
 corresponding spin case of the correlated calculation. The number of
@@ -295,7 +326,9 @@ using the alpha spin orbitals (spin case 1) from the reference for both
 of the correlated reference spin cases, the SET directive would be as
 follows,
 
-` set "mp2:reference spin mapping" 1 1`
+```
+ set "mp2:reference spin mapping" 1 1
+```
 
 The SCF calculation to produce the reference wavefunction could be
 either RHF or UHF in this case.
@@ -303,19 +336,25 @@ either RHF or UHF in this case.
 The SET directive for a similar case, but this time using the beta-spin
 SCF orbitals for both correlated spin cases, is as follows,
 
-` set "mp2:reference spin mapping" 2 2`
+```
+ set "mp2:reference spin mapping" 2 2
+```
 
 The SCF reference calculation must be UHF in this case.
 
 The SET directive for a spin-restricted calculation (one element) from
 the beta-spin SCF orbitals using this option is as follows,
 
-` set "mp2:reference spin mapping" 2`
+```
+ set "mp2:reference spin mapping" 2
+```
 
 The SET directive for a spin-unrestricted calculation with the spins
 flipped from the original SCF reference wavefunction is as follows,
 
-` set "mp2:reference spin mapping" 2 1`
+```
+ set "mp2:reference spin mapping" 2 1
+```
 
 ### Batch Sizes for the RI-MP2 Calculation
 
@@ -324,8 +363,10 @@ energy evaluation in the MP2 calculation, and consequently the memory
 requirements and number of passes required. This is done using two SET
 directives of the following form,
 
-` set "mp2:transformation batch size" <integer size default -1>`  
-` set "mp2:energy batch size" <integer isize jsize default -1 -1>`
+```
+ set "mp2:transformation batch size" <integer size default -1>
+ set "mp2:energy batch size" <integer isize jsize default -1 -1>
+```
 
 The default is for the code to determine the batch size based on the
 available memory. Should there be problems with the program-determined
@@ -359,7 +400,9 @@ evaluation phase of the RI-MP2 calculation, either by minimizing the
 amount of I/O, or minimizing the amount of computation. This can be
 accomplished using a SET directive of the form,
 
-` set "mp2:energy mem minimize" `<string mem_opt default I>
+```
+ set "mp2:energy mem minimize" <string mem_opt default I>
+```
 
 A value of I entered for the string mem\_opt means that a strategy to
 minimize I/O will be employed. A value of C tells the code to use a
@@ -385,9 +428,11 @@ terms of the effect on performance.
 Local memory usage in the first two steps of the transformation is
 controlled in the RI-MP2 calculation using the following SET directives,
 
-` set "xf3ci:AO 1 batch size" `<integer max>  
-` set "xf3ci:AO 2 batch size" `<integer max>  
-` set "xf3ci:fit batch size" `<integer max>
+```
+ set "xf3ci:AO 1 batch size" <integer max>
+ set "xf3ci:AO 2 batch size" <integer max>
+ set "xf3ci:fit batch size" <integer max>
+```
 
 The size of the local arrays determines the sizes of the two matrix
 multiplications. These entries set limits on the size of blocks to be
@@ -482,22 +527,19 @@ CCSD.
 1.  Møller, C. and Plesset, M.S. (1934) "Note on an approximation
     treatment for many-electron systems", *Physical Review* **46**
     618-622,
-    [doi:\[http://dx.doi.org/10.1103/PhysRev.46.618](doi:%5Bhttp://dx.doi.org/10.1103/PhysRev.46.618)
-    10.1103/PhysRev.46.618\].
+    doi:[http://dx.doi.org/10.1103/PhysRev.46.618](http://dx.doi.org/10.1103/PhysRev.46.618).
 2.  Wong, A.T.; Harrison, R.J. and Rendell, A.P. (1996) "Parallel direct
     four-index transformations", *Theoretica Chimica Acta* **93**
     317-331,
-    [doi:\[http://dx.doi.org/10.1007/BF01129213](doi:%5Bhttp://dx.doi.org/10.1007/BF01129213)
-    10.1007/BF01129213\]
+    doi:[http://dx.doi.org/10.1007/BF01129213](http://dx.doi.org/10.1007/BF01129213).
 3.  Bernholdt, D.E. and Harrison, R.J. (1996) "Large-scale correlated
     electronic structure calculations: the RI-MP2 method on parallel
     computers", *Chemical Physics Letters* **250** (5-6) 477-484,
-    [doi:\[http://dx.doi.org/10.1016/0009-2614(96)00054-1](doi:%5Bhttp://dx.doi.org/10.1016/0009-2614$96$00054-1)
-    10.1016/0009-2614(96)00054-1\]
+    doi:[http://dx.doi.org/10.1016/0009-2614(96)00054-1](http://dx.doi.org/10.1016/0009-2614(96)00054-1)
 4.  Vahtras, O.; Almlöf, J. and Feyereisen, M. W. (1993) "Integral
     approximations for LCAO-SCF calculations", *Chem. Phys. Lett.*
     **213**, 514-518, doi:
-    [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614$93$89151-7)
+    [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614(93)89151-7)
 5.  Raghavachari, K. and Pople, J. A. (1981) "Calculation of
     one-electron properties using limited configuration interaction
     techniques", *Int. J. Quantum Chem.* **20**, 1067-1071, doi:
@@ -506,11 +548,11 @@ CCSD.
     "Legitimate calculation of first-order molecular properties in the
     case of limited CI functions. Dipole moments", *Chem. Phys.* **59**,
     29-39, doi:
-    [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104$81$80082-1).
+    [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104(81)80082-1).
 7.  Rice, J. E. and Amos, R. D. (1985) "On the efficient evaluation of
     analytic energy gradients", *Chem. Phys. Lett.* **122**, 585-590,
     doi:
-    [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614$85$87275-4).
+    [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614(85)87275-4).
 8.  Wiberg, K. B.; Hadad, C. M.; LePage, T. J.; Breneman, C. M. and
     Frisch, M. J. (1992) "Analysis of the effect of electron correlation
     on charge density distributions", *J. Phys. Chem.* **96**, 671-679,
@@ -523,5 +565,4 @@ CCSD.
 10. S. Grimme, "Improved second-order Møller-Plesset perturbation theory
     by separate scaling of parallel- and antiparallel-spin pair
     correlation energies", J. Chem. Phys., 118, (2003), 9095-9102,
-    [doi:\[http://dx.doi.org/10.1063/1.1569242](doi:%5Bhttp://dx.doi.org/10.1063/1.1569242)
-    10.1063/1.1569242\].
+    doi:[10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).

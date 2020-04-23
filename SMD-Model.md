@@ -59,16 +59,19 @@ block
 
 The SMD input options are as follows:
 
-`do_cosmo_smd (logical input)`  
-`.true.  (perform a ground-state SMD calculation) or`  
-`.false. (default)`
+```
+do_cosmo_smd (logical input)
+.true.  (perform a ground-state SMD calculation) or
+.false. (default)
+```
 
-`solvent (keyword) `  
-` a solvent keyword from a list of available SMD solvent names below:`
+```
+solvent (keyword) 
+ a solvent keyword from a list of available SMD solvent names below:
+```
 
-|             |                                 |
+| Keyword     | Name                            |
 | ----------- | ------------------------------- |
-| **Keyword** | **Name**                        |
 | h2o         | water (default)                 |
 | water       | water (default)                 |
 | acetacid    | acetic acid                     |
@@ -249,7 +252,6 @@ The SMD input options are as follows:
 | o-xylene    | o-xylene                        |
 | p-xylene    | p-xylene                        |
 | xylenemx    | xylene (mixture)                |
-|  |
 
 When a solvent is specified by name, the descriptors for the solvent are
 based on the Minnesota Solvent Descriptor Database:
@@ -263,52 +265,64 @@ solvent keyword and instead introducing user-provided values for the
 following solvent
 descriptors:
 
-`dielec (real input)`  
-`dielectric constant at 298 K`
+```
+dielec (real input)
+dielectric constant at 298 K
+```
 
-`sola (real input) `  
-`Abraham’s hydrogen bond acidity   `
+```
+sola (real input) 
+Abraham’s hydrogen bond acidity   
+```
 
-`solb (real input) `  
-`Abraham’s hydrogen bond basicity`  
-`  `  
-`solc (real input) `  
-`aromaticity as a fraction of non-hydrogenic solvent atoms that are aromatic carbon atoms`  
-  
-`solg (real input) `  
-`macroscopic surface tension of the solvent at an air/solvent interface at 298 K in units of cal mol–1 Å–2 (note that 1 dyne/cm = 1.43932 cal mol–1 Å–2)`
+```
+solb (real input) 
+Abraham’s hydrogen bond basicity
+  
+solc (real input) 
+aromaticity as a fraction of non-hydrogenic solvent atoms that are aromatic carbon atoms
 
-`solh (real input)`  
-`electronegative halogenicity as the fraction of non-hydrogenic solvent atoms that are F, Cl, or Br `
+solg (real input) 
+macroscopic surface tension of the solvent at an air/solvent interface at 298 K in units of cal mol–1 Å–2 (note that 1 dyne/cm = 1.43932 cal mol–1 Å–2)
+```
 
-`soln (real input)`  
-`index of refraction at optical frequencies at 293 K`
+```
+solh (real input)
+electronegative halogenicity as the fraction of non-hydrogenic solvent atoms that are F, Cl, or Br 
+```
+
+```
+soln (real input)
+index of refraction at optical frequencies at 293 K
+```
 
 An example of an SMD input file is as
 follows:
 
-`echo `  
-`title 'SMD/M06-2X/6-31G(d) solvation free energy for CF3COO- in water'`  
-`start`  
-`charge -1`  
-`geometry nocenter`  
-`C    0.512211   0.000000  -0.012117`  
-`C   -1.061796   0.000000  -0.036672`  
-`O   -1.547400   1.150225  -0.006609`  
-`O   -1.547182  -1.150320  -0.006608`  
-`F    1.061911   1.087605  -0.610341`  
-`F    1.061963  -1.086426  -0.612313`  
-`F    0.993255  -0.001122   1.266928`  
-`symmetry c1`  
-`end`  
-`basis`  
-`* library 6-31G*`  
-`end`  
-`dft`  
-` XC m06-2x`  
-`end`  
-`cosmo`  
-` do_cosmo_smd true`  
-` solvent water`  
-`end`  
-`task dft energy`
+```
+echo 
+title 'SMD/M06-2X/6-31G(d) solvation free energy for CF3COO- in water'
+start
+charge -1
+geometry nocenter
+C    0.512211   0.000000  -0.012117
+C   -1.061796   0.000000  -0.036672
+O   -1.547400   1.150225  -0.006609
+O   -1.547182  -1.150320  -0.006608
+F    1.061911   1.087605  -0.610341
+F    1.061963  -1.086426  -0.612313
+F    0.993255  -0.001122   1.266928
+symmetry c1
+end
+basis
+* library 6-31G*
+end
+dft
+ XC m06-2x
+end
+cosmo
+ do_cosmo_smd true
+ solvent water
+end
+task dft energy
+```

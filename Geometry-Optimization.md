@@ -38,6 +38,7 @@ directive,
       PRINT ... 
    XYZ <string xyz default *file_prefix*>]  
    NOXYZ  
+   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
  END
 ```
 On each optimization step a line search is performed. To speed up
@@ -61,11 +62,12 @@ maximum and root mean square gradient in the coordinates being used
 (Z-matrix, redundant internals, or Cartesian). XMAX and XRMS control the
 maximum and root mean square of the Cartesian step.
 
-`                 LOOSE    DEFAULT    TIGHT`  
-`        GMAX   0.00450    0.00045   0.000015   `  
-`        GRMS   0.00300    0.00030   0.00001`  
-`        XMAX   0.01800    0.00180   0.00006`  
-`        XRMS   0.01200    0.00120   0.00004`
+|      | LOOSE   | DEFAULT | TIGHT    |
+|------|---------|---------|----------|
+| GMAX | 0.00450 | 0.00045 | 0.000015 |
+| GRMS | 0.00300 | 0.00030 | 0.00001  |
+| XMAX | 0.01800 | 0.00180 | 0.00006  |
+| XRMS | 0.01200 | 0.00120 | 0.00004  |
 
 Note that GMAX and GRMS used for convergence of geometry may
 significantly vary in different coordinate systems such as Z-matrix,
@@ -92,8 +94,10 @@ instead of 1e-7.
 
 ## Controlling the step length
 
-`   TRUST <real trust default 0.3>`  
-`   SADSTP <real sadstp default 0.1>`
+```
+   TRUST <real trust default 0.3>
+   SADSTP <real sadstp default 0.1>
+```
 
 A fixed trust radius (trust) is used to control the step during
 minimizations, and is also used for modes being minimized during
@@ -111,7 +115,9 @@ this may be modified with this directive.
 
 ## Discard restart information
 
-`   CLEAR`
+```
+   CLEAR
+```
 
 By default Driver reuses Hessian information from a previous
 optimization, and, to facilitate a restart also stores which mode is
@@ -120,7 +126,9 @@ restart data.
 
 ## Regenerate internal coordinates
 
-`   REDOAUTOZ`
+```
+   REDOAUTOZ
+```
 
 Deletes Hessian data and regenerates internal coordinates at the current
 geometry. Useful if there has been a large change in the geometry that
@@ -128,7 +136,9 @@ has rendered the current set of coordinates invalid or non-optimal.
 
 ## Initial Hessian
 
-`   INHESS <integer inhess default 0>`
+```
+   INHESS <integer inhess default 0>
+```
 
   - 0 = Default ... use restart data if available, otherwise use
     diagonal guess.
@@ -181,7 +191,9 @@ Note that the eigen-modes in the optimizer have next-to-nothing to do
 with the output from a frequency calculation. You can examine the
 eigen-modes used by the optimizer with
 
-`  driver; print hvecs; end`
+```
+  driver; print hvecs; end
+```
 
 The selection of the first negative mode is usually a good choice if the
 search is started in the vicinity of the transition state and the
@@ -210,6 +222,31 @@ permanent directory.
 
 The script rasmolmovie in the NWChem contrib directory can be used to
 turn these into an animated GIF movie.
+
+
+## i-PI Socket communication
+```
+   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
+```
+The SOCKET directive enables NWChem to communicate with other software
+packages -- such as [i-PI](http://ipi-code.org/) or
+[ASE](https://wiki.fysik.dtu.dk/ase/dev/ase/calculators/socketio/socketio.html) --
+via the i-PI socket protocol.
+
+Communication is done either over Unix sockets (`SOCKET UNIX`) or IP
+sockets (`SOCKET IPI_CLIENT`):
+
+  - Unix sockets - NWChem will create and bind to a UNIX socket
+    file located at `/tmp/ipi_<socketname>`. If not specified,
+    `<socketname>` will default to `nwchem`.
+  - IP sockets - NWChem will bind to the IP address and port
+    specified by `<socketname>`. If not specified, `<socketname>`
+    will default to `127.0.0.1:31415`.
+
+The `SOCKET` directive is only useful when used in conjunction with other
+software packages that support communication via the i-PI socket
+protocol. For more information, see the
+[i-PI documentation](http://ipi-code.org/resources/documentation/).
 
 ## Print options
 
@@ -372,7 +409,7 @@ specified by input using a line of the following form,
 
 If a step taken during the optimization is too large (e.g., the step
 causes the energy to go up for a minimization or down for a transition
-state search), the STEPPER optimizer will automatically \`\`backstep''
+state search), the STEPPER optimizer will automatically "backstep"
 and correct the step based on information prior to the faulty step. If
 you have an optimization that "backsteps" frequently then the initial
 trust radius should most likely be decreased.
@@ -380,26 +417,29 @@ trust radius should most likely be decreased.
 ## Initial Nuclear Hessian Options
 
 Stepper uses a modified Fletcher-Powell algorithm to find the transition
-state or energy minimum on the potential energy hypersurface. There are
+state or energy minimum on the potential energy hypersurface.  
+There are
 two files left in the user's permanent directory that are used to
 provide an initial hessian to the critical point search algorithm. If
 these files do not exist then the default is to use a unit matrix as the
-initial hessian. Once Stepper executes it generates a binary dump file
-by the name of name.stpr41 which will be used on all subsequent stepper
+initial hessian.  
+Once Stepper executes it generates a binary dump file
+by the name of `name.stpr41` which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
-[START](https://github.com/nwchemgit/nwchem/wiki/Start_Restart "wikilink")).
+[START](Start_Restart "wikilink")).
 It also stores the information for the last valid step in case the
 algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper "wikilink").
 This file is the working data store for all stepper-based optimizations.
 This file is never deleted by default and is the first source of an
-initial hessian. The second source of an inital hessian is an ascii file
+initial hessian.  
+The second source of an initial hessian is an ASCII file
 that contains the lower triangular values of the initial hessian. This
-is stored in file name.hess, where "name" is again the default file
+is stored in file `name.hess`, where "name" is again the default file
 prefix. This is the second source of an initial hessian and is the
 method used to incorporate an initial hessian from any other source
 (e.g., another ab initio code, a molecular mechanics code, etc.,). To
 get a decent starting hessian at a given point you can use the task
 specification task scf hessian, with a smaller basis set, which will by
-default generate the name.hess file. Then you may define your basis set
+default generate the `name.hess` file. Then you may define your basis set
 of choice and proceed with the optimization you desire.

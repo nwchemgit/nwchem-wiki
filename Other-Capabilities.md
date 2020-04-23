@@ -1,6 +1,7 @@
   - [Electron Transfer Calculations](Electron-Transfer "wikilink")
+  - [Controlling NWChem with Python](Python "wikilink")
+  - [Quantum Computing](Quantum "wikilink")
   - [VSCF](VSCF "wikilink")
   - [Dynamical Nucleation Theory Monte Carlo](DNTMC "wikilink")
   - [Correlation consistent Composite Approach (ccCA)](CCCA "wikilink")
-  - [Controlling NWChem with Python](Python "wikilink")
   - [Interfaces to Other Programs](Interface "wikilink")
