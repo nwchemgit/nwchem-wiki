@@ -224,7 +224,7 @@ list can be used to assign basis sets to unique dummy centers.
 The library basis sets can also be marked as relativistic by adding the
 rel keyword to the tag line. See the section on [relativistic
 all-electron
-approximations](Relativistic_All-electron_Approximations "wikilink")
+approximations](Relativistic_All-electron_Approximations "wikilink") 
 for more details. The correlation consistent basis sets have been
 contracted for relativistic effects and are included in the standard
 library.
