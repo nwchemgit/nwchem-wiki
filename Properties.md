@@ -367,7 +367,7 @@ More details at
 ## Moldenfile
 ```
 MOLDENFILE
-[MOLDEN_NORM (JANPA | | NWCHEM || NONE)]
+MOLDEN_NORM (JANPA | | NWCHEM || NONE)
 ```
 This keyword generates files using the [Molden
 format](http://www.cmbi.ru.nl/molden/molden_format.html). The resulting
@@ -398,12 +398,12 @@ be named `h2o.molden`
     
  geometry; he 0. 0. 0.; end  
  
- basis spherical; * library 6-31g;end  
+ basis spherical; * library 6-31g ; end  
   
  task scf  
   
  property 
-  vectors heat.movec  
+  vectors heat.movecs  
   moldenfile   
   molden_norm janpa 
  end

@@ -30,18 +30,20 @@ charge](Charge "wikilink").
 The options available to define the SCF wavefunction and multiplicity
 are as follows:
 
-` SINGLET `  
-` DOUBLET `  
-` TRIPLET `  
-` QUARTET `  
-` QUINTET `  
-` SEXTET`  
-` SEPTET`  
-` OCTET`  
-` NOPEN <integer nopen default 0>`  
-` RHF`  
-` ROHF`  
-` UHF`
+```
+ SINGLET 
+ DOUBLET 
+ TRIPLET 
+ QUARTET 
+ QUINTET 
+ SEXTET
+ SEPTET
+ OCTET
+ NOPEN <integer nopen default 0>
+ RHF
+ ROHF
+ UHF
+```
 
 The optional keywords SINGLET, DOUBLET, ..., OCTET and NOPEN allow the
 user to specify the number of singly occupied orbitals for a particular
@@ -86,7 +88,9 @@ Architecture](NWChem-Architecture "wikilink") for restart behavior).
 
 ## SYM -- use of symmetry
 
-`  SYM <string (ON||OFF) default ON>`
+```
+  SYM <string (ON||OFF) default ON>
+```
 
 This directive enables/disables the use of symmetry to speed up Fock
 matrix construction (via the petite-list or skeleton algorithm) in the
@@ -226,7 +230,9 @@ examples.
 
 Example 1:
 
-` vectors output h2o.movecs`
+```
+ vectors output h2o.movecs
+```
 
 Assuming a start-up calculation, this directive will result in use of
 the default atomic density guess, and will output the vectors to the
@@ -234,7 +240,9 @@ file h2o.movecs.
 
 Example 2:
 
-` vectors input initial.movecs output final.movecs`
+```
+ vectors input initial.movecs output final.movecs
+```
 
 This directive will result in the initial vectors being read from the
 file "initial.movecs". The results will be written to the file
@@ -242,12 +250,14 @@ final.movecs. The contents of "initial.movecs" will not be changed.
 
 Example 3:
 
-` vectors input project "small basis" small.movecs`
+```
+ vectors input project "small basis" small.movecs
+```
 
 This directive will cause the calculation to start from vectors in the
 file "small.movecs" which are in a basis named "small basis". The output
 vectors will be written to the default file "\<file\_prefix.movecs\>".
-
+### VECTORS SWAP keyword
 Once starting vectors have been obtained using any of the possible
 options, they may be reordered through use of the SWAP keyword. This
 optional keyword requires a list of orbital pairs that will be swapped.
@@ -256,7 +266,9 @@ alpha and beta orbitals, as necessary.
 
 An example of use of the SWAP directive:
 
-` vectors input try1.movecs swap 173 175 174 176 output try2.movecs`
+```
+ vectors input try1.movecs swap 173 175 174 176 output try2.movecs
+```
 
 This directive will cause the initial orbitals to be read from the file
 "try1.movecs". The vectors for the orbitals within the pairs 173-175
@@ -271,17 +283,22 @@ permutations of the orbitals. For instance, to apply the permutation
 <img alt="$(6 7 8 9)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f1e8657b56e7bdaf8f983f8faf7f475.svg?invert_in_darkmode&sanitize=true" align=middle width="45.491655pt" height="24.56553pt"/> we note that this permutation is equal to
 <img alt="$(6 7)(7 8)(8 9)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c92f90c8ec6a25f6c4b682f5a77029ab.svg?invert_in_darkmode&sanitize=true" align=middle width="87.34407pt" height="24.56553pt"/>, and thus may be specified as
 
-` vectors swap 8 9  7 8  6 7`
+```
+ vectors swap 8 9  7 8  6 7
+```
 
 Another example, now illustrating this feature for a UHF calculation, is
 the directive
 
-` vectors swap beta 4 5 swap alpha 5 6`
+```
+ vectors swap beta 4 5 swap alpha 5 6
+```
 
 This input will result in the swapping of the 5-6 alpha orbital pair and
 the 4-5 beta orbital pair. (All other items in the input use the default
 values.)
 
+### VECTORS LOCK keyword
 The LOCK keyword allows the user to specify that the ordering of
 orbitals will be locked to that of the initial vectors, insofar as
 possible. The default is to order by ascending orbital energies within
@@ -290,7 +307,7 @@ a calculation where it is necessary to preserve the ordering of a
 previous geometry, despite flipping of the orbital energies. For such a
 case, the LOCK directive can be used to prevent the SCF calculation from
 changing the ordering, even if the orbital energies change.
-
+### VECTORS REORDER keyword
 The mapping of the MO's to the nuclei can be changed using the REORDER
 keyword. Once starting vectors have been obtained using any of the
 possible options, the REORDER keyword moves the MO coefficients between
@@ -303,7 +320,9 @@ orbitals.
 
 An example of use of the REORDER keyword:
 
-` vectors input try1.movecs reorder 2 1 output try2.movecs`
+```
+ vectors input try1.movecs reorder 2 1 output try2.movecs
+```
 
 This directive will cause the initial orbitals to be read from the file
 "try1.movecs". The MO coefficients for the basis functions on atom 2
@@ -314,16 +333,18 @@ The following example shows how the ROTATE keyword can be used to rotate
 MO vectors calculated at geometry geom1 to geometry geom2, which has a
 different rotational orientation:
 
-`set geometry geom1`  
-`dft`  
-` vectors input atomic output geom1.mo`  
-`end`  
-`task dft`  
-`set geometry geom2`  
-`dft`  
-` vectors input rotate geom1 geom1.mo output geom2.mo`  
-`end`  
-`task dft`
+```
+set geometry geom1
+dft
+ vectors input atomic output geom1.mo
+end
+task dft
+set geometry geom2
+dft
+ vectors input rotate geom1 geom1.mo output geom2.mo
+end
+task dft
+```
 
 ### Superposition of fragment molecular orbitals
 
@@ -360,42 +381,44 @@ h2o2.movecs contains the orbitals for the second fragment.
 A complete example of the input for a calculation on the water dimer
 using the fragment guess is as follows:
 
-`  start dimer`  
-`  title "Water dimer SCF using fragment initial guess"`  
-`  geometry dimer`  
-`    O   -0.595   1.165  -0.048`  
-`    H    0.110   1.812  -0.170`  
-`    H   -1.452   1.598  -0.154`  
-`    O    0.724  -1.284   0.034`  
-`    H    0.175  -2.013   0.348`  
-`    H    0.177  -0.480   0.010`  
-`  end`  
-`  geometry h2o1`  
-`    O   -0.595   1.165  -0.048`  
-`    H    0.110   1.812  -0.170`  
-`    H   -1.452   1.598  -0.154`  
-`  end`  
-`  geometry h2o2`  
-`    O    0.724  -1.284   0.034`  
-`    H    0.175  -2.013   0.348`  
-`    H    0.177  -0.480   0.010`  
-`  end`  
-`  basis`  
-`    o library 3-21g`  
-`    h library 3-21g`  
-`  end`  
-`  set geometry h2o1`  
-`  scf; vectors input atomic output h2o1.movecs; end`  
-`  task scf`  
-`  set geometry h2o2`  
-`  scf; vectors input atomic output h2o2.movecs; end`  
-`  task scf`  
-`  set geometry dimer`  
-`  scf`  
-`  vectors input fragment h2o1.movecs h2o2.movecs \`  
-`          output dimer.movecs`  
-`  end`  
-`  task scf`
+```
+start dimer
+title "Water dimer SCF using fragment initial guess"
+geometry dimer
+  O   -0.595   1.165  -0.048
+  H    0.110   1.812  -0.170
+  H   -1.452   1.598  -0.154
+  O    0.724  -1.284   0.034
+  H    0.175  -2.013   0.348
+  H    0.177  -0.480   0.010
+end
+geometry h2o1
+  O   -0.595   1.165  -0.048
+  H    0.110   1.812  -0.170
+  H   -1.452   1.598  -0.154
+end
+geometry h2o2
+  O    0.724  -1.284   0.034
+  H    0.175  -2.013   0.348
+  H    0.177  -0.480   0.010
+end
+basis
+  o library 3-21g
+  h library 3-21g
+end
+set geometry h2o1
+scf; vectors input atomic output h2o1.movecs; end
+task scf
+set geometry h2o2
+scf; vectors input atomic output h2o2.movecs; end
+task scf
+set geometry dimer
+scf
+vectors input fragment h2o1.movecs h2o2.movecs \
+        output dimer.movecs
+end
+task scf
+```
 
 First, the geometry of the dimer and the two monomers are specified and
 given names. Then, after the basis specification, calculations are
@@ -465,132 +488,134 @@ of the fragments. Things to note are:
     output MO vector file can be used, rather than having to specify it
     explicitly.
 
-`start heme6a1`  
-`title  "heme-H2O (6A1) from M.Dupuis"`  
-`############################################################`  
-`# Define the geometry of the full system and the fragments #`  
-`############################################################`  
-`geometry full-system`  
-`  symmetry cs`  
-`  H     0.438   -0.002    4.549`  
-`  C     0.443   -0.001    3.457`  
-`  C     0.451   -1.251    2.828`  
-`  C     0.452    1.250    2.828`  
-`  H     0.455    2.652    4.586`  
-`  H     0.461   -2.649    4.586`  
-`  N1    0.455   -1.461    1.441`  
-`  N1    0.458    1.458    1.443`  
-`  C     0.460    2.530    3.505`  
-`  C     0.462   -2.530    3.506`  
-`  C     0.478    2.844    1.249`  
-`  C     0.478    3.510    2.534`  
-`  C     0.478   -2.848    1.248`  
-`  C     0.480   -3.513    2.536`  
-`  C     0.484    3.480    0.000`  
-`  C     0.485   -3.484    0.000`  
-`  H     0.489    4.590    2.664`  
-`  H     0.496   -4.592    2.669`  
-`  H     0.498    4.573    0.000`  
-`  H     0.503   -4.577    0.000`  
-`  H    -4.925    1.235    0.000`  
-`  H    -4.729   -1.338    0.000`  
-`  C    -3.987    0.685    0.000`  
-`  N    -3.930   -0.703    0.000`  
-`  C    -2.678    1.111    0.000`  
-`  C    -2.622   -1.076    0.000`  
-`  H    -2.284    2.126    0.000`  
-`  H    -2.277   -2.108    0.000`  
-`  N    -1.838    0.007    0.000`  
-`  Fe    0.307    0.000    0.000`  
-`  O     2.673   -0.009    0.000`  
-`  H     3.238   -0.804    0.000`  
-`  H     3.254    0.777    0.000`  
-`end`  
-`geometry ring-only`  
-`  symmetry cs`  
-`  H     0.438   -0.002    4.549`  
-`  C     0.443   -0.001    3.457`  
-`  C     0.451   -1.251    2.828`  
-`  C     0.452    1.250    2.828`  
-`  H     0.455    2.652    4.586`  
-`  H     0.461   -2.649    4.586`  
-`  N1    0.455   -1.461    1.441`  
-`  N1    0.458    1.458    1.443`  
-`  C     0.460    2.530    3.505`  
-`  C     0.462   -2.530    3.506`  
-`  C     0.478    2.844    1.249`  
-`  C     0.478    3.510    2.534`  
-`  C     0.478   -2.848    1.248`  
-`  C     0.480   -3.513    2.536`  
-`  C     0.484    3.480    0.000`  
-`  C     0.485   -3.484    0.000`  
-`  H     0.489    4.590    2.664`  
-`  H     0.496   -4.592    2.669`  
-`  Bq    0.307    0.0      0.0    charge 2  # simulate the iron`  
-`end`  
-`geometry imid-only`  
-`  symmetry cs`  
-`  H     0.498    4.573    0.000`  
-`  H     0.503   -4.577    0.000`  
-`  H    -4.925    1.235    0.000`  
-`  H    -4.729   -1.338    0.000`  
-`  C    -3.987    0.685    0.000`  
-`  N    -3.930   -0.703    0.000`  
-`  C    -2.678    1.111    0.000`  
-`  C    -2.622   -1.076    0.000`  
-`  H    -2.284    2.126    0.000`  
-`  H    -2.277   -2.108    0.000`  
-`  N    -1.838    0.007    0.000`  
-`end`  
-`geometry fe-only`  
-`  symmetry cs`  
-`  Fe    .307    0.000    0.000`  
-`end`  
-`geometry water-only`  
-`  symmetry cs`  
-`  O     2.673   -0.009    0.000`  
-`  H     3.238   -0.804    0.000`  
-`  H     3.254    0.777    0.000`  
-`end`  
-`############################`  
-`# Basis set for everything #`  
-`############################`  
-`basis nosegment`  
-` O  library 6-31g*`  
-` N  library 6-31g*`  
-` C  library 6-31g*`  
-` H  library 6-31g*`  
-` Fe  library "Ahlrichs pVDZ"`  
-`end`  
-`##########################################################`  
-`# SCF on the fragments for initial guess for full system #`  
-`##########################################################`  
-`scf; thresh 1e-2; end`  
-`set geometry ring-only`  
-`scf; vectors atomic swap 80 81 output ring.mo; end`  
-`task scf`  
-`set geometry water-only`  
-`scf; vectors atomic output water.mo; end`  
-`task scf`  
-`set geometry imid-only`  
-`scf; vectors atomic output imid.mo; end`  
-`task scf`  
-`charge 3`  
-`set geometry fe-only`  
-`scf; sextet; vectors atomic output fe.mo; end`  
-`task scf`  
-`##########################`  
-`# SCF on the full system #`  
-`##########################`  
-`unset scf:*     # This restores the defaults`  
-`charge 1`  
-`set geometry full-system`  
-`scf`  
-` sextet`  
-` vectors fragment ring.mo imid.mo fe.mo water.mo`  
-` maxiter 50`  
-`end`  
-`task scf`
+```
+start heme6a1
+title  "heme-H2O (6A1) from M.Dupuis"
+############################################################
+# Define the geometry of the full system and the fragments #
+############################################################
+geometry full-system
+  symmetry cs
+  H     0.438   -0.002    4.549
+  C     0.443   -0.001    3.457
+  C     0.451   -1.251    2.828
+  C     0.452    1.250    2.828
+  H     0.455    2.652    4.586
+  H     0.461   -2.649    4.586
+  N1    0.455   -1.461    1.441
+  N1    0.458    1.458    1.443
+  C     0.460    2.530    3.505
+  C     0.462   -2.530    3.506
+  C     0.478    2.844    1.249
+  C     0.478    3.510    2.534
+  C     0.478   -2.848    1.248
+  C     0.480   -3.513    2.536
+  C     0.484    3.480    0.000
+  C     0.485   -3.484    0.000
+  H     0.489    4.590    2.664
+  H     0.496   -4.592    2.669
+  H     0.498    4.573    0.000
+  H     0.503   -4.577    0.000
+  H    -4.925    1.235    0.000
+  H    -4.729   -1.338    0.000
+  C    -3.987    0.685    0.000
+  N    -3.930   -0.703    0.000
+  C    -2.678    1.111    0.000
+  C    -2.622   -1.076    0.000
+  H    -2.284    2.126    0.000
+  H    -2.277   -2.108    0.000
+  N    -1.838    0.007    0.000
+  Fe    0.307    0.000    0.000
+  O     2.673   -0.009    0.000
+  H     3.238   -0.804    0.000
+  H     3.254    0.777    0.000
+end
+geometry ring-only
+  symmetry cs
+  H     0.438   -0.002    4.549
+  C     0.443   -0.001    3.457
+  C     0.451   -1.251    2.828
+  C     0.452    1.250    2.828
+  H     0.455    2.652    4.586
+  H     0.461   -2.649    4.586
+  N1    0.455   -1.461    1.441
+  N1    0.458    1.458    1.443
+  C     0.460    2.530    3.505
+  C     0.462   -2.530    3.506
+  C     0.478    2.844    1.249
+  C     0.478    3.510    2.534
+  C     0.478   -2.848    1.248
+  C     0.480   -3.513    2.536
+  C     0.484    3.480    0.000
+  C     0.485   -3.484    0.000
+  H     0.489    4.590    2.664
+  H     0.496   -4.592    2.669
+  Bq    0.307    0.0      0.0    charge 2  # simulate the iron
+end
+geometry imid-only
+  symmetry cs
+  H     0.498    4.573    0.000
+  H     0.503   -4.577    0.000
+  H    -4.925    1.235    0.000
+  H    -4.729   -1.338    0.000
+  C    -3.987    0.685    0.000
+  N    -3.930   -0.703    0.000
+  C    -2.678    1.111    0.000
+  C    -2.622   -1.076    0.000
+  H    -2.284    2.126    0.000
+  H    -2.277   -2.108    0.000
+  N    -1.838    0.007    0.000
+end
+geometry fe-only
+  symmetry cs
+  Fe    .307    0.000    0.000
+end
+geometry water-only
+  symmetry cs
+  O     2.673   -0.009    0.000
+  H     3.238   -0.804    0.000
+  H     3.254    0.777    0.000
+end
+############################
+# Basis set for everything #
+############################
+basis nosegment
+ O  library 6-31g*
+ N  library 6-31g*
+ C  library 6-31g*
+ H  library 6-31g*
+ Fe  library "Ahlrichs pVDZ"
+end
+##########################################################
+# SCF on the fragments for initial guess for full system #
+##########################################################
+scf; thresh 1e-2; end
+set geometry ring-only
+scf; vectors atomic swap 80 81 output ring.mo; end
+task scf
+set geometry water-only
+scf; vectors atomic output water.mo; end
+task scf
+set geometry imid-only
+scf; vectors atomic output imid.mo; end
+task scf
+charge 3
+set geometry fe-only
+scf; sextet; vectors atomic output fe.mo; end
+task scf
+##########################
+# SCF on the full system #
+##########################
+unset scf:*     # This restores the defaults
+charge 1
+set geometry full-system
+scf
+ sextet
+ vectors fragment ring.mo imid.mo fe.mo water.mo
+ maxiter 50
+end
+task scf
+```
 
 ### Example of projecting smaller basis into larger basis
 
@@ -678,11 +703,15 @@ ordering of the initial orbitals. The accuracy may be increased with the
 following directive which should be inserted in the top-level of input
 (i.e., outside of the SCF input block) and before the TASK directive.
 
-` set tolguess 1e-7`
+```
+ set tolguess 1e-7
+```
 
 ## THRESH -- convergence threshold
 
-` THRESH  <real thresh default 1.0e-4>`
+```
+ THRESH  <real thresh default 1.0e-4>
+```
 
 This directive specifies the convergence threshold for the calculation.
 The convergence threshold is the norm of the orbital gradient, and has a
@@ -711,7 +740,9 @@ that can be attained in most circumstances.
 
 ## MAXITER -- iteration limit
 
-` MAXITER <integer maxiter default 8>`
+```
+ MAXITER <integer maxiter default 8>
+```
 
 The maximum number of iterations for the SCF calculation defaults to 20
 for both ROHF/RHF and UHF calculations. For most molecules, this number
@@ -731,14 +762,18 @@ converge due to the presence of many states with similar energies.
 
 The following sets the maximum number of SCF iterations to 50:
 
-` maxiter 50`
+```
+ maxiter 50
+```
 
 ## PROFILE -- performance profile
 
 This directive allows the user to obtain timing and parallel execution
 information about the SCF module. It is specified by the simple keyword
 
-` PROFILE`
+```
+ PROFILE
+```
 
 This option can be helpful in understanding the computational
 performance of an SCF calculation. However, it can introduce a
@@ -751,7 +786,9 @@ This directive allows the user to specify DIIS convergence rather than
 second-order convergence for the SCF calculation. The form of the
 directive is as follows:
 
-` DIIS`
+```
+ DIIS
+```
 
 The implementation of this option is currently fairly rudimentary. It
 does not have level-shifting and damping, and does not support open
@@ -763,7 +800,9 @@ additional option of specifying the size of the subspace for the DIIS
 extrapolation. This is accomplished with the DIISBAS directive, which is
 of the form:
 
-` DIISBAS <integer diisbas default 5>`
+```
+ DIISBAS <integer diisbas default 5>
+```
 
 The default of 5 should be adequate for most applications, but may be
 increased if convergence is poor. On large systems, it may be necessary
@@ -803,7 +842,9 @@ the problem of restarting a parallel semidirect calculation.
 A fully direct calculation (with recomputation of the integrals at each
 iteration) is forced by specifying the directive
 
-` DIRECT`
+```
+ DIRECT
+```
 
 Alternatively, the SEMIDIRECT directive can be used to control the
 default semidirect calculation by defining the amount of disk space and
@@ -836,16 +877,22 @@ can be used for this purpose.
 
 For example, to force full recomputation of all integrals:
 
-` direct`
+```
+ direct
+```
 
 Exactly the same result could be obtained by entering the directive:
 
-` semidirect filesize 0 memsize 0`
+```
+ semidirect filesize 0 memsize 0
+```
 
 To disable the use of memory for caching integrals and limit disk usage
 by each process to 100 megawords (MW):
 
-` semidirect memsize 0 filesize 100000000`
+```
+ semidirect memsize 0 filesize 100000000
+```
 
 The integral records are typically 32769 words long and any non-zero
 value for filesize or memsize should be enough to hold at least one
@@ -884,11 +931,13 @@ calculations will print out information about the integral file and the
 number of integrals computed. The form of this output is as
 follows:
 
-`Integral file          = ./c6h6.aoints.0`  
-`Record size in doubles =  32769        No. of integs per rec  =  32768`  
-`Max. records in memory =      3        Max. records in file   =      5`  
-`No. of bits per label  =      8        No. of bits per value  =     32`  
-`#quartets = 2.0D+04  #integrals = 7.9D+05  direct = 63.6%  cached = 36.4%`
+```
+Integral file          = ./c6h6.aoints.0
+Record size in doubles =  32769        No. of integs per rec  =  32768
+Max. records in memory =      3        Max. records in file   =      5
+No. of bits per label  =      8        No. of bits per value  =     32
+#quartets = 2.0D+04  #integrals = 7.9D+05  direct = 63.6%  cached = 36.4%
+```
 
 The file information above relates only to process 0. The line of
 information about the number of quartets, integrals, etc., is a sum over
@@ -897,17 +946,19 @@ all processes.
 When the integral file is closed, additional information of the
 following form is printed:
 
-`------------------------------------------------------------`  
-`EAF file 0: "./c6h6.aoints.0" size=262152 bytes`  
-`------------------------------------------------------------`  
-`               write      read    awrite     aread      wait`  
-`               -----      ----    ------     -----      ----`  
-`     calls:        6        12         0         0         0`  
-`   data(b): 1.57e+06  3.15e+06  0.00e+00  0.00e+00`  
-`   time(s): 1.09e-01  3.12e-02                      0.00e+00`  
-`rate(mb/s): 1.44e+01  1.01e+02`  
-`------------------------------------------------------------`  
-` Parallel integral file used       4 records with       0 large values`
+```
+------------------------------------------------------------
+EAF file 0: "./c6h6.aoints.0" size=262152 bytes
+------------------------------------------------------------
+               write      read    awrite     aread      wait
+               -----      ----    ------     -----      ----
+     calls:        6        12         0         0         0
+   data(b): 1.57e+06  3.15e+06  0.00e+00  0.00e+00
+   time(s): 1.09e-01  3.12e-02                      0.00e+00
+rate(mb/s): 1.44e+01  1.01e+02
+------------------------------------------------------------
+ Parallel integral file used       4 records with       0 large values
+```
 
 Again, the detailed file information relates just to process 0, but the
 final line indicates the total number of integral records stored by all
@@ -928,9 +979,7 @@ that is unconditionally convergent. Basically, a search direction is
 generated by multiplying the orbital gradient (the derivative of the
 energy with respect to the orbital rotations) by an approximation to the
 inverse of the level-shifted orbital Hessian. In the initial iterations
-(see [Controlling the
-Newton-Raphson]
-(#nr----controlling-the-newton-raphson "wikilink")),
+(see [Controlling the Newton-Raphson](#NR_--_controlling_the_Newton-Raphson "wikilink")),
 an inexpensive one-electron approximation to the inverse orbital Hessian is
 used. Closer to convergence, the full orbital Hessian is used, which
 should provide quadratic convergence. For both the full or one-electron
@@ -1019,9 +1068,9 @@ The following sections describe the directives needed to disable the
 Newton-Raphson iteration and specify level-shifting.
 
 ## NR -- controlling the Newton-Raphson
-
-`   NR <real nr_switch default 0.1>`
-
+```
+   NR <real nr_switch default 0.1>
+```
 The exact orbital Hessian is adopted as the preconditioner when the
 maximum element of the orbital gradient is below the value specified for
 nr\_switch. The default value is 0.1, which means that Newton-Raphson
@@ -1029,9 +1078,9 @@ will be disabled until the maximum value of the orbital gradient (twice
 the largest off-diagonal Fock matrix element) is less than 0.1. To
 disable the Newton-Raphson entirely, the value of nr\_switch must be set
 to zero. The directive to accomplish this is as follows:
-
-` nr 0`
-
+```
+ nr 0
+```
 ## LEVEL -- level-shifting the orbital Hessian
 
 This directive allows the user to specify level-shifting to obtain a
@@ -1042,12 +1091,12 @@ conjugate gradient (PCG) method, and for the full Hessian used with the
 Newton-Raphson (NR) approach. It is also possible to change the
 level-shift automatically as the solution attains some specified
 accuracy. The form of the directive is as follows:
-
-`  LEVEL [pcg <real initial default 20.0> \`  
-`          [<real tol default 0.5> <real final default 0.0>]] \`  
-`        [nr <real initial default 0.0> \`  
-`          [<real tol default 0.0> <real final default 0.0>]]`
-
+```
+  LEVEL [pcg <real initial default 20.0> \
+          [<real tol default 0.5> <real final default 0.0>]] \
+        [nr <real initial default 0.0> \
+          [<real tol default 0.0> <real final default 0.0>]]
+```
 This directive contains only two keywords: one for the PCG method and
 the other for the exact Hessian (Newton Raphson, or NR). Use of PCG or
 NR is determined by the input specified for nr\_switch on the NR
@@ -1075,13 +1124,17 @@ are all zero. The exact Hessian is usually not shifted since this
 destroys quadratic convergence. An example of an input directive that
 applies a shift of 0.2 to the exact Hessian is as follows:
 
-` level nr 0.2`
+```
+ level nr 0.2
+```
 
 To apply this shift to the exact Hessian only until the maximum element
 of the gradient falls below 0.005, the required input directive is as
 follows:
 
-` level nr 0.2 0.005 0`
+```
+ level nr 0.2 0.005 0
+```
 
 Note that in both of these examples, the parameters for the PCG method
 are at the default values. To obtain values different from the defaults,
@@ -1090,7 +1143,9 @@ level shifting in the above example for the exact Hessian and
 non-default shifting for the PCG method, the directive would be
 something like the following:
 
-` level pcg 20 0.3 0.0 nr 0.2 0.005 0.0`
+```
+ level pcg 20 0.3 0.0 nr 0.2 0.005 0.0
+```
 
 This input will cause the PCG method to be level-shifted by 20.0 until
 the maximum element of the gradient falls below 0.3, then the shift will
@@ -1100,7 +1155,9 @@ zero.
 
 The default options correspond to
 
-` level pcg 20 0.5 0 nr 0 0 0`
+```
+ level pcg 20 0.5 0 nr 0 0 0
+```
 
 ## Orbital Localization
 
@@ -1112,12 +1169,16 @@ block to control this so the SET directive
 
 The directive
 
-` set scf:localize t`
+```
+ set scf:localize t
+```
 
 will separately localize the core, valence, and virtual orbital spaces
 using the Pipek-Mezey algorithm. If the additional directive
 
-` set scf:loctype FB`
+```
+ set scf:loctype FB
+```
 
 is included, then the Foster-boys algorithm is used. The partitioning of
 core-orbitals is performed using the atomic information described in

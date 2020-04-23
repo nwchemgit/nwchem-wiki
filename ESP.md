@@ -6,9 +6,9 @@ charges that fit the quantum mechanical electrostatic potential on
 selected grid points.
 
 The ESP module is specified by the NWChem task directive
-
-`task esp`
-
+```
+task esp
+```
 The input for the module is taken from the ESP input block
 ```
 ESP  
@@ -25,29 +25,29 @@ parameters determine the selection of grid points.
 
   - If a grid file is found, the grid will be read from that file. If no
     grid file is found, or the keyword
-
-`       recalculate`  
-  
+```
+       recalculate  
+``` 
 is given, the grid and the electrostatic potential is recalculated.`
 
   - The extent of the grid is determined by
-
-`       range <real rcut>` 
-  
+```
+       range <real rcut> 
+```  
 where rcut is the maximum distance in nm between a grid point and any of the atomic centers. 
 When omitted, a default value for rcut of 0.3 nm is used.
 
   - The grid spacing is specified by
-
-`       spacing <real spac>  `
-  
-where spac is the grid spacing in <img alt="$nm$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55e64309e6bad09453ebdfb3c7254f1f.svg?invert_in_darkmode&sanitize=true" align=middle width="24.209295pt" height="14.10255pt"/> for the regularly spaced grid points.
+```
+       spacing <real spac>  
+ ``` 
+where spac is the grid spacing in _nm_ for the regularly spaced grid points.
 If not specified, a default spacing of 0.05 nm is used.
 
   - The van der Waals radius of an element can be specified by
-
-`       radius <integer iatnum> <real atrad>`  
-  
+```
+       radius <integer iatnum> <real atrad>  
+ ``` 
 where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination.  
 Default values will be used for atoms not specified.
 

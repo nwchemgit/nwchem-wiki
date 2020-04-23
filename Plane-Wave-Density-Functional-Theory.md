@@ -273,6 +273,8 @@ NWPW 
   BO_ALGORITHM [verlet|| velocity-verlet || leap-frog]
   BO_FAKE_MASS <real bo_fake_mass default 500.0> 
 
+  SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
+
   MAPPING <integer mapping default 1>  
   NP_DIMENSIONS <integer npi npj default -1 -1>`  
   CAR-PARRINELLO             ... (see section `[`Car-Parrinello`](#Car-Parrinello "wikilink")`) END 
@@ -1269,7 +1271,7 @@ NWPW 
  MAPPING <integer mapping default 1>  
  SMEAR <sigma default 0.001> 
  [TEMPERATURE `<temperature>`] 
- [FERMI || GAUSSIAN default FERMI] 
+ [FERMI || GAUSSIAN || MARZARI-VANDERBILT default FERMI] 
  [ORBITALS <integer orbitals default 4>] 
 END 
 ```
@@ -1922,6 +1924,23 @@ NWPW
 END
 ```
 
+## i-PI Socket Communication
+```
+NWPW
+   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>
+END
+```
+
+The `NWPW` module provides native communication via the i-PI socket protocol.
+The behavior is identical to the
+[i-PI socket communication](Geometry-Optimization#i-pi-socket-communication "wikilink")
+provided by the `DRIVER` module.
+The `NWPW` implementation of the `SOCKET` directive is better optimized for
+plane-wave calculations.
+
+For proper behavior, the `TASK` directive should be set to `GRADIENT`,
+e.g. `TASK PSPW GRADIENT` or `TASK BAND GRADIENT`.
+
 ## Metropolis Monte-Carlo
 ```
 NWPW
@@ -2377,10 +2396,11 @@ The smear keyword to turn on fractional occupation of the molecular
 orbitals in PSPW and BAND
 calculations
 ```
-SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`] [FERMI || GAUSSIAN default FERMI]   
+SMEAR <sigma default 0.001> [TEMPERATURE `<temperature>`]
+                            [FERMI || GAUSSIAN || MARZARI-VANDERBILT default FERMI]
                             [ORBITALS <integer orbitals default 4>]
 ```
-Both Fermi-Dirac (FERMI) and Gaussian broadening functions are
+Fermi-Dirac (FERMI), Gaussian, and Marzari-Vanderbilt broadening functions are
 available. The ORBITALS keyword is used to change the number of virtual
 orbitals to be used in the calculation. Note to use this option the user
 must currently use the SCF minimizer. The following SCF options are

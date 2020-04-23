@@ -1,5 +1,4 @@
-  - [Comprehensive Suite of Scalable
-    Capabilities](Capabilities "wikilink")
+  - [Introduction](Capabilities "wikilink")
 
 <!-- end list -->
 
