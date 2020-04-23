@@ -204,7 +204,7 @@ correct atom type to use from the basis function library (see the ghost
 atom example in [SET](Top-level#SET "wikilink") and below).
 For example: To specify the cc-pvdz basis for a calculation on the water
 monomer in the dimer basis, where the dummy oxygen and dummy hydrogen
-centers have been identified as bqo and bqh respectively, the BASIS
+centers have been identified as `bqo` and `bqh` respectively, the `BASIS`
 directive is as follows:
 ```
  basis  
@@ -214,15 +214,15 @@ directive is as follows:
    bqh library h cc-pvdz  
  end
 ```
-A special dummy center tag is bq\*, which will assign the same basis set
-to all bq centers in the geometry. Just as with the "\*" tag, the except
+A special dummy center tag is `bq*`, which will assign the same basis set
+to all bq centers in the geometry. Just as with the `*` tag, the except
 list can be used to assign basis sets to unique dummy centers.
 
 The library basis sets can also be marked as relativistic by adding the
-rel keyword to the tag line. See the section on [relativistic
+`rel` keyword to the tag line. See the section on [relativistic
 all-electron
-approximations](Relativistic_All-electron_Approximations "wikilink") 
-for more details. The correlation consistent basis sets have been
+approximations](Relativistic-All-electron-Approximations "wikilink")
+ for more details. The correlation consistent basis sets have been
 contracted for relativistic effects and are included in the standard
 library.
 
