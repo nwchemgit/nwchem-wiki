@@ -262,7 +262,7 @@ The variable <shell_type> identifies the angular momentum of the shell,
 *s*, *p*, *d*, .... NWChem is configured to handle up to h shells. The
 keyword rel marks the shell as relativistic -- see the Section  on [relativistic
 all-electron
-approximations](Relativistic-All-electron-Approximations "wikilink")for more
+approximations](Relativistic-All-electron-Approximations "wikilink") for more
 details. Subsequent lines define the primitive function exponents and
 contraction coefficients. General contractions are specified by
 including multiple columns of coefficients.
