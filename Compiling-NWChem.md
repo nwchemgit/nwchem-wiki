@@ -325,6 +325,12 @@ cluster capability to be included in the code, e.g.
 ```
 export MRCC_METHODS=TRUE
 ```
+
+**CCSDTQ** can be set to request the CCSDTQ method and its derivatives 
+to be included in the code, e.g.
+```
+export CCSDTQ=TRUE
+```
 **Setting Python environment variables**
 
 Python programs may be embedded into the NWChem input and used to
