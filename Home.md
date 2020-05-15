@@ -66,3 +66,8 @@ NWChem User Documentation
 <!-- -->
 
 -   [Known Bugs](Known-Bugs "wikilink")
+
+<!-- -->
+
+-   [Citation](Citation "wikilink")
+
