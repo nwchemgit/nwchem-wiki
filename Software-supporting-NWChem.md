@@ -74,6 +74,8 @@ feedback on this page content.
   - **autoDIAS** A python tool for an automated Distortion/Interaction Activation Strain Analysis <https://github.com/dsvatunek/autoDIAS>
   - **PolyParGen** provides OPLS-AA and Amber force field parameters for polymers or large molecules <http://polypargen.com>
   - **BiKi Life Sciences** is a suite for Molecular Dynamics and related methods in Drug Discovery <http://www.bikitech.com/products/>
+  - **Shermo** is a general code for calculating molecular thermodynamic properties 
+<http://sobereva.com/soft/shermo/>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
