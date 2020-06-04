@@ -130,7 +130,7 @@ or equivalently, using the optional keyword core
 Again, note that if the 10 orbitals to be frozen do not correspond to
 the first 10 orbitals, then the swap keyword of the VECTORS directive
 must be used to order the input orbitals correctly ([MO
-vectors](#vectors----mo-vectors "wikilink")).
+vectors](#vectors----mo-vectors)).
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
@@ -219,7 +219,7 @@ to obtain vectors from the file /tmp/h2o.movecs, use the directive
  vectors /tmp/h2o.movecs
 ```
 
-As noted above ([FREEZE](#freeze----freezing-orbitals "wikilink")) if
+As noted above ([FREEZE](#freeze----freezing-orbitals)) if
 the SCF orbitals are not in the correct order, it is necessary to
 permute the input orbitals using the swap keyword of the VECTORS
 directive. For instance, if it is desired to freeze a total six orbitals
@@ -231,12 +231,12 @@ orbital 7 into the 6th position. This is accomplished by
 ```
 
 The swap capability is examined in more detail in [Input/output of MO
-vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink").
+vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors).
 
 ## RI-MP2 fitting basis
 
 The RI-MP2 method requires a fitting basis, which must be specified with
-the name "ri-mp2 basis" (see [Basis](Basis "wikilink")). For instance,
+the name "ri-mp2 basis" (see [Basis](Basis)). For instance,
 
 ```
  basis "ri-mp2 basis"
@@ -248,7 +248,7 @@ the name "ri-mp2 basis" (see [Basis](Basis "wikilink")). For instance,
 ```
 
 Alternatively, using a standard capability of basis sets
-([Basis](Basis "wikilink")) another named basis may be associated with
+([Basis](Basis)) another named basis may be associated with
 the fitting basis. For instance, the following input specifies a basis
 with the name "small fitting basis" and then defines this to be the
 "ri-mp2 basis".
@@ -465,7 +465,7 @@ closely\[5\]\[6\]\[7\]\[8\].
 Only dipole moments are printed by the MP2 gradient code, but natural
 orbitals are produced and stored in the permanent directory with a file
 extension of ".mp2nos". These may be fed into the [property
-package](Properties "wikilink") to compute more general properties as in the following example.
+package](Properties) to compute more general properties as in the following example.
 ```
 start h2o
 geometry

@@ -8,7 +8,7 @@ CHARGE <real charge default 0>
 ```
 
 The charge directive, in conjunction with the charges of atomic nuclei
-(which can be changed via the geometry input, cf. Section [Geometry](Geometry "wikilink")),
+(which can be changed via the geometry input, cf. Section [Geometry](Geometry)),
 determines the total number of electrons in the chemical system.
 Therefore, a charge n specification removes "n" electrons from the
 chemical system. Similarly, charge -n adds "n" electrons. is zero if
@@ -20,7 +20,7 @@ a case, the directive is simply,
 charge 2
 ```
 
-If centers with [fractional charge](Geometry "wikilink") have been
+If centers with [fractional charge](Geometry) have been
 specified the net charge of the system should be adjusted to ensure that
 there are an integral number of electrons.
 
@@ -38,7 +38,7 @@ charge 1 scf; uhf; doublet; end task scf
 charge 2 scf; uhf; singlet; end task scf
 ```
 The GEOMETRY, BASIS, and SCF directives are described below
-([Geometry](Geometry "wikilink"), [Basis](Basis "wikilink") and
-[SCF](Hartree-Fock-Theory-for-Molecules "wikilink") respectively) but
+([Geometry](Geometry), [Basis](Basis) and
+[SCF](Hartree-Fock-Theory-for-Molecules) respectively) but
 their intent should be clear. The TASK directive is described above
-([TASK](TASK "wikilink")).
+([TASK](TASK)).

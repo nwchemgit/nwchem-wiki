@@ -3,7 +3,7 @@
 The nuclear hessian which is used to compute the vibrational frequencies
 can be computed by finite difference for any ab initio wave-function
 that has analytic gradients or by analytic methods for SCF and DFT (see
-[Hessians](Hessians-and-Vibrational-Frequencies "wikilink") for details). The appropriate nuclear
+[Hessians](Hessians-and-Vibrational-Frequencies) for details). The appropriate nuclear
 hessian generation algorithm is chosen based on the user input when TASK
 <theory> frequencies is the task directive.
 
@@ -19,7 +19,7 @@ the molecular system based on the frequencies obtained from the
 projected hessian.
 
 The default mass of each atom is used unless an alternative mass is
-provided via the [geometry](Geometry "wikilink") input or redefined
+provided via the [geometry](Geometry) input or redefined
 using the vibrational module input. The default mass is the mass of the
 most abundant isotope of each element. If the abundance was roughly
 equal, the mass of the isotope with the longest half life was used.

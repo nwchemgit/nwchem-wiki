@@ -33,10 +33,10 @@ generate QM/MM restart and topology files for the ethanol molecule:
 `title "Prepare QM/MM calculation of ethanol"`  
 `start etl`  
   
-[`prepare`](Prepare "wikilink")  
+[`prepare`](Prepare)  
 `#--`*`name`` ``of`` ``the`` ``pdb``
 ``file`*  
-`   source `[`etl0.pdb`](media:Etl0.pdb "wikilink")`                    `  
+`   source `[`etl0.pdb`](media:Etl0.pdb)`                    `  
 `#--`*`generate`` ``new`` ``topology`` ``and`` ``sequence`` ``file`*  
 `   new_top new_seq                    `  
 `#--`*`generate`` ``new`` ``restart`` ``file`*  
@@ -52,7 +52,7 @@ generate QM/MM restart and topology files for the ethanol molecule:
 `#--`*`save`` ``restart`` ``file`*`   `  
 `   write etl_ref.rst`  
 `#--`*`generate`` ``pdb`` ``file`*  
-`   write `[`etl_ref.pdb`](media:etl_ref.pdb "wikilink")  
+`   write `[`etl_ref.pdb`](media:etl_ref.pdb)  
 `end `  
 `task prepare`
 

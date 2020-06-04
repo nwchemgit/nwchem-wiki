@@ -196,22 +196,22 @@ trajectory to calculate averages of relevant energy differences. The
 number of MD steps in the first phase is controlled by the QM/MM
 directive <span id="nsamples"></span>
 
-  - **[nsamples](/Release66:qmmm_nsamples "wikilink")**
+  - **[nsamples](/Release66:qmmm_nsamples)**
     <integer number of MD steps for sampling>
 
 This is a **required** directive for QM/MM free energy calculations.
 
 Number of overall cycles is defined by the QM/MM directive
 
-  - **[ncycles](/Release66:qmmm_ncycles "wikilink")** \<integer number
+  - **[ncycles](/Release66:qmmm_ncycles)** \<integer number
     of cycles default 1\>
 
 In most cases explicit definition of QM/MM
-**[density](/Release66:qmmm_density "wikilink")** and
-**[region](/Release66:qmmm_region "wikilink")** should not be required.
-The QM/MM **[density](/Release66:qmmm_density "wikilink")** will
+**[density](/Release66:qmmm_density)** and
+**[region](/Release66:qmmm_region)** should not be required.
+The QM/MM **[density](/Release66:qmmm_density)** will
 automatically default to **espfit** and
-**[region](/Release66:qmmm_region "wikilink")** to **mm**.
+**[region](/Release66:qmmm_region)** to **mm**.
 
 Prior to data collection for free energy calculations user may want to
 prequilibrate the system, which can be achieved by **equil** keyword in
@@ -249,4 +249,4 @@ calculation. This will require the presence of
 directive, the <system>.thm file, and the appropriate rst file.
 
 Here is an [example of the input file for QM/MM solvation free energy
-calculation](/Release66:QMMM_FEP_Example "wikilink").
+calculation](/Release66:QMMM_FEP_Example).

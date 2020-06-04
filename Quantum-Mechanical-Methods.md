@@ -1,38 +1,38 @@
   - [Hartree-Fock (HF)
-    Theory](Hartree-Fock-Theory-for-Molecules "wikilink")
+    Theory](Hartree-Fock-Theory-for-Molecules)
 
 <!-- end list -->
 
   - [Density Functional Theory
-    (DFT)](Density-Functional-Theory-for-Molecules "wikilink")
+    (DFT)](Density-Functional-Theory-for-Molecules)
 
 <!-- end list -->
 
   - [Excited-State Calculations (CIS, TDHF,
-    TDDFT)](Excited-State-Calculations "wikilink")
+    TDDFT)](Excited-State-Calculations)
 
 <!-- end list -->
 
-  - [Real-time TDDFT](RT-TDDFT "wikilink")
+  - [Real-time TDDFT](RT-TDDFT)
 
 <!-- end list -->
 
   - [Plane-Wave Density Functional Theory (plane-wave
-    DFT)](Plane-Wave-Density-Functional-Theory "wikilink")
+    DFT)](Plane-Wave-Density-Functional-Theory)
 
 <!-- end list -->
 
-  - [Tensor Contraction Engine: CI, MBPT, and CC](TCE "wikilink")
+  - [Tensor Contraction Engine: CI, MBPT, and CC](TCE)
 
 <!-- end list -->
 
-  - [MP2](MP2 "wikilink")
+  - [MP2](MP2)
 
 <!-- end list -->
 
-  - [Coupled Cluster Calculations](CCSD "wikilink")
+  - [Coupled Cluster Calculations](CCSD)
 
 <!-- end list -->
 
-  - [Multiconfiguration SCF](Multiconfiguration_SCF "wikilink")
+  - [Multiconfiguration SCF](Multiconfiguration_SCF)
 

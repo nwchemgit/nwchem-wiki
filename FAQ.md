@@ -51,9 +51,9 @@ uses a fast network and you are aiming to get optimal communication
 performance, you might want to assign a non-default value to
 `ARMCI_NETWORK`. The following links contained useful information about
 `ARMCI_NETWORK`: [ Choosing the ARMCI
-library](Release66:ARMCI "wikilink") and [ Setting up the proper
+library](Release66:ARMCI) and [ Setting up the proper
 environment\_variables when compiling
-NWChem](Compiling_NWChem#Setting_up_the_proper_environment_variables "wikilink")
+NWChem](Compiling-NWChem#Setting_up_the_proper_environment_variables)
 
 # Input Problems
 

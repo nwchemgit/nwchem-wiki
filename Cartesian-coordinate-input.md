@@ -3,7 +3,7 @@
 The default in NWChem is to specify the geometry information entirely in
 Cartesian coordinates, and examples of this format have appeared above
 (e.g, [Water Molecule
-Input](Getting-Started#water-molecule-sample-input-file "wikilink")).
+Input](Getting-Started#water-molecule-sample-input-file)).
 Each center (usually an atom) is identified on a line of the following
 form:
 
@@ -40,14 +40,14 @@ describe the centers in a system:
     atom, and those characters are not BQ or X, then a fatal error is
     generated.
   - The tag of a center is used in the
-    [BASIS](Basis "wikilink") and
-    [ECP](ECP "wikilink") directives to associate functions
+    [BASIS](Basis) and
+    [ECP](ECP) directives to associate functions
     with centers.
   - All centers with the same tag will have the same basis functions.
   - When using automatic symmetry detection, only centers with the same
     tag will be candidates for testing for symmetry equivalence.
   - The user-specified charges (of all centers, atomic and dummy) and
-    any net [total charge](Charge "wikilink") of the system
+    any net [total charge](Charge) of the system
     are used to determine the number of electrons in the system.
 
 The Cartesian coordinates of the atom in the molecule are specified as
@@ -64,7 +64,7 @@ The Cartesian coordinate input line also contains the optional keywords
 charge, mass and nucleus, which allow the user to specify the charge of
 the atom (or center) and its mass (in atomic mass units), and the
 nuclear model. The default charge for an atom is its atomic number,
-adjusted for the presence of [ECPs](ECP "wikilink"). In order
+adjusted for the presence of [ECPs](ECP). In order
 to specify a different value for the charge on a particular atom, the
 user must enter the keyword charge, followed by the desired value for
 the variable <charge>.
@@ -91,4 +91,4 @@ description. In such a case, the user supplies the input tag line
 described above for any centers to be described by Cartesian
 coordinates, and then specifies the remainder of the system using the
 optional ZMATRIX directive described below in [Z-matrix
-input](#ZMATRIX_--_Z-matrix_input "wikilink").
+input](#ZMATRIX_--_Z-matrix_input).

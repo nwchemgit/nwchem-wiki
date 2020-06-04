@@ -27,7 +27,7 @@ DFT input is provided using the compound DFT directive
  END
 ```
 The actual DFT calculation will be performed when the input module
-encounters the [TASK](Task "wikilink") directive.
+encounters the [TASK](TASK) directive.
 ```
  TASK DFT
 ```
@@ -142,7 +142,7 @@ sub-directives that can be specified for a DFT calculation in NWChem.
 The DFT module requires at a minimum the basis set for the Kohn-Sham
 molecular orbitals. This basis set must be in the default basis set
 named "ao basis", or it must be assigned to this default name using the
-[SET](Set "wikilink") directive.
+[SET](SET) directive.
 
 In addition to the basis set for the Kohn-Sham orbitals, the charge
 density fitting basis set can also be specified in the input directives
@@ -150,7 +150,7 @@ for the DFT module. This basis set is used for the evaluation of the
 Coulomb potential in the Dunlap scheme. The charge density fitting basis
 set must have the name "cd basis". This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
-[SET](Set "wikilink") directive. If this basis set is not
+[SET](SET) directive. If this basis set is not
 defined by input, the <img alt="$O(N^4)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/> exact Coulomb contribution is computed.
 
 The user also has the option of specifying a third basis set for the
@@ -172,7 +172,7 @@ given calculation can be summarized as follows;
 
 ## VECTORS and MAX\_OVL -- KS-MO Vectors
 
-The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink") module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules#vectors-lock-keyword "wikilink") keyword is not supported by the DFT module, however the directive
+The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 ```
  MAX_OVL
 ```
@@ -236,7 +236,7 @@ The DECOMP directive causes the components of the energy corresponding
 to each functional to be printed, rather than just the total
 exchange-correlation energy which is the default. You can see an example
 of this directive in the [sample
-input](#sample-input-file "wikilink").
+input](#sample-input-file).
 
 Many alternative exchange and correlation functionals are available to
 the user as listed in the table below. The following sections describe
@@ -571,7 +571,7 @@ is, self-consistently or with GGA/LDA orbitals and densities. However,
 since second derivatives are not available for metaGGAs, in order to
 calculate frequencies, one must use task dft freq numerical. A sample
 file with this is shown below, in [Sample input
-file](#sample-input-file "wikilink"). In this instance, the energy is
+file](#sample-input-file). In this instance, the energy is
 calculated self-consistently and geometry is optimized using the
 analytical gradients.
 
@@ -808,14 +808,14 @@ potentials.
 The keyword `CS00`, when supplied with a real value of shift (in atomic
 units), will perform Casida-Salahub '00 asymptotic correction. This is
 primarily intended for use in conjunction with
-[TDDFT](Excited-State-Calculations "wikilink"). The shift is normally
+[TDDFT](Excited-State-Calculations). The shift is normally
 positive (which means that the original uncorrected exchange-correlation
 potential must be shifted down).
 
 When the keyword `CS00` is specified without the value of shift, the
 program will automatically supply it according to the semi-empirical
 formula of Zhan, Nichols, and Dixon (again, see
-[TDDFT](Excited-State-Calculations "wikilink") for more details and
+[TDDFT](Excited-State-Calculations) for more details and
 references). As the Zhan's formula is calibrated against B3LYP results,
 it is most meaningful to use this in conjunction with the B3LYP
 functional, although the program does not prohibit (or even warn) the
@@ -823,7 +823,7 @@ use of any other functional.
 
 Sample input files of asymptotically corrected TDDFT calculations can be
 found in the corresponding
-[section](Excited-State-Calculations "wikilink").
+[section](Excited-State-Calculations).
 
 ## Sample input file
 
@@ -871,7 +871,7 @@ or
 The optimization procedure will stop when the specified number of
 iterations is reached or convergence is met. See an example that uses
 this directive in [Sample input
-file](#sample-input-file "wikilink").
+file](#sample-input-file).
 
 ## CONVERGENCE -- SCF Convergence Control
 ```
@@ -1500,7 +1500,7 @@ with the option `DIRECT` in which case all integrals are computed
 \`\`on-the-fly''.
 
 The `SEMIDIRECT` option controls caching of integrals. A full description
-of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect----recomputation-of-integrals "wikilink") section. Some functionality
+of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect----recomputation-of-integrals) section. Some functionality
 which is only compatible with the `DIRECT` option will not, at present,
 work when using `SEMIDIRECT`.
 
@@ -1789,7 +1789,7 @@ and the website <http://gatsby.ucmerced.edu/wiki/XDM>
 ```
 The PRINT||NOPRINT options control the level of output in the DFT.
 Please see some examples using this directive in [Sample input
-file](#sample-input-file "wikilink"). Known controllable print options
+file](#sample-input-file). Known controllable print options
 are:
 
 <center>
@@ -1837,7 +1837,7 @@ effective core potential (ECP) and a matching spin-orbit potential (SO). The cur
 implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
-encounters the TASK directive ([TASK](Task "wikilink")).
+encounters the TASK directive ([TASK](TASK)).
 ```
  TASK SODFT
 ```
@@ -1845,14 +1845,14 @@ Input parameters are the same as for the DFT. Some of the DFT options
 are not available in the SODFT. These are max\_ovl and sic.
 
 Besides using the standard ECP and basis sets, see [Effective Core
-Potentials](ECP "wikilink") for details, one also has to specify a
+Potentials](ECP) for details, one also has to specify a
 spin-orbit (SO) potential. The input specification for the SO potential
 can be found in [Effective Core
-Potentials](ECP#spin-orbit-ecps "wikilink"). At this time we have not
+Potentials](ECP#spin-orbit-ecps). At this time we have not
 included any spin-orbit potentials in the basis set library. However,
 one can get these from the Stuttgart/Köln web pages    
 (http://www.tc.uni-koeln.de/PP/clickpse.en.html).  See [Effective Core
-Potentials](ECP "wikilink") for details how to define the SO ECPs
+Potentials](ECP) for details how to define the SO ECPs
 
 Note: One should use a combination of ECP and SO potentials that were
 designed for the same size core, i.e. don't use a small core ECP

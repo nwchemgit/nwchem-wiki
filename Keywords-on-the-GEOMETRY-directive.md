@@ -22,7 +22,7 @@ list describes all options and their defaults.
     geometry, and all NWChem modules look for a geometry with this name.
     However, multiple geometries may be specified by using a different
     name for each. Subsequently, the user can direct a module to a named
-    geometry by using the [SET](SET "wikilink") directive (see the example in the [SET Section](SET "wikilink"))
+    geometry by using the [SET](SET) directive (see the example in the [SET Section](SET))
     to associate the default name of geometry with the alternate name.
   - `units` - keyword specifying that a value will be entered by the user
     for the string variable <units>. The default units for the geometry
@@ -70,7 +70,7 @@ list describes all options and their defaults.
     decreased to find the full symmetry of a geometry. Note that autosym
     will be turned off if the SYMMETRY group input is given (See
     [Symmetry Group
-    Input](SYMMETRY----Symmetry-Group-Input "wikilink")). Also note
+    Input](SYMMETRY----Symmetry-Group-Input)). Also note
     that if symmetry equivalent atoms have different tags in the
     geometry they will not be detected as symmetry equivalent by the
     `autosym` capability. The reason for this is that atoms with different
@@ -83,17 +83,17 @@ list describes all options and their defaults.
     optimizations. The `noautoz` keyword disables use of internal
     coordinates. The `autoz` keyword is provided only for backward
     compatibility. See [Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink") for
+    coordinates](ZCOORD----Forcing-internal-coordinates) for
     a more detailed description of redundant internal coordinates,
     including how to force the definition of specific internal variables
     in combination with automatically generated variables.
   - `adjust` - This indicates that an existing geometry is to be adjusted.
     Only new input for the redundant internal coordinates may be
     provided ([ZCOORD -- Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink")). It
+    coordinates](ZCOORD----Forcing-internal-coordinates)). It
     is not possible to define new centers or to modify the point group
     using this keyword. See [Forcing internal
-    coordinates](ZCOORD_--_Forcing_internal_coordinates "wikilink") for
+    coordinates](ZCOORD----Forcing-internal-coordinates) for
     an example of its usage.
   - `nucleus` - keyword to specify the default model for the nuclear
     charge distribution. The following values are recognized:
@@ -105,7 +105,7 @@ list describes all options and their defaults.
         <pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
 
 NOTE: If you specify a finite nuclear size, you should ensure that the
-[basis set](Basis "wikilink") you use is contracted for a finite nuclear
+[basis set](Basis) you use is contracted for a finite nuclear
 size.
 
 The following examples illustrate some of the various options that the

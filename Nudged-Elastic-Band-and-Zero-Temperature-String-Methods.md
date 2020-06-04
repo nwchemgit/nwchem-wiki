@@ -206,21 +206,21 @@ control the maximum and root mean square of the Cartesian step.
 
 ## NEB Tutorial 1: H2O Inversion
 
-(input:[h2o-neb.nw](h2o-neb.nw "wikilink"),
-output:[h2o-neb.nwout](h2o-neb.nwout "wikilink"), datafiles:
-[h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat "wikilink")
-[h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat "wikilink")
+(input:[h2o-neb.nw](h2o-neb.nw),
+output:[h2o-neb.nwout](h2o-neb.nwout), datafiles:
+[h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat)
+[h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat)
 )
 
-(xyzfiles: [h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz "wikilink")
-[h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz "wikilink")
-[h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz "wikilink")
-[h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz "wikilink")
-[h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz "wikilink")
+(xyzfiles: [h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz)
+[h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz)
+[h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz)
+[h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz)
+[h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz)
 )
 
 
-![H2O Inversion Pathway](h2o.gif "H2O Inversion Pathway")
+![H2O Inversion Pathway](h2o.gif)
 
 
 ```
@@ -518,36 +518,36 @@ END
 ```
 ## String Tutorial 1:HCN --\> HNC path optimization
 
-(input:[HCN-string1.nw](HCN-string1.nw "wikilink"),
-output:[HCN-string1.nwout](HCN-string1.nwout "wikilink"),
+(input:[HCN-string1.nw](HCN-string1.nw),
+output:[HCN-string1.nwout](HCN-string1.nwout),
 datafiles:
-[HCN-string1.string\_epath.dat](HCN-string1.string_epath.dat "wikilink")
-[HCN-string1.string\_final\_epath.dat](HCN-string1.string_final_epath.dat "wikilink")
+[HCN-string1.string\_epath.dat](HCN-string1.string_epath.dat)
+[HCN-string1.string\_final\_epath.dat](HCN-string1.string_final_epath.dat)
 )
 
 (xyzfiles: [
-HCN-string1.stringpath\_000001.xyz](HCN-string1.stringpath_000001.xyz "wikilink")
+HCN-string1.stringpath\_000001.xyz](HCN-string1.stringpath_000001.xyz)
 [
-HCN-string1.stringpath\_000005.xyz](HCN-string1.stringpath_000005.xyz "wikilink")
+HCN-string1.stringpath\_000005.xyz](HCN-string1.stringpath_000005.xyz)
 [
-HCN-string1.stringpath\_000010.xyz](HCN-string1.stringpath_000010.xyz "wikilink")
+HCN-string1.stringpath\_000010.xyz](HCN-string1.stringpath_000010.xyz)
 [
-HCN-string1.stringpath\_000020.xyz](HCN-string1.stringpath_000020.xyz "wikilink")
+HCN-string1.stringpath\_000020.xyz](HCN-string1.stringpath_000020.xyz)
 [
-HCN-string1.stringpath\_000030.xyz](HCN-string1.stringpath_000030.xyz "wikilink")
+HCN-string1.stringpath\_000030.xyz](HCN-string1.stringpath_000030.xyz)
 [
-HCN-string1.stringpath\_final.xyz](HCN-string1.stringpath_final.xyz "wikilink")
+HCN-string1.stringpath\_final.xyz](HCN-string1.stringpath_final.xyz)
 )
 
 <center>
 
-![HCN--\>HNC Reaction Pathway](hcn-hnc-dft.gif "HCN--\>HNC Reaction Pathway")
+![HCN--\>HNC Reaction Pathway](hcn-hnc-dft.gif)
 
 </center>
 
 <center>
 
-![400px](hcn-hnc-dft.png "wikilink")
+![400px](hcn-hnc-dft.png)
 
 </center>
 
@@ -749,7 +749,7 @@ gnuplot> plot "hcn-hnc-dft.string_epath" using 1:($2+92.908)*27.2116*23.06,"
 gnuplot> 
 ```
 
-[400px](file:hcn-hnc-dft0.png "wikilink")
+[400px](file:hcn-hnc-dft0.png)
 
 
 ## String Tutorial 2:

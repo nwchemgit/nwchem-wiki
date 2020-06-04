@@ -235,7 +235,7 @@ end
 task dft qmd
 ```
 The IR spectrum and vibrational density of states were generated from
-the [qmd\_analysis code](qmd_tools.tar.gz "wikilink") with the following
+the [qmd\_analysis code](qmd_tools.tar.gz) with the following
 command.
 ```
 ./qmd_analysis -xyz SiCl4.xyz -steps 15000 -skip 5000 -ts 10.0 -temp 20.0 -smax 800 -width 10.0
@@ -253,5 +253,5 @@ half-maximum of the peaks in the resulting spectra.
 The computed IR spectrum and vibrational density of states are shown
 here.
 
-![pic1](SiCl4IR.png "") 
-![pic2](SiCl4VDOS.png "")
+![pic1](SiCl4IR.png) 
+![pic2](SiCl4VDOS.png)

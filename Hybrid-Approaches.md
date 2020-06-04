@@ -1,25 +1,25 @@
-  - [COSMO Solvation Model](COSMO-Solvation-Model "wikilink")
+  - [COSMO Solvation Model](COSMO-Solvation-Model)
 
 <!-- end list -->
 
-  - [SMD Model](SMD-Model "wikilink")
+  - [SMD Model](SMD-Model)
 
 <!-- end list -->
 
-  - [VEM Model](VEM-Model "wikilink")
+  - [VEM Model](VEM-Model)
 
 <!-- end list -->
 
-  - [Hybrid Calculations with ONIOM](ONIOM "wikilink")
+  - [Hybrid Calculations with ONIOM](ONIOM)
 
 <!-- end list -->
 
-  - [Combined quantum and molecular mechanics (QM/MM)](QMMM "wikilink")
+  - [Combined quantum and molecular mechanics (QM/MM)](QMMM)
 
 <!-- end list -->
 
-  - [External charges (Bq)](Bq "wikilink")
+  - [External charges (Bq)](Bq)
 
 <!-- end list -->
 
-  - [1D-RISM ](1D-RISM "wikilink")
+  - [1D-RISM ](1D-RISM)

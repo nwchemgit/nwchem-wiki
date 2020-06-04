@@ -2,7 +2,7 @@
 
 NWChem is being developed by a consortium of scientists and maintained
 at the EMSL at PNNL. A [current list of developers can be found
-here](Developer_Team "wikilink"). This page provides important
+here](Developer_Team). This page provides important
 information for current and new developers.
 
 ## Downloading from and Committing to the NWChem source tree
@@ -90,7 +90,7 @@ To Be Revised: %% The type of developer and their level of access are:
 
 A detailed step-by-step description of the build process and necessary
 and optional environment variables is outlined on the [Compiling
-NWChem](Compiling-NWChem "wikilink") page.
+NWChem](Compiling-NWChem) page.
 
 ## Development Contribution Requirements
 
@@ -109,16 +109,16 @@ The programming model in is based on independent "task" modules that
 perform various functions in the code and are build on modular APIs.
 Modules and APIs can share data, or share access to files containing
 data, only through a (most of the time) [disk-resident run time
-database](NWChem-Architecture "wikilink"), which is similar to the
+database](NWChem-Architecture), which is similar to the
 GAMESS-UK dumpfile or the Gaussian checkpoint file. The run time
 database contains all the information necessary to
-[restart](Top-level#START_.2F_RESTART "wikilink") a task.
+[restart](Top-level#START_.2F_RESTART) a task.
 
-The [structure and flow of the program and input](Top-level "wikilink")
+The [structure and flow of the program and input](Top-level)
 are such that it allows for performing multiple tasks within one job.
 Input is read and stored into the run time database until a [TASK
-directive](TASK "wikilink") is encountered. When a [TASK
-directive](TASK "wikilink") is found in the input, the appropriate
+directive](TASK) is encountered. When a [TASK
+directive](TASK) is found in the input, the appropriate
 module will extract relevant data from the database and any associated
 files and perform the requested calculation. Upon completion of the
 task, the module will store significant results in the database, and may
@@ -167,7 +167,7 @@ The archive of the NWChem Mailing list can be found
 ## NWChem Wiki Page Guidelines
 
 Follow the link to the [NWChem Wiki Page
-Guidelines](Guidelines-for-Authors "wikilink").
+Guidelines](Guidelines-for-Authors).
 
 ## NWChem Doxygen documentation
 
@@ -358,7 +358,7 @@ Comments:
 
 One way to generate the code for a new functional to add is shown in
 workflow schematic [center|500px|NWXC code generation
-workflow](file:Code_generation_workflow.jpg "wikilink")
+workflow](file:Code_generation_workflow.jpg)
 
 The step involved can be summarized as:
 

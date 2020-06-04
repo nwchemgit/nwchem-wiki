@@ -75,28 +75,28 @@ detail, describing the options available and the usages of the various
 keywords in each of the three main parts.
 
   - [Keywords on the GEOMETRY
-    directive](Keywords-on-the-GEOMETRY-directive "wikilink")
+    directive](Keywords-on-the-GEOMETRY-directive)
 
   - [SYMMETRY -- Symmetry Group
-    Input](SYMMETRY----Symmetry-Group-Input "wikilink")
+    Input](SYMMETRY----Symmetry-Group-Input)
 
   - [Names of 3-dimensional space
-    groups](Names-of-3-dimensional-space-groups "wikilink")
+    groups](Names-of-3-dimensional-space-groups)
 
   - [Cartesian coordinate
-    input](Cartesian-coordinate-input "wikilink")
+    input](Cartesian-coordinate-input)
 
   - [ZMATRIX -- Z-matrix
-    input](ZMATRIX----Z-matrix-input "wikilink")
+    input](ZMATRIX----Z-matrix-input)
 
   - [ZCOORD -- Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates "wikilink")
+    coordinates](ZCOORD----Forcing-internal-coordinates)
 
   - [SYSTEM -- Lattice parameters for periodic
-    systems](SYSTEM----Lattice-parameters-for-periodic-systems "wikilink")
+    systems](SYSTEM----Lattice-parameters-for-periodic-systems)
 
   - [LOAD -- Load geometry from 
-     XYZ file](Geometry-load "wikilink")
+     XYZ file](Geometry-load)
 
  
 

@@ -291,8 +291,7 @@ AMBER atom types N and OW.
 The format of NWChem parameter is illustrated on the figure below and
 also available as [pdf file](Media:parameter-file.pdf).
 
-![Format of NWChem parameter file](Nwchem-parameter-file.png
-"Format of NWChem parameter file")  
+![Format of NWChem parameter file](Nwchem-parameter-file.png)
 
 ## Conversion of standard AMBER program parameter files
 

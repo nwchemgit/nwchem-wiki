@@ -3,7 +3,7 @@
 The TASK directive is used to tell the code what to do. The input
 directives are parsed sequentially until a TASK directive is
 encountered, as described in [Input File
-Structure](Getting-Started#input-file-structure "wikilink"). At that
+Structure](Getting-Started#input-file-structure). At that
 point, the calculation or operation specified in the TASK directive is
 performed. When that task is completed, the code looks for additional
 input to process until the next TASK directive is encountered, which is
@@ -29,7 +29,7 @@ termination, and is recognized by all forms of the TASK directive. When
 a TASK directive includes the keyword ignore, a warning message is
 printed if the task fails, and code execution continues with the next
 task. An example of this feature is given in the [sample input
-file](Density-Functional-Theory-for-Molecules#sample-input-file "wikilink").
+file](Density-Functional-Theory-for-Molecules#sample-input-file).
 
 The input options, keywords, and defaults for each of these four forms
 for the TASK directive are discussed in the following sections.
@@ -76,37 +76,37 @@ in NWChem:
   - optimize - Minimize the energy by varying the molecular structure.
     By default, this geometry optimization is presently driven by the
     [Driver
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink"),
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER),
     but the [Stepper
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink")
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER)
     may also be used.
   - saddle - Conduct a search for a transition state (or saddle point)
     using either [Driver
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER "wikilink")
+    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER)
     (the default) or
-    [Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER "wikilink").
+    [Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER).
   - hessian - Compute second derivatives. See [hessian
-    section](Hessians-and-Vibrational-Frequencies#hessians "wikilink") for
+    section](Hessians-and-Vibrational-Frequencies#hessians) for
     analytic hessians.
   - frequencies or freq - Compute second derivatives and print out an
     analysis of molecular vibrations. See [vibration
-    section](Hessians-and-Vibrational-Frequencies#vibrational-frequencies "wikilink")
+    section](Hessians-and-Vibrational-Frequencies#vibrational-frequencies)
     for controls for vibration calculations.
   - vscf - Compute anharmonic contributions to the vibrational modes.
-    See the [vibrational SCF section](VSCF "wikilink") for options.
+    See the [vibrational SCF section](VSCF) for options.
   - property - Calculate the properties for the wave function.
   - dynamics - Perform classical molecular dynamics.
   - thermodynamics - Perform multi-configuration thermo-dynamic
     integration using classical MD
 
 NOTE: See [PSPW
-Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks---gamma-point-calculations "wikilink") for
+Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks---gamma-point-calculations) for
 the complete list of operations that accompany the NWPW module.
 
 The user should be aware that some of these operations (gradient,
 optimize, dynamics, thermodynamics) require computation of derivatives
 of the energy with respect to the molecular coordinates. If analytical
-derivatives are not available ([Capabilities](Capabilities "wikilink")),
+derivatives are not available ([Capabilities](Capabilities)),
 they must be computed numerically, which can be very computationally
 intensive.
 
@@ -132,13 +132,13 @@ task dft optimize
 The optional keyword ignore can be used to allow execution to continue
 even if the task fails, as discussed above. An example with the keyword
 ignore can be found in the [DFT
-example](Density-Functional-Theory-for-Molecules#sample-input-file "wikilink").
+example](Density-Functional-Theory-for-Molecules#sample-input-file).
 
 ### TASK Directive for Special Operations
 
 This form of the TASK directive is used in instances where the task to
 be performed does not fit the model of the previous version (such as
-execution of a [Python program](Python "wikilink")), or if the operation
+execution of a [Python program](Python)), or if the operation
 has not yet been implemented in a fashion that applies to a wide range
 of theories (e.g., property evaluation). Instead of requiring theory and
 operation as input, the directive needs only a string identifying the
@@ -154,11 +154,11 @@ variable
 
 .
 
-  - python - Execute a [Python program](Python "wikilink").
+  - python - Execute a [Python program](Python).
   - rtdbprint - Print the contents of the database.
   - cphf - Invoke the CPHF module.
   - property - Perform miscellaneous property calculations.
-  - dplot - Execute a [DPLOT run](DPLOT "wikilink").
+  - dplot - Execute a [DPLOT run](DPLOT).
 
 This directive also recognizes the keyword ignore, which allows
 execution to continue after a task has failed.
@@ -206,7 +206,7 @@ script in a file and execute the file from within NWChem.
 ### TASK Directive for QM/MM simulations
 
 This is very similar to the most commonly used version of the [TASK
-directive](TASK "wikilink"),
+directive](TASK),
 and it has the following
 form:
 ```
@@ -217,7 +217,7 @@ simulation. If theory is "md" this is not a QM/MM simulation and will
 result in an appropriate error. The level of theory may be any QM method
 that can compute gradients but those algorithms in NWChem that do not
 support analytic gradients should be avoided (see
-[Functionality](Functionality "wikilink")).
+[Capabilities](Capabilities)).
 
 The string <operation> is used to specify the calculation that will be
 performed in the QM/MM task. The default operation is a single point
@@ -281,7 +281,7 @@ for the monomer with ghost. The input changes will be applied within
 this and for the following calculations, you should be cautious
 reverting the changes for the next monomers. CHARGE assigns a charge to
 a monomer and it must be consistent with the total charge in the whole
-system (see Section [Charge](Charge "wikilink")). The options OFF and ON turns off and
+system (see Section [Charge](Charge)). The options OFF and ON turns off and
 on any BSSE calculation.
 
 The energy evaluation involves 1 + 2N calculations, i.e. one for the

@@ -19,9 +19,9 @@ scf,dft,mp2 levels of theory and numerically for all the others.
 The relevant settings for QM/MM interface block for energy and gradient
 calculations include
 
-  - [bqzone](qmmm_bq_zone "wikilink")
-  - [mm\_charges](qmmm_mm_charges "wikilink")
-  - [link\_atoms](qmmm_link_atoms "wikilink")
-  - [link\_ecp](qmmm_link_ecp "wikilink").
+  - [bqzone](qmmm_bq_zone)
+  - [mm\_charges](qmmm_mm_charges)
+  - [link\_atoms](qmmm_link_atoms)
+  - [link\_ecp](qmmm_link_ecp).
 
 {{:qmmm_example3}}

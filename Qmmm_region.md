@@ -36,4 +36,4 @@ will be optimized using the following optimization methods
 where "bfgs" stands for Broyden–Fletcher–Goldfarb–Shanno (BFGS)
 optimization method, "lbfgs" limited memory version of quasi-newton, and
 "sd" simple steepest descent algorithm. These assignments can be
-potentially altered using [method](qmmm_method "wikilink") directive.
+potentially altered using [method](qmmm_method) directive.

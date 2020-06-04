@@ -126,7 +126,7 @@ Section 38.3.9).
     with the given name.
 
 An
-[example](#accessing-geometry-information----a-temporary-hack "wikilink")
+[example](#accessing-geometry-information----a-temporary-hack)
 below explains, in lieu of a Python wrapper for the geometry object, how
 to obtain the Cartesian molecular coordinates directly from the
 database.
@@ -488,7 +488,7 @@ is included in the NWChem contrib directory.
 `     i = i + 1`  
 `   return coords`
 
-A [geometry](Geometry "wikilink") with name NAME has its coordinates (in
+A [geometry](Geometry) with name NAME has its coordinates (in
 atomic units) stored in the database entry geometry:NAME:coords. A minor
 wrinkle here is that indirection is possible (and used by the
 optimizers) so that we must first check if NAME actually points to
@@ -527,46 +527,46 @@ parameters directly in the
 database.
 
 ### Scaning a basis exponent yet again -- plotting and handling child processes
-
-` geometry units au`  
-`   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107`  
-` end`  
-`  `  
-` print none`  
-`  `  
-` python`  
-`   import Gnuplot, time, signal`  
-`   `  
-`   def energy_at_exponent(exponent):`  
-`      input_parse('''`  
-`         basis noprint`  
-`            H library 3-21g; O library 3-21g; O d; %f 1.0`  
-`         end`  
-`      ''' % (exponent))`  
-`      return task_energy('scf')`  
-`    `  
-`   data = []`  
-`   exponent = 0.5`  
-`   while exponent <= 0.6:`  
-`      energy = energy_at_exponent(exponent)`  
-`      print ' exponent = ', exponent, ' energy = ', energy`  
-`      data = data + `[`exponent,energy`](exponent,energy "wikilink")  
-`      exponent = exponent + 0.02`  
-`    `  
-`   if (ga_nodeid() == 0):`  
-`      signal.signal(signal.SIGCHLD, signal.SIG_DFL)`  
-`      g = Gnuplot.Gnuplot()`  
-`      g('set data style linespoints')`  
-`      g.plot(data)`  
-`      time.sleep(30)  # 30s to look at the plot`  
-`   `  
-` end`  
-`   `  
-` task python`
-
+```
+ geometry units au  
+   O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107  
+ end  
+    
+ print none  
+    
+ python  
+   import Gnuplot, time, signal  
+     
+   def energy_at_exponent(exponent):  
+      input_parse('''  
+         basis noprint  
+            H library 3-21g; O library 3-21g; O d; %f 1.0  
+         end  
+      ''' % (exponent))  
+      return task_energy('scf')  
+      
+   data = []  
+   exponent = 0.5  
+   while exponent <= 0.6:  
+      energy = energy_at_exponent(exponent)  
+      print ' exponent = ', exponent, ' energy = ', energy  
+      data = data + [exponent,energy](exponent,energy)  
+      exponent = exponent + 0.02  
+      
+   if (ga_nodeid() == 0):  
+      signal.signal(signal.SIGCHLD, signal.SIG_DFL)  
+      g = Gnuplot.Gnuplot()  
+      g('set data style linespoints')  
+      g.plot(data)  
+      time.sleep(30)  # 30s to look at the plot  
+     
+ end  
+     
+ task python
+```
 This illustrates how to handle signals from terminating child processes
 and how to generate simple plots on UNIX systems. The [scanning
-example](#scanning-a-basis-exponent-revisited "wikilink") is modified so
+example](#scanning-a-basis-exponent-revisited) is modified so
 that instead of writing the data to a file for subsequent visualization,
 it is saved for subsequent visualization with Gnuplot (you'll need both
 Gnuplot and the corresponding package for Python in your PYTHONPATH.

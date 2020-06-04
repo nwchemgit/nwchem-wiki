@@ -5,9 +5,9 @@ performed using
 
 The overall algorithm is very similar to QM/MM optimization
 calculations, but instead of optimization, transition state search will
-be performed for [qm](Qmmm_region#qm "wikilink") or
-[qmlink](Qmmm_region#qmlink "wikilink") region for specified number of
-steps ( as defined by [maxiter](qmmm_maxiter "wikilink") keyword). The
+be performed for [qm](Qmmm_region#qm) or
+[qmlink](Qmmm_region#qmlink) region for specified number of
+steps ( as defined by [maxiter](Qmmm_maxiter) keyword). The
 remaining classical regions (if any) will be optimized following the
 standard optimization protocol, which may involve, if specified, ESP
 charge representation of the QM atoms (a recommended option).

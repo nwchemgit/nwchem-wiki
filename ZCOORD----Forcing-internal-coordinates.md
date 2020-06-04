@@ -40,11 +40,11 @@ attempting to make only small changes in the other internal coordinates.
 If no value is provided the value implicit in the input coordinates is
 kept. If the keyword constant is specified, then that internal variable
 is not modified during a geometry optimization with
-[DRIVER](Geometry-Optimization#geometry-optimization-with-driver "wikilink").
+[DRIVER](Geometry-Optimization#geometry-optimization-with-driver).
 Each internal coordinate may also be named either for easy
 identification in the output, or for the application of constraints
 ([Applying constraints in geometry
-optimizations](ZCOORD----Forcing-internal-coordinates#applying-constraints-in-geometry-optimizations "wikilink")).
+optimizations](ZCOORD----Forcing-internal-coordinates#applying-constraints-in-geometry-optimizations)).
 
 If the keyword adjust is specified on the main GEOMETRY directive, only
 ZCOORD data may be specified and it can be used to change the
@@ -72,12 +72,12 @@ computed. This can result in a big computational saving, since gradients
 associated with frozen atoms are forced to zero (Note, however, that
 this destroys the translational and rotational invariance of the
 gradient. This is not yet fully accommodated by the
-[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper "wikilink")
+[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper)
 geometry optimization software, and can sometimes result in slower
 convergence of the optimization. The DRIVER optimization package does
 not suffer from this problem).
 
-The [SET](Top-level#SET "wikilink") directive is used to freeze atoms,
+The [SET](Top-level#SET) directive is used to freeze atoms,
 by specifying a directive of the form:
 ```
  set geometry:actlist <integer list_of_center_numbers>
@@ -95,10 +95,10 @@ or equivalently,
 ```
  set geometry:actlist 1 5 6 7 8 15
 ```
-If this option is not specified by entering a [SET](SET "wikilink")
+If this option is not specified by entering a [SET](SET)
 directive, the default behavior in the code is to treat all atoms as
 active. To revert to this default behavior after the option to define
-frozen atoms has been invoked, the [UNSET](UNSET "wikilink") directive
+frozen atoms has been invoked, the [UNSET](UNSET) directive
 must be used. The form of the UNSET directive is as follows:
 ```
  unset geometry:actlist

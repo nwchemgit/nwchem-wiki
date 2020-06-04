@@ -1,6 +1,6 @@
 While we have done our best to compile an exhaustive list of software
 using NWChem, we might have missed packages and/or incorrectly described
-some software features. Please use the [Github Issue feature](https://github.com/nwchemgit/nwchem/issues "wikilink") to provide
+some software features. Please use the [Github Issue feature](https://github.com/nwchemgit/nwchem/issues) to provide
 feedback on this page content.
 
 ## User interface software
@@ -81,9 +81,9 @@ feedback on this page content.
 ## Programs that can display or manipulate cube and/or Molden files
 
 The following programs can display cube files from [ charge density
-](DPLOT#GAUSSIAN_--_Gaussian_Cube_format "wikilink") and [
-ESP](Properties#Gaussian_Cube_Files "wikilink") and/or use
-[Molden](Properties#Moldenfile "wikilink") files
+](DPLOT#GAUSSIAN_--_Gaussian_Cube_format) and [
+ESP](Properties#Gaussian_Cube_Files) and/or use
+[Molden](Properties#Moldenfile) files
 
   - **gOpenMol** <http://www.csc.fi/~laaksone/gopenmol/gopenmol.html>
   - **Molden** <http://www.cmbi.ru.nl/molden/howtoget.html>
@@ -98,7 +98,7 @@ ESP](Properties#Gaussian_Cube_Files "wikilink") and/or use
 
 ## Programs post-processing AIM files
 
-NWChem can generate [AIM](Properties#Aimfile "wikilink") wavefunction
+NWChem can generate [AIM](Properties#Aimfile) wavefunction
 files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
   - **XAIM** <http://www.quimica.urv.es/XAIM>

@@ -1,10 +1,10 @@
 
-  - [Prepare](Prepare "wikilink")
+  - [Prepare](Prepare)
 
 <!-- end list -->
 
-  - [Molecular Dynamics](MD "wikilink")
+  - [Molecular Dynamics](MD)
 
 <!-- end list -->
 
-  - [Analysis](Analysis "wikilink")
+  - [Analysis](Analysis)

@@ -1019,7 +1019,7 @@ The spin-free 4-index transformation algorithms are exclusively
 compatible with the GA I/O scheme, although out-of-core algorithms for
 the 4-index transformation are accessible using the 2emet options. See
 [Alternative storage of two-electron
-integrals](#2EMET_--_alternative_storage_of_two-electron_integrals "wikilink")
+integrals](#2EMET_--_alternative_storage_of_two-electron_integrals)
 for details.
 
 ### DIIS -- the convergence acceleration
@@ -1843,7 +1843,7 @@ the CCSDTQ equations in general.
 ### Input
 
 The input commands for TCE response properties exclusively use set
-directives (see [SET](Top-level#SET "wikilink")) instead of TCE input
+directives (see [SET](Top-level#SET)) instead of TCE input
 block keywords. There are currently only three commands available:
 
 ```

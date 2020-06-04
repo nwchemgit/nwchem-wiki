@@ -2,7 +2,7 @@
 
 ## Water SCF calculation and geometry optimization in a 6-31g basis
 
-The [Getting Started](Getting-Started "wikilink") input file performs a
+The [Getting Started](Getting-Started) input file performs a
 geometry optimization in a single task. A single point SCF energy
 calculation is performed and then restarted to perform the optimization
 (both could of course be performed in a single task).
@@ -69,7 +69,7 @@ default for a restart job.
 ```
 The final energy should be -128.496441, which together with the previous
 field-free result yields an estimate for the polarizability of 1.83
-atomic units. Note that by [default](Geometry "wikilink") NWChem does
+atomic units. Note that by [default](Geometry) NWChem does
 not include the interaction between the two point charges in the total
 energy.
 
