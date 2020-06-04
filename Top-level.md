@@ -4,27 +4,27 @@ Top-level directives are directives that can affect all modules in the code. Som
 
 The following sections describe each of the top-level directives in detail, noting all keywords, options, required input, and defaults.
 
-* [START/RESTART](https://github.com/nwchemgit/nwchem/wiki/Start_Restart)
+* [START/RESTART](Start_Restart)
 
-* [PERMANENT_DIR](https://github.com/nwchemgit/nwchem/wiki/Permanent_Dir)
+* [PERMANENT_DIR](Permanent_Dir)
 
-* [SCRATCH_DIR](https://github.com/nwchemgit/nwchem/wiki/Scratch_Dir)
+* [SCRATCH_DIR](Scratch_Dir)
 
-* [MEMORY](https://github.com/nwchemgit/nwchem/wiki/Memory)
+* [MEMORY](Memory)
  
-* [ECHO](https://github.com/nwchemgit/nwchem/wiki/Echo)
+* [ECHO](ECHO)
 
-* [TITLE](https://github.com/nwchemgit/nwchem/wiki/Title)
+* [TITLE](TITLE)
 
-* [PRINT / NOPRINT](https://github.com/nwchemgit/nwchem/wiki/Print_Noprint)
+* [PRINT / NOPRINT](Print_Noprint)
 
-* [SET](https://github.com/nwchemgit/nwchem/wiki/Set)
+* [SET](SET)
 
-* [UNSET](https://github.com/nwchemgit/nwchem/wiki/Unset)
+* [UNSET](UNSET)
 
-* [STOP](https://github.com/nwchemgit/nwchem/wiki/Stop)
+* [STOP](STOP)
 
-* [TASK](https://github.com/nwchemgit/nwchem/wiki/Task)
+* [TASK](TASK)
 
-* [ECCE_PRINT](https://github.com/nwchemgit/nwchem/wiki/Ecce_Print)
+* [ECCE_PRINT](ECCE_PRINT)
 
