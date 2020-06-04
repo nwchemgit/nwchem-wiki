@@ -493,12 +493,10 @@ The effort to add movies to the Wiki pages is under development.
 <player>Eric.mpg</player>
 
 ![The GIF format can be used to display animation, as in this image of
-Newton's Cradle.](Newtons_cradle_animation_book_2.gif
-"The GIF format can be used to display animation, as in this image of Newton's Cradle.")
+Newton's Cradle.](Newtons_cradle_animation_book_2.gif)
 
 ![The GIF format can be used to display animation, as in this image of
-metadynamics.](Meta-example.gif
-"The GIF format can be used to display animation, as in this image of metadynamics.")
+metadynamics.](Meta-example.gif)
 
 ## Counters
 
