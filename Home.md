@@ -3,7 +3,7 @@
 NWChem User Documentation   
 =========================
 
--   [Overview](Overview.md "wikilink")
+-   [Overview](Overview "wikilink")
 
 <!-- -->
 
