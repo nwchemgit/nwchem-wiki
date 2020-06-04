@@ -17,12 +17,12 @@ references will be used.
 This wiki has a number of extensions installed to facilitate the
 documentation process for which it is intended. The configuration of the
 wiki installation can found at
-[Special:Version](Special:Version "wikilink"). For the purpose of this
+[Special:Version](Special:Version). For the purpose of this
 wiki there are a number of aspects that are relevant. These include
-[Links](Guidelines_for_Authors#Links "wikilink"),
-[Equations](Guidelines_for_Authors#Equations "wikilink"),
-[Citations](Guidelines_for_Authors#Citations "wikilink"), and
-[Images](Guidelines_for_Authors#Images "wikilink").
+[Links](#Links),
+[Equations](#Equations),
+[Citations](#Citations), and
+[Images](#Images).
 
 ### Links
 
@@ -74,14 +74,14 @@ successfully. To see this compare the examples
 below:
 
 `  `  
-`   [[Relativistic_All-electron_Approximations#Dyall's Modified Dirac-Hamiltonian approximation]]`  
-`   [[Relativistic_All-electron_Approximations#Dyall-Mod-Dirac-Hamiltonian]]`  
+`   [[Relativistic-All-electron-Approximations#Dyall's Modified Dirac-Hamiltonian approximation]]`  
+`   [[Relativistic-All-electron-Approximations#Dyall-Mod-Dirac-Hamiltonian]]`  
 `   `
 
-`  `[`Relativistic_All-electron_Approximations#Dyall's`` ``Modified``
+`  `[`Relativistic-All-electron-Approximations#Dyall's`` ``Modified``
 ``Dirac-Hamiltonian``
-``approximation`](Relativistic_All-electron_Approximations#Dyall's_Modified_Dirac-Hamiltonian_approximation "wikilink")  
-`  `[`Relativistic_All-electron_Approximations#Dyall-Mod-Dirac-Hamiltonian`](Relativistic_All-electron_Approximations#Dyall-Mod-Dirac-Hamiltonian "wikilink")
+``approximation`](Relativistic-All-electron-Approximations#Dyall's_Modified_Dirac-Hamiltonian_approximation)  
+`  `[`Relativistic-All-electron-Approximations#Dyall-Mod-Dirac-Hamiltonian`](Relativistic-All-electron-Approximations#Dyall-Mod-Dirac-Hamiltonian)
 
 #### Intra wiki links to other pages
 
@@ -95,8 +95,8 @@ double square brackets.
 
 becomes
 
-` `[`Getting`` ``Started`](Getting_Started "wikilink")  
-` `[`Effective`` ``Core`` ``Potentials`](ECP "wikilink")
+` `[`Getting`` ``Started`](Getting-Started)  
+` `[`Effective`` ``Core`` ``Potentials`](ECP)
 
 Note that spaces in the specified page name are automatically replaced
 by underscores to generate the correct link. In addition the "|"
@@ -115,9 +115,9 @@ followed by the section title. For example
 
 results in
 
-` `[`ECP#Scalar`` ``ECPs`](ECP#Scalar_ECPs "wikilink")  
+` `[`ECP#Scalar`` ``ECPs`](ECP#Scalar_ECPs)  
 ` `[`Scalar`` ``Effective`` ``Core``
-``Potentials`](ECP#Scalar_ECPs "wikilink")
+``Potentials`](ECP#Scalar_ECPs)
 
 which takes you to the section "Scalar ECPs" on the ECP page. Obviously
 the construct to provide labels for links comes in handy to make these
@@ -198,7 +198,7 @@ support for other kinds of graphical representations is described below.
 
 To include charts on the wiki pages the extension
 [http://www.mediawiki.org/wiki/Extension:Pchart4mw
-pChart4mw](http://www.mediawiki.org/wiki/Extension:Pchart4mw_pChart4mw "wikilink")
+pChart4mw](http://www.mediawiki.org/wiki/Extension:Pchart4mw_pChart4mw)
 is supported. Although the link provides a reasonable documentation of
 the extension the salient points are summarized below. The extension
 works similar to many other tools. The extension detects certain
@@ -253,11 +253,11 @@ provides details on which attributes can be set, how and what they mean.
 
 There are a variety of situations where the best way to show something
 is to provide a picture. In order to do this the image file has to be
-uploaded (see the [Upload](Special:Upload "wikilink") page) to the wiki
+uploaded (see the [Upload](Special:Upload) page) to the wiki
 server. Next a link on the wiki page to the image file has be included.
 In order to avoid trampling over previously uploaded image files it is
 recommended to check the list of previously uploaded files at the
-[ListFiles](Special:ListFiles "wikilink") page.
+[ListFiles](Special:ListFiles) page.
 
 As an example the (old) NWChem logo image is used. First the picture was
 included on with wiki page using
@@ -268,7 +268,7 @@ included on with wiki page using
 
 to give
 
-` `[`NWChem`` ``logo`](file:Nwchem_logo_dark.png "wikilink")
+` `[`NWChem`` ``logo`](file:Nwchem_logo_dark.png)
 
 Alternatively the construct
 
@@ -278,7 +278,7 @@ Alternatively the construct
 
 gives
 
-` `[`media:Nwchem_logo_dark.png`](media:Nwchem_logo_dark.png "wikilink")
+` `[`media:Nwchem_logo_dark.png`](media:Nwchem_logo_dark.png)
 
 The wiki page generated will include a link to the upload page to upload
 the file. Following the link the upload page is displayed with the
@@ -396,7 +396,7 @@ being cited. It uses the construct
 for this. Where \<references/\> is replaced with the list of references.
 An example of a table generated in this way can be found at the bottom
 of this page under the heading
-[References](Guidelines_for_Authors#References "wikilink").
+[References](#References).
 
 ### Jmol extensions
 
@@ -488,7 +488,7 @@ You need to update the page "MediaWiki:Sidebar".
 
 The effort to add movies to the Wiki pages is under development.
 
-[Media:Eric.mpg](Media:Eric.mpg "wikilink")
+[Media:Eric.mpg](Media:Eric.mpg)
 
 <player>Eric.mpg</player>
 
