@@ -4886,12 +4886,12 @@ output:[Media:brucite-nosymmetry.nwout](brucite-nosymmetry.nwout "wikilink")).
 In this example the PSPW module is used to run an NVT simulation for a
 diamond crystal using the a Metropolis Monte-Carlo algorithm.
 
-(input:[Media:diamond-nvt.nw](diamond-nvt.nw "wikilink"),
+<!-- (input:[Media:diamond-nvt.nw](diamond-nvt.nw "wikilink"),
 output:[Media:diamond-nvt.nwout.gz](diamond-nvt.nwout.gz "wikilink"),
 datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz "wikilink"),
 [Media:diamond-nvt.ion\_motion.gz](diamond-nvt.ion_motion.gz "wikilink"),
 [Media:diamond-nvt.xyz.gz](diamond-nvt.xyz.gz "wikilink"),
-[Media:diamond\_nvt\_234.cif.gz](diamond_nvt_234.cif.gz "wikilink"))
+[Media:diamond\_nvt\_234.cif.gz](diamond_nvt_234.cif.gz "wikilink")) -->
 
 ![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
 T=300K.](diamond-nvt.gif "NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
