@@ -97,7 +97,7 @@ considered, but have not yet been implemented.
           [virtual <integer nfzv default 0>]]
 ```
 
-This directive is identical to that used in the [MP2](MP2 "wikilink")
+This directive is identical to that used in the [MP2](MP2)
 module.
 
 ## NODISK -- On-the-fly computation of integrals

@@ -1,8 +1,8 @@
 
-  - [Constraints for Optimization](Constraints "wikilink")
+  - [Constraints for Optimization](Constraints)
   - [Geometry Optimization (Minimization & Transition State
-    Search)](Geometry-Optimization "wikilink")
+    Search)](Geometry-Optimization)
   - [Hessians & Vibrational
-    Frequencies](Hessians-and-Vibrational-Frequencies "wikilink")
+    Frequencies](Hessians-and-Vibrational-Frequencies)
   - [Nudged Elastic Band (NEB) and Zero Temperature String
-    Methods](Nudged-Elastic-Band-and-Zero-Temperature-String-Methods "wikilink")
+    Methods](Nudged-Elastic-Band-and-Zero-Temperature-String-Methods)

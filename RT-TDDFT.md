@@ -6,7 +6,7 @@ Real-time time-dependent density functional theory (RT-TDDFT) is a
 DFT-based approach to electronic excited states based on integrating the
 time-dependent Kohn-Sham (TDKS) equations in time. The theoretical
 underpinnings, strengths, and limitations are similar to traditional
-linear-response (LR) [TDDFT](Excited-State-Calculations "wikilink")
+linear-response (LR) [TDDFT](Excited-State-Calculations)
 methods, but instead of a frequency domain solution to the TDKS
 equations, RT-TDDFT yields a full time-resolved, potentially non-linear
 solution. Real-time simulations can be used to compute not only
@@ -21,7 +21,7 @@ the following paper:
     Molecules and Chromophores", J. Chem. Theory Comput., 7, 1344 (2011)
 
 This functionality is built on the [Gaussian basis set
-DFT](Density-Functional-Theory-for-Molecules "wikilink") module, and
+DFT](Density-Functional-Theory-for-Molecules) module, and
 will work for closed-shell (spin-restricted) and open-shell (spin
 unrestricted) calculations with essentially any combination of basis set
 and exchange-correlation functional in NWChem. The current
@@ -51,9 +51,9 @@ units**. Some useful conversions are:
 
 ## Syntax
 
-The [charge](Charge "wikilink"), [geometry](Geometry "wikilink"), [basis
-set](Basis "wikilink"), and
-[DFT](Density-Functional-Theory-for-Molecules "wikilink") options are
+The [charge](Charge), [geometry](Geometry), [basis
+set](Basis), and
+[DFT](Density-Functional-Theory-for-Molecules) options are
 all specified as normal, using their respective syntax. Real-time TDDFT
 parameters are supplied in the RT\_TDDFT block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
@@ -92,7 +92,7 @@ before stopping, which must be a positive real number. In practice, you
 can just stop the simulation early, so in most cases it is simplest to
 just set this to a large value to ensure you capture all the important
 dynamics (see [Hints and
-Tricks](RT-TDDFT#Hints_and_Tricks "wikilink")). For most
+Tricks](RT-TDDFT#Hints_and_Tricks)). For most
 valence excitations, for example, 1000 au is overkill so you might want
 to automatically stop at 500 au:
 ```
@@ -188,7 +188,7 @@ end
 
 This sets the number of run-time check points where the time-dependent
 complex density matrix is saved to file, allowing the simulation to be
-[restarted](RT-TDDFT#Restarts "wikilink")) from that point. By
+[restarted](RT-TDDFT#Restarts)) from that point. By
 default this is set to 0. There is no significant computational cost to
 restart checkpointing, but of course there is some disk I/O cost (which
 may become somewhat significant for larger systems). For example, in the
@@ -343,7 +343,7 @@ end
 This sub-block is used to specify external electric fields, each of
 which must be given a unique name. Numerous fields can be specified, but
 each will applied to the system only if an appropriate [excitation
-rule](RT-TDDFT#excite----excitation-rules "wikilink") is set.
+rule](RT-TDDFT#excite----excitation-rules) is set.
 There are a few preset field types; others would have to be manually
 coded. Note the names are arbitrary, but chosen here to be
 descriptive:
@@ -397,7 +397,7 @@ This sets the rules for applying external fields to the system. It takes
 the form "excite <geom> with <field>", where <geom> is the name of a
 geometry fragment (defaults to "geometry" which is the default geometry
 name), and <field> is the name of a [field
-structure](RT-TDDFT#field----sub-block-for-specifying-external-electric-fields "wikilink").
+structure](RT-TDDFT#field----sub-block-for-specifying-external-electric-fields).
 Assuming, for example, you have defined a field name "kick" this option
 takes the form (note that quotes are optional and shown for clarity):
 
@@ -458,9 +458,9 @@ simultaneously excites all electronic modes of that polarization. The
 three resulting dipole moments are then Fourier transformed to give the
 frequency-dependent linear polarizability, and thus the absorption
 spectrum. The full input deck is
-[RT\_TDDFT\_h2o\_abs.nw](RT_TDDFT_h2o_abs.nw "wikilink") and
+[RT\_TDDFT\_h2o\_abs.nw](RT_TDDFT_h2o_abs.nw) and
 the corresponding output is
-[RT\_TDDFT\_h2o\_abs.nwo.gz](RT_TDDFT_h2o_abs.nwo.gz "wikilink").
+[RT\_TDDFT\_h2o\_abs.nwo.gz](RT_TDDFT_h2o_abs.nwo.gz).
 
 ```
 title "Water TD-PBE0 absorption spectrum"
@@ -555,7 +555,7 @@ task dft rt_tddft
 After running the simulation, we extract the x-dipole moment for the
 x-kick and similarly for the y and z-kicks (see "contrib/parsers"
 directory for this script or download here:
-[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink") ).
+[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz) ).
 
 ```
 nw_rtparse.py -xdipole -px -tkick_x h2o_abs.nwo > x.dat
@@ -603,7 +603,7 @@ Here, you can just use your favorite Fourier transform utility or
 analysis software, but for convenience there is also a simple GNU Octave
 fft1d.m utility in the "contrib/parsers" directory of the trunk or
 download here:
-[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz "wikilink")
+[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz)
 Note, options are hardcoded at the moment, so the switches above are not
 correct instead edit the file and run (also it reads file rather than
 redirect from stdin). Assuming the FFT output takes the form (w, Re, Im,
@@ -644,9 +644,9 @@ The procedure is outlined below, and the corresponding frequency extent
 of the pulse is shown on the absorption figure in orange. Note that it
 only covers one excitation, i.e., the field selectively excites one
 mode. The full input deck is
-[RT\_TDDFT\_h2o\_resonant.nw](RT_TDDFT_h2o_resonant.nw "wikilink")
+[RT\_TDDFT\_h2o\_resonant.nw](RT_TDDFT_h2o_resonant.nw)
 and the output is
-[RT\_TDDFT\_h2o\_resonant.nwo.gz](RT_TDDFT_h2o_resonant.nwo.gz "wikilink").
+[RT\_TDDFT\_h2o\_resonant.nwo.gz](RT_TDDFT_h2o_resonant.nwo.gz).
 
 <img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="244pt" height="200pt"/>  
 
@@ -749,9 +749,9 @@ here is to use fragments by have multiple geometries in the input deck,
 where each fragment is converged separately, then assembled together
 without SCF to use as a starting point. We use a small but diffuse basis
 and a range-separated functional (CAM-B3LYP). The input deck is
-[RT\_TDDFT\_tcne\_dimer.nw](RT_TDDFT_tcne_dimer.nw "wikilink")
+[RT\_TDDFT\_tcne\_dimer.nw](RT_TDDFT_tcne_dimer.nw)
 and the full output is
-[RT\_TDDFT\_tcne\_dimer.nwo.gz](RT_TDDFT_tcne_dimer.nwo.gz "wikilink").
+[RT\_TDDFT\_tcne\_dimer.nwo.gz](RT_TDDFT_tcne_dimer.nwo.gz).
 
 ```
 title "Tetracyanoethylene dimer charge transfer"

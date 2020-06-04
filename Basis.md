@@ -6,7 +6,7 @@ NWChem currently supports basis sets consisting of generally contracted
 Cartesian Gaussian functions up to a maximum angular momentum of six (h
 functions), and also sp (or L) functions. The BASIS directive is used to
 define these, and also to specify use of an [Effective Core
-Potential](ECP "wikilink") (ECP) that is associated with a
+Potential](ECP) that is associated with a
 basis set.
 
 The basis functions to be used for a given calculation can be drawn from
@@ -37,12 +37,12 @@ Examining the keywords on the first line of the BASIS directive:
     "ao basis". Another name may be specified in the BASIS directive,
     thus, multiple basis sets may be stored simultaneously in the
     database. Also, the
-    [DFT](Density_Functional_Theory_for_Molecules "wikilink")
-    and [RI-MP2](MP2 "wikilink") modules and the
-    [Dyall-modified-Dirac](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation "wikilink")
+    [DFT](Density-Functional-Theory-for-Molecules)
+    and [RI-MP2](MP2) modules and the
+    [Dyall-modified-Dirac](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation)
     relativistic method require multiple basis sets with specific names.
     The user can associate the "ao basis" with another named basis using
-    the SET directive (see [SET](Top-level#SET "wikilink")).
+    the SET directive (see [SET](Top-level#SET)).
 
   -   [SPHERICAL or CARTESIAN](#-spherical-or-cartesian)   
     The keywords spherical and cartesian offer the option of using
@@ -95,11 +95,11 @@ Order of functions.
     only necessary for basis sets which are to be used as the ao basis.
     The user is referred to the section on [Dyall's modified
     Dirac-Hamiltonian
-    approximation](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation "wikilink")
+    approximation](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation)
     for more details.
 
 Basis sets are associated with centers by using the tag of a center in a
-[geometry](Geometry "wikilink") that has either been input by
+[geometry](Geometry) that has either been input by
 the user or is available elsewhere. Each atom or center with the same
 tag will have the same basis set. All atoms must have basis functions
 assigned to them -- only dummy centers (X or Bq) may have no basis
@@ -116,7 +116,7 @@ message.
 
 A special set of tags, "\*" and tags ending with a "\*" (E.g. "H\*") can
 be used in combination with the keyword
-[library](#basis-set-library "wikilink"). These tags facilitate the
+[library](#basis-set-library). These tags facilitate the
 definition of a certain type of basis set of all atoms, or a group of
 atoms, in a geometry using only a single or very few basis set entries.
 The "\*" tag will not place basis sets on dummy atoms, Bq\* can be used
@@ -134,7 +134,7 @@ center. The variable <standard_set> is the name that identifies the
 functions in the library. The names of standard basis sets are not case
 sensitive. For a complete list of basis sets and associated ECPs in the
 NWChem library see the [available basis
-sets](AvailableBasisSets "wikilink") or the [Basis Set
+sets](AvailableBasisSets) or the [Basis Set
 Exchange](https://www.basissetexchange.org/) for naming conventions and
 their specifications.
 
@@ -201,7 +201,7 @@ tags in the geometry that start with "oxy".
 If standard basis sets are to be placed upon a dummy center, the
 variable <tag_in_lib> must also be entered on this line, to identify the
 correct atom type to use from the basis function library (see the ghost
-atom example in [SET](Top-level#SET "wikilink") and below).
+atom example in [SET](Top-level#SET) and below).
 For example: To specify the cc-pvdz basis for a calculation on the water
 monomer in the dimer basis, where the dummy oxygen and dummy hydrogen
 centers have been identified as `bqo` and `bqh` respectively, the `BASIS`
@@ -221,7 +221,7 @@ list can be used to assign basis sets to unique dummy centers.
 The library basis sets can also be marked as relativistic by adding the
 `rel` keyword to the tag line. See the section on [relativistic
 all-electron
-approximations](Relativistic-All-electron-Approximations "wikilink")
+approximations](Relativistic-All-electron-Approximations)
  for more details. The correlation consistent basis sets have been
 contracted for relativistic effects and are included in the standard
 library.
@@ -232,7 +232,7 @@ distinguished by the suffix \_pt and \_fi. It is the user's
 responsibility to ensure that the contraction matches the nuclear type
 specified in the geometry object. The specification of a finite nucleus
 basis set does NOT automatically set the nuclear type for that atom to
-be finite. See [Geometries](Geometry "wikilink") for
+be finite. See [Geometries](Geometry) for
 information.
 ## How to use basis files from https://www.basissetexchange.org (NEW in 2019)
 
@@ -262,7 +262,7 @@ The variable <shell_type> identifies the angular momentum of the shell,
 *s*, *p*, *d*, .... NWChem is configured to handle up to h shells. The
 keyword rel marks the shell as relativistic -- see the Section  on [relativistic
 all-electron
-approximations](Relativistic-All-electron-Approximations "wikilink") for more
+approximations](Relativistic-All-electron-Approximations) for more
 details. Subsequent lines define the primitive function exponents and
 contraction coefficients. General contractions are specified by
 including multiple columns of coefficients.

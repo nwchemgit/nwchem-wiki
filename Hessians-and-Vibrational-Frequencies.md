@@ -9,7 +9,7 @@ algorithm is fully in-core and does not use symmetry.
 
 There is no required input for the Hessian module. This module only
 impacts the hessian calculation. For options for calculating the
-frequencies, please see the [Vibrational](Vibration "wikilink") module.
+frequencies, please see the [Vibrational](Vibration) module.
 
 ## Hessian Module Input
 
@@ -27,9 +27,9 @@ input begins with hessian and has the form:
 
 You may modify the default threshold for the wavefunction. This keyword
 is identical to
-[THRESH](Hartree-Fock-Theory-for-Molecules#thresh----convergence-threshold "wikilink")
+[THRESH](Hartree-Fock-Theory-for-Molecules#thresh----convergence-threshold)
 in the SCF, and the
-[CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence----scf-convergence-control "wikilink")
+[CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence----scf-convergence-control)
 gradient in the DFT. The usual defaults for the convergence of the
 wavefunction for single point and gradient calculations is generally not
 tight enough for analytic hessians. Therefore, the hessian, by default,
@@ -74,7 +74,7 @@ Hessian Print Control Specifications
 The nuclear hessian which is used to compute the vibrational frequencies
 can be computed by finite difference for any ab initio wave-function
 that has analytic gradients or by analytic methods for SCF and DFT (see
-[Hessians](#Hessians "wikilink") for details). The appropriate nuclear
+[Hessians](#Hessians) for details). The appropriate nuclear
 hessian generation algorithm is chosen based on the user input when TASK
 <theory> frequencies is the task directive.
 
@@ -90,7 +90,7 @@ the molecular system based on the frequencies obtained from the
 projected hessian.
 
 The default mass of each atom is used unless an alternative mass is
-provided via the [geometry](Geometry "wikilink") input or
+provided via the [geometry](Geometry) input or
 redefined using the vibrational module input. The default mass is the
 mass of the most abundant isotope of each element. If the abundance was
 roughly equal, the mass of the isotope with the longest half life was

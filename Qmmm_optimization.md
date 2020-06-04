@@ -17,18 +17,18 @@ algorithm is comprised of the following steps:
 
 The optimization process is controlled by the following keywords:
 
-  - [**region**](Qmmm_region "wikilink") - **required**
+  - [**region**](Qmmm_region) - **required**
     keyword which specifies which regions will optimized and in which
     order.
-  - [**maxiter**](Qmmm_maxiter "wikilink") - number of
+  - [**maxiter**](Qmmm_maxiter) - number of
     optimizations steps for each region within single optimization pass
-  - [**ncycles**](Qmmm_ncycles "wikilink") - number of
+  - [**ncycles**](Qmmm_ncycles) - number of
     optimization cycles
-  - [**density**](Qmmm_density "wikilink") - electrostatic
+  - [**density**](Qmmm_density) - electrostatic
     representation of the QM region during MM optimization
-  - [**xyz**](Qmmm_xyz "wikilink") - output of xyz structure
+  - [**xyz**](Qmmm_xyz) - output of xyz structure
     files
-  - [**convergence**](Qmmm_convergence "wikilink") -
+  - [**convergence**](Qmmm_convergence) -
     convergence criteria
 
 Here is an example QM/MM block that provides practical illustration of

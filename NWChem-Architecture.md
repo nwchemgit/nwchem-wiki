@@ -10,14 +10,14 @@ the modules to share data, or to share access to files containing data.
 
 It is not necessary for the user to be intimately familiar with the
 contents of the
-[database](NWChem-Architecture#database-structure "wikilink") in order
+[database](NWChem-Architecture#database-structure) in order
 to run NWChem. However, a nodding acquaintance with the design of the
 code will help in clarifying the logic behind the input requirements,
 especially when restarting jobs or performing multiple tasks within one
 job.
 
 As described above ([Input File
-Structure](Getting-Started#input-file-structure "wikilink")), all
+Structure](Getting-Started#input-file-structure)), all
 start-up directives are processed at the beginning of the job by the
 main program, and then the input module is invoked. Each input directive
 usually results in one or more entries being made in the database. When
@@ -43,7 +43,7 @@ stored directly in the database, and contain the following information:
 4.  the N items of data of the specified type
 
 It is possible to enter data directly into the database using the [SET
-directive](SET "wikilink"). For example, to store a (64-bit precision)
+directive](SET). For example, to store a (64-bit precision)
 three-element real array with the name "reference energies" in the
 database, the directive is as follows:
 
@@ -61,8 +61,8 @@ Objects are built in the database by storing associated data as multiple
 entries, using an internally consistent naming convention. This data is
 managed exclusively by the subroutines (or methods) that are associated
 with the object. Currently, the code has two main objects: basis sets
-and geometries. [GEOMETRY](Geometry "wikilink") and
-[BASIS](Basis "wikilink") present a complete discussion of the input to
+and geometries. [GEOMETRY](Geometry) and
+[BASIS](Basis) present a complete discussion of the input to
 describe these objects.
 
 As an illustration of what comprises a geometry object, the following
@@ -97,7 +97,7 @@ generated from the user-specified input directive,
    H     0.00000000   -1.43042809   -1.10715266  
  end
 ```
-The [GEOMETRY](Geometry "wikilink") directive allows the user to specify
+The [GEOMETRY](Geometry) directive allows the user to specify
 the coordinates of the atoms (or centers), and identify the geometry
 with a unique name.
 
@@ -129,6 +129,6 @@ job.
 Sometimes, however, this persistence is undesirable, and it is necessary
 to return an NWChem module to its default behavior by restoring the
 database to its input-free state. In such a case, the
-[UNSET](UNSET "wikilink") directive can be used to delete all database
+[UNSET](UNSET) directive can be used to delete all database
 entries associated with a given module (including both inputs and
 outputs).

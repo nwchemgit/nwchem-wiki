@@ -1,19 +1,19 @@
 
-  - [Charge](Charge "wikilink")
+  - [Charge](Charge)
 
 <!-- end list -->
 
-  - [Geometry](Geometry "wikilink")
+  - [Geometry](Geometry)
 
 <!-- end list -->
 
-  - [Basis Sets](Basis "wikilink")
+  - [Basis Sets](Basis)
 
 <!-- end list -->
 
-  - [Effective Core Potentials](ECP "wikilink")
+  - [Effective Core Potentials](ECP)
 
 <!-- end list -->
 
   - [Relativistic All-electron
-    Approximations](Relativistic-All-electron-Approximations "wikilink")
+    Approximations](Relativistic-All-electron-Approximations)

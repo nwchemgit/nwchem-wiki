@@ -1,9 +1,9 @@
 # Geometry Optimization with DRIVER
 
 The DRIVER module is one of two drivers (also see documentation on
-[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper "wikilink"))
+[STEPPER](Geometry-Optimization#geometry-optimization-with-stepper))
 to perform a geometry optimization function on the molecule defined by
-input using the [GEOMETRY](Geometry "wikilink") directive.
+input using the [GEOMETRY](Geometry) directive.
 Geometry optimization is either an energy minimization or a transition
 state optimization. The algorithm programmed in DRIVER is a quasi-newton
 optimization with line searches and approximate energy Hessian updates.
@@ -287,10 +287,10 @@ and these specific print options
 
 The STEPPER module performs a search for critical points on the
 potential energy surface of the molecule defined by input using the
-[GEOMETRY](Geometry "wikilink") directive. Since STEPPER is
+[GEOMETRY](Geometry) directive. Since STEPPER is
 not the primary geometry optimization module in NWChem the compound
 directive is required; the
-[DRIVER](Geometry_Optimization "wikilink") module is the
+[DRIVER](Geometry-Optimization) module is the
 default. Input for this module is specified within the compound
 directive,
 ```
@@ -328,7 +328,7 @@ directive
 STEPPER can also be used to find the transition state by following the
 lowest eigenvector of the nuclear Hessian. This is usually invoked by
 using the saddle keyword on the [TASK
-directive](Top-level#TASK "wikilink"), but it may also be
+directive](Top-level#TASK), but it may also be
 selected by specifying the directive
 ```
  TS
@@ -427,9 +427,9 @@ Once Stepper executes it generates a binary dump file
 by the name of `name.stpr41` which will be used on all subsequent stepper
 runs and modified with the current updated hessian. The default file
 prefix is the "name" that is used (see
-[START](Start_Restart "wikilink")).
+[START](Start_Restart)).
 It also stores the information for the last valid step in case the
-algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper "wikilink").
+algorithm must take a ["backstep"](Geometry-Optimization#backstepping-in-stepper).
 This file is the working data store for all stepper-based optimizations.
 This file is never deleted by default and is the first source of an
 initial hessian.  

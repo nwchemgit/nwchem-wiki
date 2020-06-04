@@ -93,7 +93,7 @@ unique monomer in the molecular cluster given as a space delimited list
 `    [species  <list of strings name[nspecies]]`  
 `    [nmol     <list of integers number[nspecies]>]`
 
-An [example](#Example "wikilink") is shown for a 10 monomer cluster
+An [example](#Example) is shown for a 10 monomer cluster
 consisting of a 50/50 mixture of water and ammonia.
 
 ## DNTMC runtime options

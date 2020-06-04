@@ -179,7 +179,7 @@ MPI-SPAWN</td>
 </tbody>
 </table>
 
-Please see [Choosing the ARMCI Library](ARMCI "wikilink") for
+Please see [Choosing the ARMCI Library](ARMCI) for
 additional information on choosing the right network
 options.
 
@@ -937,7 +937,7 @@ USE_OPENMP=T
 ```
 
 MPICH and ARMCI-MPI work reliably on Mac. See [Choosing the ARMCI
-Library](ARMCI "wikilink") for details on ARMCI-MPI
+Library](ARMCI) for details on ARMCI-MPI
 
 # How-to: Cray platforms
 
@@ -1295,11 +1295,11 @@ Xeon Phi card
 % setenv MIC_USE_2MB_BUFFER 16K
 ```
 
-**[Very important](Very_important "wikilink")**: when running on
+**[Very important](Very_important)**: when running on
 clusters equipped with Xeon Phi and Infiniband network hardware
 (requiring `ARMCI_NETWORK=OPENIB`), the following env. variable is
 required, even [in the case when the Xeon Phi hardware is not
-utilized](in_the_case_when_the_Xeon_Phi_hardware_is_not_utilized "wikilink")
+utilized](in_the_case_when_the_Xeon_Phi_hardware_is_not_utilized)
 
 ```
 % setenv ARMCI_OPENIB_DEVICE mlx4_0

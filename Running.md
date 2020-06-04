@@ -13,7 +13,7 @@ have set an alias of nwchem to point to the appropriate executable.
 Output is to standard output, standard error and Fortran unit 6 (usually
 the same as standard output). Files are created by default in the
 current directory, though this may be [overridden in the
-input](Top-level#SCRATCH_DIR_.2F_PERMANENT_DIR "wikilink").
+input](Top-level#SCRATCH_DIR_.2F_PERMANENT_DIR).
 
 Generally, one will run a job with the following
 command:

@@ -102,7 +102,7 @@ form:
 
 The use of symmetry in the calculation is controlled by the keyword
 `autosym | noautosym` which is used as described in the
-[geometry](Geometry "wikilink") directive. `Autosym` is on by
+[geometry](Geometry) directive. `Autosym` is on by
 default. A couple words of warning here. The tolerance related to
 `autosym` can cause problems when taking the initial step off of the
 transition state. If the tolerance is too large and the initial step
@@ -120,13 +120,13 @@ in the DIRDYVTST module.
 #### Basis specification
 
 The basis name on the theory or sptheory directive is that specified on
-a [basis set directive](Release66:Basis "wikilink") and not the name of
+a [basis set directive](Release66:Basis) and not the name of
 a standard basis in the library. If not specified, the basis set for the
 sptheory defaults to the theory basis which defaults to "ao basis".
 
 #### Effective core potentials
 
-If an [effective core potential](Release66:ECP "wikilink") is specified
+If an [effective core potential](Release66:ECP) is specified
 in the usual fashion outside of the DIRDYVTST input then this will be
 used in all calculations. If an alternative ECP name (the name specified
 on the ECP directive in the same manner as done for basis sets) is
@@ -160,7 +160,7 @@ model is DFT/B3LYP/6-311g\*\*, the DIRDYVTST input might look like this
    end
 ```
 The empty XC directive restores the default [LDA exchange-correlation
-functional](Density-Functional-Theory-for-Molecules#XC-and-DECOMP----Exchange-Correlation-Potentials "wikilink").
+functional](Density-Functional-Theory-for-Molecules#XC-and-DECOMP----Exchange-Correlation-Potentials).
 Note that semi-colons and other quotation marks inside the input string
 must be preceded by a backslash to avoid special interpretation.
 
@@ -318,7 +318,7 @@ frequencies and eigenvectors will be printed along the MEP.
 #### Restart
 
 DIRDYVTST calculations should be
-[restarted](Release66:Top-level#START_and_RESTART_--_Start-up_mode "wikilink")
+[restarted](Release66:Top-level#START_and_RESTART_--_Start-up_mode)
 through the normal NWChem mechanism. The user needs to change the start
 directive to a restart directive and get rid of any information that
 will overwrite important information in the RTDB. The file.db and

@@ -22,10 +22,10 @@ A spin-restricted, closed shell RHF calculation is performed by default.
 An error results if the number of electrons is inconsistent with this
 assumption. The number of electrons is inferred from the total charge on
 the system and the sum of the effective nuclear charges of all centers
-(atoms and dummy atoms, see [GEOMETRY](Geometry "wikilink")).
+(atoms and dummy atoms, see [GEOMETRY](Geometry)).
 The total charge on the system is zero by default, unless specified at
 some value by input on the CHARGE directive [Total system
-charge](Charge "wikilink").
+charge](Charge).
 
 The options available to define the SCF wavefunction and multiplicity
 are as follows:
@@ -59,7 +59,7 @@ calculation will be a spin-restricted, high-spin, open-shell SCF
 calculation (keyword ROHF). The open-shell orbitals must be the highest
 occupied orbitals. If necessary, any starting vectors may be rearranged
 through the use of the SWAP keyword on the
-[VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink") directive
+[VECTORS](#vectors----inputoutput-of-mo-vectors) directive
 to accomplish this.
 
 A spin-unrestricted solution can also be performed by specifying the
@@ -78,13 +78,13 @@ The user should be aware that, by default, molecular orbitals are
 symmetry adapted in NWChem. This may not be desirable for fully
 unrestricted wavefunctions. In such cases, the user has the option of
 defeating the defaults by specifying the keywords
-[ADAPT](#adapt---symmetry-adaptation-of-mos "wikilink") OFF and
-[SYM](#sym----use-of-symmetry "wikilink") OFF .
+[ADAPT](#adapt---symmetry-adaptation-of-mos) OFF and
+[SYM](#sym----use-of-symmetry) OFF .
 
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
 previous calculation (see [NWChem
-Architecture](NWChem-Architecture "wikilink") for restart behavior).
+Architecture](NWChem-Architecture) for restart behavior).
 
 ## SYM -- use of symmetry
 
@@ -97,7 +97,7 @@ matrix construction (via the petite-list or skeleton algorithm) in the
 SCF, if symmetry was used in the specification of the geometry. Symmetry
 adaptation of the molecular orbitals is not affected by this option. The
 default is to use symmetry if it is specified in the [geometry
-directive](Geometry "wikilink").
+directive](Geometry).
 
 For example, to disable use of symmetry in Fock matrix construction:
 ```
@@ -118,7 +118,7 @@ construction is that the density is totally symmetric. If the orbitals
 are symmetry contaminated, this assumption may not be valid -- which
 could result in incorrect energies and poor convergence of the
 calculation. It is thus advisable when specifying ADAPT OFF to also
-specify SYM OFF ([Use of Symmetry](#sym----use-of-symmetry "wikilink")).
+specify SYM OFF ([Use of Symmetry](#sym----use-of-symmetry)).
 
 ## TOL2E -- integral screening threshold
 ```
@@ -134,10 +134,10 @@ for tol2e.
 It is generally not necessary to set this parameter directly. Specify
 instead the required precision in the wavefunction, using the THRESH
 directive ([Convergence
-threshold](#thresh----convergence-threshold "wikilink")). The default
+threshold](#thresh----convergence-threshold)). The default
 threshold is the minimum of 10<sup>-7</sup> and 0.01 times the requested
 convergence threshold for the SCF calculation ([Convergence
-threshold](#thresh----convergence-threshold "wikilink")).
+threshold](#thresh----convergence-threshold)).
 
 The input to specify the threshold explicitly within the SCF directive
 is, for example:
@@ -162,7 +162,7 @@ purposes.
 ```
 The VECTORS directive allows the user to specify the source and
 destination of the molecular orbital vectors. In a startup calculation
-(see [START](Top-level#START_and_RESTART_--_Start-up_mode "wikilink")),
+(see [START](Top-level#START_and_RESTART_--_Start-up_mode)),
 the default source for guess vectors is a diagonalized Fock matrix
 constructed from a superposition of the atomic density matrices for the
 particular problem. This is usually a very good guess. For a restarted
@@ -174,15 +174,15 @@ input molecular orbital vectors as any of the following:
   - ATOMIC -- eigenvectors of a Fock-like matrix formed from a
     superposition of the atomic densities (the default guess). See
     [Atomic
-    guess](#atomic-guess-orbitals-with-charged-atoms "wikilink") and
-    [Accuracy of initial guess](#accuracy-of-initial-guess "wikilink").
+    guess](#atomic-guess-orbitals-with-charged-atoms) and
+    [Accuracy of initial guess](#accuracy-of-initial-guess).
   - HCORE -- eigenvectors of the bare-nucleus Hamiltonian or the
     one-electron Hamiltonian.
   - filename -- the name of a file containing the MO vectors from a
     previous calculation. Note that unless the path is fully qualified,
     or begins with a dot ("."), then it is assumed to reside in the
     directory for permanent files (see [File
-    directories](Top-level#Scratch_Dir "wikilink")).
+    directories](Top-level#Scratch_Dir)).
   - PROJECT basisname filename -- projects the existing MO vectors in
     the file filename from the smaller basis with name basisname into
     the current basis. The definition of the basis basisname must be
@@ -193,11 +193,11 @@ input molecular orbital vectors as any of the following:
   - FRAGMENT file1 ... -- assembles starting MO vectors from previously
     performed calculations on fragments of the system and is described
     in more detail in [Superposition of fragment molecular
-    orbitals](#superposition_of-fragment-molecular-orbitals "wikilink").
+    orbitals](#superposition_of-fragment-molecular-orbitals).
     Even though there are some significant restrictions in the use of
     the initial implementation of this method (see [Superposition of
     fragment molecular
-    orbitals](#superposition-of-fragment-molecular-orbitals "wikilink")),
+    orbitals](#superposition-of-fragment-molecular-orbitals)),
     this is the most powerful initial guess option within the code. It
     is particularly indispensable for open shell metallic systems.
   - ROTATE input\_geometry input\_movecs -- rotates MO vectors generated
@@ -218,7 +218,7 @@ follows:
     the output vectors (overwriting the input vectors); else,
   - a default file name is generated in the directory for permanent
     files ([File
-    directories](Permanent_Dir "wikilink"))
+    directories](Permanent_Dir))
     by prepending ".movecs" with the file prefix, i.e.,
     "<file_prefix>.movecs".
 
@@ -424,7 +424,7 @@ First, the geometry of the dimer and the two monomers are specified and
 given names. Then, after the basis specification, calculations are
 performed on the fragments by setting the geometry to the appropriate
 fragment
-([SET](SET "wikilink"))
+([SET](SET))
 and redirecting the output molecular orbitals to an appropriately named
 file. Note also that use of the atomic initial guess is forced, since
 the default initial guess is to use any existing MOs which would not be
@@ -657,11 +657,11 @@ charged, this default guess may be improved upon by modifying the atomic
 densities. This is done by setting parameters that add fractional
 charges to the occupation of the valence atomic orbitals. Since the
 atomic SCF program does not have its own input block, the SET directive
-([SET](SET "wikilink")) must be used to set these
+([SET](SET)) must be used to set these
 parameters.
 
 The input specifies a list of tags (i.e., names of atoms in a geometry,
-see [GEOMETRY](Geometry "wikilink")) and the charges to be
+see [GEOMETRY](Geometry)) and the charges to be
 added to those centers. Two parameters must be set as follows:
 ```
  set atomscf:tags_z <string list_of_tags>  
@@ -687,11 +687,11 @@ report an error, and it will not report further errors in the input for
 modifying the charge even when they are detected.
 
 Finally, recall that the database is persistent ([Data
-persistence](Nwchem-Architecture#persistence-of-data-and-restart "wikilink"))
+persistence](NWChem-Architecture#persistence-of-data-and-restart))
 and that the modified settings will be used in subsequent atomic guess
 calculations unless the data is deleted from the database with the UNSET
 directive
-([UNSET](UNSET "wikilink")).
+([UNSET](UNSET)).
 
 ## Accuracy of initial guess
 
@@ -722,7 +722,7 @@ available in the wavefunction, and the energy should be converged to
 approximately the square of this number. It should be noted, however,
 that the precision in the energy will not exceed that of the integral
 screening tolerance. This tolerance ([Integral screening
-threshold](#tol2e----integral-screening-threshold "wikilink")) is
+threshold](#tol2e----integral-screening-threshold)) is
 automatically set from the convergence threshold, so that sufficient
 precision is usually available by default.
 
@@ -749,7 +749,7 @@ for both ROHF/RHF and UHF calculations. For most molecules, this number
 of iterations is more than sufficient for the quadratically convergent
 SCF algorithm to obtain a solution converged to the default threshold
 (see [Convergence
-threshold](#thresh----convergence-threshold "wikilink") above). If the
+threshold](#thresh----convergence-threshold) above). If the
 SCF program detects that the quadratically convergent algorithm is not
 efficient, then it will resort to a linearly convergent algorithm and
 increase the maximum number of iterations by 10.
@@ -824,7 +824,7 @@ The default behavior of the SCF module is
   - If there is not enough memory to store all the integrals at once,
     then 95% of the available disk space in the scratch directory (see
     [File
-    directories](Scratch_Dir "wikilink"))
+    directories](Scratch_Dir))
     is assumed to be available for this purpose, and as many integrals
     as possible are cached on disk (with no memory being used for
     caching). Some attempt is made to store the most expensive integrals
@@ -865,14 +865,14 @@ satisfied.)
 
 By default, the integral files are placed into the scratch directory
 (see [File
-directories](Scratch_Dir "wikilink")).
+directories](Scratch_Dir)).
 Specifying the keyword FILENAME overrides this default. The
 user-specified name entered in the string filename has the process
 number appended to it, so that each process has a distinct file but with
 a common base-name and directory. Therefore, it is not possible to use
 this keyword to specify different disks for different processes. The
 SCRATCH\_DIR directive (see [File
-directories](Scratch_Dir "wikilink"))
+directories](Scratch_Dir))
 can be used for this purpose.
 
 For example, to force full recomputation of all integrals:
@@ -979,7 +979,7 @@ that is unconditionally convergent. Basically, a search direction is
 generated by multiplying the orbital gradient (the derivative of the
 energy with respect to the orbital rotations) by an approximation to the
 inverse of the level-shifted orbital Hessian. In the initial iterations
-(see [Controlling the Newton-Raphson](#NR_--_controlling_the_Newton-Raphson "wikilink")),
+(see [Controlling the Newton-Raphson](#NR_--_controlling_the_Newton-Raphson)),
 an inexpensive one-electron approximation to the inverse orbital Hessian is
 used. Closer to convergence, the full orbital Hessian is used, which
 should provide quadratic convergence. For both the full or one-electron
@@ -1016,16 +1016,16 @@ actions are
 
   - Modify the atomic guess by assigning charges to the atoms known to
     carry substantial charges ([Atomic
-    guess](#atomic-guess-orbitals-with-charged-atoms "wikilink"))
+    guess](#atomic-guess-orbitals-with-charged-atoms))
   - Examining an analysis of the initial orbitals
-    ([Printing](#printing-information-from-the-SCF_Module "wikilink"))
+    ([Printing](#printing-information-from-the-SCF_Module))
     and then swapping them to attain the desired occupation
-    ([VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink")).
+    ([VECTORS](#vectors----inputoutput-of-mo-vectors)).
   - Converging the calculation in a minimal basis set, which is usually
     easier, and then projecting into a larger basis set
-    ([VECTORS](#vectors----inputoutput-of-mo-vectors "wikilink")).
+    ([VECTORS](#vectors----inputoutput-of-mo-vectors)).
   - Using the fragment orbital initial guess ([Fragment molecular
-    orbitals](#superposition-of-fragment-molecular-orbitals "wikilink")).
+    orbitals](#superposition-of-fragment-molecular-orbitals)).
 
 Small or negative Hessian eigenvalues can occur even though the
 calculation seem to be close to convergence (as measured by the gradient
@@ -1040,9 +1040,9 @@ performed.
 Two main options are available when a problem will not converge:
 Newton-Raphson can be disabled temporarily or permanently (see
 [Controlling the
-Newton-Raphson](#NR_--_controlling_the_Newton-Raphson "wikilink")), and
+Newton-Raphson](#NR_--_controlling_the_Newton-Raphson)), and
 level-shifting can be applied to the matrix (see
-[Level-shifting](#LEVEL_--_level-shifting_the_orbital_Hessian "wikilink")).
+[Level-shifting](#LEVEL_--_level-shifting_the_orbital_Hessian)).
 In some cases, both options may be necessary to achieve final
 convergence.
 
@@ -1101,7 +1101,7 @@ This directive contains only two keywords: one for the PCG method and
 the other for the exact Hessian (Newton Raphson, or NR). Use of PCG or
 NR is determined by the input specified for nr\_switch on the NR
 directive, [Controlling the
-Newton-Raphson](#nr----controlling-the-newton-raphson "wikilink") above.
+Newton-Raphson](#nr----controlling-the-newton-raphson) above.
 
 Specifying the keyword pcg on the LEVEL directive allows the user to
 define the level shifting for the approximate (i.e., PCG) method.
@@ -1165,7 +1165,7 @@ The SCF module includes an experimental implementation of orbital
 localization, including Foster-Boys and Pipek-Mezey which only works for
 closed-shell (RHF) wavefunctions. There is currently no input in the SCF
 block to control this so the SET directive
-([SET](SET "wikilink")) must be used.
+([SET](SET)) must be used.
 
 The directive
 
@@ -1191,7 +1191,7 @@ wavefunctions using molecular orbitals.
 
 All output from the SCF module is controlled using the PRINT directive
 described in [Print
-control](Print_Noprint "wikilink").
+control](Print_Noprint).
 The following list describes the items from SCF that are currently under
 direct print control, along with the print level for each
 one.

@@ -1,4 +1,4 @@
-  - [Sample input files](Sample "wikilink")
+  - [Sample input files](Sample)
 
 
-  - [Examples of geometries using symmetry](Geometry-examples "wikilink")
+  - [Examples of geometries using symmetry](Geometry-examples)

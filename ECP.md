@@ -101,7 +101,7 @@ basis set input have the same function and syntax.
 As for regular basis sets, ECPs may be obtained from the standard
 library. For a complete list of basis sets and associated ECPs in the
 NWChem library see the [available basis
-sets](AvailableBasisSets "wikilink") or the [EMSL Basis Set
+sets](AvailableBasisSets) or the [EMSL Basis Set
 Exchange](https://bse.pnl.gov/bse/portal) for naming conventions and
 their specifications.
 

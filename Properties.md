@@ -81,7 +81,7 @@ the highest abundance and has spin, will be chosen for each atom under
 consideration.
 
 **Calculating EPR and paramagnetic NMR parameters:** The following
-[tutorial](EPR-pNMR.pdf "wikilink") illustrates how to combine the
+[tutorial](EPR-pNMR.pdf) illustrates how to combine the
 hyperfine, gshift and shielding to calculate the EPR and paramagnetic
 NMR parameters of an open-shell system. All calculations are compatible 
 with the ZORA model potential approach.
@@ -110,7 +110,7 @@ dipole, quadrupole, and octupole calculations.
 com is the center of mass, coc is the center of charge, origin is (0.0,
 0.0, 0.0) and arb is any arbitrary point which must be accompanied by
 the coordinated to be used. Currently the x, y, and z coordinates must
-be given in the same units as UNITS in [GEOMETRY](Geometry "wikilink").
+be given in the same units as UNITS in [GEOMETRY](Geometry).
 
 ### Response Calculations
 
@@ -219,7 +219,7 @@ end
 
 Raman spectrum in stick format and smoothed using Lorentzians or
 Gaussians stored in a filename with format \[fname\].normal.  
-The number of points is 1000 by default. This value can be changed by adding the following [SET](SET "wikilink") directive to the input file
+The number of points is 1000 by default. This value can be changed by adding the following [SET](SET) directive to the input file
 ```
 set raman:numpts <integer>
 ```
@@ -389,7 +389,7 @@ modified. Using the `JANPA` value coefficients are normalized following
 convention, while the `NWCHEM` will produce coefficients normalized
 according to NWChem's convention. Using `MOLDEN_NORM` equal `NONE` will
 leave the input coefficients unmodified.  
-It is strongly recommended to use **spherical** [basis set](Basis "wikilink") when using the NWChem Molden output for JANPA analysis
+It is strongly recommended to use **spherical** [basis set](Basis) when using the NWChem Molden output for JANPA analysis
 
 Example input file for a scf calculation. The resulting Molden file will
 be named `h2o.molden`

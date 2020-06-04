@@ -7,7 +7,7 @@ jobs that use a particular database. It is an optional directive, and if
 omitted, the character string containing the input title will be empty.
 Multiple TITLE directives may appear in the input file (e.g., the [water
 example
-file](Getting-Started#water-molecule-sample-input-file "wikilink")) in
+file](Getting-Started#water-molecule-sample-input-file)) in
 which case a task will use the one most recently specified. The format
 for the directive is as follows:
 

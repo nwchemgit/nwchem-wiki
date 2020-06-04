@@ -51,7 +51,7 @@ dynamical) into a reduced dimensionality Hamiltonian based on a
 defined active space. The procedure currently only reduces the virtual
 space and all occupied orbitals are considered active. Only the
 ground-state implementation is available in the current [NWChem
-release](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release "wikilink").  
+release](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release).  
 
 To print the DUCC Hamiltonian, you must set up a CCSD calculation with the following parameters:  
 
@@ -75,7 +75,7 @@ _Notes:_
         Separately, (IJ|LK) = (JI|KL) = (KL|JI) = (LK|IJ)  
         But (IJ|KL) /= (IJ|LK)    
 ```  
-*  When utilizing the [YAML interpreter](yaml-interpreter "wikilink"), the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
+*  When utilizing the [YAML interpreter](yaml-interpreter), the full two-electron integral will be printed in the YAML file, despite it being labeled as 'sparse' in the YAML file.   
 * Frozen core calculations should not be performed. There is nothing preventing such calculation from being executed, but the integrals will be incorrect.   
 * Since the all-orbital coupled-cluster calculation must be performed, then there is a chance that a leading excitation outside of the active-space will be printed and therefore included in the initial wave function description in the YAML file. The user ought to be aware of this risk and make changes to the YAML file to exclude these excitations, which would include renormalizing the remaining amplitudes of the initial guess.  
 

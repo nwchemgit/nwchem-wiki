@@ -1,21 +1,21 @@
-  - [Introduction](Capabilities "wikilink")
+  - [Introduction](Capabilities)
 
 <!-- end list -->
 
-  - [Compiling NWChem](Compiling-NWChem "wikilink")
+  - [Compiling NWChem](Compiling-NWChem)
 
 <!-- end list -->
 
-  - [Getting Started](Getting-Started "wikilink")
+  - [Getting Started](Getting-Started)
 
 <!-- end list -->
 
-  - [Top-level Directives](Top-level "wikilink")
+  - [Top-level Directives](Top-level)
 
 <!-- end list -->
 
-  - [NWChem Architecture](NWChem-Architecture "wikilink")
+  - [NWChem Architecture](NWChem-Architecture)
 
 <!-- end list -->
 
-  - [Running NWChem](Running "wikilink")
+  - [Running NWChem](Running)

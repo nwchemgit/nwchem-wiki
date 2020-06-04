@@ -91,7 +91,7 @@ are specified, then so must the other.
 ## Real, model and intermediate geometries
 
 The geometry and total charge of the full or real system should be
-specified as normal using the [geometry](Geometry "wikilink") directive.
+specified as normal using the [geometry](Geometry) directive.
 If <img alt="$N_{model}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e739a8a9732a54838b9b1d5173730d5a.svg?invert_in_darkmode&sanitize=true" align=middle width="48.48327pt" height="22.38192pt"/> of the atoms are to be included in the model system,
 then these should be specified first in the geometry. Similarly, in a
 three-layer calculation, if there are <img alt="$N_{inter}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a0974a9c9e88110489b9327f7d294bd3.svg?invert_in_darkmode&sanitize=true" align=middle width="43.48179pt" height="22.38192pt"/> atoms to be included
@@ -129,7 +129,7 @@ INTER directives describe the broken bonds including scale factors for
 placement of the link atom and, optionally, the type of link atom. The
 type of link atom defaults to hydrogen, but any type may be specified
 (actually here you are specifying a geometry tag which is used to
-associate a [geometrical center](Geometry "wikilink") with an atom type
+associate a [geometrical center](Geometry) with an atom type
 and basis sets, etc. For each broken bond specify the numbers of the two
 atoms (i and j), the scale factor (g) and optionally the tag of the link
 atom. Link atoms are placed along the vector connecting the the first to
@@ -177,7 +177,7 @@ Since the default link atom is hydrogen there is actually no need to
 specify the \`\`H''.
 
 See also the
-[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example "wikilink")
+[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example)
 for a more complex example.
 
 ### Numbering of the link atoms
@@ -203,17 +203,17 @@ high-level theory defaults to the standard "ao basis". That for the
 medium level defaults to the high-level basis, and the low-level basis
 defaults to the medium-level basis. Other wavefunction parameters are
 obtained from the standard wavefunction input blocks. See [Effective
-core potential](#effective-core-potential "wikilink") for an example.
+core potential](#effective-core-potential) for an example.
 
 ### Effective core potentials
 
-If an [effective core potential](ECP "wikilink") is specified in the
+If an [effective core potential](ECP) is specified in the
 usual fashion outside of the ONIOM input then this will be used in all
 calculations. If an alternative ECP name (the name specified on the ECP
 directive in the same manner as done for basis sets) is specified on one
 of the theory directives, then this ECP will be used in preference for
 that level of theory. See the
-[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example "wikilink")
+[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example)
 for sample input.
 
 ### General input strings
@@ -248,7 +248,7 @@ marks inside the input string must be preceded by a backslash to avoid
 special interpretation.
 
 See [|DFT with and without charge
-fitting](#dft-with-and-without-charge-fitting "wikilink") for another
+fitting](#dft-with-and-without-charge-fitting) for another
 example.
 
 ## Use of symmetry
@@ -280,7 +280,7 @@ efficient during geometry optimizations and frequency calculations, and
 is also useful for the initial calculation. In the absence of existing
 MO vectors files, the default atomic guess is used (see [|Input/output
 of MO
-vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors "wikilink")).
+vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors)).
 
 If special measures must be taken to converge the initial SCF, DFT or
 MCSCF calculation for one or more of the systems, then initial vectors
@@ -300,7 +300,7 @@ a <img alt="$d^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
-guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals "wikilink")
+guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals)
 as a starting guess for the real system. The resulting converged
 molecular orbitals can be saved either with the default name (as
 described above in this section), in which case no additional input is

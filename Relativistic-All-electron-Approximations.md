@@ -104,7 +104,7 @@ that basis. This again is what is commonly implemented in quantum
 chemistry codes that include the Douglas-Kroll method. Additional
 flexibility is available to the user by explicitly specifying a
 Douglas-Kroll fitting basis set. This basis set must be named "D-K
-basis" (see [Basis Sets](Basis "wikilink")).
+basis" (see [Basis Sets](Basis)).
 
 ## Zeroth Order regular approximation (ZORA)
 
