@@ -1,6 +1,5 @@
-A number of electronic structure properties can be calculated with QM/MM
-using capabilities provided by [property](Properties),
-[esp](ESP), and [dplot modules](DPLOT).
+
+  - Example QM/MM ESP Calculation:
 
 The example below illustrates dipole property QM/MM DFT/B3LYP
 calculation for quantum water molecule embedded into 20 angstrom box of
@@ -58,4 +57,3 @@ is specified.
 `  end`
 
 `  task qmmm dft property`
-
