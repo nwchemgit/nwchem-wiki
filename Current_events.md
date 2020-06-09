@@ -15,12 +15,7 @@ link.](https://arrows.emsl.pnnl.gov/api) For more information contact
 
 [](emslarrows.png) Besides using the
 Web API you can also use EMSL Arrows by just sending a simple email.
-\[[mailto:arrows@emsl.pnnl.gov?Subject=EMSL%20Arrows%20Calculation%20for%20Wile(y)\&body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.
-
-Hydrolyzing%20Wile%20E%20Coyote's%20favorite%20molecule
-
-Arrows](mailto:arrows@emsl.pnnl.gov?Subject=EMSL%20Arrows%20Calculation%20for%20Wile\(y\)&body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AHydrolyzing%20Wile%20E%20Coyote's%20favorite%20molecule%0A%0AArrows)::%20reaction:%20cid=8376%20+%20hydroxide%20--\>%20O=N(=O)c1cc(O)c(c(c1)N(=O)=O)C%20+%20nitrite%20:reaction%20::Arrows
-Try it out by clicking here to send an email to arrows@emsl.pnnl.gov.\]
+<a href="mailto:arrows@emsl.pnnl.gov?Subject=EMSL%20Arrows%20Calculation%20for%20Wile(y)&amp;body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AHydrolyzing%20Wile%20E%20Coyote's%20favorite%20molecule%0A%0AArrows::%20reaction:%20cid=8376%20+%20hydroxide%20--%3E%20O=N(=O)c1cc(O)c(c(c1)N(=O)=O)C%20+%20nitrite%20:reaction%20::Arrows" class="external text" rel="nofollow">Try it out by clicking here to send an email to arrows@emsl.pnnl.gov.</a>
 
 EMSL arrows is a scientific service that uses NWChem and chemical
 computational databases to make materials and chemical modeling
@@ -49,9 +44,10 @@ at [Arrows](EMSL_Arrows#%22EMSL). We
 would like thank the DOD SERDP program and the DOE OS OBER EMSL project
 for their support.
 
-
-[Tutorial on YouTube](https://youtu.be/UFZg-_nQZPM) [(mobile
-devices)](https://youtu.be/6cIwx63qiQM)
+<p><iframe width="560" height="315" src="//www.youtube.com/embed/6cIwx63qiQM" frameborder="0" allowfullscreen></iframe>
+</p><p><a href="https://youtu.be/UFZg-_nQZPM" class="external text" rel="nofollow">Tutorial on YouTube</a>
+<a href="https://youtu.be/6cIwx63qiQM" class="external text" rel="nofollow">(mobile devices)</a>
+</p>
 
 ### NWChem 6.6 has been released
 
@@ -308,9 +304,7 @@ checkins.
 
 ### NWChem 6.3 release now available
 
-On May 17, 2013 NWChem version 6.3 was released. An overview of the
-changes, added functionality, and bug fixes in this latest version can
-be found [ here](NWChem_6.2).
+On May 17, 2013 NWChem version 6.3 was released. 
 
 ### NWChem highlighted in DOE Pulse
 
