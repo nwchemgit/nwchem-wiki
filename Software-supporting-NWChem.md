@@ -102,10 +102,11 @@ NWChem can generate [AIM](Properties#Aimfile) wavefunction
 files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
   - **XAIM** <http://www.quimica.urv.es/XAIM>
-  - **NCIPLOT** <http://github.com/aoterodelaroza/nciplot>
+  - **NCIPLOT** <https://github.com/aoterodelaroza/nciplot>
   - **Multiwfn** <http://sobereva.com/multiwfn/>
-  - **Postg** <http://github.com/aoterodelaroza/postg>
+  - **Postg** <https://github.com/aoterodelaroza/postg>
   - **GPUAM** <http://www.fqt.izt.uam.mx/html/Profes/JGO/GPUAM/GPUAM.html>
+  - ** CHARGEMOL ** <https://sourceforge.net/projects/ddec/>
 <!-- end list -->
 
 1.  No longer been actively developed at PNNL. New development effort at
