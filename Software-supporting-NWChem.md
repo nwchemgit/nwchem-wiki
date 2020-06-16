@@ -106,7 +106,7 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
   - **Multiwfn** <http://sobereva.com/multiwfn/>
   - **Postg** <https://github.com/aoterodelaroza/postg>
   - **GPUAM** <http://www.fqt.izt.uam.mx/html/Profes/JGO/GPUAM/GPUAM.html>
-  - ** CHARGEMOL ** <https://sourceforge.net/projects/ddec/>
+  - **CHARGEMOL** <https://sourceforge.net/projects/ddec/>
 <!-- end list -->
 
 1.  No longer been actively developed at PNNL. New development effort at
