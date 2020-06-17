@@ -1102,8 +1102,8 @@ make nwchem_config
 make FC=ftn
 ```
 The following env. variables needs to added to the batch queue
-submission script
-```  
+submission script   
+``` 
 MPICH_GNI_MAX_VSHORT_MSG_SIZE=8192
 MPICH_GNI_MAX_EAGER_MSG_SIZE=131027   
 MPICH_GNI_NUM_BUFS=300   
