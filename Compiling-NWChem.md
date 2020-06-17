@@ -1295,11 +1295,11 @@ Xeon Phi card
 % setenv MIC_USE_2MB_BUFFER 16K
 ```
 
-**[Very important](Very_important)**: when running on
+**Very important**: when running on
 clusters equipped with Xeon Phi and Infiniband network hardware
 (requiring `ARMCI_NETWORK=OPENIB`), the following env. variable is
-required, even [in the case when the Xeon Phi hardware is not
-utilized](in_the_case_when_the_Xeon_Phi_hardware_is_not_utilized)
+required, even in the case when the Xeon Phi hardware is not
+utilized.
 
 ```
 % setenv ARMCI_OPENIB_DEVICE mlx4_0
