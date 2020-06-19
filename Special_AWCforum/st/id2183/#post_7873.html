@@ -1,0 +1,2328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2183/#post_7873 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:24:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="compiling on centos~~ can't find Python.h Viewed 2868 times, With a total of 10 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>compiling on centos~~ can't find Python.h - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id2183 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >compiling on centos~~ can't find Python.h</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="2183">
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 2868 times, With a total of 10 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_7671"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7671" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7671.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7671.html">12:28:29 PM PDT - Fri, Nov 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi all,<br />
+I am having issues compiling nwchem-6.6 on HPC. I followed the Documentation regarding setting environment variables for Intel Xeon Phi processors.<br />
+<br />
+These are the relevant environment variables I have declared in my ~/.bashrc profile:<br />
+<br />
+export PATH="$JAVA_HOME/bin:usr/bin/cc:/usr/local/intel-2015.2/impi/5.0.3.048/bin64/mpif90:$PATH"<br />
+<br />
+export NWCHEM_TOP=/work/zacharyw/nwchem-6.6<br />
+export NWCHEM_TARGET="LINUX64" ##changed from just LINUX        <br />
+export NWCHEM_MODULES="all"<br />
+export ARMCI_NETWORK="OPENIB"<br />
+<br />
+export USE_64TO32=y<br />
+export BLAS_SIZE=4<br />
+export BLASOPT="-mkl -openmp   -lpthread -lm"<br />
+export SCALAPACK="-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"<br />
+export OMP_NUM_THREADS=4<br />
+export MIC_USE_2MB_BUFFER=16k<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+export LD_LIBRARY_PATH=/usr/local/intel-2015.2/impi/5.0.3.048/bin64/mpif90:$LD_LIBRARY_PATH<br />
+export USE_INTERNALBLAS=y<br />
+export USE_MPI=y<br />
+export LIBMPI="-lmpich -lopa -lmpl -lpthread -lmpichf90 -lfmpich -lmpich"<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export USE_OPENMP=1<br />
+export USE_OFFLOAD=1<br />
+export USE_PYTHONCONFIG=y<br />
+export PYTHONVERSION=2.6<br />
+export PYTHONHOME=/usr<br />
+<br />
+This is the corresponding error message I get after I attempt to compile:<br />
+<br />
+Got lock on /work/zacharyw/nwchem-6.6/lib/LINUX64/libpfft.lock<br />
+xiar r /work/zacharyw/nwchem-6.6/lib/LINUX64/libpfft.a nwfft3d.o<br />
+xiar: executing 'ar'<br />
+echo /work/zacharyw/nwchem-6.6/lib/LINUX64/libpfft.a<br />
+/work/zacharyw/nwchem-6.6/lib/LINUX64/libpfft.a<br />
+make[3]: Leaving directory `/work/zacharyw/nwchem-6.6/src/fft/pfftwrap'<br />
+make[2]: Leaving directory `/work/zacharyw/nwchem-6.6/src/fft/pfftwrap'<br />
+make[2]: Entering directory `/work/zacharyw/nwchem-6.6/src/fft'<br />
+make[2]: Leaving directory `/work/zacharyw/nwchem-6.6/src/fft'<br />
+make[1]: Leaving directory `/work/zacharyw/nwchem-6.6/src/fft'<br />
+Making libraries in python<br />
+make[1]: Entering directory `/work/zacharyw/nwchem-6.6/src/python'<br />
+icc -c -I. -I/usr/include/python2.6 -I/usr/include -I/usr/Include -I/usr -I/work/zacharyw/nwchem-6.6/src/include -I/work/zacharyw/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DUSE_OFFLOAD -DINTEL_64ALIGN -DIFCV8 -DIFCLINUX -DPARALLEL_DIAG  -qopenmp -qopt-report-phase=offload -xHOST -ftz -qopt-report-phase=vec  -qopt-report-file=stderr -qopenmp -qopt-report-phase:openmp -g  -o task_python.o task_python.c<br />
+icc -c -I. -I/usr/include/python2.6 -I/usr/include -I/usr/Include -I/usr -I/work/zacharyw/nwchem-6.6/src/include -I/work/zacharyw/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DUSE_OFFLOAD -DINTEL_64ALIGN -DIFCV8 -DIFCLINUX -DPARALLEL_DIAG  -qopenmp -qopt-report-phase=offload -xHOST -ftz -qopt-report-phase=vec  -qopt-report-file=stderr -qopenmp -qopt-report-phase:openmp -g  -o nwchem_wrap.o nwchem_wrap.c<br />
+icc -c -I. -I/usr/include/python2.6 -I/usr/include -I/usr/Include -I/usr -I/work/zacharyw/nwchem-6.6/src/include -I/work/zacharyw/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DUSE_OFFLOAD -DINTEL_64ALIGN -DIFCV8 -DIFCLINUX -DPARALLEL_DIAG  -qopenmp -qopt-report-phase=offload -xHOST -ftz -qopt-report-phase=vec  -qopt-report-file=stderr -qopenmp -qopt-report-phase:openmp -g  -o nw_inp_from_string.o nw_inp_from_string.c<br />
+task_python.c(4): catastrophic error: cannot open source file "Python.h"<br />
+
+<pre> #include &lt;Python.h&gt;<br />
+                    ^<br />
+</pre>
+<br />
+compilation aborted for task_python.c (code 4)<br />
+make[1]: *** [/work/zacharyw/nwchem-6.6/lib/LINUX64/libnwpython.a(task_python.o)] Error 4<br />
+make[1]: *** Waiting for unfinished jobs....<br />
+nwchem_wrap.c(4): catastrophic error: cannot open source file "Python.h"<br />
+
+<pre> #include &lt;Python.h&gt;<br />
+                    ^<br />
+</pre>
+<br />
+compilation aborted for nwchem_wrap.c (code 4)<br />
+make[1]: *** [/work/zacharyw/nwchem-6.6/lib/LINUX64/libnwpython.a(nwchem_wrap.o)] Error 4<br />
+make[1]: Leaving directory `/work/zacharyw/nwchem-6.6/src/python'<br />
+make: *** [libraries] Error 1<br />
+<br />
+I try using the 'find' UNIX command to find this Python.h file. Unfortunately, I can't seem to find this file, so my attempts at solving this problem are proving unsuccessful. The results of 'which python' is /usr/bin/python. Python 2.6 is being used. <br />
+<br />
+Additionally, I attempt to compile (while in /src folder) the make file using the syntax:<br />
+<br />
+make FC=ifort CC=icc -j 8<br />
+<br />
+<br />
+<br />
+I have found similar issues upon google searching but nothing that appears directly relevant to this problem I am facing. I am new to this, so please bear with me. If there are any questions please let me know and I would be happy to answer. Anything that could illuminate this issue would be much appreciated. Thanks!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7672"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7672" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Sean/599262.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Sean</a>  <font class="group_text">bureaucrat</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Sean/599262.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Sean/7672.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Regular</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Sean/599262.html">1</a><br />
+                                Posts <a href="../../search/memposts/Sean/599262.html">190</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7672.html">1:23:26 PM PDT - Fri, Nov 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Is the package python-devel installed on your system?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7673"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7673" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7673.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7673.html">4:41:15 PM PDT - Fri, Nov 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Actually, I found Python.h under: "/usr/local/python/include/python2.7"<br />
+<br />
+How does this change my .bashrc profile? Thanks for your prompt response!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7676"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7676" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Sean/599262.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Sean</a>  <font class="group_text">bureaucrat</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Sean/599262.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Sean/7676.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Regular</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Sean/599262.html">1</a><br />
+                                Posts <a href="../../search/memposts/Sean/599262.html">190</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7676.html">7:42:47 AM PST - Tue, Nov 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">If you have the header file for python 2.7, I am assuming that version 2.7 is installed on your system as well, probably somewhere in /usr/local based on the location of the header file. Try changing your pythonhome variable to point to that version rather than the one in /usr/bin
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7678"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7678" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/7678.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7678.html">10:45:44 AM PST - Tue, Nov 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2"><div class='quote_title'>Quote:Zww9 <a target='blank' href="../../sp/id7673.html" title="Special:AWCforum/sp/id7673">Nov 4th 3:41 pm</a><div class='quote'>Actually, I found Python.h under: "/usr/local/python/include/python2.7"<br />
+<br />
+How does this change my .bashrc profile? Thanks for your prompt response!</div id="quote"></div id="quote"><br />
+You value of PYTHONHOME should be changed to /usr/local/python<br />
+<br />
+export PYTHONHOME=/usr/local/python
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/7678.html">Edited On</a></b> 10:46:04 AM PST - Tue, Nov 8th 2016 <b>by</b> Edoapra
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7865"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7865" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7865.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7865.html">1:29:11 PM PST - Tue, Jan 17th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi, <br />
+I have made this change in my setup script, as well as a few others. I am attempting compiling under the Intel Xeon Phi processors. The following is my setup script:<br />
+<br />
+!#/bin/bash<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_TOP=/work/zacharyw/recompile_nwchem6_6/nwchem-6.6<br />
+export ARMCI_NETWORK=OPENIB<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export PATH=/usr/local/intel-2015.2/impi/5.0.3.048/bin64/mpif90:$PATH #location of 'which mpif90'<br />
+export PYTHONHOME=/usr/local/python #defined in manual online<br />
+export PYTHONVERSION=2.7<br />
+export USE_PYTHONCONFIG=y<br />
+export USE_64TO32=y<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+<br />
+export IB_HOME="/usr"<br />
+export IB_INCLUDE="$IB_HOME/include/infiniband"<br />
+export IB_LIB="$IB_HOME/lib64"<br />
+export IB_LIB_NAME="-libverbs -libumad -lpthread -lrt"<br />
+<br />
+export MIC_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LIBRARY_PATH<br />
+export MIC_LD_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LD_LIBRARY_PATH<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+<br />
+<br />
+<br />
+export MKLROOT=/usr/local/intel-2017/compilers_and_libraries_2017.0.098/linux/mkl<br />
+<br />
+export USE_OPENMP=1<br />
+export USE_F90_ALLOCATABLE=T<br />
+export USE_FASTMEM=T<br />
+export SCALAPACK="-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"<br />
+export ELPA="-I/usr/lib64/gfortran/modules/openmpi -L/usr/lib64/openmpi/lib -lelpa"<br />
+export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:$LD_LIBRARY_PATH<br />
+export PATH=/usr/lib64/openmpi/bin/:$PATH<br />
+export BLASOPT="-mkl -qopenmp"<br />
+export SCALAPACK_SIZE=4<br />
+export BLAS_SIZE=4<br />
+export OMP_NUM_THREADS=4<br />
+export MIC_USE_2MB_BUFFER=16k<br />
+<br />
+<br />
+<br />
+export USE_INTERNALBLAS=y<br />
+<br />
+cd $NWCHEM_TOP/src<br />
+make nwchem_config NWCHEM_MODULES="all python"<br />
+make 64_to_32<br />
+make FC=ifort CC=icc AR=xiar -j 8 |tee /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/nwchem_buil.log<br />
+<br />
+<br />
+However, I get the following error message:<br />
+<br />
+DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DUSE_F90_ALLOCATABLE -DDEBUG_PRINT  icsd_t2_neword.F<br />
+ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost -I. -I../include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DUSE_F90_ALLOCATABLE -DDEBUG_PRINT  ccsd_kernels.F<br />
+<br />
+Begin optimization report for: T2_P8<br />
+<br />
+
+<pre>   Report from: OpenMP optimizations [openmp]<br />
+</pre>
+<br />
+OpenMP Construct at ccsd_kernels.F(37,8)<br />
+
+<pre>  remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED<br />
+</pre>
+OpenMP Construct at ccsd_kernels.F(14,8)<br />
+
+<pre>  remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED<br />
+</pre>
+ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost -I. -I../include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DUSE_F90_ALLOCATABLE -DDEBUG_PRINT  ccsd_t2_8.F<br />
+ccsd_t2_8.F(489): error #6404: This name does not have a type, and must have an explicit type.   [L_A]<br />
+
+<pre>     if (e_a) call errquit("MA pops a",l_a,MA_ERR)<br />
+</pre>
+<hr />^<br />
+ccsd_t2_8.F(490): error #6404: This name does not have a type, and must have an explicit type.   [L_T]<br />
+
+<pre>     if (e_t) call errquit("MA pops t",l_t,MA_ERR)<br />
+</pre>
+<hr />^<br />
+compilation aborted for ccsd_t2_8.F (code 1)<br />
+make[3]: *** [/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a(ccsd_t2_8.o)] Error 1<br />
+make[3]: *** Waiting for unfinished jobs....<br />
+
+<h6> <span class="mw-headline" id=".3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D">===============================================================</span></h6>
+make[3]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/ccsd'<br />
+make[2]: *** [optimized] Error 2<br />
+make[2]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/ccsd'<br />
+make[1]: *** [subdirs] Error 1<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce'<br />
+make: *** [libraries] Error 1<br />
+<br />
+<br />
+I do not understand what this means. Additionally, I am confused as to why I have to include the 64_to32 bit in my setup script. My initial assumption is something is wrong with the SCALAPATH or BLASOPT environment variable. Could someone please lend me some assistance? Thanks
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7866"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7866" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/7866.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7866.html">1:47:15 PM PST - Tue, Jan 17th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please unset USE_F90_ALLOCATABLE and USE_FASTMEM (since they can be used only with the current development version of NWChem and not with version 6.6) and then recompile<br />
+<br />
+
+<pre>
+unset USE_F90_ALLOCATABLE
+unset USE_FASTMEM
+rm $NWCHEM_TOP/lib/$NWCHEM_TARGET/libtce.a
+cd $NWCHEM_TOP/src/tce
+make FC=ifort
+cd ..
+make FC=ifort link
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7868"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7868" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem8')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7868.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7868.html">3:32:24 PM PST - Tue, Jan 17th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi,<br />
+I made the changes you suggested, including manually deleting the libtce.a file. My setup bash script now reads:<br />
+<br />
+!#/bin/bash<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_TOP=/work/zacharyw/recompile_nwchem6_6/nwchem-6.6<br />
+export ARMCI_NETWORK=OPENIB<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export PATH=/usr/local/intel-2015.2/impi/5.0.3.048/bin64/mpif90:$PATH #location of 'which mpif90'<br />
+export PYTHONHOME=/usr/local/python #defined in manual online<br />
+export PYTHONVERSION=2.7<br />
+export USE_PYTHONCONFIG=y<br />
+export USE_64TO32=y<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+<br />
+export IB_HOME="/usr"<br />
+export IB_INCLUDE="$IB_HOME/include/infiniband"<br />
+export IB_LIB="$IB_HOME/lib64"<br />
+export IB_LIB_NAME="-libverbs -libumad -lpthread -lrt"<br />
+<br />
+export MIC_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LIBRARY_PATH<br />
+export MIC_LD_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LD_LIBRARY_PATH<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+
+<ol><li> changed **<br />
+</li></ol>
+<br />
+
+<ol><li><ol><li>!!!!!!<br />
+</li></ol>
+</li></ol>
+export MKLROOT=/usr/local/intel-2017/compilers_and_libraries_2017.0.098/linux/mkl<br />
+<br />
+export USE_OPENMP=1<br />
+
+<ol><li>export USE_F90_ALLOCATABLE=T<br />
+</li><li>export USE_FASTMEM=T<br />
+</li></ol>
+export SCALAPACK="-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"<br />
+export ELPA="-I/usr/lib64/gfortran/modules/openmpi -L/usr/lib64/openmpi/lib -lelpa"<br />
+export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:$LD_LIBRARY_PATH<br />
+export PATH=/usr/lib64/openmpi/bin/:$PATH<br />
+export BLASOPT="-mkl -qopenmp"<br />
+export SCALAPACK_SIZE=4<br />
+export BLAS_SIZE=4<br />
+export OMP_NUM_THREADS=4<br />
+export MIC_USE_2MB_BUFFER=16k<br />
+<br />
+<br />
+<br />
+export USE_INTERNALBLAS=y<br />
+unset USE_F90_ALLOCATABLE<br />
+unset USE_FASTMEM<br />
+cd $NWCHEM_TOP/src/tce<br />
+make FC=ifort<br />
+cd ..<br />
+make FC=ifort link<br />
+<br />
+However, this time I am getting an error that reads:<br />
+<br />
+
+<h6> <span class="mw-headline" id=".3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D">===============================================================</span></h6>
+ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost -I. -I../include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG   new_sort6.F<br />
+ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost -I. -I../include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG   tce_sort8.F<br />
+ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost -I. -I../include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG   tce_sortacc8.F<br />
+ifort -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xHost tce_sort1.f<br />
+make[2]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/sort'<br />
+make[2]: Entering directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/sort'<br />
+Got lock on /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.lock<br />
+ar r /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a tce_sort_4kg.o tce_sort0.o tce_sortacc0.o new_sort2.o new_sort4.o new_sort6.o tce_sort8.o tce_sortacc8.o tce_sort1.o<br />
+echo /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a<br />
+/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a<br />
+make[2]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/sort'<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce/sort'<br />
+make[1]: Entering directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce'<br />
+Got lock on /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.lock<br />
+ar r /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a tce_input.o tce_init.o tce_energy.o tce_energy_fragment.o tce_tile.o tce_ao1e.o tce_mo1e.o tce_ao2e.o tce_filename.o createfile.o deletefile.o reconcilefile.o dratoga.o gatodra.o gatoeaf.o get_block.o put_block.o add_block.o tce_tidy.o sf_test.o hbar.o tce_mo2e.o tce_mo1e_offset.o tce_mo2e_offset.o tce_e_offset.o tce_guess_t1.o tce_guess_t2.o tce_zero.o tce_print_x1.o tce_print_x2.o tce_residual_t1.o tce_residual_t2.o tce_residual_t3.o tce_residual_t4.o ma_pack.o sf_print.o ma_print_compact.o ma_scale.o copyfile.o ddotfile.o daxfile.o daxpyfile.o dscalfile.o tce_aod1.o tce_nud1.o tce_mod1.o tce_mod1_offset.o sym_abelian_axis.o tce_mod1_new.o tce_mod1_offset_new.o tce_eom_init.o tce_eom_tidy.o tce_eom_xdiagon.o tce_eom_ydiagon.o tce_t1_offset.o tce_t2_offset.o tce_t3_offset.o tce_t4_offset.o tce_x1_offset.o tce_x2_offset.o tce_x3_offset.o tce_x4_offset.o tce_y1_offset.o tce_y2_offset.o tce_y3_offset.o tce_y4_offset.o tce_mbpt2.o tce_restricted.o tce_hash.o get_hash_block.o put_hash_block.o add_hash_block.o tce_residual_t3a.o tce_t3a_offset.o tce_x3a_offset.o tce_cholesky.o tce_ao2e_cholesky.o tce_ao2e_cholesky_2d.o tce_ao2e_cholesky_4d.o e2_offset_2_offset.o get_block_ind.o get_block_ind_sf.o tce_hash_ind.o tce_mo2e_offset_intorb.o tce_mo2e_offset_size.o tce_mo2e_trans.o atpart_nalength.o tce_mo2e_zones_4a_disk_ga.o tce_mo2e_zones_4a_disk_ga_chop.o tce_mo2e_zones_4a_disk_2s_new.o tce_restart.o tce_restart_triples.o tce_restart_quadruples.o tce_dens_hh_offset.o tce_dens_hp_offset.o tce_dens_pp_offset.o tce_dens_ph_offset.o get_mo_rdm_hh.o get_mo_rdm_hp.o get_mo_rdm_ph.o get_mo_rdm_pp.o ao_rdm_write.o tce_prop_start.o tce_property.o tce_diagnose_t1.o tce_fourindex_driver.o tce_fock_create.o tce_multipole_create.o tce_reference_check.o tce_fourindex_cleanup.o tce_fock_destroy.o tce_multipole_destroy.o tce_create_t1.o tce_create_t2.o tce_create_t3.o tce_create_t4.o tce_create_x1.o tce_create_x2.o tce_create_x3.o tce_create_x4.o tce_create_y1.o tce_create_y2.o tce_create_y3.o tce_create_y4.o tce_clone_x1.o tce_clone_x2.o tce_clone_x3.o tce_clone_x4.o tce_clone_y1.o tce_clone_y2.o tce_clone_y3.o tce_clone_y4.o tce_t1_offset_new.o tce_t2_offset_new.o tce_t3_offset_new.o tce_t4_offset_new.o tce_x1_offset_new.o tce_x2_offset_new.o tce_x3_offset_new.o tce_x4_offset_new.o tce_y1_offset_new.o tce_y2_offset_new.o tce_y3_offset_new.o tce_y4_offset_new.o tce_ccsd_driver.o tce_ccsdt_driver.o tce_ccsdtq_driver.o tce_ccsd_perturbative.o tce_ccsd_lambda_perturbative.o tce_ccsd_lambda_driver.o tce_ccsdt_lambda_driver.o tce_ccsdtq_lambda_driver.o tce_ccsd_response_driver.o tce_ccsdt_response_driver.o tce_ccsdtq_response_driver.o tce_ccsd_symm_polar.o tce_ccsdt_symm_polar.o tce_ccsdtq_symm_polar.o tce_ccsd_lambda_response_driver.o tce_ccsd_asym_polar.o tce_ccsd_hyperpolar.o tce_ao2e_new.o tce_mo2e_new.o tce_tile_new.o tce_init_new.o tce_mo2e_zones_4a_disk_4s_new_patch.o tce_mo2e_zones_4a_disk_4s_new_patch_m2.o tce_mo2e_zones_4a_disk_4s_new_patch_m3.o tce_ao2e_disk.o tce_mo2e_disk.o tce_mo2e_disk_2eorb.o tce_mo2e_incore_2eorb.o tce_mo2e_incore_2eorb_split.o tce_mo2e_hybrid_2eorb_split.o tce_mo2e_offset_intorb_hybrid.o tce_mo2e_2emet3.o tce_mo2e_2emet3_n5.o tce_mo2e_2emet4.o tce_mo2e_2emet4_n5.o get_hash_block_ma.o ccsd_energy_loc.o cc2_energy.o ccsd_lambda.o ccsd_imaginary.o ccsd_lr_alpha.o ccsd_qr_beta.o tce_dgeev.o tce_schmidt.o tensor_read_write.o tce_diis_act.o tce_mo2e_zones_4a_disk_ga_act.o tce_mo2e_zones_4a_disk_ga_chop_act.o tce_t2a_offset.o tce_x2a_offset.o new_ga4ind_N5.o tce_mo2e_zones_4a_disk_ga_N5.o tce_mo2e_zones_4a_disk_ga_chop_N5.o tce_eom_xguess.o tce_eom_yguess.o ma_transpose.o<br />
+echo /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a<br />
+/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64/libtce.a<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tce'<br />
++ cd ..<br />
++ make FC=ifort link<br />
+make nwchem.o stubs.o<br />
+make[1]: Entering directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src'<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -I.  -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DCOMPILATION_DATE="'`date +%a_%b_%d_%H:%M:%S_%Y`'" -DCOMPILATION_DIR="'/work/zacharyw/recompile_nwchem6_6/nwchem-6.6'" -DNWCHEM_BRANCH="'6.6'"  -c -o nwchem.o nwchem.F<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -I.  -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DCOMPILATION_DATE="'`date +%a_%b_%d_%H:%M:%S_%Y`'" -DCOMPILATION_DIR="'/work/zacharyw/recompile_nwchem6_6/nwchem-6.6'" -DNWCHEM_BRANCH="'6.6'"  -c -o stubs.o stubs.F<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src'<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -Wl,--export-dynamic  -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64 -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/lib  -o /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/bin/LINUX64/nwchem nwchem.o stubs.o -lnwctask -lccsd -lmcscf -lselci -lmp2 -lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwints -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -lnwpython -ldrdy -lvscf -lqmmm -lqmd -letrans -lpspw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil -I/usr/lib64/gfortran/modules/openmpi -L/usr/lib64/openmpi/lib -lelpa -mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64   -l64to32 -mkl -qopenmp  -lnwclapack  -lnwcblas   -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib/release_mt -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread   -libverbs -libumad -lpthread -lrt   -L/usr/lib64 -lrt  -lpthread  -lnwcutil -lpthread -ldl -lutil -lm -lpython2.7  -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic  <br />
+ld: cannot find -ldangchang<br />
+make: *** [link] Error 1<br />
+<br />
+<br />
+Any ideas, I am again at a loss? Thanks for your understanding and patience of these seemingly trivial questions!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7870"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7870" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem9')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7870.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7870.html">8:04:32 AM PST - Wed, Jan 18th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I tried starting over by completely removing the nwchem-6.6 directory, untarring the nwchem tar file and recompiling just to see if I would get the same error message. Instead I get another error message shown in the following:<br />
+<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -I.  -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DCOMPILATION_DATE="'`date +%a_%b_%d_%H:%M:%S_%Y`'" -DCOMPILATION_DIR="'/work/zacharyw/recompile_nwchem6_6/nwchem-6.6'" -DNWCHEM_BRANCH="'6.6'"  -c -o stubs.o stubs.F<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src'<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -Wl,--export-dynamic  -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64 -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/lib  -o /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/bin/LINUX64/nwchem nwchem.o stubs.o -lnwctask -lccsd -lmcscf -lselci -lmp2 -lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwints -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -lnwpython -ldrdy -lvscf -lqmmm -lqmd -letrans -lpspw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil -l64to32 -mkl -qopenmp  -lnwclapack  -lnwcblas   -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib/release_mt -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread  -lnwcutil -lpthread -ldl -lutil -lm -lpython2.7  -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic  <br />
+ld: cannot find -lpython2.7<br />
+make: *** [all] Error 1<br />
+<br />
+I notice that this linker file 'L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib' shows up in both error messages. I assume there is an issue here, and I feel like perhaps python is an issue? There is a similar path '/usr/local/intel-2017/impi/2017.0.098/intel64/lib' that exists. My question is: how do I know which path to include in my setup script? It seems like the HPC I am attempting to compile this in puts me in this predicament a lot--- another example is that python2.7 and python3.4 are in my /usr/local path, but only python2.6 exists in my /usr/bin path. How do I know what are the correct versions of mpi and python to reference in my setup script?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7872"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7872" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem10')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/7872.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7872.html">10:16:51 AM PST - Wed, Jan 18th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Since I am not sure yet how to deal with your Python environment, may I suggest you the following: first, try to build a NWChem binary and test it and then try to create a build with python?<br />
+<br />
+In order to exclude Python from the build, please execute the following commands:<br />
+<br />
+cd $NWCHEM_TOP/src<br />
+make nwchem_config NWCHEM_MODULES="all"<br />
+make FC=ifort link<br />
+<br />
+PS#1 I see mention of OpenMPI in your env. settings and -- at the same time -- your are using Intel MPI, this is likely to cause problems. Please remove anything mention of OpenMPI in your settings<br />
+<br />
+PS#2 You defined BLAS_SIZE=4, while your definition of SCALAPACK uses ILP64, a.k.a 64-bit integers, therefore you should set BLAS_SIZE=8. I would suggest you the following<br />
+<br />
+export BLAS_SIZE=8<br />
+cd $NWCHEM_TOP/src/64to32blas<br />
+make clean<br />
+make FC=ifort<br />
+cd ../tools<br />
+make clean<br />
+make FC=ifort<br />
+cd ..<br />
+make FC=ifort link
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7873"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7873" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Zww9/701041.html" onmouseover="mopen('mem11')" onmouseout="mclosetime()">Zww9</a>  <font class="group_text">Member</font>
+                                    <div id="mem11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Zww9/701041.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Zww9/7873.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Zww9/701041.html">3</a><br />
+                                Posts <a href="../../search/memposts/Zww9/701041.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id7873.html">12:36:18 PM PST - Wed, Jan 18th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I have made the changes you have suggested, and everything runs smoothly (i.e. no discernable error messages). Here is the setup script I used, with your modifications for clarification purposes:<br />
+<br />
+!#/bin/bash<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_TOP=/work/zacharyw/recompile_nwchem6_6/nwchem-6.6<br />
+export ARMCI_NETWORK=OPENIB<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export PATH=/usr/local/intel-2015.2/impi/5.0.3.048/bin64/mpif90:$PATH #location of 'which mpif90'<br />
+export PYTHONHOME=/usr/local/python #defined in manual online<br />
+export PYTHONVERSION=2.7<br />
+export USE_PYTHONCONFIG=y<br />
+export USE_64TO32=y<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+<br />
+export IB_HOME="/usr"<br />
+export IB_INCLUDE="$IB_HOME/include/infiniband"<br />
+export IB_LIB="$IB_HOME/lib64"<br />
+export IB_LIB_NAME="-libverbs -libumad -lpthread -lrt"<br />
+<br />
+export MIC_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LIBRARY_PATH<br />
+export MIC_LD_LIBRARY_PATH=/usr/linux-k1om-4.7/linux-k1om/lib64:$MIC_LD_LIBRARY_PATH<br />
+<br />
+<br />
+export ARMCI_OPENIB_DEVICE=mlx4_0<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+<br />
+export MKLROOT=/usr/local/intel-2017/compilers_and_libraries_2017.0.098/linux/mkl<br />
+<br />
+export USE_OPENMP=1<br />
+export SCALAPACK="-mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64"<br />
+export BLASOPT="-mkl -qopenmp"<br />
+export SCALAPACK_SIZE=4<br />
+export BLAS_SIZE=8<br />
+export OMP_NUM_THREADS=4<br />
+export MIC_USE_2MB_BUFFER=16k<br />
+<br />
+<br />
+<br />
+export USE_INTERNALBLAS=y<br />
+unset USE_F90_ALLOCATABLE<br />
+unset USE_FASTMEM<br />
+<br />
+cd $NWCHEM_TOP/src<br />
+make nwchem_config NWCHEM_MODULES="all"<br />
+make FC=ifort link<br />
+cd $NWCHEM_TOP/src/64to32blas<br />
+make clean<br />
+make FC=ifort<br />
+cd ../tools<br />
+make clean<br />
+make FC=ifort<br />
+cd ..<br />
+make FC=ifort link<br />
+<br />
+The last few lines of output looks something like:<br />
+<br />
+Libraries have been installed in:<br />
+
+<pre>  /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/lib<br />
+</pre>
+<br />
+If you ever happen to want to link against installed libraries<br />
+in a given directory, LIBDIR, you must either use libtool, and<br />
+specify the full pathname of the library, or use the `-LLIBDIR'<br />
+flag during linking and do at least one of the following:<br />
+
+<pre>  - add LIBDIR to the `LD_LIBRARY_PATH' environment variable<br />
+    during execution<br />
+  - add LIBDIR to the `LD_RUN_PATH' environment variable<br />
+    during linking<br />
+  - use the `-Wl,-rpath -Wl,LIBDIR' linker flag<br />
+  - have your system administrator add LIBDIR to `/etc/ld.so.conf'<br />
+</pre>
+<br />
+See any operating system documentation about shared libraries for<br />
+more information, such as the ld(1) and ld.so(8) manual pages.<br />
+
+<hr /><br />
+<pre>/bin/mkdir -p '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin'<br />
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c global/trace/adjust.x global/trace/collisions.x '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin'<br />
+</pre>
+libtool: install: /usr/bin/install -c global/trace/adjust.x /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin/adjust.x<br />
+libtool: install: /usr/bin/install -c global/trace/collisions.x /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin/collisions.x<br />
+
+<pre>/bin/mkdir -p '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin'<br />
+/usr/bin/install -c tools/ga-config '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/bin'<br />
+/bin/mkdir -p '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include'<br />
+/usr/bin/install -c -m 644 ../ga-5-4/ma/error.h ../ga-5-4/ma/macdecls.h ../ga-5-4/ma/macommon.h ../ga-5-4/ma/maf2c.fh ma/mafdecls.fh ma/matypes.h ../ga-5-4/ma/scope.h ../ga-5-4/ma/string-util.h ../ga-5-4/ma/table.h ../ga-5-4/global/src/gacommon.h ../ga-5-4/global/src/ga.h global/src/global.fh ../ga-5-4/global/src/ga-papi.h ../ga-5-4/global/src/ga-mpi.h ../ga-5-4/global/src/ga-mpi.fh ../ga-5-4/pario/dra/dra.fh ../ga-5-4/pario/dra/dra.h ../ga-5-4/pario/eaf/eaf.fh ../ga-5-4/pario/eaf/eaf.h ../ga-5-4/pario/elio/chemio.h ../ga-5-4/pario/elio/elio.h ../ga-5-4/pario/sf/coms.h ../ga-5-4/pario/sf/sf.fh ../ga-5-4/pario/sf/sf.h gaf2c/typesf2c.h gaf2c/farg.h ../ga-5-4/tcgmsg/tcgmsg.fh ../ga-5-4/tcgmsg/tcgmsg.h ../ga-5-4/tcgmsg/tcgmsg-mpi/msgtypesc.h ../ga-5-4/tcgmsg/tcgmsg-mpi/msgtypesf.h '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include'<br />
+/bin/mkdir -p '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include'<br />
+/usr/bin/install -c -m 644 global/src/ga-wapi.h '/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include'<br />
+</pre>
+make[4]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/build'<br />
+make[3]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/build'<br />
+make[2]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/build'<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/build'<br />
++ cd ..<br />
++ make FC=ifort link<br />
+make nwchem.o stubs.o<br />
+make[1]: Entering directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src'<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -I.  -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DCOMPILATION_DATE="'`date +%a_%b_%d_%H:%M:%S_%Y`'" -DCOMPILATION_DIR="'/work/zacharyw/recompile_nwchem6_6/nwchem-6.6'" -DNWCHEM_BRANCH="'6.6'"  -c -o nwchem.o nwchem.F<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source  -I.  -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/include -I/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DSCALAPACK -DPARALLEL_DIAG -DCOMPILATION_DATE="'`date +%a_%b_%d_%H:%M:%S_%Y`'" -DCOMPILATION_DIR="'/work/zacharyw/recompile_nwchem6_6/nwchem-6.6'" -DNWCHEM_BRANCH="'6.6'"  -c -o stubs.o stubs.F<br />
+make[1]: Leaving directory `/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src'<br />
+ifort -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O2 -g -fp-model source   -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/lib/LINUX64 -L/work/zacharyw/recompile_nwchem6_6/nwchem-6.6/src/tools/install/lib  -o /work/zacharyw/recompile_nwchem6_6/nwchem-6.6/bin/LINUX64/nwchem nwchem.o stubs.o -lnwctask -lccsd -lmcscf -lselci -lmp2 -lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwints -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -ldrdy -lvscf -lqmmm -lqmd -letrans -lpspw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil  -mkl -qopenmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64   -l64to32 -mkl -qopenmp  -lnwclapack  -lnwcblas   -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib/release_mt -L/usr/local/intel-2015.2//impi/5.0.3.048/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread   -libverbs -libumad -lpthread -lrt   -L/usr/lib64 -lrt -lm  -lpthread  <br />
+<br />
+This leads us to assume that, providing my corrections to 'BLAS_SIZE' env variable and omitting references to openMPI, the python env variables I used in earlier setup scripts are the issue. How should I proceed?<br />
+<br />
+Curiously, there is no specific reference to nwchem-6.6 in my /usr/local directory. I was going to see if the executable linked successfully using 'ldd' command; but as the directory is not present this is not possible. There is, however, a directory to nwchem-6.5 (containing an executable that is not completely linked), as well as a 'nwchem' symbolic link to the path '/usr/local/server/x86_64-RedHat6/nwchem' which also contains an executable that is not completely linked. I find this odd; any thoughts? <br />
+<br />
+Thanks
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id2183/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.220 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2183/#post_7873 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:24:02 GMT -->
+</html>
+
+
+
+
+

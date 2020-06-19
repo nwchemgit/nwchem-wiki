@@ -1,0 +1,2254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2292/#post_8087 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 06:29:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="SCF Performance for Different ARMCI Network on Socket-based KNL Cluster Viewed 1841 times, With a total of 7 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>SCF Performance for Different ARMCI Network on Socket-based KNL Cluster - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id2292 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >SCF Performance for Different ARMCI Network on Socket-based KNL Cluster</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="2292">
+        <input name="fID" type="hidden" value="5">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 1841 times, With a total of 7 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_8067"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8067" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Chiensh/131.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Chiensh</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Chiensh/131.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Chiensh/8067.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Chiensh/131.html">22</a><br />
+                                Posts <a href="../../search/memposts/Chiensh/131.html">40</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8067.html">3:39:35 AM PDT - Fri, Mar 31st 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi All,<br />
+<br />
+I have been evaluating which ARMCI_NTEWORK most suitable for a socket-based KNL Cluster; the processor type is KNL 7210 @ 1.30GHz, and each node has 192GB memory, OS is RedHat 7.3.<br />
+<br />
+ARMCI_NETWORK=MPI-PR, OpenIB and ARMCI-MPI+CASPER have been evaluated. All 3 copies of NWChem were compiled using the same set of environmental variable, the script is given the the bottom part of this thread. Intel Compiler v17.0.1 and Intel MPI Version 2017 Update 1 Build 20161016 were used for the compilation.<br />
+<br />
+Initially I would like to evaluate the performance for a TCE:CCSD(T) calculation of a pentacene molecule taken which have been used for  NWChem the benchmark (<a target='blank' href="../../../../../www.nwchem-sw.org/images/Pentacene_ccsdt.nw" class="external free">http://www.nwchem-sw.org/images/Pentacene_ccsdt.nw</a>), however the SCF timing result for the ARMCI-MPI+Casper is too slow compared with other ARMCI network, so I would like to check if any part of my compilation or runtime variable are not correct before going further to CCSD level:<br />
+<br />
+<br />
+For MPI-PR<br />
+
+<pre>            iter       energy          gnorm     gmax       time<br />
+           ----- ------------------- --------- --------- --------<br />
+               1     -841.3354871523  2.54D-03  3.19D-04     49.8<br />
+               2     -841.3354832032  1.14D-03  1.43D-04     89.9<br />
+               3     -841.3354832406  1.57D-06  2.64D-07    113.7<br />
+      Time for solution =    111.5s<br />
+</pre>
+<br />
+For OpenIB <br />
+
+<pre>           iter       energy          gnorm     gmax       time<br />
+           ----- ------------------- --------- --------- --------<br />
+               1     -841.3354871523  2.54D-03  3.19D-04     53.4<br />
+               2     -841.3354832032  1.14D-03  1.43D-04     95.9<br />
+               3     -841.3354832406  1.57D-06  2.64D-07    121.1<br />
+      Time for solution =    116.4s<br />
+</pre>
+<br />
+For ARMCI-MPI<br />
+
+<pre>           iter       energy          gnorm     gmax       time<br />
+           ----- ------------------- --------- --------- --------<br />
+               1     -841.3354871523  2.54D-03  3.19D-04    236.9<br />
+               2     -841.3354832032  1.14D-03  1.43D-04    923.4<br />
+               3     -841.3354832406  1.58D-06  2.64D-07   1211.7<br />
+      Time for solution =   1263.4s<br />
+</pre>
+<br />
+<br />
+Thanks!<br />
+<br />
+Regards,<br />
+Dominic<br />
+<br />
+Note:<br />
+Here is some additional information for the runtime environment,  input, compilation environment and the snapshot of the calculation outputs:<br />
+<br />
+<br />
+(1) The runtime environment was set by this script environment.sh <br />
+
+<pre>module load intel<br />
+module load impi/2017_Update_1<br />
+<br />
+WORKDIR=/home/users/astar/ihpc/chiensh/nwtest<br />
+export EXE1=/home/users/astar/ihpc/chiensh/nwchem-mpipr/bin/LINUX64/nwchem<br />
+export EXE2=/home/users/astar/ihpc/chiensh/nwchem-openib/bin/LINUX64/nwchem<br />
+export EXE3=/home/users/astar/ihpc/chiensh/nwchem-armci-mpi/bin/LINUX64/nwchem<br />
+export CASPER=/home/users/astar/ihpc/chiensh/local/lib/libcasper.so<br />
+<br />
+ ulimit -s unlimited<br />
+#export OMP_STACKSIZE=32M<br />
+export I_MPI_PIN=1<br />
+#export I_MPI_DEBUG=4<br />
+unset I_MPI_DEBUG<br />
+export KMP_BLOCKTIME=1<br />
+#export KMP_AFFINITY=scatter,verbose<br />
+export KMP_AFFINITY=scatter<br />
+export ARMCI_USE_WIN_ALLOCATE=1<br />
+<br />
+export OMP_NUM_THREADS=60<br />
+#export MKL_NUM_THREADS=2<br />
+export MKL_DYNAMIC=false<br />
+export OMP_NESTED=true<br />
+</pre>
+<br />
+<br />
+(2) There are some modifications on the tce and scf section and they are shown below <br />
+
+<pre>scf<br />
+vectors input pentacene.movecs<br />
+thresh 1e-4<br />
+#semidirect filesize 0 memsize 1000000000<br />
+end<br />
+<br />
+tce<br />
+freeze atomic<br />
+ccsd(t)<br />
+thresh 1e-4<br />
+io ga<br />
+tilesize 50<br />
+attilesize 40<br />
+2EORB<br />
+2EMET 15<br />
+end<br />
+<br />
+set tce:nts T<br />
+set tce:tceiop 2048<br />
+#set tce:writeint T<br />
+set tce:readint T<br />
+#set tce:writet T<br />
+set tce:readt T<br />
+set tce:xmem 1000<br />
+task tce energy<br />
+</pre>
+<br />
+(3) Snapshot of the outputs<br />
+i. For ARMCI_NETWORK=MPI-PR<br />
+
+<pre>&gt; mpirun -perhost 2                                            -n 40  $EXE1 ccsdt.nw <br />
+</pre>
+<br />
+
+<pre>          Job information<br />
+          ---------------<br />
+   hostname        = r1i0n4<br />
+   program         = /home/users/astar/ihpc/chiensh/nwchem-mpipr/bin/LINUX64/nwchem<br />
+   date            = Fri Mar 31 17:38:54 2017<br />
+   compiled        = Fri_Mar_31_15:02:17_2017<br />
+   source          = /home/users/astar/ihpc/chiensh/nwchem-mpipr<br />
+   nwchem branch   = 6.6<br />
+   nwchem revision = 27746<br />
+   ga revision     = 10594<br />
+   input           = ccsdt.nw<br />
+   prefix          = pentacene.<br />
+   data base       = ./pentacene.db<br />
+   status          = startup<br />
+   nproc           =       20<br />
+   time left       =     -1s<br />
+<br />
+          Memory information<br />
+          ------------------<br />
+   heap     =   65536000 doubles =    500.0 Mbytes<br />
+   stack    = ********** doubles =  90000.0 Mbytes<br />
+   global   = ********** doubles = 100000.0 Mbytes (distinct from heap &amp; stack)<br />
+   total    = ********** doubles = 190500.0 Mbytes<br />
+   verify   = no<br />
+   hardfail = no<br />
+...<br />
+                                NWChem SCF Module<br />
+                                -----------------<br />
+ ao basis        = "ao basis"<br />
+ functions       =   378<br />
+ atoms           =    36<br />
+ closed shells   =    73<br />
+ open shells     =     0<br />
+ charge          =   0.00<br />
+ wavefunction    = RHF<br />
+ input vectors   = ./pentacene.movecs<br />
+ output vectors  = ./pentacene.movecs<br />
+ use symmetry    = F<br />
+ symmetry adapt  = F<br />
+...<br />
+<br />
+----------------------------------------------<br />
+        Quadratically convergent ROHF<br />
+Convergence threshold    &nbsp;:          1.000E-04<br />
+Maximum no. of iterations&nbsp;:           30<br />
+Final Fock-matrix accuracy:          1.000E-07<br />
+----------------------------------------------<br />
+<br />
+Integral file          = ./pentacene.aoints.00<br />
+Record size in doubles =    65536    No. of integs per rec  =    32766<br />
+Max. records in memory =     3937    Max. records in file   = 16943190<br />
+No. of bits per label  =       16    No. of bits per value  =       64<br />
+<br />
+#quartets = 3.409D+07 #integrals = 3.020D+08 #direct =  0.0% #cached =100.0%<br />
+<br />
+File balance: exchanges=    68  moved=  1370  time=   0.2<br />
+<br />
+             iter       energy          gnorm     gmax       time<br />
+            ----- ------------------- --------- --------- --------<br />
+                1     -841.3354871523  2.54D-03  3.19D-04     49.8<br />
+                2     -841.3354832032  1.14D-03  1.43D-04     89.9<br />
+                3     -841.3354832406  1.57D-06  2.64D-07    113.7<br />
+<br />
+      Final RHF  results<br />
+      ------------------<br />
+        Total SCF energy =   -841.335483240608<br />
+     One-electron energy =  -4113.018438040344<br />
+     Two-electron energy =   1774.091366579281<br />
+Nuclear repulsion energy =   1497.591588220455<br />
+<br />
+       Time for solution =    111.5s<br />
+</pre>
+<br />
+<br />
+ii.ARMCI_NETWORK=OpenIB<br />
+
+<pre>&gt;mpirun -perhost 1                                            -n 20  $EXE2 ccsdt.nw<br />
+</pre>
+<br />
+
+<pre>          Job information<br />
+          ---------------<br />
+   hostname        = r1i0n4<br />
+   program         = /home/users/astar/ihpc/chiensh/nwchem-openib/bin/LINUX64/nwchem<br />
+   date            = Fri Mar 31 16:08:37 2017<br />
+   compiled        = Thu_Mar_30_19:10:59_2017<br />
+   source          = /home/users/astar/ihpc/chiensh/nwchem-openib<br />
+   nwchem branch   = Development<br />
+   nwchem revision = 27746<br />
+   ga revision     = 10594<br />
+   input           = ccsdt.nw<br />
+   prefix          = pentacene.<br />
+   data base       = ./pentacene.db<br />
+   status          = startup<br />
+   nproc           =       20<br />
+   time left       =     -1s<br />
+<br />
+<br />
+<br />
+          Memory information<br />
+          ------------------<br />
+   heap     =   65535998 doubles =    500.0 Mbytes<br />
+   stack    = ********** doubles =  90000.0 Mbytes<br />
+   global   = ********** doubles = 100000.0 Mbytes (distinct from heap &amp; stack)<br />
+   total    = ********** doubles = 190500.0 Mbytes<br />
+   verify   = no<br />
+   hardfail = no<br />
+...<br />
+----------------------------------------------<br />
+        Quadratically convergent ROHF<br />
+<br />
+Convergence threshold    &nbsp;:          1.000E-04<br />
+Maximum no. of iterations&nbsp;:           30<br />
+Final Fock-matrix accuracy:          1.000E-07<br />
+----------------------------------------------<br />
+<br />
+<br />
+Integral file          = ./pentacene.aoints.00<br />
+Record size in doubles =    65536    No. of integs per rec  =    32766<br />
+Max. records in memory =     3937    Max. records in file   = 16908036<br />
+No. of bits per label  =       16    No. of bits per value  =       64<br />
+<br />
+<br />
+#quartets = 3.409D+07 #integrals = 3.020D+08 #direct =  0.0% #cached =100.0%<br />
+<br />
+<br />
+File balance: exchanges=    77  moved=  1081  time=   0.1<br />
+<br />
+<br />
+             iter       energy          gnorm     gmax       time<br />
+            ----- ------------------- --------- --------- --------<br />
+                1     -841.3354871523  2.54D-03  3.19D-04     53.4<br />
+                2     -841.3354832032  1.14D-03  1.43D-04     95.9<br />
+                3     -841.3354832406  1.57D-06  2.64D-07    121.1<br />
+<br />
+<br />
+      Final RHF  results<br />
+      ------------------<br />
+<br />
+        Total SCF energy =   -841.335483240607<br />
+     One-electron energy =  -4113.018438056843<br />
+     Two-electron energy =   1774.091366595781<br />
+Nuclear repulsion energy =   1497.591588220455<br />
+<br />
+       Time for solution =    116.4s<br />
+</pre>
+<br />
+<br />
+iii.ARMCI_NETWORK=ARMCI-MPI<br />
+
+<pre>&gt;mpirun -perhost 1 -genv CSP_NG 1  -genv LD_PRELOAD $CASPER   -n 40  $EXE3 ccsdt.nw<br />
+</pre>
+<br />
+
+<pre>          Job information<br />
+          ---------------<br />
+<br />
+   hostname        = r1i0n4<br />
+   program         = /home/users/astar/ihpc/chiensh/nwchem-armci-mpi/bin/LINUX64/nwchem<br />
+   date            = Fri Mar 31 15:20:48 2017<br />
+   compiled        = Fri_Mar_31_14:18:43_2017<br />
+   source          = /home/users/astar/ihpc/chiensh/nwchem-armci-mpi<br />
+   nwchem branch   = 6.6<br />
+   nwchem revision = 27746<br />
+   ga revision     = 10594<br />
+   input           = ccsdt.nw<br />
+   prefix          = pentacene.<br />
+   data base       = ./pentacene.db<br />
+   status          = startup<br />
+   nproc           =       20<br />
+   time left       =     -1s<br />
+<br />
+<br />
+<br />
+          Memory information<br />
+          ------------------<br />
+   heap     =   65535998 doubles =    500.0 Mbytes<br />
+   stack    = ********** doubles =  90000.0 Mbytes<br />
+   global   = ********** doubles = 100000.0 Mbytes (distinct from heap &amp; stack)<br />
+   total    = ********** doubles = 190500.0 Mbytes<br />
+   verify   = no<br />
+   hardfail = no<br />
+ ...<br />
+ ----------------------------------------------<br />
+        Quadratically convergent ROHF<br />
+<br />
+Convergence threshold    &nbsp;:          1.000E-04<br />
+Maximum no. of iterations&nbsp;:           30<br />
+Final Fock-matrix accuracy:          1.000E-07<br />
+----------------------------------------------<br />
+<br />
+<br />
+Integral file          = ./pentacene.aoints.00<br />
+Record size in doubles =    65536    No. of integs per rec  =    32766<br />
+Max. records in memory =     3937    Max. records in file   = 16943273<br />
+No. of bits per label  =       16    No. of bits per value  =       64<br />
+<br />
+<br />
+#quartets = 3.409D+07 #integrals = 3.020D+08 #direct =  0.0% #cached =100.0%<br />
+<br />
+<br />
+File balance: exchanges=    67  moved=  1250  time=   0.1<br />
+<br />
+<br />
+             iter       energy          gnorm     gmax       time<br />
+            ----- ------------------- --------- --------- --------<br />
+                1     -841.3354871523  2.54D-03  3.19D-04    236.9<br />
+                2     -841.3354832032  1.14D-03  1.43D-04    923.4<br />
+                3     -841.3354832406  1.58D-06  2.64D-07   1211.7<br />
+<br />
+<br />
+      Final RHF  results<br />
+      ------------------<br />
+<br />
+        Total SCF energy =   -841.335483240606<br />
+     One-electron energy =  -4113.018438085244<br />
+     Two-electron energy =   1774.091366624183<br />
+Nuclear repulsion energy =   1497.591588220455<br />
+<br />
+       Time for solution =   1263.4s<br />
+</pre>
+<br />
+<br />
+<br />
+iv. NWChem were built by the same script build.sh<br />
+
+<pre>#export NWCHEM_TOP=/home/users/astar/ihpc/chiensh/nwchem-mpipr<br />
+#export NWCHEM_TOP=/home/users/astar/ihpc/chiensh/nwchem-openib<br />
+export NWCHEM_TOP=/home/users/astar/ihpc/chiensh/nwchem-armci-mpi<br />
+export NWCHEM_TARGET=LINUX64<br />
+export ARMCI_NETWORK=ARMCI<br />
+export EXTERNAL_ARMCI_PATH=/home/users/astar/ihpc/chiensh/local<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export LARGE_FILES=TRUE<br />
+export ENABLE_COMPONENT=yes<br />
+export USE_OPENMP=y<br />
+export LIB_DEFINES=" -DDFLT_TOT_MEM=391422080"<br />
+export DISABLE_GAMIRROR=y<br />
+export GA_STABLE=ga-5-5<br />
+<br />
+export BLAS_SIZE=8<br />
+export BLASOPT="  -Wl,--start-group -L$MKLROOT/lib/intel64  -lmkl_core -lmkl_intel_ilp64 -lmkl_intel_thread -Wl,--end-group -liomp5 -lpthread -lm -ldl -qopenmp " <br />
+#export BLASOPT="-L/home/users/app/intel/compilers_and_libraries_2017.1.132/linux/mkl/lib/intel64 -lmkl_avx512 -lmkl_core -lmkl_intel_ilp64 -lmkl_intel_thread  -qopenmp -lpthread "<br />
+export LAPACK_LIB=$BLASOPT<br />
+#export LAPACK_LIB="-L/home/users/app/intel/compilers_and_libraries_2017.1.132/linux/mkl/lib/intel64 -lmkl_avx512 -lmkl_core -lmkl_intel_ilp64 -lmkl_intel_thread  -qopenmp -lpthread"<br />
+<br />
+export USE_SCALAPACK=yes<br />
+export SCALAPACK_SIZE=8<br />
+export SCALAPACK="-L/$MKLROOT/lib/intel64  -lmkl_blacs_intelmpi_ilp64  -lmkl_scalapack_ilp64  "<br />
+export SCALAPACK_LIB="$SCALAPACK $BLASOPT"<br />
+#export SCALAPACK="-L/home/users/app/intel/compilers_and_libraries_2017.1.132/linux/mkl/lib/intel64 -lmkl_avx512 -lmkl_core -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64  "<br />
+#export SCALAPACK_LIB="$SCALAPACK -qopenmp -lpthread"<br />
+<br />
+#unset SCALAPACK<br />
+#unset SCALAPACK_SIZE<br />
+#unset SCALAPACK_LIB<br />
+<br />
+#export IB_HOME=/usr<br />
+#export IB_INCLUDE=$IB_HOME/include/infiniband<br />
+#export IB_LIB=$IB_HOME/lib64<br />
+#export IB_LIB_NAME="-libumad -libverbs -lpthread"<br />
+<br />
+export MPI_INCLUDE="-I/home/users/app/intel/compilers_and_libraries_2017.1.132/linux/mpi/intel64/include "<br />
+export LIBMPI="-L/home/users/app/intel/compilers_and_libraries_2017.1.132/linux/mpi/intel64/lib -lmpi -lmpifort  -lmpi_ilp64 -lpthread"<br />
+<br />
+export USE_PYTHON64=y<br />
+export PYTHONVERSION=2.7<br />
+export PYTHONHOME=/usr<br />
+export PYTHONLIBTYPE=so<br />
+<br />
+export NWCHEM_MODULES="all python"<br />
+#export NWCHEM_MODULES="all"<br />
+#export NWCHEM_MODULES=smallqm<br />
+<br />
+export CCSDTQ=y<br />
+export CCSDTLR=y<br />
+export MRCC_METHODS=TRUE<br />
+#unset CCSDTQ<br />
+#unset CCSDTLR<br />
+#unset MRCC_METHODS<br />
+<br />
+export CC=icc<br />
+export FC=ifort<br />
+export F77=ifort<br />
+export F90=ifort<br />
+export CXX=icpc<br />
+export MPICC=icc<br />
+export MPIFC=ifort<br />
+export FOPTIMIZE="-O3 -qopenmp -heap-arrays 64  -xMIC-AVX512 -fp-model fast=2 -no-prec-div -funroll-loops -unroll-aggressive "<br />
+export COPTIMIZE="-O3 -xMIC-AVX512 -fp-model fast=2 -no-prec-div -funroll-loops "<br />
+</pre>
+<br />
+v. ARMCI-MPI and Casper were build by these configure command<br />
+a ARMCI-MPI<br />
+
+<pre> ../configure MPICC=mpiicc CFLAGS=-L/home/users/astar/ihpc/chiensh/local/lib  MPIEXEC=mpirun --enable-explicit-progress --prefix=/home/users/astar/ihpc/chiensh/local<br />
+</pre>
+<br />
+v. CASPER<br />
+
+<pre>../configure --prefix=/home/users/astar/ihpc/chiensh/local CC=mpiicc
+</pre></td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/8067.html">Edited On</a></b> 7:50:06 AM PDT - Fri, Mar 31st 2017 <b>by</b> Chiensh
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8069"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8069" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/8069.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8069.html">11:51:25 AM PDT - Fri, Mar 31st 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Dominic<br />
+Thanks a lot for your feedback<br />
+You might want to try the following variables for MPI-PR, since moving as much  MPI communication as possible to the eager protocol should decrease latency.<br />
+<br />
+setenv I_MPI_EAGER_THRESHOLD 32768<br />
+setenv I_MPI_DAPL_DIRECT_COPY_THRESHOLD 32768<br />
+setenv I_MPI_FABRICS dapl
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/8069.html">Edited On</a></b> 11:51:56 AM PDT - Fri, Mar 31st 2017 <b>by</b> Edoapra
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8071"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8071" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Chiensh/131.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Chiensh</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Chiensh/131.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Chiensh/8071.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Chiensh/131.html">22</a><br />
+                                Posts <a href="../../search/memposts/Chiensh/131.html">40</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8071.html">9:08:29 PM PDT - Fri, Mar 31st 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thank you Edo,<br />
+<br />
+(1) What is the suitable combinations of OMP_NUM_THREADS and MKL_NUM_THREADS on a 64 cores KML systems? I believe thread based parallelization is used by SCF through MKL, and based on my observation, if I assign 1 MPI rank (for OpenIB), or 2 MPI ranks (for MPI-PR), on each node, it will not be used for more than 20 cores  regardless the setting of MKL_NUM_THREADS (I set it 60). In other words, I have to assign more MPI rank on each  MKLnode to fully utilize all 64 cores... <br />
+<br />
+Update: I assign 5+1 MPI ranks on each node, and it roughly speeds up by 5 times in SCF. Am I suppose to run 60 MPI ranks on each node?<br />
+<br />
+(2) For ARMCI-MPI+CASPER,  I observed that SCF  (and subsequent integral transformation for CCSD calculation) was run only 1 thread on each node, that's the reason why it is 4 times slower than OpenIB and MPI-PR. how do I enable the multi threads parallelization for AMRCI-MPI+Casper?<br />
+<br />
+<br />
+(3) For OpenIB and MPI-PR, the SCF and CCSD calculations are finished in half an hours on 20 KNL nodes, but it was stuck in the (T) calculation, it could not finish in 20 hours.  <br />
+<br />
+<br />
+
+<pre> Iterations converged<br />
+ CCSD correlation energy / hartree =        -2.916922299620284<br />
+ CCSD total energy / hartree       =      -844.252405540227414<br />
+<br />
+ Singles contributions<br />
+<br />
+ Doubles contributions<br />
+ CCSD(T)<br />
+ Using plain CCSD(T) code<br />
+ Using sliced CCSD(T) code<br />
+</pre>
+<br />
+If I disable the sliced (T) algorithm, there will be a "ccsd_t: MA error sgl         17596287801",  I believe it is due to insufficient of local memory. <br />
+<br />
+3 weeks ago, Thomas Dunning has presented the NWChemEX project at a Singapore conference, and he mentioned that they have achieved 1 PF/s on 20K nodes in Blue Water with a more efficient  (T) algorithm, has this been implemented to the current version of NWChem?<br />
+<br />
+Thanks!<br />
+<br />
+~Dominic
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/8071.html">Edited On</a></b> 4:29:22 AM PDT - Mon, Apr 3rd 2017 <b>by</b> Chiensh
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8077"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8077" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Chiensh/131.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Chiensh</a>  <font class="group_text">Member</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Chiensh/131.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Chiensh/8077.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Chiensh/131.html">22</a><br />
+                                Posts <a href="../../search/memposts/Chiensh/131.html">40</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8077.html">11:31:54 PM PDT - Tue, Apr 4th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">CCSD can be calculated fairly efficiently on KNL, but there is no way to get the (T) calculation complete, does anyone has the same problem?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8081"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8081" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Jhammond/11.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Jhammond</a>  <font class="group_text">NWChemDeveloper, bureaucrat</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Jhammond/11.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Jhammond/8081.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Jhammond/11.html">3</a><br />
+                                Posts <a href="../../search/memposts/Jhammond/11.html">85</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8081.html">10:18:05 AM PDT - Thu, Apr 6th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">The CCSD(T) results that Dunning presented likely correspond to <a target='blank' href="http://pubs.acs.org/doi/abs/10.1021/ct500404c" class="external free">http://pubs.acs.org/doi/abs/10.1021/ct500404c</a> and I think they used the semidirect module rather than TCE.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8082"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8082" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Jhammond/11.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Jhammond</a>  <font class="group_text">NWChemDeveloper, bureaucrat</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Jhammond/11.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Jhammond/8082.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Jhammond/11.html">3</a><br />
+                                Posts <a href="../../search/memposts/Jhammond/11.html">85</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8082.html">10:24:34 AM PDT - Thu, Apr 6th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I don't know what the issue with ARMCI-MPI+Casper is, but you should just use whatever works best.  ARMCI-MPI exists as an alternative for cases where ARMCI isn't working well.  If ARMCI works well, there is no reason not to use it.  My guess is there is something wrong in the usage/configuration of ARMCI-MPI, Casper, or MPI, but I don't have time to debug it right now.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8083"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8083" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Jhammond/11.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Jhammond</a>  <font class="group_text">NWChemDeveloper, bureaucrat</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Jhammond/11.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Jhammond/8083.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Jhammond/11.html">3</a><br />
+                                Posts <a href="../../search/memposts/Jhammond/11.html">85</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8083.html">10:27:07 AM PDT - Thu, Apr 6th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">"mpirun -perhost 1 -genv CSP_NG 1" runs one MPI rank per node, does it not?  I don't know how Casper even functions in that case.  You need to launch N+G processes per node, where N is the number of application processes per node, and CSP_NG=G.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_8087"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_8087" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Chiensh/131.html" onmouseover="mopen('mem8')" onmouseout="mclosetime()">Chiensh</a>  <font class="group_text">Member</font>
+                                    <div id="mem8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Chiensh/131.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Chiensh/8087.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Chiensh/131.html">22</a><br />
+                                Posts <a href="../../search/memposts/Chiensh/131.html">40</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id8087.html">9:44:45 PM PDT - Fri, Apr 7th 2017 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thanks Jeff!<br />
+However, I believe the main reason why my copy of  ARMCI-MPi+CASPER is much slower because it is only running in single thread while other copies using at least 3 - 4 threads on each MPI rank; I don't know why OpenMP and MKL thread is not running in this case.<br />
+<br />
+Thanks for Edo's help, I managed to get the (T) calculation completed using the source code downloaded from the developer trunk (in which setting USE_F90_ALLOCATABLE=T and USE_KNL=y, which defines DINTEL_64ALIGN in the compilation) <br />
+<br />
+
+<pre>CCSD(T)<br />
+Using plain CCSD(T) code<br />
+Using sliced CCSD(T) code<br />
+<br />
+CCSD[T]  correction energy / hartree =        -0.150973709276513<br />
+CCSD[T] correlation energy / hartree =        -3.067895958443244<br />
+CCSD[T] total energy / hartree       =      -844.403379199049482<br />
+CCSD(T)  correction energy / hartree =        -0.147995713401607<br />
+CCSD(T) correlation energy / hartree =        -3.064917962568339<br />
+CCSD(T) total energy / hartree       =      -844.400401203174624<br />
+Cpu &amp; wall time / sec        66318.6        20408.5<br />
+<br />
+Parallel integral file used   12303 records with       0 large values<br />
+<br />
+<br />
+Task  times  cpu:    68936.9s     wall:    22442.4s<br />
+</pre>
+<br />
+
+<pre><br />
+<br />
+                               NWChem Input Module<br />
+                                -------------------<br />
+<br />
+<br />
+ Summary of allocated global arrays<br />
+-----------------------------------<br />
+  No active global arrays<br />
+</pre>
+<br />
+<br />
+<br />
+On the other hand, in the developer trunk, updated subroutine grad_v_lr_loca in src/nwpw/pspw/lib/psp/psp.F will not be compiled by ifort Version 17.0.1.132 when O2/O3 and  -qopenmp are used together due to an unknown compiler error:<br />
+<br />
+
+<pre>ifort  -c -i8 -align -fpp -qopt-report-file=stderr -qopenmp -qopt-report-phase=openmp -qno-openmp-offload -fimf-arch-consistency=true -finline-limit=250 -O3  -unroll  -ip -xMIC-AVX512  -I.  -I/home/users/astar/ihpc/chiensh/nwchem-dev/src/include -I/home/users/astar/ihpc/chiensh/nwchem-dev/src/tools/install/include -DEXT_INT -DLINUX -DLINUX64 -DUSE_OPENMP  -DIFCV8 -DIFCLINUX -DINTEL_64ALIGN -DINTEL_64ALIGN -DSCALAPACK -DPARALLEL_DIAG -DUSE_F90_ALLOCATABLE psp.F<br />
+Intel(R) Advisor can now assist with vectorization and show optimization<br />
+  report messages with your source code.<br />
+See "<a href="https://software.intel.com/en-us/intel-advisor-xe" class="external free">https://software.intel.com/en-us/intel-advisor-xe</a>" for details.<br />
+<br />
+<br />
+Begin optimization report for: PSP_PRJ_INDX_ALLOC_SW1A_SW2A<br />
+<br />
+   Report from: OpenMP optimizations [openmp]<br />
+<br />
+psp.F(684:7-684:7):OMP:psp_prj_indx_alloc_sw1a_sw2a_:  OpenMP multithreaded code generation for MASTER was successful<br />
+psp.F(687:7-687:7):OMP:psp_prj_indx_alloc_sw1a_sw2a_:  OpenMP multithreaded code generation for BARRIER was successful<br />
+psp.F(700:7-700:7):OMP:psp_prj_indx_alloc_sw1a_sw2a_:  OpenMP multithreaded code generation for MASTER was successful<br />
+psp.F(704:7-704:7):OMP:psp_prj_indx_alloc_sw1a_sw2a_:  OpenMP multithreaded code generation for BARRIER was successful<br />
+===========================================================================
+ifort: error #10105: /home/users/app/intel/compilers_and_libraries_2017.1.132/linux/bin/intel64/fortcom: core dumped<br />
+ifort: warning #10102: unknown signal(-326317584)<br />
+Segmentation fault (core dumped)<br />
+</pre>
+<br />
+<br />
+A small modification  show in the following seems to be able to fix the problem<br />
+<br />
+
+<pre>1236c       integer ftmp(2)<br />
+1237       integer ftmp(2),ftemp<br />
+...<br />
+1436&nbsp;!$OMP DO<br />
+1437       do j=1,nion<br />
+1438          ftemp=ftmp(1)+3*(j-1)<br />
+1439          fion(1,j) = fion(1,j) + dbl_mb(ftemp)<br />
+1440          fion(2,j) = fion(2,j) + dbl_mb(ftemp+1)<br />
+1441          fion(3,j) = fion(3,j) + dbl_mb(ftemp+2)<br />
+1442<br />
+1443 c         fion(1,j) = fion(1,j) + dbl_mb(ftmp(1)+3*(j-1))<br />
+1444 c         fion(2,j) = fion(2,j) + dbl_mb(ftmp(1)+3*(j-1)+1)<br />
+1445 c         fion(3,j) = fion(3,j) + dbl_mb(ftmp(1)+3*(j-1)+2)<br />
+1446       end do<br />
+1447&nbsp;!$OMP END DO
+</pre></td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/8087.html">Edited On</a></b> 7:23:56 PM PDT - Sat, Apr 8th 2017 <b>by</b> Chiensh
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id2292/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.243 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2292/#post_8087 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 06:29:24 GMT -->
+</html>
+
+
+
+
+
