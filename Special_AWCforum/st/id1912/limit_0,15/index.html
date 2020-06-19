@@ -1,0 +1,2479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id1912/limit:0,15/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:30:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="nwchem-6.6 ifort, segmentation fault Viewed 9962 times, With a total of 16 Posts" />
+<link rel="shortcut icon" href="../../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>nwchem-6.6 ifort, segmentation fault - NWChem</title>
+		<link rel="stylesheet" href="../../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../../extensions/awc/forums/awc.js"></script><script src="../../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id1912_limit_0_15 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../../images/MS3_NWChem.logo3.png);" href="../../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >nwchem-6.6 ifort, segmentation fault</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="1912">
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 9962 times, With a total of 16 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../../credits.html">Credits</a></li>
+        			<li><a href="../../../search.html">Search</a></li>
+            <li><a href="../../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"><font class="page_jumps_top">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_top"><a href="../limit_15%2c16/index.html#last">2</a></font><font class="page_jumps_top"><a href="../limit_15%2c17/index.html#last">Next 16</a></font><font class="page_jumps_top"><a href="../limit_15%2c17/index.html#last">Last</a></font></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_6821"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6821" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6821.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6821.html">10:06:31 AM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi all,<br />
+<br />
+I got a problem that I couldn't figure out. I appreciate very much if you could help me.<br />
+<br />
+I am using Red Hat Enterprise Linux Server release 6.7 (Santiago). <br />
+I compiled the nwchem-6.6 with the following script:<br />
+<br />
+export NWCHEM_TOP=~/Softwares/nwchem-6.6<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_MODULES=all<br />
+export USE_INTERNALBLAS=y<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export USE_OPENMP=1<br />
+export MKLROOT=/opt/software/intel/composerxe2013/composer_xe_2013.0.079/mkl<br />
+export BLASOPT="-L/opt/software/intel/composerxe2013/composer_xe_2013.0.079/mkl/lib/intel64/ -mkl -openmp   -lpthread -lm"<br />
+export LIBRARY_PATH="$LIBRARY_PATH:/opt/software/intel/composerxe2013/composer_xe_2013.0.079/mkl/lib/intel64/"<br />
+export SCALAPACK="-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"<br />
+export MPI_LOC=/opt/software/openmpi/1.4.3-gcc/<br />
+export MPI_LIB=$MPI_LOC/lib<br />
+export MPI_INCLUDE=$MPI_LOC/include<br />
+export LIBMPI="-lmpi -lmpi_f77"<br />
+export NWCHEM_EXECUTABLE=~/Softwares/nwchem-6.6/bin/LINUX64/nwchem<br />
+dir=`pwd`<br />
+cd ~/Softwares/nwchem-6.6/src<br />
+make nwchem_config NWCHEM_MODULES=all &gt; make_config_intel.log<br />
+make FC=ifort -j 16 &gt;&amp; make_intel.log<br />
+<br />
+then it generated nwchem under ~/Softwares/nwchem-6.6/bin/LINUX64/, Then I run an example in .../nwchem-6.6/QA/tests/tce_ozone_2eorb:<br />
+
+<pre>../../../bin/LINUX64/nwchem  tce_ozone_2eorb.nw <br />
+</pre>
+and I got segmentation fault. The last message is following:<br />
+<br />
+
+<pre>Summary of "ao basis" -&gt; "ao basis" (spherical)<br />
+------------------------------------------------------------------------------<br />
+      Tag                 Description            Shells   Functions and Types<br />
+---------------- ------------------------------  ------  ---------------------<br />
+O                       user specified             10       24   5s3p2d<br />
+</pre>
+<br />
+<br />
+
+<pre>     Symmetry analysis of basis<br />
+     --------------------------<br />
+</pre>
+<br />
+
+<pre>       a1         29<br />
+       a2          9<br />
+       b1         12<br />
+       b2         22<br />
+</pre>
+<br />
+<br />
+
+<pre>Forming initial guess at       0.1s<br />
+</pre>
+<br />
+forrtl: severe (174): SIGSEGV, segmentation fault occurred<br />
+Image              PC                Routine            Line        Source<br />
+libmpi.so.0        00007FD4B0D172AE  Unknown               Unknown  Unknown<br />
+libmkl_blacs_inte  00007FD4B0FAC4D1  Unknown               Unknown  Unknown<br />
+libmkl_blacs_inte  00007FD4B0F9ECBB  Unknown               Unknown  Unknown<br />
+libmkl_blacs_inte  00007FD4B0F9E719  Unknown               Unknown  Unknown<br />
+libmkl_blacs_inte  00007FD4B0FC578D  Unknown               Unknown  Unknown<br />
+nwchem             00000000031C2819  Unknown               Unknown  Unknown<br />
+nwchem             00000000009F12A3  Unknown               Unknown  Unknown<br />
+nwchem             0000000000A0BE12  Unknown               Unknown  Unknown<br />
+nwchem             00000000009F2D3B  Unknown               Unknown  Unknown<br />
+nwchem             0000000001AE21AF  Unknown               Unknown  Unknown<br />
+nwchem             0000000001AE1F71  Unknown               Unknown  Unknown<br />
+nwchem             0000000000423ED6  Unknown               Unknown  Unknown<br />
+nwchem             0000000000415D31  Unknown               Unknown  Unknown<br />
+nwchem             000000000040A56B  Unknown               Unknown  Unknown<br />
+nwchem             000000000040A01C  Unknown               Unknown  Unknown<br />
+libc.so.6          0000003AE061ED5D  Unknown               Unknown  Unknown<br />
+nwchem             0000000000409EE9  Unknown               Unknown  Unknown<br />
+<br />
+I also tried different BLASOPT like:<br />
+export BLASOPT="-L/opt/software/intel/composerxe2013/composer_xe_2013.0.079/mkl/lib/intel64/ -lmkl_core -lmkl_sequential -lmkl_intel_ilp64"<br />
+&amp;&amp;<br />
+export BLASOPT="-L/opt/software/intel/composerxe2013/composer_xe_2013.0.079/mkl/lib/intel64/ -lmkl_core -lmkl_intel_ilp64"<br />
+<br />
+but they don't work and I got same segmentation fault.<br />
+<br />
+It looks like something wrong with openmpi, but I don't know why and how to solve it.<br />
+<br />
+Thank you very much for your help!<br />
+<br />
+Best,<br />
+Bobo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6822"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6822" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6822.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6822.html">10:19:18 AM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please try the following<br />
+<br />
+
+<pre>
+
+export BLAS_SIZE=8
+export SCALAPACK_SIZE=8
+cd $NWCHEM_TOP/src/tools
+make clean
+make FC=ifort
+cd ..
+make FC=ifort link
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6823"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6823" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6823.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6823.html">10:30:05 AM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi Edoapra,<br />
+<br />
+It still doesn't work. I still got the segmentation fault.<br />
+<br />
+Thanks,<br />
+Bobo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6825"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6825" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6825.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6825.html">10:56:55 AM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">unset SCALAPACK<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Let's try to see if SCALAPACK is the culprit<br />
+
+<pre>
+unset SCALAPACK
+unset SCALAPACK_SIZE
+cd $NWCHEM_TOP/src/tools
+make clean
+make FC=ifort
+cd ..
+make FC=ifort 
+
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6828"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6828" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6828.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6828.html">11:36:28 AM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Compiling error<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">If I unset SCALAPACK. I can't compile successfully. I got compiling error as following:<br />
+/home/bobo/Softwares/nwchem-6.6/src/tools/install/lib/libga.a(scalapack.o): In function `gai_lu_s<br />
+olve_':<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x18ad): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x18d4): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x18fb): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x1922): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x201d): undefined reference to `descinit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x2070): undefined reference to `descinit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x20d2): undefined reference to `pdgetrf_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x2155): undefined reference to `pdgetrs_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x2524): undefined reference to `blacs_gridinit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x2551): undefined reference to `blacs_gridinfo_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x262c): undefined reference to `blacs_gridexit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x264f): undefined reference to `blacs_gridexit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x2810): undefined reference to `blacs_gridinfo_'<br />
+/home/bobo/Softwares/nwchem-6.6/src/tools/install/lib/libga.a(scalapack.o): In function `ga_chole<br />
+sky_':<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x3256): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x327d): undefined reference to `numroc_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x35f1): undefined reference to `descinit_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x3644): undefined reference to `pdpotrf_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x3c15): undefined reference to `blacs_gridinfo_'<br />
+../ga-5-4/global/src/scalapack.F:(.text+0x3d0b): undefined reference to `blacs_gridexit_'<br />
+<br />
+Thanks,<br />
+Bobo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6829"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6829" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6829.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6829.html">2:55:33 PM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Let's keep it simple<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Let's try too keep it simple since you have too many variables to deal with (MKL,Scalapack, MPI, etc ...)<br />
+Please set (and unset) the following variables<br />
+
+<pre>
+
+export NWCHEM_TOP=~/Softwares/nwchem-6.6
+export NWCHEM_TARGET=LINUX64
+export NWCHEM_MODULES=all
+export USE_INTERNALBLAS=y
+export USE_MPI=y
+export USE_MPIF=y
+export USE_MPIF4=y
+export PATH=/opt/software/openmpi/1.4.3-gcc/bin:$PATH
+unset USE_OPENMP
+unset BLASOPT 
+unset SCALAPACK
+unset BLAS_SIZE
+unset SCALAPACK_SIZE
+unset MPI_LIB
+unset MPI_INCLUDE
+unset LIBMPI
+</pre><br />
+Then, recompile from scratch<br />
+
+<pre>
+
+cd $NWCHEM_TOP/src
+make realclean
+rm -rf tools/build tools/install
+rm -rf ../lib/LINUX64/*
+make nwchem_config
+make FC=ifort  &gt;&amp; make_intel.log
+</pre><br />
+<br />
+By the way, pre-compiled NWChem 6.6 is available for RedHat 6.6 from the Epel repository. You can install it by typing the following commands<br />
+<br />
+
+<pre>
+
+sudo yum -y install http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+sudo yum update
+sudo yum install nwchem-openmpi.x86_64
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../../post/edithistory/6829.html">Edited On</a></b> 2:55:57 PM PST - Fri, Jan 8th 2016 <b>by</b> Edoapra
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6830"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6830" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6830.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6830.html">3:23:12 PM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi Edoapra,<br />
+<br />
+Actually I need to add some code to nwchem and then test, so I need to compile it on my side.<br />
+<br />
+I tried the simple compiling as you suggested, but I got the following:<br />
+<br />
+checking whether it is safe to define __EXTENSIONS__... yes<br />
+checking whether a simple C MPI program compiles... yes<br />
+configure: searching for MPI_TS...<br />
+checking mpi.h usability... yes<br />
+checking mpi.h presence... yes<br />
+checking for mpi.h... yes<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make[1]: *** [build/config.status] Error 1<br />
+make[1]: Leaving directory `/home/bobo/Softwares/nwchem-6.6/src/tools'<br />
+make: *** [libraries] Error 1<br />
+<br />
+Not sure what does this mean. I have ga-5-4 installed and <br />
+[bobo@cerberus src]$ ls ../../ga-5-4b/comex/<br />
+aclocal.m4     config.h.in    configure.ac   libcomex.la    Makefile       src-common/    src-mpi-pr/    src-template/<br />
+build-aux/     config.log     libarmcii.la   .libs/         Makefile.am    src-dmapp/     src-mpi-pt/    stamp-h1<br />
+compat/        config.status  libarmci.la    libtool        Makefile.in    src-mpi/       src-ofa/       testing/<br />
+config.h       configure      libcomexi.la   m4/            src-armci/     src-mpi-mt/    src-portals4/  tools/<br />
+<br />
+Thanks for your help.<br />
+Bobo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6832"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6832" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem8')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6832.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6832.html">4:17:09 PM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">mpif90<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I assumed that you had mpif90 installed in /opt/software/openmpi/1.4.3-gcc/bin, that's why I have asked you to add this directory to your path. Please find the correct location of mpif90 and add that directory to your PATH<br />
+<br />
+<a target='blank' href="../../../../../../www.nwchem-sw.org/index.php/Compiling_NWChem.html#MPI_variables" class="external free">http://www.nwchem-sw.org/index.php/Compiling_NWChem#MPI_variables</a>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6833"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6833" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem9')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6833.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6833.html">7:06:24 PM PST - Fri, Jan 8th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">mpif90 gives me the following:<br />
+[bobo@cerberus src]$ mpif90 -show<br />
+ifort -I/opt/intel/impi/5.0.1.035/intel64/include -I/opt/intel/impi/5.0.1.035/intel64/lib -L/opt/intel/impi/5.0.1.035/intel64/lib<br />
+<br />
+however, there is no path of /opt/intel/impi/5.0.1.035/intel64 in my machine. but mpif90 is in /opt/software/openmpi/1.4.3-gcc/bin/, so I am not sure why mpif90 -show isn't giving the same path<br />
+[bobo@cerberus src]$ ls /opt/software/openmpi/1.4.3-gcc/bin/<br />
+mpic++    mpiCC-vt   mpiexec    mpif90-vt   ompi-iof      opari       orte-ps      otfconfig      otfmerge  vtf90<br />
+mpicc     mpic++-vt  mpif77     mpirun      ompi-ps       orte-clean  orterun      otfdecompress  vtcc      vtfilter<br />
+mpiCC     mpicxx     mpif77-vt  ompi-clean  ompi-server   orted       otfaux       otfdump        vtcxx     vtunify<br />
+mpicc-vt  mpicxx-vt  mpif90     ompi_info   opal_wrapper  orte-iof    otfcompress  otfinfo        vtf77<br />
+<br />
+so I tried:<br />
+export NWCHEM_TOP=~/Softwares/nwchem-6.6<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_MODULES=all<br />
+export USE_INTERNALBLAS=y<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+
+<ol><li>export PATH=/opt/software/openmpi/1.4.3-gcc/bin:$PATH<br />
+</li><li>export PATH=/opt/intel/impi/5.0.1.035/intel64/bin:$PATH<br />
+</li></ol>
+export MPI_LOC=/opt/software/openmpi/1.4.3-gcc/<br />
+export MPI_LIB=$MPI_LOC/lib<br />
+export MPI_INCLUDE=$MPI_LOC/include<br />
+unset USE_OPENMP<br />
+unset BLASOPT<br />
+unset SCALAPACK<br />
+unset BLAS_SIZE<br />
+unset SCALAPACK_SIZE<br />
+
+<ol><li>unset MPI_LIB<br />
+</li><li>unset MPI_INCLUDE<br />
+</li><li>unset LIBMPI<br />
+</li></ol>
+cd $NWCHEM_TOP/src<br />
+make realclean<br />
+rm -rf tools/build tools/install<br />
+rm -rf ../lib/LINUX64/*<br />
+make nwchem_config<br />
+make FC=ifort  &gt;&amp; make_simple.log<br />
+<br />
+and It compiled successfully and I can run it without error!<br />
+<br />
+Then do I need to try adding something like MKL and Scalapack?<br />
+I will try some of those and let you know.<br />
+<br />
+Thank you very much.<br />
+<br />
+Bobo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6847"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6847" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem10')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6847.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6847.html">11:57:56 AM PST - Mon, Jan 11th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">MKL<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">First, let's try MKL.<br />
+What version of Intel compiler are you using?<br />
+In other words, what's the output of  <tt> ifort -V</tt>?<br />
+Based on the version of ifort you are using, we need to choose the correct value of BLASOPT by using the Intel MKL advisor<br />
+<a target='blank' href="https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor" class="external free">https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor</a>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6849"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6849" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem11')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6849.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6849.html">12:05:19 PM PST - Mon, Jan 11th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi Edoapra,<br />
+<br />
+[bobo@hydra src]$ ifort -v<br />
+ifort version 13.1.3
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6850"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6850" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem12')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem12" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6850.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6850.html">12:54:40 PM PST - Mon, Jan 11th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please try the following<br />
+<br />
+
+<pre>
+
+export BLASOPT=&quot;-Wl,--start-group \
+ $MKLROOT/lib/intel64/libmkl_intel_ilp64.a \
+ $MKLROOT/lib/intel64/libmkl_core.a \
+ $MKLROOT/lib/intel64/libmkl_sequential.a \
+ -Wl,--end-group -lpthread -lm&quot;
+
+export BLAS_SIZE=8
+
+cd $NWCHEM_TOP/src/tools
+rm -rf build install
+make FC=ifort
+cd ..
+make FC=ifort link
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6854"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6854" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem13')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem13" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6854.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6854.html">2:42:56 PM PST - Tue, Jan 12th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Dear Edoapra <br />
+<br />
+I don't why I got mpi error again, when I tried to recompile it by just using mpi (no mkl, no BLASOPT)<br />
+<br />
+checking for mpi.h... yes<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make[1]: *** [build/config.status] Error 1<br />
+make[1]: Leaving directory `/home/bobo/Softwares/nwchem-6.6/src/tools'<br />
+make: *** [libraries] Error 1<br />
+<br />
+Actually I succeeded last time. Don't know why not work this time.<br />
+Still mpif90 -show gives<br />
+[bobo@cerberus src]$ mpif90 -show<br />
+ifort -I/opt/intel/impi/5.0.1.035/intel64/include -I/opt/intel/impi/5.0.1.035/intel64/lib -L/opt/intel/impi/5.0.1.035/intel64/lib<br />
+<br />
+but there is no folder called impi in /opt/intel/<br />
+[bobo@cerberus src]$ ls /opt/intel/<br />
+ActivationTool  ism  licenses<br />
+<br />
+If i change MPI_LOC=/opt/intel/impi/5.0.1.035/intel64, I will get<br />
+checking whether it is safe to define __EXTENSIONS__... yes<br />
+checking for C compiler vendor... gnu<br />
+configure: WARNING: /opt/intel/impi/5.0.1.035/intel64 of with_mpi not parsed<br />
+checking whether a simple C MPI program compiles... no<br />
+configure: error: in `/home/bobo/Softwares/nwchem-6.6/src/tools/build':<br />
+configure: error: could not compile simple C MPI program<br />
+See `config.log' for more details<br />
+<br />
+Do you have any idea how should I do?<br />
+Thank you very much.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6857"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6857" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem14')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem14" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Edoapra/6857.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6857.html">10:48:58 PM PST - Tue, Jan 12th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please go back to the previous settings,  then recompile just the tools directory.<br />
+Next, set BLASOPT as shown in my last message and try "make FC=ifort link".<br />
+Please send me the error that this command will produce
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_6862"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_6862" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sbbfifa/664291.html" onmouseover="mopen('mem15')" onmouseout="mclosetime()">Sbbfifa</a>  <font class="group_text">Member</font>
+                                    <div id="mem15" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sbbfifa/664291.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sbbfifa/6862.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sbbfifa/664291.html">2</a><br />
+                                Posts <a href="../../../search/memposts/Sbbfifa/664291.html">11</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id6862.html">6:49:51 AM PST - Wed, Jan 13th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi Edoapra<br />
+I did<br />
+export NWCHEM_TOP=~/Softwares/nwchem-6.6<br />
+export NWCHEM_TARGET=LINUX64<br />
+export NWCHEM_MODULES=all<br />
+export USE_INTERNALBLAS=y<br />
+export USE_MPI=y<br />
+export USE_MPIF=y<br />
+export USE_MPIF4=y<br />
+export MPI_LOC=/opt/software/openmpi/1.4.3-gcc/<br />
+export MPI_LIB=$MPI_LOC/lib<br />
+export MPI_INCLUDE=$MPI_LOC/include<br />
+export BLASOPT="-Wl,--start-group \<br />
+
+<pre>$MKLROOT/lib/intel64/libmkl_intel_ilp64.a \<br />
+$MKLROOT/lib/intel64/libmkl_core.a \<br />
+$MKLROOT/lib/intel64/libmkl_sequential.a \<br />
+-Wl,--end-group -lpthread -lm"<br />
+</pre>
+<br />
+export BLAS_SIZE=8<br />
+cd $NWCHEM_TOP/src/tools<br />
+rm -rf build install<br />
+make FC=ifort<br />
+<br />
+I got<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make: *** [build/config.status] Error 1
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"><font class="page_jumps_bot">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_bot"><a href="../limit_15%2c16/index.html#last">2</a></font><font class="page_jumps_bot"><a href="../limit_15%2c17/index.html#last">Next 16</a></font><font class="page_jumps_bot"><a href="../limit_15%2c17/index.html#last">Last</a></font></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id1912/limit:0,15/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.280 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id1912/limit:0,15/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:30:34 GMT -->
+</html>
+
+
+
+
+
