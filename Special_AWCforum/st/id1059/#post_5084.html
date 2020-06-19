@@ -1,0 +1,2309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id1059/#post_5084 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 03:21:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="Issue with pspw using nwchem 6.3 on AMD Bulldozer -- bug in nwchem 6.3? Viewed 3412 times, With a total of 6 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>Issue with pspw using nwchem 6.3 on AMD Bulldozer -- bug in nwchem 6.3? - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id1059 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >Issue with pspw using nwchem 6.3 on AMD Bulldozer -- bug in nwchem 6.3?</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="1059">
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 3412 times, With a total of 6 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_3836"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3836" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Ohlincha/1364.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Ohlincha</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Ohlincha/1364.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Ohlincha/3836.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Ohlincha/1364.html">16</a><br />
+                                Posts <a href="../../search/memposts/Ohlincha/1364.html">115</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3836.html">11:39:10 PM PST - Wed, Nov 13th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">While playing around with the pspw module using nwchem 6.3 I noticed that while the jobs would finish without issue on my AMD Athlon II X3 445, AMD Phenom II X6 1055T and Intel i5-2400 nodes, they failed to converge on my FX8150 and FX8350 nodes. Instead, the structures blew up. I've tried no external blas, openblas and acml (int; with and without fma4), all with the same results. However, the jobs do converge on the bulldozer and vishera (FX 8x50) cpus when using nwchem 6.1.1, with would indicate an issue specific to nwchem 6.3.<br />
+<br />
+Edit: I've never noticed any issues using the DFT module -- it's only pspw that's causing the issue, and only in nwchem 6.3<br />
+<br />
+(There's also a very minor typo in the nwchem code (src/band/minimizer/band_minimizer.F) -- it says Grassman/Stiefel with one n in Grassmann, rather than two.)<br />
+<br />
+I'm not trying to do any production work in pspw, but rather I just want to report a possible bug.<br />
+<br />
+The following job was used (it's just a random test job that triggers the issue):<br />
+
+<pre>
+scratch_dir /home/me/scratch
+Title &quot;pspw test job&quot;
+
+Start  biphenyl_cation_twisted-1
+
+echo
+
+charge 1
+
+geometry autosym units angstrom
+ C     0.00000     -3.54034     0.00000
+ C     -1.20296     -2.84049     -0.216000
+ C     -1.20944     -1.46171     -0.206253
+ C     0.00000     -0.721866     0.00000
+ C     1.20944     -1.46171     0.206253
+ C     1.20296     -2.84049     0.216000
+ C     0.00000     0.721866     0.00000
+ C     1.20944     1.46171     -0.206253
+ C     1.20296     2.84049     -0.216000
+ C     -1.20944     1.46171     0.206253
+ C     0.00000     3.54034     0.00000
+ C     -1.20296     2.84049     0.216000
+ H     0.00000     -4.62590     0.00000
+ H     -2.12200     -3.38761     -0.395378
+ H     -2.13673     -0.938003     -0.401924
+ H     2.12200     -3.38761     0.395378
+ H     2.12200     3.38761     -0.395378
+ H     -2.13673     0.938003     0.401924
+ H     0.00000     4.62590     0.00000
+ H     -2.12200     3.38761     0.395378
+ H     2.13673     0.938003     -0.401924
+ H     2.13673     -0.938003     0.401924
+end
+
+ecce_print /home/me/neon/job1056/ecce.out
+
+nwpw
+  simulation_cell
+     lattice_vectors
+      2.000000e+01 0.000000e+00 0.000000e+00
+      0.000000e+00 2.000000e+01 0.000000e+00
+      0.000000e+00 0.000000e+00 2.000000e+01
+  end 
+  mult 2
+  np_dimensions -1  -1  
+  tolerances 1e-7  1e-7
+end
+
+driver
+  default
+end
+
+task pspw optimize
+</pre><br />
+<br />
+The following nodes worked fine:<br />
+AMD Athlon II X3, 8 Gb RAM<br />
+AMD Phenom II X6, 8 Gb RAM<br />
+Intel i5-2400, 16 Gb RAM<br />
+<br />
+The final structure was this:<br />
+
+<pre>
+22
+Structure 1
+C               0.00000            -3.43835             0.00000
+C              -1.17952            -2.76904            -0.27325
+C              -1.18743            -1.41309            -0.25617
+C               0.00000            -0.70724             0.00000
+C               1.18743            -1.41309             0.25617
+C               1.17952            -2.76904             0.27325
+C               0.00000             0.70724             0.00000
+C               1.18743             1.41309            -0.25617
+C               1.17952             2.76904            -0.27325
+C              -1.18743             1.41309             0.25617
+C               0.00000             3.43835             0.00000
+C              -1.17952             2.76904             0.27325
+H               0.00000            -4.51201             0.00000
+H              -2.07930            -3.32101            -0.49999
+H              -2.09224            -0.87241            -0.48912
+H               2.07930            -3.32101             0.49999
+H               2.07930             3.32101            -0.49999
+H              -2.09224             0.87241             0.48912
+H               0.00000             4.51201             0.00000
+H              -2.07930             3.32101             0.49999
+H               2.09224             0.87241            -0.48912
+H               2.09224            -0.87241             0.48912
+</pre><br />
+<br />
+cat nwch.nwout|grep "Total PSPW energy"<br />
+
+<pre>
+ Total PSPW energy  &nbsp;:  -0.7403126784E+02
+ Total PSPW energy  &nbsp;:  -0.7403944621E+02
+ Total PSPW energy  &nbsp;:  -0.7404121161E+02
+ Total PSPW energy  &nbsp;:  -0.7404171961E+02
+ Total PSPW energy  &nbsp;:  -0.7404173291E+02
+ Total PSPW energy  &nbsp;:  -0.7404176133E+02
+ Total PSPW energy  &nbsp;:  -0.7404176138E+02
+ Total PSPW energy  &nbsp;:  -0.7404178719E+02
+ Total PSPW energy  &nbsp;:  -0.7404179836E+02
+ Total PSPW energy  &nbsp;:  -0.7404181219E+02
+ Total PSPW energy  &nbsp;:  -0.7404181529E+02
+ Total PSPW energy  &nbsp;:  -0.7404183416E+02
+ Total PSPW energy  &nbsp;:  -0.7404183384E+02
+ Total PSPW energy  &nbsp;:  -0.7404182554E+02
+ Total PSPW energy  &nbsp;:  -0.7404183894E+02
+ Total PSPW energy  &nbsp;:  -0.7404184777E+02
+ Total PSPW energy  &nbsp;:  -0.7404184781E+02
+ Total PSPW energy  &nbsp;:  -0.7404185248E+02
+ Total PSPW energy  &nbsp;:  -0.7404185252E+02
+ Total PSPW energy  &nbsp;:  -0.7404183390E+02
+ Total PSPW energy  &nbsp;:  -0.7404185160E+02
+ Total PSPW energy  &nbsp;:  -0.7404185179E+02
+ Total PSPW energy  &nbsp;:  -0.7404185172E+02
+ Total PSPW energy  &nbsp;:  -0.7404185163E+02
+ Total PSPW energy  &nbsp;:  -0.7404185167E+02
+</pre><br />
+<br />
+The step/energy data for the first geometry cycle behaves:<br />
+
+<pre>
+== Energy Calculation ==
+
+
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Wed Nov 13 14:25:02 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho 
+    ------------------------------------------------------
+     -  15 steepest descent iterations performed
+      10   -0.3692699170E+02   -0.26760E+01    0.53590E-02
+     -  10 steepest descent iterations performed
+      20   -0.6158204365E+02   -0.41876E+00    0.31092E-03
+     -  10 steepest descent iterations performed
+      30   -0.7003979846E+02   -0.12758E+00    0.42769E-04
+     -  10 steepest descent iterations performed
+      40   -0.7263392229E+02   -0.34324E-01    0.21020E-04
+     -  10 steepest descent iterations performed
+      50   -0.7336419645E+02   -0.13767E-01    0.10561E-04
+     -  10 steepest descent iterations performed
+      60   -0.7380342913E+02   -0.14352E-01    0.99511E-06
+     -  10 steepest descent iterations performed
+      70   -0.7397649640E+02   -0.61870E-02    0.24790E-04
+      80   -0.7401568945E+02   -0.25650E-02    0.10674E-04
+ [..]
+     270   -0.7403126784E+02   -0.99193E-07    0.18719E-09
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Wed Nov 13 14:49:47 2013  &lt;&lt;&lt;
+</pre><br />
+<br />
+<br />
+The following nodes lead to exploding structures:<br />
+AMD FX8150, 32 Gb RAM<br />
+AMD FX8350, 32 Gb RAM<br />
+<br />
+
+<pre>
+22
+Structure 23
+C               0.00000            -3.28702             0.00000
+C              -3.07661            -4.04679            -3.00814
+C              -2.98013            -0.93045            -3.30301
+C               0.00000            -1.11917             0.00000
+C               2.98013            -0.93045             3.30301
+C               3.07661            -4.04679             3.00814
+C               0.00000             1.11917             0.00000
+C               2.98013             0.93045            -3.30301
+C               3.07661             4.04679            -3.00814
+C              -2.98013             0.93045             3.30301
+C               0.00000             3.28702             0.00000
+C              -3.07661             4.04679             3.00814
+H               0.00000            -4.78561             0.00000
+H              -4.23747            -6.33817            -3.55692
+H              -4.05310             0.84076            -3.86806
+H               4.23747            -6.33817             3.55692
+H               4.23747             6.33817            -3.55692
+H              -4.05310            -0.84076             3.86806
+H               0.00000             4.78561             0.00000
+H              -4.23747             6.33817             3.55692
+H               4.05310            -0.84076            -3.86806
+H               4.05310             0.84076             3.86806
+</pre><br />
+<br />
+cat nwch.nwout|grep "Total PSPW energy"<br />
+
+<pre>
+ Total PSPW energy  &nbsp;:   0.7974031861E+02
+ Total PSPW energy  &nbsp;:   0.7246518114E+02
+ Total PSPW energy  &nbsp;:   0.6606772951E+02
+ Total PSPW energy  &nbsp;:   0.5673312109E+02
+ Total PSPW energy  &nbsp;:   0.4840063736E+02
+ Total PSPW energy  &nbsp;:   0.4059627772E+02
+ Total PSPW energy  &nbsp;:   0.3478817836E+02
+ Total PSPW energy  &nbsp;:   0.2592070851E+02
+ Total PSPW energy  &nbsp;:   0.1961993049E+02
+ Total PSPW energy  &nbsp;:   0.1337599142E+02
+ Total PSPW energy  &nbsp;:   0.8368934197E+01
+ Total PSPW energy  &nbsp;:   0.4070828454E+01
+ Total PSPW energy  &nbsp;:   0.4890631969E+00
+ Total PSPW energy  &nbsp;:  -0.5836265579E+01
+ Total PSPW energy  &nbsp;:  -0.7890745466E+01
+ Total PSPW energy  &nbsp;:  -0.1408910732E+02
+ Total PSPW energy  &nbsp;:  -0.1376509590E+02
+ Total PSPW energy  &nbsp;:  -0.1592566062E+02
+ Total PSPW energy  &nbsp;:  -0.1795967556E+02
+ Total PSPW energy  &nbsp;:  -0.2040058313E+02
+ Total PSPW energy  &nbsp;:  -0.2225738586E+02
+ Total PSPW energy  &nbsp;:  -0.2338027226E+02
+ Total PSPW energy  &nbsp;:  -0.2338044505E+02
+ Total PSPW energy  &nbsp;:  -0.2461935725E+02
+ Total PSPW energy  &nbsp;:  -0.2515495572E+02
+ Total PSPW energy  &nbsp;:  -0.2562143558E+02
+ Total PSPW energy  &nbsp;:  -0.2561106019E+02
+ Total PSPW energy  &nbsp;:  -0.2618964488E+02
+ Total PSPW energy  &nbsp;:  -0.2615732606E+02
+ Total PSPW energy  &nbsp;:  -0.2636682412E+02
+ Total PSPW energy  &nbsp;:  -0.2633912461E+02
+ Total PSPW energy  &nbsp;:  -0.2639189830E+02
+ Total PSPW energy  &nbsp;:  -0.2638634234E+02
+ Total PSPW energy  &nbsp;:  -0.2646209976E+02
+ Total PSPW energy  &nbsp;:  -0.2645190214E+02
+ Total PSPW energy  &nbsp;:  -0.2649565926E+02
+ Total PSPW energy  &nbsp;:  -0.2655957858E+02
+ Total PSPW energy  &nbsp;:  -0.2634583373E+02
+ Total PSPW energy  &nbsp;:  -0.2656000596E+02
+ Total PSPW energy  &nbsp;:  -0.2615164061E+02
+ Total PSPW energy  &nbsp;:  -0.2648948900E+02
+
+</pre><br />
+<br />
+The step/energy data for the first cycle has positive, rather than negative, energies that descend towards zero:<br />
+
+<pre>
+== Energy Calculation ==
+
+
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Wed Nov 13 23:30:15 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho 
+    ------------------------------------------------------
+     -  15 steepest descent iterations performed
+      10    0.9582453153E+02   -0.17155E+00    0.52948E-04
+     -  10 steepest descent iterations performed
+      20    0.9035909073E+02   -0.19625E+00    0.47200E-05
+     -  10 steepest descent iterations performed
+      30    0.8605965298E+02   -0.65226E-01    0.72813E-05
+     -  10 steepest descent iterations performed
+      40    0.8398586767E+02   -0.73599E-01    0.65304E-06
+     -  10 steepest descent iterations performed
+      50    0.8228907713E+02   -0.30066E-01    0.22806E-05
+     -  10 steepest descent iterations performed
+      60    0.8161797538E+02   -0.21635E-01    0.33675E-06
+     -  10 steepest descent iterations performed
+      70    0.8081694861E+02   -0.16072E-01    0.31301E-06
+     -  10 steepest descent iterations performed
+      80    0.8048826777E+02   -0.10237E-01    0.27982E-06
+     -  10 steepest descent iterations performed
+      90    0.8013146841E+02   -0.20216E-02    0.15217E-06
+     100    0.8000423850E+02   -0.22420E-01    0.14079E-04
+     -  10 steepest descent iterations performed
+     110    0.7984322686E+02   -0.14763E-02    0.19813E-06
+     120    0.7979788211E+02   -0.13952E-01    0.70838E-05
+     -  10 steepest descent iterations performed
+     130    0.7974031861E+02   -0.64662E-03    0.10059E-06
+     140    0.7974031861E+02    0.17764E-14    0.31320E-30
+  *** energy going up. iteration not terminated
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Wed Nov 13 23:49:46 2013  &lt;&lt;&lt;
+</pre><br />
+<br />
+NWChem was compiled using the following script:<br />
+
+<pre>
+export NWCHEM_TOP=`pwd`
+export LARGE_FILES=TRUE
+export TCGRSH=/usr/bin/ssh
+export NWCHEM_TOP=`pwd`
+export NWCHEM_TARGET=LINUX64
+export NWCHEM_MODULES=&quot;all python&quot;
+export PYTHONVERSION=2.7
+export PYTHONHOME=/usr
+export BLASOPT=&quot;-L/opt/openblas/lib -lopenblas&quot;
+
+export USE_MPI=y
+export USE_MPIF=y
+export USE_MPIF4=y
+export MPI_LOC=/usr/lib/openmpi/lib
+export MPI_INCLUDE=/usr/lib/openmpi/include
+export LIBRARY_PATH=&quot;$LIBRARY_PATH:/usr/lib/openmpi/lib:/opt/openblas/lib&quot;
+
+export LIBMPI=&quot;-lmpi -lopen-rte -lopen-pal -ldl -lmpi_f77 -lpthread&quot;
+export ARMCI_NETWORK=SOCKETS
+
+cd $NWCHEM_TOP/src
+
+make clean
+make nwchem_config
+make FC=gfortran 1&gt; make.log 2&gt;make.err
+
+cd $NWCHEM_TOP/contrib
+export FC=gfortran
+./getmem.nwchem
+</pre><br />
+<br />
+The main thing that shows up in make.err for nwchem 6.3 on the bulldozer cores that doesn't show up for e.g. the Phenom II cpu is<br />
+
+<pre>
+/usr/bin/ld: Warning: alignment 16 of symbol `cface_' in /opt/nwchem/nwchem-6.3-src.2013-05-28/lib/LINUX64/libstepper.a(stpr_face.o) is smaller than 32 in /opt/nwchem/nwchem-6.3-src.2013-05-28/lib/LINUX64/libstepper.a(stpr_partit.o)
+</pre><br />
+This doesn't show up for nwchem 6.1.1.<br />
+<br />
+Using nwchem 6.1.1 both FX8150 and FX8350 work:<br />
+
+<pre>
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Thu Nov 14 16:38:02 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho 
+    ------------------------------------------------------
+      10   -0.5440813275E+02   -0.23233E+01    0.72286E-02
+     -  10 steepest descent iterations performed
+      20   -0.7080853812E+02   -0.14463E+00    0.19753E-03
+     -  10 steepest descent iterations performed
+      30   -0.7308197239E+02   -0.20838E-01    0.16698E-04
+     -  10 steepest descent iterations performed
+      40   -0.7349928511E+02   -0.14939E-01    0.93367E-03
+     -  10 steepest descent iterations performed
+      50   -0.7361462983E+02   -0.92625E-02    0.88102E-05
+      60   -0.7369416281E+02   -0.57087E-02    0.34645E-04
+[..]
+     310   -0.7403126685E+02   -0.12879E-06    0.44149E-09
+     320   -0.7403126810E+02   -0.86892E-07    0.25214E-09
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Thu Nov 14 17:03:46 2013  &lt;&lt;&lt;
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/3836.html">Edited On</a></b> 8:20:33 PM PST - Thu, Nov 14th 2013 <b>by</b> Ohlincha
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3839"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3839" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Bylaska/10.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Bylaska</a>  <font class="group_text">Forum:Admin, Forum:Mod, NWChemDeveloper, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Bylaska/10.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Bylaska/3839.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Bylaska/10.html">0</a><br />
+                                Posts <a href="../../search/memposts/Bylaska/10.html">46</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3839.html">7:45:46 PM PST - Thu, Nov 14th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">How many cores/cpus are you using.  Does the error persist when you use 1 core?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3840"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3840" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Bylaska/10.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Bylaska</a>  <font class="group_text">Forum:Admin, Forum:Mod, NWChemDeveloper, bureaucrat, sysop</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Bylaska/10.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Bylaska/3840.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Bylaska/10.html">0</a><br />
+                                Posts <a href="../../search/memposts/Bylaska/10.html">46</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3840.html">7:46:26 PM PST - Thu, Nov 14th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Fixed the typo in the development tree. Thanks for the input.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3841"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3841" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Ohlincha/1364.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Ohlincha</a>  <font class="group_text">Member</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Ohlincha/1364.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Ohlincha/3841.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Ohlincha/1364.html">16</a><br />
+                                Posts <a href="../../search/memposts/Ohlincha/1364.html">115</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3841.html">8:19:06 PM PST - Thu, Nov 14th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2"><div class='quote_title'>Quote:<div class='quote'><br />
+How many cores/cpus are you using. Does the error persist when you use 1 core?<br />
+</div id="quote"></div id="quote"><br />
+<br />
+In the examples above I launched 8 threads (1 per core).<br />
+<br />
+Running with only one core (either using 'mpirun -n 1', or just 'nwchem') does not improve the situation:<br />
+
+<pre>
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Fri Nov 15 14:06:21 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho
+    ------------------------------------------------------
+      10    0.6214713371E+02    0.85265E-13    0.11592E-29
+  *** energy going up. iteration not terminated
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Fri Nov 15 14:08:07 2013  &lt;&lt;&lt;
+
+[..]
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Fri Nov 15 14:08:11 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho
+    ------------------------------------------------------
+      10    0.5859128771E+02   -0.81712E-13    0.15368E-29
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Fri Nov 15 14:09:49 2013  &lt;&lt;&lt;
+[..]
+          ====== Grassmann conjugate gradient iteration ======
+     &gt;&gt;&gt;  ITERATION STARTED AT Fri Nov 15 14:09:54 2013  &lt;&lt;&lt;
+    iter.           Energy         DeltaE       DeltaRho 
+    ------------------------------------------------------
+       10    0.5117372343E+02    0.00000E+00    0.49253E-30
+  *** tolerance ok. iteration terminated
+     &gt;&gt;&gt;  ITERATION ENDED   AT Fri Nov 15 14:12:04 2013  &lt;&lt;&lt;
+
+</pre><br />
+etc.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3855"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3855" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Bylaska/10.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Bylaska</a>  <font class="group_text">Forum:Admin, Forum:Mod, NWChemDeveloper, bureaucrat, sysop</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Bylaska/10.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Bylaska/3855.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Bylaska/10.html">0</a><br />
+                                Posts <a href="../../search/memposts/Bylaska/10.html">46</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3855.html">12:00:41 PM PST - Mon, Nov 18th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Can you please post the Summary of Results, e.g.<br />
+<br />
+
+<h2> <span class="mw-headline" id="Summary_Of_Results">  Summary Of Results  </span></h2>
+<br />
+
+<pre>number of electrons: spin up=    7.00000  down=    7.00000 (real space)<br />
+</pre>
+<br />
+
+<pre>total     energy   &nbsp;:  -0.2254228231E+02 (   -0.45085E+01/ion)<br />
+total orbital energy:  -0.6114738729E+01 (   -0.87353E+00/electron)<br />
+hartree   energy   &nbsp;:   0.2391267902E+02 (    0.34161E+01/electron)<br />
+exc-corr  energy   &nbsp;:  -0.5747045706E+01 (   -0.82101E+00/electron)<br />
+ion-ion   energy   &nbsp;:   0.5903932944E+01 (    0.11808E+01/ion)<br />
+</pre>
+<br />
+
+<pre>kinetic (planewave)&nbsp;:   0.1104958211E+02 (    0.15785E+01/electron)<br />
+V_local (planewave)&nbsp;:  -0.6055683262E+02 (   -0.86510E+01/electron)<br />
+V_nl    (planewave)&nbsp;:   0.2895401936E+01 (    0.41363E+00/electron)<br />
+V_Coul  (planewave)&nbsp;:   0.4782535804E+02 (    0.68322E+01/electron)<br />
+V_xc.   (planewave)&nbsp;:  -0.7328248198E+01 (   -0.10469E+01/electron)<br />
+Virial Coefficient &nbsp;:  -0.1553390949E+01<br />
+</pre>
+<br />
+
+<pre>orbital energies:<br />
+   -0.2521628E+00 (  -6.862eV)<br />
+   -0.2521713E+00 (  -6.862eV)<br />
+   -0.3687064E+00 ( -10.033eV)<br />
+   -0.3946239E+00 ( -10.738eV)<br />
+   -0.3947258E+00 ( -10.741eV)<br />
+   -0.6150274E+00 ( -16.736eV)<br />
+   -0.7799517E+00 ( -21.224eV)<br />
+</pre>
+<br />
+
+<pre>Total PSPW energy  &nbsp;:  -0.2254228231E+02
+</pre></td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3857"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3857" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Ohlincha/1364.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Ohlincha</a>  <font class="group_text">Member</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Ohlincha/1364.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Ohlincha/3857.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Ohlincha/1364.html">16</a><br />
+                                Posts <a href="../../search/memposts/Ohlincha/1364.html">115</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id3857.html">3:41:19 PM PST - Mon, Nov 18th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">The number of electrons (row 708; and S^2 in row 760) differ by almost a factor of two, but row 640-641 are identical in both jobs. <br />
+<br />
+Here's an example from a job on an FX8150 (8 cores):<br />
+
+<pre>
+ 639 
+ 640  number of electrons: spin up=    29 (  29 per task)  down=    28 (  28 per task) (fourier space)
+ 641  number of orbitals&nbsp;: spin up=    29 (  29 per task)  down=    28 (  28 per task) (fourier space)
+[..]
+ 706 ==  Summary Of Results  ==
+ 707 
+ 708  number of electrons: spin up=   16.03302  down=   15.46251 (real space)
+ 709 
+ 710  total     energy   &nbsp;:   0.7974031861E+02 (    0.36246E+01/ion)
+ 711  total orbital energy:  -0.4595864006E+01 (   -0.80629E-01/electron)
+ 712  hartree   energy   &nbsp;:   0.6877789452E+01 (    0.12066E+00/electron)
+ 713  exc-corr  energy   &nbsp;:  -0.6286764477E+01 (   -0.11029E+00/electron)
+ 714  ion-ion   energy   &nbsp;:   0.8931293117E+02 (    0.40597E+01/ion)
+ 715 
+ 716  kinetic (planewave)&nbsp;:   0.1951496911E+02 (    0.34237E+00/electron)
+ 717  V_local (planewave)&nbsp;:  -0.1701907005E+02 (   -0.29858E+00/electron)
+ 718  V_nl    (planewave)&nbsp;:  -0.1629596018E+00 (   -0.28589E-02/electron)
+ 719  V_Coul  (planewave)&nbsp;:   0.1375557890E+02 (    0.24133E+00/electron)
+ 720  V_xc.   (planewave)&nbsp;:  -0.8187805376E+01 (   -0.14365E+00/electron)
+ 721  Virial Coefficient &nbsp;:  -0.5951460161E+00
+ 722 
+ 723  orbital energies:
+ 724      0.1748908E+00 (   4.759eV)
+ 725      0.1283744E+00 (   3.493eV)     0.1633463E+00 (   4.445eV)
+ 726      0.9027798E-01 (   2.457eV)     0.1256307E+00 (   3.419eV)
+ 727      0.8317392E-01 (   2.263eV)     0.9353194E-01 (   2.545eV)
+ 728      0.6452313E-01 (   1.756eV)     0.7267583E-01 (   1.978eV)
+ 729      0.5601826E-01 (   1.524eV)     0.6199204E-01 (   1.687eV)
+ 730      0.4237663E-01 (   1.153eV)     0.4647088E-01 (   1.265eV)
+ 731      0.3496182E-01 (   0.951eV)     0.4175929E-01 (   1.136eV)
+ 732      0.2317966E-01 (   0.631eV)     0.2471617E-01 (   0.673eV)
+ 733      0.8814190E-02 (   0.240eV)     0.1214941E-01 (   0.331eV)
+ 734     -0.2174760E-02 (  -0.059eV)     0.6702608E-02 (   0.182eV)
+ 735     -0.1547237E-01 (  -0.421eV)    -0.3716619E-02 (  -0.101eV)
+ 736     -0.2301906E-01 (  -0.626eV)    -0.1991090E-01 (  -0.542eV)
+ 737     -0.3360687E-01 (  -0.914eV)    -0.2491536E-01 (  -0.678eV)
+ 738     -0.4358515E-01 (  -1.186eV)    -0.4185144E-01 (  -1.139eV)
+ 739     -0.8758937E-01 (  -2.383eV)    -0.7770428E-01 (  -2.114eV)
+ 740     -0.9759586E-01 (  -2.656eV)    -0.8868611E-01 (  -2.413eV)
+ 741     -0.1064943E+00 (  -2.898eV)    -0.9351224E-01 (  -2.545eV)
+ 742     -0.1185724E+00 (  -3.227eV)    -0.1166315E+00 (  -3.174eV)
+ 743     -0.1296769E+00 (  -3.529eV)    -0.1277934E+00 (  -3.477eV)
+ 744     -0.1403213E+00 (  -3.818eV)    -0.1452820E+00 (  -3.953eV)
+ 745     -0.1873177E+00 (  -5.097eV)    -0.1868806E+00 (  -5.085eV)
+ 746     -0.2112744E+00 (  -5.749eV)    -0.2089125E+00 (  -5.685eV)
+ 747     -0.2364983E+00 (  -6.435eV)    -0.2327512E+00 (  -6.334eV)
+ 748     -0.2408958E+00 (  -6.555eV)    -0.2393317E+00 (  -6.513eV)
+ 749     -0.2853341E+00 (  -7.764eV)    -0.2837281E+00 (  -7.721eV)
+ 750     -0.2911899E+00 (  -7.924eV)    -0.2948604E+00 (  -8.024eV)
+ 751     -0.3575676E+00 (  -9.730eV)    -0.3682848E+00 ( -10.022eV)
+ 752     -0.3980128E+00 ( -10.831eV)    -0.3904779E+00 ( -10.626eV)
+ 753 
+ 754  Total PSPW energy  &nbsp;:   0.7974031861E+02
+ 755 
+ 756 
+ 757 === Spin Contamination ===
+ 758 
+ 759  &lt;Sexact^2&gt; =   0.75000000000000000
+ 760  &lt;S^2&gt;      =    1.1861310212158607
+ 761 
+ 762 
+ 763 
+ 764 == Center of Charge ==
+ 765 
+ 766 spin up     (   -0.1238,   -0.0369,    0.0038 )
+ 767 spin down   (   -0.1120,    0.0209,   -0.0000 )
+ 768      total  (   -0.1180,   -0.0085,    0.0019 )
+ 769 ionic       (    0.0000,    0.0000,    0.0000 )
+ 770 crystal     (   -0.0000,   -0.0000,   -0.0000 )
+ 771 
+ 772 
+ 773 == Crystal Dipole ==
+ 774 
+ 775 mu   =  (    6.7263,    0.4841,   -0.1098 ) au
+ 776 |mu| =     6.7446 au,      17.1421 Debye
+ 777 
+ 778 
+ 779 == Molecular Dipole wrt Center of Mass ==
+ 780 
+ 781 mu   =  (    6.7263,    0.4841,   -0.1098 ) au
+ 782 |mu| =     6.7446 au,      17.1421 Debye
+ 783 
+ 784 
+ 785 Translation force removed: (   -0.00973    0.00010   -0.04312)
+ 786 
+ 787 
+ 788           =============  Ion Gradients =================
+ 789  Ion Forces:
+ 790         1 C    (   -0.01137   -1.89565   -0.00136 )
+ 791         2 C    (   -2.65383   -1.36978   -0.69163 )
+ 792         3 C    (   -2.67017    0.75518   -0.68049 )
+ 793         4 C    (   -0.00713   -0.00599    0.01147 )
+ 794         5 C    (    2.66595    0.76606    0.69162 )
+ 795         6 C    (    2.62464   -1.37805    0.67528 )
+ 796         7 C    (    0.02096   -0.01333    0.02945 )
+ 797         8 C    (    2.69004   -0.77263   -0.71445 )
+ 798         9 C    (    2.69048    1.37376   -0.72040 )
+ 799        10 C    (   -2.69937   -0.77532    0.69904 )
+ 800        11 C    (    0.02315    1.93620   -0.02280 )
+ 801        12 C    (   -2.67864    1.37374    0.69578 )
+ 802        13 H    (    0.00787   -0.91116    0.02769 )
+ 803        14 H    (   -1.22315   -0.46581   -0.27963 )
+ 804        15 H    (   -1.26456    0.29901   -0.32731 )
+ 805        16 H    (    1.24513   -0.48712    0.35265 )
+ 806        17 H    (    1.22973    0.48600   -0.29092 )
+ 807        18 H    (   -1.24618   -0.28955    0.40885 )
+ 808        19 H    (    0.00678    0.92122    0.02730 )
+ 809        20 H    (   -1.22867    0.50546    0.36596 )
+ 810        21 H    (    1.25750   -0.29291   -0.34762 )
+ 811        22 H    (    1.27873    0.30392    0.40221 )
+ 812         C.O.M. (    0.00000    0.00000    0.00000 )
+ 813           ===============================================
+ 814           |F|       =   0.972760E+01
+ 815           |F|/nion  =   0.442163E+00
+ 816           max|Fatom|=   0.310562E+01 ( 159.699eV/Angstrom)
+</pre><br />
+<br />
+Here's the output from a job run on a phenom II (6 cores), i.e. a CPU which isn't causing any issues:<br />
+
+<pre>
+ 640  number of electrons: spin up=    29 (  29 per task)  down=    28 (  28 per task) (fourier space)
+ 641  number of orbitals&nbsp;: spin up=    29 (  29 per task)  down=    28 (  28 per task) (fourier space)
+[..]
+ 714 ==  Summary Of Results  ==
+ 715 
+ 716  number of electrons: spin up=   29.00000  down=   28.00000 (real space)
+ 717 
+ 718  total     energy   &nbsp;:  -0.7403126784E+02 (   -0.33651E+01/ion)
+ 719  total orbital energy:  -0.2704720273E+02 (   -0.47451E+00/electron)
+ 720  hartree   energy   &nbsp;:   0.1436118912E+03 (    0.25195E+01/electron)
+ 721  exc-corr  energy   &nbsp;:  -0.2374049409E+02 (   -0.41650E+00/electron)
+ 722  ion-ion   energy   &nbsp;:   0.8931293117E+02 (    0.40597E+01/ion)
+ 723 
+ 724  kinetic (planewave)&nbsp;:   0.5313413724E+02 (    0.93218E+00/electron)
+ 725  V_local (planewave)&nbsp;:  -0.3343207529E+03 (   -0.58653E+01/electron)
+ 726  V_nl    (planewave)&nbsp;:  -0.2028980488E+01 (   -0.35596E-01/electron)
+ 727  V_Coul  (planewave)&nbsp;:   0.2872237825E+03 (    0.50390E+01/electron)
+ 728  V_xc.   (planewave)&nbsp;:  -0.3105538904E+02 (   -0.54483E+00/electron)
+ 729  Virial Coefficient &nbsp;:  -0.1509036264E+01
+ 730 
+ 731  orbital energies:
+ 732     -0.2354381E+00 (  -6.407eV)
+ 733     -0.2590935E+00 (  -7.050eV)    -0.2553504E+00 (  -6.948eV)
+ 734     -0.2636187E+00 (  -7.173eV)    -0.2597476E+00 (  -7.068eV)
+ 735     -0.2949875E+00 (  -8.027eV)    -0.2851156E+00 (  -7.758eV)
+ 736     -0.3104190E+00 (  -8.447eV)    -0.3077364E+00 (  -8.374eV)
+ 737     -0.3235304E+00 (  -8.804eV)    -0.3205999E+00 (  -8.724eV)
+ 738     -0.3344610E+00 (  -9.101eV)    -0.3324436E+00 (  -9.046eV)
+ 739     -0.3413530E+00 (  -9.289eV)    -0.3394899E+00 (  -9.238eV)
+ 740     -0.3524801E+00 (  -9.592eV)    -0.3453552E+00 (  -9.398eV)
+ 741     -0.3779268E+00 ( -10.284eV)    -0.3713296E+00 ( -10.104eV)
+ 742     -0.3919283E+00 ( -10.665eV)    -0.3900076E+00 ( -10.613eV)
+ 743     -0.4033001E+00 ( -10.974eV)    -0.4014370E+00 ( -10.924eV)
+ 744     -0.4054702E+00 ( -11.033eV)    -0.4043165E+00 ( -11.002eV)
+ 745     -0.4138224E+00 ( -11.261eV)    -0.4112270E+00 ( -11.190eV)
+ 746     -0.4151249E+00 ( -11.296eV)    -0.4113381E+00 ( -11.193eV)
+ 747     -0.4507304E+00 ( -12.265eV)    -0.4479302E+00 ( -12.189eV)
+ 748     -0.4564686E+00 ( -12.421eV)    -0.4537127E+00 ( -12.346eV)
+ 749     -0.4599264E+00 ( -12.515eV)    -0.4576490E+00 ( -12.453eV)
+ 750     -0.5119149E+00 ( -13.930eV)    -0.5100366E+00 ( -13.879eV)
+ 751     -0.5415826E+00 ( -14.737eV)    -0.5385138E+00 ( -14.654eV)
+ 752     -0.5470000E+00 ( -14.885eV)    -0.5437301E+00 ( -14.796eV)
+ 753     -0.5835938E+00 ( -15.881eV)    -0.5807775E+00 ( -15.804eV)
+ 754     -0.6033787E+00 ( -16.419eV)    -0.5998067E+00 ( -16.322eV)
+ 755     -0.6706364E+00 ( -18.249eV)    -0.6640445E+00 ( -18.070eV)
+ 756     -0.6930855E+00 ( -18.860eV)    -0.6911508E+00 ( -18.807eV)
+ 757     -0.7033546E+00 ( -19.139eV)    -0.7010782E+00 ( -19.077eV)
+ 758     -0.7352597E+00 ( -20.008eV)    -0.7300926E+00 ( -19.867eV)
+ 759     -0.7927673E+00 ( -21.572eV)    -0.7887231E+00 ( -21.462eV)
+ 760     -0.8182489E+00 ( -22.266eV)    -0.8135610E+00 ( -22.138eV)
+ 761 
+ 762  Total PSPW energy  &nbsp;:  -0.7403126784E+02
+ 763 
+ 764 
+ 765 === Spin Contamination ===
+ 766 
+ 767  &lt;Sexact^2&gt; =   0.75000000000000000
+ 768  &lt;S^2&gt;      =   0.75241491105756353
+ 769 
+ 770 
+ 771 
+ 772 == Center of Charge ==
+ 773 
+ 774 spin up     (    0.0001,    0.0000,   -0.0000 )
+ 775 spin down   (   -0.0001,    0.0000,    0.0000 )
+ 776      total  (   -0.0000,    0.0000,    0.0000 )
+ 777 ionic       (    0.0000,    0.0000,    0.0000 )
+ 778 crystal     (   -0.0000,   -0.0000,   -0.0000 )
+ 779 
+ 780 
+ 781 == Crystal Dipole ==
+ 782 
+ 783 mu   =  (    0.0006,   -0.0002,   -0.0002 ) au
+ 784 |mu| =     0.0007 au,       0.0017 Debye
+ 785 
+ 786 
+ 787 == Molecular Dipole wrt Center of Mass ==
+ 788 
+ 789 mu   =  (    0.0006,   -0.0002,   -0.0002 ) au
+ 790 |mu| =     0.0007 au,       0.0017 Debye
+ 791 
+ 792 
+ 793 Translation force removed: (    0.00000    0.00000   -0.00001)
+ 794 
+ 795 
+ 796           =============  Ion Gradients =================
+ 797  Ion Forces:
+ 798         1 C    (   -0.00019    0.02433   -0.00002 )
+ 799         2 C    (    0.01402    0.00692    0.00260 )
+ 800         3 C    (    0.01287   -0.00635    0.00191 )
+ 801         4 C    (    0.00019   -0.00594    0.00004 )
+ 802         5 C    (   -0.01306   -0.00626   -0.00195 )
+ 803         6 C    (   -0.01396    0.00715   -0.00257 )
+ 804         7 C    (   -0.00042    0.00599    0.00009 )
+ 805         8 C    (   -0.01279    0.00639    0.00188 )
+ 806         9 C    (   -0.01412   -0.00679    0.00262 )
+ 807        10 C    (    0.01314    0.00622   -0.00196 )
+ 808        11 C    (    0.00041   -0.02435   -0.00006 )
+ 809        12 C    (    0.01390   -0.00730   -0.00256 )
+ 810        13 H    (   -0.00000    0.01592   -0.00000 )
+ 811        14 H    (    0.00225    0.00197    0.00038 )
+ 812        15 H    (    0.00211   -0.00016    0.00062 )
+ 813        16 H    (   -0.00227    0.00196   -0.00037 )
+ 814        17 H    (   -0.00227   -0.00199    0.00039 )
+ 815        18 H    (    0.00212    0.00015   -0.00061 )
+ 816        19 H    (    0.00001   -0.01593    0.00000 )
+ 817        20 H    (    0.00226   -0.00197   -0.00038 )
+ 818        21 H    (   -0.00211    0.00016    0.00062 )
+ 819        22 H    (   -0.00210   -0.00015   -0.00062 )
+ 820         C.O.M. (    0.00000    0.00000    0.00000 )
+ 821           ===============================================
+ 822           |F|       =   0.606262E-01
+ 823           |F|/nion  =   0.275573E-02
+ 824           max|Fatom|=   0.243566E-01 (   1.252eV/Angstrom)
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_5084"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_5084" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Ohlincha/1364.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Ohlincha</a>  <font class="group_text">Member</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Ohlincha/1364.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Ohlincha/5084.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Ohlincha/1364.html">16</a><br />
+                                Posts <a href="../../search/memposts/Ohlincha/1364.html">115</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id5084.html">6:04:42 PM PDT - Tue, Sep 16th 2014 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Issue resolved in v6.5 rev 26243<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I've re-run the test on my AMD FX 8350 and the calculation now runs to completion and gives reasonable values. The issue thus appears to be resolved in the current (6.5 rev 26243) nwchem code
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id1059/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.817 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id1059/#post_5084 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 03:21:18 GMT -->
+</html>
+
+
+
+
+
