@@ -1,0 +1,2528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id835/limit:15,15/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:26:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="Compiling NWChem on Cygwin Viewed 22808 times, With a total of 21 Posts" />
+<link rel="shortcut icon" href="../../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>Compiling NWChem on Cygwin - NWChem</title>
+		<link rel="stylesheet" href="../../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../../extensions/awc/forums/awc.js"></script><script src="../../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id835_limit_15_15 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../../images/MS3_NWChem.logo3.png);" href="../../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >Compiling NWChem on Cygwin</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="835">
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 22808 times, With a total of 21 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../../credits.html">Credits</a></li>
+        			<li><a href="../../../search.html">Search</a></li>
+            <li><a href="../../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"><font class="page_jumps_top">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_top"><a href="../limit_0%2c16/index.html#last">Prev 16</a></font></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_3229"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3229" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Ivo/983.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Ivo</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Ivo/983.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Ivo/3229.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Ivo/983.html">6</a><br />
+                                Posts <a href="../../../search/memposts/Ivo/983.html">25</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id3229.html">7:12:05 AM PDT - Thu, Jun 20th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Medium tests:<br />
+
+<pre>
+ Running tests/dft_feco5/dft_feco5 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dft_siosi3/dft_siosi3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dft_cr2/dft_cr2 
+     verifying output ... failed		#0.0003 a.u. difference in effective nuclear repulsion energy
+ 
+Failed
+ 
+ Running tests/dft_x/dft_x 
+     verifying output ... failed		#0.0003 a.u. difference in nuclear repulsion energy, 0.0001 difference in coordinates
+ 
+Failed
+ 
+ Running tests/dft_mpw1k/dft_mpw1k 
+     verifying output ... failed		#0.0001 difference in coordinates
+ 
+ Running tests/dft_li2freq/dft_li2freq 
+     verifying output ... OK
+ 
+ Running tests/h2o-hse/h2o-hse 
+     verifying output ... OK
+ 
+Failed
+
+The intermediate values for this test may cause some differences.
+Please check the final values for the last optimized structure.
+ 
+ Running tests/dielsalder/dielsalder 
+     verifying output ... OK
+ 
+OK
+
+The intermediate energy values for the numerical gradient 
+test may cause some differences.
+Please check the final gradient values for correctness.
+ 
+ Running tests/grad_ozone/grad_ozone 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dft_ozone/dft_ozone 
+     verifying output ... failed		#0.0001 difference in gradient
+ 
+Failed
+ 
+ Running tests/hess_c6h6/hess_c6h6 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/hess_nh3_ub3lyp/hess_nh3_ub3lyp 
+     verifying output ... failed		#0.00006 kcal/mol difference in zero-point energy, slightly different numbers for non-projected frequencies
+ 
+Failed
+ 
+ Running tests/intchk/intchk 
+     verifying output ... OK
+ 
+OK
+
+The intermediate values for this test may cause some differences.
+Please check the final values for the last optimized structure.
+ 
+ Running tests/sadsmall/sadsmall 
+     verifying output ... failed		#coordinates mirrored, results identical
+ 
+Failed
+ 
+ Running tests/sadbig/sadbig 
+     verifying output ... failed		#0.0003 a.u. difference in nuclear repulsion energy, small difference in coordinates (fourth digit)
+ 
+Failed
+ 
+ Running tests/br2_dk/br2_dk 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/uo2_sodft/uo2_sodft 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/uo2_sodft_grad/uo2_sodft_grad 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/si2cl6_gc/si2cl6_gc 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/pspw/pspw 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/pspw_SiC/pspw_SiC 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/pspw_md/pspw_md 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/paw/paw 
+     verifying output ... failed		#0.005 difference in total paw energy
+ 
+Failed
+ 
+ Running tests/pspw_polarizability/pspw_polarizability 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/pspw_stress/pspw_stress 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/band/band 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tddft_h2o/tddft_h2o 
+     verifying output ... failed		#0.0001 difference in excitation energy
+ 
+Failed
+ 
+ Running tests/tddft_h2o_uhf/tddft_h2o_uhf 
+     verifying output ... failed		#0.0001 difference in excitation energy
+ 
+Failed
+ 
+ Running tests/tddft_h2o_mxvc20/tddft_h2o_mxvc20 
+     NWChem execution failed			#&quot;tddft_diagon: negative excitation energy        0&quot;
+ 
+Failed
+ 
+ Running tests/tddft_h2o_uhf_mxvc20/tddft_h2o_uhf_mxvc20 
+     NWChem execution failed			#&quot;tddft_diagon: negative excitation energy        0&quot;
+ 
+Failed
+ 
+ Running tests/tddft_n2+/tddft_n2+ 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tddft_ac_co/tddft_ac_co 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_h2o/tce_h2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_h2o_dipole/tce_h2o_dipole 
+     NWChem execution failed			#&quot;BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES&quot;
+ 
+Failed
+ 
+ Running tests/tce_h2o_eomcc/tce_h2o_eomcc 
+     NWChem execution failed			#&quot;BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES&quot;
+ 
+Failed
+ 
+ Running tests/tce_uhf_uccsd/tce_uhf_uccsd 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_cr_eom_t_ch_rohf/tce_cr_eom_t_ch_rohf 
+     verifying output ... failed		#same numbers, different order
+ 
+Failed
+ 
+ Running tests/tce_cr_eom_t_ozone/tce_cr_eom_t_ozone 
+     NWChem execution failed			#&quot;createfile: failed ga_create size= 53514432&quot;
+ 
+Failed
+ 
+ Running tests/tce_active_ccsdt/tce_active_ccsdt 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_lr_ccsd_t/tce_lr_ccsd_t 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_lr_ccsd_tq/tce_lr_ccsd_tq 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_ozone_2eorb/tce_ozone_2eorb 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_polar_ccsd_small/tce_polar_ccsd_small 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_eomsd_eomsol1/tce_eomsd_eomsol1 
+     NWChem execution failed			#&quot;createfile: failed ga_create size=  3122005&quot;
+ 
+Failed
+ 
+ Running tests/tce_eomsd_eomsol2/tce_eomsd_eomsol2 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tce_uracil_creomact/tce_uracil_creomact 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/oniom1/oniom1 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/c60_ecp/c60_ecp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o_vscf/h2o_vscf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/hi_zora_sf/hi_zora_sf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/xe_zora_sf/xe_zora_sf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/o2_zora_so/o2_zora_so 
+     verifying output ... failed		#0.0002 difference in nuclear repulsion energy, 0.0001 in gradients, up to 7 in non-projected frequencies
+ 
+Failed
+ 
+ Running tests/hi_zora_so/hi_zora_so 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/asa_qmmm 
+failed: cannot access tests/asa_qmmm.nw	#file not there
+ 
+Failed
+ 
+ Running tests/qmmm_grad0/qmmm_grad0 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/lys_qmmm/lys_qmmm 
+     verifying output ... failed		#0.01 difference in effective nuclear repulsion energy, 0.0001 in dft energy, some in coordinates as well
+ 
+Failed
+ 
+ Running tests/ethane_qmmm/ethane_qmmm 
+     verifying output ... failed		#slight differences in coordinates and gradients (0.0001)
+ 
+Failed
+ 
+ Running tests/qmmm_opt0/qmmm_opt0 
+     verifying output ... failed		#0.003 difference in dft energy, 0.06 in nuclear repulsion energy and differences in coordinates
+ 
+Failed
+
+qmmm frequency  test  may  fail
+ 
+ Running tests/qmmm_freq/qmmm_freq 
+     verifying output ... failed		#0.0001 kcal/mol diference in zero point energy
+ 
+Failed
+ 
+ Running tests/prop_ch3f/prop_ch3f 
+     verifying output ... failed		#swapped signs, results identical
+ 
+Failed
+ 
+ Running tests/prop_uhf_ch3f/prop_uhf_ch3f 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_rot/ch3f_rot 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_unrot/ch3f_unrot 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_trans/ch3f_trans 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_trans_cosmo/ch3f_trans_cosmo 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_trans_cam_nmr/ch3f_trans_cam_nmr 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f_notrans_cosmo/ch3f_notrans_cosmo 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3f-lc-wpbe/ch3f-lc-wpbe 
+     verifying output ... failed		#up to 0.004 difference in anisotropy
+ 
+Failed
+ 
+ Running tests/ch3f-lc-wpbeh/ch3f-lc-wpbeh 
+     verifying output ... failed		#up to 0.004 difference in anisotropy
+ 
+Failed
+ 
+ Running tests/ch3f_zora_shielding/ch3f_zora_shielding 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch2_props4_bp/ch2_props4_bp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3radical_rot/ch3radical_rot 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3radical_unrot/ch3radical_unrot 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cho_bp_props/cho_bp_props 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/prop_cg_nh3_b3lyp/prop_cg_nh3_b3lyp 
+     NWChem execution failed			#&quot;task hessian incompatible with cgmin        0&quot;
+ 
+Failed
+ 
+ Running tests/acr-camb3lyp-cdfit/acr-camb3lyp-cdfit 
+     verifying output ... failed		#0.00007 difference in excitation energy
+ 
+Failed
+ 
+ Running tests/acr-camb3lyp-direct/acr-camb3lyp-direct 
+     verifying output ... failed		#0.00006 difference in excitation energy
+ 
+Failed
+ 
+ Running tests/acr_lcblyp/acr_lcblyp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2_bnl/h2_bnl 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o_bnl/h2o_bnl 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-camb3lyp-pol-cdfit/h2o-camb3lyp-pol-cdfit 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-camb3lyp-pol/h2o-camb3lyp-pol 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-cambeckehh/h2o-cambeckehh 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-campbe0/h2o-campbe0 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-lcpbe/h2o-lcpbe 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/o2_bnl/o2_bnl 
+     verifying output ... failed		#0.0001 difference in effective nuclear repulsion energy, also one cyle more used
+ 
+Failed
+ 
+ Running tests/o2_hfattn/o2_hfattn 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-hse/h2o-hse 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m11_ch3/m11_ch3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m11_h2o/m11_h2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m11-l_ch3/m11-l_ch3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m11-l_h2o/m11-l_h2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m08hx_ch3/m08hx_ch3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m08hx_h2o/m08hx_h2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m08so_ch3/m08so_ch3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/m08so_h2o/m08so_h2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3_m06-hf/ch3_m06-hf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cnh5_m06-2x/cnh5_m06-2x 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cu2_m06-l/cu2_m06-l 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dft_ch3ochch32/dft_ch3ochch32 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/fh_m06/fh_m06 
+failed: cannot access tests/fh_m06/fh_m06.nw	#file not there
+ 
+Failed
+ 
+ Running tests/dft_m05nh2ch3/dft_m05nh2ch3 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/disp_dimer_ch4/disp_dimer_ch4 
+     verifying output ... failed		#0.0002 difference in effective nuclear repulsion energy
+ 
+Failed
+ 
+ Running tests/disp_dimer_ch4_cgmin/disp_dimer_ch4_cgmin 
+     verifying output ... failed		#0.0002 difference in dft energy, 0.05 in nuclear repulsion energy, gradients and coordinates differ as well
+ 
+Failed
+ 
+ Running tests/h2o-b3lyp-disp/h2o-b3lyp-disp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/Ne_scf-mp2_cc-vqz/Ne_scf-mp2_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/Ne_b2plyp_cc-vqz/Ne_b2plyp_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/He_scf-mp2_cc-vqz/He_scf-mp2_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/He_b2plyp_cc-vqz/He_b2plyp_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/Ar_scf-mp2_cc-vqz/Ar_scf-mp2_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/Ar_b2plyp_cc-vqz/Ar_b2plyp_cc-vqz 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dmo_tddft_cd/dmo_tddft_cd 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dmo_tddft_cd_velocity/dmo_tddft_cd_velocity 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ptatom/ptatom 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-ssb-d/h2o-ssb-d 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-ssb-d-opt/h2o-ssb-d-opt 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-noscf/h2o-noscf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-response/h2o-response 
+     verifying output ... failed		#&quot;dft_CPHF2_read: failed to open./h2o-response.aoresp_fiao_f0&quot;
+ 
+Failed
+ 
+ Running tests/mep-test/mep-test 
+     verifying output ... failed		#0.00001 difference in dft energy, 0.002 in nuclear repulsion energy, some in coordinates
+ 
+Failed
+ 
+ Running tests/ch2_props4_bp/ch2_props4_bp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/pkzb/pkzb 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/k6h2o/k6h2o 
+     NWChem execution failed			#&quot;0: pre_mkfrg failed 9999&quot;
+ 
+Failed
+ 
+ Running tests/mcscf_ch2/mcscf_ch2 
+     verifying output ... OK
+ 
+ Running tests/mcscf_ozone/mcscf_ozone 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/sif_sodft/sif_sodft 
+     verifying output ... failed		#0.00006 difference in dft energy
+ 
+Failed
+ 
+ Running tests/h2o_raman_3/h2o_raman_3 
+     verifying output ... failed		#0.0005 difference in nuclear repulsion energy, slight difference in coordinates and gradients, extra output
+ 
+Failed
+ 
+ Running tests/h2o_raman_4/h2o_raman_4 
+     verifying output ... failed		#0.0007 difference in nuclear repulsion energy, slight differences in coordiantes and gradients, extra output
+ 
+Failed
+ 
+ Running tests/tropt-ch3nh2/tropt-ch3nh2 
+     verifying output ... failed		#0.0001 difference in coordinates, slight differences in frequencies, 0.0001 kcal.mol in zero-point energy
+ 
+Failed
+ 
+ Running tests/h3tr1/h3tr1 
+     verifying output ... OK
+ 
+ Running tests/h3_dirdyvtst/h3_dirdyvtst 
+     verifying output ... failed		#almost the same
+ 
+Failed
+ 
+ Running tests/geom_load_xyz/geom_load_xyz 
+     verifying output ... failed		#0.0001 difference in gradients
+ 
+Failed
+ 
+ Running tests/dft_sicperth2o/dft_sicperth2o 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o_hcons/h2o_hcons 
+     verifying output ... failed		#differences in intermediate energy values and slight differences in final coordinates
+ 
+Failed
+ 
+ Running tests/etf_hcons/etf_hcons 
+     verifying output ... failed		#0.001 difference in nuclear repulsion energy
+ 
+Failed
+ 
+ Running tests/h2o2-prop-notrans/h2o2-prop-notrans 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cnh5_m06-2x/cnh5_m06-2x 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/bq_nio/bq_nio 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/hess_ch4/hess_ch4 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o_frozemb/h2o_frozemb 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cho_bp_props/cho_bp_props 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cho_bp_zora_finite/cho_bp_zora_finite 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o-ssb-d-b3lyp/h2o-ssb-d-b3lyp 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/cu2_m06-l/cu2_m06-l 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch3_m06-hf/ch3_m06-hf 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/dntmc_h2o_nh3/dntmc_h2o_nh3 
+     NWChem execution failed		#&quot;0:ga_pgroup_destroy_:Attempt to destroy process group with attached GAs:Received an Error in Communication&quot;
+ 
+Failed
+ 
+ Running tests/5h2o_core/5h2o_core 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/h2o_core/h2o_core 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/co_core/co_core 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/talc/talc 
+     verifying output ... failed		#final value identical
+ 
+Failed
+ 
+ Running tests/carbon_fon/carbon_fon 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/ch5n_nbo/ch5n_nbo 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/tpss/tpss 
+     verifying output ... OK
+ 
+ Running tests/tpssh/tpssh 
+     verifying output ... OK
+ 
+OK
+ 
+ Running tests/neb-fch3cl/neb-fch3cl 
+     verifying output ... failed		#0.00003 difference in scf energy, slightly different coordinates
+ 
+ Running tests/neb-isobutene/neb-isobutene 
+     verifying output ... failed		#differences in intermediate structures?
+ 
+Failed
+ 
+ Running tests/nwxc_pspw_1he/nwxc_pspw_1he 
+     verifying output ... failed		#0.005 difference in pspw energy
+ 
+ Running tests/nwxc_pspw_3he/nwxc_pspw_3he 
+							#hangs
+</pre><br />
+<br />
+Hangs at nwxc_pspw_3he, so last tests not done. Will try at later stage.<br />
+Although there are quite some differences, I guess most of them are not a problem.<br />
+<br />
+Comments welcome.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3534"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3534" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/P99/411.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">P99</a>  <font class="group_text">Member</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/P99/411.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/P99/3534.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Gets Around</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/P99/411.html">37</a><br />
+                                Posts <a href="../../../search/memposts/P99/411.html">107</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id3534.html">7:02:28 AM PDT - Tue, Sep 3rd 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Dear Ivo,<br />
+<br />
+May I ask you for your MPI binaries in order to insert them into <a target='blank' href="http://www.biomolecular-modeling.com/Products.html" class="external text">Ascalaph</a>?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_3571"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_3571" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Ivo/983.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Ivo</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Ivo/983.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Ivo/3571.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Ivo/983.html">6</a><br />
+                                Posts <a href="../../../search/memposts/Ivo/983.html">25</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id3571.html">1:10:11 AM PDT - Fri, Sep 13th 2013 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi P,<br />
+<br />
+Sorry for the late reply.<br />
+I compiled MPICH from source, downloaded from <a target='blank' href="http://www.mpich.org/downloads/" class="external free">http://www.mpich.org/downloads/</a><br />
+<br />
+Hope that helps,<br />
+Ivo
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7333"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7333" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Sumi_godara/688578.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Sumi godara</a>  <font class="group_text">Member</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Sumi_godara/688578.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Sumi_godara/7333.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Just Got Here</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Sumi%2bgodara/688578.html">0</a><br />
+                                Posts <a href="../../../search/memposts/Sumi%2bgodara/688578.html">1</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id7333.html">3:39:38 AM PDT - Fri, Jun 17th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">SCF running failed<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Hey, <br />
+
+<pre>I am doing dynamics on model system and I am getting an error like <br />
+</pre>
+<br />
+
+<pre>SCF failed running rest.scf script<br />
+ Resetting Diis<br />
+------------------------------------------------------------------------<br />
+task_energy failed      555<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="../../../../../../www.nwchem-sw.org/index.php/NWChem_Documentation.html" class="external free">http://www.nwchem-sw.org/index.php/NWChem_Documentation</a><br />
+task_energy failed      555<br />
+------------------------------------------------------------------------<br />
+</pre>
+<br />
+<br />
+this is my nwchem input file <br />
+<br />
+start<br />
+<br />
+charge +0<br />
+<br />
+print none<br />
+<br />
+Basis spherical<br />
+
+<ul><li> library 6-311g*<br />
+</li></ul>
+END<br />
+<br />
+scf<br />
+uhf<br />
+doublet<br />
+maxiter 2000<br />
+end<br />
+<br />
+dft<br />
+odft<br />
+mult 2<br />
+iterations 2000<br />
+xc pbe0<br />
+print none<br />
+end<br />
+<br />
+SET task:theory dft<br />
+<br />
+<br />
+can anyone suggest me what manupulations i need to do in my input file .<br />
+Thank you
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7457"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7457" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Noureddine/692851.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Noureddine</a>  <font class="group_text">Member</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Noureddine/692851.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Noureddine/7457.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Just Got Here</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Noureddine/692851.html">0</a><br />
+                                Posts <a href="../../../search/memposts/Noureddine/692851.html">3</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id7457.html">9:15:16 AM PDT - Thu, Aug 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Error compiling NWCHEM 6.6 on mac OS X 10.11<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Hi everybody,<br />
+<br />
+I am a newbie to compiling in general, I am trying to compile nwchem 6.6 on my macbook pro running in mac OS X 10.11, I set the environment variables correctly (I guess) when compiling I got the following error<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make[1]: *** [build/config.status] Error 1<br />
+make: *** [libraries] Error 1<br />
+<br />
+I installed mpich-3.2-1 and gcc-6.1.0 using homebrew<br />
+<br />
+Thanks
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7458"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7458" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Noureddine/692851.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Noureddine</a>  <font class="group_text">Member</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Noureddine/692851.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Noureddine/7458.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Just Got Here</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Noureddine/692851.html">0</a><br />
+                                Posts <a href="../../../search/memposts/Noureddine/692851.html">3</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id7458.html">9:15:27 AM PDT - Thu, Aug 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Error compiling NWCHEM 6.6 on mac OS X 10.11<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Hi everybody,<br />
+<br />
+I am a newbie to compiling in general, I am trying to compile nwchem 6.6 on my macbook pro running in mac OS X 10.11, I set the environment variables correctly (I guess) when compiling I got the following error<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make[1]: *** [build/config.status] Error 1<br />
+make: *** [libraries] Error 1<br />
+<br />
+I installed mpich-3.2-1 and gcc-6.1.0 using homebrew<br />
+<br />
+Thanks
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_7459"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_7459" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../../mem_profile/Noureddine/692851.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Noureddine</a>  <font class="group_text">Member</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../../mem_profile/Noureddine/692851.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../../member_options/pmnew/Noureddine/7459.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Just Got Here</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../../search/memtopics/Noureddine/692851.html">0</a><br />
+                                Posts <a href="../../../search/memposts/Noureddine/692851.html">3</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="55">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../../sp/id7459.html">9:15:28 AM PDT - Thu, Aug 4th 2016 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Error compiling NWCHEM 6.6 on mac OS X 10.11<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="45" colspan="2">Hi everybody,<br />
+<br />
+I am a newbie to compiling in general, I am trying to compile nwchem 6.6 on my macbook pro running in mac OS X 10.11, I set the environment variables correctly (I guess) when compiling I got the following error<br />
+checking for library containing MPI_Init... no<br />
+configure: error: test for COMEX_NETWORK=MPI_TS failed<br />
+configure: error: ../../ga-5-4/comex/configure failed for comex<br />
+make[1]: *** [build/config.status] Error 1<br />
+make: *** [libraries] Error 1<br />
+<br />
+I installed mpich-3.2-1 and gcc-6.1.0 using homebrew<br />
+<br />
+Thanks
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"><font class="page_jumps_bot">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_bot"><a href="../limit_0%2c16/index.html#last">Prev 16</a></font></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id835/limit:15,15/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.476 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id835/limit:15,15/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:27:02 GMT -->
+</html>
+
+
+
+
+

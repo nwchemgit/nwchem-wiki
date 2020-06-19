@@ -1,0 +1,2648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2677/CCSD(T)_Calculation_with_Quadrup....html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:50:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="CCSD(T) Calculation with Quadruple Zeta Basis Set -- Memory Issue Viewed 1231 times, With a total of 14 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>CCSD(T) Calculation with Quadruple Zeta Basis Set -- Memory Issue - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id2677_CCSD_T_Calculation_with_Quadrup_html skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >CCSD(T) Calculation with Quadruple Zeta Basis Set -- Memory Issue</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="2677">
+        <input name="fID" type="hidden" value="5">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 1231 times, With a total of 14 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_9151"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9151" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9151.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9151.html">6:30:54 PM PDT - Mon, Jun 18th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hello NWChem Developer,<br />
+<br />
+I am trying to run some CCSD(T) energy calculations with quadruple-zeta basis set of a 5-atom system but it seems the memory requirement of the 2-e file size is a little off the chart (&gt; 100GB). The input file reads:<br />
+<br />
+<div class='quote_title'>Quote:username<div class='quote'><br />
+echo<br />
+memory stack 1300 mb heap 200 mb global 1500 mb<br />
+<br />
+start im<br />
+<br />
+title "im"<br />
+charge 1<br />
+<br />
+geometry units angstroms print xyz noautosym noautoz<br />
+
+<pre>C                  -2.23423902     0.59425408    -0.03224283<br />
+O                  -1.12129315     1.09129114    -0.09445519<br />
+O                  -3.30588587     0.19083810     0.02028232<br />
+Br                  1.41553615    -0.39477191     0.02227492<br />
+H                  -0.18608027     0.45084374    -0.04234683<br />
+</pre>
+end<br />
+<br />
+basis<br />
+
+<pre>C  library aug-cc-pvqz<br />
+H  library aug-cc-pvqz<br />
+O  library aug-cc-pvqz<br />
+</pre>
+<ol><li>BASIS SET: (15s,12p,13d,3f,2g) -&gt; [7s,6p,5d,3f,2g]<br />
+</li></ol>
+Br    S<br />
+
+<pre> 78967.5000000              0.0000280             -0.0000110<br />
+ 11809.7000000              0.0002140             -0.0000860<br />
+  2687.1400000              0.0010560             -0.0004350<br />
+   760.0360000              0.0036880             -0.0014570<br />
+   241.8110000              0.0079340             -0.0033810<br />
+    38.4914000              0.1528680             -0.0576580<br />
+    24.0586000             -0.2786020              0.1123250<br />
+    14.3587000             -0.2188500              0.0756730<br />
+</pre>
+... (to keep it short)<br />
+end<br />
+<br />
+ECP<br />
+Br nelec 10<br />
+Br ul<br />
+2      1.0000000              0.0000000<br />
+Br S<br />
+...<br />
+end<br />
+<br />
+scf<br />
+
+<pre> doublet<br />
+ THRESH 1.0e-5<br />
+ MAXITER 100<br />
+ TOL2E 1e-7<br />
+</pre>
+end<br />
+<br />
+tce<br />
+
+<pre> ccsd(t)<br />
+ FREEZE atomic<br />
+ thresh 1e-6<br />
+ maxiter 100<br />
+</pre>
+end<br />
+<br />
+task tce<br />
+</div id="quote"></div id="quote"><br />
+<br />
+The error message reads <br />
+<div class='quote_title'>Quote:username<div class='quote'><br />
+
+<pre>2-e (intermediate) file size =    106977507300<br />
+2-e (intermediate) file name = ./im.v2i<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+ available GA memory             1572841816  bytes<br />
+createfile: failed ga_create size/nproc bytes          5348875365<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+</pre>
+</div id="quote"></div id="quote"><br />
+<br />
+I could change the memory options at the beginning of the file but it just seems a little unrealistic to have GA as large as 100G for the nodes that I am using (two Intel Xeon  E5-2680v2 “Ivy Bridge” 10-core, 2.8GHz processors, which is 20 cores total, and 128 GB of memory, 6.8GB per core).<br />
+<br />
+I have also tried different "<b>IO</b>" and "<b>2emet</b>" options, for example, <br />
+<div class='quote_title'>Quote:username<div class='quote'><br />
+tce<br />
+
+<pre> ccsd(t)<br />
+ FREEZE atomic<br />
+ thresh 1e-6<br />
+ maxiter 100<br />
+ 2eorb<br />
+ 2emet 13<br />
+ tilesize 10<br />
+ attilesize 40<br />
+</pre>
+end<br />
+set tce:xmem 100<br />
+</div id="quote"></div id="quote"><br />
+and <br />
+<div class='quote_title'>Quote:username<div class='quote'>tce<br />
+
+<pre> tilesize 2<br />
+ io ga<br />
+ 2EORB<br />
+ 2EMET 15<br />
+ idiskx 1<br />
+ ccsd(t)<br />
+ FREEZE atomic<br />
+ thresh 1e-6<br />
+ maxiter 100<br />
+</pre>
+end<br />
+</div id="quote"></div id="quote"><br />
+but the job seems to hang there after printing out "v2    file size   =    "<br />
+<br />
+Any insight on this issue is greatly appreciated!<br />
+<br />
+Thank you in advance,<br />
+Rui
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9154"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9154" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/9154.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9154.html">9:47:59 AM PDT - Tue, Jun 19th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2"><pre>
+createfile: failed ga_create size/nproc bytes          5348875365
+</pre><br />
+5348875365=5348875365/1024/1024/1024=4.98 GB<br />
+<br />
+Please change the memory line to<br />
+<br />
+
+<pre><br />
+memory stack 1300 mb heap 200 mb global 6000 mb
+</pre></td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9157"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9157" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9157.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9157.html">10:50:04 PM PDT - Tue, Jun 19th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thank you for the prompt response, Edoapra. <br />
+<br />
+I had to adjust the memory to <br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 1000 mb heap 100 mb global 5300 mb</div id="quote"></div id="quote"><br />
+so it does not exceed the memory of the core (6.8 GB)<br />
+<br />
+but now run into an error like the following:<br />
+<div class='quote_title'>Quote:username<div class='quote'>slurmstepd: error: Step 3840722.0 exceeded memory limit (123363455 &gt; 122880000), being killed<br />
+slurmstepd: error: Step 3840722.0 exceeded memory limit (123618673 &gt; 122880000), being killed<br />
+slurmstepd: error: Step 3840722.0 exceeded memory limit (123451708 &gt; 122880000), being killed<br />
+slurmstepd: error: *** STEP 3840722.0 ON prod2-0143 CANCELLED AT 2018-06-20T04:05:00 ***<br />
+slurmstepd: error: Exceeded job memory limit<br />
+slurmstepd: error: Exceeded job memory limit<br />
+slurmstepd: error: Exceeded job memory limit<br />
+srun: Job step aborted: Waiting up to 122 seconds for job step to finish.<br />
+srun: error: prod2-0148: tasks 100-119: Killed<br />
+srun: error: prod2-0150: tasks 140-159: Killed<br />
+srun: error: prod2-0149: tasks 120-139: Killed<br />
+slurmstepd: error: _get_pss: ferror() indicates error on file /proc/156552/smaps<br />
+slurmstepd: error: _get_pss: ferror() indicates error on file /proc/135960/smaps<br />
+srun: error: prod2-0145: tasks 41,43,45,47,49,51,53,55,57,59: Killed<br />
+srun: error: prod2-0146: tasks 63,65,69,71,75,77,79: Killed<br />
+slurmstepd: error: _get_pss: ferror() indicates error on file /proc/234980/smaps<br />
+srun: error: prod2-0145: tasks 40,42,44,46,48,50,52,54,56,58: Killed<br />
+srun: error: prod2-0146: tasks 61,67,73: Killed<br />
+srun: error: prod2-0143: tasks 0-19: Killed<br />
+slurmstepd: error: _get_pss: ferror() indicates error on file /proc/77821/smaps<br />
+srun: error: prod2-0146: tasks 60,62,64,66,68,70,72,74,76,78: Killed<br />
+srun: error: prod2-0144: tasks 20-39: Killed<br />
+slurmstepd: error: _get_pss: ferror() indicates error on file /proc/17624/smaps<br />
+srun: error: prod2-0147: tasks 80-99: Killed<br />
+</div id="quote"></div id="quote"><br />
+<br />
+I have also tried another memory allocation<br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 400 mb heap 100 mb global 6000 mb</div id="quote"></div id="quote"><br />
+<br />
+and it yielded a different error<br />
+<div class='quote_title'>Quote:username<div class='quote'> 2-e (intermediate) file size =    107432197225<br />
+
+<pre>2-e (intermediate) file name = ./vim.v2i<br />
+tce_ao2e: MA problem k_ijkl                  18<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+    0:<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at<br />
+<a href="../../../../../www.nwchem-sw.org/index.php/NWChem_Documentation.html" class="external free">http://www.nwchem-sw.org/index.php/NWChem_Documentation</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section:<br />
+</pre>
+</div id="quote"></div id="quote"><br />
+<br />
+Currently I am using 160 cores -- Do you think I should try to use more cores so the GA allocation on each core is less?<br />
+<br />
+Thank you very much,<br />
+Rui
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9158"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9158" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9158.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9158.html">4:28:48 AM PDT - Wed, Jun 20th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">More CPUs, still failed<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">In the hope of reducing the memory requirement on each core, I tested the job with 200 cores (increased 160 cores). However, it seems the computer could not allocate the correct amount of memory for MA. For example, the memory line reads:<br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 900 mb heap 200 mb global 4300 mb</div id="quote"></div id="quote"><br />
+but the error message shows:<br />
+<div class='quote_title'>Quote:username<div class='quote'> tce_ao2e: fast2e=1<br />
+
+<pre>half-transformed integrals in memory<br />
+</pre>
+<br />
+
+<pre>2-e (intermediate) file size =    107432197225<br />
+2-e (intermediate) file name = ./vim.v2i<br />
+Cpu &amp; wall time / sec          214.7          266.1<br />
+ available GA memory              211394680  bytes<br />
+------------------------------------------------------------------------<br />
+createfile: failed ga_create size/nproc bytes          3079838825<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+  129: task tce<br />
+</pre>
+</div id="quote"></div id="quote"><br />
+even though clearly the input file was trying to allocate 4300 mb for GA.<br />
+<br />
+Would you please let me know how to fix this?<br />
+<br />
+Thank you,<br />
+Rui
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9159"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9159" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/9159.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9159.html">10:04:21 AM PDT - Wed, Jun 20th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please report the tce input block you are currently using and number of processors
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9162"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9162" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9162.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9162.html">2:27:15 PM PDT - Wed, Jun 20th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">The TCE input block reads:<br />
+<div class='quote_title'>Quote:username<div class='quote'><br />
+tce<br />
+
+<pre> ccsd(t)<br />
+ FREEZE atomic<br />
+ thresh 1e-6<br />
+ maxiter 100<br />
+</pre>
+end<br />
+</div id="quote"></div id="quote"><br />
+<br />
+I am currently using 10 nodes with 20 cores per node. The memory on each core is 6GB. The job script reads:<br />
+<div class='quote_title'>Quote:username<div class='quote'>#!/bin/bash<br />
+
+<ol><li>SBATCH --job-name=vim<br />
+</li><li>SBATCH --partition=kill.q<br />
+</li><li>SBATCH --exclusive<br />
+</li><li>SBATCH --nodes=10<br />
+</li><li>SBATCH --tasks-per-node=20<br />
+</li><li>SBATCH --cpus-per-task=1<br />
+</li><li>SBATCH --error=%A.err<br />
+</li><li>SBATCH --time=0-10:59:59 ## time format is DD-HH:MM:SS<br />
+</li><li>SBATCH --output=%A.out<br />
+</li></ol>
+<br />
+export I_MPI_FABRICS=shm:tmi<br />
+export I_MPI_PMI_LIBRARY=/opt/local/slurm/default/lib64/libpmi.so<br />
+<br />
+source /global/opt/intel_2016/mkl/bin/mklvars.sh intel64<br />
+<br />
+module load intel_2016/ics intel_2016/impi<br />
+<br />
+export NWCHEM_TARGET=LINUX64<br />
+
+<ol><li> CHANGE TO THE CORRECT PATH<br />
+</li></ol>
+export ARMCI_DEFAULT_SHMMAX=8096<br />
+export MPIRUN_PATH="srun"<br />
+export MPIRUN_NPOPT="-n"<br />
+export INPUT="vim"<br />
+<br />
+$MPIRUN_PATH $MPIRUN_NPOPT ${SLURM_NTASKS} $NWCHEM_EXECUTABLE $INPUT.nw<br />
+</div id="quote"></div id="quote"><br />
+<br />
+Thank you!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9163"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9163" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem7')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/9163.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9163.html">5:39:56 PM PDT - Wed, Jun 20th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please try the following input<br />
+
+<pre>
+echo
+permanent_dir /global/cscratch1/sd/apra/arar
+memory stack 1300 mb heap 200 mb global 7000 mb
+
+start im
+
+title &quot;im&quot;
+charge 1
+
+geometry #units angstroms print xyz noautosym noautoz
+ C                  -2.23423902     0.59425408    -0.03224283
+ O                  -1.12129315     1.09129114    -0.09445519
+ O                  -3.30588587     0.19083810     0.02028232
+ Br                  1.41553615    -0.39477191     0.02227492
+ H                  -0.18608027     0.45084374    -0.04234683
+end
+
+basis spherical
+ C  library aug-cc-pvqz
+ H  library aug-cc-pvqz
+ O  library aug-cc-pvqz
+ Br  library aug-cc-pvqz-pp
+end
+
+ECP
+ Br  library aug-cc-pvqz-pp
+end
+
+scf
+  doublet
+  THRESH 1.0e-5
+  MAXITER 100
+  TOL2E 1e-12
+end
+
+tce
+  ccsd(t)
+  FREEZE atomic
+  tilesize 8
+  attilesize 12
+  thresh 1e-6
+  maxiter 100
+end
+
+task tce
+</pre>
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9164"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9164" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem8')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9164.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9164.html">7:41:10 PM PDT - Wed, Jun 20th 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thank you, Edoapra.<br />
+<br />
+Just want to make sure I understand this correctly. <br />
+<br />
+I should try to use 200 cores and each core should allocate the following amount of memory?<br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 1300 mb heap 200 mb global 7000 mb</div id="quote"></div id="quote">
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9167"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9167" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem9')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/9167.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9167.html">10:41:41 AM PDT - Thu, Jun 21st 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2"><div class='quote_title'>Quote:Srhhh <a target='blank' href="../../sp/id9164.html" title="Special:AWCforum/sp/id9164">Jun 20th 6:41 pm</a><div class='quote'>Thank you, Edoapra.<br />
+<br />
+Just want to make sure I understand this correctly. <br />
+<br />
+I should try to use 200 cores and each core should allocate the following amount of memory?<br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 1300 mb heap 200 mb global 7000 mb</div id="quote"></div id="quote"></div id="quote"></div id="quote"><br />
+<br />
+You should use only 10 tasks-per-node for a total of 100 cores since you mentioned that you have 6GB/core
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9168"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9168" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem10')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9168.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9168.html">12:29:10 PM PDT - Thu, Jun 21st 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thank you, Edoapra.<br />
+<br />
+I managed to get more core (20 nodes, 400 cores) so I was able to run without MA allocation issue with the following memory line:<br />
+<div class='quote_title'>Quote:username<div class='quote'>memory stack 1000 mb heap 200 mb global 4400 mb</div id="quote"></div id="quote"><br />
+<br />
+Everything else in the input file is identified as in your previous comment. It took about 5 mins for the calculation to go to <br />
+<div class='quote_title'>Quote:username<div class='quote'> tce_ao2e: fast2e=1<br />
+
+<pre>half-transformed integrals in memory<br />
+<br />
+2-e (intermediate) file size =    105684005025<br />
+2-e (intermediate) file name = ./vim.v2i<br />
+Cpu &amp; wall time / sec          144.8          184.8<br />
+<br />
+tce_mo2e: fast2e=1<br />
+2-e integrals stored in memory<br />
+</pre>
+</div id="quote"></div id="quote"><br />
+but the calculation has been hanging there for over eight hours -- nothing got written into the folder or output file at all. I also noticed there were some vim.aoints.x files that seem to have not been cleaned up properly. Is the behavior normal for this size of a calculation or this QZ calculation is pushing the limit of NWChem?<br />
+<br />
+Thanks again.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9169"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9169" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem11')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9169.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9169.html">6:52:31 PM PDT - Thu, Jun 21st 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                    <tr><td valign="top" height="1px" colspan="2">Unstable CCSD iterations<hr /></td></tr>                 
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">The test run in the previous comment actually went to the CCSD iterations part (each iteration takes about 1 hour wall time) but the iterations seem unstable. Please see below:<br />
+<br />
+<div class='quote_title'>Quote:username<div class='quote'> t2 file handle =       -995<br />
+<br />
+
+<pre>CCSD iterations<br />
+-----------------------------------------------------------------<br />
+Iter          Residuum       Correlation     Cpu    Wall    V2*C2<br />
+-----------------------------------------------------------------<br />
+   1   0.3745619466040  -1.0830661992146  1975.7  3034.0   759.3<br />
+   2   0.3338130779425  -1.0377329617715  1992.9  3058.0   760.8<br />
+   3   7.2614902105214  -1.0607684520852  1991.8  3049.5   762.0<br />
+   4  60.1400573985661  -1.0597624893767  1986.2  3038.5   759.7<br />
+   51384.5956104600380  -1.0695691959406  1993.2  3050.9   765.8<br />
+MICROCYCLE DIIS UPDATE:                     5                     5<br />
+</pre>
+</div id="quote"></div id="quote"><br />
+<br />
+The geometry of this calculation was optimized from ccsd(t)/aug-cc-pvTZ basis set so this error should not be from a bad geometry. <br />
+<br />
+Thank you!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9173"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9173" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem12')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem12" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/9173.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9173.html">11:18:26 AM PDT - Fri, Jun 22nd 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2"><div class='quote_title'>Quote:Srhhh <a target='blank' href="../../sp/id9169.html" title="Special:AWCforum/sp/id9169">Jun 21st 5:52 pm</a><div class='quote'>The test run in the previous comment actually went to the CCSD iterations part (each iteration takes about 1 hour wall time) but the iterations seem unstable. <br />
+<br />
+Thank you!</div id="quote"></div id="quote"><br />
+<br />
+Did you use a spherical or cartesian basis?
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9174"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9174" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Srhhh/798964.html" onmouseover="mopen('mem13')" onmouseout="mclosetime()">Srhhh</a>  <font class="group_text">Member</font>
+                                    <div id="mem13" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Srhhh/798964.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Srhhh/9174.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Srhhh/798964.html">2</a><br />
+                                Posts <a href="../../search/memposts/Srhhh/798964.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9174.html">12:50:42 PM PDT - Fri, Jun 22nd 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I had a Cartesian basis and now changed to spherical. I will update you how this test goes.<br />
+<br />
+Another problem just happened:<br />
+<br />
+<div class='quote_title'>Quote:username<div class='quote'>[25] Received an Error in Communication: (-991) 25:nga_get_common:cannot locate region: ./vim.r1.d1 [18591:18511 ,1:1 ]:<br />
+[212] Received an Error in Communication: (-991) 212:nga_get_common:cannot locate region: ./vim.r1.d1 [18526:18511 ,1:1 ]:<br />
+application called MPI_Abort(comm=0x84000000, -991) - process 212<br />
+[173] Received an Error in Communication: (-991) 173:nga_get_common:cannot locate region: ./vim.r1.d1 [18721:18511 ,1:1 ]:<br />
+application called MPI_Abort(comm=0x84000000, -991) - process 173<br />
+application called MPI_Abort(comm=0x84000000, -991) - process 25<br />
+[179] Received an Error in Communication: (-991) 179:nga_get_common:cannot locate region: ./vim.r1.d1 [18656:18511 ,1:1 ]:<br />
+application called MPI_Abort(comm=0x84000000, -991) - process 179<br />
+srun: error: prod2-0101: task 212: Exited with exit code 33<br />
+srun: error: prod2-0029: task 25: Exited with exit code 33<br />
+srun: error: prod2-0096: tasks 173,179: Exited with exit code 33<br />
+</div id="quote"></div id="quote"><br />
+<br />
+From what I can find online this seems to be also related to memory (even though MA 'test' passed) and CCSD iterations started. Does DIIS require additional memories?<br />
+<br />
+Thank you
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9177"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9177" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Xiongyan21/344831.html" onmouseover="mopen('mem14')" onmouseout="mclosetime()">Xiongyan21</a>  <font class="group_text">Member</font>
+                                    <div id="mem14" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Xiongyan21/344831.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Xiongyan21/9177.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Xiongyan21/344831.html">68</a><br />
+                                Posts <a href="../../search/memposts/Xiongyan21/344831.html">327</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9177.html">6:11:06 PM PDT - Fri, Jun 22nd 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">This calculation is very hardware-demanding. I have tried  NWCHEM6.8 on MAC to using aug-cc-pvdz.<br />
+<br />
+
+<pre>...<br />
+</pre>
+Iterations converged<br />
+
+<pre>CCSD correlation energy / hartree = ...       <br />
+CCSD total energy / hartree       =    ...  <br />
+</pre>
+<br />
+
+<pre>Singles contributions<br />
+</pre>
+<br />
+
+<pre>Doubles contributions<br />
+</pre>
+...<br />
+
+<pre>CCSD[T]  correction energy / hartree =       ...<br />
+CCSD[T] correlation energy / hartree =       ...<br />
+CCSD(T)  correction energy / hartree =       ... <br />
+CCSD(T) correlation energy / hartree =       ...<br />
+CCSD(T) total energy / hartree       =          ...<br />
+</pre>
+<br />
+<br />
+
+<pre> ...<br />
+                                    CITATION<br />
+                                    --------<br />
+               Please cite the following reference when publishing<br />
+                          results obtained with NWChem:<br />
+</pre>
+<br />
+
+<pre>                M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,<br />
+             T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,<br />
+                       E. Apra, T.L. Windus, W.A. de Jong<br />
+                "NWChem: a comprehensive and scalable open-source<br />
+                 solution for large scale molecular simulations"<br />
+                     Comput. Phys. Commun. 181, 1477 (2010)<br />
+                          doi:10.1016/j.cpc.2010.04.018<br />
+</pre>
+<br />
+
+<pre>                                     AUTHORS<br />
+                                     -------<br />
+         E. Apra, E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski,<br />
+      T. P. Straatsma, M. Valiev, H. J. J. van Dam, D. Wang, T. L. Windus,<br />
+       J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec, K. Lopata,<br />
+   S. A. Fischer, S. Krishnamoorthy, M. Jacquelin, W. Ma, M. Klemm, O. Villa,<br />
+     Y. Chen, V. Anisimov, F. Aquino, S. Hirata, M. T. Hackler, V. Konjkov,<br />
+           D. Mejia-Rodriguez, T. Risthaus, M. Malagoli, A. Marenich,<br />
+  A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,<br />
+       P.-D. Fan, A. Fonari, M. J. Williamson, R. J. Harrison, J. R. Rehr,<br />
+     M. Dupuis, D. Silverstein, D. M. A. Smith, J. Nieplocha, V. Tipparaju,<br />
+   M. Krishnan, B. E. Van Kuiken, A. Vazquez-Mayagoitia, L. Jensen, M. Swart,<br />
+     Q. Wu, T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown,<br />
+     G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall,<br />
+     J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell, D. E. Bernholdt,<br />
+     P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. J. O. Deegan, K. Dyall,<br />
+   D. Elwood, E. Glendening, M. Gutowski, A. C. Hess, J. Jaffe, B. G. Johnson,<br />
+    J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,<br />
+     T. Nakajima, S. Niu, L. Pollack, M. Rosing, K. Glaesemann, G. Sandrone,<br />
+     M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. T. Wong, Z. Zhang.
+</pre></td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/9177.html">Edited On</a></b> 10:22:07 PM PDT - Sat, Jul 14th 2018 <b>by</b> Xiongyan21
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_9178"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_9178" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Xiongyan21/344831.html" onmouseover="mopen('mem15')" onmouseout="mclosetime()">Xiongyan21</a>  <font class="group_text">Member</font>
+                                    <div id="mem15" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Xiongyan21/344831.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Xiongyan21/9178.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Xiongyan21/344831.html">68</a><br />
+                                Posts <a href="../../search/memposts/Xiongyan21/344831.html">327</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id9178.html">9:06:09 PM PDT - Fri, Jun 22nd 2018 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I have tried aug-cc-pvtz, which I think is adequate for many practical purposes, with "ROHF"; and others added into the proper groups.<br />
+I am very much afraid that the original calculation employing aug-cc-pvqz only could be successful on an <font color='red'>excellent performance</font> supercomputer with <font color='red'>official</font> NWCHEM installed in a USA national lab.<br />
+<br />
+NWCHEM6.8 on MAC gave<br />
+...<br />
+<br />
+Iterations converged<br />
+
+<pre>CCSD correlation energy / hartree =  ...     <br />
+CCSD total energy / hartree       =     ... <br />
+</pre>
+<br />
+
+<pre>Singles contributions<br />
+</pre>
+<br />
+
+<pre> ...<br />
+</pre>
+<br />
+
+<pre>                                    CITATION<br />
+                                    --------<br />
+               Please cite the following reference when publishing<br />
+                          results obtained with NWChem:<br />
+</pre>
+<br />
+
+<pre>                M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,<br />
+             T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,<br />
+                       E. Apra, T.L. Windus, W.A. de Jong<br />
+                "NWChem: a comprehensive and scalable open-source<br />
+                 solution for large scale molecular simulations"<br />
+                     Comput. Phys. Commun. 181, 1477 (2010)<br />
+                          doi:10.1016/j.cpc.2010.04.018<br />
+</pre>
+<br />
+
+<pre>                                     AUTHORS<br />
+                                     -------<br />
+         E. Apra, E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski,<br />
+      T. P. Straatsma, M. Valiev, H. J. J. van Dam, D. Wang, T. L. Windus,<br />
+       J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec, K. Lopata,<br />
+   S. A. Fischer, S. Krishnamoorthy, M. Jacquelin, W. Ma, M. Klemm, O. Villa,<br />
+     Y. Chen, V. Anisimov, F. Aquino, S. Hirata, M. T. Hackler, V. Konjkov,<br />
+           D. Mejia-Rodriguez, T. Risthaus, M. Malagoli, A. Marenich,<br />
+  A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,<br />
+       P.-D. Fan, A. Fonari, M. J. Williamson, R. J. Harrison, J. R. Rehr,<br />
+     M. Dupuis, D. Silverstein, D. M. A. Smith, J. Nieplocha, V. Tipparaju,<br />
+   M. Krishnan, B. E. Van Kuiken, A. Vazquez-Mayagoitia, L. Jensen, M. Swart,<br />
+     Q. Wu, T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown,<br />
+     G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall,<br />
+     J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell, D. E. Bernholdt,<br />
+     P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. J. O. Deegan, K. Dyall,<br />
+   D. Elwood, E. Glendening, M. Gutowski, A. C. Hess, J. Jaffe, B. G. Johnson,<br />
+    J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,<br />
+     T. Nakajima, S. Niu, L. Pollack, M. Rosing, K. Glaesemann, G. Sandrone,<br />
+     M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. T. Wong, Z. Zhang.
+</pre></td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/9178.html">Edited On</a></b> 4:57:02 AM PDT - Mon, Jul 9th 2018 <b>by</b> Xiongyan21
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="CCSD(T)_Calculation_with_Quadrup....html">http:///index.php/Special:AWCforum/st/id2677/CCSD(T)_Calculation_with_Quadrup....html</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.431 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id2677/CCSD(T)_Calculation_with_Quadrup....html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:50:19 GMT -->
+</html>
+
+
+
+
+

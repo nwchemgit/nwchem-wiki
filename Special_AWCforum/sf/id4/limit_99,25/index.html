@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/sf/id4/limit:99,25/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:39:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="Compiling NWChem Topics related to compiling NWChem from source" />
+<link rel="shortcut icon" href="../../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>Compiling NWChem - NWChem</title>
+		<link rel="stylesheet" href="../../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../../extensions/awc/forums/awc.js"></script><script src="../../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_sf_id4_limit_99_25 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../../images/MS3_NWChem.logo3.png);" href="../../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >Compiling NWChem</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Topics related to compiling NWChem from source</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../../credits.html">Credits</a></li>
+        			<li><a href="../../../search.html">Search</a></li>
+            <li><a href="../../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; Compiling NWChem</td>
+	</tr>
+</table>
+<br /><form name="mod_form" enctype="multipart/form-data" action="http:///index.php/Special:AWCforum/mod/" method="post">
+                        <input name="todo" type="hidden" value="mod_thread"><table width="100%" cellpadding="0" cellspacing="0"> 
+	<tr id="annc">
+        	<td class="thread_col_head" width="80%" align="left" nowrap="nowrap">Announcement's</td>
+            	<td class="thread_col_head" width="1%" align="center" nowrap="nowrap">Replies</td>
+            	<td class="thread_col_head" width="1%" align="center" nowrap="nowrap">Views</td>
+            	<td class="thread_col_head" width="20%" align="center" nowrap="nowrap">Last Action</td>
+           	
+   	</tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id3441/bse.pnl.gov_replaced_by_www.basi....html">bse.pnl.gov replaced by www.basissetexchange.org. BSE forum closed</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Edoapra/337.html">Edoapra</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">0</td>
+            <td class="thread_rows0" align="center">9997</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id3441/%23post_10324.html">Jun 7th 4:53 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="sticky">   Locked Sticky:  <a href="../../../st/id2500/NWChem_7.0.0_available_for_dowlo....html">NWChem 7.0.0 available for dowload</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Edoapra/337.html">Edoapra</a></SPAN>
+            </td>
+            <td class="sticky" align="center">0</td>
+            <td class="sticky" align="center">12336</td>
+            <td class="sticky" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2500/%23post_8650.html">Dec 14th 2:51 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr></table><br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="100%" align="left" nowrap="nowrap"><font class="page_jumps_top">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_top"><a href="../limit_74%2c25/index.html#last">Prev 25</a></font><font class="page_jumps_top"><a href="../limit_123%2c25/index.html#last">5</a></font><font class="page_jumps_top"><a href="../limit_148%2c25/index.html#last">6</a></font><font class="page_jumps_top"><a href="../limit_173%2c25/index.html#last">7</a></font><font class="page_jumps_top"><a href="../limit_198%2c25/index.html#last">8</a></font><font class="page_jumps_top"><a href="../limit_223%2c25/index.html#last">9</a></font><font class="page_jumps_top"><a href="../limit_248%2c25/index.html#last">10</a></font><font class="page_jumps_top"><a href="../limit_273%2c25/index.html#last">11</a></font><font class="page_jumps_top"><a href="../limit_123%2c26/index.html#last">Next 25</a></font><font class="page_jumps_top"><a href="../limit_399%2c26/index.html#last">Last</a></font></td>                                         
+            <td width="100%" align="right" nowrap="nowrap"></td>
+            <td width="100%" align="right" nowrap="nowrap"></td>    
+        </tr>
+    </table><table width="100%" cellpadding="0" cellspacing="0"> 
+	<tr >
+        	<td class="thread_col_head" width="80%" align="left" nowrap="nowrap">Thread Title</td>
+            	<td class="thread_col_head" width="1%" align="center" nowrap="nowrap">Replies</td>
+            	<td class="thread_col_head" width="1%" align="center" nowrap="nowrap">Views</td>
+            	<td class="thread_col_head" width="20%" align="center" nowrap="nowrap">Last Action</td>
+           	
+   	</tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id1528/Failure_to_compile_on_MinGW_with....html">Failure to compile on MinGW with MSYS</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Covalent/547975.html">Covalent</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">3</td>
+            <td class="thread_rows0" align="center">2356</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id1528/%23post_7863.html">Jan 17th 10:59 am</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2229/Error_in_ccsd_t_after_compiling.html">Error in ccsd_t after compiling</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/MarcelB/710471.html">MarcelB</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">3</td>
+            <td class="thread_rows1" align="center">1404</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2229/%23post_7841.html">Jan 8th 3:13 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2222/_Catastrophic_error__on_ccsd_t_k....html">"Catastrophic error" on ccsd_t_kernels_omp.F when compiling nw6.6 by ifort 15.0.2 under CentOS 7</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Vistawanted/709522.html">Vistawanted</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">3</td>
+            <td class="thread_rows0" align="center">1785</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2222/%23post_7836.html">Jan 4th 7:23 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2212/Error_compiling_mov2asc_in_opens....html">Error compiling mov2asc in opensuse</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Jecerca/707698.html">Jecerca</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">1</td>
+            <td class="thread_rows1" align="center">1054</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2212/%23post_7817.html">Dec 27th 6:16 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2189/Compiling_on_RHEL_7_with_MKL.html">Compiling on RHEL 7 with MKL</a><font class="pagejumps_PostOnForumPage"><a href="../../../st/id2189/limit_0%2c15/index.html#last">1</a></font> <font class="pagejumps_PostOnForumPage"><a href="../../../st/id2189/limit_15%2c15/index.html#last">2</a></font><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Afeleut/702598.html">Afeleut</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">21</td>
+            <td class="thread_rows0" align="center">7604</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2189/%23post_7815.html">Dec 27th 6:11 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2210/configure__error__test_for_ARMCI....html">configure: error: test for ARMCI_NETWORK=OPENIB failed</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Rangsiman/707037.html">Rangsiman</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">0</td>
+            <td class="thread_rows1" align="center">1147</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2210/%23post_7794.html">Dec 13th 5:44 am</a> <br /> Rangsiman</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2207/Intel_E5-2640v3_Haswell__No_such....html">Intel E5-2640v3 Haswell: No such instruction</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Danielk/705945.html">Danielk</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">4</td>
+            <td class="thread_rows0" align="center">3995</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2207/%23post_7793.html">Dec 12th 1:04 am</a> <br /> Danielk</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2208/error_in_compilation_with_gfortr....html">error in compilation with gfortran 5.4.0, -march=native</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Ylniu/178.html">Ylniu</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">4</td>
+            <td class="thread_rows1" align="center">1356</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2208/%23post_7790.html">Dec 10th 8:08 pm</a> <br /> Ylniu</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2205/MRCC_METHODS_vs_MRCC_THEORY.html">MRCC_METHODS vs MRCC_THEORY</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Vladimir/58715.html">Vladimir</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">3</td>
+            <td class="thread_rows0" align="center">1283</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2205/%23post_7778.html">Dec 7th 3:55 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2197/Nwchem_6.6_-_CentOS_7.2.html">Nwchem 6.6 - CentOS 7.2</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Jwkeller/234.html">Jwkeller</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">1</td>
+            <td class="thread_rows1" align="center">1327</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2197/%23post_8044.html">Nov 26th 1:39 pm</a> <br /> Jwkeller</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2162/-lcc_dynamic_missing_on_latest_M....html">-lcc_dynamic missing on latest Mac</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Jhammond/11.html">Jhammond</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">4</td>
+            <td class="thread_rows0" align="center">1380</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2162/%23post_7614.html">Sep 22nd 12:10 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2163/using_FOPTIMIZE.html">using FOPTIMIZE</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Jhammond/11.html">Jhammond</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">0</td>
+            <td class="thread_rows1" align="center">1191</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2163/%23post_7607.html">Sep 21st 8:30 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id1457/CCSDTLR_Not_Compiled_Error_in_Ex....html">CCSDTLR Not Compiled Error in Example ccsdt_polar_small.nw</a><font class="pagejumps_PostOnForumPage"><a href="../../../st/id1457/limit_0%2c15/index.html#last">1</a></font> <font class="pagejumps_PostOnForumPage"><a href="../../../st/id1457/limit_15%2c15/index.html#last">2</a></font><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Xiongyan21/344831.html">Xiongyan21</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">28</td>
+            <td class="thread_rows0" align="center">13836</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id1457/limit_5%2c25/%23post_7605.html">Sep 21st 3:36 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2096/NWChem_6.6_Compiling_on_Cray__FT....html">NWChem 6.6 Compiling on Cray: FTN Recursive Include Error</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Pyswagoras/689803.html">Pyswagoras</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">3</td>
+            <td class="thread_rows1" align="center">1436</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2096/%23post_7601.html">Sep 21st 3:13 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2148/NWCHEM_6-6_on_Mageia_5.html">NWCHEM 6-6 on Mageia 5</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Alfcanova/91384.html">Alfcanova</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">1</td>
+            <td class="thread_rows0" align="center">1436</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2148/%23post_7600.html">Sep 21st 3:07 pm</a> <br /> Jhammond</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2157/nwchem-6.6_compilation_error_fro....html">nwchem-6.6 compilation error from source</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Neo/396162.html">Neo</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">6</td>
+            <td class="thread_rows1" align="center">1580</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2157/%23post_7593.html">Sep 21st 3:22 am</a> <br /> Neo</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2156/why_nwchem_6.0_crashes_in_parall....html">why nwchem_6.0 crashes in parallel run</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Neo/396162.html">Neo</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">2</td>
+            <td class="thread_rows0" align="center">1109</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2156/%23post_7583.html">Sep 14th 9:05 pm</a> <br /> Neo</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2119/NWChem_seg_fault_crashes_on_Cent....html">NWChem seg fault crashes on Centos 7.2</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Deej/692675.html">Deej</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">10</td>
+            <td class="thread_rows1" align="center">2996</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2119/%23post_7561.html">Sep 1st 5:46 pm</a> <br /> Jdmoore2004</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2145/NWChem_in_Spack_package_manager.html">NWChem in Spack package manager</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Den59/694035.html">Den59</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">0</td>
+            <td class="thread_rows0" align="center">1324</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2145/%23post_7538.html">Aug 29th 7:25 am</a> <br /> Den59</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id2140/NWChem_6.3_library_containing_MP....html">NWChem 6.3 library containing MPI_Init no</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Andrew/694084.html">Andrew</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">4</td>
+            <td class="thread_rows1" align="center">1362</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2140/%23post_7532.html">Aug 25th 9:28 am</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2135/NWChem_6.6__util_getppn.patch_is....html">NWChem 6.6: util_getppn.patch is already partly applied</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Den59/694035.html">Den59</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">1</td>
+            <td class="thread_rows0" align="center">1389</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2135/%23post_7506.html">Aug 23rd 9:02 am</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id1994/NWChem_6.6_for_BlueGene/Q.html">NWChem 6.6 for BlueGene/Q</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Chiensh/131.html">Chiensh</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">15</td>
+            <td class="thread_rows1" align="center">3648</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id1994/%23post_7476.html">Aug 10th 10:49 pm</a> <br /> Buchwj</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2120/NWChem_6.6_compilation_fails_on_....html">NWChem 6.6 compilation fails on mac</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Nevensky/692780.html">Nevensky</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">5</td>
+            <td class="thread_rows0" align="center">1506</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2120/%23post_7465.html">Aug 8th 4:45 pm</a> <br /> Edoapra</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows1">    <a href="../../../st/id835/Compiling_NWChem_on_Cygwin.html">Compiling NWChem on Cygwin</a><font class="pagejumps_PostOnForumPage"><a href="../../../st/id835/limit_0%2c15/index.html#last">1</a></font> <font class="pagejumps_PostOnForumPage"><a href="../../../st/id835/limit_15%2c15/index.html#last">2</a></font><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/P99/411.html">P99</a></SPAN>
+            </td>
+            <td class="thread_rows1" align="center">21</td>
+            <td class="thread_rows1" align="center">22809</td>
+            <td class="thread_rows1" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id835/%23post_7459.html">Aug 4th 9:15 am</a> <br /> Noureddine</SPAN></td>
+            
+        </tr>        <tr>
+            <td align="left" class="thread_rows0">    <a href="../../../st/id2110/some_patches_do_not_apply_cleanl....html">some patches do not apply cleanly against Nwchem-6.6.revision27746-src.2015-10-20</a><br />
+                <SPAN align="left"> Started By : <a href="../../../mem_profile/Marcindulak/315.html">Marcindulak</a></SPAN>
+            </td>
+            <td class="thread_rows0" align="center">1</td>
+            <td class="thread_rows0" align="center">1560</td>
+            <td class="thread_rows0" align="right"><SPAN class="thread_lastaction"><a href="../../../st/id2110/%23post_7410.html">Jul 22nd 8:57 am</a> <br /> Edoapra</SPAN></td>
+            
+        </tr></table><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../../index.html">Forum</a> &gt;&gt; <a href="../../../sc/id2.html">NWChem's corner</a> &gt;&gt; Compiling NWChem</td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"><font class="page_jumps_bot">Jump to page <a href="../index.html">1</a></font><font class="page_jumps_bot"><a href="../limit_74%2c25/index.html#last">Prev 25</a></font><font class="page_jumps_bot"><a href="../limit_123%2c25/index.html#last">5</a></font><font class="page_jumps_bot"><a href="../limit_148%2c25/index.html#last">6</a></font><font class="page_jumps_bot"><a href="../limit_173%2c25/index.html#last">7</a></font><font class="page_jumps_bot"><a href="../limit_198%2c25/index.html#last">8</a></font><font class="page_jumps_bot"><a href="../limit_223%2c25/index.html#last">9</a></font><font class="page_jumps_bot"><a href="../limit_248%2c25/index.html#last">10</a></font><font class="page_jumps_bot"><a href="../limit_273%2c25/index.html#last">11</a></font><font class="page_jumps_bot"><a href="../limit_123%2c26/index.html#last">Next 25</a></font><font class="page_jumps_bot"><a href="../limit_399%2c26/index.html#last">Last</a></font></td>
+	</tr>
+</table>
+<br /><br /></form>      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 9
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/sf/id4/limit:99,25/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.269 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/sf/id4/limit:99,25/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 02:39:41 GMT -->
+</html>
+
+
+
+
+
