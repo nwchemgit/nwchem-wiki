@@ -1,0 +1,2379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id3597/NWChem_7.0_Memory_Error_%22dneadia....html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 00:15:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="NWChem 7.0 Memory Error &quot;dneadiag: ysyev err.ne.0&quot; Viewed 120 times, With a total of 2 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>NWChem 7.0 Memory Error &quot;dneadiag: ysyev err.ne.0&quot; - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id3597_NWChem_7_0_Memory_Error_dneadia_html skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >NWChem 7.0 Memory Error "dneadiag: ysyev err.ne.0"</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="3597">
+        <input name="fID" type="hidden" value="5">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 120 times, With a total of 2 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_10724"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10724" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Florianj/813715.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Florianj</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Florianj/813715.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Florianj/10724.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Florianj/813715.html">9</a><br />
+                                Posts <a href="../../search/memposts/Florianj/813715.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10724.html">5:29:30 PM PDT - Thu, Mar 12th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hello,<br />
+<br />
+I recently compiled the new NWChem 7.0.0 version on Mac OS. All the example input files run successfully, but when I try a larger system, I am getting "dneadiag: ysyev err.ne.0" as an error. I tried increasing the memory keyword in the input file, but that doesn't fix the problem. I attached my output file. Any help is appreciated!<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<pre>argument  1 = opt.nw<br />
+ NWChem w/ OpenMP: maximum threads =   16<br />
+</pre>
+<br />
+<br />
+<br />
+
+<h6> <span class="mw-headline" id=".3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D_echo_of_input_deck_.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D">======================== echo of input deck ========================</span></h6>
+echo<br />
+<br />
+start Au<br />
+memory 2000 mb<br />
+scratch_dir ./scratch<br />
+permanent_dir ./<br />
+charge 0<br />
+<br />
+GEOMETRY center noautosym noautoz print xyz<br />
+system crystal<br />
+
+<pre>  lat_a 8.65499<br />
+  lat_b 8.65499<br />
+  lat_c 41.77795<br />
+  alpha 90.0<br />
+  beta 90.0<br />
+  gamma 60.0<br />
+end<br />
+</pre>
+Au   0.11111   0.11111   0.35904<br />
+Au   0.44445   0.11111   0.35904<br />
+Au   0.77778   0.11111   0.35904<br />
+Au   0.11111   0.44444   0.35904<br />
+Au   0.44443   0.44444   0.35904<br />
+Au   0.77778   0.44444   0.35904<br />
+Au   0.11111   0.77778   0.35904<br />
+Au   0.44444   0.77778   0.35904<br />
+Au   0.77778   0.77778   0.35904<br />
+Au   0.88889   0.22222   0.41543<br />
+Au   0.22223   0.22222   0.41543<br />
+Au   0.55556   0.22222   0.41543<br />
+Au   0.88888   0.55556   0.41543<br />
+Au   0.22222   0.55556   0.41543<br />
+Au   0.55555   0.55556   0.41543<br />
+Au   0.88889   0.88889   0.41543<br />
+Au   0.22222   0.88889   0.41543<br />
+Au   0.55556   0.88889   0.41543<br />
+Au   0.00000   0.00000   0.47181<br />
+Au   0.33333   0.00000   0.47181<br />
+Au   0.66667   0.00000   0.47181<br />
+Au   0.00000   0.33334   0.47181<br />
+Au   0.33333   0.33334   0.47181<br />
+Au   0.66667   0.33334   0.47181<br />
+Au   0.00000   0.66667   0.47181<br />
+Au   0.33333   0.66667   0.47181<br />
+Au   0.66667   0.66667   0.47181<br />
+Au   0.11110   0.11112   0.52878<br />
+Au   0.44444   0.11112   0.52878<br />
+Au   0.77778   0.11111   0.52878<br />
+Au   0.11112   0.44445   0.52878<br />
+Au   0.44445   0.44445   0.52878<br />
+Au   0.77779   0.44445   0.52878<br />
+Au   0.11112   0.77778   0.52878<br />
+Au   0.44444   0.77778   0.52878<br />
+Au   0.77777   0.77778   0.52878<br />
+Au   0.88889   0.22222   0.58543<br />
+Au   0.22222   0.22222   0.58543<br />
+Au   0.55555   0.22222   0.58543<br />
+Au   0.88888   0.55556   0.58543<br />
+Au   0.22223   0.55556   0.58543<br />
+Au   0.55556   0.55556   0.58543<br />
+Au   0.88889   0.88889   0.58544<br />
+Au   0.22222   0.88889   0.58543<br />
+Au   0.55556   0.88889   0.58543<br />
+Au   0.00000   0.00000   0.64340<br />
+Au   0.33333   0.00001   0.64340<br />
+Au   0.66667   0.00000   0.64340<br />
+Au   0.00000   0.33334   0.64340<br />
+Au   0.33333   0.33334   0.64340<br />
+Au   0.66667   0.33334   0.64340<br />
+Au   0.00000   0.66667   0.64340<br />
+Au   0.33333   0.66667   0.64340<br />
+Au   0.66667   0.66667   0.64340<br />
+end<br />
+<br />
+constraints<br />
+
+<pre>fix atom 1:27<br />
+</pre>
+end<br />
+<br />
+nwpw<br />
+<br />
+
+<pre>cutoff 30 #hartree<br />
+xc pbe96-grimme4<br />
+mult 1<br />
+cg #minimizer<br />
+ewald_rcut 3.0<br />
+ewald_ncut 9<br />
+tolerances 1.0e-7 1.0e-7<br />
+</pre>
+end<br />
+<br />
+driver<br />
+
+<pre>maxiter 500<br />
+xyz Au<br />
+</pre>
+end<br />
+<br />
+set nwpw:cif_filename Au<br />
+task pspw optimize<br />
+<br />
+
+<h6> <span class="mw-headline" id=".3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D">====================================================================</span></h6>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<pre>            Northwest Computational Chemistry Package (NWChem) 7.0.0<br />
+            --------------------------------------------------------<br />
+</pre>
+<br />
+<br />
+
+<pre>                   Environmental Molecular Sciences Laboratory<br />
+                      Pacific Northwest National Laboratory<br />
+                               Richland, WA 99352<br />
+</pre>
+<br />
+
+<pre>                             Copyright (c) 1994-2019<br />
+                      Pacific Northwest National Laboratory<br />
+                           Battelle Memorial Institute<br />
+</pre>
+<br />
+
+<pre>            NWChem is an open-source computational chemistry package<br />
+                       distributed under the terms of the<br />
+                     Educational Community License (ECL) 2.0<br />
+            A copy of the license is included with this distribution<br />
+                             in the LICENSE.TXT file<br />
+</pre>
+<br />
+
+<pre>                                 ACKNOWLEDGMENT<br />
+                                 --------------<br />
+</pre>
+<br />
+
+<pre>           This software and its documentation were developed at the<br />
+           EMSL at Pacific Northwest National Laboratory, a multiprogram<br />
+           national laboratory, operated for the U.S. Department of Energy<br />
+           by Battelle under Contract Number DE-AC05-76RL01830. Support<br />
+           for this work was provided by the Department of Energy Office<br />
+           of Biological and Environmental Research, Office of Basic<br />
+           Energy Sciences, and the Office of Advanced Scientific Computing.<br />
+</pre>
+<br />
+<br />
+
+<pre>          Job information<br />
+          ---------------<br />
+</pre>
+<br />
+
+<pre>   hostname        = Jacobs-MacBook-Pro.local<br />
+   program         = /Users/florianj/Documents/nwchem-7.0.0/bin/MACX64/nwchem<br />
+   date            = Thu Mar 12 20:14:20 2020<br />
+</pre>
+<br />
+
+<pre>   compiled        = Thu_Mar_12_13:12:47_2020<br />
+   source          = /Users/florianj/Documents/nwchem-7.0.0<br />
+   nwchem branch   = 7.0.0<br />
+   nwchem revision = 2c9a1c7c<br />
+   ga revision     = 5.7.1<br />
+   use scalapack   = F<br />
+   input           = opt.nw<br />
+   prefix          = Au.<br />
+   data base       = .//Au.db<br />
+   status          = startup<br />
+   nproc           =        1<br />
+   time left       =     -1s<br />
+</pre>
+<br />
+<br />
+<br />
+
+<pre>          Memory information<br />
+          ------------------<br />
+</pre>
+<br />
+
+<pre>   heap     =   65535996 doubles =    500.0 Mbytes<br />
+   stack    =   65536001 doubles =    500.0 Mbytes<br />
+   global   =  131072000 doubles =   1000.0 Mbytes (distinct from heap &amp; stack)<br />
+   total    =  262143997 doubles =   2000.0 Mbytes<br />
+   verify   = yes<br />
+   hardfail = no<br />
+</pre>
+<br />
+<br />
+
+<pre>          Directory information<br />
+          ---------------------<br />
+</pre>
+<br />
+
+<pre> 0 permanent = ./<br />
+ 0 scratch   = ./scratch<br />
+</pre>
+<br />
+<br />
+<br />
+<br />
+
+<pre>                               NWChem Input Module<br />
+                               -------------------<br />
+</pre>
+<br />
+<br />
+
+<pre>&nbsp;!!!!!!!!!  geom_3d NEEDS TESTING&nbsp;!!!!!!!!!!<br />
+</pre>
+<br />
+<br />
+
+<pre>                            Geometry "geometry" -&gt; ""<br />
+                            -------------------------<br />
+</pre>
+<br />
+
+<pre>Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)<br />
+</pre>
+<br />
+
+<pre> No.       Tag          Charge          X              Y              Z<br />
+---- ---------------- ---------- -------------- -------------- --------------<br />
+   1 Au                  79.0000     0.83281847     1.44248391    14.99995517<br />
+   2 Au                  79.0000     3.33134885     2.88501109    14.99995517<br />
+   3 Au                  79.0000     5.82980426     4.32749500    14.99995517<br />
+   4 Au                  79.0000     0.83281847     4.32745173    14.99995517<br />
+   5 Au                  79.0000     3.33119894     5.76989236    14.99995517<br />
+   6 Au                  79.0000     5.82980426     7.21246282    14.99995517<br />
+   7 Au                  79.0000     0.83281847     7.21250609    14.99995517<br />
+   8 Au                  79.0000     3.33127389     8.65499000    14.99995517<br />
+   9 Au                  79.0000     5.82980426    10.09751718    14.99995517<br />
+  10 Au                  79.0000     6.66262274     5.76997891    17.35581377<br />
+  11 Au                  79.0000     1.66571190     2.88501109    17.35581377<br />
+  12 Au                  79.0000     4.16416732     4.32749500    17.35581377<br />
+  13 Au                  79.0000     6.66254778     8.65499000    17.35581377<br />
+  14 Au                  79.0000     1.66563695     5.77002218    17.35581377<br />
+  15 Au                  79.0000     4.16409236     7.21250609    17.35581377<br />
+  16 Au                  79.0000     6.66262274    11.54000109    17.35581377<br />
+  17 Au                  79.0000     1.66563695     8.65499000    17.35581377<br />
+  18 Au                  79.0000     4.16416732    10.09751718    17.35581377<br />
+  19 Au                  79.0000     0.00000000     0.00000000    19.71125459<br />
+  20 Au                  79.0000     2.49845542     1.44248391    19.71125459<br />
+  21 Au                  79.0000     4.99698579     2.88501109    19.71125459<br />
+  22 Au                  79.0000     0.00000000     2.88505437    19.71125459<br />
+  23 Au                  79.0000     2.49845542     4.32753827    19.71125459<br />
+  24 Au                  79.0000     4.99698579     5.77006546    19.71125459<br />
+  25 Au                  79.0000     0.00000000     5.77002218    19.71125459<br />
+  26 Au                  79.0000     2.49845542     7.21250609    19.71125459<br />
+  27 Au                  79.0000     4.99698579     8.65503327    19.71125459<br />
+  28 Au                  79.0000     0.83274352     1.44252718    22.09134440<br />
+  29 Au                  79.0000     3.33127389     2.88505437    22.09134440<br />
+  30 Au                  79.0000     5.82980426     4.32749500    22.09134440<br />
+  31 Au                  79.0000     0.83289343     4.32758155    22.09134440<br />
+  32 Au                  79.0000     3.33134885     5.77006546    22.09134440<br />
+  33 Au                  79.0000     5.82987922     7.21259264    22.09134440<br />
+  34 Au                  79.0000     0.83289343     7.21254937    22.09134440<br />
+  35 Au                  79.0000     3.33127389     8.65499000    22.09134440<br />
+  36 Au                  79.0000     5.82972931    10.09747391    22.09134440<br />
+  37 Au                  79.0000     6.66262274     5.76997891    24.45806527<br />
+  38 Au                  79.0000     1.66563695     2.88496782    24.45806527<br />
+  39 Au                  79.0000     4.16409236     4.32745173    24.45806527<br />
+  40 Au                  79.0000     6.66254778     8.65499000    24.45806527<br />
+  41 Au                  79.0000     1.66571190     5.77006546    24.45806527<br />
+  42 Au                  79.0000     4.16416732     7.21254937    24.45806527<br />
+  43 Au                  79.0000     6.66262274    11.54000109    24.45848305<br />
+  44 Au                  79.0000     1.66563695     8.65499000    24.45806527<br />
+  45 Au                  79.0000     4.16416732    10.09751718    24.45806527<br />
+  46 Au                  79.0000     0.00000000     0.00000000    26.87993303<br />
+  47 Au                  79.0000     2.49845542     1.44257046    26.87993303<br />
+  48 Au                  79.0000     4.99698579     2.88501109    26.87993303<br />
+  49 Au                  79.0000     0.00000000     2.88505437    26.87993303<br />
+  50 Au                  79.0000     2.49845542     4.32753827    26.87993303<br />
+  51 Au                  79.0000     4.99698579     5.77006546    26.87993303<br />
+  52 Au                  79.0000     0.00000000     5.77002218    26.87993303<br />
+  53 Au                  79.0000     2.49845542     7.21250609    26.87993303<br />
+  54 Au                  79.0000     4.99698579     8.65503327    26.87993303<br />
+</pre>
+<br />
+
+<pre>     Lattice Parameters<br />
+     ------------------<br />
+</pre>
+<br />
+
+<pre>     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)<br />
+</pre>
+<br />
+
+<pre>     a1=&lt;   7.495   4.327   0.000 &gt;<br />
+     a2=&lt;   0.000   8.655   0.000 &gt;<br />
+     a3=&lt;   0.000   0.000  41.778 &gt;<br />
+     a=       8.655 b=      8.655 c=      41.778<br />
+     alpha=  90.000 beta=  90.000 gamma=  60.000<br />
+     omega=  2710.3<br />
+</pre>
+<br />
+
+<pre>     reciprocal lattice vectors in a.u.<br />
+</pre>
+<br />
+
+<pre>     b1=&lt;   0.444   0.000  -0.000 &gt;<br />
+     b2=&lt;  -0.222   0.384  -0.000 &gt;<br />
+     b3=&lt;   0.000   0.000   0.080 &gt;<br />
+</pre>
+<br />
+
+<pre>     Atomic Mass<br />
+     -----------<br />
+</pre>
+<br />
+
+<pre>     Au               196.966600<br />
+</pre>
+<br />
+<br />
+<br />
+
+<pre>           XYZ format geometry<br />
+           -------------------<br />
+   54<br />
+geometry<br />
+Au                    0.83281847     1.44248391    14.99995517<br />
+Au                    3.33134885     2.88501109    14.99995517<br />
+Au                    5.82980426     4.32749500    14.99995517<br />
+Au                    0.83281847     4.32745173    14.99995517<br />
+Au                    3.33119894     5.76989236    14.99995517<br />
+Au                    5.82980426     7.21246282    14.99995517<br />
+Au                    0.83281847     7.21250609    14.99995517<br />
+Au                    3.33127389     8.65499000    14.99995517<br />
+Au                    5.82980426    10.09751718    14.99995517<br />
+Au                    6.66262274     5.76997891    17.35581377<br />
+Au                    1.66571190     2.88501109    17.35581377<br />
+Au                    4.16416732     4.32749500    17.35581377<br />
+Au                    6.66254778     8.65499000    17.35581377<br />
+Au                    1.66563695     5.77002218    17.35581377<br />
+Au                    4.16409236     7.21250609    17.35581377<br />
+Au                    6.66262274    11.54000109    17.35581377<br />
+Au                    1.66563695     8.65499000    17.35581377<br />
+Au                    4.16416732    10.09751718    17.35581377<br />
+Au                    0.00000000     0.00000000    19.71125459<br />
+Au                    2.49845542     1.44248391    19.71125459<br />
+Au                    4.99698579     2.88501109    19.71125459<br />
+Au                    0.00000000     2.88505437    19.71125459<br />
+Au                    2.49845542     4.32753827    19.71125459<br />
+Au                    4.99698579     5.77006546    19.71125459<br />
+Au                    0.00000000     5.77002218    19.71125459<br />
+Au                    2.49845542     7.21250609    19.71125459<br />
+Au                    4.99698579     8.65503327    19.71125459<br />
+Au                    0.83274352     1.44252718    22.09134440<br />
+Au                    3.33127389     2.88505437    22.09134440<br />
+Au                    5.82980426     4.32749500    22.09134440<br />
+Au                    0.83289343     4.32758155    22.09134440<br />
+Au                    3.33134885     5.77006546    22.09134440<br />
+Au                    5.82987922     7.21259264    22.09134440<br />
+Au                    0.83289343     7.21254937    22.09134440<br />
+Au                    3.33127389     8.65499000    22.09134440<br />
+Au                    5.82972931    10.09747391    22.09134440<br />
+Au                    6.66262274     5.76997891    24.45806527<br />
+Au                    1.66563695     2.88496782    24.45806527<br />
+Au                    4.16409236     4.32745173    24.45806527<br />
+Au                    6.66254778     8.65499000    24.45806527<br />
+Au                    1.66571190     5.77006546    24.45806527<br />
+Au                    4.16416732     7.21254937    24.45806527<br />
+Au                    6.66262274    11.54000109    24.45848305<br />
+Au                    1.66563695     8.65499000    24.45806527<br />
+Au                    4.16416732    10.09751718    24.45806527<br />
+Au                    0.00000000     0.00000000    26.87993303<br />
+Au                    2.49845542     1.44257046    26.87993303<br />
+Au                    4.99698579     2.88501109    26.87993303<br />
+Au                    0.00000000     2.88505437    26.87993303<br />
+Au                    2.49845542     4.32753827    26.87993303<br />
+Au                    4.99698579     5.77006546    26.87993303<br />
+Au                    0.00000000     5.77002218    26.87993303<br />
+Au                    2.49845542     7.21250609    26.87993303<br />
+Au                    4.99698579     8.65503327    26.87993303<br />
+</pre>
+<br />
+
+<pre><br />
+</pre>
+<br />
+<br />
+
+<pre>fixed atoms                 &nbsp;:   1     2     3     4<br />
+                                 5     6     7     8<br />
+                                 9    10    11    12<br />
+                                13    14    15    16<br />
+                                17    18    19    20<br />
+                                21    22    23    24<br />
+                                25    26    27<br />
+</pre>
+<br />
+<br />
+
+<pre>no springs found<br />
+no bondings springs found<br />
+no bondings springs found<br />
+no dihedral springs found<br />
+                        NWChem Constraints Module<br />
+                        -------------------------<br />
+General Information<br />
+-------------------<br />
+fixed atoms                 &nbsp;:   1     2     3     4<br />
+                                 5     6     7     8<br />
+                                 9    10    11    12<br />
+                                13    14    15    16<br />
+                                17    18    19    20<br />
+                                21    22    23    24<br />
+                                25    26    27<br />
+</pre>
+<br />
+<br />
+
+<pre>no springs found<br />
+no bondings springs found<br />
+no bondings springs found<br />
+no dihedral springs found<br />
+</pre>
+<br />
+<br />
+
+<pre>                          NWChem Geometry Optimization<br />
+                          ----------------------------<br />
+</pre>
+<br />
+<br />
+
+<pre>maximum gradient threshold         (gmax) =   0.000450<br />
+rms gradient threshold             (grms) =   0.000300<br />
+maximum cartesian step threshold   (xmax) =   0.001800<br />
+rms cartesian step threshold       (xrms) =   0.001200<br />
+fixed trust radius                (trust) =   0.300000<br />
+maximum step size to saddle      (sadstp) =   0.100000<br />
+energy precision                  (eprec) =   1.0D-07<br />
+maximum number of steps          (nptopt) =  500<br />
+initial hessian option           (inhess) =    0<br />
+line search option               (linopt) =    1<br />
+hessian update option            (modupd) =    1<br />
+saddle point option              (modsad) =    0<br />
+initial eigen-mode to follow     (moddir) =    0<br />
+initial variable to follow       (vardir) =    0<br />
+follow first negative mode     (firstneg) =    T<br />
+apply conjugacy                    (opcg) =    F<br />
+source of zmatrix                         =
+</pre>
+<br />
+<br />
+
+<pre>         -------------------<br />
+         Energy Minimization<br />
+         -------------------<br />
+</pre>
+<br />
+<br />
+
+<pre>Using old Hessian from previous optimization<br />
+</pre>
+<br />
+
+<pre>         --------<br />
+         Step   0<br />
+         --------<br />
+</pre>
+<br />
+<br />
+
+<pre>                        Geometry "geometry" -&gt; "geometry"<br />
+                        ---------------------------------<br />
+</pre>
+<br />
+
+<pre>Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)<br />
+</pre>
+<br />
+
+<pre> No.       Tag          Charge          X              Y              Z<br />
+---- ---------------- ---------- -------------- -------------- --------------<br />
+   1 Au                  79.0000     0.83281847     1.44248391    14.99995517<br />
+   2 Au                  79.0000     3.33134885     2.88501109    14.99995517<br />
+   3 Au                  79.0000     5.82980426     4.32749500    14.99995517<br />
+   4 Au                  79.0000     0.83281847     4.32745173    14.99995517<br />
+   5 Au                  79.0000     3.33119894     5.76989236    14.99995517<br />
+   6 Au                  79.0000     5.82980426     7.21246282    14.99995517<br />
+   7 Au                  79.0000     0.83281847     7.21250609    14.99995517<br />
+   8 Au                  79.0000     3.33127389     8.65499000    14.99995517<br />
+   9 Au                  79.0000     5.82980426    10.09751718    14.99995517<br />
+  10 Au                  79.0000     6.66262274     5.76997891    17.35581377<br />
+  11 Au                  79.0000     1.66571190     2.88501109    17.35581377<br />
+  12 Au                  79.0000     4.16416732     4.32749500    17.35581377<br />
+  13 Au                  79.0000     6.66254778     8.65499000    17.35581377<br />
+  14 Au                  79.0000     1.66563695     5.77002218    17.35581377<br />
+  15 Au                  79.0000     4.16409236     7.21250609    17.35581377<br />
+  16 Au                  79.0000     6.66262274    11.54000109    17.35581377<br />
+  17 Au                  79.0000     1.66563695     8.65499000    17.35581377<br />
+  18 Au                  79.0000     4.16416732    10.09751718    17.35581377<br />
+  19 Au                  79.0000     0.00000000     0.00000000    19.71125459<br />
+  20 Au                  79.0000     2.49845542     1.44248391    19.71125459<br />
+  21 Au                  79.0000     4.99698579     2.88501109    19.71125459<br />
+  22 Au                  79.0000     0.00000000     2.88505437    19.71125459<br />
+  23 Au                  79.0000     2.49845542     4.32753827    19.71125459<br />
+  24 Au                  79.0000     4.99698579     5.77006546    19.71125459<br />
+  25 Au                  79.0000     0.00000000     5.77002218    19.71125459<br />
+  26 Au                  79.0000     2.49845542     7.21250609    19.71125459<br />
+  27 Au                  79.0000     4.99698579     8.65503327    19.71125459<br />
+  28 Au                  79.0000     0.83274352     1.44252718    22.09134440<br />
+  29 Au                  79.0000     3.33127389     2.88505437    22.09134440<br />
+  30 Au                  79.0000     5.82980426     4.32749500    22.09134440<br />
+  31 Au                  79.0000     0.83289343     4.32758155    22.09134440<br />
+  32 Au                  79.0000     3.33134885     5.77006546    22.09134440<br />
+  33 Au                  79.0000     5.82987922     7.21259264    22.09134440<br />
+  34 Au                  79.0000     0.83289343     7.21254937    22.09134440<br />
+  35 Au                  79.0000     3.33127389     8.65499000    22.09134440<br />
+  36 Au                  79.0000     5.82972931    10.09747391    22.09134440<br />
+  37 Au                  79.0000     6.66262274     5.76997891    24.45806527<br />
+  38 Au                  79.0000     1.66563695     2.88496782    24.45806527<br />
+  39 Au                  79.0000     4.16409236     4.32745173    24.45806527<br />
+  40 Au                  79.0000     6.66254778     8.65499000    24.45806527<br />
+  41 Au                  79.0000     1.66571190     5.77006546    24.45806527<br />
+  42 Au                  79.0000     4.16416732     7.21254937    24.45806527<br />
+  43 Au                  79.0000     6.66262274    11.54000109    24.45848305<br />
+  44 Au                  79.0000     1.66563695     8.65499000    24.45806527<br />
+  45 Au                  79.0000     4.16416732    10.09751718    24.45806527<br />
+  46 Au                  79.0000     0.00000000     0.00000000    26.87993303<br />
+  47 Au                  79.0000     2.49845542     1.44257046    26.87993303<br />
+  48 Au                  79.0000     4.99698579     2.88501109    26.87993303<br />
+  49 Au                  79.0000     0.00000000     2.88505437    26.87993303<br />
+  50 Au                  79.0000     2.49845542     4.32753827    26.87993303<br />
+  51 Au                  79.0000     4.99698579     5.77006546    26.87993303<br />
+  52 Au                  79.0000     0.00000000     5.77002218    26.87993303<br />
+  53 Au                  79.0000     2.49845542     7.21250609    26.87993303<br />
+  54 Au                  79.0000     4.99698579     8.65503327    26.87993303<br />
+</pre>
+<br />
+
+<pre>     Lattice Parameters<br />
+     ------------------<br />
+</pre>
+<br />
+
+<pre>     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)<br />
+</pre>
+<br />
+
+<pre>     a1=&lt;   7.495   4.327   0.000 &gt;<br />
+     a2=&lt;   0.000   8.655   0.000 &gt;<br />
+     a3=&lt;   0.000   0.000  41.778 &gt;<br />
+     a=       8.655 b=      8.655 c=      41.778<br />
+     alpha=  90.000 beta=  90.000 gamma=  60.000<br />
+     omega=  2710.3<br />
+</pre>
+<br />
+
+<pre>     reciprocal lattice vectors in a.u.<br />
+</pre>
+<br />
+
+<pre>     b1=&lt;   0.444   0.000  -0.000 &gt;<br />
+     b2=&lt;  -0.222   0.384  -0.000 &gt;<br />
+     b3=&lt;   0.000   0.000   0.080 &gt;<br />
+</pre>
+<br />
+
+<pre>     Atomic Mass<br />
+     -----------<br />
+</pre>
+<br />
+
+<pre>     Au               196.966600<br />
+</pre>
+<br />
+<br />
+
+<pre>         ****************************************************<br />
+         *                                                  *<br />
+         *               NWPW PSPW Calculation              *<br />
+         *                                                  *<br />
+         * [ (Grassmann/Stiefel manifold implementation)  ] *<br />
+         *                                                  *<br />
+         *      [ NorthWest Chemistry implementation ]      *<br />
+         *                                                  *<br />
+         *            version #5.10   06/12/02              *<br />
+         *                                                  *<br />
+         *    This code was developed by Eric J. Bylaska,   *<br />
+         *    and was based upon algorithms and code        *<br />
+         *    developed by the group of Prof. John H. Weare *<br />
+         *                                                  *<br />
+         ****************************************************<br />
+    &gt;&gt;&gt;  JOB STARTED       AT Thu Mar 12 20:14:20 2020  &lt;&lt;&lt;<br />
+         ================ input data ========================
+ library name resolved from: compiled reference<br />
+ NWCHEM_NWPW_LIBRARY set to: &lt;/Users/florianj/Documents/nwchem-7.0.0/src/nwpw/libraryps/&gt;<br />
+Generating 1d pseudopotential for Au<br />
+</pre>
+<br />
+
+<pre>Generated formatted_filename: .//Au.vpp<br />
+random planewave guess, initial psi:Au.movecs<br />
+-   spin, nalpha, nbeta:                    1                  297                    0<br />
+</pre>
+<br />
+
+<pre>input psi filename:.//Au.movecs<br />
+</pre>
+<br />
+
+<pre>Warning - K.S. orbitals are not orthonormal. Applying Gram-Schmidt orthonormalization.<br />
+        - exact norm=0.297000E+03 norm=0.193550E+03 corrected norm=0.297000E+03 (error=0.103450E+03)<br />
+</pre>
+<br />
+<br />
+
+<pre>Fixed ion positions:    1    2    3    4    5    6    7    8    9   10<br />
+Fixed ion positions:   11   12   13   14   15   16   17   18   19   20<br />
+Fixed ion positions:   21   22   23   24   25   26   27<br />
+</pre>
+<br />
+<br />
+
+<pre>number of processors used:         1<br />
+processor grid          &nbsp;:   1 x   1<br />
+parallel mapping        &nbsp;:2d hilbert<br />
+parallel mapping        &nbsp;:  balanced<br />
+number of threads       &nbsp;:        16<br />
+parallel io             &nbsp;:       off<br />
+</pre>
+<br />
+
+<pre>options:<br />
+     boundary conditions  = periodic    (version3)<br />
+     electron spin        = restricted<br />
+     exchange-correlation = PBE96 (White and Bird) parameterization<br />
+     dispersion correction= Grimme4<br />
+</pre>
+<br />
+
+<pre>elements involved in the cluster:<br />
+     1: Au  valence charge: 11.0000  lmax=  2<br />
+            comment   &nbsp;: Troullier-Martins pseudopotential<br />
+            pseudpotential type           &nbsp;:   0<br />
+            highest angular component     &nbsp;:   2<br />
+            local potential used          &nbsp;:   0<br />
+            number of non-local projections:   8<br />
+            semicore corrections included &nbsp;:  1.200 (radius)  9.350 (charge)<br />
+            cutoff =   2.076   3.097   1.926<br />
+</pre>
+<br />
+<br />
+
+<pre>total charge:   0.000<br />
+</pre>
+<br />
+
+<pre>atomic composition:<br />
+    Au &nbsp;:   54<br />
+</pre>
+<br />
+
+<pre>number of electrons: spin up=   297 ( 297 per task)  down=   297 ( 297 per task) (Fourier space)<br />
+number of orbitals&nbsp;: spin up=   297 ( 297 per task)  down=   297 ( 297 per task) (Fourier space)<br />
+</pre>
+<br />
+
+<pre>supercell:<br />
+     cell_name:  cell_default<br />
+     lattice:    a1=&lt;  14.164   8.178   0.000 &gt;<br />
+                 a2=&lt;   0.000  16.356   0.000 &gt;<br />
+                 a3=&lt;   0.000   0.000  78.949 &gt;<br />
+     reciprocal: b1=&lt;   0.444   0.000  -0.000 &gt;<br />
+                 b2=&lt;  -0.222   0.384  -0.000 &gt;<br />
+                 b3=&lt;   0.000   0.000   0.080 &gt;<br />
+     lattice:    a=      16.356 b=     16.356 c=      78.949<br />
+                 alpha=  90.000 beta=  90.000 gamma=  60.000<br />
+                 omega=     18289.7<br />
+</pre>
+<br />
+
+<pre>     density cutoff= 20.000  fft= 30x 30x160(    37558 waves    37558 per task)<br />
+     wavefnc cutoff= 10.000  fft= 30x 30x160(    13848 waves    13848 per task)<br />
+     Ewald summation: cut radius=    3.00  and  9<br />
+                      Madelung Wigner-Seitz=   -1.62233456 (alpha=   -2.61519026 rs=16.34454865)<br />
+</pre>
+<br />
+
+<pre>technical parameters:<br />
+     time step=      5.80     fictitious mass=  400000.0<br />
+     tolerance=0.100E-06 (energy)   0.100E-06 (density)<br />
+     maximum iterations =      1000 (   10 inner    100 outer )<br />
+</pre>
+<br />
+<br />
+
+<h2> <span class="mw-headline" id="Energy_Calculation"> Energy Calculation </span></h2>
+<br />
+<br />
+
+<pre>         ====== Grassmann conjugate gradient iteration ======
+    &gt;&gt;&gt;  ITERATION STARTED AT Thu Mar 12 20:14:39 2020  &lt;&lt;&lt;<br />
+   iter.           Energy         DeltaE       DeltaRho<br />
+   ------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+ current input line&nbsp;:<br />
+ current input line&nbsp;:<br />
+</pre>
+<br />
+<br />
+
+<pre>   95: task pspw optimize<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+<br />
+<br />
+
+<pre>------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+ current input line&nbsp;:<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+dneadiag: ysyev err.ne.0           5910703168<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>   95: task pspw optimize<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+------------------------------------------------------------------------<br />
+</pre>
+<br />
+<br />
+
+<pre>dneadiag: ysyev err.ne.0           5910703168<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+------------------------------------------------------------------------<br />
+ current input line&nbsp;:<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+   95: task pspw optimize<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+This error has not yet been assigned to a category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+For further details see manual section: No section for this category<br />
+------------------------------------------------------------------------<br />
+For more information see the NWChem manual at <a href="https://github.com/nwchemgit/nwchem/wiki" class="external free">https://github.com/nwchemgit/nwchem/wiki</a><br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+</pre>
+<br />
+<br />
+
+<pre>For further details see manual section: No section for this category<br />
+For further details see manual section: No section for this category
+</pre></td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10729"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10729" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/10729.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10729.html">12:31:29 PM PDT - Fri, Mar 13th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">This might be an installation problem. I was able to run this input without the failure reported.<br />
+<br />
+I encourage you to  install the precompiled  NWChem 7.0.0  binary with <a target='blank' href="https://brew.sh/" class="external text">Homebrew</a>.<br />
+<br />
+I have just verified on my Mac that the input you reported does work with the Homebrew NWChem 7.0.0 binary
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10730"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10730" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Florianj/813715.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Florianj</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Florianj/813715.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Florianj/10730.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Florianj/813715.html">9</a><br />
+                                Posts <a href="../../search/memposts/Florianj/813715.html">10</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10730.html">3:23:59 PM PDT - Fri, Mar 13th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Didn't know there was a precompiled version. Thanks!
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id5.html">Running NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="NWChem_7.0_Memory_Error__dneadia....html">http:///index.php/Special:AWCforum/st/id3597/NWChem_7.0_Memory_Error_%22dneadia....html</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.344 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id3597/NWChem_7.0_Memory_Error_%22dneadia....html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 00:15:24 GMT -->
+</html>
+
+
+
+
+
