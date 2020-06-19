@@ -1,0 +1,2138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+<!-- Mirrored from /index.php/Special:AWCforum/st/id3560/#post_10740 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 00:12:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="MediaWiki 1.16.4" />
+<meta name="keywords" content="Compiling NWChem 6.8.1 on Mellanox Infiniband cluster with GNU compilers and Intel MPI and MKL Viewed 266 times, With a total of 5 Posts" />
+<link rel="shortcut icon" href="../../../../favicon.html" />
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../opensearch_desc.php" title="NWChem (en)" />
+<link rel="alternate" type="application/atom+xml" title="NWChem Atom feed" href="../../../../index890f.php?title=Special:RecentChanges&amp;feed=atom" />		<title>Compiling NWChem 6.8.1 on Mellanox Infiniband cluster with GNU compilers and Intel MPI and MKL - NWChem</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared3905.css?270" media="screen" />
+<link rel="stylesheet" href="../../../../skins/common/commonPrint3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_main3905.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/gumax/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/gumax/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/gumax/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="../../../../skins/gumax/gumax_print3905.css?270" media="print" />
+<link rel="stylesheet" href="../../../../index31a6.css?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../index663f.css?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="../../../../indexb76e.css?title=MediaWiki:Gumax.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="../../../../indexd70f.css?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?270"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script>
+var skin="gumax",
+stylepath="/skins",
+wgUrlProtocols="http.html\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="../../../Main_Page.html",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="../../../../index.html",
+wgCanonicalNamespace="Special",
+wgCanonicalSpecialPageName="AWCforum",
+wgNamespaceNumber=-1,
+wgPageName="Special:AWCforum",
+wgTitle="AWCforum",
+wgAction="view",
+wgArticleId=0,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=true,
+wgCurRevisionId=0,
+wgVersion="1.16.4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "NWChem", "5": "NWChem talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "500": "Release-60", "501": "Release-60 talk", "502": "Release61", "503": "Release61 talk", "504": "Release62", "505": "Release62 talk", "506": "Release64", "507": "Release64 talk", "508": "Release65", "509": "Release65 talk", "510": "Development", "511": "Development talk", "512": "Release66", "513": "Release66 talk", "121707": "Forum"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "nwchem": 4, "nwchem_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "release-60": 500, "release-60_talk": 501, "release61": 502, "release61_talk": 503, "release62": 504, "release62_talk": 505, "release64": 506, "release64_talk": 507, "release65": 508, "release65_talk": 509, "development": 510, "development_talk": 511, "release66": 512, "release66_talk": 513, "forum": 121707, "ns_reldoc64": "NS_RELDOC65", "ns_reldoc64_talk": "NS_RELDOC65_TALK", "image": 6, "image_talk": 7},
+wgSiteName="NWChem",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script>
+		<script type="text/javascript" src="../../../../skins/common/wikibits3905.js?270"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+<style type="text/css">
+#bodyContent a[href ^="http://"] {
+background: none;
+    padding-right: 0px;
+}
+
+#bodyContent a.external {
+background: none;
+	padding-right: 0px;
+}
+
+#p-cactions li a {
+text-transform: capitalize;
+}
+
+#contentSub {
+margin: 0;
+padding: 2px;
+padding-bottom: 6px;
+}
+
+pre {
+margin:0px; 
+    padding:5px;
+    padding-bottom:20px;  
+    
+    width: 600px;
+    overflow:auto;
+    overflow-y: visible;
+    line-height: 100%;
+}
+
+.top_user_links {
+margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+}
+
+#TopMenuLinksHolder li a:hover {
+
+}
+
+#TopMenuLinksHolder li a {
+
+}
+
+#TopMenuLinksHolder li {
+margin-top: 4px;   
+    margin-left: 4px;
+    margin-bottom: 0px;
+    
+    padding: 3px;
+    
+    list-style: none;
+    float: right;
+    display: block;
+    
+    width: auto;
+    white-space: nowrap;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    color: #000;
+    text-decoration: none;
+    font: 11px Verdana;
+    text-align: left;
+    z-index: 3;
+}
+
+#TopMenuLinksHolder a:visited {
+
+}
+
+#TopMenuLinksHolder div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#TopMenuLinksHolder div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#TopMenuLinksHolder div {
+position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+}
+
+#TopMenuLinksHolder {
+margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.UserNameOptions {
+
+}
+
+#UserNameOptions a:visited {
+
+}
+
+#UserNameOptions li a:hover {
+
+}
+
+#UserNameOptions li a {
+font: 11px Verdana;
+}
+
+#UserNameOptions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    border: 0px;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+}
+
+#UserNameOptions div a:hover {
+color: #FFF;
+}
+
+#UserNameOptions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        
+        width: 500px;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#UserNameOptions div {
+position: absolute;
+    display: block;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    font: 12px arial;
+    line-height: 100%;
+}
+
+#UserNameOptions {
+margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.group_text {
+font-size: 84%;
+    width: auto;
+    padding: 0px;
+}
+
+.edited_on {
+border-top: 1px solid #aaa;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.post_title {
+
+}
+
+.post_date {
+border-bottom: 1px solid #aaa;
+    font-size: 90%;
+    padding-left: 2px;
+}
+
+.post_td {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    margin: .0em;
+    padding: .0em;
+}
+
+.post_body {
+padding: .5em;
+    padding-top: 0px;
+}
+
+.post0 {
+background-color: #E5E5E5;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+.post1 {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding-bottom: .0em;
+}
+
+.post_footer {
+/* post, quote, edit buttons */
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.post_box {
+margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.mem_name {
+border-bottom: 1px solid #aaa;
+    margin: 0;
+    padding: .4em;
+}
+
+.adv {
+border: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.thread_sig {
+border-top: 2px solid #aaa;
+    margin: 3px;
+    padding-left: 5px;
+}
+
+#subscribe_menu {
+position: absolute;
+    background: #ccc ;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    margin: 0em;
+    padding: 5px;
+    padding-top: 0px;
+    top:auto;
+    right:65px;
+    z-index: 2;
+}
+
+.drop_down_buttons:hover {
+background: #ccc ;
+}
+
+.drop_down_buttons {
+margin: 0em;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background: #fff ;
+}
+
+.mod_menu_row {
+text-align: left;
+}
+
+.post_buttons:hover {
+background: #fff ;
+}
+
+.post_buttons {
+white-space: nowrap;
+    float: right;
+    margin-top: .5em;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: #000;
+}
+
+.quote_title {
+border: 1px dashed #aaa;
+	padding: 5px;
+	background-color: #f9f9f9;
+	font-family:"Courier New", Courier, mono;
+}
+
+.quote {
+border-top: 1px solid #000;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 95%;
+}
+
+.user_options_row {
+border: 1px solid #aaa;
+    background: #fff ;
+    padding: .3em;
+}
+
+.t_userinfo {
+white-space:nowrap;
+    text-align: left;
+    margin: 0;
+    padding: .7em;
+    padding-bottom: 0em;
+}
+
+.ThreadOtions {
+margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#ThreadOtions a:visited {
+
+}
+
+#ThreadOtions li a:hover {
+
+}
+
+#ThreadOtions li a {
+border: 1px solid #aaa;
+    border-bottom: 0em;
+    padding: 4px;
+}
+
+#ThreadOtions li {
+list-style: none;
+    display: block;
+    white-space: nowrap;
+    
+    border: 0px;
+    color: #000;
+    
+    text-decoration: none;
+    z-index: 3;
+}
+
+#ThreadOtions div a:hover {
+background: #FFF;
+    color: #000;
+}
+
+#ThreadOtions div a {
+position: relative;
+        display: block;
+        margin: 0;
+        padding: 2px;
+        border: 0em;
+        
+        white-space: nowrap; 
+        text-align: left;
+        text-decoration: none;
+        font: 11px arial;
+}
+
+#ThreadOtions div {
+position: absolute; 
+    right: 50px;
+    visibility: hidden;
+    margin: 0;
+    padding: 5px;
+    background: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    white-space: nowrap; 
+    text-align: left;
+}
+
+#ThreadOtions {
+margin-top: 3px;
+    padding: 0;
+    z-index: 3;
+}
+
+.forum_posts {
+border: 1px solid #aaa;
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+
+ width: 100%;
+}
+
+.post {
+background-color: #f9f9f9;
+    border-left: 1px solid #aaa;
+    padding: .0em;
+}
+
+#search_box {
+white-space:nowrap;
+    text-align: right; 
+    margin: .0em;
+    padding: 0px;
+}
+
+.search_box {
+float: right;
+    font-size: 97%;
+    margin: .0em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.highlightsearchword {
+color: #FF0000;
+}
+
+.poll_display_table {
+border: 1px solid #aaa;
+    
+    padding: 1px;
+}
+
+.poll_displayheader {
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_row {
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+}
+
+.poll_display_vote_total {
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+}
+
+.poll_display_vote_numbers_header {
+border: 1px solid #aaa;
+border-bottom: 0;
+}
+
+.poll_display_vote_percent_header {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option_header {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_numbers {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_display_vote_percent {
+border-top: 1px solid #aaa;
+    padding: 1px;
+}
+
+.poll_display_vote_option {
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+}
+
+.poll_percent_color_op10 {
+background-color: #7FFF00;
+}
+
+.poll_percent_color_op1 {
+background-color: #CD5555;
+}
+
+.poll_percent_color_op2 {
+background-color: #5CACEE;
+}
+
+.poll_percent_color_op3 {
+background-color: #FFCC11;
+}
+
+.poll_percent_color_op4 {
+background-color: #668014;
+}
+
+.poll_percent_color_op5 {
+background-color: #A0522D;
+}
+
+.poll_percent_color_op6 {
+background-color: #9F79EE;
+}
+
+.poll_percent_color_op7 {
+background-color: #EE00EE;
+}
+
+.poll_percent_color_op8 {
+background-color: #DC143C;
+}
+
+.poll_percent_color_op9 {
+background-color: #551011;
+}
+
+.page_jumps_top:hover {
+background: #ccc ;
+}
+
+.page_jumps_top {
+white-space: nowrap;
+    display: inline;
+    
+    margin: 0px; 
+    margin-right: 2px;
+    
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    
+    color: #000;
+}
+
+.page_jumps_bot:hover {
+background: #ccc ;
+}
+
+.page_jumps_bot {
+border: 1px solid #aaa;
+    border-top: 0px;
+    padding-top: 2px;
+    margin-left: 2px;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.main_memtable {
+border: 1px solid #aaa;
+}
+
+.main_leftmenu {
+border-right: 1px solid #aaa;
+     background-color: #f9f9f9;
+     width: 175px;
+}
+
+.leftmenuheaders {
+border: 1px dashed #aaa;
+    padding: 2px;
+    font-family:"Courier New", Courier, mono;
+}
+
+.leftmenu {
+background-color: #f9f9f9;
+}
+
+.right_body {
+padding: 2px;
+}
+
+.mem_pm_table {
+border: 1px solid #aaa;
+    padding: 2px;
+    margin: 7px;
+}
+
+.pm_header_new {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_title {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:85%;
+}
+
+.pm_header_sender {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_header_date {
+background-color: #aaa;
+    border: 1px solid #000;
+    padding: 2px;
+    width:5%;
+}
+
+.pm_row {
+background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+#cat_list_lastaction_user {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 100%;
+}
+
+#cat_list_lastaction_date {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#cat_list_lastaction_title {
+font-size: 90%;
+    color: #7d7d7d;
+    text-align: right;
+    margin-right: 10px;
+    line-height: 105%;
+}
+
+#small_desc {
+font-size: 84%;
+    color: #7d7d7d;
+	margin-left: 10px;
+    width: auto;
+}
+
+#cat_forumdisc {
+font-size: 84%;
+    color: #7d7d7d;
+    margin-left: 10px;
+    width: auto;
+}
+
+.cat_forumrows {
+border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+.thread_col_head {
+border: 1px solid #aaa;
+    margin: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.bread_crumbs {
+border-bottom: 1px solid #aaa;
+    border-top: 0px;
+    padding: 2px;
+    text-align: left;
+}
+
+.dl_maintable_head {
+border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.dl_maintable {
+border: 1px solid #aaa;
+    margin: 1px;
+    padding: 1px;
+}
+
+.right_float {
+float: right;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.right {
+float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.spacer {
+background-color: #aaa;
+}
+
+.whos_here_header {
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+}
+
+.whos_here_row {
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+}
+
+.whos_here {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.nothing {
+font-size: 0%;
+            margin: .0em;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+}
+
+.forum_stats {
+border: 1px solid #aaa;
+            border-bottom: 0;
+}
+
+.forum_stats_leftcol {
+border-bottom: 1px solid #aaa;
+                background-color: #f9f9f9;
+                padding: 2px;
+}
+
+.forum_stats_rightcol {
+background-color: #f9f9f9;
+                border-bottom: 1px solid #aaa;
+                padding: 2px;
+}
+
+.forum_stats_header {
+border-bottom: 1px dashed #aaa;
+                padding: 4px;
+                font-family:"Courier New", Courier, mono;
+}
+
+.thread_rows0 {
+background-color: #E5E5E5;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows1 {
+background-color: #f3f3f3;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_rows {
+background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-top: 0px ;
+    padding: 2px;
+    font-size: 95%;
+}
+
+#annc {
+border: 1px solid #000;
+	background-color: red;
+	padding: 0px;
+}
+
+.sticky {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #ffa; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+.thread_lastaction {
+font-size: 84%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline;
+}
+
+.pagejumps_PostOnForumPage:hover {
+background: #ccc ;
+}
+
+.pagejumps_PostOnForumPage {
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}
+
+.new_thread_button:hover {
+background: #ccc ;
+}
+
+.new_thread_button {
+white-space: nowrap;
+    float: right;
+    display: inline; /*fixes IE float bug*/
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 10px;
+   /* margin-left: -4px; */
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: left; /* 2.4.1 */
+    color: #000;
+}
+
+#row_info td {
+border: 1px solid #aaa;
+	border-top: 0px;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+.page_jumps_holder_thread_bot {
+border-bottom: 1px solid #aaa;
+}
+
+.page_jumps_holderBot {
+
+}
+
+.poll_thread_listing {
+border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #FFCC00;
+    padding: 2px;
+    font-size: 95%;
+}
+
+.locked_thread {
+font-style: italic;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background-color:  #e2ffe2; /* #ffa; e2ffe2 */
+    padding: 2px;
+    font-size: 95%;
+}
+
+#ajax_pmname {
+text-align: left;
+}
+
+#ajax_pmname ul {
+list-style: none;
+margin: 0;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li:hover {
+background: #f9f9f9;
+	margin-left: .1em;
+	text-decoration: underline;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#ajax_pmname li {
+padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+</style>
+<script type="text/javascript" src="../../../../extensions/awc/forums/awc.js"></script><script src="../../../../skins/common/ajax3905.js?270"></script>
+		<script type="text/javascript" src="../../../../indexb492.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=gumax"><!-- site js --></script>
+
+
+		<!-- gumax customized style -->
+
+					<style type="text/css">
+				#gumax-content-actions li#ca-talk,
+				#gumax-content-actions li#ca-history,
+				#gumax-content-actions li#ca-edit,
+				#gumax-personal-tools
+				{ display: none; }
+			</style>
+		
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="/skins/gumax/js/ieunitpngfix-tag.js"></script>
+		<![endif]-->
+
+		<!-- end of gumax customized style -->
+</head>
+
+
+<body class="mediawiki ltr ns--1 ns-special page-Special_AWCforum_st_id3560 skin-gumax">
+
+<!-- ##### gumax-wrapper ##### -->
+<div id="gumax-wrapper">
+
+<table border="0" id="gumax-page-table"><tr><td id="gumax-page-table-left"><img src="../../../../skins/gumax/blank.gif" alt="" /></td><td width="100%" valign="top" style="padding: 0; margin: 0" id="gumax-page-table-content">
+
+
+<!-- ===== gumax-page ===== -->
+<div class="gumax-page">
+
+	<!-- ///// gumax-header ///// -->
+	<div id="gumax-header">
+		<a name="top" id="contentTop"></a>
+
+		<!-- gumax-p-logo -->
+	<div id="gumax-p-logo">
+		<div id="p-logo">
+			<a style="background-image: url(../../../../images/MS3_NWChem.logo3.png);" href="../../../Main_Page.html" title="Main Page"></a>
+		</div>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<!-- end of gumax-p-logo -->
+
+		<!-- Login -->
+	<div id="gumax-p-login">
+		<ul>
+		</ul>
+	</div>
+	<!-- end of Login -->
+
+		<!-- Search -->
+	<div id="gumax-p-search" class="gumax-portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="gumax-searchBody" class="gumax-pBody">
+			<form action="http:///index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" />
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<!-- end of Search -->
+
+	</div>
+	<!-- ///// end of gumax-header ///// -->
+
+
+		<!-- Navigation Menu -->
+	<div id="gumax-p-navigation">
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Navigation</h5>
+						<ul>
+								<li id="n-Home"><a href="../../../Main_Page.html">Home</a></li>
+								<li id="n-Science"><a href="../../../Science.html">Science</a></li>
+								<li id="n-Benchmarks"><a href="../../../Benchmarks.html">Benchmarks</a></li>
+								<li id="n-Download.C2.A0"><a href="../../../Download.html">Download </a></li>
+								<li id="n-Documentation"><a href="../../../Release66_NWChem_Documentation.html">Documentation</a></li>
+								<li id="n-Projects"><a href="../../../Ongoing_Projects.html">Projects</a></li>
+								<li id="n-News"><a href="../../../NWChem_Current_events.html">News</a></li>
+								<li id="n-Forum"><a href="../../../Special_AWCforum.html">Forum</a></li>
+								<li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>
+								<li id="n-Other-Software"><a href="../../../Software_supporting_NWChem.html">Other Software</a></li>
+								<li id="n-Development"><a href="../../../Developer.html">Development</a></li>
+						</ul>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>SEARCH</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>TOOLBOX</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>LANGUAGES</h5>
+			</div>
+			<div class="gumax-portlet gumax-p-navigation">
+				<h5>Forum Menu</h5>
+			</div>
+	</div>
+	<!-- end of Navigation Menu -->
+	<div class="gumax-p-navigation-spacer"></div>
+
+		<!-- gumax-content-actions -->
+		<div id="gumax-content-actions">
+		<ul>
+		</ul>
+		<div class="gumax-message"></div>
+	</div>
+		<!-- end of gumax-content-actions -->
+
+		<!-- gumax-content-body -->
+		<div id="gumax-column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading gumax-firstHeading" >Compiling NWChem 6.8.1 on Mellanox Infiniband cluster with GNU compilers and Intel MPI and MKL</h1>
+		<div id="bodyContent" class="gumax-bodyContent">
+			<h3 id="siteSub">From NWChem</h3>
+			<div id="contentSub"><form id="search_box" action="http:///index.php/Special:AWCforum/search/s" method="post"  enctype="multipart/form-data">
+	<input class="search_box" type="submit" value="Search">
+        <input name="tID" type="hidden" value="3560">
+        <input name="fID" type="hidden" value="4">
+        <input name="cID" type="hidden" value="2">
+        <select class="search_box" name="search_what"> <option value="all">All</option>
+        <option value="c">Current Category</option>
+        <option value="f">Current Forum</option>
+        <option value="t">Current Thread</option>
+        </select>
+	<input class="search_box" name="kw" type="text" size="20">
+</form>Viewed 266 times, With a total of 5 Posts</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="top_user_links">
+                	<ul id="TopMenuLinksHolder">
+                               <li><a href="../../credits.html">Credits</a></li>
+        			<li><a href="../../search.html">Search</a></li>
+            <li><a href="../../search/todate.html">Today's Posts</a></li>
+        			
+        			
+    			</ul>
+		</td>
+	</tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" class="bread_crumbs">
+	<tr>
+		<td width="99%" valign="bottom"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+</table>
+<br />    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="65%" align="left" nowrap="nowrap"></td>                                         
+            <td width="35%" class='ThreadOtions' nowrap></td>    
+        </tr>
+    </table>       <a name="post_10647"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10647" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Valtandor/654651.html" onmouseover="mopen('mem1')" onmouseout="mclosetime()">Valtandor</a>  <font class="group_text">Member</font>
+                                    <div id="mem1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Valtandor/654651.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Valtandor/10647.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Valtandor/654651.html">2</a><br />
+                                Posts <a href="../../search/memposts/Valtandor/654651.html">6</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10647.html">9:16:16 PM PST - Wed, Jan 15th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Hi,<br />
+<br />
+I'm trying to compile NWChem 6.8.1, specifically from nwchem-6.8.1-release.revision-v6.8-133-ge032219-src.2018-06-14.tar.bz2, on a cluster with Mellanox Infiniband interconnect and CentOS 7 OS. Ultimately, we use EasyBuild (<a target='blank' href="https://easybuilders.github.io/easybuild/" class="external autonumber">[1]</a>) to manage most of our packages and I would like to do that for NWChem also. But in the meantime I'm trying to compile NWChem by hand, using modules to load the compiler and Python environments.<br />
+<br />
+After loading the toolchain (compiler + MPI + MKL) and Python modules, and the NWChem environment variables, my environment looks like this (I have bolded the parts pertaining to NWChem specifically):<br />
+<br />
+
+<pre>
+ACLOCAL_PATH=/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/share/aclocal:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/share/aclocal:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/share/aclocal:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/share/aclocal
+ARMCI_NETWORK=OPENIB
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash &quot;$@&quot;);
+ [ $? = 0 ] &amp;&amp; eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd &quot;$@&quot;)
+}
+BLACS_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include
+BLACS_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+BLACS_MT_STATIC_LIBS=libmkl_blacs_intelmpi_ilp64.a
+BLACS_STATIC_LIBS=libmkl_blacs_intelmpi_ilp64.a
+BLAS_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include
+BLAS_LAPACK_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include
+BLAS_LAPACK_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+BLAS_LAPACK_MT_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libgfortran.a,libpthread.a
+BLAS_LAPACK_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+BLAS_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+BLAS_MT_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libgfortran.a,libpthread.a
+BLASOPT=-L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+BLAS_SIZE=8
+BLAS_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+CC=gcc
+CFLAGS=-O2 -ftree-vectorize -march=native -fno-math-errno -fopenmp -DMKL_ILP64
+COMPILER_PATH=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/bin
+CPATH=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib/python2.7/site-packages/numpy-1.16.2-py2.7-linux-x86_64.egg/numpy/core/include:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/include/python2.7:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/include:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0/include:/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0/include:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/include:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/include/libxml2:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/include:/opt/nesi/CS400_centos7_bdw/Szip/2.1.1-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/include/freetype2:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/include:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include/fftw:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include:/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/include64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/include:/opt/slurm/include
+CPPFLAGS=-I/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include -I/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/include -I/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/include
+CPUARCH_STRING=bdw
+CRAY_CPU_TARGET=broadwell
+CRAYPE_NETWORK_TARGET=infiniband
+CURL_INCLUDES=/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/include
+CXXFLAGS=-O2 -ftree-vectorize -march=native -fno-math-errno -fopenmp
+CXX=g++
+DISPLAY=localhost:121.0
+EBDEVELBINUTILS=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/easybuild/binutils-2.28-GCCcore-7.4.0-easybuild-devel
+EBDEVELBZIP2=/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/easybuild/bzip2-1.0.6-GCCcore-7.4.0-easybuild-devel
+EBDEVELCURL=/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/easybuild/cURL-7.64.0-GCCcore-7.4.0-easybuild-devel
+EBDEVELFREETYPE=/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/easybuild/freetype-2.9.1-GCCcore-7.4.0-easybuild-devel
+EBDEVELGCCCORE=/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/easybuild/GCCcore-7.4.0-easybuild-devel
+EBDEVELGCC=/opt/nesi/CS400_centos7_bdw/GCC/7.4.0/easybuild/GCC-7.4.0-easybuild-devel
+EBDEVELGIMKL=/opt/nesi/CS400_centos7_bdw/gimkl/2018b/easybuild/gimkl-2018b-easybuild-devel
+EBDEVELGIMPI=/opt/nesi/CS400_centos7_bdw/gimpi/2018b/easybuild/gimpi-2018b-easybuild-devel
+EBDEVELHDF5=/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/easybuild/HDF5-1.10.5-gimpi-2018b-easybuild-devel
+EBDEVELIMKL=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/easybuild/imkl-2018.4.274-gimpi-2018b-easybuild-devel
+EBDEVELIMPI=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/easybuild/impi-2018.4.274-GCC-7.4.0-easybuild-devel
+EBDEVELLIBJPEGMINTURBO=/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/easybuild/libjpeg-turbo-2.0.2-GCCcore-7.4.0-easybuild-devel
+EBDEVELLIBPNG=/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/easybuild/libpng-1.6.36-GCCcore-7.4.0-easybuild-devel
+EBDEVELLIBREADLINE=/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/easybuild/libreadline-8.0-GCCcore-7.4.0-easybuild-devel
+EBDEVELLIBXML2=/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/easybuild/libxml2-2.9.9-GCCcore-7.4.0-easybuild-devel
+EBDEVELLIBXSLT=/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/easybuild/libxslt-1.1.29-GCCcore-7.4.0-easybuild-devel
+EBDEVELMETIS=/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0/easybuild/METIS-5.1.0-GCC-7.4.0-easybuild-devel
+EBDEVELNCURSES=/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/easybuild/ncurses-6.1-GCCcore-7.4.0-easybuild-devel
+EBDEVELNETCDF=/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/easybuild/netCDF-4.6.2-gimpi-2018b-easybuild-devel
+EBDEVELPCRE=/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/easybuild/PCRE-8.43-GCCcore-7.4.0-easybuild-devel
+EBDEVELPYTHON=/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/easybuild/Python-2.7.16-gimkl-2018b-easybuild-devel
+EBDEVELSQLITE=/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/easybuild/SQLite-3.27.2-GCCcore-7.4.0-easybuild-devel
+EBDEVELSUITESPARSE=/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0/easybuild/SuiteSparse-5.4.0-gimkl-2018b-METIS-5.1.0-easybuild-devel
+EBDEVELSZIP=/opt/nesi/CS400_centos7_bdw/Szip/2.1.1-GCCcore-7.4.0/easybuild/Szip-2.1.1-GCCcore-7.4.0-easybuild-devel
+EBDEVELTBB=/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0/easybuild/tbb-2019_U4-GCCcore-7.4.0-easybuild-devel
+EBDEVELTCL=/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/easybuild/Tcl-8.6.9-GCCcore-7.4.0-easybuild-devel
+EBDEVELTK=/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/easybuild/Tk-8.6.9-GCCcore-7.4.0-easybuild-devel
+EBDEVELXALT=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/easybuild/XALT-NeSI-easybuild-devel
+EBDEVELXZ=/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/easybuild/XZ-5.2.4-GCCcore-7.4.0-easybuild-devel
+EBDEVELZLIB=/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/easybuild/zlib-1.2.11-GCCcore-7.4.0-easybuild-devel
+EBEXTSLISTPYTHON=setuptools-40.8.0,pip-19.0.3,six-1.12.0,pyparsing-2.3.1,virtualenv-15.1.0,enum34-1.1.6,funcsigs-1.0.2,backports.shutil_get_terminal_size-1.0.0,subprocess32-3.2.7,functools32-3.2.3-2,scandir-1.6,pathlib2-2.3.0,singledispatch-3.4.0.3,nose-1.3.7,py-1.4.34,pytest-3.2.3,decorator-4.3.2,ipython-5.8.0,numpy-1.16.2,scikit-umfpack-0.3.2,scipy-1.2.1,Cython-0.29.6,numba-0.43.1,networkx-2.2,biom-format-2.1.7,biopython-1.73,Pillow-5.4.1,python-dateutil-2.8.0,matplotlib-2.2.3,paycheck-1.0.2,lockfile-0.12.2,lxml-4.3.2,pysam-0.15.2,HTSeq-0.11.2,pytz-2018.9,tzlocal-1.5.1,mpi4py-3.0.1,liac-arff-2.4.0,h5py-2.9.0,netCDF4-1.4.3.2,numexpr-2.6.9,tables-3.5.1,Bottleneck-1.2.1,et_xmlfile-1.0.1,jdcal-1.4,openpyxl-2.6.1,xlrd-1.2.0,pandas-0.24.2,mpmath-1.1.0,sympy-1.3,requests-2.21.0,toolz-0.9.0,dask-1.1.4,scikit-image-0.14.2,scikit-learn-0.20.3,emcee-2.2.1,pystan-2.18.1.0,PyYAML-5.1,joblib-0.13.2,SQLAlchemy-1.3.1,future-0.17.1,obspy-1.1.1,pybedtools-0.8.0,qutip-4.3.1,Mako-1.0.7,click-7.0,click-plugins-1.0.4,docopt-0.6.2,ujson-1.35,PrettyTable-0.7,Pysolar-0.8,Py6S-1.7.2,patsy-0.5.1,statsmodels-0.9.0,deap-1.2.2,pudb-2018.1,line_profiler-2.1.2
+EBROOTBINUTILS=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0
+EBROOTBZIP2=/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0
+EBROOTCURL=/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0
+EBROOTFREETYPE=/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0
+EBROOTGCCCORE=/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0
+EBROOTGCC=/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0
+EBROOTGIMKL=/opt/nesi/CS400_centos7_bdw/gimkl/2018b
+EBROOTGIMPI=/opt/nesi/CS400_centos7_bdw/gimpi/2018b
+EBROOTHDF5=/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b
+EBROOTIMKL=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b
+EBROOTIMPI=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0
+EBROOTLIBJPEGMINTURBO=/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0
+EBROOTLIBPNG=/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0
+EBROOTLIBREADLINE=/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0
+EBROOTLIBXML2=/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0
+EBROOTLIBXSLT=/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0
+EBROOTMETIS=/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0
+EBROOTNCURSES=/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0
+EBROOTNETCDF=/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b
+EBROOTPCRE=/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0
+EBROOTPYTHON=/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b
+EBROOTSQLITE=/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0
+EBROOTSUITESPARSE=/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0
+[EBROOTSZIP=/opt/nesi/CS400_centos7_bdw/Szip/2.1.1-GCCcore-7.4.0
+EBROOTTBB=/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0
+EBROOTTCL=/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0
+EBROOTTK=/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0
+EBROOTXALT=/opt/nesi/CS400_centos7_bdw/XALT/NeSI
+EBROOTXZ=/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0
+EBROOTZLIB=/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0
+EBVERSIONBINUTILS=2.28
+EBVERSIONBZIP2=1.0.6
+EBVERSIONCURL=7.64.0
+EBVERSIONFREETYPE=2.9.1
+EBVERSIONGCC=7.4.0
+EBVERSIONGCCCORE=7.4.0
+EBVERSIONGIMKL=2018b
+EBVERSIONGIMPI=2018b
+EBVERSIONHDF5=1.10.5
+EBVERSIONIMKL=2018.4.274
+EBVERSIONIMPI=2018.4.274
+EBVERSIONLIBJPEGMINTURBO=2.0.2
+EBVERSIONLIBPNG=1.6.36
+EBVERSIONLIBREADLINE=8.0
+EBVERSIONLIBXML2=2.9.9
+EBVERSIONLIBXSLT=1.1.29
+EBVERSIONMETIS=5.1.0
+EBVERSIONNCURSES=6.1
+EBVERSIONNETCDF=4.6.2
+EBVERSIONPCRE=8.43
+EBVERSIONPYTHON=2.7.16
+EBVERSIONSQLITE=3.27.2
+EBVERSIONSUITESPARSE=5.4.0
+EBVERSIONSZIP=2.1.1
+EBVERSIONTBB=2019_U4
+EBVERSIONTCL=8.6.9
+EBVERSIONTK=8.6.9
+EBVERSIONXALT=NeSI
+EBVERSIONXZ=5.2.4
+EBVERSIONZLIB=1.2.11
+ENABLE_LMOD=1
+F77=gfortran
+F90FLAGS=-O2 -ftree-vectorize -march=native -fno-math-errno -fopenmp -fdefault-integer-8
+F90=gfortran
+FCFLAGS=-O2 -ftree-vectorize -march=native -fno-math-errno -fopenmp -fdefault-integer-8
+FC=gfortran
+FFLAGS=-O2 -ftree-vectorize -march=native -fno-math-errno -fopenmp -fdefault-integer-8
+FFT_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include/fftw
+FFT_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+FFT_STATIC_LIBS=libfftw3xc_gnu.a,libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+FFT_STATIC_LIBS_MT=libfftw3xc_gnu.a,libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libpthread.a
+FFTW_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include/fftw
+FFTW_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+FFTW_STATIC_LIBS=libfftw3xc_gnu.a,libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+FFTW_STATIC_LIBS_MT=libfftw3xc_gnu.a,libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libpthread.a
+FLIBS=-lgfortran
+HAS_BLAS=Y
+HDF5_DIR=/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOME=/home/(REDACTED)
+HOSTNAME=mahuika02.mahuika.nesi.org.nz
+IB_INCLUDE=/usr/include
+IB_LIB_NAME=-libumad -libverbs -lpthread -lrt
+IB_LIB=/usr/lib64
+I_MPI_CC=gcc
+I_MPI_CXX=g++
+I_MPI_F77=gfortran
+I_MPI_F90=gfortran
+I_MPI_FC=gfortran
+I_MPI_PMI_LIBRARY=/opt/slurm/lib64/libpmi.so
+I_MPI_ROOT=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0
+__Init_Default_Modules=1
+KRB5CCNAME=KEYRING:persistent:3502
+LANG=en_AU.UTF-8
+LAPACK_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include
+LAPACK_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+LAPACK_MT_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libgfortran.a,libpthread.a
+LAPACK_STATIC_LIBS=libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+LARGE_FILES=TRUE
+LC_ADDRESS=en_NZ.UTF-8
+LC_ALL=en_NZ.UTF-8
+LC_IDENTIFICATION=en_NZ.UTF-8
+LC_MEASUREMENT=en_NZ.UTF-8
+LC_MONETARY=en_NZ.UTF-8
+LC_NAME=en_NZ.UTF-8
+LC_NUMERIC=en_NZ.UTF-8
+LC_PAPER=en_NZ.UTF-8
+LC_TELEPHONE=en_NZ.UTF-8
+LC_TIME=en_NZ.UTF-8
+LDFLAGS=-L/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib64 -L/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib -L/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/lib -L/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64 -L/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/lib -L/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/lib -L/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib
+LD_LIBRARY_PATH=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib/python2.7/site-packages/numpy-1.16.2-py2.7-linux-x86_64.egg/numpy/core/lib:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0/lib:/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0/build/linux_intel64_gcc_cc7.4.0_libc2.17_kernel3.10.0_release:/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/lib64:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/lib:/opt/nesi/CS400_centos7_bdw/Szip/2.1.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/lib/intel64:/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib/gcc/x86_64-pc-linux-gnu/7.4.0:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib:/opt/cray/pe/lib64:/opt/cray/pe/lib64/cce:/opt/cray/lib64:/opt/cray/pe/lib64:/opt/cray/pe/lib64/cce:/opt/cray/lib64:/opt/cray/pe/lib64:/opt/cray/pe/lib64/cce:/opt/cray/lib64:/opt/slurm/lib64/slurm:/opt/slurm/lib64
+LD_PRELOAD=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/lib64/libxalt_init.so
+LESSOPEN=||/usr/bin/lesspipe.sh&nbsp;%s
+LIBBLACS_MT=-Wl,--start-group -lmkl_blacs_intelmpi_ilp64 -Wl,--end-group
+LIBBLACS=-Wl,--start-group -lmkl_blacs_intelmpi_ilp64 -Wl,--end-group
+LIBBLAS_MT=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+LIBBLAS=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lgfortran
+LIBFFT_MT=-Wl,--start-group -lfftw3xc_gnu -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lpthread
+LIBFFT=-Wl,--start-group -lfftw3xc_gnu -lmkl_gf_ilp64 -lmkl_sequential -lmkl_core -lgfortran -Wl,--end-group
+LIBLAPACK_MT_ONLY=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+LIBLAPACK_MT=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+LIBLAPACK_ONLY=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lgfortran
+LIBLAPACK=-Wl,--start-group -lmkl_gf_ilp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lgfortran
+LIBRARY_PATH=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib/python2.7/site-packages/numpy-1.16.2-py2.7-linux-x86_64.egg/numpy/core/lib:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0/lib:/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0/build/linux_intel64_gcc_cc7.4.0_libc2.17_kernel3.10.0_release:/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/lib64:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/lib:/opt/nesi/CS400_centos7_bdw/Szip/2.1.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/lib:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/lib/intel64:/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/lib:/opt/slurm/lib64/slurm:/opt/slurm/lib64
+LIBSCALAPACK_MT_ONLY=-Wl,--start-group -lmkl_scalapack_ilp64 -Wl,--end-group -lpthread -lgfortran
+LIBSCALAPACK_MT=-Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+LIBSCALAPACK_ONLY=-Wl,--start-group -lmkl_scalapack_ilp64 -Wl,--end-group -lgfortran
+LIBSCALAPACK=-Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lgfortran
+LIBS=-lm -lpthread
+_LMFILES_=/opt/nesi/modulefiles/slurm:/opt/nesi/CS400_centos7_bdw/modules/all/XALT/NeSI.lua:/opt/nesi/modulefiles/NeSI.lua:/opt/cray/pe/craype/default/modulefiles/craype-broadwell:/opt/cray/pe/craype/default/modulefiles/craype-network-infiniband:/opt/nesi/CS400_centos7_bdw/modules/all/GCCcore/7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/GCC/7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libpmi.lua:/opt/nesi/CS400_centos7_bdw/modules/all/impi/2018.4.274-GCC-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/gimpi/2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/imkl/2018.4.274-gimpi-2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/gimkl/2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/zlib/1.2.11-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/bzip2/1.0.6-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/XZ/5.2.4-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libpng/1.6.36-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/freetype/2.9.1-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/Szip/2.1.1-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/HDF5/1.10.5-gimpi-2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libjpeg-turbo/2.0.2-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/ncurses/6.1-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libreadline/8.0-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libxml2/2.9.9-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/libxslt/1.1.29-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/cURL/7.64.0-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/PCRE/8.43-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/netCDF/4.6.2-gimpi-2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/SQLite/3.27.2-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/METIS/5.1.0-GCC-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/tbb/2019_U4-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/Tcl/8.6.9-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/Tk/8.6.9-GCCcore-7.4.0.lua:/opt/nesi/CS400_centos7_bdw/modules/all/Python/2.7.16-gimkl-2018b.lua:/opt/nesi/CS400_centos7_bdw/modules/all/binutils/2.28-GCCcore-7.4.0.lua
+LMOD_arch=x86_64
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+LMOD_COLORIZE=yes
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+LMOD_FULL_SETTARG_SUPPORT=no
+LMOD_PKG=/usr/share/lmod/lmod
+LMOD_PREPEND_BLOCK=normal
+LMOD_SETTARG_CMD=:
+__LMOD_STACK_I_MPI_PMI_LIBRARY=L29wdC9zbHVybS9saWI2NC9saWJwbWkuc28=
+LMOD_sys=Linux
+LMOD_SYSTEM_DEFAULT_MODULES=NeSI
+LMOD_VERSION=7.3
+LOADEDMODULES=slurm:XALT/NeSI:NeSI:craype-broadwell:craype-network-infiniband:GCCcore/7.4.0:GCC/7.4.0:libpmi:impi/2018.4.274-GCC-7.4.0:gimpi/2018b:imkl/2018.4.274-gimpi-2018b:gimkl/2018b:zlib/1.2.11-GCCcore-7.4.0:bzip2/1.0.6-GCCcore-7.4.0:XZ/5.2.4-GCCcore-7.4.0:libpng/1.6.36-GCCcore-7.4.0:freetype/2.9.1-GCCcore-7.4.0:Szip/2.1.1-GCCcore-7.4.0:HDF5/1.10.5-gimpi-2018b:libjpeg-turbo/2.0.2-GCCcore-7.4.0:ncurses/6.1-GCCcore-7.4.0:libreadline/8.0-GCCcore-7.4.0:libxml2/2.9.9-GCCcore-7.4.0:libxslt/1.1.29-GCCcore-7.4.0:cURL/7.64.0-GCCcore-7.4.0:PCRE/8.43-GCCcore-7.4.0:netCDF/4.6.2-gimpi-2018b:SQLite/3.27.2-GCCcore-7.4.0:METIS/5.1.0-GCC-7.4.0:tbb/2019_U4-GCCcore-7.4.0:SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0:Tcl/8.6.9-GCCcore-7.4.0:Tk/8.6.9-GCCcore-7.4.0:Python/2.7.16-gimkl-2018b:binutils/2.28-GCCcore-7.4.0
+LOGNAME=(REDACTED)
+LS_COLORS=no=00:fi=00:di=00;31:ln=00;35:pi=40;33:so=01;30:do=01;30:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.flac=01;35:*.mp3=01;35:*.mpc=01;35:*.ogg=01;35:*.wav=01;35:
+MAIL=/var/spool/mail/(REDACTED)
+MANPATH=/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/share/man:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/man:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/man:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/share/man:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/man:/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/share/man:/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/man:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/share/man:/opt/slurm/share/man:/usr/share/lmod/lmod/share/man:/home/(REDACTED)/.local/share/man:/opt/slurm/share/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/opt/ibutils/share/man:/opt/slurm/share/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/opt/ibutils/share/man:/cm/local/apps/environment-modules/current/share/man:/cm/local/apps/environment-modules/current/share/man:/cm/local/apps/environment-modules/current/share/man
+MAYBE_SYSVSHMEM=ARMCI_DEFAULT_SHMMAX_UBOUND=513847
+MKL_EXAMPLES=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/examples/
+MKLROOT=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl
+MODULEPATH=/home/(REDACTED)/privatemodules:/opt/cray/pe/craype/default/modulefiles:/opt/cray/pe/modulefiles:/opt/cray/modulefiles:/opt/modulefiles:/opt/nesi/modulefiles:/opt/nesi/CS400_centos7_bdw/modules/all:/opt/nesi/share/modules/all:/cm/local/modulefiles
+MODULEPATH_ROOT=/usr/share/modulefiles
+MODULESHOME=/usr/share/lmod/lmod
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtHQ0M9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL0dDQy83LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0iR0NDLzcuNC4wIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkdDQy83LjQuMCIsfSxHQ0Njb3JlPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9HQ0Njb3JlLzcuNC4wLmx1YSI_ModuleTable002_=PTYscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkdDQ2NvcmUvNy40LjAiLH0sSERGNT17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvSERGNS8xLjEwLjUtZ2ltcGktMjAxOGIubHVhIixbImZ1bGxOYW1lIl09IkhERjUvMS4xMC41LWdpbXBpLTIwMThiIixbImxvYWRPcmRlciJdPTE5LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJIREY1LzEuMTAuNS1naW1waS0yMDE4YiIsfSxNRVRJUz17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvTUVUSVMvNS4xLjAtR0NDLTcuNC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJNRVRJUy81LjEuMC1HQ0Mt
+_ModuleTable003_=Ny40LjAiLFsibG9hZE9yZGVyIl09MjkscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Ik1FVElTLzUuMS4wLUdDQy03LjQuMCIsfSxOZVNJPXtbImZuIl09Ii9vcHQvbmVzaS9tb2R1bGVmaWxlcy9OZVNJLmx1YSIsWyJmdWxsTmFtZSJdPSJOZVNJIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e2xtb2Q9e1sic3RpY2t5Il09MSx9LH0sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Ik5lU0kiLH0sUENSRT17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvUENSRS84LjQzLUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09IlBDUkUvOC40My1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTI2
+_ModuleTable004_=LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJQQ1JFLzguNDMtR0NDY29yZS03LjQuMCIsfSxQeXRob249e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL1B5dGhvbi8yLjcuMTYtZ2lta2wtMjAxOGIubHVhIixbImZ1bGxOYW1lIl09IlB5dGhvbi8yLjcuMTYtZ2lta2wtMjAxOGIiLFsibG9hZE9yZGVyIl09MzQscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IlB5dGhvbi8yLjcuMTYtZ2lta2wtMjAxOGIiLH0sU1FMaXRlPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9TUUxpdGUvMy4yNy4yLUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxO
+_ModuleTable005_=YW1lIl09IlNRTGl0ZS8zLjI3LjItR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0yOCxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iU1FMaXRlLzMuMjcuMi1HQ0Njb3JlLTcuNC4wIix9LFN1aXRlU3BhcnNlPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9TdWl0ZVNwYXJzZS81LjQuMC1naW1rbC0yMDE4Yi1NRVRJUy01LjEuMC5sdWEiLFsiZnVsbE5hbWUiXT0iU3VpdGVTcGFyc2UvNS40LjAtZ2lta2wtMjAxOGItTUVUSVMtNS4xLjAiLFsibG9hZE9yZGVyIl09MzEscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IlN1aXRlU3BhcnNlLzUuNC4wLWdpbWtsLTIwMThiLU1F
+_ModuleTable006_=VElTLTUuMS4wIix9LFN6aXA9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL1N6aXAvMi4xLjEtR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0iU3ppcC8yLjEuMS1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJTemlwLzIuMS4xLUdDQ2NvcmUtNy40LjAiLH0sVGNsPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9UY2wvOC42LjktR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0iVGNsLzguNi45LUdDQ2NvcmUtNy40LjAiLFsibG9hZE9yZGVyIl09MzIscHJvcFQ9e30sWyJzdGF0dXMiXT0isWyJmdWxsTmFtZSJdPSJHQ0Njb3JlLzcuNC4wIixbImxvYWRPcmRlciJd
+_ModuleTable007_=YWN0aXZlIixbInVzZXJOYW1lIl09IlRjbC84LjYuOS1HQ0Njb3JlLTcuNC4wIix9LFRrPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9Uay84LjY
+uOS1HQ0Njb3JlLTcuNC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJUay84LjYuOS1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTMzLHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ
+Uay84LjYuOS1HQ0Njb3JlLTcuNC4wIix9LFhBTFQ9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL1hBTFQvTmVTSS5sdWEiLFsiZnVsbE5hbWUiXT0iWEFMVC9OZVNJIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGF0dXMiXT0i
+_ModuleTable008_=YWN0aXZlIixbInVzZXJOYW1lIl09IlhBTFQiLH0sWFo9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL1haLzUuMi40LUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09IlhaLzUuMi40LUdDQ2NvcmUtNy40LjAiLFsibG9hZE9yZGVyIl09MTUscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IlhaLzUuMi40LUdDQ2NvcmUtNy40LjAiLH0sYmludXRpbHM9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL2JpbnV0aWxzLzIuMjgtR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0iYmludXRpbHMvMi4yOC1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTM1
+_ModuleTable009_=LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW51dGlscy8yLjI4LUdDQ2NvcmUtNy40LjAiLH0sYnppcDI9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL2J6aXAyLzEuMC42LUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09ImJ6aXAyLzEuMC42LUdDQ2NvcmUtNy40LjAiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJ6aXAyLzEuMC42LUdDQ2NvcmUtNy40LjAiLH0sY1VSTD17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvY1VSTC83LjY0LjAtR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5h
+_ModuleTable010_=bWUiXT0iY1VSTC83LjY0LjAtR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0yNSxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iY1VSTC83LjY0LjAtR0NDY29yZS03LjQuMCIsfSxbImNyYXlwZS1icm9hZHdlbGwiXT17WyJmbiJdPSIvb3B0L2NyYXkvcGUvY3JheXBlL2RlZmF1bHQvbW9kdWxlZmlsZXMvY3JheXBlLWJyb2Fkd2VsbCIsWyJmdWxsTmFtZSJdPSJjcmF5cGUtYnJvYWR3ZWxsIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNyYXlwZS1icm9hZHdlbGwiLH0sWyJjcmF5cGUtbmV0d29yay1pbmZpbmliYW5kIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2NyYXlwZS9kZWZh
+_ModuleTable011_=dWx0L21vZHVsZWZpbGVzL2NyYXlwZS1uZXR3b3JrLWluZmluaWJhbmQiLFsiZnVsbE5hbWUiXT0iY3JheXBlLW5ldHdvcmstaW5maW5pYmFuZCIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUtbmV0d29yay1pbmZpbmliYW5kIix9LGZyZWV0eXBlPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9mcmVldHlwZS8yLjkuMS1HQ0Njb3JlLTcuNC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJmcmVldHlwZS8yLjkuMS1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTE3LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJmcmVldHlwZS8yLjkuMS1H
+_ModuleTable012_=Q0Njb3JlLTcuNC4wIix9LGdpbWtsPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9naW1rbC8yMDE4Yi5sdWEiLFsiZnVsbE5hbWUiXT0iZ2lta2wvMjAxOGIiLFsibG9hZE9yZGVyIl09MTIscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdpbWtsLzIwMThiIix9LGdpbXBpPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9naW1waS8yMDE4Yi5sdWEiLFsiZnVsbE5hbWUiXT0iZ2ltcGkvMjAxOGIiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdpbXBpLzIwMThiIix9LGlta2w9e1siZm4iXT0iL29wdC9u
+_ModuleTable013_=ZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL2lta2wvMjAxOC40LjI3NC1naW1waS0yMDE4Yi5sdWEiLFsiZnVsbE5hbWUiXT0iaW1rbC8yMDE4LjQuMjc0LWdpbXBpLTIwMThiIixbImxvYWRPcmRlciJdPTExLHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbWtsLzIwMTguNC4yNzQtZ2ltcGktMjAxOGIiLH0saW1waT17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvaW1waS8yMDE4LjQuMjc0LUdDQy03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0iaW1waS8yMDE4LjQuMjc0LUdDQy03LjQuMCIsWyJsb2FkT3JkZXIiXT05LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJd
+_ModuleTable014_=PSJpbXBpLzIwMTguNC4yNzQtR0NDLTcuNC4wIix9LFsibGlianBlZy10dXJibyJdPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9saWJqcGVnLXR1cmJvLzIuMC4yLUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09ImxpYmpwZWctdHVyYm8vMi4wLjItR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibGlianBlZy10dXJiby8yLjAuMi1HQ0Njb3JlLTcuNC4wIix9LGxpYnBtaT17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvbGlicG1pLmx1YSIsWyJmdWxsTmFtZSJdPSJsaWJwbWkiLFsibG9hZE9yZGVy
+_ModuleTable015_=Il09OCxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibGlicG1pIix9LGxpYnBuZz17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvbGlicG5nLzEuNi4zNi1HQ0Njb3JlLTcuNC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJsaWJwbmcvMS42LjM2LUdDQ2NvcmUtNy40LjAiLFsibG9hZE9yZGVyIl09MTYscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxpYnBuZy8xLjYuMzYtR0NDY29yZS03LjQuMCIsfSxsaWJyZWFkbGluZT17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvbGlicmVhZGxpbmUvOC4wLUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxO
+_ModuleTable016_=YW1lIl09ImxpYnJlYWRsaW5lLzguMC1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTIyLHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsaWJyZWFkbGluZS84LjAtR0NDY29yZS03LjQuMCIsfSxsaWJ4bWwyPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC9saWJ4bWwyLzIuOS45LUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09ImxpYnhtbDIvMi45LjktR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0yMyxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibGlieG1sMi8yLjkuOS1HQ0Njb3JlLTcuNC4wIix9LGxpYnhzbHQ9e1siZm4iXT0iL29wdC9uZXNpL0NT
+_ModuleTable017_=NDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL2xpYnhzbHQvMS4xLjI5LUdDQ2NvcmUtNy40LjAubHVhIixbImZ1bGxOYW1lIl09ImxpYnhzbHQvMS4xLjI5LUdDQ2NvcmUtNy40LjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxpYnhzbHQvMS4xLjI5LUdDQ2NvcmUtNy40LjAiLH0sbmN1cnNlcz17WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvbmN1cnNlcy82LjEtR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0ibmN1cnNlcy82LjEtR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0yMSxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi
+_ModuleTable018_=XT0ibmN1cnNlcy82LjEtR0NDY29yZS03LjQuMCIsfSxuZXRDREY9e1siZm4iXT0iL29wdC9uZXNpL0NTNDAwX2NlbnRvczdfYmR3L21vZHVsZXMvYWxsL25ldENERi80LjYuMi1naW1waS0yMDE4Yi5sdWEiLFsiZnVsbE5hbWUiXT0ibmV0Q0RGLzQuNi4yLWdpbXBpLTIwMThiIixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuZXRDREYvNC42LjItZ2ltcGktMjAxOGIiLH0sc2x1cm09e1siZm4iXT0iL29wdC9uZXNpL21vZHVsZWZpbGVzL3NsdXJtIixbImZ1bGxOYW1lIl09InNsdXJtIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LHRiYj17
+_ModuleTable019_=WyJmbiJdPSIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwvdGJiLzIwMTlfVTQtR0NDY29yZS03LjQuMC5sdWEiLFsiZnVsbE5hbWUiXT0idGJiLzIwMTlfVTQtR0NDY29yZS03LjQuMCIsWyJsb2FkT3JkZXIiXT0zMCxwcm9wVD17fSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idGJiLzIwMTlfVTQtR0NDY29yZS03LjQuMCIsfSx6bGliPXtbImZuIl09Ii9vcHQvbmVzaS9DUzQwMF9jZW50b3M3X2Jkdy9tb2R1bGVzL2FsbC96bGliLzEuMi4xMS1HQ0Njb3JlLTcuNC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJ6bGliLzEuMi4xMS1HQ0Njb3JlLTcuNC4wIixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1
+_ModuleTable020_=c2VyTmFtZSJdPSJ6bGliLzEuMi4xMS1HQ0Njb3JlLTcuNC4wIix9LH0sbXBhdGhBPXsiL2hvbWUvYnJvYjY5NS9wcml2YXRlbW9kdWxlcyIsIi9vcHQvY3JheS9wZS9jcmF5cGUvZGVmYXVsdC9tb2R1bGVmaWxlcyIsIi9vcHQvY3JheS9wZS9tb2R1bGVmaWxlcyIsIi9vcHQvY3JheS9tb2R1bGVmaWxlcyIsIi9vcHQvbW9kdWxlZmlsZXMiLCIvb3B0L25lc2kvbW9kdWxlZmlsZXMiLCIvb3B0L25lc2kvQ1M0MDBfY2VudG9zN19iZHcvbW9kdWxlcy9hbGwiLCIvb3B0L25lc2kvc2hhcmUvbW9kdWxlcy9hbGwiLCIvY20vbG9jYWwvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL29wdC9uZXNpL21vZHVsZWZpbGVzIix9
+_ModuleTable_Sz_=20
+MPICC=mpicc
+MPICH_CC=gcc
+MPICH_CXX=g++
+MPICH_F77=gfortran
+MPICH_F90=gfortran
+MPICH_FC=gfortran
+MPICXX=mpicxx
+MPIF77=mpif77
+MPIF90=mpif90
+MPIFC=mpif90
+MPI_INC_DIR=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/include64
+MPI_LIB_DIR=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64
+MPI_LIB_SHARED=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64/libmpi.so
+MPI_LIB_STATIC=/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64/libmpi.a
+MRCC_METHODS=TRUE
+MSG_COMMS=MPI
+NESI_EASYBUILD_PROJECT_ID=nesi99999
+NVV_Priority_PATH=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/bin:-100
+NWCHEM_MODULES=all python
+NWCHEM_TARGET=LINUX64
+NWCHEM_TOP=/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1
+OLDPWD=/nesi/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1
+OPTFLAGS=-O2 -ftree-vectorize -march=native
+OS_ARCH_STRING=centos7
+PATH=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/bin:/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/bin:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/SuiteSparse/5.4.0-gimkl-2018b-METIS-5.1.0/bin:/opt/nesi/CS400_centos7_bdw/METIS/5.1.0-GCC-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/bin:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/ncurses/6.1-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/bin:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/bzip2/1.0.6-GCCcore-7.4.0/bin:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/bin:/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/bin:/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/bin64:/opt/nesi/CS400_centos7_bdw/GCCcore/7.4.0/bin:/home/(REDACTED)/bin:/home/(REDACTED)/.local/bin:/home/(REDACTED)/sw/bin:/home/(REDACTED)/code/github-bpr-toolchest:/usr/lpp/mmfs/bin:/opt/slurm/sbin:/opt/slurm/bin:/opt/nesi/share/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/nesi/bin:/opt/ibutils/bin
+PE_PRODUCT_LIST=CRAYPE_BROADWELL
+PKG_CONFIG_PATH=/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/Tk/8.6.9-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/Tcl/8.6.9-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/SQLite/3.27.2-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/netCDF/4.6.2-gimpi-2018b/lib64/pkgconfig:/opt/nesi/CS400_centos7_bdw/PCRE/8.43-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/cURL/7.64.0-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/libxslt/1.1.29-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/libxml2/2.9.9-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/libreadline/8.0-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/libjpeg-turbo/2.0.2-GCCcore-7.4.0/lib64/pkgconfig:/opt/nesi/CS400_centos7_bdw/HDF5/1.10.5-gimpi-2018b/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/freetype/2.9.1-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/libpng/1.6.36-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/XZ/5.2.4-GCCcore-7.4.0/lib/pkgconfig:/opt/nesi/CS400_centos7_bdw/zlib/1.2.11-GCCcore-7.4.0/lib/pkgconfig
+PRECFLAGS=-fno-math-errno
+PROFILE_NESI=1
+PWD=/nesi/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src
+PYTHONHOME=/opt/nesi/CS400_centos7_bdw/Python/2.7.16-gimkl-2018b
+PYTHONVERSION=2.7
+QT_GRAPHICSSYSTEM_CHECKED=1
+SACCT_FORMAT=jobid%-14,jobname%-14,elapsed%11,totalcpu%12,alloccpus%5,maxrss%8,state%-10
+SCALAPACK_INC_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/include
+SCALAPACK_LIB_DIR=/opt/nesi/CS400_centos7_bdw/imkl/2018.4.274-gimpi-2018b/mkl/lib/intel64
+SCALAPACK=-L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread
+SCALAPACK_MT_STATIC_LIBS=libmkl_scalapack_ilp64.a,libmkl_blacs_intelmpi_ilp64.a,libmkl_gf_ilp64.a,libmkl_gnu_thread.a,libmkl_core.a,libgfortran.a,libpthread.a
+SCALAPACK_STATIC_LIBS=libmkl_scalapack_ilp64.a,libmkl_blacs_intelmpi_ilp64.a,libmkl_gf_ilp64.a,libmkl_sequential.a,libmkl_core.a,libgfortran.a
+SHELL=/bin/bash
+SHLVL=3
+SINFO_FORMAT=%9P&nbsp;%5a&nbsp;%8s&nbsp;%.10l&nbsp;%.6c&nbsp;%.6z&nbsp;%.7D&nbsp;%10T&nbsp;%N
+SINGULARITY_BINDPATH=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt
+SINGULARITYENV_LD_PRELOAD=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/lib64/libxalt_init.so
+SLURM_CLUSTER_NAME=mahuika
+SLURM_CPUS_PER_TASK=8
+SLURM_JOB_ACCOUNT=nesi99999
+SLURM_JOB_CPUS_PER_NODE=8
+SLURM_JOB_ID=9932486
+SLURM_JOBID=9932486
+SLURM_JOB_NAME=InteractiveJob
+SLURM_JOB_NODELIST=wbn233
+SLURM_JOB_NUM_NODES=1
+SLURM_JOB_PARTITION=large
+SLURM_JOB_QOS=staff
+SLURM_MEM_PER_NODE=8192
+SLURM_NNODES=1
+SLURM_NODE_ALIASES=(null)
+SLURM_NODELIST=wbn233
+SLURM_SUBMIT_DIR=/scale_wlg_persistent/filesets/home/(REDACTED)
+SLURM_SUBMIT_HOST=mahuika02.mahuika.nesi.org.nz
+SLURM_TASKS_PER_NODE=1
+SOFTWARE_STACK=nesi
+SQUEUE_ALL=yes
+SQUEUE_FORMAT=%.18i&nbsp;%.18u&nbsp;%.14a&nbsp;%.24j&nbsp;%.3t&nbsp;%9r&nbsp;%19S&nbsp;%.10M&nbsp;%.10L&nbsp;%.5D&nbsp;%.4C&nbsp;%.8m
+SQUEUE_SORT=-t,e,S
+SSH_AGENT_PID=22477
+SSH_AUTH_SOCK=/tmp/ssh-b5EKidLOZKpb/agent.22476
+SSH_CLIENT=192.168.94.65 58849 22
+SSH_CONNECTION=192.168.94.65 58849 192.168.94.16 22
+SSH_TTY=/dev/pts/258
+SYSTEM_STRING=CS400
+TBB_ROOT=/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0
+TBBROOT=/opt/nesi/CS400_centos7_bdw/tbb/2019_U4-GCCcore-7.4.0/
+TERM=screen
+TMUX_PANE=%0
+TMUX=/tmp/tmux-3502/default,180812,0
+TZ=NZ
+USE_64to32=y
+USE_MPIF4=Y
+USE_MPIF=Y
+USE_MPI=Y
+USE_NOFSCHECK=TRUE
+USE_NOIO=TRUE
+USE_OPENMP=Y
+USE_PYTHONCONFIG=Y
+USER=(REDACTED)
+USE_SCALAPACK=Y
+_=/usr/bin/env
+XALT_DATE_TIME=2020_01_15_16_24_34_2654
+XALT_DIR=/opt/nesi/CS400_centos7_bdw/XALT/NeSI/xalt/xalt/
+XALT_EXECUTABLE_TRACKING=yes
+__XALT_INITIAL_STATE__=LD_PRELOAD
+XALT_RANDOM_NUMBER=  0.005032
+XALT_SCALAR_SAMPLING=yes
+XDG_RUNTIME_DIR=/run/user/3502
+XDG_SESSION_ID=291487
+</pre><br />
+<br />
+I tried bolding the obviously NWchem-relevant variables in the list above, but the interface would not let me mark bold text inside a code block. They are however sorted into alphabetical order, based on the first alphanumeric character (even if preceded by an underscore or similar).<br />
+<br />
+The commands I try to follow are:<br />
+<br />
+
+<pre>
+cd $NWCHEM_TOP/src
+make nwchem_config
+# Trying without -j 8 doesn't seem to make much difference
+make -j 8
+</pre><br />
+<br />
+The configuration seems to proceed well enough, except for a few instances of the following:<br />
+<br />
+
+<pre>
+/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/install/bin/ga-config: Command not found
+</pre><br />
+<br />
+The build, however, gets this:<br />
+<br />
+
+<pre>
+&lt;snip&gt;
+*** Configuring Parallel Tools ****
+
+../ga-5.6.5/configure --prefix=/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.
+7.16/nwchem-6.8.1/src/tools/install --with-tcgmsg --with-mpi=-I/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/include/gfortran/7.1.0 -I/opt/nesi/
+CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/include -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib/release_mt -L/opt/nesi/CS400_cen
+tos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread --enable-peigs --enable-underscoring --disable-mpi-tests --with-scala
+pack=-L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_t
+hread -lmkl_core -Wl,--end-group -lgfortran -lpthread --without-lapack --with-blas8=-L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-gr
+oup -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread --with-openib=/usr/include 
+/usr/lib64 -libumad -libverbs -lpthread -lrt CC=gcc CXX=g++ F77=gfortran FFLAGS=-fno-aggressive-loop-optimizations ARMCI_DEFAULT_SHMMAX_UBOUND=131072
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for TARGET base (64bit-ness checked later)... LINUX
+checking whether we think this system is what we call SYSV... yes
+checking whether we are cross compiling... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Detected VPATH build
+configure: 
+configure: C compiler
+configure: 
+checking for style of include used by make... GNU
+checking whether the C compiler works... no
+configure: error: in `/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/build':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+make[1]: *** [build/config.status] Error 1
+make[1]: Leaving directory `/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools'
+make: *** [libraries] Error 1
+</pre><br />
+<br />
+And the file $NWCHEM_TOP/src/tools/build/config.log contains this:<br />
+<br />
+
+<pre>
+&lt;snip&gt;
+configure:4843: $? = 1
+configure:4863: checking whether the C compiler works
+configure:4885: gcc -m64 -Wall -O3 -funroll-loops -ffast-math  -fopenmp -g  -I.  -I/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChe
+m/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/include -I/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWCh
+em/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/install/include -DMPICH_NO_ATTR_TYPE_TAGS -DGFORTRAN -DCHKUNDFLW -DGCC4 -DGCC46
+ -DUSE_OPENMP -DEXT_INT -DLINUX -DLINUX64 -DNOIO -DEAFHACK -DPARALLEL_DIAG  -fopenmp -Wl,--export-dynamic  -L/scale_wlg_nobackup/filesets/nobackup/nesi99999/bro
+b695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/lib/LINUX64 -L/scale_wlg_nobackup/filesets/nobackup/nesi99999/br
+ob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/install/lib conftest.c -lccsd -lmcscf -lselci -lmp2 -
+lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwint
+s -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -lnwpython -ldrdy -lvscf -lqmmm -lqmd -letrans -lps
+pw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -ldimqm -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4
+.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -l
+pthread  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_g
+nu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread  -lnwclapack  -lnwcblas   -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib/release_
+mt -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread     -lpthread  -lnwcutil -lpython2.7 -ldl -lm
+ -lpthread -lutil -lm  -lpython2.7 -ldl -lm -lpthread -lutil -lm -Xlinker -export-dynamic   &gt;&amp;5
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lccsd
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lmcscf
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lselci
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lmp2
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lmoints
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lstepper
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldriver
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -loptim
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwdft
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lgradients
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lcphf
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lesp
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lddscf
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldangchang
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lguess
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lhessian
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lvib
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwcutil
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lrimp2
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lproperty
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lsolvation
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwints
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lprepar
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwmd
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwpw
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lofpw
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lpaw
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lpspw
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lband
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwpwlib
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lcafe
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lspace
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lanalyze
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lqhop
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lpfft
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldplot
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwpython
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldrdy
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lvscf
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lqmmm
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lqmd
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -letrans
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lpspw
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ltce
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lbq
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lmm
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lcons
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lperfm
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldntmc
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lccca
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -ldimqm
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwcutil
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lga
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -larmci
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lpeigs
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lperfm
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lcons
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lbq
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwcutil
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwclapack
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwcblas
+/opt/nesi/CS400_centos7_bdw/binutils/2.28-GCCcore-7.4.0/bin/ld.gold: error: cannot find -lnwcutil
+collect2: error: ld returned 1 exit status
+configure:4889: $? = 1
+configure:4927: result: no
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME &quot;Global Arrays (GA)&quot;
+| #define PACKAGE_TARNAME &quot;ga&quot;
+| #define PACKAGE_VERSION &quot;5.6.5&quot;
+| #define PACKAGE_STRING &quot;Global Arrays (GA) 5.6.5&quot;
+| #define PACKAGE_BUGREPORT &quot;hpctools@pnl.gov&quot;
+| #define PACKAGE_URL &quot;http://hpc.pnl.gov/globalarrays/&quot;
+| #define LINUX 1
+| #define SYSV 1
+| #define PACKAGE &quot;ga&quot;
+| #define VERSION &quot;5.6.5&quot;
+| #define MSG_COMMS_MPI 1
+| #define ENABLE_PEIGS 1
+| #define ENABLE_EISPACK 0
+| #define ENABLE_PROFILING 0
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|  &nbsp;;
+|   return 0;
+| }
+configure:4932: error: in `/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/build':
+configure:4934: error: C compiler cannot create executables
+See `config.log' for more details
+&lt;snip&gt;
+</pre><br />
+<br />
+I'm at a bit of a loss here, especially since it seems to be trying to link NWChem libraries in before they are built. Can anyone help me as to what I'm doing wrong? I have tried the 64_to_32 things, to no avail, and have also tried building the libs explicitly, which didn't help either as I got to the same error. Any advice would be welcome.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10650"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10650" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem2')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/10650.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10650.html">11:52:45 AM PST - Thu, Jan 16th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please upload $NWCHEM_TOP/src/tools/build/config.log to a public website
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10651"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10651" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Valtandor/654651.html" onmouseover="mopen('mem3')" onmouseout="mclosetime()">Valtandor</a>  <font class="group_text">Member</font>
+                                    <div id="mem3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Valtandor/654651.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Valtandor/10651.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Valtandor/654651.html">2</a><br />
+                                Posts <a href="../../search/memposts/Valtandor/654651.html">6</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10651.html">1:12:06 PM PST - Thu, Jan 16th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">The file has been uploaded to <a target='blank' href="ftp://ftp.landcareresearch.co.nz/config.log" class="external autonumber">[1]</a>.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10652"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10652" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem4')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/10652.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10652.html">4:00:37 PM PST - Thu, Jan 16th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Please do unset the env. variable LIBS<br />
+<br />
+Since config.log shows that <br />
+<br />
+LIBS_value='-lccsd -lmcscf -lselci -lmp2 -lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwints -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -lnwpython -ldrdy -lvscf -lqmmm -lqmd -letrans -lpspw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -ldimqm -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread  -lnwclapack  -lnwcblas   -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib/release_mt -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread     -lpthread  -lnwcutil -lpython2.7 -ldl -lm -lpthread -lutil -lm  -lpython2.7 -ldl -lm -lpthread -lutil -lm -Xlinker -export-dynamic
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/10652.html">Edited On</a></b> 4:01:21 PM PST - Thu, Jan 16th 2020 <b>by</b> Edoapra
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10653"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10653" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Valtandor/654651.html" onmouseover="mopen('mem5')" onmouseout="mclosetime()">Valtandor</a>  <font class="group_text">Member</font>
+                                    <div id="mem5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Valtandor/654651.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Valtandor/10653.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Clicked A Few Times</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Valtandor/654651.html">2</a><br />
+                                Posts <a href="../../search/memposts/Valtandor/654651.html">6</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post0" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10653.html">4:17:26 PM PST - Thu, Jan 16th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">Thanks Edoapra. Do you have any idea why LIBS would be set to such a value in the first place? As you can see in the initial environment, its value was '-lm -lpthread'.
+</td>
+		                    </tr>
+		                                
+		                    
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br />       <a name="post_10655"></a>       
+        <table class="forum_posts" cellpadding="0" cellspacing="0" id="fullheight">
+            <tr>
+                <td width="100%" align="left" colspan="2" valign="top" class="mem_name" id="name_10655" nowrap>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="UserNameOptions" width="100%">
+                                <ul id="UserNameOptions">
+                                  <li>
+                                     <a href="../../mem_profile/Edoapra/337.html" onmouseover="mopen('mem6')" onmouseout="mclosetime()">Edoapra</a>  <font class="group_text">Forum:Admin, Forum:Mod, bureaucrat, sysop</font>
+                                    <div id="mem6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../../mem_profile/Edoapra/337.html"><b>Profile</b></a><br />
+                                        
+                                        Send <a href="../../member_options/pmnew/Edoapra/10655.html">PM</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" nowrap valign="top" width="20">
+                    <table cellpadding="0" cellspacing="0" width="20">
+                        <tr>
+                            <td class="t_userinfo" width="20" nowrap>
+                <!-- member_title --><div class="">Forum Vet</div><!-- /member_title -->
+                <DIV align="center"><img class="adv" src="../../../../extensions/awc/forums/images/avatars/avatar_default.gif" border="0" height="0" width="0" align="middle"/></div>
+                                
+                                Threads <a href="../../search/memtopics/Edoapra/337.html">10</a><br />
+                                Posts <a href="../../search/memposts/Edoapra/337.html">1667</a>                              
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                        
+            		<td align="left" width="100%" valign="top" id="fullheight">
+		                <table width="100%" cellpadding="0" cellspacing="0" class="post1" height="75">
+		                    <tr>
+		                        <td class="post_date" valign="bottom" height="1px"  width="100%" colspan="2"  nowrap><a target="blank" href="../../sp/id10655.html">6:12:29 PM PST - Thu, Jan 16th 2020 </a></td>
+		                            <td class="post_date" valign="bottom" height="1px" width="100%" nowrap></td>
+
+		                    </tr>
+		                                     
+		                    <tr>
+		                        <td valign="top" class="post_body" height="65" colspan="2">I have no idea why LIBS was set. LDFLAGS, CFLAGS, FFLAGS and CPPFLAGS are set, too.<br />
+All these settings are going to clash with NWChem's makefile infrastructure.<br />
+<br />
+ac_cv_env_LDFLAGS_set=set<br />
+ac_cv_env_LDFLAGS_value='-fopenmp -Wl,--export-dynamic  -L/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/lib/LINUX64 -L/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/install/lib'<br />
+ac_cv_env_LIBS_set=set<br />
+ac_cv_env_LIBS_value='-lccsd -lmcscf -lselci -lmp2 -lmoints -lstepper -ldriver -loptim -lnwdft -lgradients -lcphf -lesp -lddscf -ldangchang -lguess -lhessian -lvib -lnwcutil -lrimp2 -lproperty -lsolvation -lnwints -lprepar -lnwmd -lnwpw -lofpw -lpaw -lpspw -lband -lnwpwlib -lcafe -lspace -lanalyze -lqhop -lpfft -ldplot -lnwpython -ldrdy -lvscf -lqmmm -lqmd -letrans -lpspw -ltce -lbq -lmm -lcons -lperfm -ldntmc -lccca -ldimqm -lnwcutil -lga -larmci -lpeigs -lperfm -lcons -lbq -lnwcutil  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread  -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/lib64 -Wl,--start-group -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -Wl,--end-group -lgfortran -lpthread  -lnwclapack  -lnwcblas   -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib/release_mt -L/opt/nesi/CS400_centos7_bdw/impi/2018.4.274-GCC-7.4.0/intel64/lib -lmpifort -lmpi -lmpigi -ldl -lrt -lpthread     -lpthread  -lnwcutil -lpython2.7 -ldl -lm -lpthread -lutil -lm  -lpython2.7 -ldl -lm -lpthread -lutil -lm -Xlinker -export-dynamic  '<br />
+ac_cv_env_CFLAGS_set=set<br />
+ac_cv_env_CFLAGS_value='-m64 -Wall -O3 -funroll-loops -ffast-math  -fopenmp -g '<br />
+ac_cv_env_CPPFLAGS_set=set<br />
+ac_cv_env_CPPFLAGS_value='-I.  -I/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/include -I/scale_wlg_nobackup/filesets/nobackup/nesi99999/brob695/easybuild/build/NWChem/6.8.1.revision133/gimkl-2018b-2018-06-14-Python-2.7.16/nwchem-6.8.1/src/tools/install/include -DMPICH_NO_ATTR_TYPE_TAGS -DGFORTRAN -DCHKUNDFLW -DGCC4 -DGCC46 -DUSE_OPENMP -DEXT_INT -DLINUX -DLINUX64 -DNOIO -DEAFHACK -DPARALLEL_DIAG '<br />
+ac_cv_env_FFLAGS_set=set<br />
+ac_cv_env_FFLAGS_value=-fno-aggressive-loop-optimizations
+</td>
+		                    </tr>
+		                                
+		                    <tr>
+	<td class="edited_on" align="left" colspan="2">
+		<b><a href="../../post/edithistory/10655.html">Edited On</a></b> 6:17:31 PM PST - Thu, Jan 16th 2020 <b>by</b> Edoapra
+	</td>
+</tr>
+		                    
+		                </table>
+		            </td>
+        </tr> 
+           
+        <tr><td class="thread_sig" align="left" colspan="2"></td></tr>
+        	
+        </table>
+<br /><br />
+<table width="100%" cellpadding="0" cellspacing="0" class="bot_breadcrumbs_and_pagejump">
+	<tr>
+		<td width="100%" class="bot_breadcrumbs"><a href="../../index.html">Forum</a> &gt;&gt; <a href="../../sc/id2.html">NWChem's corner</a> &gt;&gt; <a href="../../sf/id4.html">Compiling NWChem</a></td>
+	</tr>
+	<tr>
+		<td width="100%" class="bot_pagejumps"></td>
+	</tr>
+</table>
+<br /><br />      <br />
+        	<table class="whos_here" width="100%" cellpadding="0" cellspacing="0">
+        			<tr>
+                  <td width="100%" class="whos_here_header">
+                        <a href="../../whoshere.html">Who's here now</a> 
+                        Members 0
+                        Guests 1
+                        Bots/Crawler 0
+                   </td>
+         				</tr>
+        				<tr>
+        					<td class="whos_here_row"></td>
+        				</tr>
+        </table><br /><hr>
+            <center>
+                <a href="http://wiki.anotherwebcom.com/" target="_blank" title="PHP, Visual Basic  scripts and programs">AWC's</a>:
+                 <b>2.5.10</b> MediaWiki - Stand Alone Forum Extension<br />Forum theme style by: <a target='blank' href='wiki.anotherwebcom.html'>AWC</a></center><div class="printfooter">
+Retrieved from "<a href="index.html">http:///index.php/Special:AWCforum/st/id3560/</a>"</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+	<!-- end of gumax-content-body -->
+
+
+	<!-- ///// gumax-footer ///// -->
+	<div id="gumax-footer">
+
+			<!-- personal tools  -->
+	<div id="gumax-personal-tools">
+		<h5>Toolbox</h5>
+		<ul>
+<li id="t-specialpages"><a href="../../../Special_SpecialPages.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+		</ul>
+	</div>
+	<!-- end of personal tools  -->
+
+		<div class="gumax-footer-spacer"></div>
+
+			<!-- gumax-f-list -->
+	<div id="gumax-f-list">
+		<ul>
+							<li id="privacy"><a href="../../../NWChem_Privacy_policy.html" title="NWChem:Privacy policy">Privacy policy</a></li>
+							<li>/</li>							<li id="about"><a href="../../../NWChem_About.html" title="NWChem:About">About NWChem</a></li>
+							<li>/</li>							<li id="disclaimer"><a href="../../../NWChem_General_disclaimer.html" title="NWChem:General disclaimer">Disclaimers</a></li>
+							<li>/</li>						<li id="f-poweredby"><a href="http://mediawiki.org/" target="_blank">Powered by MediaWiki</a></li>
+			<li>&#47;</li>
+			<li id="f-designedby"><a href="http://paulgu.com/" target="_blank">Designed by Paul Gu</a></li>
+		</ul>
+	</div>
+	<!-- end of gumax-f-list -->
+
+	</div>
+	<!-- ///// end of gumax-footer ///// -->
+
+
+</div>
+<!-- ===== end of gumax-page ===== -->
+
+	</td><td id="gumax-page-table-right"><img src="../../../../skins/gumax/blank.gif" alt="" /></td></tr></table>
+	<!--[if lt IE 7]>
+		<script type="text/javascript">pngfix('td');</script>
+	<![endif]-->
+
+</div>
+<!-- ##### end of gumax-wrapper ##### -->
+
+
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.248 secs. --></body>
+<!-- Mirrored from /index.php/Special:AWCforum/st/id3560/#post_10740 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jun 2020 00:12:33 GMT -->
+</html>
+
+
+
+
+
