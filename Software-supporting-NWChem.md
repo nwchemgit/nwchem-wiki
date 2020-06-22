@@ -95,6 +95,7 @@ ESP](Properties#Gaussian_Cube_Files) and/or use
     <http://sf.anu.edu.au/~vvv900/cct/appl/jmoleditor/index.html>
   - **Molden2AIM** is a utility program which can be used to create AIM-WFN, AIM-WFX, and NBO-47 files from a Molden file
      <https://github.com/zorkzou/Molden2AIM>
+  - **Multiwfn** is a wavefunction analysis program <http://sobereva.com/multiwfn>
 
 ## Programs post-processing AIM files
 
