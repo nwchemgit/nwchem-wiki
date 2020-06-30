@@ -4462,7 +4462,7 @@ end
 task band dos
 ```
 
-This calculation outputs the ![Diamond-dos.dos.dat](Diamond-dos.dos.dat) data file in the permanent\_directory. A plotting
+This calculation outputs the ![diamond-dos.dos.dat](diamond-dos.dos.dat) data file in the permanent\_directory. A plotting
 (e.g. gnuplot or xmgrace) can be used to display the density of
 states.
 
