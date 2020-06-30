@@ -10,4 +10,3 @@
 
   - [Running NWChem](Running)
   
-  - [Top level Directive](newlink)
