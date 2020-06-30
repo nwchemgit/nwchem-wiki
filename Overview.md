@@ -4,8 +4,6 @@
 
   - [Getting Started](Getting-Started)
 
-  - [a test page](mytestpage)
-
   - [Top level Directives](toplevel)
 
   - [NWChem Architecture](NWChem-Architecture)
