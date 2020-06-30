@@ -3,5 +3,5 @@
   - [Quantum Computing](Quantum)
   - [VSCF](VSCF)
   - [Dynamical Nucleation Theory Monte Carlo](DNTMC)
-  - [Correlation consistent Composite Approach (ccCA)](CCCA)
+  - [Correlation consistent Composite Approach (ccCA)](CCCA_method)
   - [Interfaces to Other Programs](Interface)
