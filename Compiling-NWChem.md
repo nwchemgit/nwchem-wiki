@@ -194,7 +194,7 @@ options.
 | MPI\_LIB     | Directory where the MPI library resides                                                                                          |
 | MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |
 #### Automatic detection of MPI variables - mpif90
-**<span style="color:#FF0000">New in NWChem 6.6</span>**: If the
+**_New in NWChem 6.6_**: If the
 location of the mpif90 command is part of your PATH env. variable,
 NWChem will figure out the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE
 (if they are not set). Therefore, we do **NOT** recommend to set LIBMPI,
