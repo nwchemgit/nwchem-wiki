@@ -193,7 +193,7 @@ options.
 | LIBMPI       | Name of the MPI library that should be linked with -l (eg. -lmpich)                                                              |
 | MPI\_LIB     | Directory where the MPI library resides                                                                                          |
 | MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |
-
+#### Automatic detection of MPI variables - mpif90
 **<span style="color:#FF0000">New in NWChem 6.6</span>**: If the
 location of the mpif90 command is part of your PATH env. variable,
 NWChem will figure out the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE
