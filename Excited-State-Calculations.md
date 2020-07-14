@@ -149,7 +149,7 @@ block. The syntax is:
    [SYMMETRY]  
    [ECUT] <-cutoff energy>  
    [EWIN] <-lower cutoff energy>  <-higher cutoff energy>  
-   [ALPHA] `<integer lower orbital>  <integer upper orbital>  
+   [ALPHA] <integer lower orbital>  <integer upper orbital>  
    [BETA] <integer lower orbital>  <integer upper orbital>  
    [CIVECS]  
    [GRAD, END]  
@@ -300,8 +300,8 @@ energy window
 
 Orbital windows can be specified using the following keywords:
 
-  - alpha 1 4
-  - beta 2 5
+ * alpha 1 4
+ * beta 2 5
 
 Here alpha excitations will be considered from orbitals 1 through 4
 depending on the number of roots requested and beta excitations will be
@@ -347,9 +347,9 @@ task tddft optimize
 At the moment the following exchange-correlation functionals are
 supported with TDDFT
 gradients
-
-`LDA, BP86, PBE, BLYP, B3LYP, PBE0, BHLYP, CAM-B3LYP, LC-PBE, LC-PBE0, BNL, LC-wPBE, LC-wPBEh, LC-BLYP`
-
+```
+LDA, BP86, PBE, BLYP, B3LYP, PBE0, BHLYP, CAM-B3LYP, LC-PBE, LC-PBE0, BNL, LC-wPBE, LC-wPBEh, LC-BLYP
+```
 ### CDSpectrum -- optical rotation calculations
 
 Perform optical rotation calculations.
