@@ -22,3 +22,12 @@ sudo yum -y install http://download.fedoraproject.org/pub/epel/6/x86_64/epel-rel
 sudo yum update
 sudo yum install nwchem-openmpi.x86_64
 ```
+
+# NWChem availability on macOS
+
+NWChem can be installed from [Homebrew](https://brew.sh/), by executing the following commands  
+```
+bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew install nwchem
+```
