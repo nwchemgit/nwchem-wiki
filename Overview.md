@@ -4,7 +4,7 @@
 
   - [Getting Started](Getting-Started)
 
-  - [Top-level Directives](Top-Level)
+  - [Top-level Directives](Top-level)
 
   - [NWChem Architecture](NWChem-Architecture)
 
