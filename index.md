@@ -12,6 +12,7 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 The NWChem software can handle:  
+<img src="pt55.png" style="float:right; margin-right:2px; alt="drawing" width="130"/>
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -19,6 +20,7 @@ The NWChem software can handle:
   * Gaussian basis functions or plane-waves
   * Scaling from one to thousands of processors
   * Properties and relativistic effects
+
 
 NWChem is actively developed by a consortium of developers and
 maintained by the [EMSL](http://www.emsl.pnl.gov) located at the Pacific
@@ -41,13 +43,13 @@ to effectively utilize architectures of tens of petaflops and beyond.
 ### EMSL Arrows
 
 <img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" width="160"/> 
-are you just
-learning nwchem and would like to have an easy way to generate input
+Sre you just
+learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
-perform simple thermochemistry calculations, calculate the nmr and ir
+perform simple thermochemistry calculations, calculate the NMR and IR
 spectra of a modest size molecule, or just try out nwchem before
-installing it? emsl arrows scientific service can help. a web api to
-emsl arrows is now available for alpha testing.
+installing it? EMSL Arrows scientific service can help. A web api to
+EMSL Arrows is now available for alpha testing.
 
 for more information see
 [EMSLl\_Arrows\_-\_an\_easier\_way\_to\_use\_nwchem](Current_events#%22emsl_arrows_-_an_easier_way_to_use_nwchem) and [EMSL Arrows](EMSL_Arrows)
