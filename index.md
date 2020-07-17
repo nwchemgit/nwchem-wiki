@@ -1,4 +1,6 @@
-# NWChem: Open Source High-Performance Computational Chemistry
+<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png" style="float:left; margin-right:5px; alt="drawing" width="120"/>
+<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/emsl_logo2.svg" style="float:right; margin-leftt:5px; alt="drawing" width="160"/>
+## NWChem: Open Source High-Performance Computational Chemistry
 
 
 <img src="Bylaska-Figure3.PNG" style="float:left; margin-right:10px; alt="drawing" width="160"/> 
@@ -9,14 +11,14 @@ efficiently, and in their use of available parallel computing resources
 from high-performance parallel supercomputers to conventional
 workstation clusters.
 
-The NWChem software can handle:
+The NWChem software can handle:  
 
-  - Biomolecules, nanostructures, and solid-state
-  - From quantum to classical, and all combinations
-  - Ground and excited-states
-  - Gaussian basis functions or plane-waves
-  - Scaling from one to thousands of processors
-  - Properties and relativistic effects
+  * Biomolecules, nanostructures, and solid-state
+  * From quantum to classical, and all combinations
+  * Ground and excited-states
+  * Gaussian basis functions or plane-waves
+  * Scaling from one to thousands of processors
+  * Properties and relativistic effects
 
 NWChem is actively developed by a consortium of developers and
 maintained by the [EMSL](http://www.emsl.pnl.gov) located at the Pacific
@@ -34,9 +36,9 @@ the condensed phase, and enabling innovative and integrated research at
 EMSL. At the same time continued development is needed to enable NWChem
 to effectively utilize architectures of tens of petaflops and beyond.
 
-## *NWChem version 7.0.0 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release)
+### *NWChem version 7.0.0 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release)
 
-## EMSL Arrows
+### EMSL Arrows
 
 <img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" width="160"/> 
 are you just
@@ -53,9 +55,9 @@ for more information see
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
 [*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api) </span>
 
-## [Documentation](Home)
+### [Documentation](Home)
 
-## NWChem Citation
+### NWChem Citation
 
 Please cite the following reference when publishing results obtained
 with NWChem:
