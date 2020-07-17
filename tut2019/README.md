@@ -8,7 +8,7 @@ This webpage can be reached by using the following URL
 
 The Arrows webpage can be reached by using the following URL  
 
-[https://arrows.emsl.pnnl.gov/api/aerosol](https://arrows.emsl.pnnl.gov/api/aerosol_
+[https://arrows.emsl.pnnl.gov/api/aerosol](https://arrows.emsl.pnnl.gov/api/aerosol)
 
 
 ###Instruction for installing NWChem on Mac with Homebrew
