@@ -6,7 +6,7 @@ Links to material of past NWChem Tutorials
 
 [Tutorial Athens 2018](Tutorial-Athens2018.md)
 
-[Tutorial EMSL Atmospherical School 2019](tut2019/README.md)
+[Tutorial 2019 EMSL/ARM Aerosol Summer School](tut2019/README.md)
 
 
 
