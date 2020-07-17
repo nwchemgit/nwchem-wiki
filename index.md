@@ -43,7 +43,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 ### EMSL Arrows
 
 <img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" width="160"/> 
-Sre you just
+Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
 perform simple thermochemistry calculations, calculate the NMR and IR
