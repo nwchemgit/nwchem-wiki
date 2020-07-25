@@ -28,7 +28,7 @@ explicit coordinates are specified.
 <!-- end list -->
 
   - **format** xyz || pdb - specifies format of the input file. The only
-    formats that are supported at this point are pdb and xyz. Either one
+    formats that are supported at this point are [pdb](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)) and [xyz](https://en.wikipedia.org/wiki/XYZ_file_format). Either one
     can contain multiple structures, which can be selected using the
     frame directive. Note that in case of PDB file multiple structures
     are expected to be separated by END keyword. If the format directive
