@@ -10,7 +10,7 @@
     
    <string filename> ]
 ```
-LOAD directive allows users to load Cartesian coordinates from external
+The LOAD directive allows users to load Cartesian coordinates from external
 pdb or xyz files with the name <filename>. This directive works in
 addition to the explicit Cartesian coordinate declaration and can be
 repeated and mixed with the latter. This allows for complex coordinate
