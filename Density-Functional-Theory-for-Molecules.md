@@ -1413,7 +1413,7 @@ GRID [(becke||erf1||erf2||ssf) default erf1]
   - erf1 : modified ssf
   - erf2 : modified ssf
 
-Erf<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> partioning functions
+Erf*n* partitioning functions
 
 <img alt="$\begin{array}{lcl}&#10;  w_A(r) &amp; = &amp; \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\&#10;  \mu^\prime_{AB} &amp; = &amp; \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\&#10;  \mu_{AB} &amp; = &amp; \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|}&#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a6929e5f4f1fbe470b2d9bf0fe184888.svg?invert_in_darkmode&sanitize=true" align=middle width="268.96155pt" height="75.55119pt"/>
 
