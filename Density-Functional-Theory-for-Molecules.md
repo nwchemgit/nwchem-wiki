@@ -1225,7 +1225,9 @@ composition.
 | fine    |   1&sdot;10<sup>-7</sup>          |
 | xfine   |   1&sdot;10<sup>-8</sup>          |
 | huge    |   1&sdot;10<sup>-10</sup>          |
+
 </center>
+
 
 In order to determine the level of radial and angular quadrature needed
 to give us the target accuracy we computed total DFT energies at the LDA
@@ -1257,11 +1259,12 @@ generate the desired energy accuracy (at the expense of speed of the calculation
 | fine    | 70     | 590     |
 | xfine   | 100    | 1202    |
 
+</center>
+
 Program default number of radial and angular shells empirically
 determined for Row 1 atoms (Li &rarr; F) to reach the desired
 accuracies.
 
-</center>
 
 <center>
 
@@ -1274,11 +1277,12 @@ accuracies.
 | xfine   | 125     | 1454    |
 | huge    | 300     | 1454    |
 
+</center>
+
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
 accuracies.
 
-</center>
 
 <center>
 
@@ -1291,11 +1295,12 @@ accuracies.
 | xfine   | 160     | 1454    |
 | huge    | 400     | 1454    |
 
+</center>
+
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
 accuracies.
 
-</center>
 
 <center>
 
@@ -1308,11 +1313,12 @@ accuracies.
 | xfine   | 205     | 1454    |
 | huge    | 400     | 1454    |
 
+</center>
+
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
 accuracies.
 
-</center>
 
 ### Angular grids
 
