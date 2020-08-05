@@ -162,7 +162,7 @@ subsequent computations.
 ## NWChem Mailing List Archive
 
 The archive of the NWChem Mailing list can be found
-[here](http://www.emsl.pnl.gov/docs/nwchem/nwchem-support/).
+[here](https://nwchemgit.github.io/Archived-Forum.html).
 
 ## NWChem Wiki Page Guidelines
 
