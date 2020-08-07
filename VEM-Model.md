@@ -23,9 +23,7 @@ model of
 Li, J.; Cramer, C. J.; Truhlar, D. G. Two-response-time model based on
 CM2/INDO/S2 electrostatic potentials for the dielectric polarization
 component of solvatochromic shifts on vertical excitation energies. Int.
-J. Quantum Chem. 2000, 77, 264-280; DOI:
-\[[http://dx.doi.org/10.1002/(SICI)1097-461X(2000)77:1\<264](http://dx.doi.org/10.1002/\(SICI\)1097-461X\(2000\)77:1%3C264)::AID-QUA24\>3.0.CO;2-J
-10.1002/(SICI)1097-461X(2000)77:1\<264::AID-QUA24\>3.0.CO;2-J\]
+J. Quantum Chem. 2000, 77, 264-280; [https://dx.doi.org/10.1002/(SICI)1097-461X(2000)77:1<264::AID-QUA24>3.0.CO;2-J](https://dx.doi.org/10.1002/(SICI)1097-461X(2000)77:1<264::AID-QUA24>3.0.CO;2-J)
 
 but the current implementation of VEM extends to both excitation and
 emission calculations in solution, and the E in VEM now stands for
@@ -83,21 +81,20 @@ The VEM-specific input options are as
 follows:
 
 `do_cosmo_vem (integer input))`  
-`0 (do not do any VEM calculation even if the task tddft gradient line is present; default)`  
-`1 (do a nonequilibrium VEM excitation energy calculation; in this case the task tddft gradient line should be present, too)`  
-`2 (do an equilibrium VEM excitation energy calculation followed by a nonequilibrium emission energy calculation; task tddft gradient line should be present)`
+`0` (do not do any VEM calculation even if the task tddft gradient line is present; default).
+`1` (do a nonequilibrium VEM excitation energy calculation; in this case the task tddft gradient line should be present, too)  
+`2` (do an equilibrium VEM excitation energy calculation followed by a nonequilibrium emission energy calculation; task tddft gradient line should be present)  
 
 The VEM solvent (which is water by default) can be specified by using
 the solvent keyword described in the SMD section of this manual or by
-specifying the VEM solvent descriptors such
-as
+specifying the VEM solvent descriptors such as
 
 `dielec (real input)`  
 `static dielectric constant`
 
 `dielecinf (real input)`  
-`optical dielectric constant which is set (by default) to the squared value of the solvent's index of refraction (see the keyword soln, but note `  
-`that if the solvent is specified with the solvent keyword, the refractive index is set by the program without needing the user to supply it. `  
+optical dielectric constant which is set (by default) to the squared value of the solvent's index of refraction (see the keyword `soln`, but note 
+that if the solvent is specified with the solvent keyword, the refractive index is set by the program without needing the user to supply it.)   
 
 Solvent descriptors set by the program are based on the Minnesota
 Solvent Descriptor Database:
@@ -118,10 +115,10 @@ solvatochromic shift is desired, the following options should be
 used:
 
 `polgs_cosmo_vem (real input)`  
-`user-provided value of the spherically-averaged molecular polarizability of the solute in the ground state (in Å3)`
+user-provided value of the spherically-averaged molecular polarizability of the solute in the ground state (in Å<sup>3</sup>)
 
 `poles_cosmo_vem (real input)`  
-`user-provided value of the spherically-averaged molecular polarizability of the solute in an exited state of interest (in Å3)`
+user-provided value of the spherically-averaged molecular polarizability of the solute in an exited state of interest (in Å<sup>3</sup>)
 
 An example of the VEM input file is provided
 below.
