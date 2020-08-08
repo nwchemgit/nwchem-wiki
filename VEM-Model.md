@@ -122,40 +122,41 @@ user-provided value of the spherically-averaged molecular polarizability 
 
 An example of the VEM input file is provided
 below.
-
-`echo`  
-`title  'VEM/TDDFT-B3LYP/6-311+G(d) vertical excitation energy + SMSSP for formaldehyde in methanol'`  
-`start`  
-`geometry nocenter`  
-` O    0.0000000000    0.0000000000    0.6743110000`  
-` C    0.0000000000    0.0000000000   -0.5278530000`  
-` H    0.0000000000    0.9370330000   -1.1136860000`  
-` H    0.0000000000   -0.9370330000   -1.1136860000`  
-`symmetry c1`  
-`end`  
-`basis`  
-`* library 6-311+G*`  
-`end`  
-`dft`  
-` XC b3lyp`  
-`end`  
-`cosmo`  
-` do_cosmo_smd true`  
-` do_cosmo_vem 1`  
-` solvent methanol`  
-` polgs_cosmo_vem 2.429`  
-` poles_cosmo_vem 3.208`  
-`end`  
-`tddft`  
-` nroots 10`  
-` target 1`  
-` singlet`  
-` notriplet`  
-` algorithm 1`  
-` civecs`  
-`end`  
-`grad`  
-`  root 1`  
-`  solve_thresh 1d-05`  
-`end`  
-`task tddft gradient`
+```
+echo  
+title  'VEM/TDDFT-B3LYP/6-311+G(d) vertical excitation energy + SMSSP for formaldehyde in methanol'  
+start  
+geometry nocenter  
+ O    0.0000000000    0.0000000000    0.6743110000  
+ C    0.0000000000    0.0000000000   -0.5278530000  
+ H    0.0000000000    0.9370330000   -1.1136860000  
+ H    0.0000000000   -0.9370330000   -1.1136860000  
+symmetry c1  
+end  
+basis  
+* library 6-311+G*  
+end  
+dft  
+ XC b3lyp  
+end  
+cosmo  
+ do_cosmo_smd true  
+ do_cosmo_vem 1  
+ solvent methanol  
+ polgs_cosmo_vem 2.429  
+ poles_cosmo_vem 3.208  
+end  
+tddft  
+ nroots 10  
+ target 1  
+ singlet  
+ notriplet  
+ algorithm 1  
+ civecs  
+end  
+grad  
+  root 1  
+  solve_thresh 1d-05  
+end  
+task tddft gradient
+```
