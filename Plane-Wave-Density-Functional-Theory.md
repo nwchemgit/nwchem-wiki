@@ -276,18 +276,18 @@ NWPW 
   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
 
   MAPPING <integer mapping default 1>  
-  NP_DIMENSIONS <integer npi npj default -1 -1>`  
-  CAR-PARRINELLO             ... (see section `[`Car-Parrinello`](#Car-Parrinello)`) END 
-  STEEPEST_DESCENT           ... (see section `[`Steepest Descent`](#STEEPEST_DESCENT)`) END
-  DPLOT                      ... (see section `[`DPLOT`](#DPLOT)`) END 
-  WANNIER                    ... (see section `[`Wannier`](#Wannier)`) END 
-  PSP_GENERATOR              ... (see section `[`PSP Generator`](#PSP_GENERATOR)`)) END   
+  NP_DIMENSIONS <integer npi npj default -1 -1>  
+  CAR-PARRINELLO             ... (see section [Car-Parrinello](#Car-Parrinello)) END 
+  STEEPEST_DESCENT           ... (see section [Steepest Descent](#STEEPEST_DESCENT)) END
+  DPLOT                      ... (see section [DPLOT](#DPLOT)) END 
+  WANNIER                    ... (see section [Wannier](#Wannier)) END 
+  PSP_GENERATOR              ... (see section [PSP Generator](#PSP_GENERATOR))) END   
   
-  WAVEFUNCTION_INITIALIZER   ... (see section `[`Wavefunction Initializer`](NWPW_RETIRED#WAVEFUNCTION_INITIALIZER)` - retired) END  
-  V_WAVEFUNCTION_INITIATIZER ... (see section `[`Wavefunction Velocity Initializer` (NWPW_RETIRED#V_WAVEFUNCTION_INITIALIZER)` - retired) END  
-  WAVEFUNCTION_EXPANDER      ... (see section `[`Wavefunction Expander`](NWPW_RETIRED#WAVEFUNCTION_EXPANDER)` - retired) END  
-  INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
- OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs> `  
+  WAVEFUNCTION_INITIALIZER   ... (see section [Wavefunction Initializer](NWPW_RETIRED#WAVEFUNCTION_INITIALIZER) - retired) END  
+  V_WAVEFUNCTION_INITIATIZER ... (see section [Wavefunction Velocity Initializer (NWPW_RETIRED#V_WAVEFUNCTION_INITIALIZER) - retired) END  
+  WAVEFUNCTION_EXPANDER      ... (see section [Wavefunction Expander](NWPW_RETIRED#WAVEFUNCTION_EXPANDER) - retired) END  
+  INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs>   
+ OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs>   
 END
 ```
 The following list describes the keywords contained in the PSPW input
@@ -2190,48 +2190,48 @@ optimization of the one-electron orbitals.
 Input to the steepest\_descent simulation is contained within the
 steepest\_descent sub-block.
 ```
-`NWPW `  
-`... `  
-` STEEPEST_DESCENT `  
-`   ... `  
-` END `  
-`...`  
-`END`
+NWPW   
+...   
+ STEEPEST_DESCENT   
+   ...   
+ END   
+...  
+END
 ```
 To run a steepest\_descent calculation the following directive is used:
 ```
-`TASK PSPW steepest_descent`  
-`TASK BAND steepest_descent `
+TASK PSPW steepest_descent  
+TASK BAND steepest_descent 
 ```
 The steepest\_descent sub-block contains a great deal of input,
 including pointers to data, as well as parameter input. Listed below is
 the format of a STEEPEST\_DESCENT
 sub-block.
 ```
-`NWPW`  
-`... `  
-` STEEPEST_DESCENT `  
-`   CELL_NAME `<string cell_name>` `  
-`   [GEOMETRY_OPTIMIZE] `  
-`   INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs> `  
-`   OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs> `  
-`   FAKE_MASS <real fake_mass default 400000.0> `  
-`   TIME_STEP <real time_step default 5.8> `  
-`   LOOP <integer inner_iteration outer_iteration default 10 1> `  
-`   TOLERANCES <real tole tolc tolr default 1.0d-9 1.0d-9 1.0d-4> `  
-`   ENERGY_CUTOFF <real ecut default (see input desciption)> `  
-`   WAVEFUNCTION_CUTOFF <real wcut default (see input description)> `  
-`   EWALD_NCUT <integer ncut default 1> `  
-`   EWALD_RCUT <real rcut default (see input description)> `  
-`   XC (Vosko      || LDA          || PBE96         || revPBE       || HF            ||  `  
-`       LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    || `  
-`       PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  || `  
-`       revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC || `  
-`       PBE0       || revPBE0      || default Vosko) `  
-`   [MULLIKEN]`  
-` END`  
-`...`  
-`END`
+NWPW  
+...   
+ STEEPEST_DESCENT   
+   CELL_NAME <string cell_name>   
+   [GEOMETRY_OPTIMIZE]   
+   INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default file_prefix.movecs>   
+   OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default file_prefix.movecs>   
+   FAKE_MASS <real fake_mass default 400000.0>   
+   TIME_STEP <real time_step default 5.8>   
+   LOOP <integer inner_iteration outer_iteration default 10 1>   
+   TOLERANCES <real tole tolc tolr default 1.0d-9 1.0d-9 1.0d-4>   
+   ENERGY_CUTOFF <real ecut default (see input desciption)>   
+   WAVEFUNCTION_CUTOFF <real wcut default (see input description)>   
+   EWALD_NCUT <integer ncut default 1>   
+   EWALD_RCUT <real rcut default (see input description)>   
+   XC (Vosko      || LDA          || PBE96         || revPBE       || HF            ||    
+       LDA-SIC    || LDA-SIC/2    || LDA-0.4SIC    || LDA-SIC/4    || LDA-0.2SIC    ||   
+       PBE96-SIC  || PBE96-SIC/2  || PBE96-0.4SIC  || PBE96-SIC/4  || PBE96-0.2SIC  ||   
+       revPBE-SIC || revPBE-SIC/2 || revPBE-0.4SIC || revPBE-SIC/4 || revPBE-0.2SIC ||   
+       PBE0       || revPBE0      || default Vosko)   
+   [MULLIKEN]  
+ END  
+...  
+END
 ```
 The following list describes the input for the STEEPEST\_DESCENT
 sub-block.
@@ -2292,7 +2292,7 @@ NWPW
     NGRID <integer na1 na2 na3 default 32 32 32> 
   END 
 ...  
-`END
+END
 ```
 Basically, the user needs to enter the dimensions, gridding and boundary
 conditions of the simulation cell. The following list describes the
@@ -2467,7 +2467,7 @@ nwpw
   mult 1
   dplot
      density diff diff1.cube
-  end`  
+  end
 
   #spin penalty functions  
   pspspin up   d -1.0 1:2  
@@ -2480,8 +2480,8 @@ nwpw
   pspspin off
   dplot
      density diff diff2.cube
-  end`  
-end`  
+  end  
+end 
 task pspw energy
 task pspw pspw_dplot
 ```
@@ -2494,50 +2494,50 @@ simulations is to define the MM atoms in the geometry block. The MM
 atoms must be at the end of the geometry and a carat, " ^ ", must be
 appended to the end of the atom name, e.g.
 ```
-`geometry units angstrom nocenter noautosym noautoz print xyz`  
-` C -0.000283 0.000106 0.000047`  
-` Cl -0.868403 1.549888 0.254229`  
-` Cl 0.834043 -0.474413 1.517103`  
-` Cl -1.175480 -1.275747 -0.460606`  
-` Cl 1.209940 0.200235 -1.310743`  
-` O^ 0.3226E+01 -0.4419E+01 -0.5952E+01 `  
-` H^ 0.3193E+01 -0.4836E+01 -0.5043E+01 `  
-` H^ 0.4167E+01 -0.4428E+01 -0.6289E+01`  
-` O^ 0.5318E+01 -0.3334E+01 -0.1220E+01`  
-` H^ 0.4978E+01 -0.3040E+01 -0.2113E+01`  
-` H^ 0.5654E+01 -0.2540E+01 -0.7127E+00`  
-`end`
+geometry units angstrom nocenter noautosym noautoz print xyz  
+ C -0.000283 0.000106 0.000047  
+ Cl -0.868403 1.549888 0.254229  
+ Cl 0.834043 -0.474413 1.517103  
+ Cl -1.175480 -1.275747 -0.460606  
+ Cl 1.209940 0.200235 -1.310743  
+ O^ 0.3226E+01 -0.4419E+01 -0.5952E+01   
+ H^ 0.3193E+01 -0.4836E+01 -0.5043E+01   
+ H^ 0.4167E+01 -0.4428E+01 -0.6289E+01  
+ O^ 0.5318E+01 -0.3334E+01 -0.1220E+01  
+ H^ 0.4978E+01 -0.3040E+01 -0.2113E+01  
+ H^ 0.5654E+01 -0.2540E+01 -0.7127E+00  
+end
 ```
 Another way to specify the MM atoms is to use the mm\_tags option which
 appends the atoms with a " ^ ".
 ```
-`geometry units angstrom nocenter noautosym noautoz print xyz`  
-` C -0.000283 0.000106 0.000047`  
-` Cl -0.868403 1.549888 0.254229`  
-` Cl 0.834043 -0.474413 1.517103`  
-` Cl -1.175480 -1.275747 -0.460606`  
-` Cl 1.209940 0.200235 -1.310743`  
-` O 0.3226E+01 -0.4419E+01 -0.5952E+01 `  
-` H 0.3193E+01 -0.4836E+01 -0.5043E+01 `  
-` H 0.4167E+01 -0.4428E+01 -0.6289E+01`  
-` O 0.5318E+01 -0.3334E+01 -0.1220E+01`  
-` H 0.4978E+01 -0.3040E+01 -0.2113E+01`  
-` H 0.5654E+01 -0.2540E+01 -0.7127E+00`  
-`end`  
-`NWPW`  
-`  QMMM`  
-`    mm_tags 6:11`  
-`  END`  
-`END`
+geometry units angstrom nocenter noautosym noautoz print xyz  
+ C -0.000283 0.000106 0.000047  
+ Cl -0.868403 1.549888 0.254229  
+ Cl 0.834043 -0.474413 1.517103  
+ Cl -1.175480 -1.275747 -0.460606  
+ Cl 1.209940 0.200235 -1.310743  
+ O 0.3226E+01 -0.4419E+01 -0.5952E+01   
+ H 0.3193E+01 -0.4836E+01 -0.5043E+01   
+ H 0.4167E+01 -0.4428E+01 -0.6289E+01  
+ O 0.5318E+01 -0.3334E+01 -0.1220E+01  
+ H 0.4978E+01 -0.3040E+01 -0.2113E+01  
+ H 0.5654E+01 -0.2540E+01 -0.7127E+00  
+end  
+NWPW  
+  QMMM  
+    mm_tags 6:11  
+  END  
+END
 ```
 The option "mm\_tags off" can be used to remove the " ^ " from the
 atoms, i.e.
 ```
-`NWPW`  
-`  QMMM`  
-`     mm_tags 6:11 off`  
-`  END`  
-`END `
+NWPW  
+  QMMM  
+     mm_tags 6:11 off  
+  END  
+END 
 ```
 Next the pseudopotentials have be defined for the every type of MM atom
 contained in the geometry blocks. The following local pseudopotential
@@ -2549,11 +2549,11 @@ generated.
 The following input To define this pseudopo the O^ MM atom using the
 following input
 ```
-`NWPW `  
-` QMMM `  
-`   mm_psp O^ -0.8476 4 0.70 `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   mm_psp O^ -0.8476 4 0.70   
+ END  
+END
 ```
 defines the local pseudopotential for the O^ MM atom , where
 <img alt="$Z_{ion}=-0.8476$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>, 
@@ -2561,23 +2561,23 @@ defines the local pseudopotential for the O^ MM atom , where
 input can be used to define the local pseudopotentials for all the MM
 atoms in the geometry block defined above
 ```
-`NWPW `  
-` QMMM `  
-`   mm_psp O^ -0.8476 4 0.70 `  
-`   mm_psp H^ 0.4238 4 0.40 `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   mm_psp O^ -0.8476 4 0.70   
+   mm_psp H^ 0.4238 4 0.40   
+ END  
+END
 ```
 Next the Lenard-Jones potentials for the QM and MM atoms need to be
 defined. This is done as as follows
 ```
-`NWPW `  
-` QMMM `  
-`   lj_ion_parameters C 3.41000000d0 0.10d0 `  
-`   lj_ion_parameters Cl 3.45000000d0 0.16d0 `  
-`   lj_ion_parameters O^ 3.16555789d0 0.15539425d0 `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   lj_ion_parameters C 3.41000000d0 0.10d0   
+   lj_ion_parameters Cl 3.45000000d0 0.16d0   
+   lj_ion_parameters O^ 3.16555789d0 0.15539425d0   
+ END  
+END
 ```
 Note that the Lenard-Jones potential is not defined for the MM H atoms
 in this example. The final step is to define the MM fragments in the
@@ -2587,54 +2587,54 @@ defined. The following input defines the fragments for the two water
 molecules in the above
 geometry,
 ```
-`NWPW `  
-` QMMM `  
-`   fragment spc `  
-`     size 3                  #size of fragment `  
-`     index_start 6:9:3       #atom index list that defines the start of `  
-`                             # the fragments (start:final:stride)`  
-`     bond_spring 1 2 0.467307856 1.889726878   #bond i j Kspring r0 `  
-`     bond_spring 1 3 0.467307856 1.889726878   #bond i j Kspring r0 `  
-`     angle_spring 2 1 3 0.07293966 1.910611932 #angle i j k Kspring theta0 `  
-`   end `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   fragment spc   
+     size 3                  #size of fragment   
+     index_start 6:9:3       #atom index list that defines the start of   
+                             # the fragments (start:final:stride)  
+     bond_spring 1 2 0.467307856 1.889726878   #bond i j Kspring r0   
+     bond_spring 1 3 0.467307856 1.889726878   #bond i j Kspring r0   
+     angle_spring 2 1 3 0.07293966 1.910611932 #angle i j k Kspring theta0   
+   end   
+ END  
+END
 ```
 The fragments can be defined using shake constraints
 as
 ```
-`NWPW `  
-` QMMM `  
-`   fragment spc `  
-`     size 3                  #size of fragment `  
-`     index_start 6:9:3       #atom index list that defines the start of `  
-`                             # the fragments (start:final:stride)`  
-`     shake units angstroms 1 2 3 cyclic 1.0 1.632993125 1.0 `  
-`   end `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   fragment spc   
+     size 3                  #size of fragment   
+     index_start 6:9:3       #atom index list that defines the start of   
+                             # the fragments (start:final:stride)  
+     shake units angstroms 1 2 3 cyclic 1.0 1.632993125 1.0   
+   end   
+ END  
+END
 ```
 Alternatively, each water could be defined independently as
 follows.
 ```
-`NWPW `  
-` QMMM `  
-`   fragment spc1 `  
-`     size 3                  #size of fragment `  
-`     index_start 6           #atom index list that defines the start of `  
-`                             #the fragments `  
-`     bond_spring 1 2 0.467307856 1.889726878 #bond i j Kspring r0 `  
-`     bond_spring 1 3 0.467307856 1.889726878 #bond i j Kspring r0 `  
-`     angle_spring 2 1 3 0.07293966 1.910611932 #angle i j k Kspring theta0 `  
-`   end `  
-`   fragment spc2 `  
-`     size 3                  #size of fragment `  
-`     index_start 9           #atom index list that defines the start of `  
-`                             #the fragments `  
-`     shake units angstroms 1 2 3 cyclic 1.0 1.632993125 1.0 `  
-`   end `  
-` END`  
-`END`
+NWPW   
+ QMMM   
+   fragment spc1   
+     size 3                  #size of fragment   
+     index_start 6           #atom index list that defines the start of   
+                             #the fragments   
+     bond_spring 1 2 0.467307856 1.889726878 #bond i j Kspring r0   
+     bond_spring 1 3 0.467307856 1.889726878 #bond i j Kspring r0   
+     angle_spring 2 1 3 0.07293966 1.910611932 #angle i j k Kspring theta0   
+   end   
+   fragment spc2   
+     size 3                  #size of fragment   
+     index_start 9           #atom index list that defines the start of   
+                             #the fragments   
+     shake units angstroms 1 2 3 cyclic 1.0 1.632993125 1.0   
+   end   
+ END  
+END
 ```
 ## PSP\_GENERATOR
 
@@ -2650,13 +2650,13 @@ pseudopotentials using this module.
 Input to the PSP\_GENERATOR task is contained within the PSP\_GENERATOR
 sub-block.
 ```
-`NWPW `  
-`... `  
-` PSP_GENERATOR `  
-`   ... `  
-` END `  
-`...`  
-`END`
+NWPW   
+...   
+ PSP_GENERATOR   
+   ...   
+ END   
+...  
+END
 ```
 To run a PSP\_GENERATOR calculation the following directive is used:
 
@@ -2665,26 +2665,26 @@ To run a PSP\_GENERATOR calculation the following directive is used:
 Listed below is the format of a PSP\_GENERATOR
 sub-block.
 ```
-`NWPW`  
-`... `  
-` PSP_GENERATOR `  
-`   PSEUDOPOTENTIAL_FILENAME: `<string psp_name>` `  
-`   ELEMENT: `<string element>` `  
-`   CHARGE: `<real charge>` `  
-`   MASS_NUMBER: `<real mass_number>` `  
-`   ATOMIC_FILLING: `<integer ncore nvalence>` ( (1||2||...) (s||p||d||f||...) `<real filling>`  ...)`
+NWPW  
+...   
+ PSP_GENERATOR   
+   PSEUDOPOTENTIAL_FILENAME: <string psp_name>   
+   ELEMENT: <string element>   
+   CHARGE: <real charge>   
+   MASS_NUMBER: <real mass_number>   
+   ATOMIC_FILLING: <integer ncore nvalence> ( (1||2||...) (s||p||d||f||...) <real filling>  ...)
 
-`   [CUTOFF: `<integer lmax>` ( (s||p||d||f||g) `<real rcut>` ...) ] `
+   [CUTOFF: <integer lmax> ( (s||p||d||f||g) <real rcut> ...) ] 
 
-`   PSEUDOPOTENTIAL_TYPE: (TROULLIER-MARTINS || HAMANN default HAMANN) `  
-`   SOLVER_TYPE: (PAULI || SCHRODINGER default PAULI) `  
-`   EXCHANGE_TYPE: (dirac || PBE96 default DIRAC) `  
-`   CORRELATION_TYPE: (VOSKO || PBE96 default VOSKO) `  
-`   [SEMICORE_RADIUS: `<real rcore>`]`
+   PSEUDOPOTENTIAL_TYPE: (TROULLIER-MARTINS || HAMANN default HAMANN)   
+   SOLVER_TYPE: (PAULI || SCHRODINGER default PAULI)   
+   EXCHANGE_TYPE: (dirac || PBE96 default DIRAC)   
+   CORRELATION_TYPE: (VOSKO || PBE96 default VOSKO)   
+   [SEMICORE_RADIUS: <real rcore>]
 
-` END`  
-`... `  
-`END`
+ END  
+...   
+END
 ```
 The following list describes the input for the PSP\_GENERATOR sub-block.
 
@@ -2713,18 +2713,18 @@ state.
 For example to define a pseudopotential for the Neon atom in the
 <img alt="$1s^2 2s^2 2p^6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a25c18197ba3b73e419b77b39111c7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="69.43563pt" height="26.70657pt"/> state could have the block
 ```
-`ATOMIC_FILLING: 1 2 `  
-` 1 s 2.0 #core state - 1s^2 `  
-` 2 s 2.0 #valence state - 2s^2 `  
-` 2 p 6.0 #valence state - 2p^6`
+ATOMIC_FILLING: 1 2   
+ 1 s 2.0 #core state - 1s^2   
+ 2 s 2.0 #valence state - 2s^2   
+ 2 p 6.0 #valence state - 2p^6
 ```
 for a pseudopotential with a <img alt="$2s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/> and <img alt="$2p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/> valence electrons or the
 block
 ```
-`ATOMIC_FILLING: 3 0 `  
-` 1 s 2.0 #core state `  
-` 2 s 2.0 #core state `  
-` 2 p 6.0 #core state`
+ATOMIC_FILLING: 3 0   
+ 1 s 2.0 #core state   
+ 2 s 2.0 #core state   
+ 2 p 6.0 #core state
 ```
 could be used for a pseudopotential with no valence electrons.
 
@@ -2743,26 +2743,26 @@ the cutoff radii used in Troullier-Martins pseudopotentials.
 For example to define a softened Hamann pseudopotential for Carbon would
 be
 ```
-`ATOMIC_FILLING: 1 2 `  
-` 1 s 2.0 `  
-` 2 s 2.0 `  
-` 2 p 2.0`  
-`CUTOFF: 2`  
-` s 0.8 `  
-` p 0.85 `  
-` d 0.85`
+ATOMIC_FILLING: 1 2   
+ 1 s 2.0   
+ 2 s 2.0   
+ 2 p 2.0  
+CUTOFF: 2  
+ s 0.8   
+ p 0.85   
+ d 0.85
 ```
 while a similarly softened Troullier-Marting pseudopotential for Carbon
 would be
 ```
-`ATOMIC_FILLING: 1 2 `  
-` 1 s 2.0 `  
-` 2 s 2.0 `  
-` 2 p 2.0`  
-`CUTOFF: 2 `  
-` s 1.200 `  
-` p 1.275 `  
-` d 1.275`
+ATOMIC_FILLING: 1 2   
+ 1 s 2.0   
+ 2 s 2.0   
+ 2 p 2.0  
+CUTOFF: 2   
+ s 1.200   
+ p 1.275   
+ d 1.275
 ```
 ### SEMICORE\_RADIUS
 
@@ -2791,9 +2791,9 @@ is recommended that this module only be used for testing purposes.*
 
 All input to the PAW Tasks is contained within the compound NWPW block,
 ```
-`NWPW `  
-` ...`  
-`END`
+NWPW   
+ ...  
+END
 ```
 To perform an actual calculation a TASK PAW directive is used
 ([Task](#TASK)).
@@ -2802,12 +2802,12 @@ To perform an actual calculation a TASK PAW directive is used
 
 In addition to the directives listed in [Task](#TASK), i.e.
 ```
-`TASK paw energy `  
-`TASK paw gradient `  
-`TASK paw optimize `  
-`TASK paw saddle `  
-`TASK paw freqencies `  
-`TASK paw vib`
+TASK paw energy   
+TASK paw gradient   
+TASK paw optimize   
+TASK paw saddle   
+TASK paw freqencies   
+TASK paw vib
 ```
 there are additional directives that are specific to the PSPW module,
 which are:
@@ -2820,32 +2820,32 @@ sub-directives which allow for customized application; those currently
 provided as options for the PAW module
 are:
 ```
-`NWPW `  
-` CELL_NAME <string cell_name default 'cell_default'> `  
-` [GEOMETRY_OPTIMIZE] `  
-` INPUT_WAVEFUNCTION_FILENAME `<string input_wavefunctions default input_movecs>` `  
-` OUTPUT_WAVEFUNCTION_FILENAME `<string output_wavefunctions default input_movecs>` `  
-` FAKE_MASS <real fake_mass default 400000.0> `  
-` TIME_STEP <real time_step default 5.8> `  
-` LOOP <integer inner_iteration outer_iteration default 10 100> `  
-` TOLERANCES <real tole tolc default 1.0e-7 1.0e-7> `  
-` CUTOFF `<real cutoff>` `  
-` ENERGY_CUTOFF <real ecut default (see input description)> `  
-` WAVEFUNCTION_CUTOFF <real wcut default (see input description)> `  
-` EWALD_NCUT <integer ncut default 1>] `  
-` EWALD_RCUT <real rcut default (see input description)> `  
-` XC (Vosko || PBE96 || revPBE default Vosko) `  
-` DFT||ODFT||RESTRICTED||UNRESTRICTED `  
-` MULT <integer mult default 1> `  
-` INTEGRATE_MULT_L <integer imult default 1>`  
-` SIMULATION_CELL `  
-`   ... (see input description) `  
-` END `  
-` CAR-PARRINELLO `  
-`   ... (see input description) `  
-` END`  
-` MAPPING <integer mapping default 1>`  
-`END `
+NWPW   
+ CELL_NAME <string cell_name default 'cell_default'>   
+ [GEOMETRY_OPTIMIZE]   
+ INPUT_WAVEFUNCTION_FILENAME <string input_wavefunctions default input_movecs>   
+ OUTPUT_WAVEFUNCTION_FILENAME <string output_wavefunctions default input_movecs>   
+ FAKE_MASS <real fake_mass default 400000.0>   
+ TIME_STEP <real time_step default 5.8>   
+ LOOP <integer inner_iteration outer_iteration default 10 100>   
+ TOLERANCES <real tole tolc default 1.0e-7 1.0e-7>   
+ CUTOFF <real cutoff>   
+ ENERGY_CUTOFF <real ecut default (see input description)>   
+ WAVEFUNCTION_CUTOFF <real wcut default (see input description)>   
+ EWALD_NCUT <integer ncut default 1>]   
+ EWALD_RCUT <real rcut default (see input description)>   
+ XC (Vosko || PBE96 || revPBE default Vosko)   
+ DFT||ODFT||RESTRICTED||UNRESTRICTED   
+ MULT <integer mult default 1>   
+ INTEGRATE_MULT_L <integer imult default 1>  
+ SIMULATION_CELL   
+   ... (see input description)   
+ END   
+ CAR-PARRINELLO   
+   ... (see input description)   
+ END  
+ MAPPING <integer mapping default 1>  
+END 
 ```
 The following list describes these keywords.
 
@@ -2905,25 +2905,25 @@ available in the directory $NWCHEM\_TOP/src/nwpw/libraryp/pspw\_default
 The elements listed in the following table are
 present:
 ```
-` H                                                  He`  
-`-------                              ------------------`  
-` Li Be                               B  C  N  O  F  Ne`  
-`-------                             -------------------`  
-` Na Mg                               Al Si P  S  Cl Ar`  
-`-------------------------------------------------------`  
-` K  Ca Sc Ti V  Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr         `  
-`-------------------------------------------------------`  
-` Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I  Xe`  
-`-------------------------------------------------------`  
-` Cs Ba La Hf Ta W  Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn`  
-`-------------------------------------------------------`  
-` Fr Ra . `  
-`-----------------`  
-`         ------------------------------------------`  
-`          .  .  .  .  .  .  Gd .  .  .  .  .  .  .                      `  
-`         ------------------------------------------`  
-`          .  .  U  .  Pu .  .  .  .  .  .  .  .  .      `  
-`         ------------------------------------------`
+ H                                                  He  
+-------                              ------------------  
+ Li Be                               B  C  N  O  F  Ne  
+-------                             -------------------  
+ Na Mg                               Al Si P  S  Cl Ar  
+-------------------------------------------------------  
+ K  Ca Sc Ti V  Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr           
+-------------------------------------------------------  
+ Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I  Xe  
+-------------------------------------------------------  
+ Cs Ba La Hf Ta W  Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn  
+-------------------------------------------------------  
+ Fr Ra .   
+-----------------  
+         ------------------------------------------  
+          .  .  .  .  .  .  Gd .  .  .  .  .  .  .                        
+         ------------------------------------------  
+          .  .  U  .  Pu .  .  .  .  .  .  .  .  .        
+         ------------------------------------------
 ```
 The pseudopotential libraries are continually being tested and added.
 Also, the PSPW program can read in pseudopotentials in CPI and TETER
@@ -2935,25 +2935,25 @@ Similarly, a library of PAW basis used by PAW is currently available in
 the directory
 $NWCHEM\_TOP/src/nwpw/libraryp/paw\_default
 ```
-` H                                                  He`  
-`-------                              -----------------`  
-` Li Be                               B  C  N  O  F  Ne`  
-`-------                             ------------------`  
-` Na Mg                               Al Si P  S  Cl Ar`  
-`------------------------------------------------------`  
-` K  Ca Sc Ti V  Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr         `  
-`------------------------------------------------------`  
-` .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .`  
-`------------------------------------------------------`  
-` .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .`  
-`------------------------------------------------------`  
-` .  .  . `  
-`-----------------         `  
-`         ------------------------------------------`  
-`          .  .  .  .  .  .  .  .  .  .  .  .  .  .                      `  
-`         ------------------------------------------`  
-`          .  .  .  .  .  .  .  .  .  .  .  .  .  .      `  
-`         ------------------------------------------`
+ H                                                  He  
+-------                              -----------------  
+ Li Be                               B  C  N  O  F  Ne  
+-------                             ------------------  
+ Na Mg                               Al Si P  S  Cl Ar  
+------------------------------------------------------  
+ K  Ca Sc Ti V  Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr           
+------------------------------------------------------  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+------------------------------------------------------  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+------------------------------------------------------  
+ .  .  .   
+-----------------           
+         ------------------------------------------  
+          .  .  .  .  .  .  .  .  .  .  .  .  .  .                        
+         ------------------------------------------  
+          .  .  .  .  .  .  .  .  .  .  .  .  .  .        
+         ------------------------------------------
 ```
 Currently there are not very many elements available for PAW. However,
 the user can request additional basis sets from Eric J. Bylaska at
@@ -2965,14 +2965,14 @@ access the pseudopotentials the pseudopotentials input block is used.
 For example, to redirect the code to use HGH pseudopotentials for carbon
 and hydrogen, the following input would be used.
 ```
-`nwpw `  
-`... `  
-` pseudopotentials `  
-`  C library HGH_LDA `  
-`  H library HGH_LDA `  
-` end `  
-`...`  
-`end`
+nwpw   
+...   
+ pseudopotentials   
+  C library HGH_LDA   
+  H library HGH_LDA   
+ end   
+...  
+end
 ```
 The implementation of HGH pseudopotentials is rather limited in this
 release. HGH pseudopotentials cannot be used to optimize unit cells, and
@@ -2981,14 +2981,14 @@ implemented into the BAND structure code.
 To read in pseudopotentials in CPI format the following input would be
 used.
 ```
-`nwpw `  
-`... `  
-` pseudopotentials `  
-`  C CPI c.cpi `  
-`  H CPI h.cpi `  
-` end `  
-`...`  
-`end`
+nwpw   
+...   
+ pseudopotentials   
+  C CPI c.cpi   
+  H CPI h.cpi   
+ end   
+...  
+end
 ```
 In order for the program to recognize the CPI format the CPI files, e.g.
 c.cpi have to be prepended with the "<CPI>" keyword.
@@ -2996,14 +2996,14 @@ c.cpi have to be prepended with the "<CPI>" keyword.
 To read in pseudopotentials in TETER format the following input would be
 used.
 ```
-`nwpw `  
-`... `  
-` pseudopotentials `  
-`  C TETER c.teter `  
-`  H TETER h.teter `  
-` end `  
-`...`  
-`end`
+nwpw   
+...   
+ pseudopotentials   
+  C TETER c.teter   
+  H TETER h.teter   
+ end   
+...  
+end
 ```
 In order for the program to recognize the TETER format the TETER files,
 e.g. c.teter have to be prepended with the "<TETER>" keyword.
@@ -3065,35 +3065,35 @@ generated.
 
 The data stored in the one-dimensional pseudopotential file is
 ```
-`character*2 element :: element name `  
-`integer charge :: valence charge of ion `  
-`real mass :: mass of ion `  
-`integer lmax :: maximum angular component `  
-`real rcut(lmax) :: cutoff radii used to define pseudopotentials `  
-`integer nr :: number of points in the radial grid `  
-`real dr :: linear spacing of the radial grid  `  
-`real r(nr):: one-dimensional radial grid `  
-`real Vpsp(nr,lmax) :: one-dimensional pseudopotentials `  
-`real psi(nr,lmax) :: one-dimensional pseudowavefunctions `  
-`real r_semicore :: semicore radius `  
-`real rho_semicore(nr) :: semicore density`  
+character*2 element :: element name   
+integer charge :: valence charge of ion   
+real mass :: mass of ion   
+integer lmax :: maximum angular component   
+real rcut(lmax) :: cutoff radii used to define pseudopotentials   
+integer nr :: number of points in the radial grid   
+real dr :: linear spacing of the radial grid    
+real r(nr):: one-dimensional radial grid   
+real Vpsp(nr,lmax) :: one-dimensional pseudopotentials   
+real psi(nr,lmax) :: one-dimensional pseudowavefunctions   
+real r_semicore :: semicore radius   
+real rho_semicore(nr) :: semicore density  
 ```
 and the format of it is:
 ```
-`[line 1: ] element [line 2: ] charge mass lmax`  
-`[line 3: ] (rcut(l), l=1,lmax)`  
-`[line 4: ] nr dr`  
-`[line 5: ] r(1) (Vpsp(1,l), l=1,lmax)`  
-`[line 6: ] ....`  
-`[line nr+4: ] r(nr) (Vpsp(nr,l), l=1,lmax)`  
-`[line nr+5: ] r(1) (psi(1,l), l=1,lmax) [line nr+6: ] ....`  
-`[line 2*nr+4:] r(nr) (psi(nr,l), l=1,lmax)`  
-`[line 2*nr+5:] r_semicore`  
-`if (r_semicore read) then`  
-` [line 2*nr+6:] r(1) rho_semicore(1)`  
-` [line 2*nr+7:] ....`  
-` [line 3*nr+5:] r(nr) rho_semicore(nr)`  
-`end if`
+[line 1: ] element [line 2: ] charge mass lmax  
+[line 3: ] (rcut(l), l=1,lmax)  
+[line 4: ] nr dr  
+[line 5: ] r(1) (Vpsp(1,l), l=1,lmax)  
+[line 6: ] ....  
+[line nr+4: ] r(nr) (Vpsp(nr,l), l=1,lmax)  
+[line nr+5: ] r(1) (psi(1,l), l=1,lmax) [line nr+6: ] ....  
+[line 2*nr+4:] r(nr) (psi(nr,l), l=1,lmax)  
+[line 2*nr+5:] r_semicore  
+if (r_semicore read) then  
+ [line 2*nr+6:] r(1) rho_semicore(1)  
+ [line 2*nr+7:] ....  
+ [line 3*nr+5:] r(nr) rho_semicore(nr)  
+end if
 ```
 ## Car-Parrinello Scheme for Ab Initio Molecular Dynamics
 
@@ -3107,12 +3107,12 @@ heart of this method they introduced a fictitious kinetic energy
 functional for the Kohn-Sham
 orbitals.
 
-<img alt="$\begin{align}KE \left ( \left \{ \psi_{i,\sigma}(\vec{r}) \right \} \right ) &amp;amp;=&amp;amp; \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/804dff8a7e91191f883aba3d46f1fe7c.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+![$\begin{align}KE \left ( \left \{ \psi_{i,\sigma}(\vec{r}) \right \} \right ) = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2\end{align}$"](svgs/804dff8a7e91191f883aba3d46f1fe7c.svg)
 
 Given this kinetic energy the constrained equations of motion are found
 by taking the first variation of the auxiliary Lagrangian.
 
-<img alt="$\begin{align}&amp;#10;L &amp;amp; = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2&amp;#10;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2&amp;#10;- E \left [ \left \{ \psi_{i,\sigma}(\vec{r}) \right \} , \left \{ \vec{R}_I \right \} \right ] \\&amp;#10;&amp;amp; + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )&amp;#10;\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bace631069baebda741a776e136b0e1a.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+![$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \left \{ \psi_{i,\sigma}(\vec{r}) \right \} , \left \{ \vec{R}_I \right \} \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$](svgs/bace631069baebda741a776e136b0e1a.svg)
 
 Which generates a dynamics for the wavefunctions
 <img alt="$\psi_{i,\sigma}(\vec{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/730a1523e8e8ba1c187f863f8d4f37c5.svg?invert_in_darkmode&sanitize=true" align=middle width="48.685725pt" height="24.56553pt"/> and atoms positions <img alt="$\vec{R}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/57ac99f1caf72f8bb91bbfe4da0441aa.svg?invert_in_darkmode&sanitize=true" align=middle width="19.1301pt" height="31.71135pt"/> through
@@ -3222,71 +3222,71 @@ schedule,
 where <img alt="$T_e^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02f92fea930bab9b0cb5b411829b7bf4.svg?invert_in_darkmode&sanitize=true" align=middle width="18.381495pt" height="26.70657pt"/> and <img alt="$T_{ionic}^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2d76ae8eb00a93d64de686b4f03b596d.svg?invert_in_darkmode&sanitize=true" align=middle width="39.2502pt" height="26.70657pt"/> are the initial temperatures, and
 <img alt="$\tau_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e34a134b05ac6daa10ed56dc39d42035.svg?invert_in_darkmode&sanitize=true" align=middle width="13.37292pt" height="14.10255pt"/> and <img alt="$\tau_{ionic}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a8fa93ce0ad82bb2691c5d3740bcf14a.svg?invert_in_darkmode&sanitize=true" align=middle width="36.839055pt" height="14.10255pt"/> are the cooling rates in atomic units.
 
-## NWPW Tutorial 1: S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer examples with PSPW
+## NWPW Tutorial 1: S<sub>2</sub> dimer examples with PSPW
 
 A description of all the examples in NWPW Tutorial 1 can be found in the
 attached pdf [nwpwexample1.pdf](nwpwexample1.pdf)
 
-### Total energy of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
+### Total energy of S<sub>2</sub> dimer with LDA approximation
 
 (input:[Media:s2-example1.nw](s2-example1.nw),
 output:[Media:s2-example1.nwout](s2-example1.nwout))
 
-In this example, the total energy of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using LDA
+In this example, the total energy of the S<sub>2</sub> dimer using LDA
 approximation for the exchange-correlation functional is calculated.
 ```
-` echo`  
-` title "total energy of s2-dimer LDA/30Ry with PSPW method"`  
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` start s2-pspw-energy`  
-` geometry`  
-` S 0.0 0.0 0.0`  
-` S 0.0 0.0 1.88`  
-` end`  
-` nwpw`  
-`   simulation_cell`  
-`     SC 20.0`  
-`   end`  
-`   cutoff 15.0`  
-`   mult 3`  
-`   xc lda`  
-`   lmbfgs`  
-` end`  
-` task pspw energy`
+ echo  
+ title "total energy of s2-dimer LDA/30Ry with PSPW method"  
+ scratch_dir   ./scratch  
+ permanent_dir ./perm  
+ start s2-pspw-energy  
+ geometry  
+ S 0.0 0.0 0.0  
+ S 0.0 0.0 1.88  
+ end  
+ nwpw  
+   simulation_cell  
+     SC 20.0  
+   end  
+   cutoff 15.0  
+   mult 3  
+   xc lda  
+   lmbfgs  
+ end  
+ task pspw energy
 ```
 The energies from the simulation will
 be
 ```
-` ...`  
-` ==  Summary Of Results  ==`  
+ ...  
+ ==  Summary Of Results  ==  
   
-`  number of electrons: spin up=    7.00000  down=    5.00000 (real space)`  
-` `  
-`  total     energy    :  -0.2041363137E+02 (   -0.10207E+02/ion)`  
-`  total orbital energy:  -0.4944372503E+01 (   -0.41203E+00/electron)`  
-`  hartree   energy    :   0.1680529987E+02 (    0.14004E+01/electron)`  
-`  exc-corr  energy    :  -0.4320620600E+01 (   -0.36005E+00/electron)`  
-`  ion-ion   energy    :   0.8455644190E-02 (    0.42278E-02/ion)`  
-` `  
-`  kinetic (planewave) :   0.7529965882E+01 (    0.62750E+00/electron)`  
-`  V_local (planewave) :  -0.4506036741E+02 (   -0.37550E+01/electron)`  
-`  V_nl    (planewave) :   0.4623635248E+01 (    0.38530E+00/electron)`  
-`  V_Coul  (planewave) :   0.3361059973E+02 (    0.28009E+01/electron)`  
-`  V_xc.   (planewave) :  -0.5648205953E+01 (   -0.47068E+00/electron)`  
-`  Virial Coefficient  :  -0.1656626150E+01`  
-` `  
-`  orbital energies:`  
-`     -0.2001309E+00 (  -5.446eV)`  
-`     -0.2001309E+00 (  -5.446eV)`  
-`     -0.3294434E+00 (  -8.965eV)    -0.2991148E+00 (  -8.139eV)`  
-`     -0.3294435E+00 (  -8.965eV)    -0.2991151E+00 (  -8.139eV)`  
-`     -0.3582269E+00 (  -9.748eV)    -0.3352434E+00 (  -9.123eV)`  
-`     -0.5632339E+00 ( -15.326eV)    -0.5246249E+00 ( -14.276eV)`  
-`     -0.7642738E+00 ( -20.797eV)    -0.7413909E+00 ( -20.174eV)`  
-` `  
-`  Total PSPW energy   :  -0.2041363137E+02`  
-` ...`
+  number of electrons: spin up=    7.00000  down=    5.00000 (real space)  
+   
+  total     energy    :  -0.2041363137E+02 (   -0.10207E+02/ion)  
+  total orbital energy:  -0.4944372503E+01 (   -0.41203E+00/electron)  
+  hartree   energy    :   0.1680529987E+02 (    0.14004E+01/electron)  
+  exc-corr  energy    :  -0.4320620600E+01 (   -0.36005E+00/electron)  
+  ion-ion   energy    :   0.8455644190E-02 (    0.42278E-02/ion)  
+   
+  kinetic (planewave) :   0.7529965882E+01 (    0.62750E+00/electron)  
+  V_local (planewave) :  -0.4506036741E+02 (   -0.37550E+01/electron)  
+  V_nl    (planewave) :   0.4623635248E+01 (    0.38530E+00/electron)  
+  V_Coul  (planewave) :   0.3361059973E+02 (    0.28009E+01/electron)  
+  V_xc.   (planewave) :  -0.5648205953E+01 (   -0.47068E+00/electron)  
+  Virial Coefficient  :  -0.1656626150E+01  
+   
+  orbital energies:  
+     -0.2001309E+00 (  -5.446eV)  
+     -0.2001309E+00 (  -5.446eV)  
+     -0.3294434E+00 (  -8.965eV)    -0.2991148E+00 (  -8.139eV)  
+     -0.3294435E+00 (  -8.965eV)    -0.2991151E+00 (  -8.139eV)  
+     -0.3582269E+00 (  -9.748eV)    -0.3352434E+00 (  -9.123eV)  
+     -0.5632339E+00 ( -15.326eV)    -0.5246249E+00 ( -14.276eV)  
+     -0.7642738E+00 ( -20.797eV)    -0.7413909E+00 ( -20.174eV)  
+   
+  Total PSPW energy   :  -0.2041363137E+02  
+ ...
 ```
 ### Structural optimization of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
@@ -3298,16 +3298,16 @@ generated from prior energy calculation is calculated. Since most of the
 parameters are already stored in the run-time database the input is very
 simple.
 ```
-` echo`  
-` title "optimization of s2-dimer LDA/30Ry with PSPW method"`  
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` restart s2-pspw-energy`  
-` driver`  
-`    maxiter 20`  
-`    xyz s2`  
-` end`  
-` task pspw optimize`
+ echo  
+ title "optimization of s2-dimer LDA/30Ry with PSPW method"  
+ scratch_dir   ./scratch  
+ permanent_dir ./perm  
+ restart s2-pspw-energy  
+ driver  
+    maxiter 20  
+    xyz s2  
+ end  
+ task pspw optimize
 ```
 As the optimization process consists of series of total energy
 evaluations the contents of the output file are very much similar to
@@ -3315,61 +3315,61 @@ that in Example I. At each step the total energy and force information
 will be outputed as
 follows
 ```
-`   Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`   ---- ---------------- -------- -------- -------- -------- -------- --------`  
-` @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8`
+   Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+   ---- ---------------- -------- -------- -------- -------- -------- --------  
+ @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8
 ```
 The best way to keep track of the optimization calculation is to run the
 following grep command on the output
 file.
 ```
-` grep @ outputfile`  
+ grep @ outputfile  
   
-` @ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-` @ ---- ---------------- -------- -------- -------- -------- -------- --------`  
-` @    0     -20.41357202  0.0D+00  0.00672  0.00672  0.00000  0.00000      1.5`  
-` @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8`  
-` @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7`  
-` @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7`
+ @ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+ @ ---- ---------------- -------- -------- -------- -------- -------- --------  
+ @    0     -20.41357202  0.0D+00  0.00672  0.00672  0.00000  0.00000      1.5  
+ @    1     -20.41364254 -7.1D-05  0.00004  0.00004  0.00605  0.01048      7.8  
+ @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7  
+ @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7
 ```
 The optimized energy and geometry will
 be
 ```
-` ...`  
-`       ----------------------`  
-`       Optimization converged`  
-`       ----------------------`  
-` `  
-` `  
-`   Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`   ---- ---------------- -------- -------- -------- -------- -------- --------`  
-` @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7`  
-`                                      ok       ok       ok       ok        `  
-` `  
-` `  
-` `  
-`                                 Z-matrix (autoz)`  
-`                                 -------- `  
-` `  
-`  Units are Angstrom for bonds and degrees for angles`  
-`  `  
-`       Type          Name      I     J     K     L     M      Value     Gradient`  
-`       ----------- --------  ----- ----- ----- ----- ----- ---------- ----------`  
-`     1 Stretch                  1     2                       1.89115    0.00020`  
-` `  
-` `  
-` `  
-`                          Geometry "geometry" -> "geometry"`  
-`                          ---------------------------------`  
-` `  
-`  Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)`  
-` `  
-`   No.       Tag          Charge          X              Y              Z`  
-`  ---- ---------------- ---------- -------------- -------------- --------------`  
-`     1 S                   16.0000     0.00000000     0.00000000    -0.94557591`  
-`     2 S                   16.0000     0.00000000     0.00000000     0.94557591`  
-` `  
-` ...`
+ ...  
+       ----------------------  
+       Optimization converged  
+       ----------------------  
+   
+   
+   Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+   ---- ---------------- -------- -------- -------- -------- -------- --------  
+ @    2     -20.41364256 -2.3D-08  0.00020  0.00020  0.00003  0.00005      9.7  
+                                      ok       ok       ok       ok          
+   
+   
+   
+                                 Z-matrix (autoz)  
+                                 --------   
+   
+  Units are Angstrom for bonds and degrees for angles  
+    
+       Type          Name      I     J     K     L     M      Value     Gradient  
+       ----------- --------  ----- ----- ----- ----- ----- ---------- ----------  
+     1 Stretch                  1     2                       1.89115    0.00020  
+   
+   
+   
+                          Geometry "geometry" -> "geometry"  
+                          ---------------------------------  
+   
+  Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+   
+   No.       Tag          Charge          X              Y              Z  
+  ---- ---------------- ---------- -------------- -------------- --------------  
+     1 S                   16.0000     0.00000000     0.00000000    -0.94557591  
+     2 S                   16.0000     0.00000000     0.00000000     0.94557591  
+   
+ ...
 ```
 ### Frequency calculation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
@@ -3381,52 +3381,52 @@ results generated from prior geometry optimization is calculated. Since
 most of the parameters are already stored in the run-time database the
 input is very simple.
 ```
-` echo`  
-` title "frequency calculation of s2-dimer LDA/30Ry with PSPW method"`  
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` restart s2-pspw-energy`  
-` freq`  
-`    animate`  
-` end`  
-` task pspw freq`
-
+ echo  
+ title "frequency calculation of s2-dimer LDA/30Ry with PSPW method"  
+ scratch_dir   ./scratch  
+ permanent_dir ./perm  
+ restart s2-pspw-energy  
+ freq  
+    animate  
+ end  
+ task pspw freq
+```
 The frequency and thermodynamic analysis
 generated
-
-` ...`  
-`  Temperature                      =   298.15K`  
-`  frequency scaling parameter      =   1.0000`  
-` `  
-` `  
-`  Linear Molecule`  
-` `  
-`  Zero-Point correction to Energy  =    1.034 kcal/mol  (  0.001647 au)`  
-`  Thermal correction to Energy     =    2.579 kcal/mol  (  0.004110 au)`  
-`  Thermal correction to Enthalpy   =    3.171 kcal/mol  (  0.005054 au)`  
-` `  
-`  Total Entropy                    =   52.277 cal/mol-K`  
-`    - Translational                =   38.368 cal/mol-K (mol. weight =  63.9441)`  
-`    - Rotational                   =   13.630 cal/mol-K (symmetry #  =        2)`  
-`    - Vibrational                  =    0.279 cal/mol-K`  
-` `  
-`  Cv (constant volume heat capacity) =    5.750 cal/mol-K`  
-`    - Translational                  =    2.979 cal/mol-K`  
-`    - Rotational                     =    1.986 cal/mol-K`  
-`    - Vibrational                    =    0.785 cal/mol-K`  
-` ...`  
-`  ----------------------------------------------------------------------------`  
-`  Normal Eigenvalue ||           Projected Infra Red Intensities`  
-`   Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]`  
-`  ------ ---------- || -------------- ----------------- ---------- -----------`  
-`     1        0.000 ||    0.000030           0.001         0.029       0.000`  
-`     2        0.000 ||    2.466908          56.914      2404.864      15.000`  
-`     3        0.000 ||    2.466908          56.914      2404.864      15.000`  
-`     4        0.000 ||    2.466908          56.914      2404.864      15.000`  
-`     5        0.000 ||    2.466908          56.914      2404.864      15.000`  
-`     6      723.419 ||    0.000000           0.000         0.000       0.000`  
-`  ----------------------------------------------------------------------------`  
-` ...`
+```
+ ...  
+  Temperature                      =   298.15K  
+  frequency scaling parameter      =   1.0000  
+   
+   
+  Linear Molecule  
+   
+  Zero-Point correction to Energy  =    1.034 kcal/mol  (  0.001647 au)  
+  Thermal correction to Energy     =    2.579 kcal/mol  (  0.004110 au)  
+  Thermal correction to Enthalpy   =    3.171 kcal/mol  (  0.005054 au)  
+   
+  Total Entropy                    =   52.277 cal/mol-K  
+    - Translational                =   38.368 cal/mol-K (mol. weight =  63.9441)  
+    - Rotational                   =   13.630 cal/mol-K (symmetry #  =        2)  
+    - Vibrational                  =    0.279 cal/mol-K  
+   
+  Cv (constant volume heat capacity) =    5.750 cal/mol-K  
+    - Translational                  =    2.979 cal/mol-K  
+    - Rotational                     =    1.986 cal/mol-K  
+    - Vibrational                    =    0.785 cal/mol-K  
+ ...  
+  ----------------------------------------------------------------------------  
+  Normal Eigenvalue ||           Projected Infra Red Intensities  
+   Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]  
+  ------ ---------- || -------------- ----------------- ---------- -----------  
+     1        0.000 ||    0.000030           0.001         0.029       0.000  
+     2        0.000 ||    2.466908          56.914      2404.864      15.000  
+     3        0.000 ||    2.466908          56.914      2404.864      15.000  
+     4        0.000 ||    2.466908          56.914      2404.864      15.000  
+     5        0.000 ||    2.466908          56.914      2404.864      15.000  
+     6      723.419 ||    0.000000           0.000         0.000       0.000  
+  ----------------------------------------------------------------------------  
+ ...
 ```
 ### Ab initio molecular dynamics simulation (Car-Parrinello) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
 
@@ -3440,32 +3440,32 @@ dimer using LDA approximation is calculated. A brief introduction to the
 Car-Parrinello method can be found in
 [cpmd-lecture.pdf](cpmd-lecture.pdf)
 ```
-` echo`  
-` title "AIMD simulation of s2-dimer"`  
-` scratch_dir   ./scratch`  
-` permanent_dir ./perm`  
-` start s2-md`  
-` geometry`  
-` S 0.0 0.0 0.0`  
-` S 0.0 0.0 1.95`  
-` end`  
-` nwpw`  
-`   simulation_cell`  
-`     SC 20.0`  
-`   end`  
-`   cutoff 15.0`  
-`   mult 3`  
-`   xc lda`  
-`   lmbfgs`  
-`   car-parrinello`  
-`     time_step 5.0`  
-`     fake_mass 600.0`  
-`     loop 1 1000`  
-`     xyz_filename s2-md.xyz`  
-`   end`  
-` end`  
-` task pspw energy`  
-` task pspw car-parrinello`
+ echo  
+ title "AIMD simulation of s2-dimer"  
+ scratch_dir   ./scratch  
+ permanent_dir ./perm  
+ start s2-md  
+ geometry  
+ S 0.0 0.0 0.0  
+ S 0.0 0.0 1.95  
+ end  
+ nwpw  
+   simulation_cell  
+     SC 20.0  
+   end  
+   cutoff 15.0  
+   mult 3  
+   xc lda  
+   lmbfgs  
+   car-parrinello  
+     time_step 5.0  
+     fake_mass 600.0  
+     loop 1 1000  
+     xyz_filename s2-md.xyz  
+   end  
+ end  
+ task pspw energy  
+ task pspw car-parrinello
 ```
 A plotting program (e.g. gnuplot, xmgrace) can be used to look at the
 total, potential, kinetic energies, contained in the s2-md.emotion file
@@ -3473,33 +3473,33 @@ total, potential, kinetic energies, contained in the s2-md.emotion file
 datafile format)
 i.e.,
 ```
-` seattle-1604% gnuplot`  
-` `  
-`       G N U P L O T`  
-`       Version 4.0 patchlevel 0`  
-`       last modified Thu Apr 15 14:44:22 CEST 2004`  
-`       System: Linux 2.6.18-194.8.1.el5`  
-` `  
-`       Copyright (C) 1986 - 1993, 1998, 2004`  
-`       Thomas Williams, Colin Kelley and many others`  
-` `  
-`       This is gnuplot version 4.0.  Please refer to the documentation`  
-`       for command syntax changes.  The old syntax will be accepted`  
-`       throughout the 4.0 series, but all save files use the new syntax.`  
-` `  
-``       Type `help` to access the on-line reference manual.``  
-`       The gnuplot FAQ is available from`  
-`               `<http://www.gnuplot.info/faq/>  
-` `  
-`       Send comments and requests for help to`  
-`               <gnuplot-info@lists.sourceforge.net>`  
-`       Send bugs, suggestions and mods to`  
-`               <gnuplot-bugs@lists.sourceforge.net>`  
-` `  
-` `  
-` Terminal type set to 'x11'`  
-` gnuplot> plot "s2-md.emotion","s2-md.emotion" using 1:3`  
-` gnuplot> `
+ seattle-1604% gnuplot  
+   
+       G N U P L O T  
+       Version 4.0 patchlevel 0  
+       last modified Thu Apr 15 14:44:22 CEST 2004  
+       System: Linux 2.6.18-194.8.1.el5  
+   
+       Copyright (C) 1986 - 1993, 1998, 2004  
+       Thomas Williams, Colin Kelley and many others  
+   
+       This is gnuplot version 4.0.  Please refer to the documentation  
+       for command syntax changes.  The old syntax will be accepted  
+       throughout the 4.0 series, but all save files use the new syntax.  
+   
+       Type help to access the on-line reference manual.  
+       The gnuplot FAQ is available from  
+               <http://www.gnuplot.info/faq/>  
+   
+       Send comments and requests for help to  
+               <gnuplot-info@lists.sourceforge.net>  
+       Send bugs, suggestions and mods to  
+               <gnuplot-bugs@lists.sourceforge.net>  
+   
+   
+ Terminal type set to 'x11'  
+ gnuplot> plot "s2-md.emotion","s2-md.emotion" using 1:3  
+ gnuplot> 
 ```
 The following plot shows the Car-Parrinello <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
 energy surface generated from the
@@ -3626,25 +3626,25 @@ end
 ```
 Output
 ```
-` ….      `  
-`     wavefnc cutoff= 10.000  fft= 42x 42x 42(     6027 waves     1004 per task)`  
-` `  
-`technical parameters:`  
-`     translation contrained`  
-`     time step=      5.00     ficticious mass=     500.0`  
-`     `**`cooling/heatting`` ``rates:`` ``0.10000E+01`` ``(psi)``
-``0.20000E+01``
-``(ion)`**  
-`     maximum iterations =    1000 (   10 inner  100 outer )`  
-`     initial kinetic energy:  0.99360E-05 (psi)   0.27956E-03 (ion)`  
-`                                                  0.20205E-28 (c.o.m.)`  
-`     `**`after`` ``scaling:`` ``0.99360E-05`` ``(psi)`` ``0.11182E-02``
-``(ion)`**  
-`     `**`increased`` ``energy:`` ``0.00000E+00`` ``(psi)``
-``0.83868E-03`` ``(ion)`**  
-` `  
-`Constant Energy Simulation         `  
-` ….`
+ ….        
+     wavefnc cutoff= 10.000  fft= 42x 42x 42(     6027 waves     1004 per task)  
+   
+technical parameters:  
+     translation contrained  
+     time step=      5.00     ficticious mass=     500.0  
+     **cooling/heatting rates: 0.10000E+01 (psi)
+0.20000E+01
+(ion)**  
+     maximum iterations =    1000 (   10 inner  100 outer )  
+     initial kinetic energy:  0.99360E-05 (psi)   0.27956E-03 (ion)  
+                                                  0.20205E-28 (c.o.m.)  
+     **after scaling: 0.99360E-05 (psi) 0.11182E-02
+(ion)**  
+     **increased energy: 0.00000E+00 (psi)
+0.83868E-03 (ion)**  
+   
+Constant Energy Simulation           
+ ….
 ```
 The program checks to see if the initial input ionic velocities have a
 non-zero center of mass velocity. If there is a non-zero center of mass
@@ -3817,37 +3817,37 @@ H = E + H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/
 Thermodynamic output from a frequency
 calculation:
 ```
-`Temperature                      =   298.15K`  
-`frequency scaling parameter      =   1.0000`  
+Temperature                      =   298.15K  
+frequency scaling parameter      =   1.0000  
   
-`Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)`  
-`Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)`
+Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)  
+Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)
 ```
 The following line contains the value for
 H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
 ```
-`Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)`
+Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)
 
-`Total Entropy                    =   44.401 cal/mol-K`  
-`  - Translational                =   34.246 cal/mol-K (mol. weight =  16.0313)`  
-`  - Rotational                   =   10.060 cal/mol-K (symmetry #  =       12)`  
-`  - Vibrational                  =    0.095 cal/mol-K`  
+Total Entropy                    =   44.401 cal/mol-K  
+  - Translational                =   34.246 cal/mol-K (mol. weight =  16.0313)  
+  - Rotational                   =   10.060 cal/mol-K (symmetry #  =       12)  
+  - Vibrational                  =    0.095 cal/mol-K  
   
-`Cv (constant volume heat capacity) =    6.503 cal/mol-K`  
-`  - Translational                  =    2.979 cal/mol-K`  
-`  - Rotational                     =    2.979 cal/mol-K`  
-`  - Vibrational                    =    0.544 cal/mol-K`
+Cv (constant volume heat capacity) =    6.503 cal/mol-K  
+  - Translational                  =    2.979 cal/mol-K  
+  - Rotational                     =    2.979 cal/mol-K  
+  - Vibrational                    =    0.544 cal/mol-K
 ```
 <center>
 
-|              |             |             |             |             |               |             |               |            |
-| ------------ | ----------- | ----------- | ----------- | ----------- | ------------- | ----------- | ------------- | ---------- |
-| Compounds    | MP2/cc-pVDZ | LDA/DZVP2   | BP91/DZVP2  | B3LYP/DZVP2 | G2            | NWPW        | NWPW          | Experiment |
-|              | (isodesmic) | (isodesmic) | (isodesmic) | (isodesmic) | (atomization) | (isodesmic) | (atomization) |            |
-| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |             |               |            |
-| CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |             |               |            |
-| CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |             |               |            |
-| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH   |             |             |             |             | \-4.76        |             |               | \-5.34     |
+|              |             |             |             |             |               |            |
+| ------------ | ----------- | ----------- | ----------- | ----------- | ------------- | ---------- |
+| Compounds    | MP2/cc-pVDZ | LDA/DZVP2   | BP91/DZVP2  | B3LYP/DZVP2 | G2            | Experiment |
+|              | (isodesmic) | (isodesmic) | (isodesmic) | (isodesmic) | (atomization) |            |
+| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
+| CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
+| CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
+| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH   |             |             |             |             | \-4.76        | \-5.34     |
 |  |
 
 Table 2: Gas-phase standard enthalpies of formation ( ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K))
@@ -3928,140 +3928,140 @@ not needed since NWPW automatically uses the unit cell defined in the
 geometry
 block.
 ```
-`title "Diamond 8 atom cubic cell - geometry and unit cell optimization"`  
-`echo`  
-` `  
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
-` `  
-`start diamond`  
-` `  
-`memory 950 mb`  
-` `  
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`  system crystal `  
-`    lat_a 3.56d0 `  
-`    lat_b 3.56d0 `  
-`    lat_c 3.56d0 `  
-`    alpha 90.0d0 `  
-`    beta  90.0d0 `  
-`    gamma 90.0d0 `  
-`  end`  
-`  C -0.50000d0 -0.50000d0 -0.50000d0`  
-`  C  0.00000d0  0.00000d0 -0.50000d0`  
-`  C  0.00000d0 -0.50000d0  0.00000d0`  
-`  C -0.50000d0  0.00000d0  0.00000d0`  
-`  C -0.25000d0 -0.25000d0 -0.25000d0`  
-`  C  0.25000d0  0.25000d0 -0.25000d0`  
-`  C  0.25000d0 -0.25000d0  0.25000d0`  
-`  C -0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-` `  
-`nwpw `  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8  #The default value of 1 needs to be increased for small cells`  
-`  lmbfgs`  
-`  xc pbe96`  
-`end`  
-` `  
-`driver `  
-`  clear `  
-`  maxiter 40`  
-`end`  
+title "Diamond 8 atom cubic cell - geometry and unit cell optimization"  
+echo  
+   
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond  
+   
+memory 950 mb  
+   
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 3.56d0   
+    lat_b 3.56d0   
+    lat_c 3.56d0   
+    alpha 90.0d0   
+    beta  90.0d0   
+    gamma 90.0d0   
+  end  
+  C -0.50000d0 -0.50000d0 -0.50000d0  
+  C  0.00000d0  0.00000d0 -0.50000d0  
+  C  0.00000d0 -0.50000d0  0.00000d0  
+  C -0.50000d0  0.00000d0  0.00000d0  
+  C -0.25000d0 -0.25000d0 -0.25000d0  
+  C  0.25000d0  0.25000d0 -0.25000d0  
+  C  0.25000d0 -0.25000d0  0.25000d0  
+  C -0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw   
+  ewald_rcut 3.0  
+  ewald_ncut 8  #The default value of 1 needs to be increased for small cells  
+  lmbfgs  
+  xc pbe96  
+end  
+   
+driver   
+  clear   
+  maxiter 40  
+end  
   
-`set nwpw:cif_filename diamond.opt  # create a CIF file containing optimization history `  
-`set includestress .true.           # this option tells driver to optimize the unit cell`  
-`task pspw optimize ignore`
+set nwpw:cif_filename diamond.opt  # create a CIF file containing optimization history   
+set includestress .true.           # this option tells driver to optimize the unit cell  
+task pspw optimize ignore
 ```
 The optimized energy and geometry will
 be
 ```
-` ...`  
-`     ----------------------`  
-`     Optimization converged`  
-`     ----------------------`  
+ ...  
+     ----------------------  
+     Optimization converged  
+     ----------------------  
   
-`  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`  ---- ---------------- -------- -------- -------- -------- -------- --------`  
-`@    6     -45.07688304 -1.1D-07  0.00037  0.00021  0.00002  0.00003    174.5`  
-`                                    ok       ok       ok       ok  `  
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+  ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    6     -45.07688304 -1.1D-07  0.00037  0.00021  0.00002  0.00003    174.5  
+                                    ok       ok       ok       ok    
   
-` `  
-` `  
-`                        Geometry "geometry" -> "geometry"`  
-`                        ---------------------------------`  
+   
+   
+                        Geometry "geometry" -> "geometry"  
+                        ---------------------------------  
   
-`Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)`  
+Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
   
-` No.       Tag          Charge          X              Y              Z`  
-`---- ---------------- ---------- -------------- -------------- --------------`  
-`   1 C                    6.0000     1.82723789     1.82729813     1.82705440`  
-`   2 C                    6.0000     0.00000857    -0.00006053     1.82730027`  
-`   3 C                    6.0000    -0.00000584     1.82706061     0.00002852`  
-`   4 C                    6.0000     1.82712018     0.00006354    -0.00002544`  
-`   5 C                    6.0000     2.74074195     2.74072805     2.74088522`  
-`   6 C                    6.0000     0.91366407     0.91370055     2.74064976`  
-`   7 C                    6.0000     0.91351181     2.74080771     0.91352917`  
-`   8 C                    6.0000     2.74078843     0.91348115     0.91365446`  
+ No.       Tag          Charge          X              Y              Z  
+---- ---------------- ---------- -------------- -------------- --------------  
+   1 C                    6.0000     1.82723789     1.82729813     1.82705440  
+   2 C                    6.0000     0.00000857    -0.00006053     1.82730027  
+   3 C                    6.0000    -0.00000584     1.82706061     0.00002852  
+   4 C                    6.0000     1.82712018     0.00006354    -0.00002544  
+   5 C                    6.0000     2.74074195     2.74072805     2.74088522  
+   6 C                    6.0000     0.91366407     0.91370055     2.74064976  
+   7 C                    6.0000     0.91351181     2.74080771     0.91352917  
+   8 C                    6.0000     2.74078843     0.91348115     0.91365446  
   
-`     Lattice Parameters `  
-`     ------------------ `  
+     Lattice Parameters   
+     ------------------   
   
-`     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)`  
+     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
   
-`     a1=<   3.654   0.000   0.000 >`  
-`     a2=<   0.000   3.654   0.000 >`  
-`     a3=<   0.000   0.000   3.654 >`  
-`     a=       3.654 b=      3.654 c=       3.654`  
-`     alpha=  90.000 beta=  90.000 gamma=  90.000`  
-`     omega=    48.8`  
+     a1=<   3.654   0.000   0.000 >  
+     a2=<   0.000   3.654   0.000 >  
+     a3=<   0.000   0.000   3.654 >  
+     a=       3.654 b=      3.654 c=       3.654  
+     alpha=  90.000 beta=  90.000 gamma=  90.000  
+     omega=    48.8  
   
-`     reciprocal lattice vectors in a.u.`  
+     reciprocal lattice vectors in a.u.  
   
-`     b1=<   0.910   0.000   0.000 >`  
-`     b2=<   0.000   0.910   0.000 >`  
-`     b3=<   0.000   0.000   0.910 >`  
+     b1=<   0.910   0.000   0.000 >  
+     b2=<   0.000   0.910   0.000 >  
+     b3=<   0.000   0.000   0.910 >  
   
-`     Atomic Mass `  
-`     ----------- `  
+     Atomic Mass   
+     -----------   
   
-`     C                 12.000000`  
+     C                 12.000000  
   
   
-`==============================================================================`  
-`                               internuclear distances`  
-`------------------------------------------------------------------------------`  
-`      center one      |      center two      | atomic units |  angstroms`  
-`------------------------------------------------------------------------------`  
-`   5 C                |   1 C                |     2.99027  |     1.58238`  
-`   6 C                |   1 C                |     2.99027  |     1.58238`  
-`   6 C                |   2 C                |     2.99027  |     1.58238`  
-`   7 C                |   1 C                |     2.99026  |     1.58238`  
-`   7 C                |   3 C                |     2.99027  |     1.58238`  
-`   8 C                |   1 C                |     2.99027  |     1.58238`  
-`   8 C                |   4 C                |     2.99027  |     1.58238`  
-`------------------------------------------------------------------------------`  
-`                        number of included internuclear distances:          7`  
-`==============================================================================`  
+==============================================================================  
+                               internuclear distances  
+------------------------------------------------------------------------------  
+      center one      |      center two      | atomic units |  angstroms  
+------------------------------------------------------------------------------  
+   5 C                |   1 C                |     2.99027  |     1.58238  
+   6 C                |   1 C                |     2.99027  |     1.58238  
+   6 C                |   2 C                |     2.99027  |     1.58238  
+   7 C                |   1 C                |     2.99026  |     1.58238  
+   7 C                |   3 C                |     2.99027  |     1.58238  
+   8 C                |   1 C                |     2.99027  |     1.58238  
+   8 C                |   4 C                |     2.99027  |     1.58238  
+------------------------------------------------------------------------------  
+                        number of included internuclear distances:          7  
+==============================================================================  
   
-`==============================================================================`  
-`                                internuclear angles`  
-`------------------------------------------------------------------------------`  
-`       center 1       |       center 2       |       center 3       |  degrees`  
-`------------------------------------------------------------------------------`  
-`   5 C                |   1 C                |   6 C                |   109.46`  
-`   5 C                |   1 C                |   7 C                |   109.48`  
-`   5 C                |   1 C                |   8 C                |   109.48`  
-`   6 C                |   1 C                |   7 C                |   109.47`  
-`   6 C                |   1 C                |   8 C                |   109.46`  
-`   7 C                |   1 C                |   8 C                |   109.48`  
-`   1 C                |   6 C                |   2 C                |   109.48`  
-`   1 C                |   7 C                |   3 C                |   109.47`  
-`   1 C                |   8 C                |   4 C                |   109.47`  
-`------------------------------------------------------------------------------`  
-`                           number of included internuclear angles:          9`  
-`==============================================================================  ...`
+==============================================================================  
+                                internuclear angles  
+------------------------------------------------------------------------------  
+       center 1       |       center 2       |       center 3       |  degrees  
+------------------------------------------------------------------------------  
+   5 C                |   1 C                |   6 C                |   109.46  
+   5 C                |   1 C                |   7 C                |   109.48  
+   5 C                |   1 C                |   8 C                |   109.48  
+   6 C                |   1 C                |   7 C                |   109.47  
+   6 C                |   1 C                |   8 C                |   109.46  
+   7 C                |   1 C                |   8 C                |   109.48  
+   1 C                |   6 C                |   2 C                |   109.48  
+   1 C                |   7 C                |   3 C                |   109.47  
+   1 C                |   8 C                |   4 C                |   109.47  
+------------------------------------------------------------------------------  
+                           number of included internuclear angles:          9  
+==============================================================================  ...
 ```
 The C-C bond distance after the geometry optimization is 1.58 Angs. and
 agrees very well with the experimental value of 1.54 Angs.. Another
@@ -4070,7 +4070,7 @@ energy.The cohesive energy of a crystal is the energy needed to separate
 the atoms of the solid into isolated atoms,
 i.e.
 
-<img alt="$\begin{align} E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  \end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/93cf8b8da88e9e3067b160ad32c5d9eb.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+![$\begin{align} E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  \end{align}$](svgs/93cf8b8da88e9e3067b160ad32c5d9eb.svg)
 
 where <img alt="$E_{solid}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0479f37244fd4da93d764e9132414dcf.svg?invert_in_darkmode&sanitize=true" align=middle width="40.39431pt" height="22.38192pt"/> is the energy of the solid and <img alt="$E_{atom}^a$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c8cd94d8d58f10c3091c4f26c69f3140.svg?invert_in_darkmode&sanitize=true" align=middle width="42.225975pt" height="22.38192pt"/> are
 the energies of the isolated atoms. In order to calculate the cohesive
@@ -4081,28 +4081,28 @@ used to the energy of an isolated carbon atom.
 (input:[file:catom-pspw.nw](catom-pspw.nw),
 output:[file:catom-pspw.nwout](catom-pspw.nwout))
 ```
-`title "triplet carbon atom at pbe96 level using a large unit cell"`  
-`start c1-pspw`  
-`memory 1400 mb`  
+title "triplet carbon atom at pbe96 level using a large unit cell"  
+start c1-pspw  
+memory 1400 mb  
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
   
-`geometry`  
-`C 0 0 0`  
-`end`  
+geometry  
+C 0 0 0  
+end  
   
-`nwpw`  
-`   simulation_cell`  
-`      FCC 38.0     #large unit cell `  
-`      boundary_conditions   periodic  # periodic boundary conditions are used by default.`  
-`      #boundary_conditions aperiodic  # free-space (or aperiodic) boundary conditions could also be used.`  
-`   end`  
-`   xc pbe96`  
-`   mult 3`  
-`  lmbfgs`  
-`end`  
-`task pspw energy`
+nwpw  
+   simulation_cell  
+      FCC 38.0     #large unit cell   
+      boundary_conditions   periodic  # periodic boundary conditions are used by default.  
+      #boundary_conditions aperiodic  # free-space (or aperiodic) boundary conditions could also be used.  
+   end  
+   xc pbe96  
+   mult 3  
+  lmbfgs  
+end  
+task pspw energy
 ```
 The total energy from the simulation will be
 
@@ -4130,79 +4130,79 @@ In this example the BAND module is used to optimize the unit cell and
 geometry for a diamond crystal at different Brillouin zone
 samplings.
 ```
-`title "Diamond 8 atom cubic cell - geometry and unit cell optimization" `  
-`echo`  
+title "Diamond 8 atom cubic cell - geometry and unit cell optimization"   
+echo  
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
-` `  
-`start diamond-band`  
-`  `  
-`memory 1950 mb`  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-band  
+    
+memory 1950 mb  
   
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`  system crystal `  
-`    lat_a 3.58d0 `  
-`    lat_b 3.58d0 `  
-`    lat_c 3.58d0 `  
-`    alpha 90.0d0 `  
-`    beta  90.0d0 `  
-`    gamma 90.0d0 `  
-`  end`  
-`  C -0.50000d0 -0.50000d0 -0.50000d0`  
-`  C  0.00000d0  0.00000d0 -0.50000d0`  
-`  C  0.00000d0 -0.50000d0  0.00000d0`  
-`  C -0.50000d0  0.00000d0  0.00000d0`  
-`  C -0.25000d0 -0.25000d0 -0.25000d0`  
-`  C  0.25000d0  0.25000d0 -0.25000d0`  
-`  C  0.25000d0 -0.25000d0  0.25000d0`  
-`  C -0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-`set includestress    .true.   # option tells driver to optimize the unit cell`  
-`set nwpw:zero_forces .true.   # option zeros the forces on the atoms--> only lattice parameters optimized`  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 3.58d0   
+    lat_b 3.58d0   
+    lat_c 3.58d0   
+    alpha 90.0d0   
+    beta  90.0d0   
+    gamma 90.0d0   
+  end  
+  C -0.50000d0 -0.50000d0 -0.50000d0  
+  C  0.00000d0  0.00000d0 -0.50000d0  
+  C  0.00000d0 -0.50000d0  0.00000d0  
+  C -0.50000d0  0.00000d0  0.00000d0  
+  C -0.25000d0 -0.25000d0 -0.25000d0  
+  C  0.25000d0  0.25000d0 -0.25000d0  
+  C  0.25000d0 -0.25000d0  0.25000d0  
+  C -0.25000d0  0.25000d0  0.25000d0  
+end  
+set includestress    .true.   # option tells driver to optimize the unit cell  
+set nwpw:zero_forces .true.   # option zeros the forces on the atoms--> only lattice parameters optimized  
   
-`nwpw `  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8    #The default value of 1 needs to be increased`  
-`  lmbfgs`  
-`  xc pbe96`  
-`end`  
+nwpw   
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+end  
   
-`#1x1x1 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 1 1 1`  
-`end`  
-`set nwpw:cif_filename diamond111.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#1x1x1 k-point mesh  
+nwpw   
+  monkhorst-pack 1 1 1  
+end  
+set nwpw:cif_filename diamond111.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#2x2x2 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 2 2 2`  
-`end`  
-`set nwpw:cif_filename diamond222.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#2x2x2 k-point mesh  
+nwpw   
+  monkhorst-pack 2 2 2  
+end  
+set nwpw:cif_filename diamond222.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#3x3x3 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 3 3 3`  
-`end`  
-`set nwpw:cif_filename diamond333.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#3x3x3 k-point mesh  
+nwpw   
+  monkhorst-pack 3 3 3  
+end  
+set nwpw:cif_filename diamond333.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#4x4x4 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 4 4 4 `  
-`end`  
-`set nwpw:cif_filename diamond444.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#4x4x4 k-point mesh  
+nwpw   
+  monkhorst-pack 4 4 4   
+end  
+set nwpw:cif_filename diamond444.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 
-`#5x5x5 k-point mesh`  
-`nwpw `  
-`  monkhorst-pack 5 5 5`  
-`end`  
-`set nwpw:cif_filename diamond555.opt`  
-`driver; clear; maxiter 40; end; task band optimize ignore`
+#5x5x5 k-point mesh  
+nwpw   
+  monkhorst-pack 5 5 5  
+end  
+set nwpw:cif_filename diamond555.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
 ```
 The following figure shows a plot of the cohesive energy and C-C bond
 distance versus the Brillouin zone sampling. As can be seen in this
@@ -4227,60 +4227,60 @@ for a diamond crystal at different Brillouin zone samplings. The
 optimized energy and geometry will be (Monkhorst-Pack sampling of
 11x11x11)
 ```
-`     ----------------------`  
-`     Optimization converged`  
-`     ----------------------`  
+     ----------------------  
+     Optimization converged  
+     ----------------------  
   
-`  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`  ---- ---------------- -------- -------- -------- -------- -------- --------`  
-`@    1     -11.40586236  5.2D-07  0.00039  0.00018  0.00002  0.00003    662.0`  
-`                                     ok       ok       ok       ok  `  
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+  ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    1     -11.40586236  5.2D-07  0.00039  0.00018  0.00002  0.00003    662.0  
+                                     ok       ok       ok       ok    
   
-` `  
-` `  
-`                         Geometry "geometry" -> "geometry"`  
-`                         ---------------------------------`  
+   
+   
+                         Geometry "geometry" -> "geometry"  
+                         ---------------------------------  
   
-` Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)`  
-` `  
-`  No.       Tag          Charge          X              Y              Z`  
-` ---- ---------------- ---------- -------------- -------------- --------------`  
-`    1 C                    6.0000     0.00000000     0.00000000     0.00000000`  
-`    2 C                    6.0000     0.72201500     1.25056532     0.51054180`  
-` `  
-`      Lattice Parameters `  
-`      ------------------ `  
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+   
+  No.       Tag          Charge          X              Y              Z  
+ ---- ---------------- ---------- -------------- -------------- --------------  
+    1 C                    6.0000     0.00000000     0.00000000     0.00000000  
+    2 C                    6.0000     0.72201500     1.25056532     0.51054180  
+   
+      Lattice Parameters   
+      ------------------   
   
-`      lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)`  
+      lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
   
-`      a1=<   2.165   1.251   0.001 >`  
-`      a2=<   0.001   2.500   0.001 >`  
-`      a3=<   0.722   1.251   2.041 >`  
-`      a=       2.500 b=      2.500 c=       2.500`  
-`      alpha=  59.966 beta=  59.966 gamma=  59.966`  
-`      omega=    11.0`  
+      a1=<   2.165   1.251   0.001 >  
+      a2=<   0.001   2.500   0.001 >  
+      a3=<   0.722   1.251   2.041 >  
+      a=       2.500 b=      2.500 c=       2.500  
+      alpha=  59.966 beta=  59.966 gamma=  59.966  
+      omega=    11.0  
   
-`      reciprocal lattice vectors in a.u.`  
+      reciprocal lattice vectors in a.u.  
   
-`      b1=<   1.536  -0.768   0.000 >`  
-`      b2=<   0.000   1.330   0.000 >`  
-`      b3=<  -0.543  -0.543   1.629 >`  
+      b1=<   1.536  -0.768   0.000 >  
+      b2=<   0.000   1.330   0.000 >  
+      b3=<  -0.543  -0.543   1.629 >  
   
-`      Atomic Mass `  
-`      ----------- `  
+      Atomic Mass   
+      -----------   
   
-`      C                 12.000000`  
+      C                 12.000000  
   
   
-` ==============================================================================`  
-`                                internuclear distances`  
-` ------------------------------------------------------------------------------`  
-`       center one      |      center two      | atomic units |  angstroms`  
-` ------------------------------------------------------------------------------`  
-`    2 C                |   1 C                |     2.89435  |     1.53162`  
-` ------------------------------------------------------------------------------`  
-`                         number of included internuclear distances:          1`  
-` ==============================================================================`
+ ==============================================================================  
+                                internuclear distances  
+ ------------------------------------------------------------------------------  
+       center one      |      center two      | atomic units |  angstroms  
+ ------------------------------------------------------------------------------  
+    2 C                |   1 C                |     2.89435  |     1.53162  
+ ------------------------------------------------------------------------------  
+                         number of included internuclear distances:          1  
+ ==============================================================================`
 ```
 The following figure shows a plot of the cohesive energy and C-C bond
 distance versus the Brillouin zone sampling for the 8 atom SC unit cell
@@ -4302,51 +4302,51 @@ simulation\_cell block is not needed since NWPW automatically uses the
 unit cell defined in the geometry
 block.
 ```
-`title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"`  
-`echo`  
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"  
+echo  
   
-`permanent_dir ./perm`  
-`scratch_dir   ./scratch`  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
   
-`start diamondfcc`  
-` `  
-`memory 1950 mb`  
+start diamondfcc  
+   
+memory 1950 mb  
   
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`  system crystal `  
-`    lat_a 2.500d0 `  
-`    lat_b 2.500d0 `  
-`    lat_c 2.500d0 `  
-`    alpha 60.0d0 `  
-`    beta  60.0d0 `  
-`    gamma 60.0d0 `  
-`  end`  
-` C  0.00000d0  0.00000d0  0.00000d0`  
-` C  0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-` `  
-`nwpw`  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8    #The default value of 1 needs to be increased`  
-`  lmbfgs`  
-`  xc pbe96`  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
   
-`  monkhorst-pack 9 9 9`  
-`end`  
+  monkhorst-pack 9 9 9  
+end  
   
-`#need to run "task band energy" before "task band structure" can be run`  
-`task band energy`  
+#need to run "task band energy" before "task band structure" can be run  
+task band energy  
   
-`nwpw`  
-`   virtual 16`  
-`   brillouin_zone`  
-`     zone_name fccpath`  
-`     path fcc l gamma x w k gamma`  
-`   end`  
-`   zone_structure_name fccpath`  
-`end`  
-`task band structure`
+nwpw  
+   virtual 16  
+   brillouin_zone  
+     zone_name fccpath  
+     path fcc l gamma x w k gamma  
+   end  
+   zone_structure_name fccpath  
+end  
+task band structure
 ```
 This calculation outputs the
 [file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat))
@@ -4684,109 +4684,109 @@ task band optimize ignore
 The optimized geometry will also contain the information about the
 symmetry being
 used
-
-`....`  
-`     ----------------------`  
-`     Optimization converged`  
-`     ----------------------`  
+```
+....  
+     ----------------------  
+     Optimization converged  
+     ----------------------  
   
   
-` Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-` ---- ---------------- -------- -------- -------- -------- -------- --------`  
-`@    7     -45.62102901 -4.1D-07  0.00010  0.00003  0.00019  0.00060    287.1`  
-`                                     ok       ok       ok       ok  `  
-  
-  
-  
-`                        Geometry "geometry" -> "geometry"`  
-`                        ---------------------------------`  
-  
-`Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)`  
-  
-` No.       Tag          Charge          X              Y              Z`  
-`---- ---------------- ---------- -------------- -------------- --------------`  
-`   1 C                    6.0000     0.00000000     0.00000000     0.00000000`  
-`   2 C                    6.0000     0.00000000     1.76715074     1.76715074`  
-`   3 C                    6.0000     1.76715074     1.76715074     0.00000000`  
-`   4 C                    6.0000     1.76715074     0.00000000     1.76715074`  
-`   5 C                    6.0000     2.65072611     0.88357537     2.65072611`  
-`   6 C                    6.0000     0.88357537     0.88357537     0.88357537`  
-`   7 C                    6.0000     0.88357537     2.65072611     2.65072611`  
-`   8 C                    6.0000     2.65072611     2.65072611     0.88357537`  
-  
-`     Lattice Parameters `  
-`     ------------------ `  
-  
-`     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)`  
-  
-`     a1=<   3.534   0.000   0.000 >`  
-`     a2=<   0.000   3.534   0.000 >`  
-`     a3=<   0.000   0.000   3.534 >`  
-`     a=       3.534 b=      3.534 c=       3.534`  
-`     alpha=  90.000 beta=  90.000 gamma=  90.000`  
-`     omega=    44.1`  
-  
-`     reciprocal lattice vectors in a.u.`  
-  
-`     b1=<   0.941   0.000   0.000 >`  
-`     b2=<   0.000   0.941   0.000 >`  
-`     b3=<   0.000   0.000   0.941 >`  
-  
-`     Atomic Mass `  
-`     ----------- `  
-  
-`     C                 12.000000`  
-  
-  
-`     Symmetry information`  
-`     --------------------`  
-  
-`Group name                  Fd-3m`  
-`Group number            227`  
-`Group order             192`  
-`No. of unique centers     1`  
-`Setting number            1`  
-  
-`     Symmetry unique atoms`  
-  
-`    1`  
-  
-`==============================================================================`  
-`                               internuclear distances`  
-`------------------------------------------------------------------------------`  
-`      center one      |      center two      | atomic units |  angstroms`  
-`------------------------------------------------------------------------------`  
-`   5 C                |   4 C                |     2.89203  |     1.53040`  
-`   6 C                |   1 C                |     2.89203  |     1.53040`  
-`   6 C                |   2 C                |     2.89203  |     1.53040`  
-`   6 C                |   3 C                |     2.89203  |     1.53040`  
-`   6 C                |   4 C                |     2.89203  |     1.53040`  
-`   7 C                |   2 C                |     2.89203  |     1.53040`  
-`   8 C                |   3 C                |     2.89203  |     1.53040`  
-`------------------------------------------------------------------------------`  
-`                        number of included internuclear distances:          7`  
-`==============================================================================`  
+ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    7     -45.62102901 -4.1D-07  0.00010  0.00003  0.00019  0.00060    287.1  
+                                     ok       ok       ok       ok    
   
   
   
-`==============================================================================`  
-`                                internuclear angles`  
-`------------------------------------------------------------------------------`  
-`       center 1       |       center 2       |       center 3       |  degrees`  
-`------------------------------------------------------------------------------`  
-`   6 C                |   2 C                |   7 C                |   109.47`  
-`   6 C                |   3 C                |   8 C                |   109.47`  
-`   5 C                |   4 C                |   6 C                |   109.47`  
-`   1 C                |   6 C                |   2 C                |   109.47`  
-`   1 C                |   6 C                |   3 C                |   109.47`  
-`   1 C                |   6 C                |   4 C                |   109.47`  
-`   2 C                |   6 C                |   3 C                |   109.47`  
-`   2 C                |   6 C                |   4 C                |   109.47`  
-`   3 C                |   6 C                |   4 C                |   109.47`  
-`------------------------------------------------------------------------------`  
-`                           number of included internuclear angles:          9`  
-`==============================================================================`
-
+                        Geometry "geometry" -> "geometry"  
+                        ---------------------------------  
+  
+Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+ No.       Tag          Charge          X              Y              Z  
+---- ---------------- ---------- -------------- -------------- --------------  
+   1 C                    6.0000     0.00000000     0.00000000     0.00000000  
+   2 C                    6.0000     0.00000000     1.76715074     1.76715074  
+   3 C                    6.0000     1.76715074     1.76715074     0.00000000  
+   4 C                    6.0000     1.76715074     0.00000000     1.76715074  
+   5 C                    6.0000     2.65072611     0.88357537     2.65072611  
+   6 C                    6.0000     0.88357537     0.88357537     0.88357537  
+   7 C                    6.0000     0.88357537     2.65072611     2.65072611  
+   8 C                    6.0000     2.65072611     2.65072611     0.88357537  
+  
+     Lattice Parameters   
+     ------------------   
+  
+     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+     a1=<   3.534   0.000   0.000 >  
+     a2=<   0.000   3.534   0.000 >  
+     a3=<   0.000   0.000   3.534 >  
+     a=       3.534 b=      3.534 c=       3.534  
+     alpha=  90.000 beta=  90.000 gamma=  90.000  
+     omega=    44.1  
+  
+     reciprocal lattice vectors in a.u.  
+  
+     b1=<   0.941   0.000   0.000 >  
+     b2=<   0.000   0.941   0.000 >  
+     b3=<   0.000   0.000   0.941 >  
+  
+     Atomic Mass   
+     -----------   
+  
+     C                 12.000000  
+  
+  
+     Symmetry information  
+     --------------------  
+  
+Group name                  Fd-3m  
+Group number            227  
+Group order             192  
+No. of unique centers     1  
+Setting number            1  
+  
+     Symmetry unique atoms  
+  
+    1  
+  
+==============================================================================  
+                               internuclear distances  
+------------------------------------------------------------------------------  
+      center one      |      center two      | atomic units |  angstroms  
+------------------------------------------------------------------------------  
+   5 C                |   4 C                |     2.89203  |     1.53040  
+   6 C                |   1 C                |     2.89203  |     1.53040  
+   6 C                |   2 C                |     2.89203  |     1.53040  
+   6 C                |   3 C                |     2.89203  |     1.53040  
+   6 C                |   4 C                |     2.89203  |     1.53040  
+   7 C                |   2 C                |     2.89203  |     1.53040  
+   8 C                |   3 C                |     2.89203  |     1.53040  
+------------------------------------------------------------------------------  
+                        number of included internuclear distances:          7  
+==============================================================================  
+  
+  
+  
+==============================================================================  
+                                internuclear angles  
+------------------------------------------------------------------------------  
+       center 1       |       center 2       |       center 3       |  degrees  
+------------------------------------------------------------------------------  
+   6 C                |   2 C                |   7 C                |   109.47  
+   6 C                |   3 C                |   8 C                |   109.47  
+   5 C                |   4 C                |   6 C                |   109.47  
+   1 C                |   6 C                |   2 C                |   109.47  
+   1 C                |   6 C                |   3 C                |   109.47  
+   1 C                |   6 C                |   4 C                |   109.47  
+   2 C                |   6 C                |   3 C                |   109.47  
+   2 C                |   6 C                |   4 C                |   109.47  
+   3 C                |   6 C                |   4 C                |   109.47  
+------------------------------------------------------------------------------  
+                           number of included internuclear angles:          9  
+==============================================================================
+```
 The following example uses the BAND module to optimize the unit cell and
 geometry for a [Brucite](http://en.wikipedia.org/wiki/Brucite) crystal
 (Mg(OH)<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>) with P-3m1
@@ -4797,90 +4797,90 @@ symmetry.
 [400px](Brucite-small.jpg)
 
 </center>
-
-`title "brucite testing - using P-3m1 symmetry"`  
-`echo`  
+```
+title "brucite testing - using P-3m1 symmetry"  
+echo  
   
-`memory 1500 mb`  
+memory 1500 mb  
   
-`permanent_dir ./perm`  
-`scratch_dir      ./scratch`  
+permanent_dir ./perm  
+scratch_dir      ./scratch  
   
-`geometry nocenter noautosym noautoz print `  
-` system crystal `  
-`   lat_a 3.14979`  
-`   lat_b 3.14979`  
-`   lat_c 4.7702`  
-`   alpha 90.0`  
-`   beta  90.0`  
-`   gamma 120.0`  
-` end`  
-`symmetry P-3m1`  
-`Mg   0.00000   0.00000  0.00000`  
-`O   0.33333   0.66667   0.22030`  
-`H   0.33333   0.66667   0.41300`  
-`end `  
-`set nwpw:cif_filename brucite`  
+geometry nocenter noautosym noautoz print   
+ system crystal   
+   lat_a 3.14979  
+   lat_b 3.14979  
+   lat_c 4.7702  
+   alpha 90.0  
+   beta  90.0  
+   gamma 120.0  
+ end  
+symmetry P-3m1  
+Mg   0.00000   0.00000  0.00000  
+O   0.33333   0.66667   0.22030  
+H   0.33333   0.66667   0.41300  
+end   
+set nwpw:cif_filename brucite  
   
-`#turn on pseudopotential filtering `  
-`set nwpw:kbpp_ray .true.`  
-`set nwpw:kbpp_filter .true.`  
+#turn on pseudopotential filtering   
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
   
-`#***** setup the nwpw gamma point code ****`  
-`nwpw`  
-`  ewald_rcut 3.0`  
-`  ewald_ncut 8`  
-`  xc pbe96`  
-`  lmbfgs`  
-`  monkhorst-pack 3 3 2`  
-`  #np_dimensions -1 -1 4`  
-`end`  
+#***** setup the nwpw gamma point code ****  
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8  
+  xc pbe96  
+  lmbfgs  
+  monkhorst-pack 3 3 2  
+  #np_dimensions -1 -1 4  
+end  
   
-`driver`  
-`  clear`  
-`  maxiter 31`  
-`end`  
-` `  
-`set includestress  .true.          # tell driver to optimize unit cell`  
-`set includelattice .true.`  
+driver  
+  clear  
+  maxiter 31  
+end  
+   
+set includestress  .true.          # tell driver to optimize unit cell  
+set includelattice .true.  
   
-`task band optimize ignore`
-
+task band optimize ignore
+```
 Optimizing Brucite, which is a soft layered material (2.5-3 Mohs scale),
 is more difficult to optimize than a hard material such as Diamond. For
 these types of materials using symmetry can often result in a faster
 optimization. For example, with symmetry the optimization converges
 within 20 to 30 geometry optimization
 steps,
-
-`@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`@ ---- ---------------- -------- -------- -------- -------- -------- --------`  
-`@    0     -34.39207476  0.0D+00  0.24673  0.10223  0.00000  0.00000    172.7`  
-`@    1     -34.39340208 -1.3D-03  0.00872  0.00302  0.00198  0.00485    328.5`  
-`....`  
-`@   20     -34.39042736 -1.2D-05  0.00195  0.00083  0.00440  0.01964   3019.2`  
-`@   21     -34.39043463 -7.3D-06  0.00028  0.00011  0.00493  0.02042   3150.6`  
-`@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5`  
-`@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5`
-
+```
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+@ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    0     -34.39207476  0.0D+00  0.24673  0.10223  0.00000  0.00000    172.7  
+@    1     -34.39340208 -1.3D-03  0.00872  0.00302  0.00198  0.00485    328.5  
+....  
+@   20     -34.39042736 -1.2D-05  0.00195  0.00083  0.00440  0.01964   3019.2  
+@   21     -34.39043463 -7.3D-06  0.00028  0.00011  0.00493  0.02042   3150.6  
+@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5  
+@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5
+```
 whereas, without symmetry the optimization may not be converged even at
 100 geometry steps
 (input:[Media:brucite-nosymmetry.nw](brucite-nosymmetry.nw),
 output:[Media:brucite-nosymmetry.nwout](brucite-nosymmetry.nwout)).
-
-`@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime`  
-`@ ---- ---------------- -------- -------- -------- -------- -------- --------`  
-`@    0     -34.39207476  0.0D+00  0.24673  0.10250  0.00000  0.00000     18.4`  
-`@    1     -34.39340765 -1.3D-03  0.02963  0.00715  0.00202  0.00500     30.7`  
-`...`  
-`@   49     -34.39027641 -2.1D-06  0.01870  0.00646  0.00074  0.00202    595.7`  
-`@   50     -34.39027503  1.4D-06  0.01962  0.00669  0.00069  0.00197    608.4`  
-`...`  
-`@  100     -34.39034236 -3.8D-07  0.00380  0.00150  0.00036  0.00132   1155.3`  
-`@  101     -34.39034431 -1.9D-06  0.00305  0.00118  0.00012  0.00045   1166.8`  
-`@  102     -34.39034449 -1.8D-07  0.00370  0.00144  0.00006  0.00020   1177.9`  
-`...`
-
+```
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+@ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    0     -34.39207476  0.0D+00  0.24673  0.10250  0.00000  0.00000     18.4  
+@    1     -34.39340765 -1.3D-03  0.02963  0.00715  0.00202  0.00500     30.7  
+...  
+@   49     -34.39027641 -2.1D-06  0.01870  0.00646  0.00074  0.00202    595.7  
+@   50     -34.39027503  1.4D-06  0.01962  0.00669  0.00069  0.00197    608.4  
+...  
+@  100     -34.39034236 -3.8D-07  0.00380  0.00150  0.00036  0.00132   1155.3  
+@  101     -34.39034431 -1.9D-06  0.00305  0.00118  0.00012  0.00045   1166.8  
+@  102     -34.39034449 -1.8D-07  0.00370  0.00144  0.00006  0.00020   1177.9  
+...
+```
 ## NWPW Tutorial 8: NVT Metropolis Monte-Carlo Simulations
 
 In this example the PSPW module is used to run an NVT simulation for a
@@ -4895,73 +4895,73 @@ datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz),
 
 ![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
 T=300K.](diamond-nvt.gif "NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
-
-`title "Metropolis NVT simulation of diamond - this input is used to put the system in equilibrium"`  
-`echo`  
+```
+title "Metropolis NVT simulation of diamond - this input is used to put the system in equilibrium"  
+echo  
   
-`start diamond-nvt`  
+start diamond-nvt  
   
-`#permanent_dir ./perm`  
-`#scratch_dir   ./perm`  
+#permanent_dir ./perm  
+#scratch_dir   ./perm  
   
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`system crystal `  
-`   lat_a 3.56d0 `  
-`   lat_b 3.56d0 `  
-`   lat_c 3.56d0 `  
-`   alpha 90.0d0 `  
-`   beta  90.0d0 `  
-`   gamma 90.0d0 `  
-`end`  
-`C -0.50000d0 -0.50000d0 -0.50000d0`  
-`C  0.00000d0  0.00000d0 -0.50000d0`  
-`C  0.00000d0 -0.50000d0  0.00000d0`  
-`C -0.50000d0  0.00000d0  0.00000d0`  
-`C -0.25000d0 -0.25000d0 -0.25000d0`  
-`C  0.25000d0  0.25000d0 -0.25000d0`  
-`C  0.25000d0 -0.25000d0  0.25000d0`  
-`C -0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-`set nwpw:cif_filename diamond_nvt_234`  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+system crystal   
+   lat_a 3.56d0   
+   lat_b 3.56d0   
+   lat_c 3.56d0   
+   alpha 90.0d0   
+   beta  90.0d0   
+   gamma 90.0d0   
+end  
+C -0.50000d0 -0.50000d0 -0.50000d0  
+C  0.00000d0  0.00000d0 -0.50000d0  
+C  0.00000d0 -0.50000d0  0.00000d0  
+C -0.50000d0  0.00000d0  0.00000d0  
+C -0.25000d0 -0.25000d0 -0.25000d0  
+C  0.25000d0  0.25000d0 -0.25000d0  
+C  0.25000d0 -0.25000d0  0.25000d0  
+C -0.25000d0  0.25000d0  0.25000d0  
+end  
+set nwpw:cif_filename diamond_nvt_234  
   
-`###### setup the nwpw gamma point code ######`  
-`set nwpw:kbpp_ray .true.`  
-`set nwpw:kbpp_filter .true.`  
-`set nwpw:frozen_lattice:thresh 999.0`  
-`nwpw`  
-`   lmbfgs`  
-`   ewald_rcut 3.0`  
-`   ewald_ncut 8`  
-`   xc pbe`  
-`end`  
-`task pspw energy`  
+###### setup the nwpw gamma point code ######  
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+set nwpw:frozen_lattice:thresh 999.0  
+nwpw  
+   lmbfgs  
+   ewald_rcut 3.0  
+   ewald_ncut 8  
+   xc pbe  
+end  
+task pspw energy  
   
-`##### optimize the unit cell #####`  
-`set includestress  .true.  #this option tells driver to optimize the unit cell`  
-`set includelattice .true.  #this option tells driver to optimize cell using a,b,c,alpha,beta,gamma `  
-`driver`  
-`   clear`  
-`   maxiter 51`  
-`end`  
-`task pspw optimize ignore`  
+##### optimize the unit cell #####  
+set includestress  .true.  #this option tells driver to optimize the unit cell  
+set includelattice .true.  #this option tells driver to optimize cell using a,b,c,alpha,beta,gamma   
+driver  
+   clear  
+   maxiter 51  
+end  
+task pspw optimize ignore  
   
-`####################################################################################`  
-`###### setup Metropolis NVT code - input will change in a forthcoming release ######`  
-`####################################################################################`  
-`set nwpw:mc_seed 234              # Seed for random number generator`  
-`set nwpw:mc_algorithm 1            # 1-NVT; 2-NPT`  
-`set nwpw:mc_aratio 0.234           # targeted acceptance ratio`  
-`set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance`  
-`set nwpw:mc_temperature 300.0      # Temperature in K`  
-`set nwpw:mc_step_size   0.250      # initial geometry displacement step size`  
+####################################################################################  
+###### setup Metropolis NVT code - input will change in a forthcoming release ######  
+####################################################################################  
+set nwpw:mc_seed 234              # Seed for random number generator  
+set nwpw:mc_algorithm 1            # 1-NVT; 2-NPT  
+set nwpw:mc_aratio 0.234           # targeted acceptance ratio  
+set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance  
+set nwpw:mc_temperature 300.0      # Temperature in K  
+set nwpw:mc_step_size   0.250      # initial geometry displacement step size  
   
-`nwpw`  
-`   mc_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10`  
-`   cpmd_properties on`  
-`end`  
-`task pspw Metropolis`
-
+nwpw  
+   mc_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10  
+   cpmd_properties on  
+end  
+task pspw Metropolis
+```
 ## NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations
 
 In this example the PSPW module is used to run an NPT simulation for a
@@ -4974,66 +4974,66 @@ datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz),
 [Media:diamond-metropolis.ion\_motion.gz](diamond-metropolis.ion_motion.gz),
 [Media:diamond-metropolis.xyz.gz](diamond-metropolis.xyz.gz),
 [Media:diamond\_metropolis\_1234.cif.gz](diamond_metropolis_1234.cif.gz))
-
-`title "Metropolis NPT simulation of diamond - this input is used to put the system in equilibrium"`  
-`echo`  
+```
+title "Metropolis NPT simulation of diamond - this input is used to put the system in equilibrium"  
+echo  
   
-`start diamond-metropolis`  
+start diamond-metropolis  
   
-`#permanent_dir ./perm`  
-`#scratch_dir   ./perm`  
+#permanent_dir ./perm  
+#scratch_dir   ./perm  
   
-`#**** Enter the geometry using fractional coordinates ****`  
-`geometry center noautosym noautoz print `  
-`  system crystal `  
-`    lat_a 3.56d0 `  
-`    lat_b 3.56d0 `  
-`    lat_c 3.56d0 `  
-`    alpha 90.0d0 `  
-`    beta  90.0d0 `  
-`    gamma 90.0d0  `  
-`  end`  
-` C -0.50000d0 -0.50000d0 -0.50000d0`  
-` C  0.00000d0  0.00000d0 -0.50000d0`  
-` C  0.00000d0 -0.50000d0  0.00000d0`  
-` C -0.50000d0  0.00000d0  0.00000d0`  
-` C -0.25000d0 -0.25000d0 -0.25000d0`  
-` C  0.25000d0  0.25000d0 -0.25000d0`  
-` C  0.25000d0 -0.25000d0  0.25000d0`  
-` C -0.25000d0  0.25000d0  0.25000d0`  
-`end`  
-`set nwpw:cif_filename pspw_metropolis`  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 3.56d0   
+    lat_b 3.56d0   
+    lat_c 3.56d0   
+    alpha 90.0d0   
+    beta  90.0d0   
+    gamma 90.0d0    
+  end  
+ C -0.50000d0 -0.50000d0 -0.50000d0  
+ C  0.00000d0  0.00000d0 -0.50000d0  
+ C  0.00000d0 -0.50000d0  0.00000d0  
+ C -0.50000d0  0.00000d0  0.00000d0  
+ C -0.25000d0 -0.25000d0 -0.25000d0  
+ C  0.25000d0  0.25000d0 -0.25000d0  
+ C  0.25000d0 -0.25000d0  0.25000d0  
+ C -0.25000d0  0.25000d0  0.25000d0  
+end  
+set nwpw:cif_filename pspw_metropolis  
   
-`###### setup the nwpw gamma point code ######`  
-`set nwpw:kbpp_ray .true.`  
-`set nwpw:kbpp_filter .true.`  
-`set nwpw:frozen_lattice:thresh 999.0`  
-`nwpw`  
-`   lmbfgs`  
-`   ewald_rcut 3.0`  
-`   ewald_ncut 8`  
-`   xc pbe`  
-`end`  
-`task pspw energy`  
+###### setup the nwpw gamma point code ######  
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+set nwpw:frozen_lattice:thresh 999.0  
+nwpw  
+   lmbfgs  
+   ewald_rcut 3.0  
+   ewald_ncut 8  
+   xc pbe  
+end  
+task pspw energy  
   
   
-`####################################################################################`  
-`###### setup Metropolis NPT code - input will change in a forthcoming release ######`  
-`####################################################################################`  
-`set nwpw:mc_seed 1234              # Seed for random number generator`  
-`set nwpw:mc_algorithm 2            # 1-NVT; 2-NPT`  
-`set nwpw:mc_aratio 0.234           # targeted acceptance ratio`  
-`set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance`  
-`set nwpw:mc_ddv 0.1                # parameter used to adjust volume change to have sampling with targeted acceptance`  
-`set nwpw:mc_temperature 300.0      # Temperature in K`  
-`set nwpw:mc_step_size   0.250      # geometry displacement step size`  
-`set nwpw:mc_volume_step 0.130      # volume displacement step size`  
+####################################################################################  
+###### setup Metropolis NPT code - input will change in a forthcoming release ######  
+####################################################################################  
+set nwpw:mc_seed 1234              # Seed for random number generator  
+set nwpw:mc_algorithm 2            # 1-NVT; 2-NPT  
+set nwpw:mc_aratio 0.234           # targeted acceptance ratio  
+set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance  
+set nwpw:mc_ddv 0.1                # parameter used to adjust volume change to have sampling with targeted acceptance  
+set nwpw:mc_temperature 300.0      # Temperature in K  
+set nwpw:mc_step_size   0.250      # geometry displacement step size  
+set nwpw:mc_volume_step 0.130      # volume displacement step size  
   
-`nwpw`  
-`   bo_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10`  
-`end`  
-`task pspw Metropolis`
-
+nwpw  
+   bo_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10  
+end  
+task pspw Metropolis
+```
 <center>
 
 <img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-metropolis.png" align=middle with="640pt" height="480pt"/>  
@@ -5044,106 +5044,106 @@ datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz),
 
 (python analysis
 program:[Media:makehistogram.gz](makehistogram.gz))
-
-`[WE27972:~/Projects/NWChem/Metropolis] bylaska% makehistogram -t 300 -c 2 1235/diamond-metropolis-1235.emotion 1236/diamond-metropolis-1236.emotion `  
-`1237/diamond-metropolis-1237.emotion 1238/diamond-metropolis-1238.emotion 1239/diamond-metropolis-1239.emotion 1240/diamond-metropolis-1240.emotion `  
-`1241/diamond-metropolis-1241.emotion 1242/diamond-metropolis-1242.emotion 1243/diamond-metropolis-1243.emotion 1244/diamond-metropolis-1244.emotion `  
-`1245/diamond-metropolis-1245.emotion 1246/diamond-metropolis-1246.emotion 1248/diamond-metropolis-1248.emotion 1249/diamond-metropolis-1249.emotion `  
-`makehistogram Program`  
-`len(args)= 14`  
+```
+[WE27972:~/Projects/NWChem/Metropolis] bylaska% makehistogram -t 300 -c 2 1235/diamond-metropolis-1235.emotion 1236/diamond-metropolis-1236.emotion   
+1237/diamond-metropolis-1237.emotion 1238/diamond-metropolis-1238.emotion 1239/diamond-metropolis-1239.emotion 1240/diamond-metropolis-1240.emotion   
+1241/diamond-metropolis-1241.emotion 1242/diamond-metropolis-1242.emotion 1243/diamond-metropolis-1243.emotion 1244/diamond-metropolis-1244.emotion   
+1245/diamond-metropolis-1245.emotion 1246/diamond-metropolis-1246.emotion 1248/diamond-metropolis-1248.emotion 1249/diamond-metropolis-1249.emotion   
+makehistogram Program  
+len(args)= 14  
   
-`unitconversion  = 1.0`  
-`temperature (K) = 300`  
-`RT (au)         = 0.000949482834326  ( 0.5958  kcal/mol)`  
+unitconversion  = 1.0  
+temperature (K) = 300  
+RT (au)         = 0.000949482834326  ( 0.5958  kcal/mol)  
   
-`data columns -1 = [1]`  
-`data rows (n)   = 52000`  
+data columns -1 = [1]  
+data rows (n)   = 52000  
   
-`delta (au)       = 0.01`  
-`xmin-delta (au)  = -45.08080365`  
-`xmax+delta (au)  = -45.05079515`  
+delta (au)       = 0.01  
+xmin-delta (au)  = -45.08080365  
+xmax+delta (au)  = -45.05079515  
   
-`data averaging:`  
-`- xbar       (au)           = -45.0668093497`  
-`- S2_{n-1}   (au)           = 1.08378343101e-05`  
-`- <exp((x-xmin)/RT)> (au)   = 5293374903.39`  
-`- <exp((x-xbar)/RT)> (au)   = 2102.44405413`  
-`- Free energy               = -45.0595449934`  
-`- Free energy1              = -45.0595449934`  
+data averaging:  
+- xbar       (au)           = -45.0668093497  
+- S2_{n-1}   (au)           = 1.08378343101e-05  
+- <exp((x-xmin)/RT)> (au)   = 5293374903.39  
+- <exp((x-xbar)/RT)> (au)   = 2102.44405413  
+- Free energy               = -45.0595449934  
+- Free energy1              = -45.0595449934  
   
-`histogram distribution parameters:`  
-`- number of bins (Rice k) = 75`  
-`- bin width               = 0.00040552027027`  
-`- norm                    = 1.0`  
-`- xbar (au)               = -45.0668107987  (error= -1.44908364064e-06 )`  
-`- S2_{n-1} (au)           = 1.0858459744e-05  (error= 2.06254339582e-08 )`  
-`- <exp((x-xmin)/RT)> (au) = 5184600342.01  (error= -108774561.378 )`  
-`- <exp((x-xbar)/RT)> (au) = 2062.38570923  (error= -40.0583449011 )`  
-`- Free energy               = -45.0595647078  (error= -1.9714360235e-05 )`  
-`- Free energy1              = -45.0595647078  (error= -1.9714360235e-05 )`  
-`- histogram plot file     = histogram.dat`  
+histogram distribution parameters:  
+- number of bins (Rice k) = 75  
+- bin width               = 0.00040552027027  
+- norm                    = 1.0  
+- xbar (au)               = -45.0668107987  (error= -1.44908364064e-06 )  
+- S2_{n-1} (au)           = 1.0858459744e-05  (error= 2.06254339582e-08 )  
+- <exp((x-xmin)/RT)> (au) = 5184600342.01  (error= -108774561.378 )  
+- <exp((x-xbar)/RT)> (au) = 2062.38570923  (error= -40.0583449011 )  
+- Free energy               = -45.0595647078  (error= -1.9714360235e-05 )  
+- Free energy1              = -45.0595647078  (error= -1.9714360235e-05 )  
+- histogram plot file     = histogram.dat  
   
-`normal distribution parameters:`  
-`- average x (input xbar)                   = -45.0668093497`  
-`- unbiased sample variance (input S2_(n-1))= 1.08378343101e-05`  
-`- xbar-xmin                                = 0.0139943003357`  
-`- norm                    = 0.99998877936`  
-`- xbar (au)               = -45.0663035243  (error= 0.000505825397738 )`  
-`- S2_{n-1} (au)           = 1.1091077321e-05  (error= 2.53243010936e-07 )`  
-`- <exp((x-xmin)/RT)> (au) = 943482808.939  (error= -4349892094.45 )`  
-`- <exp((x-xbar)/RT)> (au) = 219.968603653  (error= -1882.47545048 )`  
-`- Free energy               = -45.061182503  (error= -0.00163750957643 )`  
-`- Free energy1              = -45.061182503  (error= -0.00163750957643 )`  
-`- normal distribution plot file = normdist.dat`  
-`- number data points = 1500`  
+normal distribution parameters:  
+- average x (input xbar)                   = -45.0668093497  
+- unbiased sample variance (input S2_(n-1))= 1.08378343101e-05  
+- xbar-xmin                                = 0.0139943003357  
+- norm                    = 0.99998877936  
+- xbar (au)               = -45.0663035243  (error= 0.000505825397738 )  
+- S2_{n-1} (au)           = 1.1091077321e-05  (error= 2.53243010936e-07 )  
+- <exp((x-xmin)/RT)> (au) = 943482808.939  (error= -4349892094.45 )  
+- <exp((x-xbar)/RT)> (au) = 219.968603653  (error= -1882.47545048 )  
+- Free energy               = -45.061182503  (error= -0.00163750957643 )  
+- Free energy1              = -45.061182503  (error= -0.00163750957643 )  
+- normal distribution plot file = normdist.dat  
+- number data points = 1500  
   
-`gamma distribution parameters:`  
-`- alpha0= 18.0700715921`  
-`- beta0 = 1291.24508969`  
-`- xmin + alpha0/beta0 = -45.0668093497`  
-`- alpha = 18.5003178357`  
-`- beta  = 1321.98948086`  
-`- xmin + alpha/beta   = -45.0668093497`  
-`- norm                    = 0.999923464137 0.99993569948`  
-`- xbar (au)               = -45.0633614482 -45.0639126423  (error= 0.00344790150088 0.00289670733491 )`  
-`- S2_{n-1} (au)           = 2.27110055327e-05 1.89632753897e-05  (error= 1.18731712226e-05 8.12544107961e-06 )`  
-`- <exp((x-xmin)/RT)> (au) = 7932775654.26 7060892836.07  (error= 2639400750.87 1767517932.68 )`  
-`- <exp((x-xbar)/RT)> (au) = 83.43400035 132.707151194  (error= -2019.01005378 -1969.73690294 )`  
-`- Free energy               = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )`  
-`- Free energy1              = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )`  
-`- gamma distribution plot file = gammadist.dat`  
-`- number data points = 1500`  
+gamma distribution parameters:  
+- alpha0= 18.0700715921  
+- beta0 = 1291.24508969  
+- xmin + alpha0/beta0 = -45.0668093497  
+- alpha = 18.5003178357  
+- beta  = 1321.98948086  
+- xmin + alpha/beta   = -45.0668093497  
+- norm                    = 0.999923464137 0.99993569948  
+- xbar (au)               = -45.0633614482 -45.0639126423  (error= 0.00344790150088 0.00289670733491 )  
+- S2_{n-1} (au)           = 2.27110055327e-05 1.89632753897e-05  (error= 1.18731712226e-05 8.12544107961e-06 )  
+- <exp((x-xmin)/RT)> (au) = 7932775654.26 7060892836.07  (error= 2639400750.87 1767517932.68 )  
+- <exp((x-xbar)/RT)> (au) = 83.43400035 132.707151194  (error= -2019.01005378 -1969.73690294 )  
+- Free energy               = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )  
+- Free energy1              = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )  
+- gamma distribution plot file = gammadist.dat  
+- number data points = 1500  
   
-`Hausdorff distribution parameters:`  
-`- xmin = -45.08080365`  
-`- xmax = -45.05079515`  
-`- number moments     = 15`  
-`  -- < x^0 >    =    1.000000000000000`  
-`  -- < x^1 >    =    0.466344546904007`  
-`  -- < x^2 >    =    0.229512222180349`  
-`  -- < x^3 >    =    0.119040323347820`  
-`  -- < x^4 >    =    0.064946164109284`  
-`  -- < x^5 >    =    0.037186896798964`  
-`  -- < x^6 >    =    0.022287980659815`  
-`  -- < x^7 >    =    0.013942929105868`  
-`  -- < x^8 >    =    0.009076370636747`  
-`  -- < x^9 >    =    0.006128509645342`  
-`  -- < x^10 >   =    0.004278147917961`  
-`  -- < x^11 >   =    0.003077410986590`  
-`  -- < x^12 >   =    0.002273768533280`  
-`  -- < x^13 >   =    0.001720304299285`  
-`  -- < x^14 >   =    0.001328990330385`  
-`- norm                    = 1.0000000003`  
-`- xbar (au)               = -45.066809363  (error= -1.33426993898e-08 )`  
-`- S2_{n-1} (au)           = 1.08376258908e-05  (error= -2.08419282206e-10 )`  
-`- <exp((x-xmin)/RT)> (au) = 5423305875.35  (error= 129930971.958 )`  
-`- <exp((x-xbar)/RT)> (au) = 2154.08083332  (error= 51.6367791881 )`  
-`- Free energy               = -45.0595219689  (error= 2.30245307122e-05 )`  
-`- Free energy1              = -45.0595219689  (error= 2.30245307122e-05 )`  
-`- Hausdorff moment history file = moment_hist.dat`  
-`- Hausdorff distribution plot file = hausdorff.dat`  
-`- number data points = 1500`
-
+Hausdorff distribution parameters:  
+- xmin = -45.08080365  
+- xmax = -45.05079515  
+- number moments     = 15  
+  -- < x^0 >    =    1.000000000000000  
+  -- < x^1 >    =    0.466344546904007  
+  -- < x^2 >    =    0.229512222180349  
+  -- < x^3 >    =    0.119040323347820  
+  -- < x^4 >    =    0.064946164109284  
+  -- < x^5 >    =    0.037186896798964  
+  -- < x^6 >    =    0.022287980659815  
+  -- < x^7 >    =    0.013942929105868  
+  -- < x^8 >    =    0.009076370636747  
+  -- < x^9 >    =    0.006128509645342  
+  -- < x^10 >   =    0.004278147917961  
+  -- < x^11 >   =    0.003077410986590  
+  -- < x^12 >   =    0.002273768533280  
+  -- < x^13 >   =    0.001720304299285  
+  -- < x^14 >   =    0.001328990330385  
+- norm                    = 1.0000000003  
+- xbar (au)               = -45.066809363  (error= -1.33426993898e-08 )  
+- S2_{n-1} (au)           = 1.08376258908e-05  (error= -2.08419282206e-10 )  
+- <exp((x-xmin)/RT)> (au) = 5423305875.35  (error= 129930971.958 )  
+- <exp((x-xbar)/RT)> (au) = 2154.08083332  (error= 51.6367791881 )  
+- Free energy               = -45.0595219689  (error= 2.30245307122e-05 )  
+- Free energy1              = -45.0595219689  (error= 2.30245307122e-05 )  
+- Hausdorff moment history file = moment_hist.dat  
+- Hausdorff distribution plot file = hausdorff.dat  
+- number data points = 1500
+```
 <center>
 
 <img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-e-histogram.png" align=middle with="640pt" height="480pt"/>  
@@ -5293,13 +5293,8 @@ task paw Car-Parrinello
   - Wannier orbital task only works in PSPW.
   - AIMD/MM simulation only works with PSPW.
 
-## Development Blog
-
-Notes on current plane-wave developments can be found at the this [
-link](NWPW_DEVELOPMENT_BLOG).
-
 ## Questions and Difficulties
 
-Questions and encountered problems should be reported to the NWChem
-Community Forum, nwchem-users@emsl.pnl.gov or to Eric J. Bylaska,
+Questions and encountered problems should be reported to the [NWChem
+Community Forum](Forum) or to Eric J. Bylaska,
 Eric.Bylaska@pnl.gov
