@@ -36,7 +36,7 @@ feedback on this page content.
   - **Gausssum** a GUI application that can analyze the output since
     version 3.0 using the [cclib](http://cclib.github.io/) library
     <http://gausssum.sf.net>
-  - **OpenDFT** is a free and open source software that brings cutting edge solid state research to the people https://github.com/JannickWeisshaupt/OpenDFT
+  - **OpenDFT** is a free and open source software that brings cutting edge solid state research to the people <https://github.com/JannickWeisshaupt/OpenDFT>
 
 <references/>
 
