@@ -1473,8 +1473,8 @@ forum discussions
 
 |                                                                 |
 | --------------------------------------------------------------- |
-| <http://www.nwchem-sw.org/index.php/Special:AWCforum/sp/id5124> |
-| <http://www.nwchem-sw.org/index.php/Special:AWCforum/sp/id6628> |
+| <https://nwchemgit.github.io/Special_AWCforum/sp/id5124.html> |
+| <https://nwchemgit.github.io/Special_AWCforum/sp/id6628.html> |
 
 Another essential prerequisite step is to install Mpich, which can be
 found at the following
