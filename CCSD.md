@@ -141,7 +141,7 @@ Currently available methods
 are
 
   * CCSD - Full iterative inclusion of single and double excitations
-  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged singles and doubles amplitudes
+  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged<br> singles and doubles amplitudes
   * CCSD(T) - The linearized triples approximation due to Raghavachari.
 
 The calculation is invoked using the TASK directive, so to perform a

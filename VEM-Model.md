@@ -82,8 +82,8 @@ follows:
 
 `do_cosmo_vem (integer input))`  
 `0` (do not do any VEM calculation even if the task tddft gradient line is present; default).
-`1` (do a nonequilibrium VEM excitation energy calculation; in this case the task tddft gradient line should be present, too)  
-`2` (do an equilibrium VEM excitation energy calculation followed by a nonequilibrium emission energy calculation; task tddft gradient line should be present)  
+`1` (do a nonequilibrium VEM excitation energy calculation;<br> in this case the task tddft gradient line should be present, too)  
+`2` (do an equilibrium VEM excitation energy calculation followed by <br>a nonequilibrium emission energy calculation;<br> task tddft gradient line should be present)  
 
 The VEM solvent (which is water by default) can be specified by using
 the solvent keyword described in the SMD section of this manual or by
@@ -93,8 +93,10 @@ specifying the VEM solvent descriptors such as
 `static dielectric constant`
 
 `dielecinf (real input)`  
-optical dielectric constant which is set (by default) to the squared value of the solvent's index of refraction (see the keyword `soln`, but note 
-that if the solvent is specified with the solvent keyword, the refractive index is set by the program without needing the user to supply it.)   
+optical dielectric constant which is set (by default) to the squared value of the solvent's index of refraction<br>
+(see the keyword `soln`, but note 
+that if the solvent is specified with the solvent keyword,<br>
+ the refractive index is set by the program without needing the user to supply it.)   
 
 Solvent descriptors set by the program are based on the Minnesota
 Solvent Descriptor Database:
