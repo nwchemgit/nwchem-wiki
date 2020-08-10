@@ -7,7 +7,7 @@ basis set based methods in NWChem, e.g. DFT, TDDFT, TCE, MP2, SCF,
 MCSCF, etc. If analytic gradients are not available for the selected
 level of theory, numerical gradients will automatically be used. Initial
 velocities are randomly selected from the Maxwell-Boltzmann distribution
-at the specified temperature, unless a restart file (.qmdrst) is
+at the specified temperature, unless a restart file (`.qmdrst`) is
 present. If a restart file is present, the trajectory information will
 be read from that file and the trajectory will resume from that point.
 
@@ -16,7 +16,7 @@ refer to the following paper: S. A. Fischer, T. W. Ueltschi, P. Z.
 El-Khoury, A. L. Mifflin, W. P. Hess, H.F. Wang, C. J. Cramer, N. Govind
 "Infrared and Raman Spectroscopy from Ab Initio Molecular Dynamics and
 Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
-Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015) Publication Date (Web): July 29, 2015
+Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015).
 ```
 QMD
   [dt_nucl <double default 10.0>]  
@@ -35,7 +35,7 @@ The module is called as:
 ```
 task <level of theory> qmd
 ```
-where \<level of theory\> is any Gaussian basis set method in NWChem
+where <level of theory> is any Gaussian basis set method in NWChem
 
 ## QMD Keywords
 
@@ -65,17 +65,18 @@ the nuclei. Possible options are:
 
    No thermostat is used, i.e. an NVE ensemble is simulated. Default  
 
-  - **svr** <double default 1000.0>
+  - **svr** `<double default 1000.0>`
 
-   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello J. Chem. Phys. 126, 014101 (2007)  
+   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello,
+ J. Chem. Phys. 126, 014101 (2007)  
    Number sets the relaxation parameter of the thermostat  
 
-  - **langevin** <double default 0.1>
+  - **langevin** `<double default 0.1>`
 
    Langevin dynamics, implementation according to Bussi and Parrinello Phys. Rev. E 75, 056707 (2007)  
    Number sets the value of the friction  
 
-  - **berendsen** <double default 1000.0>  
+  - **berendsen** `<double default 1000.0>`  
 
    Berendsen thermostat, number sets the relaxation parameter of the thermostat  
 
