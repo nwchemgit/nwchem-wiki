@@ -96,7 +96,8 @@ Windows</td>
 </tbody>
 </table>
 
-  - **ARMCI\_NETWORK** must be defined in order to achieve best
+<br>
+  - **ARMCI_NETWORK** must be defined in order to achieve best
     performance on high performance networks, e.g.
 ```
 export ARMCI_NETWORK=OPENIB
@@ -179,6 +180,7 @@ MPI-SPAWN</td>
 </tbody>
 </table>
 
+<br>
 Please see [Choosing the ARMCI Library](ARMCI) for
 additional information on choosing the right network
 options.
@@ -193,8 +195,8 @@ options.
 | LIBMPI       | Name of the MPI library that should be linked with -l (eg. -lmpich)                                                              |
 | MPI\_LIB     | Directory where the MPI library resides                                                                                          |
 | MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |  
-
-
+  
+<br>
 #### <span style="color:red;">Automatic detection of MPI variables with mpif90</span>
 
 **_New in NWChem 6.6_**: If the
@@ -263,7 +265,8 @@ setenv LIBMPI &quot;-lmpi_f90 -lmpi_f77 -lmpi -ldl -Wl,--export-dynamic -lnsl -l
 </tr>
 </tbody>
 </table>
-
+  
+<br>
 Note:
 
 When MPI is used, the appropriate MPI run command should be used to
@@ -288,8 +291,8 @@ The following modules are available:
 | all python | Everything useful plus python |
 | qm         | All quantum mechanics modules |
 | md         | MD only build                 |
-
-
+  
+<br>
 Note that additional environment variables need to be defined to specify
 the location of the Python libraries, when the python module is
 compiled. See the optional environmental variables section for
@@ -406,6 +409,7 @@ hardware include:
 | ATLAS       | <http://math-atlas.sf.net>                                                                    |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 
+<br>
 _**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT
 ```
 export BLASOPT=-lopenblas
