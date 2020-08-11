@@ -192,8 +192,11 @@ options.
 | USE\_MPIF4   | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. (Generally set when USE\_MPI is set on most platforms) |
 | LIBMPI       | Name of the MPI library that should be linked with -l (eg. -lmpich)                                                              |
 | MPI\_LIB     | Directory where the MPI library resides                                                                                          |
-| MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |
-#### Automatic detection of MPI variables - mpif90
+| MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |  
+
+
+#### <span style="color:red;">Automatic detection of MPI variables with mpif90</span>
+
 **_New in NWChem 6.6_**: If the
 location of the mpif90 command is part of your PATH env. variable,
 NWChem will figure out the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE
@@ -533,45 +536,6 @@ COPTIMIZE variables. The reason is that the default values for FOPTIMIZE
 and COPTIMIZE have been tested by the NWChem developers (using the
 internal QA suites, among others), while any modification might produce
 incorrect results.
-
-# How-to: Build\_nwchem script (unsupported)
-
-The build\_nwchem script is an auto-compile tool. It guesses the
-configuration of your machine based on the results of a number of tests
-and compiles a corresponding binary. It is of course possible that the
-script guesses something wrong in which case that setting can be
-corrected by manually specifying the corresponding environment variable.
-See the other platform how-to's for details on those variables. The only
-requirement to use the script is that the MPI compiler wrappers (e.g.
-mpif90, mpicc and mpiCC) should be in your path, and that if your
-machine uses the "module" software you should have all modules you want
-to use loaded. If these requirements are met then simply run
-```
-% cd $NWCHEM_TOP
-% ./contrib/distro-tools/build_nwchem | tee build_nwchem.log
-```
-In the file build_nwchem.log you will find under "Building NWChem" a
-report on what platform the script thinks you are using.
-
-In addition to compiling the code the build\_nwchem script now also
-creates scripts that can be used to set or unset all the environment
-variables that were used in the build. Those scripts are
-
-```
-nwchem_make_env.csh
-nwchem_make_env.sh
-nwchem_make_unenv.csh
-nwchem_make_unenv.sh
-```
-
-The scripts also define a command
-
-```
-renwc
-```
-
-that can be used to recompile just one directory and relink the code.
-This is particularly convenient when developing.
 
 # How-to: Linux platforms
 
