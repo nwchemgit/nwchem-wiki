@@ -32,7 +32,7 @@ The general form of the BASIS directive is as follows:
 ```
 Examining the keywords on the first line of the BASIS directive:
 
-  - name :  
+  - `name` :  
     By default, the basis set is stored in the database with the name
     "ao basis". Another name may be specified in the BASIS directive,
     thus, multiple basis sets may be stored simultaneously in the
@@ -75,18 +75,19 @@ Examining the keywords on the first line of the BASIS directive:
 | 8  | f<sub>yyz</sub> |                                                       |
 | 9  | f<sub>yzz</sub> |                                                       |
 | 10 | f<sub>zzz</sub> |                                                       |
-
+  
+<br/>
 Order of functions.
 
 
-  - PRINT or NOPRINT :  
+  - `PRINT` or `NOPRINT` :  
     The default is for the input module to print all basis sets
     encountered. Specifying the keyword noprint allows the user to
     suppress this output.
 
 <!-- end list -->
 
-  - REL :  
+  - `REL` :  
     This keyword marks the entire basis as a relativistic basis for the
     purposes of the Dyall-modified-Dirac relativistic integral code. The
     marking of the basis set is necessary for the code to make the
