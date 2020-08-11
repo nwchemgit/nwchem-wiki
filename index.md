@@ -6,8 +6,8 @@
 <img src="Bylaska-Figure3.PNG" style="float:left; margin-right:10px; alt="drawing" width="160"/> 
 NWChem aims to provide its
 users with computational chemistry tools that are scalable both in their
-ability to treat large scientific computational chemistry problems
-efficiently, and in their use of available parallel computing resources
+ability to efficiently treat large scientific  problems,
+ and in their use of available computing resources
 from high-performance parallel supercomputers to conventional
 workstation clusters.
 
@@ -55,7 +55,7 @@ for more information see
 [EMSLl\_Arrows\_-\_an\_easier\_way\_to\_use\_nwchem](Current_events#%22emsl_arrows_-_an_easier_way_to_use_nwchem) and [EMSL Arrows](EMSL_Arrows)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api) </span>
+[EMSL Arrows API](https://arrows.emsl.pnnl.gov/api) </span>
 
 ### [Documentation](Home)
 
