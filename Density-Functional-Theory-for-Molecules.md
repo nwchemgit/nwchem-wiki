@@ -577,7 +577,7 @@ analytical gradients.
 
 (For more information on metaGGAs, see S. Kurth, J. Perdew, P. Blaha,
 Int. J. Quant. Chem 75, 889 (1999) for a brief description of meta-GGAs,
-and citations 14-27 therein for thorough background )
+and citations 14-27 therein for thorough background)
 
 Note: both TPSS and PKZB correlation require the PBE GGA CORRELATION
 (which is itself dependent on an LDA). The decision has been made to use
@@ -589,7 +589,7 @@ have the ability to set the local part of these metaGGA functionals.
 Using the Ewald
 decomposition
 
-<img alt="$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} +  &#10;\frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="254.98902pt" height="33.14091pt"/>
+<img alt="$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="254.98902pt" height="33.14091pt"/>
 
 we can split the the Exchange interaction as
 
