@@ -21,7 +21,6 @@ The NWChem software can handle:
   * Scaling from one to thousands of processors
   * Properties and relativistic effects
 
-
 NWChem is actively developed by a consortium of developers and
 maintained by the [EMSL](http://www.emsl.pnl.gov) located at the Pacific
 Northwest National Laboratory ([PNNL](http://www.pnl.gov)) in Washington
