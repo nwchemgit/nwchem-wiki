@@ -151,7 +151,7 @@ Coulomb potential in the Dunlap scheme. The charge density fitting basis
 set must have the name "cd basis". This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
 [SET](SET) directive. If this basis set is not
-defined by input, the <img alt="$O(N^4)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/> exact Coulomb contribution is computed.
+defined by input, the <img alt="\(O(N^4)\)" src="svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/> exact Coulomb contribution is computed.
 
 The user also has the option of specifying a third basis set for the
 evaluation of the exchange-correlation potential. This basis set must
@@ -209,7 +209,7 @@ in the DFT Module (see table below for full list of functionals). The
 default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
-this approximation the exchange functional is the Slater <img alt="$\rho^{1/3}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9d1e8d8cdb10bf2a8f81456e9af8ad9b.svg?invert_in_darkmode&sanitize=true" align=middle width="28.233315pt" height="29.12679pt"/>
+this approximation the exchange functional is the Slater <img alt="\(\rho^{1/3}\)" src="svgs/9d1e8d8cdb10bf2a8f81456e9af8ad9b.svg?invert_in_darkmode&sanitize=true" align=middle width="28.233315pt" height="29.12679pt"/>
 functional (from J.C. Slater, Quantum Theory of Molecules and Solids,
 Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill,
 New York, 1974)), and the correlation functional is the
@@ -249,7 +249,7 @@ the default slater and vwn\_5 functionals. These are either local or
 gradient-corrected functionals (GCA); a full list can be found in the
 table below.
 
-The Hartree-Fock exact exchange functional, (which has <img alt="$O(N^4)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/>
+The Hartree-Fock exact exchange functional, (which has <img alt="\(O(N^4)\)" src="svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/>
 computation expense), is invoked by specifying
 ```
   XC HFexch
@@ -360,122 +360,122 @@ where
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
-| slater      | \* |    |     |      |       | Y   | \[1\]  |
-| vwn\_1      |    | \* |     |      |       | Y   | \[2\]  |
-| vwn\_2      |    | \* |     |      |       | Y   | \[2\]  |
-| vwn\_3      |    | \* |     |      |       | Y   | \[2\]  |
-| vwn\_4      |    | \* |     |      |       | Y   | \[2\]  |
-| vwn\_5      |    | \* |     |      |       | Y   | \[2\]  |
-| vwn\_1\_rpa |    | \* |     |      |       | Y   | \[2\]  |
-| perdew81    |    | \* |     |      |       | Y   | \[3\]  |
-| pw91lda     |    | \* |     |      |       | Y   | \[4\]  |
-| xbecke86b   | \* |    | \*  |      |       | N   | \[54\] |
-| becke88     | \* |    | \*  |      |       | Y   | \[5\]  |
-| xperdew86   | \* |    | \*  |      |       | N   | \[53\] |
-| xperdew91   | \* |    | \*  |      |       | Y   | \[6\]  |
-| xpbe96      | \* |    | \*  |      |       | Y   | \[7\]  |
-| gill96      | \* |    | \*  |      |       | Y   | \[8\]  |
-| optx        | \* |    | \*  |      |       | N   | \[20\] |
-| mpw91       | \* |    | \*  |      |       | Y   | \[23\] |
-| xft97       | \* |    | \*  |      |       | N   | \[24\] |
-| rpbe        | \* |    | \*  |      |       | Y   | \[33\] |
-| revpbe      | \* |    | \*  |      |       | Y   | \[34\] |
-| xpw6b95     | \* |    | \*  |      |       | N   | \[36\] |
-| xpwb6k      | \* |    | \*  |      |       | N   | \[36\] |
-| perdew86    |    | \* | \*  |      |       | Y   | \[9\]  |
-| lyp         |    | \* | \*  |      |       | Y   | \[10\] |
-| perdew91    |    | \* | \*  |      |       | Y   | \[6\]  |
-| cpbe96      |    | \* | \*  |      |       | Y   | \[7\]  |
-| cft97       |    | \* | \*  |      |       | N   | \[24\] |
-| op          |    | \* | \*  |      |       | N   | \[31\] |
-| hcth        | \* | \* | \*  |      |       | N   | \[11\] |
-| hcth120     | \* | \* | \*  |      |       | N   | \[12\] |
-| hcth147     | \* | \* | \*  |      |       | N   | \[12\] |
-| hcth407     | \* | \* | \*  |      |       | N   | \[19\] |
-| becke97gga1 | \* | \* | \*  |      |       | N   | \[18\] |
-| hcthp14     | \* | \* | \*  |      |       | N   | \[21\] |
-| ft97        | \* | \* | \*  |      |       | N   | \[24\] |
-| htch407p    | \* | \* | \*  |      |       | N   | \[27\] |
-| bop         | \* | \* | \*  |      |       | N   | \[31\] |
-| pbeop       | \* | \* | \*  |      |       | N   | \[32\] |
-| xpkzb99     | \* |    |     | \*   |       | N   | \[26\] |
-| cpkzb99     |    | \* |     | \*   |       | N   | \[26\] |
-| xtpss03     | \* |    |     | \*   |       | N   | \[28\] |
-| ctpss03     |    | \* |     | \*   |       | N   | \[28\] |
-| bc95        |    | \* |     | \*   |       | N   | \[33\] |
-| cpw6b95     |    | \* |     | \*   |       | N   | \[36\] |
-| cpwb6k      |    | \* |     | \*   |       | N   | \[36\] |
-| xm05        | \* |    |     | \*   | \*    | N   | \[37\] |
-| cm05        |    | \* |     | \*   |       | N   | \[37\] |
-| m05-2x      | \* | \* |     | \*   | \*    | N   | \[38\] |
-| xm05-2x     | \* |    |     | \*   | \*    | N   | \[38\] |
-| cm05-2x     |    | \* |     | \*   |       | N   | \[38\] |
-| xctpssh     |    |    |     | \*   | \*    | N   | \[29\] |
-| bb1k        |    |    |     | \*   | \*    | N   | \[34\] |
-| mpw1b95     |    |    |     | \*   | \*    | N   | \[35\] |
-| mpwb1k      |    |    |     | \*   | \*    | N   | \[35\] |
-| pw6b95      |    |    |     | \*   | \*    | N   | \[36\] |
-| pwb6k       |    |    |     | \*   | \*    | N   | \[36\] |
-| m05         |    |    |     | \*   | \*    | N   | \[37\] |
-| vs98        |    |    |     | \*   | \*    | N   | \[41\] |
-| xvs98       | \* |    |     | \*   |       | N   | \[41\] |
-| cvs98       |    | \* |     | \*   |       | N   | \[41\] |
-| m06-L       | \* | \* |     | \*   |       | N   | \[40\] |
-| xm06-L      | \* |    |     | \*   |       | N   | \[40\] |
-| cm06-L      |    | \* |     | \*   |       | N   | \[40\] |
-| m06-hf      |    |    |     | \*   | \*    | N   | \[41\] |
-| xm06-hf     | \* |    |     | \*   | \*    | N   | \[41\] |
-| cm06-hf     |    | \* |     | \*   |       | N   | \[41\] |
-| m06         |    |    |     | \*   | \*    | N   | \[42\] |
-| xm06        | \* |    |     | \*   | \*    | N   | \[42\] |
-| cm06        |    | \* |     | \*   |       | N   | \[42\] |
-| m06-2x      |    |    |     | \*   | \*    | N   | \[42\] |
-| xm06-2x     | \* |    |     | \*   | \*    | N   | \[42\] |
-| cm06-2x     |    | \* |     | \*   |       | N   | \[42\] |
-| cm08-hx     |    | \* |     | \*   |       | N   | \[46\] |
-| xm08-hx     | \* |    |     | \*   |       | N   | \[46\] |
-| m08-hx      | \* | \* |     | \*   | \*    | N   | \[46\] |
-| cm08-so     |    | \* |     | \*   |       | N   | \[46\] |
-| xm08-so     | \* |    |     | \*   |       | N   | \[46\] |
-| m08-so      | \* | \* |     | \*   | \*    | N   | \[46\] |
-| cm11        |    | \* |     | \*   |       | N   | \[47\] |
-| xm11        | \* |    |     | \*   |       | N   | \[47\] |
-| m11         | \* | \* |     | \*   | \*    | N   | \[47\] |
-| cm11-l      |    | \* |     | \*   |       | N   | \[48\] |
-| xm11-l      | \* |    |     | \*   |       | N   | \[48\] |
-| m11-l       | \* | \* |     | \*   |       | N   | \[48\] |
-| csogga      |    | \* | \*  |      |       | N   | \[49\] |
-| xsogga      | \* |    | \*  |      |       | N   | \[49\] |
-| sogga       | \* | \* | \*  |      |       | N   | \[49\] |
-| csogga11    |    | \* | \*  |      |       | N   | \[50\] |
-| xsogga11    | \* |    | \*  |      |       | N   | \[50\] |
-| sogga11     | \* | \* | \*  |      |       | N   | \[50\] |
-| csogga11-x  |    | \* |     |      |       | N   | \[51\] |
-| xsogga11-x  | \* |    | \*  |      |       | N   | \[51\] |
-| sogga11-x   | \* | \* | \*  |      | \*    | N   | \[51\] |
-| dldf        | \* | \* |     | \*   | \*    | N   | \[52\] |
-| beckehandh  | \* | \* |     |      | \*    | Y   | \[13\] |
-| b3lyp       | \* | \* | \*  |      | \*    | Y   | \[14\] |
-| acm         | \* | \* | \*  |      | \*    | Y   | \[14\] |
-| becke97     | \* | \* | \*  |      | \*    | N   | \[15\] |
-| becke97-1   | \* | \* | \*  |      | \*    | N   | \[11\] |
-| becke97-2   | \* | \* | \*  |      | \*    | N   | \[22\] |
-| becke97-3   | \* | \* | \*  |      | \*    | N   | \[30\] |
-| becke97-d   | \* | \* | \*  |      | \*    | N   | \[45\] |
-| becke98     | \* | \* | \*  |      | \*    | N   | \[16\] |
-| pbe0        | \* | \* | \*  |      | \*    | Y   | \[17\] |
-| mpw1k       | \* | \* | \*  |      | \*    | Y   | \[25\] |
-| xmvs15      | \* |    |     | \*   |       | N   | \[55\] |
-| hle16       | \* | \* | \*  |      | \*    | Y   | \[56\] |
-| scan        | \* | \* | \*  | \*   |       | N   | \[57\] |
-| scanl       | \* | \* | \*  | \*   |       | N   | \[58\] |
-| revm06-L    | \* | \* | \*  | \*   |       | N   | \[59\] |
-| revm06      | \* | \* | \*  | \*   | \*    | N   | \[60\] |
-
+| slater      | *  |    |     |      |       | Y   |  [1]   |
+| vwn_1       |    | * |     |      |       | Y   |  [2]   |
+| vwn_2       |    | * |     |      |       | Y   |  [2]   |
+| vwn_3       |    | * |     |      |       | Y   |  [2]   |
+| vwn_4       |    | * |     |      |       | Y   |  [2]   |
+| vwn_5       |    | * |     |      |       | Y   |  [2]   |
+| vwn_1_rpa   |    | * |     |      |       | Y   |  [2]   |
+| perdew81    |    | * |     |      |       | Y   |  [3]   |
+| pw91lda     |    | * |     |      |       | Y   |  [4]   |
+| xbecke86b   | * |    | *  |      |       | N   |  [54]  |
+| becke88     | * |    | *  |      |       | Y   |  [5]   |
+| xperdew86   | * |    | *  |      |       | N   |  [53]  |
+| xperdew91   | * |    | *  |      |       | Y   |  [6]   |
+| xpbe96      | * |    | *  |      |       | Y   |  [7]   |
+| gill96      | * |    | *  |      |       | Y   |  [8]   |
+| optx        | * |    | *  |      |       | N   |  [20]  |
+| mpw91       | * |    | *  |      |       | Y   |  [23]  |
+| xft97       | * |    | *  |      |       | N   |  [24]  |
+| rpbe        | * |    | *  |      |       | Y   |  [33]  |
+| revpbe      | * |    | *  |      |       | Y   |  [34]  |
+| xpw6b95     | * |    | *  |      |       | N   |  [36]  |
+| xpwb6k      | * |    | *  |      |       | N   |  [36]  |
+| perdew86    |    | * | *  |      |       | Y   |  [9]   |
+| lyp         |    | * | *  |      |       | Y   |  [10]  |
+| perdew91    |    | * | *  |      |       | Y   |  [6]   |
+| cpbe96      |    | * | *  |      |       | Y   |  [7]   |
+| cft97       |    | * | *  |      |       | N   |  [24]  |
+| op          |    | * | *  |      |       | N   |  [31]  |
+| hcth        | * | * | *  |      |       | N   |  [11]  |
+| hcth120     | * | * | *  |      |       | N   |  [12]  |
+| hcth147     | * | * | *  |      |       | N   |  [12]  |
+| hcth407     | * | * | *  |      |       | N   |  [19]  |
+| becke97gga1 | * | * | *  |      |       | N   |  [18]  |
+| hcthp14     | * | * | *  |      |       | N   |  [21]  |
+| ft97        | * | * | *  |      |       | N   |  [24]  |
+| htch407p    | * | * | *  |      |       | N   |  [27]  |
+| bop         | * | * | *  |      |       | N   |  [31]  |
+| pbeop       | * | * | *  |      |       | N   |  [32]  |
+| xpkzb99     | * |    |     | *   |       | N   |  [26]  |
+| cpkzb99     |    | * |     | *   |       | N   |  [26]  |
+| xtpss03     | * |    |     | *   |       | N   |  [28]  |
+| ctpss03     |    | * |     | *   |       | N   |  [28]  |
+| bc95        |    | * |     | *   |       | N   |  [33]  |
+| cpw6b95     |    | * |     | *   |       | N   |  [36]  |
+| cpwb6k      |    | * |     | *   |       | N   |  [36]  |
+| xm05        | * |    |     | *   | *    | N   |  [37]  |
+| cm05        |    | * |     | *   |       | N   |  [37]  |
+| m05-2x      | * | * |     | *   | *    | N   |  [38]  |
+| xm05-2x     | * |    |     | *   | *    | N   |  [38]  |
+| cm05-2x     |    | * |     | *   |       | N   |  [38]  |
+| xctpssh     |    |    |     | *   | *    | N   |  [29]  |
+| bb1k        |    |    |     | *   | *    | N   |  [34]  |
+| mpw1b95     |    |    |     | *   | *    | N   |  [35]  |
+| mpwb1k      |    |    |     | *   | *    | N   |  [35]  |
+| pw6b95      |    |    |     | *   | *    | N   |  [36]  |
+| pwb6k       |    |    |     | *   | *    | N   |  [36]  |
+| m05         |    |    |     | *   | *    | N   |  [37]  |
+| vs98        |    |    |     | *   | *    | N   |  [41]  |
+| xvs98       | * |    |     | *   |       | N   |  [41]  |
+| cvs98       |    | * |     | *   |       | N   |  [41]  |
+| m06-L       | * | * |     | *   |       | N   |  [40]  |
+| xm06-L      | * |    |     | *   |       | N   |  [40]  |
+| cm06-L      |    | * |     | *   |       | N   |  [40]  |
+| m06-hf      |    |    |     | *   | *    | N   |  [41]  |
+| xm06-hf     | * |    |     | *   | *    | N   |  [41]  |
+| cm06-hf     |    | * |     | *   |       | N   |  [41]  |
+| m06         |    |    |     | *   | *    | N   |  [42]  |
+| xm06        | * |    |     | *   | *    | N   |  [42]  |
+| cm06        |    | * |     | *   |       | N   |  [42]  |
+| m06-2x      |    |    |     | *   | *    | N   |  [42]  |
+| xm06-2x     | * |    |     | *   | *    | N   |  [42]  |
+| cm06-2x     |    | * |     | *   |       | N   |  [42]  |
+| cm08-hx     |    | * |     | *   |       | N   |  [46]  |
+| xm08-hx     | * |    |     | *   |       | N   |  [46]  |
+| m08-hx      | * | * |     | *   | *    | N   |  [46]  |
+| cm08-so     |    | * |     | *   |       | N   |  [46]  |
+| xm08-so     | * |    |     | *   |       | N   |  [46]  |
+| m08-so      | * | * |     | *   | *    | N   |  [46]  |
+| cm11        |    | * |     | *   |       | N   |  [47]  |
+| xm11        | * |    |     | *   |       | N   |  [47]  |
+| m11         | * | * |     | *   | *    | N   |  [47]  |
+| cm11-l      |    | * |     | *   |       | N   |  [48]  |
+| xm11-l      | * |    |     | *   |       | N   |  [48]  |
+| m11-l       | * | * |     | *   |       | N   |  [48]  |
+| csogga      |    | * | *  |      |       | N   |  [49]  |
+| xsogga      | * |    | *  |      |       | N   |  [49]  |
+| sogga       | * | * | *  |      |       | N   |  [49]  |
+| csogga11    |    | * | *  |      |       | N   |  [50]  |
+| xsogga11    | * |    | *  |      |       | N   |  [50]  |
+| sogga11     | * | * | *  |      |       | N   |  [50]  |
+| csogga11-x  |    | * |     |      |       | N   |  [51]  |
+| xsogga11-x  | * |    | *  |      |       | N   |  [51]  |
+| sogga11-x   | * | * | *  |      | *    | N   |  [51]  |
+| dldf        | * | * |     | *   | *    | N   |  [52]  |
+| beckehandh  | * | * |     |      | *    | Y   |  [13]  |
+| b3lyp       | * | * | *  |      | *    | Y   |  [14]  |
+| acm         | * | * | *  |      | *    | Y   |  [14]  |
+| becke97     | * | * | *  |      | *    | N   |  [15]  |
+| becke97-1   | * | * | *  |      | *    | N   |  [11]  |
+| becke97-2   | * | * | *  |      | *    | N   |  [22]  |
+| becke97-3   | * | * | *  |      | *    | N   |  [30]  |
+| becke97-d   | * | * | *  |      | *    | N   |  [45]  |
+| becke98     | * | * | *  |      | *    | N   |  [16]  |
+| pbe0        | * | * | *  |      | *    | Y   |  [17]  |
+| mpw1k       | * | * | *  |      | *    | Y   |  [25]  |
+| xmvs15      | * |    |     | *   |       | N   |  [55]  |
+| hle16       | * | * | *  |      | *    | Y   |  [56]  |
+| scan        | * | * | *  | *   |       | N   |  [57]  |
+| scanl       | * | * | *  | *   |       | N   |  [58]  |
+| revm06-L    | * | * | *  | *   |       | N   |  [59]  |
+| revm06      | * | * | *  | *   | *    | N   |  [60]  |  
+  
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
 the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
 The column 2nd refers to second derivatives of the energy with respect
-to nuclear position.
+to nuclear position.  
 
 
 
@@ -586,31 +586,32 @@ have the ability to set the local part of these metaGGA functionals.
 
 ### Range-Separated Functionals
 
-Using the Ewald
-decomposition
+Using the Ewald decomposition
 
-<img alt="$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="254.98902pt" height="33.14091pt"/>
-
+<img alt="$$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$$" src="svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="254.98902pt" height="33.14091pt"/>
+eee  
+<img alt="$$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$$" src="svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="80%" />
+eee 
 we can split the the Exchange interaction as
 
-<img alt="$E_{X} = E_X^{LR} + E_X^{SR}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7b23a639e12d5c9a1bfa2148db98ab10.svg?invert_in_darkmode&sanitize=true" align=middle width="130.9704pt" height="27.59823pt"/>
+<img alt="$$E_{X} = E_X^{LR} + E_X^{SR}$$" src="svgs/7b23a639e12d5c9a1bfa2148db98ab10.svg?invert_in_darkmode&sanitize=true" align=middle width="130.9704pt" height="27.59823pt"/>
 
 Therefore the long-range HF Exchange energy
 becomes
 
-<img alt="$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>  
+<img alt="$$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$" src="svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>  
   
 ```
  cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
 ```
-`cam` represents the attenuation parameter <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> , `cam_alpha` and
-`cam_beta` are parameters <img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> and <img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/> that control the
+`cam` represents the attenuation parameter <img alt="\(\mu\)" src="svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> , `cam_alpha` and
+`cam_beta` are parameters <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> and <img alt="\(\beta\)" src="svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/> that control the
 amount of short-range DFT and long-range HF Exchange according to the
-Ewald decomposition. As <img alt="$r_{12} \rightarrow 0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8175ba1917135d1efdde5463e7eb7c98.svg?invert_in_darkmode&sanitize=true" align=middle width="55.01331pt" height="21.10812pt"/>, the HF exchange
-fraction is <img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>, while the DFT exchange fraction is
-<img alt="$(1-\alpha)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/491890f3829ee2642d52fc90dd9a270f.svg?invert_in_darkmode&sanitize=true" align=middle width="51.506895pt" height="24.56553pt"/>. As <img alt="$r_{12} \rightarrow \infty$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0e7cebce699a3e05c018ea42a78a091.svg?invert_in_darkmode&sanitize=true" align=middle width="63.201765pt" height="14.10255pt"/>, the HF exchange
-fraction approaches <img alt="$\alpha + \beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c1a73141d41bf7fb1026a4ac24f6110a.svg?invert_in_darkmode&sanitize=true" align=middle width="40.708305pt" height="22.74591pt"/> and the DFT exchange fraction
-approaches <img alt="$(1- \alpha - \beta)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5457bd6eac3dc5ac9a603bfc82e48e38.svg?invert_in_darkmode&sanitize=true" align=middle width="81.681105pt" height="24.56553pt"/>. In the HSE functional, the HF part
+Ewald decomposition. As <img alt="\(r_{12} \rightarrow 0\)" src="svgs/8175ba1917135d1efdde5463e7eb7c98.svg?invert_in_darkmode&sanitize=true" align=middle width="55.01331pt" height="21.10812pt"/>, the HF exchange
+fraction is <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>, while the DFT exchange fraction is
+<img alt="\((1-\alpha)\)" src="svgs/491890f3829ee2642d52fc90dd9a270f.svg?invert_in_darkmode&sanitize=true" align=middle width="51.506895pt" height="24.56553pt"/>. As <img alt="\(r_{12} \rightarrow \infty\)" src="svgs/c0e7cebce699a3e05c018ea42a78a091.svg?invert_in_darkmode&sanitize=true" align=middle width="63.201765pt" height="14.10255pt"/>, the HF exchange
+fraction approaches <img alt="\(\alpha + \beta\)" src="svgs/c1a73141d41bf7fb1026a4ac24f6110a.svg?invert_in_darkmode&sanitize=true" align=middle width="40.708305pt" height="22.74591pt"/> and the DFT exchange fraction
+approaches <img alt="\((1- \alpha - \beta)\)" src="svgs/5457bd6eac3dc5ac9a603bfc82e48e38.svg?invert_in_darkmode&sanitize=true" align=middle width="81.681105pt" height="24.56553pt"/>. In the HSE functional, the HF part
 is short-ranged and DFT is long-ranged.
 
 Range separated functionals (or long-range corrected or LC) can be
@@ -799,7 +800,7 @@ For details of the theory, please see the following reference:
 
 The keyword `LB94` will correct the asymptotic region of the XC definition
 of exchange-correlation potential by the van-Leeuwen-Baerends
-exchange-correlation potential that has the correct <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> asymptotic
+exchange-correlation potential that has the correct <img alt="\(-1/r\)" src="svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> asymptotic
 behavior. The total energy will be computed by the XC definition of
 exchange-correlation functional. This scheme is known to tend to
 overcorrect the deficiency of most uncorrected exchange-correlation
@@ -981,7 +982,7 @@ tolerance to 0.01 would be,
 Direct inversion of the iterative subspace with extrapolation of up to
 10 Fock matrices is a default optimization procedure. For large
 molecular systems the amount of available memory may preclude the
-ability to store this number of <img alt="$N^2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4c87ee198ded31321f89b44a38a0ad5a.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> arrays in global memory. The
+ability to store this number of <img alt="\(N^2\)" src="svgs/4c87ee198ded31321f89b44a38a0ad5a.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> arrays in global memory. The
 user may then specify the number of Fock matrices to be used in the
 extrapolation (must be greater than three (3) to be effective). To set
 the number of Fock matrices stored and used in the extrapolation
@@ -1357,7 +1358,7 @@ angular points as indicated by the table below:
 
 <center>
 
-| <img alt="$IANGQUAD$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1155c630b831ae7b88cb7f5dea440245.svg?invert_in_darkmode&sanitize=true" align=middle width="100.81599pt" height="22.38192pt"/> | <img alt="$N_{angular}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d8da1653fe865d485d10dc0e3051ed3f.svg?invert_in_darkmode&sanitize=true" align=middle width="60.64839pt" height="22.38192pt"/> | <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/> |
+| IANGQUAD |N<sub>angular</sub>|l|
 | ------------ | --------------- | ----- |
 | 1            | 38              | 9     |
 | 2            | 50              | 11    |
@@ -1387,8 +1388,8 @@ angular points as indicated by the table below:
 | 26           | 4334            | 113   |
 | 27           | 4802            | 119   |
 | 28           | 5294            | 125   |
-| 29           | 5810            | 131   |
-
+| 29           | 5810            | 131   |  
+  
 List of Lebedev quadratures
 
 </center>
@@ -1415,7 +1416,7 @@ GRID [(becke||erf1||erf2||ssf) default erf1]
 
 Erf*n* partitioning functions
 
-<img alt="$\begin{array}{lcl}&#10;  w_A(r) &amp; = &amp; \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\&#10;  \mu^\prime_{AB} &amp; = &amp; \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\&#10;  \mu_{AB} &amp; = &amp; \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|}&#10;\end{array}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a6929e5f4f1fbe470b2d9bf0fe184888.svg?invert_in_darkmode&sanitize=true" align=middle width="268.96155pt" height="75.55119pt"/>
+<img alt="$$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\  \mu^\prime_{AB} & = & \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\  \mu_{AB} & = & \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|} \end{array}$$" src="svgs/a6929e5f4f1fbe470b2d9bf0fe184888.svg?invert_in_darkmode&sanitize=true" align=middle width="268.96155pt" height="75.55119pt"/>
 
 ### Radial grids
 ```
@@ -1451,7 +1452,7 @@ keywords described below.
 
 The input parameter accCoul is used to define the tolerance in Schwarz
 screening for the Coulomb integrals. Only integrals with estimated
-values greater than <img alt="$10^{(-accCoul)}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/564fa44e7bfa893835654c63524ec3fd.svg?invert_in_darkmode&sanitize=true" align=middle width="84.27243pt" height="29.12679pt"/> are evaluated.
+values greater than <img alt="\(10^{(-accCoul)}\)" src="svgs/564fa44e7bfa893835654c63524ec3fd.svg?invert_in_darkmode&sanitize=true" align=middle width="84.27243pt" height="29.12679pt"/> are evaluated.
 ```
  TOLERANCES accCoul <integer accCoul default 8>
 ```
@@ -1665,34 +1666,34 @@ not just bq.
 ```
 When systems with high dependence on van der Waals interactions are
 computed, the dispersion term may be added empirically through
-long-range contribution DFT-D, i.e. <img alt="$E_{DFT-D}=E_{DFT-KS}+E_{disp}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d77ef4554f554b6ea525e8857f0dd78e.svg?invert_in_darkmode&sanitize=true" align=middle width="217.894545pt" height="22.38192pt"/>,
+long-range contribution DFT-D, i.e. <img alt="$$E_{DFT-D}=E_{DFT-KS}+E_{disp}$$" src="svgs/d77ef4554f554b6ea525e8857f0dd78e.svg?invert_in_darkmode&sanitize=true" align=middle width="217.894545pt" height="22.38192pt"/>,
 where:
 
-<img alt="$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (R_{ij}/R_{vdw}-1)} \right)^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3666d4a12cd1c98a47524620f9a0e3c5.svg?invert_in_darkmode&sanitize=true" align=middle width="425.340795pt" height="39.36735pt"/>
+<img alt="$$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$" src="svgs/3666d4a12cd1c98a47524620f9a0e3c5.svg?invert_in_darkmode&sanitize=true" align=middle width="425.340795pt" height="39.36735pt"/>
 
-In this equation, the <img alt="$s_6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> term depends in the functional and basis
-set used, <img alt="$C_6^{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1d08f5f7b2ad785243464d2366c2de89.svg?invert_in_darkmode&sanitize=true" align=middle width="23.59599pt" height="30.9705pt"/> is the dispersion coefficient between pairs of
-atoms. <img alt="$R_{vdw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/> and <img alt="$R_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/52acdd56bf90ef8224aaf3db0446f911.svg?invert_in_darkmode&sanitize=true" align=middle width="23.15016pt" height="22.38192pt"/> are related with van der Waals atom
-radii and the nucleus distance respectively. The <img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> value
+In this equation, the <img alt="\(s_6\)" src="svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> term depends in the functional and basis
+set used, <img alt="\(C_6^{ij}\)" src="svgs/1d08f5f7b2ad785243464d2366c2de89.svg?invert_in_darkmode&sanitize=true" align=middle width="23.59599pt" height="30.9705pt"/> is the dispersion coefficient between pairs of
+atoms. <img alt="\(R_{vdw}\)" src="svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/> and <img alt="\(R_{ij}\)" src="svgs/52acdd56bf90ef8224aaf3db0446f911.svg?invert_in_darkmode&sanitize=true" align=middle width="23.15016pt" height="22.38192pt"/> are related with van der Waals atom
+radii and the nucleus distance respectively. The <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> value
 contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>:* 
 
-1.  <img alt="$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  
+1.  <img alt="$$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$" src="svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  
 where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
 J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
 Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use vdw 0)  
 
-2.  <img alt="$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use vdw 1)  
+2.  <img alt="$$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$" src="svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use vdw 1)  
 
-3.  <img alt="$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use vdw 2)  
+3.  <img alt="$$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$" src="svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use vdw 2)  
 
-Note that in each option there is a certain set of <img alt="$C_6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> and
-<img alt="$R_{vdw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/>. ALso note that Grimme only defined parameters for elements
-up to Z=54 for the dispersion correction above. <img alt="$C_6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> values for
+Note that in each option there is a certain set of <img alt="\(C_6\)" src="svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> and
+<img alt="\(R_{vdw}\)" src="svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/>. ALso note that Grimme only defined parameters for elements
+up to Z=54 for the dispersion correction above. <img alt="\(C_6\)" src="svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> values for
 elements above Z=54 have been set to zero.
 
-For options vdw 1 and vdw 2 , there are <img alt="$s_6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> values by default for
+For options vdw 1 and vdw 2 , there are <img alt="\(s_6\)" src="svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> values by default for
 some functionals and triple-zeta plus double polarization basis set
 (TZV2P):
 
@@ -1709,7 +1710,7 @@ E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup
 
 
 This new dispersion correction covers elements through Z=94.
-<img alt="$C^{ij}_{n} (n=6,8)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4ac510c831b43d15c8ac9326e45069b3.svg?invert_in_darkmode&sanitize=true" align=middle width="92.56137pt" height="27.10224pt"/> are coordination and geometry dependent. Details
+<img alt="\(C^{ij}_{n} (n=6,8)\)" src="svgs/4ac510c831b43d15c8ac9326e45069b3.svg?invert_in_darkmode&sanitize=true" align=middle width="92.56137pt" height="27.10224pt"/> are coordination and geometry dependent. Details
 about the functional form can be found in S. Grimme, J. Antony, S.
 Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010).
 
@@ -1865,7 +1866,7 @@ designed for the same size core, i.e. don't use a small core ECP
 potential with a large core SO potential (it will produce erroneous
 results).
 
-The following is an example of a calculation of <img alt="$UO_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/06f075d510ceac444f473cefd7f488b2.svg?invert_in_darkmode&sanitize=true" align=middle width="31.993995pt" height="22.38192pt"/>:
+The following is an example of a calculation of <img alt="\(UO_2\)" src="svgs/06f075d510ceac444f473cefd7f488b2.svg?invert_in_darkmode&sanitize=true" align=middle width="31.993995pt" height="22.38192pt"/>:
 ```
 start uo2_sodft  
 echo  
