@@ -44,7 +44,7 @@ explicit coordinates are specified.
 <!-- end list -->
 
   - **select** ... - this directive allows to selectively load parts
-    of the geoemtry in the file within aspecified frame. Selections can
+    of the geometry in the file within a specified frame. Selections can
     be based on atom index (**id**), atom name (**name**), and for pdb
     files can also include residue index (**resi**) and residue name
     (**rname**). Atom and residue name selection are based on an *exact*
