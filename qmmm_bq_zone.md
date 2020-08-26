@@ -1,7 +1,7 @@
-\_\_NOTITLE\_\_
 
-`bqzone <double precision default 9.0d0>`
-
+```
+bqzone <double precision default 9.0d0>
+```
 This directive defines the radius of the zone (in angstroms) around the
 quantum region where classical residues/segments will be allowed to
 interact with quantum region both electrostatically and through Van der
