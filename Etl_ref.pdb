@@ -1,0 +1,17 @@
+HEADER
+TITLE     
+TITLE    2
+TITLE    3
+REMARK   4 XXXX COMPLIES WITH FORMAT V. 2.1, 25-OCT-1996
+CRYST1    4.256    2.440    1.780  90.00  90.00  90.00
+ATOM      1  C1  etl     1      -1.180  -0.393   0.000        0.00     C
+ATOM      2 2H1  etl     1      -2.128   0.155  -0.000        0.00     H
+ATOM      3 3H1  etl     1      -1.130  -1.030   0.887        0.00     H
+ATOM      4 4H1  etl     1      -1.130  -1.030  -0.887        0.00     H
+ATOM      5  C2  etl     1       0.006   0.573   0.000        0.00     C
+ATOM      6 2H2  etl     1      -0.042   1.220   0.890        0.00     H
+ATOM      7 3H2  etl     1      -0.042   1.220  -0.890        0.00     H
+ATOM      8  O   etl     1       1.201  -0.271  -0.000        0.00     O
+ATOM      9  H   etl     1       1.995   0.329  -0.000        0.00     H
+TER
+END
