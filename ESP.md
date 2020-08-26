@@ -7,12 +7,12 @@ selected grid points.
 
 The ESP module is specified by the NWChem task directive
 ```
-task esp
+task esp
 ```
 The input for the module is taken from the ESP input block
 ```
 ESP  
-  ... 
+  ... 
 END
 ```
 ## Grid specification
@@ -26,48 +26,48 @@ parameters determine the selection of grid points.
   - If a grid file is found, the grid will be read from that file. If no
     grid file is found, or the keyword
 ```
-       recalculate  
+       recalculate  
 ``` 
-is given, the grid and the electrostatic potential is recalculated.`
+is given, the grid and the electrostatic potential is recalculated.
 
   - The extent of the grid is determined by
 ```
-       range <real rcut> 
+       range <real rcut> 
 ```  
-where rcut is the maximum distance in nm between a grid point and any of the atomic centers. 
-When omitted, a default value for rcut of 0.3 nm is used.
+where rcut is the maximum distance in nm between a grid point and any of the atomic centers. 
+When omitted, a default value for rcut of 0.3 nm is used.
 
   - The grid spacing is specified by
 ```
-       spacing <real spac>  
- ``` 
-where spac is the grid spacing in _nm_ for the regularly spaced grid points.
-If not specified, a default spacing of 0.05 nm is used.
+       spacing <real spac>  
+``` 
+where spac is the grid spacing in _nm_ for the regularly spaced grid points.
+If not specified, a default spacing of 0.05 nm is used.
 
   - The van der Waals radius of an element can be specified by
 ```
-       radius <integer iatnum> <real atrad>  
- ``` 
-where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination.  
-Default values will be used for atoms not specified.
+       radius <integer iatnum> <real atrad>  
+``` 
+where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination.  
+Default values will be used for atoms not specified.
 
   - The probe radius in nm determining the envelope around the molecule
     is specified by
-
-`       probe <real probe default 0.07>`
-
+```
+       probe <real probe default 0.07>
+```
   - The distance between atomic center and probe center can be
     multiplied by a constant factor specified
 by
-
-`       factor <real factor default 1.0>`  
-  
-All grid points are discarded that lie within a distance factor*(radius(i)+probe) from any atom **i**.
+```
+       factor <real factor default 1.0>
+```  
+All grid points are discarded that lie within a distance factor*(radius(i)+probe) from any atom **i**.
 
   - Schwarz screening is applied using
-
-`      screen [<real scrtol default 1.0D-5>]`
-
+```
+      screen [<real scrtol default 1.0D-5>]
+```
 ## Constraints
 
 Additional constraints to the partial atomic charges can be imposed
@@ -75,34 +75,34 @@ during the fitting procedure.
 
   - The net charge of a subset of atoms can be constrained
 using
-
-`       constrain <real charge {<integer iatom>}`  
-  
-where charge is the net charge of the set of atoms {iatom}. A negative atom number iatom can be  
-used to specify that the partial charge of that atom is substracted in the sum for the set.
+```
+       constrain <real charge {<integer iatom>}
+```  
+where charge is the net charge of the set of atoms {iatom}. A negative atom number iatom can be  
+used to specify that the partial charge of that atom is substracted in the sum for the set.
 
   - The net charge of a sequence of atoms can be constrained using
 ```
-       constrain <real charge> <integer iatom> through <integer jatom> 
+       constrain <real charge> <integer iatom> through <integer jatom> 
 ```  
-where charge is the net charge of the set of atoms {[iatom:jatom]}.
+where charge is the net charge of the set of atoms {[iatom:jatom]}.
 
   - A group of atoms can be constrained to have the same charge with
-
-`       constrain equal {<integer iatom>}`
-
+```
+       constrain equal {<integer iatom>}
+```
   - The individual charge of a group of atoms can be constrained to be equal to those of a second group of atoms
 with
 ```
-      constrain group  <integer iatom> <integer jatom>  to  <integer katom> <integer latom>
+      constrain group  <integer iatom> <integer jatom>  to  <integer katom> <integer latom>
 ```  
-resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k atom+1, ... for atoms jatom and latom.
+resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k atom+1, ... for atoms jatom and latom.
 
   - A special constraint
-
-`       constrain xhn  <integer iatom> {<integer jatom>}`  
-  
-can be used to constrain the set {iatom,{jatom}} to zero charge, and constrain all atoms  in {jatom} to have the same charge. This can be used, for example, to restrain a methyl    group to zero charge, and have all hydrogen carrying identical charges.
+```
+       constrain xhn  <integer iatom> {<integer jatom>}
+```  
+can be used to constrain the set {iatom,{jatom}} to zero charge, and constrain all atoms  in {jatom} to have the same charge. This can be used, for example, to restrain a methyl    group to zero charge, and have all hydrogen carrying identical charges.
 
 ## Restraints
 
@@ -111,9 +111,9 @@ fitting procedure.
 
   - The directive for charge restraining is
 ```
-      restrain [hfree] (harmonic [<real scale>] | \ 
-      hyperbolic [<real scale> [<real tight>]]  \  
-       [maxiter <integer maxit>]  [tolerance <real toler>])
+      restrain [hfree] (harmonic [<real scale>] | \ 
+      hyperbolic [<real scale> [<real tight>]]  \  
+       [maxiter <integer maxit>]  [tolerance <real toler>])
 ```
 Here hfree can be specified to exclude hydrogen atoms from the
 restaining procedure. Variable scale is the strength of the restraint
