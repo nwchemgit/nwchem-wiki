@@ -8,6 +8,9 @@ Links to material of past NWChem Tutorials
 
 [Tutorial 2019 EMSL/ARM Aerosol Summer School](tut2019/README.md)
 
+# Educational material with NWChem exercises
+
+https://www.theochem.ru.nl/quantumchemistry
 
 
 
