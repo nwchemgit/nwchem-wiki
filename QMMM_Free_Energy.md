@@ -13,7 +13,7 @@ containing several calculation stages. Solid understanding of free
 energy calculations is required to achieve a meaningful calculation.**
 
 Description of the implemented methodology can be found in [the
-following paper](http://jcp.aip.org/jcpsa6/v127/i5/p051102_s1). In this
+following paper](https://dx.doi.org/10.1063/1.2768343). In this
 approach the free energy difference between the two configurations of
 the QM region (e.g. A and
 B):
@@ -102,21 +102,21 @@ where
 </center>
 
 The solvation free energy difference can be then written as sum of
-differences for the subintervals \(\,\! [\lambda_i\to\lambda_{i+1}]\):
+differences for the subintervals \(\,\! [\lambda_i\to\lambda_{i+1}]\)  :
 
 <center>
 
-\(\begin{matrix}
+\(
  \Delta W_{A\to B}^{\rm esp} = \sum_{i=0}^{n}\Delta W_{\lambda_i\to\lambda_{i+1}}^{\rm esp}
-\end{matrix}\)
+\)
 
 </center>
 
 To expedite the calculation it is convenient to use a double wide
 sampling strategy where the free energy differences for the intervals
-\(\,\! [\lambda_{i-1}\to\lambda_{i}]\) and
-\(\,\! [\lambda_i\to\lambda_{i+1}]\) are calculated simultaneously by
-sampling around \(\,\!\lambda_{i}\) point. In the simplest case where we
+\(\,\! [\lambda_{i-1}\to\lambda_{i}]\)  and
+\(\,\! [\lambda_i\to\lambda_{i+1}]\)  are calculated simultaneously by
+sampling around \(\,\!\lambda_{i}\)   point. In the simplest case where we
 use two subintervals
 (n=2)
 
@@ -169,7 +169,7 @@ input blocks)
 `set qmmm:fep_geom xxx_A.xyzi xxx_B.xyzi`
 `set qmmm:fep_esp  xxx_A.esp xxx_B.esp`
 
-The current interpolation interval \(\,\! [\lambda_i\to\lambda_{i+1}]\)
+The current interpolation interval \(\,\! [\lambda_i\to\lambda_{i+1}]\)  
 for which free energy difference is calculated is defined as
 
 `set qmmm:fep_lambda lambda_i lambda_i+1`
@@ -179,8 +179,8 @@ To enable double wide sampling use the following directive
 `set qmmm:fep_deriv .true.`
 
 If set, the above directive will perform both
-\(\,\! [\lambda_i\to\lambda_{i+1}]\) and
-\(\,\! [\lambda_i\to\lambda_{i-1}]\) calculations, where
+\(\,\! [\lambda_i\to\lambda_{i+1}]\)  and
+\(\,\! [\lambda_i\to\lambda_{i-1}]\)  calculations, where
 
 <center>
 

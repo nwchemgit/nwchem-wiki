@@ -1,13 +1,15 @@
-QMMM\_Single\_Point\_Calculations ==== The task directive for QM/MM
+## QMMM\_Single\_Point\_Calculations
+
+The task directive for QM/MM
 single point energy and gradient calculations is given by
-
-`task qmmm `<qmtheory>` energy`
-
+```
+task qmmm <qmtheory> energy
+```
 or
-
-`task qmmm `<qmtheory>` gradient [numerical]`
-
-where qmtheory refers to the level of QM theory (e.g. dft, tce, mp2,
+```
+task qmmm <qmtheory> gradient [numerical]
+```
+where `qmtheory` refers to the level of QM theory (e.g. dft, tce, mp2,
 ...).
 
 The ground state QM/MM energy calculations should be possible with all
@@ -24,4 +26,4 @@ calculations include
   - [link\_atoms](qmmm_link_atoms)
   - [link\_ecp](qmmm_link_ecp).
 
-{{:qmmm_example3}}
+[qmmm_example3](qmmm_example3)

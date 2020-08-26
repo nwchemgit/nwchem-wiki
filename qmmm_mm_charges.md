@@ -1,9 +1,9 @@
-\_\_NOTITLE\_\_
 
-`mm_charges [exclude <(none||all||linkbond||linkbond_H) default none>]`  
-`           [expand  <none||all||solute||solvent> default none]`  
-`           [update  <integer default 0>]`
-
+```
+mm_charges [exclude <(none||all||linkbond||linkbond_H) default none>]
+           [expand  <none||all||solute||solvent> default none]
+           [update  <integer default 0>]
+```
 This directive controls treatment of classical point (MM) charges that
 are interacting with QM region. For most QM/MM applications the use of
 directive will be not be necessary. Its absence would be simply mean

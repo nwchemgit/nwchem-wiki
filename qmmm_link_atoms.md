@@ -1,7 +1,7 @@
-\_\_NOTITLE\_\_
 
-`link_atoms <(hydrogen||halogen) default halogen>`
-
+```
+link_atoms <(hydrogen||halogen) default halogen>
+```
 This directive controls the treatment of bonds crossing the boundary
 between quantum and classical regions. The use of hydrogen keyword will
 trigger truncation of such bonds with hydrogen link atoms. The position
