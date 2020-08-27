@@ -19,14 +19,14 @@ https://github.com/nwchemgit/nwchem/
   - **Downloading**
 
 The development version (git master branch) of NWChem can be downloaded using the command
-
-`    % git clone https://github.com/nwchemgit/nwchem`
-
+```
+    % git clone https://github.com/nwchemgit/nwchem
+```
 A branch version cane be downloaded by using the -b option of git clone. For example,
 the hotfix/release-6-8 branch can be downloaded with the command
 
 ```
-git clone -b hotfix/release-6-8  \
+git clone -b hotfix/release-6-8  \
 https://github.com/nwchemgit/nwchem nwchem-6.8.1
 ```
 
@@ -56,7 +56,10 @@ restricted. New potential developers should contact members of the
 NWChem Core Developer
 Team.
 
-Before contributions from this new developer can be incorporated into NWChem, this person will have to provide written feedback that the contributions can be released within NWChem under a [ECL 2.0 open-source license(http://www.opensource.org/licenses/ecl2.php).
+Before contributions from this new developer can be incorporated into
+NWChem, this person will have to provide written feedback that the
+contributions can be released within NWChem under a
+[ECL 2.0 open-source license](http://www.opensource.org/licenses/ecl2.php).
 
 A (Trusted) Developer will receive the appropriate access to the
 nwchemgit github repository. If a Developer consistently incorporates
@@ -175,24 +178,24 @@ The source code in NWChem is documented using Doxygen in a number of
 places. In order to enable documentation for a given directory only a
 script has been created in
 
-` nwchem/contrib/doxygen/run_doxygen`
+` nwchem/contrib/doxygen/run_doxygen`
 
 This script can be run in any subdirectory of the NWChem source tree. It
 will automatically adapt the Doxygen configuration file for the
 directory it is run in and generate documentation for that directory and
 all its children. The documentation is generated in a subdirectory
-
-` doxydocs`
-
+```
+ doxydocs
+```
 and can be viewed, for example, by running
-
-` % firefox doxydocs/html/index.html`
-
+```
+ % firefox doxydocs/html/index.html
+```
 Doxygen has many capabilities and a number of them can be driven through
 the run\_doxygen script. Run
-
-`  % run_doxygen -h`
-
+```
+  % run_doxygen -h
+```
 for more details.
 
 ## Module specific details
@@ -357,8 +360,8 @@ Comments:
 #### Generating code for a functional
 
 One way to generate the code for a new functional to add is shown in
-workflow schematic [center|500px|NWXC code generation
-workflow](file:Code_generation_workflow.jpg)
+workflow schematic
+[NWXC code generation workflow](Code_generation_workflow.jpg)
 
 The step involved can be summarized as:
 
