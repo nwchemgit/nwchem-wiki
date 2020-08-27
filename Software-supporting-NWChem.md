@@ -79,6 +79,7 @@ feedback on this page content.
   - **QCengine** is a program executor and IO standardizer for quantum chemistry.<https://github.com/MolSSI/QCEngine>
   - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://github.com/aiidateam/aiida-nwchem>
   - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
+  - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/charmm/documentation/by-version/c42b1/params/doc/nwchem/>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
