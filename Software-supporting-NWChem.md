@@ -49,7 +49,7 @@ feedback on this page content.
     Properties <http://www-stone.ch.cam.ac.uk/documentation/camcasp/users_guide.pdf>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
-    <http://community.hartree.stfc.ac.uk/wiki/site/admin/chemshell.html>
+    <https://www.chemshell.org>
   - **PUPIL** allows developers to perform multi-scale simulations
     <http://pupil.sf.net>
   - **LICHEM** interfaces between QM and MM software
