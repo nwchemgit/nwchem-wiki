@@ -20,7 +20,7 @@ feedback on this page content.
     has complex builders available, users can create complex models and
     then submit NWChem simulations to HPCs. MAPS also allows easy
     analysis of NWChem output files
-    <http://www.scienomics.com/software/>
+    <https://www.scienomics.com/maps-platform/simulate/quantum/nwchem-plugin/>
   - **CULGI** computational platform
     <https://www.culgi.com/software/features-quantum-chemistry/>
   - **KiSThelP** predicts thermodynamic properties and rate constants
