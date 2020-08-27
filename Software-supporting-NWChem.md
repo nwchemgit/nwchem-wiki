@@ -78,6 +78,7 @@ feedback on this page content.
 <http://sobereva.com/soft/shermo/>
   - **QCengine** is a program executor and IO standardizer for quantum chemistry.<https://github.com/MolSSI/QCEngine>
   - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://github.com/aiidateam/aiida-nwchem>
+  - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
