@@ -76,6 +76,8 @@ feedback on this page content.
   - **BiKi Life Sciences** is a suite for Molecular Dynamics and related methods in Drug Discovery <http://www.bikitech.com/products/>
   - **Shermo** is a general code for calculating molecular thermodynamic properties 
 <http://sobereva.com/soft/shermo/>
+  - **QCengine** is a program executor and IO standardizer for quantum chemistry.<https://github.com/MolSSI/QCEngine>
+  - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://github.com/aiidateam/aiida-nwchem>
 
 
 ## Programs that can display or manipulate cube and/or Molden files
