@@ -14,8 +14,10 @@ See the [FAQ page](FAQ) for solutions to common issues.
 ```
 spcart_bra2etran: nbf_xj.ne.nbf_sj  (xj-sj) =                   5
 ```
+[https://groups.google.com/forum/#!topic/nwchem-forum/RA0tYxdfvaw](https://groups.google.com/forum/#!topic/nwchem-forum/RA0tYxdfvaw)
 [https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html](https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html)
 [https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817](https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817)
+
 
 Please use commands to install an updated version (as described
 at the [NWChem 7.0.0 release page](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.0-release))
@@ -25,7 +27,7 @@ sudo apt -y install curl  python3-dev gfortran  mpi-default-bin mpi-default-dev 
 curl -LJO https://github.com/nwchemgit/nwchem/releases/download/v7.0.0-release/nwchem-data_7.0.0-3_all.ubuntu_bionic.deb
 curl -LJO https://github.com/nwchemgit/nwchem/releases/download/v7.0.0-release/nwchem_7.0.0-3_amd64.ubuntu_bionic.deb
 
-sudo dpkg -i nwchem_7.0.0-3*_bionic.deb
+sudo dpkg -i nwchem-data_7.0.0-3*_bionic.deb  nwchem_7.0.0-3*_bionic.deb
 ```
 
 ###  Known bugs for NWChem 6.8
