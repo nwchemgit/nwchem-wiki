@@ -47,11 +47,11 @@ Gaussians with the form
 
 <img alt="$r^{2}U_{l}(r) = \,\! \sum_{k} A_{lk} r^{n_{lk}} e^{-B_{lk}r^{2}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c5efa393978245792459c2432ad67b91.svg?invert_in_darkmode&sanitize=true" align=middle width="205.499745pt" height="32.40633pt"/>
 
-where <img alt="$A_{lk}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/72d544248cd857e08096402ddc5482a0.svg?invert_in_darkmode&sanitize=true" align=middle width="23.72997pt" height="22.38192pt"/> is the contraction coefficient, <img alt="$n_{lk}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a98f361f1d272fcd4929943bddb95170.svg?invert_in_darkmode&sanitize=true" align=middle width="21.277245pt" height="14.10255pt"/> is the
-exponent of the *r* term (r-exponent), and <img alt="$B_{lk}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c5f2b952a02123253e6d270b9e0e77f9.svg?invert_in_darkmode&sanitize=true" align=middle width="23.86923pt" height="22.38192pt"/> is the Gaussian
-exponent. The <img alt="$n_{lk}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a98f361f1d272fcd4929943bddb95170.svg?invert_in_darkmode&sanitize=true" align=middle width="21.277245pt" height="14.10255pt"/> is shifted by 2, in accordance with most of the
-ECP literature and implementations, i.e., an <img alt="$n_{lk} = 0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e859f8ba1498afac2604c0eb406531a0.svg?invert_in_darkmode&sanitize=true" align=middle width="52.20006pt" height="21.10812pt"/> implies
-<img alt="$r^{-2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1fe06997290913ffa76973adc7fcc12a.svg?invert_in_darkmode&sanitize=true" align=middle width="24.608925pt" height="26.70657pt"/>. The current implementation allows <img alt="$n_{lk}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a98f361f1d272fcd4929943bddb95170.svg?invert_in_darkmode&sanitize=true" align=middle width="21.277245pt" height="14.10255pt"/> values of only
+where _A<sub>lk</sub>_ is the contraction coefficient, _n<sub>lk</sub>_ is the
+exponent of the *r* term (r-exponent), and _B<sub>lk</sub>_ is the Gaussian
+exponent. The _n<sub>lk</sub>_ is shifted by 2, in accordance with most of the
+ECP literature and implementations, i.e., an _n<sub>lk</sub>_ implies
+_r<sup>-2</sup>_. The current implementation allows _n<sub>lk</sub>_  values of only
 0, 1, or 2.
 
 ## Scalar ECPs
@@ -66,17 +66,17 @@ treated internally as a basis set. The form of the input for the ECP
 directive is as
 follows:
 ```
- ECP [<string name default "ecp basis">] \  
-       [print || noprint default print]  
-    <string tag> library [`<string tag_in_lib>] \  
-                 <string standard_set> [file <filename>] \  
-                 [except<string tag list>]  
-    <string tag> [nelec] <integer number_of_electrons_replaced>  
-       ...  
-    <string tag> <string shell_type>  
-    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
-       ...  
- END
+ ECP [<string name default "ecp basis">] \  
+       [print || noprint default print]  
+    <string tag> library [`<string tag_in_lib>] \  
+                 <string standard_set> [file <filename>] \  
+                 [except<string tag list>]  
+    <string tag> [nelec] <integer number_of_electrons_replaced>  
+       ...  
+    <string tag> <string shell_type>  
+    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
+       ...  
+ END
 ```
 ECPs are automatically segmented, even if general contractions are
 input. The projection operators defined in an ECP are spherical by
@@ -101,8 +101,8 @@ basis set input have the same function and syntax.
 As for regular basis sets, ECPs may be obtained from the standard
 library. For a complete list of basis sets and associated ECPs in the
 NWChem library see the [available basis
-sets](AvailableBasisSets) or the [EMSL Basis Set
-Exchange](https://bse.pnl.gov/bse/portal) for naming conventions and
+sets](AvailableBasisSets) or the [Basis Set
+Exchange](https://www.basissetexchange.org/) for naming conventions and
 their specifications.
 
 The keyword nelec allows the user to specify the number of core
@@ -118,65 +118,65 @@ etc.
 
 For example, the Christiansen, Ross and Ermler ARECPs are available in
 the standard basis set libary named "crenbl\_ecp". To perform a
-calculation on uranyl (<img alt="$UO_{2}^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dec79bbca67ebd692278b7396b08192.svg?invert_in_darkmode&sanitize=true" align=middle width="42.50433pt" height="28.83969pt"/>) with all-electron oxygen
+calculation on uranyl UO<sub>2</sub><sup>2+</sup> with all-electron oxygen
 (aug-cc-pvdz basis), and uranium with an ARECP and using the
 corresponding basis the following input can be used
 
 ```
- geometry
-   U 0 0  0
-   O 0 0  1.65
-   O 0 0 -1.65
- end
- basis 
-   U library crenbl_ecp
-   O library aug-cc-pvdz
- end
- ecp
-   U library crenbl_ecp
- end
+ geometry
+   U 0 0  0
+   O 0 0  1.65
+   O 0 0 -1.65
+ end
+ basis 
+   U library crenbl_ecp
+   O library aug-cc-pvdz
+ end
+ ecp
+   U library crenbl_ecp
+ end
 ```
 
-The following is an example of explicit input of an ECP for <img alt="$H_2CO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f7266bc89ebc0cca21bb8ad490bab33e.svg?invert_in_darkmode&sanitize=true" align=middle width="46.81545pt" height="22.38192pt"/>.
+The following is an example of explicit input of an ECP for H<sub>2</sub>CO.  
 It defines an ECP for the carbon and oxygen atoms in the molecule.
 
 ```
- ecp
-   C nelec 2 # ecp replaces 2 electrons on C
-   C ul      # d
-           1       80.0000000       -1.60000000
-           1       30.0000000       -0.40000000
-           2        0.5498205       -0.03990210
-  C s        # s - d 
-           0        0.7374760        0.63810832
-           0      135.2354832       11.00916230
-           2        8.5605569       20.13797020
-   C p       # p - d
-           2       10.6863587       -3.24684280
-           2       23.4979897        0.78505765
-   O nelec 2 # ecp replaces 2 electrons on O
-   O ul      # d 
-           1       80.0000000       -1.60000000
-           1       30.0000000       -0.40000000
-           2        1.0953760       -0.06623814
-   O s       # s - d
-           0        0.9212952        0.39552179
-           0       28.6481971        2.51654843
-           2        9.3033500       17.04478500
-   O p       # p - s 
-           2       52.3427019       27.97790770
-           2       30.7220233      -16.49630500
- end
+ ecp
+   C nelec 2 # ecp replaces 2 electrons on C
+   C ul      # d
+           1       80.0000000       -1.60000000
+           1       30.0000000       -0.40000000
+           2        0.5498205       -0.03990210
+  C s        # s - d 
+           0        0.7374760        0.63810832
+           0      135.2354832       11.00916230
+           2        8.5605569       20.13797020
+   C p       # p - d
+           2       10.6863587       -3.24684280
+           2       23.4979897        0.78505765
+   O nelec 2 # ecp replaces 2 electrons on O
+   O ul      # d 
+           1       80.0000000       -1.60000000
+           1       30.0000000       -0.40000000
+           2        1.0953760       -0.06623814
+   O s       # s - d
+           0        0.9212952        0.39552179
+           0       28.6481971        2.51654843
+           2        9.3033500       17.04478500
+   O p       # p - s 
+           2       52.3427019       27.97790770
+           2       30.7220233      -16.49630500
+ end
 ```
 
 Various ECPs without a local function are available, including those of
-the Stuttgart group. For those, no "ul" part needs to be defined. To
+the Stuttgart group. For those, no "_ul_" part needs to be defined. To
 define the absence of the local potential, simply specify one
 contraction with a zero coefficient:
 
 ```
-    <string tag> ul
-    2     1.00000     0.00000
+    <string tag> ul
+    2     1.00000     0.00000
 ```
 
 ## Spin-orbit ECPs
@@ -187,23 +187,23 @@ Hartree-Fock method is specified the spin-orbit input will be ignored.
 
 Spin-orbit ECPs are fitted in precisely the same functional form as the
 scalar RECPs and have the same properties, with the exception that there
-is no local potential ul, no *s* potential and no effective charge has
+is no local potential _u<sub>l</sub>_, no *s* potential and no effective charge has
 to be defined. Spin-orbit potentials are specified in the same way as
 ECPs except that the directive SO is used instead of ECP. Note that
 there currently are no spin-orbit ECPs defined in the standard NWChem
 library. The SO directive is as
 follows:
 ```
- SO [<string name default "so basis">] \  
-       [print || noprint default print]  
-    <string tag> library [<string tag_in_lib>] \
-                 <string standard_set> [file <filename>]  
-                 [except `<string tag list>]  
-       ... 
-    <string tag> <string shell_type>  
-    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
-       ...  
- END
+ SO [<string name default "so basis">] \  
+       [print || noprint default print]  
+    <string tag> library [<string tag_in_lib>] \
+                 <string standard_set> [file <filename>]  
+                 [except `<string tag list>]  
+       ... 
+    <string tag> <string shell_type>  
+    <real r-exponent> <real Gaussian-exponent> <real list_of_coefficients>  
+       ...  
+ END
 ```
 Note: in the literature the coefficients of the spin-orbit potentials
 are NOT always defined in the same manner. The NWChem code assumes that
@@ -211,34 +211,36 @@ the spin-orbit potential defined in the input is of the form:
 <img alt="$\Delta U^{NWChem}_{l} = \,\! \frac{2}{2l+1} \Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0be89168a27192663058fb9216ade308.svg?invert_in_darkmode&sanitize=true" align=middle width="171.326595pt" height="27.85299pt"/>
 
 For example, in the literature (most of) the Stuttgart potentials are
-defined as <img alt="$\Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/100737b94927e62da95985868aaf6e3d.svg?invert_in_darkmode&sanitize=true" align=middle width="29.03736pt" height="22.38192pt"/> and, hence, have to be multiplied by
-<img alt="$2/(2{l}+1)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/156fcb35730b5da1280fe772d5b19893.svg?invert_in_darkmode&sanitize=true" align=middle width="70.745235pt" height="24.56553pt"/> (Note: On the Stuttgart/Köln web pages (http://www.tc.uni-koeln.de/PP/clickpse.en.html), spin-orbit potentials have already been corrected by the appropriate scaling factor and can be used as is). On the other hand, the CRENBL
-potentials in the published papers are defined as
-<img alt="$\,\!\frac{l}{2l+1} \Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/212280724cc111ee1d85ad12e99830b6.svg?invert_in_darkmode&sanitize=true" align=middle width="58.43013pt" height="28.86675pt"/> and, hence, have to be multiplied by
-<img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> (Note: On the CRENBL website the spin-orbit potentials already
-have been corrected with the <img alt="$2/{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8e89408ce4ee259f3ef40fa0beed9fe6.svg?invert_in_darkmode&sanitize=true" align=middle width="21.585795pt" height="24.56553pt"/> factor, so make sure the
+defined as _&Delta;U<sub>l</sub>_  and, hence, have to be multiplied by _2/(2l+1)_ 
+ (Note: On the Stuttgart/Köln web pages  
+ [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html),  
+ spin-orbit potentials have already been corrected by the appropriate scaling factor and can be used as is). On the other hand, the CRENBL
+potentials in the published papers are defined as 
+<img alt="$\,\!\frac{l}{2l+1} \Delta U_{l}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/212280724cc111ee1d85ad12e99830b6.svg?invert_in_darkmode&sanitize=true" align=middle width="58.43013pt" height="28.86675pt"/> and, hence, have to be multiplied by _2/l_  (Note: On the CRENBL website the spin-orbit potentials already
+have been corrected with the _2/l_ factor, so make sure the
 appropriate scaling is applied).
 
 For example, to use the Stuttgart/Köln ECP and SO-ECP for Hg  (ECP60MDF) in NWChem.  
-The following URL will display bot the the ECP and SO parts.
-http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF  
-The highlighted section (last four lines) below is the SO part. The un-highlighted part (first five lines) is the ECP. 
-
-`!  Q=20., MEFIT, MCDHF+Breit, Ref 37.`  
-`ECP,Hg,60,5,4;`  
-`1; 2,1.000000,0.000000; `  
-`2; 2,12.413071,275.774797; 2,6.897913,49.267898;`   
-`4; 2,11.310320,80.506984; 2,10.210773,161.034824; 2,5.939804,9.083416; 2,5.019755,18.367773;`   
-`4; 2,8.407895,51.137256; 2,8.214086,76.707459; 2,4.012612,6.561821; 2,3.795398,9.818070;`  
-`2; 2,3.273106,9.429001; 2,3.208321,12.494856;`   
-`2; 2,4.485296,-6.338414; 2,4.513200,-8.099863;`   
-**`4;2,11.310320,-161.013967;2,10.210773,161.034824;2,5.939804,-18.166832;2,5.019755,18.367773;`**    
-**`4; 2,8.407895,-51.137256; 2,8.214086,51.138306; 2,4.012612,-6.561821; 2,3.795398,6.545380;`**      
-**`2; 2,3.273106,-6.286001; 2,3.208321,6.247428;`**      
-**`2; 2,4.485296,3.169207; 2,4.513200,-3.239945;`**  
-`! References:`  
-`! [37] D. Figgen, G. Rauhut, M. Dolg, H. Stoll, Chem. Phys. 311, 227 (2005).`  
-
+The following URL will display bot the the ECP and SO parts.  
+[http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF](http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF)  
+The highlighted section (last four lines) below is the SO part.  
+The un-highlighted part (first five lines) is the ECP.    
+```
+!  Q=20., MEFIT, MCDHF+Breit, Ref 37.  
+ECP,Hg,60,5,4;  
+1; 2,1.000000,0.000000;   
+2; 2,12.413071,275.774797; 2,6.897913,49.267898;   
+4; 2,11.310320,80.506984; 2,10.210773,161.034824; 2,5.939804,9.083416; 2,5.019755,18.367773;   
+4; 2,8.407895,51.137256; 2,8.214086,76.707459; 2,4.012612,6.561821; 2,3.795398,9.818070;  
+2; 2,3.273106,9.429001; 2,3.208321,12.494856;   
+2; 2,4.485296,-6.338414; 2,4.513200,-8.099863;   
+**4;2,11.310320,-161.013967;2,10.210773,161.034824;2,5.939804,-18.166832;2,5.019755,18.367773;**    
+**4; 2,8.407895,-51.137256; 2,8.214086,51.138306; 2,4.012612,-6.561821; 2,3.795398,6.545380;**      
+**2; 2,3.273106,-6.286001; 2,3.208321,6.247428;**      
+**2; 2,4.485296,3.169207; 2,4.513200,-3.239945;**  
+! References:  
+! [37] D. Figgen, G. Rauhut, M. Dolg, H. Stoll, Chem. Phys. 311, 227 (2005).  
+```
 The corresponding NWChem input is 
 
 ```
@@ -287,5 +289,5 @@ Hg G
 end
 ```
 ### Websites with Spin-Orbits ECPs
-* http://www.tc.uni-koeln.de/PP/clickpse.en.html
-* http://people.clarkson.edu/~pchristi/reps.html
+* [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html)
+* [http://people.clarkson.edu/~pchristi/reps.html](http://people.clarkson.edu/~pchristi/reps.html)
