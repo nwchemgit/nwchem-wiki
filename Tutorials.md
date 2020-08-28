@@ -10,7 +10,7 @@ Links to material of past NWChem Tutorials
 
 # Educational material with NWChem exercises
 
-https://www.theochem.ru.nl/quantumchemistry
+[https://www.theochem.ru.nl/quantumchemistry](https://www.theochem.ru.nl/quantumchemistry)
 
 
 
