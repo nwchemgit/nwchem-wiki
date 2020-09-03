@@ -1,7 +1,7 @@
 # Selected CI
 
 The selected CI module is integrated into NWChem but as yet no input
-module has been written\[1\]. The input thus consists of setting the
+module has been written [1]. The input thus consists of setting the
 appropriate variables in the database.
 
 It is assumed that an initial SCF/MCSCF calculation has completed, and
@@ -209,9 +209,9 @@ In the absence of friendly, input note that the names "selci:refgen n"
 must be formatted with n in I2 format. Each set specifies a list of
 creation-annihilation operator pairs (in that order). So for instance,
 in the above example each set is the same and causes the excitations
-
-` 4->5   4->6   3->5   3->6`
-
+```
+ 4->5   4->6   3->5   3->6
+```
 If orbitals 3 and 4 were initially doubly occupied, and orbitals 5 and 6
 initially unoccupied, then the application of this set of operators four
 times in succession is sufficient to generate the four electron in four
@@ -234,9 +234,9 @@ The precise sequence in which operators are applied is
 By default no excitation is applied to the reference configurations. If,
 for instance, you wanted to generate a single excitation CI space from
 the current configuration list, specify
-
-` set selci:exci 1`
-
+```
+ set selci:exci 1
+```
 Any excitation level may be applied, but since the list of
 configurations is explicitly generated, as is the CI Hamiltonian matrix,
 you will run out of disk space if you attempt to use more than a few
@@ -246,9 +246,9 @@ tens of thousands of configurations.
 
 By default, only one root is generated in the CI diagonalization or
 perturbation selection. The following requests that 2 roots be generated
-
-` set selci:nroot 2`
-
+```
+ set selci:nroot 2
+```
 There is no imposed upper limit. If many roots are required, then, to
 minimize root skipping problems, it helps to perform an initial
 approximate diagonalization with several more roots than required, and
@@ -261,9 +261,9 @@ By default, the CI wavefunctions are converged to a residual norm of
 \(10^{-6}\) which provides similar accuracy in the perturbation
 corrections to the energy, and much higher accuracy in the CI
 eigenvalues. This may be adjusted with
-
-`set "selci:diag tol" 1d-3`
-
+```
+set "selci:diag tol" 1d-3
+```
 the example setting much lower precision, appropriate for the
 approximate diagonalization discussed in the preceding section.
 
@@ -285,9 +285,9 @@ There is no default for this parameter.
 By default the program runs in "ci+davids" mode and just determines the
 CI eigenvectors/values in the current configuration space. To perform a
 selected-CI with perturbation correction use the following
-
-` set selci:mode select`
-
+```
+ set selci:mode select
+```
 and remember to define the selection thresholds.
 
 ## Memory requirements
@@ -295,11 +295,11 @@ and remember to define the selection thresholds.
 No global arrays are used inside the selected-CI, though the four-index
 transformation can be automatically invoked and it does use GAs. The
 selected CI replicates inside each
-process
-```
-   * all unique two-electron integrals in the MO basis that are non-zero by symmetry, and
+process  
+
+   * all unique two-electron integrals in the MO basis that are non-zero by symmetry, and   
    * all CI information, including the CI vectors.
-```
+
 These large data structures are allocated on the local stack. A fatal
 error will result if insufficient memory is available.
 
@@ -307,9 +307,9 @@ error will result if insufficient memory is available.
 
 When scanning a potential energy surface or optimizing a geometry the MO
 integrals need to be regenerated each time. Specify
-
-` set selci:moints:force logical .true.`
-
+```
+ set selci:moints:force logical .true.
+```
 to accomplish this.
 
 ## Disabling update of the configuration list
@@ -320,9 +320,9 @@ specified threshold. This is usually desirable. But when scanning a
 potential energy surface or optimizing a geometry the reference list
 must be kept fixed to keep the potential energy surface continuous and
 well defined. To do this specify
-
-` set selci:update logical .false.`
-
+```
+ set selci:update logical .false.
+```
 ## Orbital locking in CI geometry optimization
 
 The selected CI wavefunction is not invariant to orbital rotations or to
