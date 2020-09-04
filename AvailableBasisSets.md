@@ -743,15 +743,15 @@
 
 <!-- end list -->
 
-  - Lanl2-\[10s8p7d3f2g\]: Rh
+  - Lanl2-[10s8p7d3f2g]: Rh
 
 <!-- end list -->
 
-  - Lanl2-\[5s4p4d2f\]: Rh
+  - Lanl2-[5s4p4d2f]: Rh
 
 <!-- end list -->
 
-  - Lanl2-\[6s4p4d2f\]: Rh
+  - Lanl2-[6s4p4d2f]: Rh
 
 <!-- end list -->
 
@@ -825,7 +825,7 @@
 
 <!-- end list -->
 
-  - MIDI\!: H C N O F Si P S Cl Br I
+  - MIDI!: H C N O F Si P S Cl Br I
 
 <!-- end list -->
 
