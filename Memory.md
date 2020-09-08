@@ -2,7 +2,7 @@
 ## MEMORY
 
 This is a start-up directive that allows the user to specify the amount
-of memory PER PROCESSOR CORE that NWChem can use for the job. If this
+of memory **PER PROCESSOR CORE** that NWChem can use for the job. If this
 directive is not specified, memory is allocated according to
 installation-dependent defaults. The defaults should generally suffice
 for most calculations, since the defaults usually correspond to the
@@ -12,7 +12,7 @@ The general form of the directive is as follows:
 ```
 MEMORY [[total] <integer total_size>]        \ 
         [stack <integer stack_size>]         \  
-        [heap <integer heap_size>`]           \ 
+        [heap <integer heap_size>]           \ 
         [global <integer global_size>]       \   
         [units <string units default real>]  \  
         [(verify||noverify)]                 \  
@@ -34,14 +34,11 @@ adjust the amount of memory used by NWChem. The following specifications
 all provide for eight megabytes of total memory (assuming 64-bit
 floating point numbers), which will be distributed according to the
 default partitioning:
-
-`memory 1048576 `  
-`memory 1048576 real `  
-`memory 1 mw`  
-`memory 8 mb `  
-`memory total 8 mb `  
-`memory total 1048576`
-
+``` 
+memory total 8 mb   
+memory total 1048576
+memory total 1 gb
+```
 In NWChem there are three distinct regions of memory: stack, heap, and
 global. Stack and heap are node-private, while the union of the global
 region on all processors is used to provide globally-shared memory. The
@@ -62,10 +59,10 @@ The code will abort if it detects an inconsistent memory specification.
 
 The following memory directives also allocate 8 megabytes, but specify a
 complete partitioning as well:
-
-`memory total 8 stack 2 heap 2 global 4 mb `  
-`memory stack 2 heap 2 global 4 mb`
-
+```
+memory total 8 mb stack 2 mb  heap 2 global 4 mb   
+memory stack 2 mb heap 2 mb global 4 mb
+```
 The optional keywords verify and noverify in the directive give the user
 the option of enabling or disabling automatic detection of corruption of
 allocated memory. The default is verify, which enables the feature. This
