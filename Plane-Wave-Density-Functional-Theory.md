@@ -504,7 +504,7 @@ that may be expanded in a plane wave basis set of a manageable size.
 The expression for the total energy in PAW method can be separated into
 the following 15 terms.
 
-<img alt="$E_{PAW} = &amp;#10; \tilde{E}_{kinetic-pw}+\tilde{E}_{vlocal-pw}+\tilde{E}_{Coulomb-pw}+\tilde{E}_{xc-pw} + E_{ion-ion}\\&amp;#10;+E_{kinetic-atom}+E_{local-atom}+E_{xc-atom}+ E_{cmp-vloc}+E_{hartree-atom}\\&amp;#10;+E_{cmp-cmp} + E_{cmp-pw}+E_{valence-core}+E_{kinetic-core}+E_{ion-core}&amp;#10;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a05e70c963973f10ff38478d6b3547c.svg?invert_in_darkmode&sanitize=true" align=middle width="568.32435pt" height="88.29348pt"/>
+<img alt="$E_{PAW} = &amp;#10; \tilde{E}_{kinetic-pw}+\tilde{E}_{vlocal-pw}+\tilde{E}_{Coulomb-pw}+\tilde{E}_{xc-pw} + E_{ion-ion}\\ +E_{kinetic-atom}+E_{local-atom}+E_{xc-atom}+ E_{cmp-vloc}+E_{hartree-atom}\\ +E_{cmp-cmp} + E_{cmp-pw}+E_{valence-core}+E_{kinetic-core}+E_{ion-core} $" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a05e70c963973f10ff38478d6b3547c.svg?invert_in_darkmode&sanitize=true" align=middle width="568.32435pt" height="88.29348pt"/>
 
 
 The first five terms are essentially the same as for a standard
@@ -531,19 +531,15 @@ where
 
 <center>
 
-<img alt="$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b3516c11341b2721685de47027419b10.svg?invert_in_darkmode&sanitize=true" align=middle width="250.779045pt" height="30.18576pt"/>
+<img alt="$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$" src="svgs/b3516c11341b2721685de47027419b10.svg?invert_in_darkmode&sanitize=true" align=middle width="250.779045pt" height="30.18576pt"/>
 
 </center>
 
-<center>
 
-<img alt="$E_{ion-ion} = &amp;#10;\begin{matrix}&amp;#10; \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\&amp;#10;+ \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2&amp;#10;\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0df3a031b119b9a2b3c868b59e78f681.svg?invert_in_darkmode&sanitize=true" align=middle width="714.572595pt" height="60.10323pt"/>
-
-</center>
+<img alt="$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\ + \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2 $" src="svgs/0df3a031b119b9a2b3c868b59e78f681.svg?invert_in_darkmode&sanitize=true" align=middle width="714.572595pt" height="60.10323pt"/>
 
 The local potential in the <img alt="$\tilde{E}_{vlocal-pw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed7e25bd59dfd54bb862a0196b05c232.svg?invert_in_darkmode&sanitize=true" align=middle width="73.65996pt" height="30.18576pt"/> term is the Fourier
-transform
-of
+transform of
 
 <center>
 
@@ -554,7 +550,7 @@ of
 It turns out that for many atoms <img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> needs to be fairly small.
 This results in <img alt="$V_{local} (\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1e432f41caeffa48726fe348135edd39.svg?invert_in_darkmode&sanitize=true" align=middle width="58.81029pt" height="24.56553pt"/> being stiff. However, since
 in the integral above this function is multiplied by a smooth density
-<img alt="$\tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/305950daa7ae8b7ebefd828bffb6e35f.svg?invert_in_darkmode&sanitize=true" align=middle width="36.044085pt" height="24.56553pt"/> the expansion of <img alt="$V_{local}(/mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c9e2cdc8d7a2a2b20584999b673ce0e1.svg?invert_in_darkmode&sanitize=true" align=middle width="127.320105pt" height="24.56553pt"/>
+<img alt="$\tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/305950daa7ae8b7ebefd828bffb6e35f.svg?invert_in_darkmode&sanitize=true" align=middle width="36.044085pt" height="24.56553pt"/> the expansion of <em>V<sub>local</sub>(<strong>G</strong>)</em>
 only needs to be the same as the smooth density. The auxiliary
 pseudoptential <img alt="$v_{ps}^I (|\mathbf{r}-\mathbf{R}_I |)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68955ed882742db5a988dfd352804c70.svg?invert_in_darkmode&sanitize=true" align=middle width="93.04416pt" height="27.59823pt"/> is defined to
 be localized within the atomic sphere and is introduced to remove ghost
@@ -564,9 +560,9 @@ The next four terms are atomic based and they essentially take into
 account the difference between the true valence wavefunctions and the
 pseudowavefunctions.
 
-<center>
+$$E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_{\alpha}^I < (t_{atom}^I)_{\alpha\beta} <\tilde{p}_{\beta}^I|\tilde{\psi}_i > $$
 
-<img alt="$E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} &amp;lt;\tilde{\psi}_i|\tilde{p}_{\alpha}^I&amp;gt; (t_{atom}^I)_{\alpha\beta} &amp;lt;\tilde{p}_{\beta}^I|\tilde{\psi}_i&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5b001a868ab188c55a92b8287938a193.svg?invert_in_darkmode&sanitize=true" align=middle width="428.442795pt" height="30.55107pt"/>
+<img alt="$E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_{\alpha}^I < (t_{atom}^I)_{\alpha\beta} <\tilde{p}_{\beta}^I|\tilde{\psi}_i > $" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5b001a868ab188c55a92b8287938a193.svg?invert_in_darkmode&sanitize=true" align=middle width="428.442795pt" height="30.55107pt"/>
 
 </center>
 
@@ -1278,7 +1274,7 @@ END 
 The following list describes these keywords.
 
   - <cell_name> - name of the simulation\_cell named <cell_name>. See
-    [\#Simulation Cell](#Simulation_Cell).
+    [Simulation Cell](#simulation-Cell).
   - <input_wavefunctions> - name of the file containing one-electron
     orbitals
   - <output_wavefunctions> - name that will point to file containing the
@@ -1684,7 +1680,7 @@ END
 The following list describes the input for the Car-Parrinello sub-block.
 
   - <cell_name> - name of the the simulation\_cell named <cell_name>.
-    See section [Simulation Cell](#Simulation_Cell).
+    See section [Simulation Cell](#simulation-cell).
   - <input_wavefunctions> - name of the file containing one-electron
     orbitals
   - <output_wavefunctions> - name of the file that will contain the
@@ -2237,7 +2233,7 @@ The following list describes the input for the STEEPEST\_DESCENT
 sub-block.
 
   - <cell_name> - name of the simulation\_cell named <cell_name>. See
-    [Simulation Cell](#Simulation_Cell).
+    [Simulation Cell](#simulation-cell).
   - GEOMETRY\_OPTIMIZE - optional keyword which if specified turns on
     geometry optimization.
   - <input_wavefunctions> - name of the file containing one-electron
@@ -2776,7 +2772,7 @@ The implementation in the PSPW module defines the semi-core density,
 <img alt="$\rho_{semicore}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cdd27902cf8366f23ed927a19a3fc1fe.svg?invert_in_darkmode&sanitize=true" align=middle width="62.082075pt" height="14.10255pt"/> in terms of the core density, <img alt="$\rho_{core}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/37e9fdd7359c2b306266e517ccec656b.svg?invert_in_darkmode&sanitize=true" align=middle width="33.432465pt" height="14.10255pt"/>, by
 using the sixth-order polynomial
 
-<img alt="$\rho_{semicore}(r) =&amp;#10;\begin{cases} &amp;#10;\rho_{core} &amp;amp; \mbox{if } r \ge r_{semicore} \\&amp;#10;c_0 + c_3 r^3 + c_4 r^4 + c_5 r^5 + c_6 r^6 &amp;amp; \mbox{if } r &amp;lt; r_{semicore} &amp;#10;\end{cases}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aec56e1a9871a4fda4c457c9a9c601f3.svg?invert_in_darkmode&sanitize=true" align=middle width="542.063445pt" height="126.57645pt"/>
+$$\rho_{semicore}(r) = \begin{cases} \rho_{core}  \mbox{if } r \ge r_{semicore} \\ c_0 + c_3 r^3 + c_4 r^4 + c_5 r^5 + c_6 r^6  \mbox{if } r < r_{semicore} \end{cases}$$
 
 This expansion was suggested by Fuchs and Scheffler (M. Fuchs, and M.
 Scheffler, Comp. Phys. Comm.,**119**,67 (1999)), and is better behaved
@@ -2851,7 +2847,7 @@ The following list describes these keywords.
 
   - <cell_name> - name of the the simulation\_cell named <cell_name>.
     The current version of PAW only accepts periodic unit cells. See
-    [Simulation Cell](#Simulation_Cell).
+    [Simulation Cell](#simulation-cell).
   - GEOMETRY\_OPTIMIZE - optional keyword which if specified turns on
     geometry optimization.
   - <input_wavefunctions> - name of the file containing one-electron
@@ -2892,8 +2888,8 @@ The following list describes these keywords.
     the spin multiplicity of the system
   - INTEGRATE\_MULT\_L - optional keyword which if specified allows the
     user to define the angular XC integration of the augmented region
-  - SIMULATION\_CELL (see \[\[\#Simulation Cell|Simulation Cell\])
-  - CAR-PARRINELLO(see \[\[\#Car-Parrinello|Car-Parrinello\])
+  - SIMULATION\_CELL (see [Simulation Cell](#simulation-cell)
+  - CAR-PARRINELLO(see [Car-Parrinello](#car-parrinello)
   - <mapping> - for a value of 1 slab FFT is used, for a value of 2 a
     2d-Hilbert FFT is used.
 
@@ -3116,12 +3112,11 @@ by taking the first variation of the auxiliary Lagrangian.
 
 Which generates a dynamics for the wavefunctions
 <img alt="$\psi_{i,\sigma}(\vec{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/730a1523e8e8ba1c187f863f8d4f37c5.svg?invert_in_darkmode&sanitize=true" align=middle width="48.685725pt" height="24.56553pt"/> and atoms positions <img alt="$\vec{R}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/57ac99f1caf72f8bb91bbfe4da0441aa.svg?invert_in_darkmode&sanitize=true" align=middle width="19.1301pt" height="31.71135pt"/> through
-the constrained equations of
-motion:
+the constrained equations of motion:
 
-<img alt="$\begin{matrix}\mu \ddot{\psi}_{i,\sigma}(\vec{r},t) = -\frac{\delta E}{\delta \psi_{i,\sigma }^{*} \left( \vec{r},t \right) } + \sum\limits_j \Lambda_{ij,\sigma} \psi_{j,\sigma} \left( \vec{r},t \right) \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fc48fe3d7afa9e8921d0c7bcce12b91.svg?invert_in_darkmode&sanitize=true" align=middle width="306.720645pt" height="41.79813pt"/>
+$$\begin{matrix}\mu \ddot{\psi}_{i,\sigma}(\vec{r},t) = -\frac{\delta E}{\delta \psi_{i,\sigma }^{*} \left( \vec{r},t \right) } + \sum\limits_j \Lambda_{ij,\sigma} \psi_{j,\sigma} \left( \vec{r},t \right) \end{matrix}$$
 
-<img alt="$\begin{matrix}M_I \ddot{\vec{R}}_I = -\frac{\partial E}{\partial \vec{R}_I} \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5bf48f56312232664b93e4d81224d37f.svg?invert_in_darkmode&sanitize=true" align=middle width="104.222085pt" height="37.64607pt"/>
+$$\begin{matrix}M_I \ddot{\vec{R}}_I = -\frac{\partial E}{\partial \vec{R}_I} \end{matrix}$$
 
 where <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> is the fictitious mass for the electronic degrees of
 freedom and <img alt="$M_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/00cbfe86d6a32a76c7a606e0c0d804da.svg?invert_in_darkmode&sanitize=true" align=middle width="22.58322pt" height="22.38192pt"/> are the ionic masses. The adjustable parameter
@@ -3154,19 +3149,18 @@ energy that accounts for low-lying excited electronic states.
 Integrating the Eqns. above using the Verlet algorithm results
 in
 
-<img alt="$\begin{matrix}\psi_{i,\sigma}^{t+ \Delta t} \leftarrow 2 \psi_{i,\sigma}^{t} - \psi_{i,\sigma}^{t-\Delta t} + \frac{(\Delta t)^2}{\mu} \left[ \frac{\delta E}{\delta \psi_{i,\sigma}^{*}} + \sum_{j} \psi_{j,\sigma} \Lambda_{ji,\sigma} \right]_{t} \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ae7f42c9d9a286ca640e3f918cd2c5e0.svg?invert_in_darkmode&sanitize=true" align=middle width="393.358845pt" height="38.95716pt"/>
+$$\begin{matrix}\psi_{i,\sigma}^{t+ \Delta t} \leftarrow 2 \psi_{i,\sigma}^{t} - \psi_{i,\sigma}^{t-\Delta t} + \frac{(\Delta t)^2}{\mu} \left[ \frac{\delta E}{\delta \psi_{i,\sigma}^{*}} + \sum_{j} \psi_{j,\sigma} \Lambda_{ji,\sigma} \right]_{t} \end{matrix}$$
 
-<img alt="$\begin{matrix}\vec{R}_I^{t+\Delta t} \leftarrow 2 \vec{R}_I^{t} - \vec{R}_I^{t-\Delta t} + \frac{(\Delta t)^2}{M_I} \frac{\partial E}{\partial \vec{R}_I}\end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ddbdce8efc0a315bf3066edd35078948.svg?invert_in_darkmode&sanitize=true" align=middle width="245.103045pt" height="36.1185pt"/>
+$$\begin{matrix}\vec{R}_I^{t+\Delta t} \leftarrow 2 \vec{R}_I^{t} - \vec{R}_I^{t-\Delta t} + \frac{(\Delta t)^2}{M_I} \frac{\partial E}{\partial \vec{R}_I}\end{matrix}$$
 
 In this molecular dynamic procedure we have to know variational
 derivative
-<img alt="$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c6bc16ec2cb4c1a003913b820345407.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
 and the matrix <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/>. The variational derivative
-<img alt="$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c6bc16ec2cb4c1a003913b820345407.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
-can be analytically found and
-is
+$$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
+can be analytically found and is  
 
-<img alt="$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}} &amp;amp; = -\frac{1}{2} \nabla^2 \psi_{i,\sigma}(\vec{r}) \\ &amp;#10;&amp;amp; + \int d\vec{r^{\prime}} W_{ext}(\vec{r},\vec{r^{\prime}}) \psi_{i,\sigma}(\vec{r^{\prime}}) \\ &amp;#10;&amp;amp; + \int d\vec{r^{\prime}} \frac{n(\vec{r^{\prime}})}{|\vec{r}-\vec{r^{\prime}}|} \psi_{i,\sigma}(\vec{r})\\ &amp;#10;&amp;amp; + \mu_{xc}^{\sigma}(\vec{r}) \psi_{i,\sigma}(\vec{r}) \\ &amp;#10;&amp;amp; \equiv \hat{H} \psi_{i,\sigma} &amp;#10;\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dd46e8b24d0b388163cc0d7c95ef404b.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}  = -\frac{1}{2} \nabla^2 \psi_{i,\sigma}(\vec{r}) \\  + \int d\vec{r^{\prime}} W_{ext}(\vec{r},\vec{r^{\prime}}) \psi_{i,\sigma}(\vec{r^{\prime}}) \\  + \int d\vec{r^{\prime}} \frac{n(\vec{r^{\prime}})}{|\vec{r}-\vec{r^{\prime}}|} \psi_{i,\sigma}(\vec{r})\\  + \mu_{xc}^{\sigma}(\vec{r}) \psi_{i,\sigma}(\vec{r}) \\  \equiv \hat{H} \psi_{i,\sigma} \end{align}$$
 
 To find the matrix <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/> we impose the orthonormality
 constraint on <img alt="$\psi_{i,\sigma}^{t+\Delta t}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f5a90d4417795f4ac627995a6be27500.svg?invert_in_darkmode&sanitize=true" align=middle width="41.964615pt" height="29.73135pt"/> to obtain a matrix
@@ -3181,11 +3175,11 @@ variables <img alt="$x_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit
 auxiliary energy functionals to the total
 energy.
 
-<img alt="$\begin{align}ION\_THERMOSTAT(x_R) &amp;amp; = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R \\ ELECTRON\_THERMOSTAT(x_e) &amp;amp; = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e \end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d025d24075586c8555a8402a0cc5d8cc.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align} ION\_THERMOSTAT(x_R)  = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R \\ ELECTRON\_THERMOSTAT(x_e)  = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e \end{align}$$
 
 In these equations, the average kinetic energy for the ions is
 
-<img alt="$\begin{matrix}E_{R0} = \frac{1}{2} f k_B T \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d627accb7a5ff35307c4491e887851a9.svg?invert_in_darkmode&sanitize=true" align=middle width="103.26591pt" height="27.96948pt"/>
+$$\begin{matrix}E_{R0} = \frac{1}{2} f k_B T \end{matrix}$$
 
 where <img alt="$f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width="9.780705pt" height="22.74591pt"/> is the number of atomic degrees of freedom, <img alt="$k_B$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bad54364b5669c56b4b0a72d42c7da00.svg?invert_in_darkmode&sanitize=true" align=middle width="18.979455pt" height="22.74591pt"/> is
 Boltzmann's constant, and T is the desired t emperature. Defining the
@@ -3195,29 +3189,27 @@ Phys. Rev. B, **45**, 9413, (1992)) have suggested the following formula
 for determining the average fictitious kinetic
 energy
 
-<img alt="$\begin{matrix}E_{e0} = 4 k_B T \frac{\mu}{M} \sum_{i} &amp;lt;\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}&amp;gt; \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f9c6fab6fdc47636f9d77ce51f261c64.svg?invert_in_darkmode&sanitize=true" align=middle width="294.289545pt" height="27.96948pt"/>
+$$\begin{matrix}E_{e0} = 4 k_B T \frac{\mu}{M} \sum_{i} <\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}> \end{matrix}$$
 
 where <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> is the fictitious electronic mass, <img alt="$M$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width="17.67348pt" height="22.38192pt"/> is average mass
 of one atom, and
-<img alt="$\begin{matrix}\sum_{i} &amp;lt;\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}&amp;gt; \end{matrix}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a02d75a5d1e0d0611051e3d157228621.svg?invert_in_darkmode&sanitize=true" align=middle width="186.191445pt" height="27.96948pt"/>
+$$\begin{matrix}\sum_{i} <\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}&amp> \end{matrix}$$
 is the kinetic energy of the electrons.
 
 Blöchl and Parrinello suggested that the choice of mass parameters,
 <img alt="$Q_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/25d99aa5082492b57d3beef5928ffac3.svg?invert_in_darkmode&sanitize=true" align=middle width="19.16046pt" height="22.38192pt"/>, and <img alt="$Q_R$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3ed261b38de3a90e4d91fe27c8f513b1.svg?invert_in_darkmode&sanitize=true" align=middle width="22.871475pt" height="22.38192pt"/> should be made such that the period of oscillating
 thermostats should be chosen larger than the typical time scale for the
-dynamical events of interest but shorter than the simulation
-time.
+dynamical events of interest but shorter than the simulation time.
 
-<img alt="$\begin{align}P_{ion} &amp;amp; = 2\pi \sqrt{\frac{Q_R}{4E_{R0}}}\\P_{electron} &amp;amp; = 2\pi \sqrt{\frac{Q_e}{4E_{e0}}}&amp;#10;\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bb3c80b1405d8e3bc4a7bee75662d936.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align}P_{ion}  = 2\pi \sqrt{\frac{Q_R}{4E_{R0}}}\\P_{electron}  = 2\pi \sqrt{\frac{Q_e}{4E_{e0}}}\end{align}$$
 
 where <img alt="$P_{ion}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a4e38e59b681f3b803b72b09f581f67f.svg?invert_in_darkmode&sanitize=true" align=middle width="29.707755pt" height="22.38192pt"/> and <img alt="$P_{electron}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e29a4bd79ecd185b4b23ff25948575c7.svg?invert_in_darkmode&sanitize=true" align=middle width="58.94427pt" height="22.38192pt"/> are the periods of oscillation
 for the ionic and fictitious electronic thermostats.
 
 In simulated annealing simulations the electronic and ionic Temperatures
-are scaled according to an exponential cooling
-schedule,
+are scaled according to an exponential cooling schedule,
 
-<img alt="$\begin{align}T_e(t) &amp;amp; = T_e^0 \exp^{-\frac{t}{\tau_e}}\\T_{ionic}(t) &amp;amp; = T_{ionic}^0 \exp^{-\frac{t}{\tau_{ionic}}}&amp;#10;\end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/95dabe03135a55d1f4c0ff696a8e366b.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align}T_e(t)  = T_e^0 \exp^{-\frac{t}{\tau_e}}\\T_{ionic}(t)  = T_{ionic}^0 \exp^{-\frac{t}{\tau_{ionic}}} \end{align}$$
 
 where <img alt="$T_e^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02f92fea930bab9b0cb5b411829b7bf4.svg?invert_in_darkmode&sanitize=true" align=middle width="18.381495pt" height="26.70657pt"/> and <img alt="$T_{ionic}^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2d76ae8eb00a93d64de686b4f03b596d.svg?invert_in_darkmode&sanitize=true" align=middle width="39.2502pt" height="26.70657pt"/> are the initial temperatures, and
 <img alt="$\tau_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e34a134b05ac6daa10ed56dc39d42035.svg?invert_in_darkmode&sanitize=true" align=middle width="13.37292pt" height="14.10255pt"/> and <img alt="$\tau_{ionic}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a8fa93ce0ad82bb2691c5d3740bcf14a.svg?invert_in_darkmode&sanitize=true" align=middle width="36.839055pt" height="14.10255pt"/> are the cooling rates in atomic units.
@@ -3288,7 +3280,7 @@ be
   Total PSPW energy   :  -0.2041363137E+02  
  ...
 ```
-### Structural optimization of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
+### Structural optimization of S<sub>2</sub> dimer with LDA approximation
 
 (input:[Media:s2-example2.nw](s2-example2.nw),
 output:[Media:s2-example2.nwout](s2-example2.nwout))
@@ -4109,10 +4101,9 @@ The total energy from the simulation will be
 `Total PSPW energy   :  -0.5421213534E+01`
 
 Using this energy and energy of diamond the cohesive energy per atom is
-calculated to
-be
+calculated to be
 
-<img alt="$\begin{align} E_{coh}= -\left( -45.07688304au/8 - (-5.421213534au)  \right)= 0.2133968 au = 5.8 eV \end{align}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ec76cf3f87afd9c5cf7c8262eb3f6658.svg?invert_in_darkmode&sanitize=true" align=middle width="8.1885045pt" height="14.10255pt"/>
+$$\begin{align} E_{coh}= -\left( -45.07688304au/8 - (-5.421213534au)  \right)= 0.2133968 au = 5.8 eV \end{align}$$
 
 This value is substantially lower than the experimental value of
 <img alt="$7.37eV$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74d9051358c1ca8aaea0239dcd57965a.svg?invert_in_darkmode&sanitize=true" align=middle width="49.932795pt" height="22.38192pt"/>\! It turns out this error is a result of the unit cell being
