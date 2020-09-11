@@ -47,7 +47,7 @@ particularly well balanced in describing Rydberg excited states, in
 contrast to TDDFT. However, for open-shell systems, the errors in the
 CIS and TDHF excitation energies are often excessive, primarily due to
 the multi-determinantal character of the ground and excited state wave
-functions of open-shell systems in a HF reference.\[ref\] The scaling of
+functions of open-shell systems in a HF reference. The scaling of
 the computational cost of a CIS or TDHF calculation per state with
 respect to the system size is the same as that for a HF calculation for
 the ground state, since the critical step of the both methods are the
@@ -64,7 +64,7 @@ and Rydberg excited states in particular, TDDFT employing these
 conventional functionals breaks down and the excitation energies are
 substantially underestimated. This is because of the fact that the
 exchange-correlation potentials generated from these functionals decay
-too rapidly (exponentially) as opposed to the slow <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> asymptotic
+too rapidly (exponentially) as opposed to the slow *-1/r*  asymptotic
 decay of the true potential. A rough but useful index is the negative of
 the highest occupied KS orbital energy; when the calculated excitation
 energies become close to this threshold, these numbers are most likely
@@ -80,12 +80,12 @@ prefactor of the scaling may be much greater in the former.
 
 A very simple and effecive way to rectify the TDDFT's failure for
 Rydberg excited states has been proposed by Tozer and Handy[8] and by Casida and
-Salahub[5]. They proposed to splice a <img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/>
+Salahub[5]. They proposed to splice a *-1/r*
 asymptotic tail to an exchange-correlation potential that does not have
 the correct asymptotic behavior. Because the approximate
 exchange-correlation potentials are too shallow everywhere, a negative
-constant must be added to them before they can be spliced to the
-<img alt="$-1/r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> tail seamlessly in a region that is not sensitive to chemical
+constant must be added to them before they can be spliced to the *-1/r*
+ tail seamlessly in a region that is not sensitive to chemical
 effects or to the long-range behavior. The negative constant or the
 shift is usually taken to be the difference of the HOMO energy from the
 true ionization potential, which can be obtained either from experiment
@@ -560,11 +560,8 @@ END
 TASK TDDFT ENERGY
 ```
 TDDFT for core states. The following example illustrates the usage of an
-energy cutoff and energy and orbital windows.
+energy cutoff and energy and orbital windows.[9]
 
-K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and    
-Real-Time Time-Dependent Density Functional Theory Studies of Core-Level   
-Near-Edge X-Ray Absorption", J. Chem. Theory Comput., 2012, 8 (9), pp 3284–3292
 ```
 echo  
 start h2o_core  
@@ -615,12 +612,8 @@ tddft
 end  
 task tddft
 ```
-TDDFT optimization with LDA of Pyridine with the 6-31G basis
+TDDFT optimization with LDA of Pyridine with the 6-31G basis[10]
 
-D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon   
-Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State   
-Energy Gradients within Time-Dependent Density Functional Theory"   
-J. Chem. Theory Comput., 2013, 9 (12), pp 5490–5503
 ```
 echo  
 start tddftgrad_pyridine_opt  
@@ -735,11 +728,8 @@ dplot
 end  
 task dplot
 ```
-TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum 
+TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum [11]
 
-Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission    
-Spectroscopy of Transition Metal", J. Chem. Theory Comput., 2015, 11 (12), pp 5804–5809  
-DOI: 10.1021/acs.jctc.5b00763
 
 1.  Calculate the neutral ground state.   
 2.  Calculate a full core hole (FCH) ionized state self-consistently, where the  
@@ -794,3 +784,13 @@ R. Bauernschmitt, M. Häser, O. Treutler, and R. Ahlrichs, *Chem. Phys. Lett.* *
 5. M. E. Casida, C. Jamorski, K. C. Casida, and D. R. Salahub, *J. Chem. Phys.* **108**, 4439 (1998).
 6. S. Hirata, C.-G. Zhan, E. Aprà, T. L. Windus, and D. A. Dixon, *J. Phys. Chem. A* **107**, 10154 (2003).
 8. D. J. Tozer and N. C. Handy, *J. Chem. Phys.* **109**, 10180 (1998).
+9. K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and    
+Real-Time Time-Dependent Density Functional Theory Studies of Core-Level   
+Near-Edge X-Ray Absorption", *J. Chem. Theory Comput.*, 2012, **8** (9), pp 3284–3292
+10. D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon   
+Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State   
+Energy Gradients within Time-Dependent Density Functional Theory"   
+*J. Chem. Theory Comput.*, 2013, **9** (12), pp 5490–5503
+11. Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission    
+Spectroscopy of Transition Metal", *J. Chem. Theory Comput*., 2015, **11** (12), pp 5804–5809  
+DOI: 10.1021/acs.jctc.5b00763

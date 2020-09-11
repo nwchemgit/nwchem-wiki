@@ -6,13 +6,13 @@ feedback on this page content.
 ## User interface software
 
   - **ECCE** Extensible Computational Chemistry Environment
-    <http://ecce.emsl.pnl.gov/> \[1\]
+    <http://ecce.emsl.pnl.gov/> <sup id="a1">[1](#f1)</sup>
   - **EMSL Arrows** Evolution of Chemical and Materials Computation
     <http://www.nwchem-sw.org/index.php/EMSL_Arrows>
   - **Avogadro** reads cube files, generates NWChem input files,
     analyzes output files (including frequencies) <http://avogadro.cc>
   - **WebMO** World Wide Web-based interface to computational chemistry
-    packages <https://www.webmo.net/> \[2\]
+    packages <https://www.webmo.net/> <sup id="a2">[2](#f2)</sup>
   - **Jmol** analyzes output and cube files
     <http://wiki.jmol.org/index.php/NWChem>
   - **Scienomics MAPS** platform has a NWChem Plugin that will allow
@@ -116,7 +116,9 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
 
 
-\[1\]  No longer been actively developed at PNNL. New development effort at
-    <https://github.com/FriendsofECCE/ECCE/releases>
-\[2\]  The WebMo interface might not be compatible with NWChem 6.0 and
-    later versions
+
+<b id="f1">1</b> No longer been actively developed at PNNL. New development effort at
+    <https://github.com/FriendsofECCE/ECCE/releases> [↩](#a1)
+
+<b id="f2">2</b>  The WebMo interface might not be compatible with NWChem 6.0 and
+    later versions [↩](#a2)
