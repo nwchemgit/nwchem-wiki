@@ -26,6 +26,8 @@ ORBITALS [(molecular || atomic) default molecular]
 The `ORBITALS` keyword can have the value `molecular`  (default) or `atomic`.
 When the default keyword `molecular` is used, the integrals are transformed using the
 molecular orbitals.
+When the  keyword `atomic` is specified, the integrals are evaluated using the atomic orbitals
+(*option not implemented yet*)
 
 
 ## FREEZE - Freezing orbitals
