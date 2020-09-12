@@ -2,7 +2,7 @@
 
 There are (at least) three algorithms within NWChem that compute the
 Møller-Plesset (or many-body) perturbation theory second-order
-correction\[1\] to the Hartree-Fock energy (MP2). They vary in
+correction[1] to the Hartree-Fock energy (MP2). They vary in
 capability, the size of system that can be treated and use of other
 approximations
 
@@ -18,7 +18,7 @@ approximations
 TASK MP2
 ```
 
-  - Fully-direct\[2\] -- this is of utility if only limited I/O
+  - Fully-direct[2] -- this is of utility if only limited I/O
     resources are available (up to about 2800 functions). Only RHF
     references and energies are available. This is selected by
     specifying direct\_mp2 on the task directive, e.g.
@@ -27,7 +27,7 @@ TASK MP2
 TASK DIRECT_MP2
 ```
 
-  - Resolution of the identity (RI) approximation MP2 (RI-MP2)\[3\] --
+  - Resolution of the identity (RI) approximation MP2 (RI-MP2)[3] --
     this uses the RI approximation and is therefore only exact in the
     limit of a complete fitting basis. However, with some care, high
     accuracy may be obtained with relatively modest fitting basis sets.
@@ -42,18 +42,18 @@ TASK RIMP2
 
 All three MP2 tasks share the same input block.
 ```
- MP2  
-   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
-           [virtual <integer nfzv default 0>]]  
-   [TIGHT]  
-   [PRINT]  
-   [NOPRINT]  
-   [VECTORS <string filename default scf-output-vectors> \  
-     [swap [(alpha||beta)] <integer pair-list>] ]  
-   [RIAPPROX <string riapprox default V>]  
-   [FILE3C <string filename default $file_prefix$.mo3cint>  
-   [SCRATCHDISK <integer>] 
- END
+ MP2  
+   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
+           [virtual <integer nfzv default 0>]]  
+   [TIGHT]  
+   [PRINT]  
+   [NOPRINT]  
+   [VECTORS <string filename default scf-output-vectors> \  
+     [swap [(alpha||beta)] <integer pair-list>] ]  
+   [RIAPPROX <string riapprox default V>]  
+   [FILE3C <string filename default $file_prefix$.mo3cint>  
+   [SCRATCHDISK <integer>] 
+ END
 ```
 ## FREEZE -- Freezing orbitals
 
@@ -67,7 +67,7 @@ modified either by the user or due to the presence of an ECP. The actual
 input would be
 
 ```
- freeze atomic
+ freeze atomic
 ```
 
 For example, in a calculation on Si(OH)<sub>2</sub>, by default the lowest
@@ -103,7 +103,7 @@ The user may also specify the number of orbitals to be frozen by atom.
 Following the  Si(OH)<sub>2</sub> example, the user could specify
 
 ```
-freeze atomic O 1 Si 3
+freeze atomic O 1 Si 3
 ```
 
 In this case only the lowest four orbitals would be frozen. If the user
@@ -118,13 +118,13 @@ The FREEZE directive may also be used to specify the number of core
 orbitals to freeze. For instance, to freeze the first 10 orbitals
 
 ```
- freeze 10
+ freeze 10
 ```
 
 or equivalently, using the optional keyword core
 
 ```
- freeze core 10
+ freeze core 10
 ```
 
 Again, note that if the 10 orbitals to be frozen do not correspond to
@@ -136,7 +136,7 @@ To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
 
 ```
- freeze virtual 5
+ freeze virtual 5
 ```
 
 Again, note that this only works for the direct-MP2 and RI-MP2 energy
@@ -166,7 +166,7 @@ limit the per process disk usage. Mandatory argument for this keyword is
 the maximum number of MBytes. For example, the following input line
 
 ```
- scratchdisk 512
+ scratchdisk 512
 ```
 
 puts an upper limit of 512 MBytes to the semi-direct MP2 usage of disk
@@ -216,7 +216,7 @@ to specify a different source using the VECTORS directive. For instance,
 to obtain vectors from the file /tmp/h2o.movecs, use the directive
 
 ```
- vectors /tmp/h2o.movecs
+ vectors /tmp/h2o.movecs
 ```
 
 As noted above ([FREEZE](#freeze----freezing-orbitals)) if
@@ -227,7 +227,7 @@ corresponding to the SCF orbitals 1-5, and 7, it is necessary to swap
 orbital 7 into the 6th position. This is accomplished by
 
 ```
- vectors swap 6 7
+ vectors swap 6 7
 ```
 
 The swap capability is examined in more detail in [Input/output of MO
@@ -239,12 +239,12 @@ The RI-MP2 method requires a fitting basis, which must be specified with
 the name "ri-mp2 basis" (see [Basis](Basis)). For instance,
 
 ```
- basis "ri-mp2 basis"
-   O s; 10000.0 1
-   O s;  1000.0 1
-   O s;   100.0 1
-   ...
- end
+ basis "ri-mp2 basis"
+   O s; 10000.0 1
+   O s;  1000.0 1
+   O s;   100.0 1
+   ...
+ end
 ```
 
 Alternatively, using a standard capability of basis sets
@@ -254,28 +254,28 @@ with the name "small fitting basis" and then defines this to be the
 "ri-mp2 basis".
 
 ```
- basis "small fitting basis"
-   H s; 10    1
-   H s;  3    1
-   H s;  1    1
-   H s;  0.1  1
-   H s;  0.01 1
- end
+ basis "small fitting basis"
+   H s; 10    1
+   H s;  3    1
+   H s;  1    1
+   H s;  0.1  1
+   H s;  0.01 1
+ end
 ```
 
 ```
- set "ri-mp2 basis" "small fitting basis"
+ set "ri-mp2 basis" "small fitting basis"
 ```
 
 ## FILE3C -- RI-MP2 3-center integral filename
 
 The default name for the file used to store the transformed 3-center
-integrals is "<img alt="$file\_prefix$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f4e98d48616daeb64389f8f090dd95c.svg?invert_in_darkmode&sanitize=true" align=middle width="82.682655pt" height="22.74591pt"/>.mo3cint" in the scratch directory. This may
+integrals is "file_prefix.mo3cint" in the scratch directory. This may
 be overridden using the FILE3C directive. For instance, to specify the
 file /scratch/h2o.3c, use this directive
 
 ```
- file3c /scratch/h2o.3c
+ file3c /scratch/h2o.3c
 ```
 
 ## RIAPPROX -- RI-MP2 Approximation
@@ -283,7 +283,7 @@ file /scratch/h2o.3c, use this directive
 The type of RI approximation used in the RI-MP2 calculation is
 controlled by means of the RIAPPROX directive. The two possible values
 are V and SVS (case sensitive), which correspond to the approximations
-with the same names described by Vahtras et al.\[4\]. The default is V.
+with the same names described by Vahtras et al.[4]. The default is V.
 
 ## Advanced options for RI-MP2
 
@@ -302,7 +302,7 @@ parameter may be changed by setting the a parameter in the database. For
 instance, to set it to <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>
 
 ```
- set "mp2:fit min eval" 1e-10
+ set "mp2:fit min eval" 1e-10
 ```
 
 ### Reference Spin Mapping for RI-MP2 Calculations
@@ -312,7 +312,7 @@ to be done with variations of the SCF reference wavefunction. This is
 accomplished with a SET directive of the form,
 
 ```
- set "mp2:reference spin mapping" <integer array default 0>
+ set "mp2:reference spin mapping" <integer array default 0>
 ```
 
 Each element specified for array is the SCF spin case to be used for the
@@ -327,7 +327,7 @@ of the correlated reference spin cases, the SET directive would be as
 follows,
 
 ```
- set "mp2:reference spin mapping" 1 1
+ set "mp2:reference spin mapping" 1 1
 ```
 
 The SCF calculation to produce the reference wavefunction could be
@@ -337,7 +337,7 @@ The SET directive for a similar case, but this time using the beta-spin
 SCF orbitals for both correlated spin cases, is as follows,
 
 ```
- set "mp2:reference spin mapping" 2 2
+ set "mp2:reference spin mapping" 2 2
 ```
 
 The SCF reference calculation must be UHF in this case.
@@ -346,14 +346,14 @@ The SET directive for a spin-restricted calculation (one element) from
 the beta-spin SCF orbitals using this option is as follows,
 
 ```
- set "mp2:reference spin mapping" 2
+ set "mp2:reference spin mapping" 2
 ```
 
 The SET directive for a spin-unrestricted calculation with the spins
 flipped from the original SCF reference wavefunction is as follows,
 
 ```
- set "mp2:reference spin mapping" 2 1
+ set "mp2:reference spin mapping" 2 1
 ```
 
 ### Batch Sizes for the RI-MP2 Calculation
@@ -364,8 +364,8 @@ requirements and number of passes required. This is done using two SET
 directives of the following form,
 
 ```
- set "mp2:transformation batch size" <integer size default -1>
- set "mp2:energy batch size" <integer isize jsize default -1 -1>
+ set "mp2:transformation batch size" <integer size default -1>
+ set "mp2:energy batch size" <integer isize jsize default -1 -1>
 ```
 
 The default is for the code to determine the batch size based on the
@@ -401,7 +401,7 @@ amount of I/O, or minimizing the amount of computation. This can be
 accomplished using a SET directive of the form,
 
 ```
- set "mp2:energy mem minimize" <string mem_opt default I>
+ set "mp2:energy mem minimize" <string mem_opt default I>
 ```
 
 A value of I entered for the string mem\_opt means that a strategy to
@@ -429,9 +429,9 @@ Local memory usage in the first two steps of the transformation is
 controlled in the RI-MP2 calculation using the following SET directives,
 
 ```
- set "xf3ci:AO 1 batch size" <integer max>
- set "xf3ci:AO 2 batch size" <integer max>
- set "xf3ci:fit batch size" <integer max>
+ set "xf3ci:AO 1 batch size" <integer max>
+ set "xf3ci:AO 2 batch size" <integer max>
+ set "xf3ci:fit batch size" <integer max>
 ```
 
 The size of the local arrays determines the sizes of the two matrix
@@ -460,7 +460,7 @@ external electric field and is not the expectation value of the operator
 over the wavefunction. It has been shown that evaluating the MP2 density
 through a derivative provides more accurate results, presumably because
 this matches the way experiments probe the electron density more
-closely\[5\]\[6\]\[7\]\[8\].
+closely[5][6][7][8].
 
 Only dipole moments are printed by the MP2 gradient code, but natural
 orbitals are produced and stored in the permanent directory with a file
@@ -494,27 +494,27 @@ task mp2 property
 Note that the MP2 linear response density matrix is not necessarily positive
 definite so it is not unusual to see a few small negative natural
 orbital occupation numbers. Significant negative occupation numbers have
-been argued to be a sign that the system might be near degenerate\[9\].
+been argued to be a sign that the system might be near degenerate[9].
 
 ## SCS-MP2 -- Spin-Component Scaled MP2
 
 Each MP2 output contains the calculation of the SCS-MP2 correlation
-energies as suggested by S.Grimme\[10\]
+energies as suggested by S.Grimme[10]
 
 The SCS keyword is only required for gradients calculations:
 ```
- MP2  
-   [SCS]  
- END
+ MP2  
+   [SCS]  
+ END
 ```
 Scaling factors for the two components (parallel and opposite spin) can
 be defined by using the keywords FSS (same spin factor) and FOS
 (opposite spin factor):
 ```
 mp2  
-   scs  
-   fss   1.13  
-   fos  0.56  
+   scs  
+   fss   1.13  
+   fos   0.56  
 end
 ```
 Default values are FSS=1.2, FOS=0.3 for MP2, and FSS=1.13, FOS=1.27 for
