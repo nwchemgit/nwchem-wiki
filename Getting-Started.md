@@ -58,31 +58,31 @@ directives is also described in detail.
 
 ## .nwchemrc for environment variables and libraries
 
-Each user should have a .nwchemrc file to point to default data files,
+Each user should have a `.nwchemrc` file to point to default data files,
 such as basis sets, pseudopotentials, and MD potentials.
 
 Contents of the default.nwchemrc file based on the above information
 should
 be:
-
-` nwchem_basis_library `<location of NWChem installation>`/src/basis/libraries/`  
-` nwchem_nwpw_library `<location of NWChem installation>`/src/nwpw/libraryps/`  
-` ffield amber`  
-` amber_1 `<location of NWChem installation>`/src/data/amber_s/`  
-` amber_2 `<location of NWChem installation>`/src/data/amber_q/`  
-` amber_3 `<location of NWChem installation>`/src/data/amber_x/`  
-` amber_4 `<location of NWChem installation>`/src/data/amber_u/`  
-` spce   `<location of NWChem installation>`/src/data/solvents/spce.rst`  
-` charmm_s `<location of NWChem installation>`/src/data/charmm_s/`  
-` charmm_x `<location of NWChem installation>`/src/data/charmm_x/`
-
+```
+ nwchem_basis_library <location of NWChem installation>/src/basis/libraries/  
+ nwchem_nwpw_library <location of NWChem installation>/src/nwpw/libraryps/  
+ ffield amber  
+ amber_1 <location of NWChem installation>/src/data/amber_s/  
+ amber_2 <location of NWChem installation>/src/data/amber_q/  
+ amber_3 <location of NWChem installation>/src/data/amber_x/  
+ amber_4 <location of NWChem installation>/src/data/amber_u/  
+ spce   <location of NWChem installation>/src/data/solvents/spce.rst  
+ charmm_s <location of NWChem installation>/src/data/charmm_s/  
+ charmm_x <location of NWChem installation>/src/data/charmm_x/
+```
 It is can also be useful to use the NWCHEM\_BASIS\_LIBRARY environment
 variable when testing a new libraries in your own directory. This will
 allow you to overwrite the value of nwchem\_basis\_library in your
 .nwchemrc file and point to the new basis library. For example:
-
-`   % setenv NWCHEM_BASIS_LIBRARY "$NWCHEM/data-5.0/libraries/"`
-
+```
+   % setenv NWCHEM_BASIS_LIBRARY "$NWCHEM/data-5.0/libraries/"
+```
 Do not forget the trailing "/".
 
 ## Input File Structure
@@ -96,14 +96,14 @@ NWChem will read through the entire input file looking for the start-up
 directives. In this first pass, all other directives are ignored.
 
 The start-up directives are
-
-`START`  
-`RESTART`  
-`SCRATCH_DIR`  
-`PERMANENT_DIR`  
-`MEMORY`  
-`ECHO`
-
+```
+START  
+RESTART  
+SCRATCH_DIR  
+PERMANENT_DIR  
+MEMORY  
+ECHO
+```
 After the input file has been scanned for the start-up directives, it is
 rewound and read sequentially. Input is processed either by the
 top-level parser (for the directives listed in [Top-level
@@ -123,13 +123,13 @@ file.
 The name of the input file is usually provided as an argument to the
 execute command for NWChem. That is, the execute command looks something
 like the following
-
-` nwchem input_file`
-
-The default name for the input file is nwchem.nw. If an input file name
-input\_file is specified without an extension, the code assumes .nw as a
-default extension, and the input filename becomes input\_file.nw. If the
-code cannot locate a file named either input\_file or input\_file.nw (or
+```
+ nwchem input_file
+```
+The default name for the input file is `nwchem.nw`. If an input file name
+`input_file` is specified without an extension, the code assumes .nw as a
+default extension, and the input filename becomes `input_file.nw`. If the
+code cannot locate a file named either `input_file` or `input_file.nw` (or
 nwchem.nw if no file name is provided), an error is reported and
 execution terminates. The following section presents two input files to
 illustrate the directive syntax and input file format for NWChem
@@ -141,17 +141,17 @@ A simple example of an NWChem input file is an SCF geometry optimization
 of the nitrogen molecule, using a Dunning cc-pvdz basis set. This input
 file contains the bare minimum of information the user must specify to
 run this type of problem -- fewer than ten lines of input, as follows:
-
-` title "Nitrogen cc-pvdz SCF geometry optimization"`  
-` geometry  `  
-`   n 0 0 0`  
-`   n 0 0 1.08`  
-` end`  
-` basis`  
-`   n library cc-pvdz`  
-` end`  
-` task scf optimize`
-
+```
+ title "Nitrogen cc-pvdz SCF geometry optimization"  
+ geometry    
+   n 0 0 0  
+   n 0 0 1.08  
+ end  
+ basis  
+   n library cc-pvdz  
+ end  
+ task scf optimize
+```
 Examining the input line by line, it can be seen that it contains only
 four directives; TITLE, GEOMETRY, BASIS, and TASK. The TITLE directive
 is optional, and is provided as a means for the user to more easily
@@ -167,7 +167,7 @@ Z-matrix format). The input blocks for the BASIS and GEOMETRY directives
 are structured in similar fashion, i.e., name, keyword, ..., end (In
 this simple example, there are no keywords). The BASIS input block must
 contain basis set information for every atom type in the geometry with
-which it will be used. Refer to Sections 7 and 8, and Appendix A for a
+which it will be used. Refer to [Basis](Basis) for a
 description of available basis sets and a discussion of how to define
 new ones.
 
@@ -176,11 +176,11 @@ program to optimize the molecular geometry by minimizing the SCF energy.
 (For a description of possible tasks and the format of the TASK
 directive, refer to [Tasks](TASK))
 
-If the input is stored in the file n2.nw, the command to run this job on
+If the input is stored in the file `n2.nw`, the command to run this job on
 a typical UNIX workstation is as follows:
-
-` nwchem n2`
-
+```
+ nwchem n2
+```
 NWChem output is to UNIX standard output, and error messages are sent to
 both standard output and standard error.
 
@@ -197,35 +197,35 @@ optimization is finished using MP2 and a basis set with polarization
 functions. The final task is to calculate the MP2 vibrational
 frequencies. The input file to accomplish these three tasks is as
 follows:
-
-`start h2o_freq`  
-`charge 1`  
-`geometry units angstroms`  
-` O       0.0  0.0  0.0`  
-` H       0.0  0.0  1.0`  
-` H       0.0  1.0  0.0`  
-`end`  
-`basis`  
-` H library sto-3g`  
-` O library sto-3g`  
-`end`  
-`scf`  
-` uhf; doublet`  
-` print low`  
-`end`  
-`title "H2O+ : STO-3G UHF geometry optimization"`  
-`task scf optimize`  
-`basis`  
-` H library 6-31g**`  
-` O library 6-31g**`  
-`end`  
-`title "H2O+ : 6-31g** UMP2 geometry optimization"`  
-`task mp2 optimize`  
-`mp2; print none; end`  
-`scf; print none; end`  
-`title "H2O+ : 6-31g** UMP2 frequencies"`  
-`task mp2 freq`
-
+```
+start h2o_freq  
+charge 1  
+geometry units angstroms  
+ O       0.0  0.0  0.0  
+ H       0.0  0.0  1.0  
+ H       0.0  1.0  0.0  
+end  
+basis  
+ H library sto-3g  
+ O library sto-3g  
+end  
+scf  
+ uhf; doublet  
+ print low  
+end  
+title "H2O+ : STO-3G UHF geometry optimization"  
+task scf optimize  
+basis  
+ H library 6-31g**  
+ O library 6-31g**  
+end  
+title "H2O+ : 6-31g** UMP2 geometry optimization"  
+task mp2 optimize  
+mp2; print none; end  
+scf; print none; end  
+title "H2O+ : 6-31g** UMP2 frequencies"  
+task mp2 freq
+```
 The START directive
 ([START/RESTART](Start_Restart) tells
 NWChem that this run is to be started from the beginning. This directive
@@ -304,17 +304,17 @@ character (also known as a \`return' or \`enter' character). A semicolon
 single physical line of input to contain multiple logical lines of
 input. For example, five lines of input for the GEOMETRY directive can
 be entered as follows;
-
-` geometry`  
-`  O 0  0     0`  
-`  H 0  1.430 1.107`  
-`  H 0 -1.430 1.107`  
-` end`
-
+```
+ geometry  
+  O 0  0     0  
+  H 0  1.430 1.107  
+  H 0 -1.430 1.107  
+ end
+```
 These same five lines could be entered on a single line, as
-
-` geometry; O 0 0 0; H 0 1.430 1.107; H 0 -1.430 1.107; end`
-
+```
+ geometry; O 0 0 0; H 0 1.430 1.107; H 0 -1.430 1.107; end
+```
 This one physical input line comprises five logical input lines. Each
 logical or physical input line must be no longer than 1023 characters.
 
@@ -335,7 +335,7 @@ In the input file:
   - \# (the hash or pound symbol) is the comment character. All
     characters following \# (up to the end of the physical line) are
     ignored.
-  - If any input line (excluding Python programs, Section 38) begins
+  - If any input line (excluding [Python programs](Python) begins
     with the string INCLUDE (ignoring case) and is followed by a valid
     file name, then the data in that file are read as if they were
     included into the current input file at the current line. Up to
@@ -376,13 +376,13 @@ conventions are used in the generic descriptions of the NWChem input.
     swap, print, units, bqbq).
   - variable names always appear in lower case, in computer typeface,
     and enclosed in angle brackets to distinguish them from keywords
-    (e.g., <input_filename>, <basisname>, <tag>).
+    (e.g., `<input_filename>`, `<basisname>`, `<tag>`).
   - $variable$ is used to indicate the substitution of the value of a
     variable.
   - () is used to group items (the parentheses and other special symbols
     should not appear in the input).
   - || separate exclusive options, parameters, or formats.
-  - \[  \] enclose optional entries that have a default value.
+  - [  ] enclose optional entries that have a default value.
   - < > enclose a type, a name of a value to be specified, or a
     default value, if any.
   - \\ is used to concatenate lines in a description.
@@ -405,20 +405,20 @@ notation, which interprets lo:hi:inc as lo, lo+inc, lo+2\*inc, ..., hi.
 For example, where a list of integers is expected in the input, the
 following two lines are equivalent
 ```
-  7 10 21:27:2 1:3 99  
-  7 10 21 23 25 27 1 2 3 99
+  7 10 21:27:2 1:3 99  
+  7 10 21 23 25 27 1 2 3 99
 ```
 (In Fortran triplet notation, the increment, if unstated, is 1; e.g.,
 1:3 = 1:3:1.)
 
-The directive VECTORS (Section 10.5) is presented here as an example of
+The directive [VECTORS](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) is presented here as an example of
 an NWChem input directive. The general form of the directive is as
 follows:
 ```
- VECTORS [input (<string input_movecs default atomic>) || \  
-                  (project <string basisname> <string filename>)] \ 
-         [swap [(alpha||beta)] <integer vec1 vec2> ...] \ 
-         [output <string output_movecs default $file_prefix$.movecs>]
+ VECTORS [input (<string input_movecs default atomic>) || \  
+                  (project <string basisname> <string filename>)] \ 
+         [swap [(alpha||beta)] <integer vec1 vec2> ...] \ 
+         [output <string output_movecs default $file_prefix$.movecs>]
 ```
 This directive contains three optional keywords, as indicated by the
 three main sets of square brackets enclosing the keywords input, swap,
@@ -427,41 +427,41 @@ the molecular orbital vectors. There are two mutually exclusive options
 for specifying the vectors, as indicated by the || symbol separating the
 option descriptions;
 ```
- (<string input_movecs default atomic>) || \ 
-                 (project <string basisname> <string filename>) \
+ (<string input_movecs default atomic>) || \ 
+                 (project <string basisname> <string filename>) \
 ```
-The first option, (<string input_movecs default atomic>), allows the
-user to specify an ASCII character string for the parameter
-input\_movecs. If no entry is specified, the code uses the default
-atomic (i.e., atomic guess). The second option, (project
-<string basisname> <string filename>), contains the keyword project,
+The first option, `<string input_movecs default atomic>`, can be
+used to specify an ASCII character string for the parameter
+`input_movecs`. If no entry is specified, the code uses the default
+`atomic` (i.e., atomic guess). The second option, `project
+<string basisname> <string filename>`, contains the keyword `project`,
 which takes two string arguments. When this keyword is used, the vectors
-in file <filename> will be projected from the (smaller) basis
-<basisname> into the current atomic orbital (AO) basis.
+in file `<filename>` will be projected from the (smaller) basis
+`<basisname>` into the current atomic orbital (AO) basis.
 
-The second keyword, swap, allows the user to re-order the starting
+The second keyword, `swap`, can be used to re-order the starting
 vectors, specifying the pairs of vectors to be swapped. As many pairs as
-the user wishes to have swapped can be listed for \<integer vec1 vec2
-... \>. The optional keywords alpha and beta allow the user to swap the
+the user wishes to have swapped can be listed for <integer vec1 vec2
+... >. The optional keywords alpha and beta allow the user to swap the
 alpha or beta spin orbitals.
 
-The third keyword, output, allows the user to tell the code where to
+The third keyword, `output`, allows the user to tell the code where to
 store the vectors, by specifying an ASCII string for the parameter
-output\_movecs. If no entry is specified for this parameter, the default
+`output_movecs`. If no entry is specified for this parameter, the default
 is to write the vectors back into either the user- specified MO vectors
-input file or, if this is not available, the file $file\_prefix$.movecs.
+input file or, if this is not available, the file $file_prefix$.movecs.
 
 A particular example of the VECTORS directive is shown below. It
 specifies both the input and output keywords, but does not use the swap
 option.
-
-` vectors input project "small basis" small_basis.movecs \`  
-`         output large_basis.movecs`
-
+```
+ vectors input project "small basis" small_basis.movecs \
+         output large_basis.movecs
+```
 This directive tells the code to generate input vectors by projecting
 from vectors in a smaller basis named "small basis", which is stored in
-the file small\_basis.movecs. The output vectors will be stored in the
-file large\_basis.movecs.
+the file `small_basis.movecs`. The output vectors will be stored in the
+file `large_basis.movecs`.
 
 The order of keyed optional entries within a directive should not
 matter, unless noted otherwise in the specific instructions for a
