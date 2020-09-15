@@ -1,3 +1,6 @@
+---
+title: "NWChem Website"
+---
 <img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png" style="float:left; margin-right:5px; alt="drawing" width="120"/>
 <img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/emsl_logo2.svg" style="float:right; margin-leftt:5px; alt="drawing" width="160"/>
 ## NWChem: Open Source High-Performance Computational Chemistry
