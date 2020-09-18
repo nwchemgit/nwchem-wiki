@@ -46,7 +46,7 @@ Global Arrays:
 It is difficult to provide complete guidance to the user as to which
 option to choose. However, we observe the following:
 
-  - `ARMCI\_NETWORK=MPI-PR` is stable and performs well on many platforms
+  - `ARMCI_NETWORK=MPI-PR` is stable and performs well on many platforms
     (including Cray XC platforms, e.g. NERSC Cori). This port will use
     one processes on each node for communication, therefore subtracting
     one process (again on each node) for NWChem. Therefore, when
