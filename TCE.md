@@ -29,10 +29,10 @@ The capabilities of the module include:
     CISDTQ),
   - Unrestricted coupled-cluster theory (LCCD, CCD, LCCSD, CCSD, QCISD,
     CCSDT, CCSDTQ),
-  - Unrestricted iterative many-body perturbation theory \[MBPT(2),
-    MBPT(3), MBPT(4)\] in its tensor formulation,
+  - Unrestricted iterative many-body perturbation theory [MBPT(2),
+    MBPT(3), MBPT(4)] in its tensor formulation,
   - Unrestricted coupled-cluster singles and doubles with perturbative
-    connected triples {CCSD(T), CCSD\[T\]},
+    connected triples {CCSD(T), CCSD[T]},
   - Unrestricted equation-of-motion coupled-cluster theory (EOM-CCSD,
     EOM-CCSDT, EOM-CCSDTQ) for excitation energies, transition moments
     and oscillator strengths, and excited-state dipole moments,
@@ -228,46 +228,46 @@ The keyword to invoke the many-electron theories in the module is TCE.
 To perform a single-point energy calculation, include
 
 ```
- TASK TCE ENERGY
+ TASK TCE ENERGY
 ```
 
 in the input file, which may be preceded by the TCE input block that
 details the calculations:
 
 ```
- TCE
-   [(DFT||HF||SCF) default HF=SCF]
-   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
-            [virtual <integer nfzv default 0>]]
-   [(LCCD||CCD||CCSD||CC2||LR-CCSD||LCCSD||CCSDT||CCSDTA||CCSDTQ|| \
-     CCSD(T)||CCSD[T]||CCSD(2)_T||CCSD(2)||CCSDT(2)_Q|| \
-     CR-CCSD[T]||CR-CCSD(T)|| \
-     LR-CCSD(T)||LR-CCSD(TQ)-1||CREOMSD(T)|| \
-     QCISD||CISD||CISDT||CISDTQ|| \
-     MBPT2||MBPT3||MBPT4||MP2||MP3||MP4) default CCSD]
-   [THRESH <double thresh default 1e-6>]
-   [MAXITER <integer maxiter default 100>]
-   [PRINT (none||low||medium||high||debug)
-     <string list_of_names ...>]
-   [IO (fortran||eaf||ga||sf||replicated||dra||ga_eaf) default ga]
-   [DIIS <integer diis default 5>]
-   [LSHIFT <double lshift default is 0.0d0>]
-   [NROOTS <integer nroots default 0>]
-   [TARGET <integer target default 1>]
-   [TARGETSYM <character targetsym default 'none'>]
-   [SYMMETRY]
-   [2EORB]
-   [2EMET <integer fast2e default 1>]
-   [T3A_LVL] 
-   [ACTIVE_OA]
-   [ACTIVE_OB]
-   [ACTIVE_VA]
-   [ACTIVE_VB]
-   [DIPOLE]
-   [TILESIZE <no default (automatically adjusted)>]
-   [(NO)FOCK <logical recompf default .true.>]
-   [FRAGMENT <default -1 (off)>]
- END
+ TCE
+   [(DFT||HF||SCF) default HF=SCF]
+   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
+            [virtual <integer nfzv default 0>]]
+   [(LCCD||CCD||CCSD||CC2||LR-CCSD||LCCSD||CCSDT||CCSDTA||CCSDTQ|| \
+     CCSD(T)||CCSD[T]||CCSD(2)_T||CCSD(2)||CCSDT(2)_Q|| \
+     CR-CCSD[T]||CR-CCSD(T)|| \
+     LR-CCSD(T)||LR-CCSD(TQ)-1||CREOMSD(T)|| \
+     QCISD||CISD||CISDT||CISDTQ|| \
+     MBPT2||MBPT3||MBPT4||MP2||MP3||MP4) default CCSD]
+   [THRESH <double thresh default 1e-6>]
+   [MAXITER <integer maxiter default 100>]
+   [PRINT (none||low||medium||high||debug)
+     <string list_of_names ...>]
+   [IO (fortran||eaf||ga||sf||replicated||dra||ga_eaf) default ga]
+   [DIIS <integer diis default 5>]
+   [LSHIFT <double lshift default is 0.0d0>]
+   [NROOTS <integer nroots default 0>]
+   [TARGET <integer target default 1>]
+   [TARGETSYM <character targetsym default 'none'>]
+   [SYMMETRY]
+   [2EORB]
+   [2EMET <integer fast2e default 1>]
+   [T3A_LVL] 
+   [ACTIVE_OA]
+   [ACTIVE_OB]
+   [ACTIVE_VA]
+   [ACTIVE_VB]
+   [DIPOLE]
+   [TILESIZE <no default (automatically adjusted)>]
+   [(NO)FOCK <logical recompf default .true.>]
+   [FRAGMENT <default -1 (off)>]
+ END
 ```
 
 Also supported are energy gradient calculation, geometry optimization,
@@ -275,19 +275,19 @@ and vibrational frequency (or hessian) calculation, on the basis of
 numerical differentiation. To perform these calculations, use
 
 ```
-     TASK TCE GRADIENT
+     TASK TCE GRADIENT
 ```
 
 or
 
 ```
-     TASK TCE OPTIMIZE
+     TASK TCE OPTIMIZE
 ```
 
 or
 
 ```
-     TASK TCE FREQUENCIES
+     TASK TCE FREQUENCIES
 ```
 
 The user may also specify the parameters of reference wave function
@@ -298,16 +298,16 @@ Since every keyword except the model has a default value, a minimal
 input file will be
 
 ```
- GEOMETRY
-   Be 0.0 0.0 0.0
- END
- BASIS
-   Be library cc-pVDZ
- END
- TCE
-   ccsd
- END
- TASK TCE ENERGY
+ GEOMETRY
+   Be 0.0 0.0 0.0
+ END
+ BASIS
+   Be library cc-pVDZ
+ END
+ TCE
+   ccsd
+ END
+ TASK TCE ENERGY
 ```
 
 which performs a CCSD/cc-pVDZ calculation of the Be atom in its singlet
@@ -318,19 +318,19 @@ improved task scheduling can be enable by the "set tce:nts T" command as
 in the following example:
 
 ```
-geometry/basis set specifications 
+geometry/basis set specifications 
 tce
-freeze atomic
+freeze atomic
 creomccsd(t)
-tilesize 20
+tilesize 20
 2eorb
-2emet 13
-eomsol 2
-end 
+2emet 13
+eomsol 2
+end 
 
-set tce:nts T
+set tce:nts T
 
-task tce energy
+task tce energy
 ```
 
 New task scheduling should reduce time to solutions and provide better
@@ -351,15 +351,15 @@ For instance, RHF-RCCSDT calculation (R standing for spin-restricted)
 can be performed with the following input blocks:
 
 ```
- SCF
-   SINGLET
-   RHF
- END
- TCE
-   SCF
-   CCSDT
- END
- TASK TCE ENERGY
+ SCF
+   SINGLET
+   RHF
+ END
+ TCE
+   SCF
+   CCSDT
+ END
+ TASK TCE ENERGY
 ```
 
 This calculation (and any correlation calculation in the TCE module
@@ -369,30 +369,30 @@ amplitudes. ROHF-UCCSDT (U standing for spin-unrestricted) for an
 open-shell doublet system can be requested by
 
 ```
- SCF
-   DOUBLET
-   ROHF
- END
- TCE
-   SCF
-   CCSDT
- END
- TASK TCE ENERGY
+ SCF
+   DOUBLET
+   ROHF
+ END
+ TCE
+   SCF
+   CCSDT
+ END
+ TASK TCE ENERGY
 ```
 
 and likewise, UHF-UCCSDT for an open-shell doublet system can be
 specified with
 
 ```
- SCF
-   DOUBLET
-   UHF
- END
- TCE
-   SCF
-   CCSDT
- END
- TASK TCE ENERGY
+ SCF
+   DOUBLET
+   UHF
+ END
+ TCE
+   SCF
+   CCSDT
+ END
+ TASK TCE ENERGY
 ```
 
 The operation and storage costs of the last two calculations are
@@ -400,15 +400,15 @@ identical. To use the KS DFT reference wave function for a UCCSD
 calculation of an open-shell doublet system,
 
 ```
- DFT
-   ODFT
-   MULT 2
- END
- TCE
-   DFT
-   CCSD
- END
- TASK TCE ENERGY
+ DFT
+   ODFT
+   MULT 2
+ END
+ TCE
+   DFT
+   CCSD
+ END
+ TASK TCE ENERGY
 ```
 
 Note that the default model of the DFT module is
@@ -422,7 +422,7 @@ These keywords stand for the following models:
   - CCD: coupled-cluster doubles,
   - LCCSD: linearized coupled-cluster singles & doubles,
   - CCSD: coupled-cluster singles & doubles (also EOM-CCSD),
-  - CCSD\_ACT: coupled-cluster singles & active doubles (also
+  - CCSD_ACT: coupled-cluster singles & active doubles (also
     active-space EOMCCSD),
   - LR-CCSD: locally renormalized EOMCCSD method.
   - EACCSD: Electron affinity EOMCCSD method.
@@ -433,25 +433,25 @@ These keywords stand for the following models:
   - CCSDTA: coupled-cluster singles, doubles, & active triples (also
     EOM-CCSDT). Three variants of the active-space CCSDt and EOMCCSDt
     approaches can be selected based on various definitions of triply
-    excited clusters: (1) version I (keyword T3A\_LVL 1) uses the
+    excited clusters: (1) version I (keyword T3A_LVL 1) uses the
     largest set of triply excited amplitudes defined by at least one
     occupied and one unoccupied active spinorbital labels. (2) Version
-    II (keyword T3A\_LVL 2) uses triply excited amplitudes that carry at
+    II (keyword T3A_LVL 2) uses triply excited amplitudes that carry at
     least two occupied and unoccupied active spinorbital labels. (3)
-    Version III (keyword T3A\_LVL 3) uses triply excited amplitudes that
+    Version III (keyword T3A_LVL 3) uses triply excited amplitudes that
     are defined by active indices only. Each version requires defining
-    relevant set of occupied active α and β spinorbitals (ACTIVE\_OA and
-    ACTIVE\_OB) as well as active unoccupied α and β spinorbitals
-    (ACTIVE\_VA and ACTIVE\_VB).
+    relevant set of occupied active α and β spinorbitals (ACTIVE_OA and
+    ACTIVE_OB) as well as active unoccupied α and β spinorbitals
+    (ACTIVE_VA and ACTIVE_VB).
   - CCSDTQ: coupled-cluster singles, doubles, triples, & quadruples
     (also EOM-CCSDTQ),
   - CCSD(T): CCSD and perturbative connected triples,
-  - CCSD\[T\]: CCSD and perturbative connected triples,
-  - CR-CCSD\[T\]: completely renormalized CCSD\[T\] method,
+  - CCSD[T]: CCSD and perturbative connected triples,
+  - CR-CCSD[T]: completely renormalized CCSD[T] method,
   - CR-CCSD(T): completely renormalized CCSD(T) method,
-  - CCSD(2)\_T: CCSD and perturbative <img alt="$CCSD(T)_T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5ebf56ead8349245137cf95ab6705db2.svg?invert_in_darkmode&sanitize=true" align=middle width="84.85587pt" height="24.56553pt"/> correction,
-  - CCSD(2)\_TQ: CCSD and perturbative CCSD(2) correction,
-  - CCSDT(2)\_Q: CCSDT and perturbative CCSDT(2)<img alt="$\_Q$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d0b6053d6e75530c9603ac06fd934c9b.svg?invert_in_darkmode&sanitize=true" align=middle width="12.94689pt" height="22.38192pt"/> correction.
+  - CCSD(2)_T: CCSD and perturbative <img alt="$CCSD(T)_T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5ebf56ead8349245137cf95ab6705db2.svg?invert_in_darkmode&sanitize=true" align=middle width="84.85587pt" height="24.56553pt"/> correction,
+  - CCSD(2)_TQ: CCSD and perturbative CCSD(2) correction,
+  - CCSDT(2)_Q: CCSDT and perturbative CCSDT(2)<img alt="$_Q$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d0b6053d6e75530c9603ac06fd934c9b.svg?invert_in_darkmode&sanitize=true" align=middle width="12.94689pt" height="22.38192pt"/> correction.
   - LR-CCSD(T): CCSD and perturbative locally renormalized CCSD(T)
     correction,
   - LR-CCSD(TQ)-1: CCSD and perturbative locally renormalized CCSD(TQ)
@@ -536,7 +536,7 @@ To enable the compilation of the MRCC codes one has to set the following
 variable before the compilation of NWChem
 
 ```
- export MRCC_METHODS=y
+ export MRCC_METHODS=y
 ```
 
 To run MRCC calculations the user has to define two groups in the input
@@ -544,7 +544,7 @@ file. First, the TCE group and secondly the MRCCDATA group. In the TCE
 group the iterative level of theory is defined, e.g. BWCCSD or MKCCSD.
 This implementation was designed for complete model spaces (CMS) which
 means that the modelspace contains all Slater determinants of all
-possible (in the context of the spatial and spin symmetry, M\_s)
+possible (in the context of the spatial and spin symmetry, M_s)
 distributions of active electrons among active spin orbitals. The user
 can define the modelspace in two ways. As a first approach the model
 space can be defined by hand, as shown in the two examples below. The
@@ -567,75 +567,75 @@ state the code calculates. The lowest root, the ground state, is
 identified as root 1. If one wants to calculate the third root the
 keyword ROOT 3 should be used. An example is given below.
 ```
- echo
- start tce_mrcc_bwcc 
- memory stack 1000 mb heap 100 mb global 500 mb verify
- geometry units au
-   H                     0.00000000     -2.27289450     -1.58834700
-   O                     0.00000000      0.00000000     -0.01350000
-   H                     0.00000000      2.27289450     -1.58834700
- end
- basis spherical
-   O library cc-pvdz
-   H library cc-pvdz
- end
- charge 0
- scf
-   rohf
-   singlet
-   thresh 1.0e-10
-   tol2e 1.0e-10
- end
- tce
-   bwccsd
-   thresh 1.0e-7
-   targetsym a1
-   io ga
-   tilesize 18
- end
- mrccdata
-   root 1
-   nref 4
-   222220
-   222202
-   2222ab
-   2222ba
- end
- task tce energy
+ echo
+ start tce_mrcc_bwcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   bwccsd
+   thresh 1.0e-7
+   targetsym a1
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce energy
 ```
 ```
- echo
- start tce_mrcc_mkcc 
- memory stack 1000 mb heap 100 mb global 500 mb verify
- geometry units au
-   H                   0.00000000     -2.27289450     -1.58834700
-   O                   0.00000000      0.00000000     -0.01350000
-   H                   0.00000000      2.27289450     -1.58834700
- end
- basis spherical
-   O library cc-pvdz
-   H library cc-pvdz
- end
- charge 0
- scf
-   rohf
-   singlet
-   thresh 1.0e-10
-   tol2e 1.0e-10
- end
- tce
-   mkccsd
-   thresh 1.0e-5
-   targetsym a1
-   maxiter 100
-   io ga
-   tilesize 18
- end
- mrccdata
-   root 1
-   cas 2 2 # Please make sure the references generated are correct.
- end
- task tce energy
+ echo
+ start tce_mrcc_mkcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                   0.00000000     -2.27289450     -1.58834700
+   O                   0.00000000      0.00000000     -0.01350000
+   H                   0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   mkccsd
+   thresh 1.0e-5
+   targetsym a1
+   maxiter 100
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   root 1
+   cas 2 2 # Please make sure the references generated are correct.
+ end
+ task tce energy
 ```
 This version of MRCC works only with GA as specified by the "IO GA"
 option. In addition this code works only with the spin-orbit 4-index
@@ -650,85 +650,85 @@ In addition to the iterative single-double calculations the code can
 calculate non-iterative triples corrections. To request these triples
 corrections the keyword "SE4T" should be added to the MRCCDATA block.
 The implementation details and the from of the triples correction are
-given in equation 20 \[ [J. Chem. Phys. 137, 094112
-(2012)](http://dx.doi.org/10.1063/1.4747698)\].
+given in equation 20 [ [J. Chem. Phys. 137, 094112
+(2012)](http://dx.doi.org/10.1063/1.4747698)].
 ```
- echo
- start tce_mrcc_bwcc 
- memory stack 1000 mb heap 100 mb global 500 mb verify
- geometry units au
-   H                     0.00000000     -2.27289450     -1.58834700
-   O                     0.00000000      0.00000000     -0.01350000
-   H                     0.00000000      2.27289450     -1.58834700
- end
- basis spherical
-   O library cc-pvdz
-   H library cc-pvdz
- end
- charge 0
- scf
-   rohf
-   singlet
-   thresh 1.0e-10
-   tol2e 1.0e-10
- end
- tce
-   bwccsd
-   thresh 1.0e-7
-   targetsym a1
-   io ga
-   tilesize 18
- end
- mrccdata
-   se4t
-   no_aposteriori
-   root 1
-   nref 4
-   222220
-   222202
-   2222ab
-   2222ba
- end
- task tce ener
+ echo
+ start tce_mrcc_bwcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   bwccsd
+   thresh 1.0e-7
+   targetsym a1
+   io ga
+   tilesize 18
+ end
+ mrccdata
+   se4t
+   no_aposteriori
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce ener
 ```
 ```
- echo
- start tce_mrcc_mkcc 
- memory stack 1000 mb heap 100 mb global 500 mb verify
- geometry units au
-   H                     0.00000000     -2.27289450     -1.58834700
-   O                     0.00000000      0.00000000     -0.01350000
-   H                     0.00000000      2.27289450     -1.58834700
- end
- basis spherical
-   O library cc-pvdz
-   H library cc-pvdz
- end
- charge 0
- scf
-   rohf
-   singlet
-   thresh 1.0e-10
-   tol2e 1.0e-10
- end
- tce
-   mkccsd
-   thresh 1.0e-5
-   targetsym a1
-   io ga
-   tilesize 18
-   maxiter 100
- end
- mrccdata
-   se4t
-   root 1
-   nref 4
-   222220
-   222202
-   2222ab
-   2222ba
- end
- task tce ener
+ echo
+ start tce_mrcc_mkcc 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                     0.00000000     -2.27289450     -1.58834700
+   O                     0.00000000      0.00000000     -0.01350000
+   H                     0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1.0e-10
+   tol2e 1.0e-10
+ end
+ tce
+   mkccsd
+   thresh 1.0e-5
+   targetsym a1
+   io ga
+   tilesize 18
+   maxiter 100
+ end
+ mrccdata
+   se4t
+   root 1
+   nref 4
+   222220
+   222202
+   2222ab
+   2222ba
+ end
+ task tce ener
 ```
 ### Implementation notes for reference-level-parallelism in MRCC
 
@@ -747,12 +747,12 @@ this approach have been described in
 Two essential keywords have to be added to the "mrccdata" block of the
 input:
 ```
-subgroupsize n
+subgroupsize n
 improvetiling
 ```
 and
 ```
-diis 0
+diis 0
 ```
 in tce block. The line `subgroupsize n` defines the size of the subgroup and
 `improvetiling` refers to the data representation in the MRCC subgroup
@@ -760,46 +760,46 @@ algorithm. For example, if user has 4 references and total 32 cores/CPU
 then n should be defined as 32/4=8. If user has 10 references and 1200
 cores/CPU available then the size of the subgroupsize (n) is 120.
 ```
- echo
- start tce_mrcc_bwcc_subgroups 
- memory stack 1000 mb heap 100 mb global 500 mb verify
- geometry units au
-   H                   0.00000000     -2.27289450     -1.58834700
-   O                   0.00000000      0.00000000     -0.01350000
-   H                   0.00000000      2.27289450     -1.58834700
- end
- basis spherical
-   O library cc-pvdz
-   H library cc-pvdz
- end
- charge 0
- scf
-   rohf
-   singlet
-   thresh 1e-12
-   tol2e 1e-12
- end
- tce
-   bwccsd
-   targetsym a1
-   io ga
-   diis 0
-   thresh 1e-7
-   tilesize 18
- end
- mrccdata
-   subgroupsize 2 # Please read the documentation below.
-   improvetiling
-   root 1
-   cas 2 2
- end
- task tce ener
+ echo
+ start tce_mrcc_bwcc_subgroups 
+ memory stack 1000 mb heap 100 mb global 500 mb verify
+ geometry units au
+   H                   0.00000000     -2.27289450     -1.58834700
+   O                   0.00000000      0.00000000     -0.01350000
+   H                   0.00000000      2.27289450     -1.58834700
+ end
+ basis spherical
+   O library cc-pvdz
+   H library cc-pvdz
+ end
+ charge 0
+ scf
+   rohf
+   singlet
+   thresh 1e-12
+   tol2e 1e-12
+ end
+ tce
+   bwccsd
+   targetsym a1
+   io ga
+   diis 0
+   thresh 1e-7
+   tilesize 18
+ end
+ mrccdata
+   subgroupsize 2 # Please read the documentation below.
+   improvetiling
+   root 1
+   cas 2 2
+ end
+ task tce ener
 ```
 CAUTION: Before using the subgroup-based algorithm the users should
 perform the GA subgroup test in
 `$NWCHEM_TOP/src/tools/ga-5-6-3/global/testing/pgtest.x` and `pg2test.x` in the
 same location. Additionally it is strongly encouraged to run the NWChem
-QA tests from the $NWCHEM_TOP/QA/tests/tce\_mrcc\_bwcc\_subgroups directory
+QA tests from the $NWCHEM_TOP/QA/tests/tce_mrcc_bwcc_subgroups directory
 with various combinations of subgroup size and total number of CPU.
 
 
@@ -833,8 +833,8 @@ function. To enable the compilation of the EA/IP-EOMCCSD codes one has
 to set the following variable before the compilation of NWChem
 
 ```
-export EACCSD=y
-export IPCCSD=y
+export EACCSD=y
+export IPCCSD=y
 ```
 
 Two input examples for the EA/IP-EOMCCSD calculations are shown below.
@@ -842,75 +842,75 @@ Two input examples for the EA/IP-EOMCCSD calculations are shown below.
   - EA-EOMCCSD calculations for the ozone molecule
 
 ```
-start tce_eaccsd_ozone
-title "tce_eaccsd_ozone"
+start tce_eaccsd_ozone
+title "tce_eaccsd_ozone"
 echo
 
-memory stack 1000 mb heap 200 mb global 500 mb
+memory stack 1000 mb heap 200 mb global 500 mb
 
-geometry units bohr
-symmetry c1 
-O   0.0000000000        0.0000000000        0.0000000000
-O   0.0000000000       -2.0473224350       -1.2595211660
-O   0.0000000000        2.0473224350       -1.2595211660
+geometry units bohr
+symmetry c1 
+O   0.0000000000        0.0000000000        0.0000000000
+O   0.0000000000       -2.0473224350       -1.2595211660
+O   0.0000000000        2.0473224350       -1.2595211660
 end
 
-basis spherical
- * library cc-pvdz
+basis spherical
+ * library cc-pvdz
 end
 
 scf
-thresh 1.0e-10
-tol2e 1.0e-10
+thresh 1.0e-10
+tol2e 1.0e-10
 singlet
 rhf
 end
 
 tce
 eaccsd
-nroots 2
-freeze atomic
-tilesize 20
-thresh 1.0d-6
+nroots 2
+freeze atomic
+tilesize 20
+thresh 1.0d-6
 end
 
-task tce energy
+task tce energy
 ```
 
   - IP-EOMCCSD calculations for the F2 molecule
 
 ```
-start  tce_ipccsd_f2
-title "tce_ipccsd_f2"
+start  tce_ipccsd_f2
+title "tce_ipccsd_f2"
 echo
 
-memory stack 1000 mb heap 200 mb global 500 mb
+memory stack 1000 mb heap 200 mb global 500 mb
 
-geometry units angstroms
-symmetry c1
- F    0.0000000000        0.0000000000   0.7059650
- F    0.0000000000        0.0000000000  -0.7059650
+geometry units angstroms
+symmetry c1
+ F    0.0000000000        0.0000000000   0.7059650
+ F    0.0000000000        0.0000000000  -0.7059650
 end
 
-basis spherical
- * library cc-pvdz
+basis spherical
+ * library cc-pvdz
 end
 
 scf
-thresh 1.0e-10
-tol2e 1.0e-10
+thresh 1.0e-10
+tol2e 1.0e-10
 singlet
 rhf
 end
 
 tce
 ipccsd
-nroots 1
-freeze atomic
-thresh 1.0e-7
+nroots 1
+freeze atomic
+thresh 1.0e-7
 end
 
-task tce energy
+task tce energy
 ```
 
 As in the EOMCCSD input we can request any number of roots.
@@ -925,7 +925,7 @@ HF orbital energies) to pinpoint the initial guesses. If one is
 interested in calculating one EA-EOMCCSD root of the a1 symmetry the
 
 ```
- set tce:maxeorb 0.1
+ set tce:maxeorb 0.1
 ```
 
 should be used. This means that the number of starting vectors will be
@@ -935,7 +935,7 @@ be only one such a vector corresponding to the unoccupied orbital energy
 0.072). If one looks for two roots
 
 ```
- set tce:maxeorb 0.16
+ set tce:maxeorb 0.16
 ```
 
 option should be used(there are two a1 unoccupied orbitals with energies
@@ -945,7 +945,7 @@ For the IP-EOMCCSD case the "set tce:maxeorb" option works in a similar
 way. For example if one is looks for 1 IP-EOMCCSD root of a1 symmetry ,
 
 ```
-set tce:maxeorb 0.24 
+set tce:maxeorb 0.24 
 ```
 
 directive should be used (there is only one occupied orbital of a1
@@ -977,7 +977,7 @@ architecture.
   - replicated : Semi-replicated file on distributed file system with
     EAF library.
   - dra : Distributed file on distributed file system with DRA library.
-  - ga\_eaf : Semi-replicated file on distributed file system with EAF
+  - ga_eaf : Semi-replicated file on distributed file system with EAF
     library. GA is used to speedup the file reconciliation.
 
 The GA algorithm, which is default, stores all input (integrals and
@@ -1006,7 +1006,7 @@ system also share the same I/O buffer. For sequential executions, the
 SF, EAF, and replicated schemes are interchangeable, while the Fortran77
 scheme is appreciably slower.
 
-Two new I/O algorithms dra and ga\_eaf combines GA and DRA or EAF based
+Two new I/O algorithms dra and ga_eaf combines GA and DRA or EAF based
 replicated algorithm. In the former, arrays that are not active (e.g.,
 prior T amplitudes used in DIIS or EOM-CC trial vectors) in GA algorithm
 will be moved to DRA. In the latter, the intermediates that are formed
@@ -1049,28 +1049,28 @@ orbitals are frozen by default. To exclude the atom-like core regions
 altogether, one may request
 
 ```
- FREEZE atomic
+ FREEZE atomic
 ```
 
 To specify the number of lowest-lying occupied orbitals be excluded, one
 may use
 
 ```
- FREEZE 10
+ FREEZE 10
 ```
 
 which causes 10 lowest-lying occupied orbitals excluded. This is
 equivalent to writing
 
 ```
- FREEZE core 10
+ FREEZE core 10
 ```
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
 
 ```
- FREEZE virtual 5
+ FREEZE virtual 5
 ```
 
 ### NROOTS -- the number of excited states
@@ -1131,9 +1131,9 @@ algorithm all iterations are split into microcycles corresponding to
 diis microiterations (the use of "diis" parameter is discussed earlier).
 This algorithm enables the user to precisely estimate the memory usage
 in the EOMCCSD calculations, which is equal to
-diis\*nroots\*(size\_x1+size\_x2), where diis is the length of the DIIS
-cycle, nroots is the number of sought roots, size\_x1 corresponds to the
-size of GA storing singly excited EOMCC almplitudes, and size\_x2 is the
+diis\*nroots\*(size_x1+size_x2), where diis is the length of the DIIS
+cycle, nroots is the number of sought roots, size_x1 corresponds to the
+size of GA storing singly excited EOMCC almplitudes, and size_x2 is the
 size of GA with doubly excited EOMCC amplitudes. Generally, larger
 values of diis parameter lead to a faster convergence, however, this
 happens at the expense of larger memory requirements. It is recommended
@@ -1150,14 +1150,14 @@ threshold for the CCSD and EOMCCSD solvers. This can be achieved by
 setting proper environmetal variables. In the following example
 
 ```
-geometry/basis set specifications
-tce 
- thresh 1.0d-6
- ccsd
- nroots 2
+geometry/basis set specifications
+tce 
+ thresh 1.0d-6
+ ccsd
+ nroots 2
 end
-set tce:thresheom 1.0d-4
-task tce energy
+set tce:thresheom 1.0d-4
+task tce energy
 ```
 
 the CCSD equations will be converged to the 1.0d-6 threshold while the
@@ -1171,16 +1171,16 @@ converged to the same accuracy as n roots of interest. The follwing
 example, shows how to handle this process (we chose n=2, n+1=3):
 
 ```
-geometry/basis set specifications
-tce 
- freeze core
- ccsd
- nroots 3
- thresh 1.0d-6
+geometry/basis set specifications
+tce 
+ freeze core
+ ccsd
+ nroots 3
+ thresh 1.0d-6
 end
-set tce:thresheom 1.0d-4
-set tce:threshl 1.0d-3
-task tce energy
+set tce:thresheom 1.0d-4
+set tce:threshl 1.0d-3
+task tce energy
 ```
 
 In this example the CCSD equations are solved with the 1.0d-6 threshold,
@@ -1217,7 +1217,7 @@ designed to define the most vital parameters that determine the
 perfromance of 4-index transformation. All new keywords must be used
 with the 2EORB keyword, and thus will not work beyond CCSD methods after 
 NWChem 6.3 (see explanation for 2EORB above). The 2emet keyword (default 
-value 1 or 2emet 1, refers to the older 4-index transformation), defines the algorithm to be
+value 1 or `2emet 1`, refers to the older 4-index transformation), defines the algorithm to be
 used. By putting 2emet 2 the TCE code will execute the algoritm based on
 the two step procedure with two intermediate files. In some instances
 this algorithm is characterized by better timings compared to algorithms
@@ -1275,7 +1275,7 @@ New is the inclusion of multiple 2emet options for the spin-orbital
 transformations, which are the default when 2eorb is not set and are
 mandatory for UHF and KS references. The are currently three algorithms
 1, 2 and 3 available. The numbering scheme does not correspond in any
-way to the numbering scheme for the 2eorb case, except that 2emet 1
+way to the numbering scheme for the 2eorb case, except that `2emet 1`
 corresponds to the default algorithm present in previous releases, which
 uses the user-defined I/O scheme. Algorithm 2 (2emet 2) writes an SF
 file for the half-transformed integrals, which is at least an
@@ -1289,19 +1289,19 @@ also limited in its scalability, but it permits relatively large
 UHF-based calculations using single workstations for patient users.
 
 In cases where the user has access to both shared and local filesystems
-for parallel calculations, the permanent\_dir setting refers to the
-location of SF files. The file system for scratch\_dir will not be used
+for parallel calculations, the `permanent_dir` setting refers to the
+location of SF files. The file system for `scratch_dir` will not be used
 for any of the 4-index transformation algorithms which are compatible
-with io=ga.
+with `io=ga`.
 
-Algorithms 13 and 14 are the <img alt="$N^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f56fbac61e4cf5d8984f6b2d8b7fbe49.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> variants of algorithms 3 and 4.
+Algorithms 13 and 14 are the N<sup>5</sup> variants of algorithms 3 and 4.
 They are the most efficient in core GA-based algorithms for the RHF and
 ROHF reference functions. Again, two parameters are needed to define the
 perfromance of these algorithms: tilesize and attilesize. By default
 attilesize is set equal to 40. In all runs tilesize is required to be
-less than attilesize (tilesize \< attilesize).
+less than attilesize (tilesize < attilesize).
 
-New 4-index transformation for RHF/ROHF references (2emet 15) is
+New 4-index transformation for RHF/ROHF references (`2emet 15`) is
 available in NWChem 6.5. In contrast to algorithms 13 and 14
 inter-processor communication is significantly reduced resulting in much
 better performance.
@@ -1310,7 +1310,7 @@ In the later part of this manual several examples illustrate the use of
 the newly introduced keywords.
 
 An efficient loop-fused four-index transfromations for RHF and ROHF references can be
-enabled by the sequence "2eorb/2emet 16".
+enabled by the sequence `2eorb/2emet 16`.
 
 
 ### CCSD(T)/CR-EOMCCSD(T) calculations with large tiles
@@ -1323,12 +1323,12 @@ Krishnamoorthy, R. Olson, V. Tipparaju, E. Apra, Supercomputing 2011,
 Seattle). In order to enable these versions it is enough to add
 
 ```
-set tce:xmem 100
+set tce:xmem 100
 ```
 
 which defines maximum memory size (in MB) for the slice of 6-dimensional
 tensors (in the current example 100 MB; for more details see QA tests
-tce\_ccsd\_t\_xmem and tce\_cr\_eomccsd\_t\_xmem).
+tce_ccsd_t_xmem and tce_cr_eomccsd_t_xmem).
 
 ### DIPOLE -- the ground- and excited-state dipole moments
 
@@ -1372,9 +1372,9 @@ below.
 | "general information"     | default     | General information                  |
 | "correlation information" | default     | TCE information                      |
 | "mbpt2"                   | debug       | Caonical HF MBPT2 test               |
-| "get\_block"              | debug       | I/O information                      |
-| "put\_block"              | debug       | I/O information                      |
-| "add\_block"              | debug       | I/O information                      |
+| "get_block"              | debug       | I/O information                      |
+| "put_block"              | debug       | I/O information                      |
+| "add_block"              | debug       | I/O information                      |
 | "files"                   | debug       | File information                     |
 | "offset"                  | debug       | File offset information              |
 | "ao1e"                    | debug       | AO one-electron integral evaluation  |
@@ -1392,157 +1392,157 @@ The following is a sample input for a ROHF-UCCSD energy calculation of a
 water radical cation.
 
 ```
-START h2o
-TITLE "ROHF-UCCSD/cc-pVTZ H2O"
-CHARGE 1
+START h2o
+TITLE "ROHF-UCCSD/cc-pVTZ H2O"
+CHARGE 1
 GEOMETRY
- O     0.00000000     0.00000000     0.12982363
- H     0.75933475     0.00000000    -0.46621158
- H    -0.75933475     0.00000000    -0.46621158
+ O     0.00000000     0.00000000     0.12982363
+ H     0.75933475     0.00000000    -0.46621158
+ H    -0.75933475     0.00000000    -0.46621158
 END
 BASIS
- * library cc-pVTZ
+ * library cc-pVTZ
 END
 SCF
- ROHF
- DOUBLET
- THRESH 1.0e-10
- TOL2E  1.0e-10
+ ROHF
+ DOUBLET
+ THRESH 1.0e-10
+ TOL2E  1.0e-10
 END
 TCE
- CCSD
+ CCSD
 END
-TASK TCE ENERGY
+TASK TCE ENERGY
 ```
 
 The same result can be obtained by the following input:
 
 ```
-START h2o
-TITLE "ROHF-UCCSD/cc-pVTZ H2O"
-CHARGE 1
+START h2o
+TITLE "ROHF-UCCSD/cc-pVTZ H2O"
+CHARGE 1
 GEOMETRY
- O     0.00000000     0.00000000     0.12982363
- H     0.75933475     0.00000000    -0.46621158
- H    -0.75933475     0.00000000    -0.46621158
+ O     0.00000000     0.00000000     0.12982363
+ H     0.75933475     0.00000000    -0.46621158
+ H    -0.75933475     0.00000000    -0.46621158
 END
 BASIS
- * library cc-pVTZ
+ * library cc-pVTZ
 END
 SCF
- ROHF
- DOUBLET
- THRESH 1.0e-10
- TOL2E  1.0e-10
+ ROHF
+ DOUBLET
+ THRESH 1.0e-10
+ TOL2E  1.0e-10
 END
-TASK UCCSD ENERGY
+TASK UCCSD ENERGY
 ```
 
 EOMCCSD calculations with EOMSOL 2 algorithm. In these claculations the
 diis value of 8 will be used both in the CCSD and EOMCCSD iterations.
 
 ```
-TITLE "tce_eomccsd_eomsol2"
+TITLE "tce_eomccsd_eomsol2"
 ECHO
-START tce_eomccsd_eomsol2
-GEOMETRY UNITS ANGSTROM
-N            .034130    -.986909     .000000
-N          -1.173397     .981920     .000000
-C          -1.218805    -.408164     .000000
-C           -.007302    1.702153     .000000
-C           1.196200    1.107045     .000000
-C           1.289085    -.345905     .000000
-O           2.310232    -.996874     .000000
-O          -2.257041   -1.026495     .000000
-H            .049329   -1.997961     .000000
-H          -2.070598    1.437050     .000000
-H           -.125651    2.776484     .000000
-H           2.111671    1.674079     .000000
+START tce_eomccsd_eomsol2
+GEOMETRY UNITS ANGSTROM
+N            .034130    -.986909     .000000
+N          -1.173397     .981920     .000000
+C          -1.218805    -.408164     .000000
+C           -.007302    1.702153     .000000
+C           1.196200    1.107045     .000000
+C           1.289085    -.345905     .000000
+O           2.310232    -.996874     .000000
+O          -2.257041   -1.026495     .000000
+H            .049329   -1.997961     .000000
+H          -2.070598    1.437050     .000000
+H           -.125651    2.776484     .000000
+H           2.111671    1.674079     .000000
 END
 BASIS
- * library 6-31G
+ * library 6-31G
 END
 SCF
- THRESH 1.0e-10
- TOL2E 1.0e-10
- SINGLET
- RHF
+ THRESH 1.0e-10
+ TOL2E 1.0e-10
+ SINGLET
+ RHF
 END
 TCE
- FREEZE ATOMIC
- CREOMSD(T)
- EOMSOL 2
- DIIS 8
- TILESIZE 15
- THRESH 1.0d-5
- 2EORB
- 2EMET 13
- NROOTS 1
+ FREEZE ATOMIC
+ CREOMSD(T)
+ EOMSOL 2
+ DIIS 8
+ TILESIZE 15
+ THRESH 1.0d-5
+ 2EORB
+ 2EMET 13
+ NROOTS 1
 END
-TASK TCE ENERGY
+TASK TCE ENERGY
 ```
 
 EOM-CCSDT calculation for excitation energies, excited-state dipole, and
 transition moments.
 
 ```
-START tce_h2o_eomcc
-GEOMETRY UNITS BOHR
- H    1.474611052297904   0.000000000000000   0.863401706825835
- O    0.000000000000000   0.000000000000000  -0.215850436155089
- H   -1.474611052297904   0.000000000000000   0.863401706825835
+START tce_h2o_eomcc
+GEOMETRY UNITS BOHR
+ H    1.474611052297904   0.000000000000000   0.863401706825835
+ O    0.000000000000000   0.000000000000000  -0.215850436155089
+ H   -1.474611052297904   0.000000000000000   0.863401706825835
 END
 BASIS
- * library sto-3g
+ * library sto-3g
 END
 SCF
- SINGLET
- RHF
+ SINGLET
+ RHF
 END
 TCE
- CCSDT
- DIPOLE
- FREEZE CORE ATOMIC
- NROOTS 1
+ CCSDT
+ DIPOLE
+ FREEZE CORE ATOMIC
+ NROOTS 1
 END
-TASK TCE ENERGY
+TASK TCE ENERGY
 ```
 
 Active-space CCSDt/EOMCCSDt calculations (version I) of several excited
 states of the <img alt="$Be_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/650a5bafc9258057b3db4920eedd9cd7.svg?invert_in_darkmode&sanitize=true" align=middle width="27.400395pt" height="22.38192pt"/> molecule. Three highest-lying occupied α and β
-orbitals (active\_oa and active\_ob) and nine lowest-lying unoccupied α
-and β orbitals (active\_va and active\_vb) define the active space.
+orbitals (active_oa and active_ob) and nine lowest-lying unoccupied α
+and β orbitals (active_va and active_vb) define the active space.
 
 ```
-START TCE_ACTIVE_CCSDT
+START TCE_ACTIVE_CCSDT
 ECHO
-GEOMETRY UNITS ANGSTROM
-SYMMETRY C2V
- BE  0.00  0.00   0.00
- BE  0.00  1.137090 -1.96949
+GEOMETRY UNITS ANGSTROM
+SYMMETRY C2V
+ BE  0.00  0.00   0.00
+ BE  0.00  1.137090 -1.96949
 end
-BASIS spherical
- # --- DEFINE YOUR BASIS SET ---
+BASIS spherical
+ # --- DEFINE YOUR BASIS SET ---
 END
 SCF
- THRESH 1.0e-10
- TOL2E 1.0e-10
- SINGLET
- RHF
+ THRESH 1.0e-10
+ TOL2E 1.0e-10
+ SINGLET
+ RHF
 END
 TCE
- FREEZE ATOMIC
- CCSDTA
- TILESIZE 15
- THRESH 1.0d-5
- ACTIVE_OA 3
- ACTIVE_OB 3
- ACTIVE_VA 9
- ACTIVE_VB 9
- T3A_LVL 1
- NROOTS  2
-END 
-TASK TCE ENERGY
+ FREEZE ATOMIC
+ CCSDTA
+ TILESIZE 15
+ THRESH 1.0d-5
+ ACTIVE_OA 3
+ ACTIVE_OB 3
+ ACTIVE_VA 9
+ ACTIVE_VB 9
+ T3A_LVL 1
+ NROOTS  2
+END 
+TASK TCE ENERGY
 ```
 
 Completely renormalized EOMCCSD(T) (CR-EOMCCSD(T)) calculations for the
@@ -1552,64 +1552,64 @@ calculations; (2) EOMCCSD calculations; (3) non-iterative CR-EOMCCSD(T)
 corrections.
 
 ```
-START TCE_CR_EOM_T_OZONE
+START TCE_CR_EOM_T_OZONE
 ECHO
-GEOMETRY UNITS BOHR
-SYMMETRY C2V
- O   0.0000000000        0.0000000000        0.0000000000
- O   0.0000000000       -2.0473224350       -1.2595211660
- O   0.0000000000        2.0473224350       -1.2595211660
+GEOMETRY UNITS BOHR
+SYMMETRY C2V
+ O   0.0000000000        0.0000000000        0.0000000000
+ O   0.0000000000       -2.0473224350       -1.2595211660
+ O   0.0000000000        2.0473224350       -1.2595211660
 END
-BASIS SPHERICAL
-O    S
-    10662.285000000      0.00079900
-     1599.709700000      0.00615300
-      364.725260000      0.03115700
-      103.651790000      0.11559600
-       33.905805000      0.30155200
-O    S
-       12.287469000      0.44487000
-        4.756805000      0.24317200
-O    S
-        1.004271000      1.00000000
-O    S
-        0.300686000      1.00000000
-O    S
-        0.090030000      1.00000000
-O    P
-       34.856463000      0.01564800
-        7.843131000      0.09819700
-        2.306249000      0.30776800
-        0.723164000      0.49247000
-O    P
-        0.214882000      1.00000000
-O    P
-        0.063850000      1.00000000
-O    D
-        2.306200000      0.20270000
-        0.723200000      0.57910000
-O    D
-        0.214900000      0.78545000
-        0.063900000      0.53387000
+BASIS SPHERICAL
+O    S
+    10662.285000000      0.00079900
+     1599.709700000      0.00615300
+      364.725260000      0.03115700
+      103.651790000      0.11559600
+       33.905805000      0.30155200
+O    S
+       12.287469000      0.44487000
+        4.756805000      0.24317200
+O    S
+        1.004271000      1.00000000
+O    S
+        0.300686000      1.00000000
+O    S
+        0.090030000      1.00000000
+O    P
+       34.856463000      0.01564800
+        7.843131000      0.09819700
+        2.306249000      0.30776800
+        0.723164000      0.49247000
+O    P
+        0.214882000      1.00000000
+O    P
+        0.063850000      1.00000000
+O    D
+        2.306200000      0.20270000
+        0.723200000      0.57910000
+O    D
+        0.214900000      0.78545000
+        0.063900000      0.53387000
 END
 SCF
- THRESH 1.0e-10
- TOL2E 1.0e-10
- SINGLET
- RHF
+ THRESH 1.0e-10
+ TOL2E 1.0e-10
+ SINGLET
+ RHF
 END
 TCE
- FREEZE ATOMIC
- CREOMSD(T)
- TILESIZE 20
- THRESH 1.0d-6
- NROOTS 2
+ FREEZE ATOMIC
+ CREOMSD(T)
+ TILESIZE 20
+ THRESH 1.0d-6
+ NROOTS 2
 END
-TASK TCE ENERGY
+TASK TCE ENERGY
 ```
 
 The input for the active-space CR-EOMCCSD(T) calculations (the uracil
-molecule in the 6-31G\* basis set). In this example, the model space is
+molecule in the 6-31G* basis set). In this example, the model space is
 specified by defining the number of highest occupied orbitals (noact)
 and the number of lowest unoccupied orbitals (nuact) that will be
 considered as the active orbitals. In any type of the active-space
@@ -1618,97 +1618,97 @@ efficient versions of the orbital 4-index transformation can be invoked
 (i.e., 2emet 13 or 2emet 14).
 
 ```
-title "uracil-6-31-Gs-act"
+title "uracil-6-31-Gs-act"
 echo
-start uracil-6-31-Gs-act 
-memory stack 1000 mb heap 100 mb global 1000 mb noverify
-geometry units angstrom
-  N             .034130    -.986909     .000000
-  N          -1.173397     .981920     .000000
-  C          -1.218805    -.408164     .000000
-  C           -.007302    1.702153     .000000
-  C           1.196200    1.107045     .000000
-  C           1.289085    -.345905     .000000
-  O           2.310232    -.996874     .000000
-  O          -2.257041   -1.026495     .000000
-  H            .049329   -1.997961     .000000
-  H          -2.070598    1.437050     .000000
-  H           -.125651    2.776484     .000000
-  H           2.111671    1.674079     .000000
+start uracil-6-31-Gs-act 
+memory stack 1000 mb heap 100 mb global 1000 mb noverify
+geometry units angstrom
+  N             .034130    -.986909     .000000
+  N          -1.173397     .981920     .000000
+  C          -1.218805    -.408164     .000000
+  C           -.007302    1.702153     .000000
+  C           1.196200    1.107045     .000000
+  C           1.289085    -.345905     .000000
+  O           2.310232    -.996874     .000000
+  O          -2.257041   -1.026495     .000000
+  H            .049329   -1.997961     .000000
+  H          -2.070598    1.437050     .000000
+  H           -.125651    2.776484     .000000
+  H           2.111671    1.674079     .000000
 end
-basis cartesian
-  * library 6-31G*
+basis cartesian
+  * library 6-31G*
 end
 scf
-  thresh 1.0e-10
-  tol2e 1.0e-10
+  thresh 1.0e-10
+  tol2e 1.0e-10
   singlet
   rhf
 end
 tce
-  freeze atomic
+  freeze atomic
   creom(t)ac
-  oact 21
-  uact 99
-  tilesize 15
-  thresh 1.0d-5
+  oact 21
+  uact 99
+  tilesize 15
+  thresh 1.0d-5
   2eorb
-  2emet 13
-  nroots 1
+  2emet 13
+  nroots 1
   symmetry
-  targetsym a'
+  targetsym a'
 end
-task tce energy
+task tce energy
 ```
 
 The active-space in the active-space CR-EOMCCSD(T) calculations can be
 alternatively specified by defining the energy "window"
-\[emin\_act,emax\_act\]. All orbitals with orbital energies falling into
+[emin_act,emax_act]. All orbitals with orbital energies falling into
 this widnow will considered as active (the active space in the following
 example is different from the one used in the previous example).
 
 ```
-title "uracil-6-31-Gs-act"
+title "uracil-6-31-Gs-act"
 echo
-start uracil-6-31-Gs-act 
-memory stack 1000 mb heap 100 mb global 1000 mb noverify
-geometry units angstrom
-  N             .034130    -.986909     .000000
-  N          -1.173397     .981920     .000000
-  C          -1.218805    -.408164     .000000
-  C           -.007302    1.702153     .000000
-  C           1.196200    1.107045     .000000
-  C           1.289085    -.345905     .000000
-  O           2.310232    -.996874     .000000
-  O          -2.257041   -1.026495     .000000
-  H            .049329   -1.997961     .000000
-  H          -2.070598    1.437050     .000000
-  H           -.125651    2.776484     .000000
-  H           2.111671    1.674079     .000000
+start uracil-6-31-Gs-act 
+memory stack 1000 mb heap 100 mb global 1000 mb noverify
+geometry units angstrom
+  N             .034130    -.986909     .000000
+  N          -1.173397     .981920     .000000
+  C          -1.218805    -.408164     .000000
+  C           -.007302    1.702153     .000000
+  C           1.196200    1.107045     .000000
+  C           1.289085    -.345905     .000000
+  O           2.310232    -.996874     .000000
+  O          -2.257041   -1.026495     .000000
+  H            .049329   -1.997961     .000000
+  H          -2.070598    1.437050     .000000
+  H           -.125651    2.776484     .000000
+  H           2.111671    1.674079     .000000
 end
-basis cartesian
-  * library 6-31G*
+basis cartesian
+  * library 6-31G*
 end
 scf
-  thresh 1.0e-10
-  tol2e 1.0e-10
+  thresh 1.0e-10
+  tol2e 1.0e-10
   singlet
   rhf
 end
 tce
-  freeze atomic
+  freeze atomic
   creom(t)ac
-  emin_act -0.5
-  emax_act 1.0
-  tilesize 15
-  thresh 1.0d-5
+  emin_act -0.5
+  emax_act 1.0
+  tilesize 15
+  thresh 1.0d-5
   2eorbe
-  2emet 13
-  nroots 1
+  2emet 13
+  nroots 1
   symmetry
-  targetsym a'
+  targetsym a'
 end
-task tce energy 
+task tce energy 
 ```
 
 The LR-CCSD(T) calculations for the glycine molecule in the aug-cc-pVTZ
@@ -1716,91 +1716,91 @@ basis set. Option 2EORB is used in order to minimize memory requirements
 associated with the storage of two-electron integrals.
 
 ```
-START TCE_LR_CCSD_T
+START TCE_LR_CCSD_T
 ECHO
-GEOMETRY UNITS BOHR
- O      -2.8770919486        1.5073755650        0.3989960497
- C      -0.9993929716        0.2223265108       -0.0939400216
- C       1.6330980507        1.1263991128       -0.7236778647
- O      -1.3167079358       -2.3304840070       -0.1955378962
- N       3.5887721300       -0.1900460352        0.6355723246
- H       1.7384347574        3.1922914768       -0.2011420479
- H       1.8051078216        0.9725472539       -2.8503867814
- H       3.3674278149       -2.0653924379        0.5211399625
- H       5.2887327108        0.3011058554       -0.0285088728
- H      -3.0501350657       -2.7557071585        0.2342441831
+GEOMETRY UNITS BOHR
+ O      -2.8770919486        1.5073755650        0.3989960497
+ C      -0.9993929716        0.2223265108       -0.0939400216
+ C       1.6330980507        1.1263991128       -0.7236778647
+ O      -1.3167079358       -2.3304840070       -0.1955378962
+ N       3.5887721300       -0.1900460352        0.6355723246
+ H       1.7384347574        3.1922914768       -0.2011420479
+ H       1.8051078216        0.9725472539       -2.8503867814
+ H       3.3674278149       -2.0653924379        0.5211399625
+ H       5.2887327108        0.3011058554       -0.0285088728
+ H      -3.0501350657       -2.7557071585        0.2342441831
 END
 BASIS
- * library aug-cc-pVTZ
+ * library aug-cc-pVTZ
 END
 SCF
- THRESH 1.0e-10
- TOL2E 1.0e-10
- SINGLET
- RHF
+ THRESH 1.0e-10
+ TOL2E 1.0e-10
+ SINGLET
+ RHF
 END
 TCE
- FREEZE ATOMIC
- 2EORB
- TILESIZE 15
- LR-CCSD(T)
- THRESH 1.0d-7
+ FREEZE ATOMIC
+ 2EORB
+ TILESIZE 15
+ LR-CCSD(T)
+ THRESH 1.0d-7
 END
-TASK TCE ENERGY
+TASK TCE ENERGY
 ```
 
 The CCSD calculations for the triplet state of the <img alt="$C_{20}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e9758f9071518083d5e4c173d6cfc8e.svg?invert_in_darkmode&sanitize=true" align=middle width="24.761055pt" height="22.38192pt"/> molecule.
 New algorithms for 4-index tranformation are used.
 
 ```
-title "c20_cage"
+title "c20_cage"
 echo
-start c20_cage
-memory stack 2320 mb heap 180 mb global 2000 mb noverify
-geometry print xyz units bohr
-  symmetry c2
-  C      -0.761732  -1.112760   3.451966
-  C       0.761732   1.112760   3.451966
-  C       0.543308  -3.054565   2.168328
-  C      -0.543308   3.054565   2.168328
-  C       3.190553   0.632819   2.242986
-  C      -3.190553  -0.632819   2.242986
-  C       2.896910  -1.982251   1.260270
-  C      -2.896910   1.982251   1.260270
-  C      -0.951060  -3.770169   0.026589
-  C       0.951060   3.770169   0.026589
-  C       3.113776   2.128908   0.076756
-  C      -3.113776  -2.128908   0.076756
-  C       3.012003  -2.087494  -1.347695
-  C      -3.012003   2.087494  -1.347695
-  C       0.535910  -2.990532  -2.103427
-  C      -0.535910   2.990532  -2.103427
-  C       3.334106   0.574125  -2.322563
-  C      -3.334106  -0.574125  -2.322563
-  C      -0.764522  -1.081362  -3.453211
-  C       0.764522   1.081362  -3.453211
+start c20_cage
+memory stack 2320 mb heap 180 mb global 2000 mb noverify
+geometry print xyz units bohr
+  symmetry c2
+  C      -0.761732  -1.112760   3.451966
+  C       0.761732   1.112760   3.451966
+  C       0.543308  -3.054565   2.168328
+  C      -0.543308   3.054565   2.168328
+  C       3.190553   0.632819   2.242986
+  C      -3.190553  -0.632819   2.242986
+  C       2.896910  -1.982251   1.260270
+  C      -2.896910   1.982251   1.260270
+  C      -0.951060  -3.770169   0.026589
+  C       0.951060   3.770169   0.026589
+  C       3.113776   2.128908   0.076756
+  C      -3.113776  -2.128908   0.076756
+  C       3.012003  -2.087494  -1.347695
+  C      -3.012003   2.087494  -1.347695
+  C       0.535910  -2.990532  -2.103427
+  C      -0.535910   2.990532  -2.103427
+  C       3.334106   0.574125  -2.322563
+  C      -3.334106  -0.574125  -2.322563
+  C      -0.764522  -1.081362  -3.453211
+  C       0.764522   1.081362  -3.453211
 end
-basis spherical
- * library cc-pvtz
+basis spherical
+ * library cc-pvtz
 end
 scf
-  triplet
-  rohf
-  thresh 1.e-8
-  maxiter 200
+  triplet
+  rohf
+  thresh 1.e-8
+  maxiter 200
 end
 tce
-  ccsd
-  maxiter 60
-  diis 5
-  thresh 1.e-6
-  2eorb
-  2emet 3
-  attilesize 40
-  tilesize 30
-  freeze atomic
+  ccsd
+  maxiter 60
+  diis 5
+  thresh 1.e-6
+  2eorb
+  2emet 3
+  attilesize 40
+  tilesize 30
+  freeze atomic
 end
-task tce energy
+task tce energy
 ```
 
 ## TCE Response Properties
@@ -1847,9 +1847,9 @@ directives (see [SET](Top-level#SET)) instead of TCE input
 block keywords. There are currently only three commands available:
 
 ```
-set tce:lineresp <logical lineresp default: F>
-set tce:afreq <double precision afreq(9) default: 0.0> 
-set tce:respaxis <logical respaxis(3) default: T T T>
+set tce:lineresp <logical lineresp default: F>
+set tce:afreq <double precision afreq(9) default: 0.0> 
+set tce:respaxis <logical respaxis(3) default: T T T>
 ```
 
 The boolean variable lineresp invokes the linear response equations for
@@ -1874,7 +1874,7 @@ respaxis is set to T F T, for example, the responses with respect to the
 X and Z dipoles will be calculated, and the four (three unique) tensor
 components will be evaluated. This feature is also useful for conserving
 memory. By calculating only one axis at a time, memory requirements can
-be reduced by 25\% or more, depending on the number of DIIS vectors
+be reduced by 25% or more, depending on the number of DIIS vectors
 used. Reducing the number of DIIS vectors also reduces the memory
 requirements.
 
@@ -1890,57 +1890,57 @@ vector for the response amplitudes.
 This example runs in-core on a large workstation.
 
 ```
-geometry units angstrom
- symmetry d2h
- C               0.000    1.390    0.000
- H               0.000    2.470    0.000
- C               1.204    0.695    0.000
- H               2.139    1.235    0.000
- C               0.000   -1.390    0.000
- H               0.000   -2.470    0.000
- C              -1.204   -0.695    0.000
- H              -2.139   -1.235    0.000
- C               1.204   -0.695    0.000
- H               2.139   -1.235    0.000
- C              -1.204    0.695    0.000
- H              -2.139    1.235    0.000
+geometry units angstrom
+ symmetry d2h
+ C               0.000    1.390    0.000
+ H               0.000    2.470    0.000
+ C               1.204    0.695    0.000
+ H               2.139    1.235    0.000
+ C               0.000   -1.390    0.000
+ H               0.000   -2.470    0.000
+ C              -1.204   -0.695    0.000
+ H              -2.139   -1.235    0.000
+ C               1.204   -0.695    0.000
+ H               2.139   -1.235    0.000
+ C              -1.204    0.695    0.000
+ H              -2.139    1.235    0.000
 end
-basis spherical
- * library aug-cc-pvdz
+basis spherical
+ * library aug-cc-pvdz
 end
 tce
- freeze atomic
- ccsd
- io ga
- 2eorb
- tilesize 16
+ freeze atomic
+ ccsd
+ io ga
+ 2eorb
+ tilesize 16
 end
-set tce:lineresp T
-set tce:afreq 0.000 0.072
-set tce:respaxis T T T
-task tce energy
+set tce:lineresp T
+set tce:afreq 0.000 0.072
+set tce:respaxis T T T
+task tce energy
 ```
 
 This is a relatively simple example for CCSDT-LR.
 
 ```
-geometry units au
- symmetry c2v
- H 0       0        0
- F 0       0        1.7328795
+geometry units au
+ symmetry c2v
+ H 0       0        0
+ F 0       0        1.7328795
 end
-basis spherical
- * library aug-cc-pvdz
+basis spherical
+ * library aug-cc-pvdz
 end
 tce
- ccsdt
- io ga
- 2eorb
+ ccsdt
+ io ga
+ 2eorb
 end
-set tce:lineresp T
-set tce:afreq 0.0 0.1 0.2 0.3 0.4
-set tce:respaxis T F T
-task tce energy
+set tce:lineresp T
+set tce:afreq 0.0 0.1 0.2 0.3 0.4
+set tce:respaxis T F T
+task tce energy
 ```
 
 ## TCE Restart Capability
@@ -1995,23 +1995,23 @@ BlueGene, due to ratio of compute to I/O nodes (64 on BlueGene/P).
 ### Input
 
 ```
-set tce:read_integrals <logical read_integrals default: F F F F F>
-set tce:read_t <logical read_t default: F F F F>
-set tce:read_l <logical read_l default: F F F F>
-set tce:read_tr <logical read_tr default: F F F F>
-set tce:save_integrals <logical save_integrals default: F F F F F>
-set tce:save_t <logical save_t default: F F F F>
-set tce:save_l <logical save_l default: F F F F>
-set tce:save_tr <logical save_tr default: F F F F>
-set tce:save_interval <integer save_interval default: 100000>
+set tce:read_integrals <logical read_integrals default: F F F F F>
+set tce:read_t <logical read_t default: F F F F>
+set tce:read_l <logical read_l default: F F F F>
+set tce:read_tr <logical read_tr default: F F F F>
+set tce:save_integrals <logical save_integrals default: F F F F F>
+set tce:save_t <logical save_t default: F F F F>
+set tce:save_l <logical save_l default: F F F F>
+set tce:save_tr <logical save_tr default: F F F F>
+set tce:save_interval <integer save_interval default: 100000>
 ```
 
-The boolean variables read\_integrals and save\_integrals control which
+The boolean variables read_integrals and save_integrals control which
 integrals are read/saved. The first location is the 1-e integrals, the
 second is for the 2-e integrals, and the third is for dipole integrals.
 The fourth and fifth positions are reserved for quadrupole and octupole
-integrals but this functionality is not available. The read\_t, read\_l,
-read\_tr, save\_t, save\_l and save\_tr variables control the
+integrals but this functionality is not available. The read_t, read_l,
+read_tr, save_t, save_l and save_tr variables control the
 reading/saving of the <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/>, Λ and <img alt="$T^{(1)}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b975fbba8cc3b82ca7ae5bb0de31de6.svg?invert_in_darkmode&sanitize=true" align=middle width="28.617105pt" height="29.12679pt"/> (response) amplitudes.
 Restart control on the response amplitudes is implicitly controlled by
 the value of respaxis (see above). Requesting amplitudes that are beyond
@@ -2024,14 +2024,14 @@ the same reason, one cannot save a subset of the integrals, so if it is
 even remotely possible that the dipole moment or polarizabilities will
 be desired for a given molecule, the dipole integrals should be saved as
 well. It is possible to save the dipole integrals without setting dipole
-in the TCE input block; setting save\_integrals(3) true is sufficient
+in the TCE input block; setting save_integrals(3) true is sufficient
 for this to occur.
 
-The save\_interval variable controls the frequency with which amplitudes
+The save_interval variable controls the frequency with which amplitudes
 are saved. By default, the amplitudes are saved only when the iterative
 process has converged, meaning that if the iterations do not converge in
 less than the maximum, one must start the calculation again from
-scratch. The solution is to set save\_interval to a smaller value, such
+scratch. The solution is to set save_interval to a smaller value, such
 as the number of DIIS cycles being used.
 
 The user shall not change the tilesize when reading in saved amplitudes.
@@ -2043,22 +2043,22 @@ meaningless.
 ### Examples
 
 ```
-geometry units au
- symmetry c2v
- H 0       0        0
- F 0       0        1.7328795
+geometry units au
+ symmetry c2v
+ H 0       0        0
+ F 0       0        1.7328795
 end
-basis spherical
- * library aug-cc-pvdz
+basis spherical
+ * library aug-cc-pvdz
 end
 tce
- ccsdt
- io ga
+ ccsdt
+ io ga
 end
-set tce:lineresp T
-set tce:afreq 0.0 0.1 0.2 0.3 0.4
-set tce:respaxis T F T
-task tce energy
+set tce:lineresp T
+set tce:afreq 0.0 0.1 0.2 0.3 0.4
+set tce:respaxis T F T
+task tce energy
 ```
 
 ## Maximizing performance
@@ -2079,19 +2079,19 @@ calculations. When 2 GB of memory is available per process, the
 following settings are close to optimal for CCSD jobs
 
 ```
-memory stack 800 mb heap 100 mb global 1000 mb
+memory stack 800 mb heap 100 mb global 1000 mb
 ```
 
 for property jobs, which require more amplitudes to be stored, it is
 wise to favor the global allocation
 
 ```
-memory stack 500 mb heap 100 mb global 1300 mb
+memory stack 500 mb heap 100 mb global 1300 mb
 ```
 
-If you get an error for ga\_create during the iterative steps, reduce
+If you get an error for ga_create during the iterative steps, reduce
 the number of DIIS vectors. If this error occurs during the four-index
-transformation (after d\_v2 filesize appears) you need more GA space, a
+transformation (after d_v2 filesize appears) you need more GA space, a
 different 2emet, or more nodes.
 
 The memory requirements for CCSD(T) are quite different because the
@@ -2100,7 +2100,7 @@ be larger than 30 in most cases and one should set something similar to
 the following
 
 ```
-memory stack 1200 mb heap 100 mb global 600 mb
+memory stack 1200 mb heap 100 mb global 600 mb
 ```
 
 The local memory requires will be tilesize<sup>N</sup> where N=4 for
@@ -2108,7 +2108,7 @@ CCSD, N=6 for CCSD(T) and CCSDT, and N=8 for CCSDTQ. One should set
 tilesize to 16 or less for CCSDT and CCSDTQ, although symmetry will
 affect the local memory use significantly. The local memory usage of the
 CR-EOMCCSD(T) approach has recently been significantly reduced to the
-level of the CCSD(T) approach (2\*tilesize<sup>6</sup>).
+level of the CCSD(T) approach (2*tilesize<sup>6</sup>).
 
 ### Using OpenMP in TCE
 
@@ -2167,7 +2167,7 @@ synchronization steps from nearly 80, in the EOMCCSD case, down to 4.
 Optimized versions of the CCSD/EOMCCSD codes are enabled once the
 
 ```
-set tce:nts T
+set tce:nts T
 ```
 
 directive is used in the input file. Compared to the original
@@ -2187,14 +2187,14 @@ Kowalski, High Performance Computing, Networking, Storage and Analysis
 ### SCF options
 
 For parallel jobs on clusters with poor disk performance on the
-filesystem used for scratch\_dir, it is a good idea to disable disk IO
+filesystem used for scratch_dir, it is a good idea to disable disk IO
 during the SCF stage of the calculation. This is done by adding
 semidirect memsize N filesize 0, where N is 80% of the stack memory
 divided by 8, as the value in this directive is the number of dwords,
 rather than bytes. With these settings, if the aggregate memory is
 sufficient to store the integrals, the SCF performance will be
 excellent, and it will be better than if direct is set in the SCF input
-block. If scratch\_dir is set to a local disk, then one should use as
+block. If scratch_dir is set to a local disk, then one should use as
 much disk as is permissible, controlled by the value of filesize. On
 many high-performance computers, filling up the local scratch disk will
 crash the node, so one cannot be careless with these settings. In
@@ -2223,10 +2223,10 @@ this option can only be used with IO=GA and an RHF/ROHF reference. There
 are a number of choices for the integral transformation algorithm when
 using spin-free integrals. The fastest algorithm is 2EMET=5, but
 significant disk IO is required for this algorithm. One must set
-permanent\_dir to a fast, shared file system for this algorithm to work.
+permanent_dir to a fast, shared file system for this algorithm to work.
 If disk performance is not good, one should use either 2EMET=3 or
 2EMET=4 depending on how much memory is available. If one sees a
-ga\_create error with 2EMET=3, then switch to algorithm 4 and add split
+ga_create error with 2EMET=3, then switch to algorithm 4 and add split
 8 to the TCE input block.
 
 ## Using coprocessor architectures
@@ -2246,9 +2246,9 @@ versions)
 Environmental variables required for compilation:
 
 ```
- % setenv USE_OPENMP 1
+ % setenv USE_OPENMP 1
  
- % setenv USE_OFFLOAD 1
+ % setenv USE_OFFLOAD 1
 ```
 
 When using MKL and Intel Composer XE version 14 (or later versions),
@@ -2256,14 +2256,14 @@ please use the following
 settings
 
 ```
- % setenv BLASOPT   "-mkl -openmp   -lpthread -lm"
- % setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"
+ % setenv BLASOPT   "-mkl -openmp   -lpthread -lm"
+ % setenv SCALAPACK "-mkl -openmp -lmkl_scalapack_ilp64 -lmkl_blacs_intelmpi_ilp64 -lpthread -lm"
 ```
 
 The command require for compilation is
 
 ```
- make FC=ifort 
+ make FC=ifort 
 ```
 
 From our experience using the CCSD(T) and MRCCSD(T) TCE modules, we have
@@ -2294,14 +2294,14 @@ Environmental variables useful at run-time:
 Xeon CPU hosts
 
 ```
- % setenv OMP_NUM_THREADS 4
+ % setenv OMP_NUM_THREADS 4
 ```
 
-MIC\_USE\_2MB\_BUFFER greatly improve communication between host and
+MIC_USE_2MB_BUFFER greatly improve communication between host and
 Xeon Phi card
 
 ```
- % setenv MIC_USE_2MB_BUFFER 16K
+ % setenv MIC_USE_2MB_BUFFER 16K
 ```
 
 <span style="color:red">**Very important**</span>: when running on
@@ -2309,28 +2309,28 @@ clusters equipped with Xeon Phi and Infiniband network hardware
 (requiring `ARMCI_NETWORK=OPENIB`), the following env. variable is
 required, even <span style="color:red">in the case when the Xeon Phi
 hardware is not utilized</span>.
-
-` % setenv ARMCI_OPENIB_DEVICE mlx4_0`
-
+```
+ % setenv ARMCI_OPENIB_DEVICE mlx4_0
+```
 ### CCSD(T) method with CUDA
 
 NWChem 6.3 offers a possibility of using GPU accelerators to perform the
 most computationally intensive part of the CCSD(T) calculations
 (non-iterative triples corrections). To enable this option one has to
-enable compilation options described below and add the "cuda n"
-directive to the tce block of input, where "n" refers to number of CUDA
+enable compilation options described below and add the `cuda n`
+directive to the tce block of input, where `n` refers to number of CUDA
 devices per node.
 
 geometry/basis set specifications
 
 ```
-tce 
- io ga
- freeze atomic
- thresh 1.0d-6
- tilesize 15
- ccsd(t)
- cuda 1
+tce 
+ io ga
+ freeze atomic
+ thresh 1.0d-6
+ tilesize 15
+ ccsd(t)
+ cuda 1
 end
 ```
 
@@ -2341,55 +2341,55 @@ To enable the compilation of CUDA code one has to set the follwoing
 variables before the compilation of
 NWChem.
 ```
-export TCE_CUDA=Y 
-export CUDA_LIBS="-L<Your Path to cuda>/lib64 -L<Your Path to cuda>/lib -lcudart"
-export CUDA_FLAGS="-arch  <Your Cuda architecture>"  
-export CUDA_INCLUDE="-I. -I<Your Path to cuda>/include"
+export TCE_CUDA=Y 
+export CUDA_LIBS="-L<Your Path to cuda>/lib64 -L<Your Path to cuda>/lib -lcudart"
+export CUDA_FLAGS="-arch  <Your Cuda architecture>"  
+export CUDA_INCLUDE="-I. -I<Your Path to cuda>/include"
 ```
 For
 example:
 ```
-export TCE_CUDA=Y
-export CUDA_LIBS="-L/usr/local/cuda-5.0/lib64 -L/usr/local/cuda-5.0/lib -lcudart"
-export CUDA_FLAGS="-arch sm_20 "
-export CUDA_INCLUDE="-I. -I/usr/local/cuda-5.0/include"
+export TCE_CUDA=Y
+export CUDA_LIBS="-L/usr/local/cuda-5.0/lib64 -L/usr/local/cuda-5.0/lib -lcudart"
+export CUDA_FLAGS="-arch sm_20 "
+export CUDA_INCLUDE="-I. -I/usr/local/cuda-5.0/include"
 ```
 In addition the code needs to be compiled with the following make
 command
 
 ```
- make FC=<fortran compiler>` CUDA=nvcc`
+ make FC=<fortran compiler> CUDA=nvcc
 ```
 
 Before running production style calculations we strongly suggest the
-users to perform QA test from the /nwchem/QA/tests/tce\_cuda directory.
+users to perform QA test from the /nwchem/QA/tests/tce_cuda directory.
 A full example of a TCE CUDA input file is given below:
 
 ```
-start tce_cuda
+start tce_cuda
 echo
-memory stack 1000 mb heap 100 mb global 500 mb verify
-geometry units bohr
-  O     0.00000000     0.00000000     0.22138519
-  H     0.00000000    -1.43013023    -0.88554075
-  H     0.00000000     1.43013023    -0.88554075
+memory stack 1000 mb heap 100 mb global 500 mb verify
+geometry units bohr
+  O     0.00000000     0.00000000     0.22138519
+  H     0.00000000    -1.43013023    -0.88554075
+  H     0.00000000     1.43013023    -0.88554075
 end
-basis spherical
-  H library cc-pVDZ
-  O library cc-pVDZ
+basis spherical
+  H library cc-pVDZ
+  O library cc-pVDZ
 end
-charge 0
+charge 0
 scf
-  thresh 1.0e-10
-  tol2e 1.0e-10
-  singlet
-  rhf
+  thresh 1.0e-10
+  tol2e 1.0e-10
+  singlet
+  rhf
 end
 tce
-  ccsd(t)
-  io ga
-  cuda 1
-  tilesize 18
+  ccsd(t)
+  io ga
+  cuda 1
+  tilesize 18
 end
-task tce energy
+task tce energy
 ```
