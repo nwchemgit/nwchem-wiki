@@ -51,7 +51,7 @@ Invoking the COSMO solvation model is done by specifying the input COSMO
 input block with the input options as:
 ```
 cosmo  
-u [off]  
+  [off]  
   [dielec  <real dielec default 78.4>]  
   [parameters <filename>]  
   [radius  <real atom1>  
@@ -70,18 +70,18 @@ u [off]
 end
 ```
 followed by the task directive specifying the wavefunction and type of
-calculation, e.g., "task scf energy", "task mp2 energy", "task dft
-optimize", etc.
+calculation, e.g., `task scf energy`, `task mp2 energy`, `task dft
+optimize`, etc.
 
-"off' can be used to turn off COSMO in a compound (multiple task) run.
+`off` can be used to turn off COSMO in a compound (multiple task) run.
 By default, once the COSMO solvation model has been defined it will be
-used in subsequent calculations. Add the keyword "off" if COSMO is not
+used in subsequent calculations. Add the keyword `off` if COSMO is not
 needed in subsequent calculations.
 
-"Dielec" is the value of the dielectric constant of the medium, with a
+`dielec` is the value of the dielectric constant of the medium, with a
 default value of 78.4 (the dielectric constant for water).
 
-"parameters" specifies COSMO radii parameters file that stores custom
+`parameters` specifies COSMO radii parameters file that stores custom
 setting for COSMO parameters. The format for such file consists of the
 atom or element name followed by the radii. The program will first
 attempt to match based on atom name and only then the element name.
@@ -93,7 +93,7 @@ directive is replacing previous facility of loading COSMO radii
 parameters through "set cosmo:map cosmo.par" directive. See example at
 the end of this section.
 
-"Radius" is an array that specifies the radius of the spheres associated
+`radius` is an array that specifies the radius of the spheres associated
 with each atom and that make up the molecule-shaped cavity. These values
 will override default radii setting including those specified in the
 COSMO parameter file (if any) Default values are Van der Waals radii.
@@ -131,7 +131,7 @@ For examples see Stefanovich et al.[5] and Barone et al.[6]
 
 "Rsolv" is no longer used.
 
-"Iscren" is a flag to define the dielectric charge scaling option.
+`iscren` is a flag to define the dielectric charge scaling option.
 "iscren 1" implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. "iscren 0" implies the modified scaling suggested
@@ -141,61 +141,61 @@ difference between the scaling is not significant.
 
 The next two parameters define the tesselation of the unit sphere. The
 approach still follows the original proposal by Klamt and Schüürmann to
-some degree. Basically a tesselation is generated from "minbem" refining
+some degree. Basically a tesselation is generated from `minbem` refining
 passes starting from either an octahedron or an icosahedron. Each level
 of refinement partitions the triangles of the current tesselation into
 four triangles. This procedure is repeated recursively until the desired
 granularity of the tesselation is reached. The induced point charges
 from the polarization of the medium are assigned to the centers of the
-tesselation. The default value is "minbem 2". The flag +ificos+ serves
-to select the original tesselation, "ificos 0" for an octahedron
-(default) and "ificos 1" for an icoshedron. Starting from an icosahedron
+tesselation. The default value is `minbem 2`. The flag `ificos` serves
+to select the original tesselation, `ificos 0` for an octahedron
+(default) and `ificos 1` for an icoshedron. Starting from an icosahedron
 yields a somewhat finer tesselation that converges somewhat faster.
 Solvation energies are not really sensitive to this choice for
 sufficiently fine tesselations. The old "maxbem" directive is no longer
 used.
 
-The "lineq" parameter serves to select the numerical algorithm to solve
+The `lineq` parameter serves to select the numerical algorithm to solve
 the linear equations yielding the effective charges that represent the
-polarization of the medium. "lineq 0" selects an iterative method
-(default), "lineq 1" selects a dense matrix linear equation solver. For
+polarization of the medium. `lineq 0"`selects an iterative method
+(default), `lineq 1` selects a dense matrix linear equation solver. For
 large molecules where the number of effective charges is large, the
 codes selects the iterative method.
 
-"zeta" sets the width of the Gaussian charge distributions that were
+`zeta` sets the width of the Gaussian charge distributions that were
 suggested by York and Karplus to avoid singularities when two surface
 charges coincide. The default value is "zeta 0.98" this value was chosen
 to ensure that the results of the current implementation are as close as
 possible to those of the original Klamt and Schuurmann based
 implementation.
 
-"gamma_s" modifies the width of the smooth switching function that
+`gamma_s` modifies the width of the smooth switching function that
 eliminates surface charges when their positions move into the sphere of
-a neighboring atom. "gamma_s 0.0" leads to a heavyside or abrupt
-switching function, whereas "gamma_s 1.0" maximizes the width of the
-switching function. The default value is "gamma_s 1.0".
+a neighboring atom. `gamma_s 0.0` leads to a heavyside or abrupt
+switching function, whereas `gamma_s 1.0` maximizes the width of the
+switching function. The default value is `gamma_s 1.0`.
 
-"sw_tol" specifies the cutoff of the switching function below which a
+`sw_tol` specifies the cutoff of the switching function below which a
 surface charge at a particular point is eliminated. The values of the
 switching function lie in the domain from 0 to 1. This value should not
 be set too small as that leads to instabilities in the linear system
-solvers. The default value is "sw_tol 1.0e-4".
+solvers. The default value is `sw_tol 1.0e-4`.
 
-"do_gasphase" is a flag to control whether the calculation of the
+`do_gasphase` is a flag to control whether the calculation of the
 solvation energy is preceded by a gas phase calculation. The default is
 to always perform a gas phase calculation first and then calculate the
 solvation starting from the converged gas phase electron density.
 However, in geometry optimizations this approach can double the cost. In
-such a case setting "do_gasphase false" suppresses the gas phase
+such a case setting `do_gasphase false` suppresses the gas phase
 calculations and only the solvated system calculations are performed.
 This option needs to be used with care as in some cases starting the
 COSMO solvation from an unconverged electron density can generate
 unphysical charges that lock the calculation into strange electron
 distributions.
 
-"do_cosmo_ks" is a flag to turn on the Klamt-Schuurmann model
+`do_cosmo_ks` is a flag to turn on the Klamt-Schuurmann model
 
-"do_cosmo_yk" is a flag to turn on the York-Karplus model (default)
+`do_cosmo_yk` is a flag to turn on the York-Karplus model (default)
 
 The following example is for a water molecule in 'water', using the
 HF/6-31G** level of
