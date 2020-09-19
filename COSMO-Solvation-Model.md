@@ -90,7 +90,7 @@ to present in one of the three location ( in the order of preference) -
 directory specified by the environmental variable
 NWCHEM_COSMO_LIBRARY, permanent directory, and run directory. This
 directive is replacing previous facility of loading COSMO radii
-parameters through "set cosmo:map cosmo.par" directive. See example at
+parameters through `set cosmo:map cosmo.par` directive. See example at
 the end of this section.
 
 `radius` is an array that specifies the radius of the spheres associated
@@ -132,9 +132,9 @@ For examples see Stefanovich et al.[5] and Barone et al.[6]
 "Rsolv" is no longer used.
 
 `iscren` is a flag to define the dielectric charge scaling option.
-"iscren 1" implies the original scaling from Klamt and Schüürmann,
+`iscren 1` implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
-dielectric constant. "iscren 0" implies the modified scaling suggested
+dielectric constant. `iscren 0` implies the modified scaling suggested
 by Stefanovich and Truong[7], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
@@ -157,14 +157,14 @@ used.
 
 The `lineq` parameter serves to select the numerical algorithm to solve
 the linear equations yielding the effective charges that represent the
-polarization of the medium. `lineq 0"`selects an iterative method
+polarization of the medium. `lineq 0` selects an iterative method
 (default), `lineq 1` selects a dense matrix linear equation solver. For
 large molecules where the number of effective charges is large, the
 codes selects the iterative method.
 
 `zeta` sets the width of the Gaussian charge distributions that were
 suggested by York and Karplus to avoid singularities when two surface
-charges coincide. The default value is "zeta 0.98" this value was chosen
+charges coincide. The default value is `zeta 0.98` this value was chosen
 to ensure that the results of the current implementation are as close as
 possible to those of the original Klamt and Schuurmann based
 implementation.
@@ -223,7 +223,7 @@ end
 task scf energy
 ```
 Alternatively, instead of listing COSMO radii parameters in the input,
-the former can be loaded using an external file through the "parameters"
+the former can be loaded using an external file through the `parameters`
 directive
 ```
 start  
@@ -246,7 +246,7 @@ end
 
 task scf energy
 ```
-where "water.par" may the following form:
+where `water.par` may the following form:
 ```
 O 1.40
 H 1.16
