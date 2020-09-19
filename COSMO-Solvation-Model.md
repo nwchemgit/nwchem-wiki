@@ -2,8 +2,8 @@
 
 COSMO is the continuum solvation 'COnductor-like Screening MOdel' of A.
 Klamt and G. Schüürmann to describe dielectric screening effects in
-solvents\[1\]. This model has been enhanced by D.M. York and M.
-Karplus\[2\] to create a smooth potential energy surface. The latter
+solvents[1]. This model has been enhanced by D.M. York and M.
+Karplus[2] to create a smooth potential energy surface. The latter
 facilitates geometry optimization and dynamics and the implementation
 has been adapted to take advantage of those ideas.
 
@@ -51,22 +51,22 @@ Invoking the COSMO solvation model is done by specifying the input COSMO
 input block with the input options as:
 ```
 cosmo  
-  [off]  
-  [dielec  <real dielec default 78.4>]  
-  [parameters <filename>]  
-  [radius  <real atom1>  
-           <real atom2>  
-      . . .  
-           <real atomN>]  
-  [iscren  <integer iscren default 0>]  
-  [minbem  <integer minbem default 2>]  
-  [ificos  <integer ificos default 0>]  
-  [lineq   <integer lineq default 1>]  
-  [zeta <real zeta default 0.98>]  
-  [gamma_s <real gammas default 1.0>]  
-  [sw_tol <real swtol default 1.0e-4>]  
-  [do_gasphase  <logical do_gasphase default True>] 
-  [do_cosmo_ks]  
+u [off]  
+  [dielec  <real dielec default 78.4>]  
+  [parameters <filename>]  
+  [radius  <real atom1>  
+           <real atom2>  
+      . . .  
+           <real atomN>]  
+  [iscren  <integer iscren default 0>]  
+  [minbem  <integer minbem default 2>]  
+  [ificos  <integer ificos default 0>]  
+  [lineq   <integer lineq default 1>]  
+  [zeta <real zeta default 0.98>]  
+  [gamma_s <real gammas default 1.0>]  
+  [sw_tol <real swtol default 1.0e-4>]  
+  [do_gasphase  <logical do_gasphase default True>] 
+  [do_cosmo_ks]  
 end
 ```
 followed by the task directive specifying the wavefunction and type of
@@ -88,7 +88,7 @@ attempt to match based on atom name and only then the element name.
 Otherwise radius will be set based on default parameters. The file has
 to present in one of the three location ( in the order of preference) -
 directory specified by the environmental variable
-NWCHEM\_COSMO\_LIBRARY, permanent directory, and run directory. This
+NWCHEM_COSMO_LIBRARY, permanent directory, and run directory. This
 directive is replacing previous facility of loading COSMO radii
 parameters through "set cosmo:map cosmo.par" directive. See example at
 the end of this section.
@@ -102,32 +102,32 @@ Waals radii by default:
 
 Default radii provided by Andreas Klamt (Cosmologic)
 
-vdw radii: 1.17 (+/- 0.02) \* Bondi radius\[3\]
+vdw radii: 1.17 (+/- 0.02) \* Bondi radius[3]
 
-optimal vdw radii for H, C, N, O, F, S, Cl, Br, I\[4\]
+optimal vdw radii for H, C, N, O, F, S, Cl, Br, I[4]
 
 for heavy elements: 1.17\*1.9
 ```
-     data (vander(i),i=1,102)  
-    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,  
-    2   1.830,1.720,1.720,1.8018,1.755,1.638,  
-    3   1.404,2.457,2.106,2.160,2.05,2.223,  
-    4   2.223,2.223,2.223,2.223,2.223,2.223,  
-    5   2.223,2.223,2.223,2.223,2.223,2.223,  
-    6   2.223,2.223,2.223,2.223,2.160,2.223,  
-    7   2.223,2.223,2.223,2.223,2.223,2.223,  
-    8   2.223,2.223,2.223,2.223,2.223,2.223,  
-    9   2.223,2.223,2.223,2.223,2.320,2.223,  
-    1   2.223,2.223,2.223,2.223,2.223,2.223,  
-    2   2.223,2.223,2.223,2.223,2.223,2.223,  
-    3   2.223,2.223,2.223,2.223,2.223,2.223,  
-    4   2.223,2.223,2.223,2.223,2.223,2.223,  
-    5   2.223,2.223,2.223,2.223,2.223,2.223,  
-    6   2.223,2.223,2.223,2.223,2.223,2.223,  
-    7   2.223,2.223,2.223,2.223,2.223,2.223,  
-    7   2.223,2.223,2.223,2.223,2.223,2.223/
+     data (vander(i),i=1,102)  
+    1 / 1.300,1.638,1.404,1.053,2.0475,2.00,  
+    2   1.830,1.720,1.720,1.8018,1.755,1.638,  
+    3   1.404,2.457,2.106,2.160,2.05,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.160,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    8   2.223,2.223,2.223,2.223,2.223,2.223,  
+    9   2.223,2.223,2.223,2.223,2.320,2.223,  
+    1   2.223,2.223,2.223,2.223,2.223,2.223,  
+    2   2.223,2.223,2.223,2.223,2.223,2.223,  
+    3   2.223,2.223,2.223,2.223,2.223,2.223,  
+    4   2.223,2.223,2.223,2.223,2.223,2.223,  
+    5   2.223,2.223,2.223,2.223,2.223,2.223,  
+    6   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223,  
+    7   2.223,2.223,2.223,2.223,2.223,2.223/
 ```
-For examples see Stefanovich et al.\[5\] and Barone et al.\[6\]
+For examples see Stefanovich et al.[5] and Barone et al.[6]
 
 "Rsolv" is no longer used.
 
@@ -135,7 +135,7 @@ For examples see Stefanovich et al.\[5\] and Barone et al.\[6\]
 "iscren 1" implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. "iscren 0" implies the modified scaling suggested
-by Stefanovich and Truong\[7\], mainly "(&epsilon;-1)/&epsilon;".
+by Stefanovich and Truong[7], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
@@ -169,58 +169,58 @@ to ensure that the results of the current implementation are as close as
 possible to those of the original Klamt and Schuurmann based
 implementation.
 
-"gamma\_s" modifies the width of the smooth switching function that
+"gamma_s" modifies the width of the smooth switching function that
 eliminates surface charges when their positions move into the sphere of
-a neighboring atom. "gamma\_s 0.0" leads to a heavyside or abrupt
-switching function, whereas "gamma\_s 1.0" maximizes the width of the
-switching function. The default value is "gamma\_s 1.0".
+a neighboring atom. "gamma_s 0.0" leads to a heavyside or abrupt
+switching function, whereas "gamma_s 1.0" maximizes the width of the
+switching function. The default value is "gamma_s 1.0".
 
-"sw\_tol" specifies the cutoff of the switching function below which a
+"sw_tol" specifies the cutoff of the switching function below which a
 surface charge at a particular point is eliminated. The values of the
 switching function lie in the domain from 0 to 1. This value should not
 be set too small as that leads to instabilities in the linear system
-solvers. The default value is "sw\_tol 1.0e-4".
+solvers. The default value is "sw_tol 1.0e-4".
 
-"do\_gasphase" is a flag to control whether the calculation of the
+"do_gasphase" is a flag to control whether the calculation of the
 solvation energy is preceded by a gas phase calculation. The default is
 to always perform a gas phase calculation first and then calculate the
 solvation starting from the converged gas phase electron density.
 However, in geometry optimizations this approach can double the cost. In
-such a case setting "do\_gasphase false" suppresses the gas phase
+such a case setting "do_gasphase false" suppresses the gas phase
 calculations and only the solvated system calculations are performed.
 This option needs to be used with care as in some cases starting the
 COSMO solvation from an unconverged electron density can generate
 unphysical charges that lock the calculation into strange electron
 distributions.
 
-"do\_cosmo\_ks" is a flag to turn on the Klamt-Schuurmann model
+"do_cosmo_ks" is a flag to turn on the Klamt-Schuurmann model
 
-"do\_cosmo\_yk" is a flag to turn on the York-Karplus model (default)
+"do_cosmo_yk" is a flag to turn on the York-Karplus model (default)
 
-The following example is for a water molecule in \`water', using the
-HF/6-31G\*\* level of
+The following example is for a water molecule in 'water', using the
+HF/6-31G** level of
 theory:
 ```
 start  
 echo  
- title "h2o"  
+ title "h2o"  
 geometry  
- o                  .0000000000         .0000000000        -.0486020332  
- h                  .7545655371         .0000000000         .5243010666  
- h                 -.7545655371         .0000000000         .5243010666  
+ o                  .0000000000         .0000000000        -.0486020332  
+ h                  .7545655371         .0000000000         .5243010666  
+ h                 -.7545655371         .0000000000         .5243010666  
 end  
-basis segment cartesian  
- o library 6-31g**  
- h library 6-31g**  
+basis segment cartesian  
+ o library 6-31g**  
+ h library 6-31g**  
 end  
 cosmo  
- dielec 78.0  
- radius 1.40  
-        1.16  
-        1.16  
- lineq  0  
+ dielec 78.0  
+ radius 1.40  
+        1.16  
+        1.16  
+ lineq  0  
 end  
-task scf energy
+task scf energy
 ```
 Alternatively, instead of listing COSMO radii parameters in the input,
 the former can be loaded using an external file through the "parameters"
@@ -228,42 +228,42 @@ directive
 ```
 start  
 echo  
- title "h2o"  
+ title "h2o"  
 geometry  
- ow                  .0000000000         .0000000000        -.0486020332  
- hw                  .7545655371         .0000000000         .5243010666  
- h                  -.7545655371         .0000000000         .5243010666  
+ ow                  .0000000000         .0000000000        -.0486020332  
+ hw                  .7545655371         .0000000000         .5243010666  
+ h                  -.7545655371         .0000000000         .5243010666  
 end  
-basis segment cartesian  
- * library 6-31g**  
+basis segment cartesian  
+ * library 6-31g**  
 end
 
 cosmo  
- dielec 78.0  
- lineq  0  
- parameters water.par  
+ dielec 78.0  
+ lineq  0  
+ parameters water.par  
 end
 
-task scf energy
+task scf energy
 ```
 where "water.par" may the following form:
 ```
-O 1.40
-H 1.16
+O 1.40
+H 1.16
 ```
 This will set radii of all oxygen atoms to 1.4 and all hydrogen atoms to
 1.16. More fine grained control may be achieved using specific atom
 names. For example, the following parameter file
 ```
-O    1.40
-H    1.16
-HW  1.06
+O    1.40
+H    1.16
+HW  1.06
 ```
 will set a different radii of 1.06 to hydrogen atoms named HW. Note
 that, as per general rule in NWChem, all names are case insensitive.
 
 and placed in one of the these locations - directory specified by the
-environmental variable NWCHEM\_COSMO\_LIBRARY, permanent directory, or
+environmental variable NWCHEM_COSMO_LIBRARY, permanent directory, or
 run directory.
 
 ## References
