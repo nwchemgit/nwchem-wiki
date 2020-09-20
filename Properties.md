@@ -23,10 +23,10 @@ The properties module is started when the task directive TASK <theory>
 property is defined in the user input file. The input format has the
 form:
 ```
- PROPERTY 
-   [property keyword]  
-   [CENTER ((com || coc || origin || arb <real x y z>) default coc)] 
- END
+ PROPERTY 
+   [property keyword]  
+   [CENTER ((com || coc || origin || arb <real x y z>) default coc)] 
+ END
 ```
 Most of the properties can be computed for Hartree-Fock (closed-shell
 RHF, open-shell ROHF, and open-shell UHF), and DFT (closed-shell and
@@ -35,7 +35,7 @@ indirect spin-spin coupling require a UHF or ODFT wave function.
 
 ## Vectors keyword
 ```
- VECTORS [ (<string input_movecs >)]
+ VECTORS [ (<string input_movecs >)]
 ```
 The VECTORS directive allows the user to specify the input molecular
 orbital vectors for the property calculation
@@ -45,24 +45,24 @@ orbital vectors for the property calculation
 Each property can be requested by defining one of the following
 keywords:
 ```
- NBOFILE  
- DIPOLE  
- QUADRUPOLE  
- OCTUPOLE  
- MULLIKEN  
- ESP  
- EFIELD  
- EFIELDGRAD  
- EFIELDGRADZ4  
- GSHIFT  
- ELECTRONDENSITY  
- HYPERFINE [<integer> number_of_atoms <integer> atom_list]  
- SHIELDING [<integer> number_of_atoms <integer> atom_list]  
- SPINSPIN [<integer> number_of_pairs <integer> pair_list]  
- RESPONSE [<integer> response_order <real> frequency]  
- AIMFILE  
- MOLDENFILE  
- ALL
+ NBOFILE  
+ DIPOLE  
+ QUADRUPOLE  
+ OCTUPOLE  
+ MULLIKEN  
+ ESP  
+ EFIELD  
+ EFIELDGRAD  
+ EFIELDGRADZ4  
+ GSHIFT  
+ ELECTRONDENSITY  
+ HYPERFINE [<integer> number_of_atoms <integer> atom_list]  
+ SHIELDING [<integer> number_of_atoms <integer> atom_list]  
+ SPINSPIN [<integer> number_of_pairs <integer> pair_list]  
+ RESPONSE [<integer> response_order <real> frequency]  
+ AIMFILE  
+ MOLDENFILE  
+ ALL
 ```
 The "ALL" keyword generates all currently available properties.
 
@@ -105,7 +105,7 @@ references:
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
 ```
-   [CENTER ((com || coc || origin || arb <real x y z>) default coc)]
+   [CENTER ((com || coc || origin || arb <real x y z>) default coc)]
 ```
 com is the center of mass, coc is the center of charge, origin is (0.0,
 0.0, 0.0) and arb is any arbitrary point which must be accompanied by
@@ -118,14 +118,14 @@ Response calculations can be calculated as
 follows:
 ```
 property
- response  1 7.73178E-2   # response order and frequency in Hartree energy units  
- velocity                 # use modified velocity gauge for electric dipole  
- orbeta                   # calculate optical rotation 'beta' directly [2]  
- giao                     # GIAO optical rotation [1,3,6], forces orbeta  
- bdtensor                 # calculates B-tilde of Refs. [1,6] 
- analysis                 # analyze response in terms of MOs [6]  
- damping 0.007            # complex response functions with damping, Ref [5] 
- convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
+ response  1 7.73178E-2   # response order and frequency in Hartree energy units  
+ velocity                 # use modified velocity gauge for electric dipole  
+ orbeta                   # calculate optical rotation 'beta' directly [2]  
+ giao                     # GIAO optical rotation [1,3,6], forces orbeta  
+ bdtensor                 # calculates B-tilde of Refs. [1,6] 
+ analysis                 # analyze response in terms of MOs [6]  
+ damping 0.007            # complex response functions with damping, Ref [5] 
+ convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
 Response calculations are currently supported only for order 1 (linear
@@ -135,8 +135,8 @@ and optical rotation tensors (alpha, beta for optical rotation) in
 atomic units. If the 'velocity' or 'giao' keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster. The isotropic optical rotation is origin independent when using
-the velocity gauge or with GIAOs \[1\]. With the keyword 'bdtensor', a
-fully origin-invariant optical rotation tensor is calculated \[1,6\].
+the velocity gauge or with GIAOs [1]. With the keyword 'bdtensor', a
+fully origin-invariant optical rotation tensor is calculated [1,6].
 Note that 'velocity' and 'orbeta' are incompatible. An input line 'set
 prop:newaoresp 0' outside of the 'properties' block forces the use of an
 older version of the response code, which has fewer features (in
@@ -147,7 +147,7 @@ response tensors in terms of molecular orbitals. If the property input
 block also contains the keyword 'pmlocalization', then the analysis is
 performed in terms of Pipek-Mezey localized MOs, otherwise the canonical
 set is used (this feature may currently not work, please check the sum
-of the analysis carefully). See Ref. \[6\] for an example. Works with HF
+of the analysis carefully). See Ref. [6] for an example. Works with HF
 and density functionals for which linear response kernels are
 implemented in NWChem.
 
@@ -171,30 +171,30 @@ calculations. Detailed description of input parameters at
 <http://pubs.acs.org/doi/suppl/10.1021/jp411039m>
 ```
 RAMAN 
- [ (NORMAL | | RESONANCE) default NORMAL ]  
- [ (LORENTZIAN | | GAUSSIAN) default LORENTZIAN ]  
- [ LOW <double low default 0.0> ]  
- [ HIGH <double high default highest normal mode> ]  
- [ FIRST <integer first default 7> ]  
- [ LAST < integer last default number of normal modes > ]  
- [ WIDTH <double width default 20.0> ]  
- [ DQ <double dq default 0.01> ]  
+ [ (NORMAL | | RESONANCE) default NORMAL ]  
+ [ (LORENTZIAN | | GAUSSIAN) default LORENTZIAN ]  
+ [ LOW <double low default 0.0> ]  
+ [ HIGH <double high default highest normal mode> ]  
+ [ FIRST <integer first default 7> ]  
+ [ LAST < integer last default number of normal modes > ]  
+ [ WIDTH <double width default 20.0> ]  
+ [ DQ <double dq default 0.01> ]  
 END  
-task dft raman
+task dft raman
 ```
 or
 ```
-task dft raman numerical
+task dft raman numerical
 ```
 Sample input block:
 ```
 property
- response 1 8.8559E-2  
- damping 0.007  
+ response 1 8.8559E-2  
+ damping 0.007  
 end  
 raman  
- normal  
- lorentzian  
+ normal  
+ lorentzian  
 end
 ```
 #### Raman Keywords
@@ -218,7 +218,7 @@ end
 #### Raman Output
 
 Raman spectrum in stick format and smoothed using Lorentzians or
-Gaussians stored in a filename with format \[fname\].normal.  
+Gaussians stored in a filename with format [fname].normal.  
 The number of points is 1000 by default. This value can be changed by adding the following [SET](SET) directive to the input file
 ```
 set raman:numpts <integer>
@@ -260,11 +260,11 @@ form of the Gaussian Cube File. This behavior is triggered by the
 inclusion of grid keyword as shown
 below
 ```
- grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]
+ grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]
 ```
 where
 
-  - pad dx \[dy dz\] - specifies amount of padding (in angstroms) in
+  - pad dx [dy dz] - specifies amount of padding (in angstroms) in
     x,y, and z dimensions that will be applied in the automatic
     construction of the rectangular grid volume based on the geometry of
     the system. If only one number is provided then the same amount of
@@ -285,7 +285,7 @@ where
 
 <!-- end list -->
 
-  - ngrid nx \[ny nz\] - specifies number of grid points along each
+  - ngrid nx [ny nz] - specifies number of grid points along each
     dimension. If only one number is provided then the same number of
     grid points are assumed all dimensions. In the absence of this
     directive the number of grid points would be computed such that grid
@@ -303,51 +303,51 @@ where
 
 Example input file
 ```
-  echo  
-  start nacl  
-    
-   
-  geometry nocenter noautoz noautosym  
-   Na                   -0.00000000     0.00000000    -0.70428494  
-   Cl                    0.00000000    -0.00000000     1.70428494  
-  end  
-    
-    
-  basis  
-    * library 6-31g*  
-  end  
-    
-  #electric field would be written out to nacl.elf.cube file  
-  #with  
-  #ngrid     : 20 20 20  
-  #rmax      : 4.000     4.000     5.704  
-  #rmin      :-4.000    -4.000    -4.704  
-    
-  property  
-  efield  
-  grid pad 4.0 ngrid 20  
-  end  
-    
-  task dft property  
-    
-  #electrostatic potential would be written to esp-pad.cube file  
-  # with the same parameters as above  
-    
-  property  
-  esp  
-  grid pad 4.0 ngrid 20 output esp-pad.cube  
-  end  
-    
-  task dft property  
-     
-  #illustrating explicit specification of minumum box coordinates  
-    
-  property  
-  esp  
-  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20  
-  end  
-    
-  task dft property
+  echo  
+  start nacl  
+    
+   
+  geometry nocenter noautoz noautosym  
+   Na                   -0.00000000     0.00000000    -0.70428494  
+   Cl                    0.00000000    -0.00000000     1.70428494  
+  end  
+    
+    
+  basis  
+    * library 6-31g*  
+  end  
+    
+  #electric field would be written out to nacl.elf.cube file  
+  #with  
+  #ngrid     : 20 20 20  
+  #rmax      : 4.000     4.000     5.704  
+  #rmin      :-4.000    -4.000    -4.704  
+    
+  property  
+  efield  
+  grid pad 4.0 ngrid 20  
+  end  
+    
+  task dft property  
+    
+  #electrostatic potential would be written to esp-pad.cube file  
+  # with the same parameters as above  
+    
+  property  
+  esp  
+  grid pad 4.0 ngrid 20 output esp-pad.cube  
+  end  
+    
+  task dft property  
+     
+  #illustrating explicit specification of minumum box coordinates  
+    
+  property  
+  esp  
+  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20  
+  end  
+    
+  task dft property
 ```
 ## Aimfile
 
@@ -367,7 +367,7 @@ More details at
 ## Moldenfile
 ```
 MOLDENFILE
-MOLDEN_NORM (JANPA | | NWCHEM || NONE)
+MOLDEN_NORM (JANPA | | NWCHEM || NONE)
 ```
 This keyword generates files using the [Molden
 format](http://www.cmbi.ru.nl/molden/molden_format.html). The resulting
@@ -394,21 +394,21 @@ It is strongly recommended to use **spherical** [basis set](Basis) when using th
 Example input file for a scf calculation. The resulting Molden file will
 be named `h2o.molden`
 ```
- start heat
+ start heat
     
- geometry; he 0. 0. 0.; end  
+ geometry; he 0. 0. 0.; end  
  
- basis spherical; * library 6-31g ; end  
+ basis spherical; * library 6-31g ; end  
   
- task scf  
+ task scf  
   
- property 
-  vectors heat.movecs  
-  moldenfile   
-  molden_norm janpa 
- end
+ property 
+  vectors heat.movecs  
+  moldenfile   
+  molden_norm janpa 
+ end
  
- task scf property
+ task scf property
 ```
 Then, the resulting `h2o.molden` file can be post processed by Janpa with the following command
 ```
