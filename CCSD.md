@@ -1,8 +1,8 @@
 # Coupled Cluster Calculations
 
 The NWChem coupled cluster energy module is primarily the work of
-Alistair Rendell and Rika Kobayashi\[1\]\[2\], with contributions from
-Bert de Jong, David Bernholdt and Edoardo Aprà\[3\].
+Alistair Rendell and Rika Kobayashi[1][2], with contributions from
+Bert de Jong, David Bernholdt and Edoardo Aprà[3].
 
 The coupled cluster code can perform calculations with full iterative
 treatment of single and double excitations and non-iterative inclusion
@@ -20,16 +20,16 @@ block
 
 ```
 CCSD
-  [MAXITER <integer maxiter default 20>]
-  [THRESH  <real thresh default 1e-6>]
-  [TOL2E <real tol2e default min(1e-12 , 0.01**`thresh`*`)>]
-  [DIISBAS  <integer diisbas default 5>]
-  [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
-          [virtual <integer nfzv default 0>]]
-  [NODISK]
-  [IPRT  <integer IPRT default 0>]
-  [PRINT ...]
-  [NOPRINT ...]
+  [MAXITER <integer maxiter default 20>]
+  [THRESH  <real thresh default 1e-6>]
+  [TOL2E <real tol2e default min(1e-12 , 0.01**`thresh`*`)>]
+  [DIISBAS  <integer diisbas default 5>]
+  [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
+          [virtual <integer nfzv default 0>]]
+  [NODISK]
+  [IPRT  <integer IPRT default 0>]
+  [PRINT ...]
+  [NOPRINT ...]
 END
 ```
 
@@ -44,7 +44,7 @@ quite enough for most calculations, although particularly troublesome
 cases may require more.
 
 ```
- MAXITER  <integer maxiter default 20>
+ MAXITER  <integer maxiter default 20>
 ```
 
 ## THRESH -- Convergence threshold
@@ -54,13 +54,13 @@ calculation. Both the RMS error in the amplitudes and the change in
 energy must be less than thresh.
 
 ```
- THRESH  <real thresh default 1e-6>
+ THRESH  <real thresh default 1e-6>
 ```
 
 ## TOL2E -- integral screening threshold
 
 ```
- TOL2E <real tol2e default min(1e-12, 0.01*thresh)>
+ TOL2E <real tol2e default min(1e-12, 0.01*thresh)>
 ```
 
 The variable tol2e is used in determining the integral screening
@@ -87,14 +87,14 @@ the quantities involved, and the possibility of disk storage are being
 considered, but have not yet been implemented.
 
 ```
- DIISBAS  <integer diisbas default 5>
+ DIISBAS  <integer diisbas default 5>
 ```
 
 ## FREEZE -- Freezing orbitals
 
 ```
-  [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
-          [virtual <integer nfzv default 0>]]
+  [FREEZE [[core] (atomic || <integer nfzc default 0>)] \
+          [virtual <integer nfzv default 0>]]
 ```
 
 This directive is identical to that used in the [MP2](MP2)
@@ -114,7 +114,7 @@ printed. From looking at the source code, the interesting values seem to
 be IPRT \> 5, 10, and 50.
 
 ```
- IPRT  <integer IPRT default 0>
+ IPRT  <integer IPRT default 0>
 ```
 
 ## PRINT and NOPRINT
@@ -140,16 +140,16 @@ yet.
 Currently available methods
 are
 
-  * CCSD - Full iterative inclusion of single and double excitations
-  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged<br> singles and doubles amplitudes
-  * CCSD(T) - The linearized triples approximation due to Raghavachari.
+  * CCSD - Full iterative inclusion of single and double excitations
+  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged<br> singles and doubles amplitudes
+  * CCSD(T) - The linearized triples approximation due to Raghavachari.
 
 The calculation is invoked using the TASK directive, so to perform a
 CCSD+T(CCSD) calculation, for example, the input file should include the
 directive
 
 ```
- TASK CCSD+T(CCSD)
+ TASK CCSD+T(CCSD)
 ```
 
 Lower-level results which come as by-products (such as MP3/MP4) of the
@@ -179,13 +179,13 @@ run-time and a warning is printed to draw attention to the fact that the
 calculation does not correspond precisely to the requested method.
 
 ```
-DOA  <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
-DOB  <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
-DOG  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
-DOH  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
-DOJK <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
-DOS  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
-DOD  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
+DOA  <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
+DOB  <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
+DOG  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
+DOH  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
+DOJK <integer array default 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2>
+DOS  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
+DOD  <integer array default 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1>
 ```
 
 ## Alternative Implementations of Triples
@@ -208,7 +208,7 @@ node code, provided that nonblocking communication makes asynchronous
 progress.
 
 ```
- set ccsd:use_trpdrv_nb T
+ set ccsd:use_trpdrv_nb T
 ```
 
 ### OpenMP
@@ -221,8 +221,8 @@ a relatively small number of parallel regions. It also uses nonblocking
 Global Arrays get operations.
 
 ```
-set ccsd:use_ccsd_omp T
-set ccsd:use_trpdrv_omp T
+set ccsd:use_ccsd_omp T
+set ccsd:use_trpdrv_omp T
 ```
 
 If one runs with only the (T) portion of the code using threads, the
@@ -255,12 +255,11 @@ extensively and a recommendation concerning the right number of
 processes and threads is not available.
 
 ```
- set ccsd:use_trpdrv_offload T
+ set ccsd:use_trpdrv_offload T
 ```
 
 ## References
 
-<references/>
 
 1.  Rendell, A.P., Lee, T.J., Komornicki, A., and Wilson, S. (1992)
     "Evaluation of the contribution from triply excited intermediates to
