@@ -2,7 +2,7 @@
 
 This section relates to the computation of analytic hessians which are
 available for open and closed shell SCF, except ROHF and for closed
-shell and unrestricted open shell DFT \[1\]. Analytic hessians are not
+shell and unrestricted open shell DFT [1]. Analytic hessians are not
 currently available for SCF or DFT calculations relativistic
 all-electron methodologies or for charge fitting with DFT. The current
 algorithm is fully in-core and does not use symmetry.
@@ -17,11 +17,11 @@ All input for the Hessian Module is optional since the default
 definitions are usually correct for most purposes. The generic module
 input begins with hessian and has the form:
 ```
- hessian  
-   thresh <real tol default 1d-6>
-   print ... 
-   profile  
- end
+ hessian  
+   thresh <real tol default 1d-6>
+   print ... 
+   profile  
+ end
 ```
 ### Defining the wavefunction threshold
 
@@ -36,7 +36,7 @@ tight enough for analytic hessians. Therefore, the hessian, by default,
 tightens these up to 1d-6 and runs an additional energy point if needed.
 If, during an analytic hessian calculation, you encounter an error:
 ```
- cphf_solve:the available MOs do not satisfy the SCF equations
+ cphf_solve:the available MOs do not satisfy the SCF equations
 ```
 the convergence criteria of the wavefunction generally needs to be
 tightened.
@@ -105,16 +105,16 @@ All input for the Vibrational Module is optional since the default
 definitions will compute the frequencies and IR intensities. The generic
 module input can begin with vib, freq, frequency and has the form:
 ```
- {freq || vib || frequency}` 
-   [reuse [<string hessian_filename>]]  
-   [mass <integer lexical_index> <real new_mass>]  
-   [mass <string tag_identifier> <real new_mass>]  
-   [{temp || temperature} <integer number_of_temperatures>\ 
-         <real temperature1 temperature2 ...>] 
-   [animate [<real step_size_for_animation>]]  
-   [fd_delta [<real step_size_for_fd_hessian>]]  
-   [filename <string file_set_name> [overwrite]]  
- end
+ {freq || vib || frequency}` 
+   [reuse [<string hessian_filename>]]  
+   [mass <integer lexical_index> <real new_mass>]  
+   [mass <string tag_identifier> <real new_mass>]  
+   [{temp || temperature} <integer number_of_temperatures>\ 
+         <real temperature1 temperature2 ...>] 
+   [animate [<real step_size_for_animation>]]  
+   [fd_delta [<real step_size_for_fd_hessian>]]  
+   [filename <string file_set_name> [overwrite]]  
+ end
 ```
 ### Hessian File Reuse
 
@@ -125,7 +125,7 @@ alternate place you may redirect the reuse directive to that file by
 specifying the path to that file.
 
 ```
- reuse /path_to_hessian_file
+ reuse /path_to_hessian_file
 ```
 
 This will reuse your saved Hessian data but one caveat is that the
@@ -141,7 +141,7 @@ via the input.
 To modify the mass of a specific center you can simply use:
 
 ```
- mass 3 4.00260324
+ mass 3 4.00260324
 ```
 
 which will set the mass of center 3 to 4.00260324 AMUs. The lexical
@@ -151,7 +151,7 @@ To modify all Hydrogen atoms in a molecule you may use the tag based
 mechanism:
 
 ```
- mass hydrogen 2.014101779
+ mass hydrogen 2.014101779
 ```
 
 The mass redefinitions always start with the default masses and change
@@ -169,15 +169,15 @@ example,
 
 ```
 freq
-  reuse
-  mass hydrogen 2.014101779
+  reuse
+  mass hydrogen 2.014101779
 end
-task scf frequencies
+task scf frequencies
 freq
-  reuse
-  mass oxygen 17.9991603
+  reuse
+  mass oxygen 17.9991603
 end
-task scf frequencies
+task scf frequencies
 ```
 
 will use the new mass for all hydrogens in the first frequency analysis.
@@ -187,16 +187,16 @@ modified oxygen and hydrogen analysis you would have to use:
 
 ```
 freq
-  reuse
-  mass hydrogen 2.014101779
+  reuse
+  mass hydrogen 2.014101779
 end
-task scf frequencies
+task scf frequencies
 freq
-  reuse
-  mass hydrogen 2.014101779
-  mass oxygen 17.9991603
+  reuse
+  mass hydrogen 2.014101779
+  mass oxygen 17.9991603
 end
-task scf frequencies
+task scf frequencies
 ```
 
 ### Temp or Temperature
@@ -208,7 +208,7 @@ temperature can be used to initiate this command.
 To modify the temperature of the computation you can simply use:
 
 ```
- temp 4 298.15 300.0 350.0 400.0
+ temp 4 298.15 300.0 350.0 400.0
 ```
 
 At this point, the temperatures are persistant and so the user must
@@ -216,7 +216,7 @@ At this point, the temperatures are persistant and so the user must
 setting the temperatures in a previous "VIB" command, i.e.
 
 ```
- temp 1 298.15
+ temp 1 298.15
 ```
 
 ### Animation
@@ -232,7 +232,7 @@ geometry. By default these files are not generated. To activate this
 mechanism simply use the following input directive
 
 ```
- animate
+ animate
 ```
 
 anywhere in the frequency/vib input block.
@@ -244,12 +244,12 @@ of the six possible views down a Cartesian axis.
 It uses the free utilities
 
 ```
- - rasmol 
-   (http://www.umass.edu/microbio/rasmol) 
-   to manipulate the molecule and generate the individual frames
- - convert from ImageMagick 
-   (http://www.imagemagick.org/)
-   to combine the frames into an animated gif
+ - rasmol 
+   (http://www.umass.edu/microbio/rasmol) 
+   to manipulate the molecule and generate the individual frames
+ - convert from ImageMagick 
+   (http://www.imagemagick.org/)
+   to combine the frames into an animated gif
 ```
 
 It should be easy to modify the script to other file formats or
@@ -263,7 +263,7 @@ directive, e.g.
 
 ```
 vib
-   animate 0.20
+   animate 0.20
 end
 ```
 
@@ -278,7 +278,7 @@ analysis is run in a single input file. To specify different filename
 for a particular vibrational analysis use the directive
 
 ```
-filename <file_set_name> [overwrite]
+filename <file_set_name> [overwrite]
 ```
 
 where <file_set_name> is the name that will be prepended to the usual
@@ -294,7 +294,7 @@ This can be changed via the fd\_delta input directive, e.g.
 
 ```
 vib
-   fd_delta 0.005
+   fd_delta 0.005
 end
 ```
 
@@ -305,7 +305,7 @@ option just set the "stpr\_gen:delta" value on the runtime database,
 e.g.
 
 ```
-set stpr_gen:delta 0.005
+set stpr_gen:delta 0.005
 ```
 
 ### An Example Input Deck
@@ -315,44 +315,44 @@ set, compute the frequencies for <img alt="$H_{2}O$" src="https://raw.githubuser
 temperatures, <img alt="$D_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ce64a0239658825eb59f2dbb21363632.svg?invert_in_darkmode&sanitize=true" align=middle width="33.88011pt" height="22.38192pt"/>, HDO, and TDO.
 
 ```
-start  h2o
-title Water 
-geometry units au autosym
-  O      0.00000000    0.00000000    0.00000000
-  H      0.00000000    1.93042809   -1.10715266
-  H      0.00000000   -1.93042809   -1.10715266
+start  h2o
+title Water 
+geometry units au autosym
+  O      0.00000000    0.00000000    0.00000000
+  H      0.00000000    1.93042809   -1.10715266
+  H      0.00000000   -1.93042809   -1.10715266
 end
-basis noprint
-  H library sto-3g 
-  O library sto-3g
+basis noprint
+  H library sto-3g 
+  O library sto-3g
 end
-scf; thresh 1e-6; end
-driver; tight; end
-task scf optimize
+scf; thresh 1e-6; end
+driver; tight; end
+task scf optimize
 
-scf; thresh 1e-8; print none; end
-task scf freq 
-
-freq
- reuse; temp 4 298.15 300.0 350.0 400.0
-end
-task scf freq
-
-freq 
- reuse; mass H 2.014101779
- temp 1 298.15
-end
-task scf freq
+scf; thresh 1e-8; print none; end
+task scf freq 
 
 freq
- reuse; mass 2 2.014101779
+ reuse; temp 4 298.15 300.0 350.0 400.0
 end
-task scf freq
+task scf freq
+
+freq 
+ reuse; mass H 2.014101779
+ temp 1 298.15
+end
+task scf freq
 
 freq
- reuse; mass 2 2.014101779 ; mass 3 3.01604927
+ reuse; mass 2 2.014101779
 end
-task scf freq
+task scf freq
+
+freq
+ reuse; mass 2 2.014101779 ; mass 3 3.01604927
+end
+task scf freq
 ```
 
 ## References
@@ -362,5 +362,4 @@ task scf freq
 1.  Johnson, B.G. and Frisch, M.J. (1994) "An implementation of analytic
     second derivatives of the gradient-corrected density functional
     energy", *Journal of Chemical Physics* **100** 7429-7442,
-    [doi:\[http://dx.doi.org/10.1063/1.466887](doi:%5Bhttp://dx.doi.org/10.1063/1.466887)
-    10.1063/1.466887\]
+    DOI:[10.1063/1.466887](http://dx.doi.org/10.1063/1.466887)

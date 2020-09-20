@@ -586,9 +586,9 @@ but this should have no serious side effect.
 Common problems with Python programs inside NWChem.
 
 1.  You get the message  
-      
-    0:python\_input: indentation must be \>= that of first line: 4  
-      
+```      
+    0:python_input: indentation must be >= that of first line: 4  
+```      
     This indicates that NWChem thinks that a line is less indented than
     the first line. If this is not the case then perhaps there is a tab
     in your input which NWChem treats as a single space character but
