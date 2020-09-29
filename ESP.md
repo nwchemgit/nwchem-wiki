@@ -102,7 +102,9 @@ resulting in the same charge for atoms iatom and katom, for atoms iatom+1 and k 
 ```
        constrain xhn  <integer iatom> {<integer jatom>}
 ```  
-can be used to constrain the set {iatom,{jatom}} to zero charge, and constrain all atoms  in {jatom} to have the same charge. This can be used, for example, to restrain a methyl    group to zero charge, and have all hydrogen carrying identical charges.
+can be used to constrain the set `{iatom,{jatom}}` to zero charge, and constrain all atoms  in `{jatom}`
+to have the same charge. This can be used, for example, to restrain a methyl    group to zero charge,
+and have all hydrogen carrying identical charges.
 
 ## Restraints
 
@@ -115,44 +117,14 @@ fitting procedure.
       hyperbolic [<real scale> [<real tight>]]  \  
        [maxiter <integer maxit>]  [tolerance <real toler>])
 ```
-Here hfree can be specified to exclude hydrogen atoms from the
-restaining procedure. Variable scale is the strength of the restraint
-potential, with a default of 0.005 au for the harmonic restraint and a
-default value of 0.001 au for the hyperbolic restraint. For the
-hyperbolic restraints the tightness tight can be specified to change the
+Here `hfree` can be specified to exclude hydrogen atoms from the
+restraining procedure. Variable `scale` is the strength of the restraint
+potential, with a default of 0.005 au for the `harmonic` restraint and a
+default value of 0.001 au for the `hyperbolic` restraint. For the
+hyperbolic restraints the tightness `tight` can be specified to change the
 default value of 0.1 e. The iteration count that needs to be carried out
 for the hyperbolic restraint is determined by the maximum number of
-allowed iterations maxiter, with a default value of 25, and the
-tolerance in the convergence of the partial charges toler, with a
+allowed iterations `maxiter`, with a default value of 25, and the
+`tolerance` in the convergence of the partial charges `toler`, with a
 default of 0.001 e.
 
-## Plotting
-
-The electrostatic potential computed on a grid can be displayed using
-the  [gOpenMol](https://research.csc.fi/-/gopenmol_download)  code.
-
-A necessary step requires to convert the .plt file computed by the ESP
-module from human readable to machine readable format; this can be
-achieved by using the gOpenMol Pltfile converter.
-
-In practice, you would need to follow the following steps
-
-1.  rename *filename.plt* to *filename.plt.txt*
-2.  start gOpenMol
-3.  open the **<ins>R</ins>un** menu
-4.  select the **Pltfile (conversion)** utility
-5.  choose *filename.plt.txt* as input file name and *filename.plt* as
-    the output file name
-6.  select **Formatted ==\> Unformatted**
-7.  read the *filename.xyz* file by going to: **File -\> Import -\>
-    Coord -\> Browse -\> Apply**; you should see your system in the main
-    graphical window as connections between atoms
-8.  plot the density by going to **Plot -\> Contour**
-9.  first click **<ins>B</ins>rowse** and read the gOpenMol filename.plt
-    file:
-10. then click **Import**
-11. define desired **Contour level**
-12. click **<ins>A</ins>pply**
-
-More details at:
-<http://nms.kcl.ac.uk/lev.kantorovitch/codes/lev00/node71.html>
