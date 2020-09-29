@@ -30,39 +30,37 @@ parameters determine the selection of grid points.
 ``` 
 is given, the grid and the electrostatic potential is recalculated.
 
-  - The extent of the grid is determined by
+  - The extent of the grid is determined by the `range` keyword
 ```
        range <real rcut> 
 ```  
-where rcut is the maximum distance in nm between a grid point and any of the atomic centers. 
+where `rcut` is the maximum distance in nm between a grid point and any of the atomic centers. 
 When omitted, a default value for rcut of 0.3 nm is used.
 
-  - The grid spacing is specified by
+  - The grid spacing is specified by the `spacing` keyword
 ```
        spacing <real spac>  
 ``` 
-where spac is the grid spacing in _nm_ for the regularly spaced grid points.
+where `spac` is the grid spacing in _nm_ for the regularly spaced grid points.
 If not specified, a default spacing of 0.05 nm is used.
 
-  - The van der Waals radius of an element can be specified by
+  - The van der Waals `radius` of an element can be specified by
 ```
        radius <integer iatnum> <real atrad>  
 ``` 
 where iatnum is the atomic number for which a van der Waals radius of atrad in nm will be used in the grid point determination.  
 Default values will be used for atoms not specified.
 
-  - The probe radius in nm determining the envelope around the molecule
-    is specified by
+  - The `probe` radius in nm determining the envelope around the molecule is specified by
 ```
        probe <real probe default 0.07>
 ```
   - The distance between atomic center and probe center can be
-    multiplied by a constant factor specified
-by
+    multiplied by a constant `factor` specified by
 ```
        factor <real factor default 1.0>
 ```  
-All grid points are discarded that lie within a distance factor*(radius(i)+probe) from any atom **i**.
+All grid points are discarded that lie within a distance `factor*(radius(i)+probe)` from any atom **i**.
 
   - Schwarz screening is applied using
 ```
@@ -78,14 +76,14 @@ using
 ```
        constrain <real charge {<integer iatom>}
 ```  
-where charge is the net charge of the set of atoms {iatom}. A negative atom number iatom can be  
+where `charge` is the net charge of the set of atoms `{iatom}`. A negative atom number iatom can be  
 used to specify that the partial charge of that atom is substracted in the sum for the set.
 
   - The net charge of a sequence of atoms can be constrained using
 ```
        constrain <real charge> <integer iatom> through <integer jatom> 
 ```  
-where charge is the net charge of the set of atoms {[iatom:jatom]}.
+where charge is the net charge of the set of atoms `{[iatom:jatom]}`.
 
   - A group of atoms can be constrained to have the same charge with
 ```
