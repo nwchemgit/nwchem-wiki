@@ -3,7 +3,7 @@
 All methods which include treatment of relativistic effects are
 ultimately based on the Dirac equation, which has a four component wave
 function. The solutions to the Dirac equation describe both positrons
-(the "negative energy' states) and electrons (the "positive energy"
+(the "negative energy" states) and electrons (the "positive energy"
 states), as well as both spin orientations, hence the four components.
 The wave function may be broken down into two-component functions
 traditionally known as the large and small components; these may further
@@ -16,13 +16,13 @@ be achieved using a transformation of the Dirac Hamiltonian known in
 general as a Foldy-Wouthuysen transformation. Unfortunately this
 transformation cannot be represented in closed form for a general
 potential, and must be approximated. One popular approach is that
-originally formulated by Douglas and Kroll\[1\] and developed by
-Hess\[2\]\[3\]. This approach decouples the positive and negative energy
+originally formulated by Douglas and Kroll[1] and developed by
+Hess[2][3]. This approach decouples the positive and negative energy
 parts to second order in the external potential (and also fourth order
 in the fine structure constant, α). Other approaches include the Zeroth
-Order Regular Approximation (ZORA)\[4\]\[5\]\[6\]\[7\] and modification
-of the Dirac equation by Dyall\[8\], and involves an exact FW
-transformation on the atomic basis set level\[9\]\[10\].
+Order Regular Approximation (ZORA)[4][5][6][7] and modification
+of the Dirac equation by Dyall[8], and involves an exact FW
+transformation on the atomic basis set level[9][10].
 
 Since these approximations only modify the integrals, they can in
 principle be used at all levels of theory. At present the Douglas-Kroll
@@ -36,21 +36,21 @@ relativistic approximations and is a compound directive that encloses
 additional directives specific to the
 approximations:
 ```
- RELATIVISTIC
-  [DOUGLAS-KROLL [<string (ON||OFF) default ON> \  
-                <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  || 
-   ZORA [ (ON || OFF) default ON ] ||   
-   DYALL-MOD-DIRAC [ (ON || OFF) default ON ]   
-                 [ (NESC1E || NESC2E) default NESC1E ] ]  
-  [CLIGHT <real clight default 137.0359895>]  
- END
+uRELATIVISTIC
+  [DOUGLAS-KROLL [<string (ON||OFF) default ON> \  
+                <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  || 
+   ZORA [ (ON || OFF) default ON ] ||   
+   DYALL-MOD-DIRAC [ (ON || OFF) default ON ]   
+                 [ (NESC1E || NESC2E) default NESC1E ] ]  
+  [CLIGHT <real clight default 137.0359895>]  
+ END
 ```
 Only one of the methods may be chosen at a time. If both methods are
 found to be on in the input block, NWChem will stop and print an error
 message. There is one general option for both methods, the definition of
 the speed of light in atomic units:
 ```
- CLIGHT <real clight default 137.0359895>
+ CLIGHT <real clight default 137.0359895>
 ```
 The following sections describe the optional sub-directives that can be
 specified within the RELATIVISTIC block.
@@ -61,8 +61,8 @@ The spin-free and spin-orbit one-electron Douglas-Kroll approximation
 have been implemented. The use of relativistic effects from this
 Douglas-Kroll approximation can be invoked by specifying:
 ```
- DOUGLAS-KROLL [<string (ON||OFF) default ON> \ 
-                <string (FPP||DKH||DKFULL|DK3|DK3FULL) default DKH>]
+ DOUGLAS-KROLL [<string (ON||OFF) default ON> \ 
+                <string (FPP||DKH||DKFULL|DK3|DK3FULL) default DKH>]
 ```
 The ON|OFF string is used to turn on or off the Douglas-Kroll
 approximation. By default, if the DOUGLAS-KROLL keyword is found, the
@@ -73,15 +73,15 @@ approximation OFF. The user could also simply put a blank RELATIVISTIC
 block in the input file and all options will be turned off.
 
 The FPP is the approximation based on free-particle projection
-operators\[11\] whereas the DKH and DKFULL approximations are based on
-external-field projection operators\[12\]. The latter two are
+operators[11] whereas the DKH and DKFULL approximations are based on
+external-field projection operators[12]. The latter two are
 considerably better approximations than the former. DKH is the
 Douglas-Kroll-Hess approach and is the approach that is generally
 implemented in quantum chemistry codes. DKFULL includes certain
 cross-product integral terms ignored in the DKH approach (see for
-example Häberlen and Rösch\[13\]). The third-order Douglas-Kroll
+example Häberlen and Rösch[13]). The third-order Douglas-Kroll
 approximation has been implemented by T. Nakajima and K.
-Hirao\[14\]\[15\]. This approximation can be called using DK3 (DK3
+Hirao[14][15]. This approximation can be called using DK3 (DK3
 without cross-product integral terms) or DK3FULL (DK3 with cross-product
 integral terms).
 
@@ -114,7 +114,7 @@ via the DFT and SO-DFT modules. The use of relativistic
 effects with ZORA can be invoked by specifying:
 
 ```
- ZORA [<string (ON||OFF) default ON>
+ ZORA [<string (ON||OFF) default ON>
 ```
 
 The ON|OFF string is used to turn on or off ZORA. By default, if the
@@ -194,8 +194,8 @@ DYALL-MOD-DIRAC directive in the RELATIVISTIC directive block. The
 syntax is as follows.
 
 ```
- DYALL-MOD-DIRAC [ (ON || OFF) default ON ] 
-                 [ (NESC1E || NESC2E) default NESC1E ]
+ DYALL-MOD-DIRAC [ (ON || OFF) default ON ] 
+                 [ (NESC1E || NESC2E) default NESC1E ]
 ```
 
 The ON|OFF string is used to turn on or off the Dyall's modified Dirac
@@ -214,8 +214,8 @@ DYALL-MOD-DIRAC directive, with the following
 syntax:
 
 ```
- NESC2E [ (SS1CENT [ (ON || OFF) default ON ] || SSALL) default SSALL ]
-        [ (SSSS [ (ON || OFF) default ON ] || NOSSSS) default SSSS ]
+ NESC2E [ (SS1CENT [ (ON || OFF) default ON ] || SSALL) default SSALL ]
+        [ (SSSS [ (ON || OFF) default ON ] || NOSSSS) default SSSS ]
 ```
 
 The first sub-option gives the capability to limit the two-electron
@@ -267,70 +267,70 @@ relativistic calculations on water with the one-electron approximation
 and the two-electron approximation, using the library basis sets.
 
 ```
- start h2o-dmd
- geometry units bohr
- symmetry c2v
-   O       0.000000000    0.000000000   -0.009000000
-   H       1.515260000    0.000000000   -1.058900000
-   H      -1.515260000    0.000000000   -1.058900000
- end
- basis "fw" rel
-   oxygen library cc-pvdz_pt_sf_fw
-   hydrogen library cc-pvdz_pt_sf_fw
- end
- basis "large"
-   oxygen library cc-pvdz_pt_sf_lc
-   hydrogen library cc-pvdz_pt_sf_lc
- end
- basis "large2" rel
-   oxygen library cc-pvdz_pt_sf_lc
-   hydrogen library cc-pvdz_pt_sf_lc
- end
- basis "small"
-   oxygen library cc-pvdz_pt_sf_sc
-   hydrogen library cc-pvdz_pt_sf_sc
- end
- set "ao basis" fw
- set "large component" large
- set "small component" small
- relativistic
-   dyall-mod-dirac
- end
- task scf
- set "ao basis" large2
- unset "large component"
- set "small component" small
- relativistic
-   dyall-mod-dirac nesc2e
- end
- task scf
+ start h2o-dmd
+ geometry units bohr
+ symmetry c2v
+   O       0.000000000    0.000000000   -0.009000000
+   H       1.515260000    0.000000000   -1.058900000
+   H      -1.515260000    0.000000000   -1.058900000
+ end
+ basis "fw" rel
+   oxygen library cc-pvdz_pt_sf_fw
+   hydrogen library cc-pvdz_pt_sf_fw
+ end
+ basis "large"
+   oxygen library cc-pvdz_pt_sf_lc
+   hydrogen library cc-pvdz_pt_sf_lc
+ end
+ basis "large2" rel
+   oxygen library cc-pvdz_pt_sf_lc
+   hydrogen library cc-pvdz_pt_sf_lc
+ end
+ basis "small"
+   oxygen library cc-pvdz_pt_sf_sc
+   hydrogen library cc-pvdz_pt_sf_sc
+ end
+ set "ao basis" fw
+ set "large component" large
+ set "small component" small
+ relativistic
+   dyall-mod-dirac
+ end
+ task scf
+ set "ao basis" large2
+ unset "large component"
+ set "small component" small
+ relativistic
+   dyall-mod-dirac nesc2e
+ end
+ task scf
 ```
 
 The second example has oxygen as a relativistic atom and hydrogen
 nonrelativistic.
 
 ```
- start h2o-dmd2
- geometry units bohr
- symmetry c2v
-   O       0.000000000    0.000000000   -0.009000000
-   H       1.515260000    0.000000000   -1.058900000
-   H      -1.515260000    0.000000000   -1.058900000
- end
- basis "ao basis"
-   oxygen library cc-pvdz_pt_sf_fw rel
-   hydrogen library cc-pvdz
- end
- basis "large component"
-   oxygen library cc-pvdz_pt_sf_lc
- end
- basis "small component"
-   oxygen library cc-pvdz_pt_sf_sc
- end
- relativistic
-   dyall-mod-dirac
- end
- task scf
+ start h2o-dmd2
+ geometry units bohr
+ symmetry c2v
+   O       0.000000000    0.000000000   -0.009000000
+   H       1.515260000    0.000000000   -1.058900000
+   H      -1.515260000    0.000000000   -1.058900000
+ end
+ basis "ao basis"
+   oxygen library cc-pvdz_pt_sf_fw rel
+   hydrogen library cc-pvdz
+ end
+ basis "large component"
+   oxygen library cc-pvdz_pt_sf_lc
+ end
+ basis "small component"
+   oxygen library cc-pvdz_pt_sf_sc
+ end
+ relativistic
+   dyall-mod-dirac
+ end
+ task scf
 ```
 
 ### References 
