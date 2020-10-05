@@ -375,9 +375,7 @@ article and cover were published in [Phys. Chem. Chem. Phys. 12, 6896
 On September 30, 2010 NWChem version 6.0 was released. This version
 marks a transition of NWChem to an open-source software package. The
 software is being released under the
-[http://www.opensource.org/licenses/ecl2.php Educational Community
-License
-2.0](http://www.opensource.org/licenses/ecl2.php_Educational_Community_License_2.0)
+[Educational Community License 2.0](http://opensource.org/licenses/ecl2.php)
 (ECL 2.0). 
 
 New functionality, improvements, and bug fixes include:

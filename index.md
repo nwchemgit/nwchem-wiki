@@ -31,7 +31,7 @@ State. Researchers interested in contributing to NWChem should review
 the [Developers page](Developer). The
 code is distributed as open-source under the terms of the [Educational
 Community License
-version 2.0](http://www.opensource.org/licenses/ecl2.php) (ECL 2.0).
+version 2.0](http://opensource.org/licenses/ecl2.php) (ECL 2.0).
 
 The NWChem development strategy is focused on providing new and
 essential scientific capabilities to its users in the areas of kinetics
