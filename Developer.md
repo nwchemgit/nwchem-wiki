@@ -59,7 +59,7 @@ Team.
 Before contributions from this new developer can be incorporated into
 NWChem, this person will have to provide written feedback that the
 contributions can be released within NWChem under a
-[ECL 2.0 open-source license](http://www.opensource.org/licenses/ecl2.php).
+[ECL 2.0 open-source license](http://opensource.org/licenses/ecl2.php).
 
 A (Trusted) Developer will receive the appropriate access to the
 nwchemgit github repository. If a Developer consistently incorporates
