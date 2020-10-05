@@ -54,7 +54,7 @@ installing it? EMSL Arrows scientific service can help. A web api to
 EMSL Arrows is now available for alpha testing.
 
 for more information see
-[EMSLl\_Arrows\_-\_an\_easier\_way\_to\_use\_nwchem](Current_events#%22emsl_arrows_-_an_easier_way_to_use_nwchem) and [EMSL Arrows](EMSL_Arrows)
+[EMSL Arrows - an easier way to use nwchem](Current_events.html#emsl-arrows-an-easier-way-to-use-nwchem) and [EMSL Arrows](EMSL_Arrows)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
 [EMSL Arrows API](https://arrows.emsl.pnnl.gov/api) </span>
