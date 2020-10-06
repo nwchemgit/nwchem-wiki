@@ -279,6 +279,9 @@ of MPICH is installed and used, NWChem can be called directly, e.g.
 ```
   % $NWCHEM_TOP/bin/${NWCHEM_TARGET}/nwchem -np 8 h2o.nw
 ```
+
+### NWCHEM_MODULES
+
   - **NWCHEM\_MODULES** defines the modules to be compiled, e.g.
 ```
 export NWCHEM_MODULES="all python"
