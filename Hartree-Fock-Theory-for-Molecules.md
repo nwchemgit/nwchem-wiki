@@ -256,7 +256,7 @@ Example 3:
 
 This directive will cause the calculation to start from vectors in the
 file "small.movecs" which are in a basis named "small basis". The output
-vectors will be written to the default file "\<file\_prefix.movecs\>".
+vectors will be written to the default file "<file_prefix.movecs>".
 ### VECTORS SWAP keyword
 Once starting vectors have been obtained using any of the possible
 options, they may be reordered through use of the SWAP keyword. This
@@ -280,8 +280,8 @@ The swapping of orbitals occurs as a sequential process in the order
 (left to right) input by the user. Thus, regarding each pair as an
 elementary transposition it is possible to construct arbitrary
 permutations of the orbitals. For instance, to apply the permutation
-<img alt="$(6 7 8 9)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f1e8657b56e7bdaf8f983f8faf7f475.svg?invert_in_darkmode&sanitize=true" align=middle width="45.491655pt" height="24.56553pt"/> we note that this permutation is equal to
-<img alt="$(6 7)(7 8)(8 9)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c92f90c8ec6a25f6c4b682f5a77029ab.svg?invert_in_darkmode&sanitize=true" align=middle width="87.34407pt" height="24.56553pt"/>, and thus may be specified as
+`(6 7 8 9)` we note that this permutation is equal to
+`(6 7)(7 8)(8 9)`, and thus may be specified as
 
 ```
  vectors swap 8 9  7 8  6 7
@@ -465,8 +465,8 @@ The following points are important in using the fragment initial guess:
 
 A more involved example is now presented. We wish to model the sextet
 state of Fe(III) complexed with water, imidazole and a heme with a net
-unit positive charge. The default atomic guess does not give the correct
-<img alt="$d^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/81701ee85f8bb9d3d7757e8fb5463c7e.svg?invert_in_darkmode&sanitize=true" align=middle width="15.052125pt" height="26.70657pt"/> occupation for the metal and also gives an incorrect state for
+unit positive charge. The default atomic guess does not give the correct *d<sup>5</sup>*
+ occupation for the metal and also gives an incorrect state for
 the double anion of the heme. The following performs calculations on all
 of the fragments. Things to note are:
 
@@ -474,13 +474,13 @@ of the fragments. Things to note are:
     which in part simulates the presence of the metal ion, and also
     automatically forces an additional two electrons to be added to the
     system (the default net charge being zero).
-2.  The iron fragment calculation (charge +3, <img alt="$d^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/81701ee85f8bb9d3d7757e8fb5463c7e.svg?invert_in_darkmode&sanitize=true" align=middle width="15.052125pt" height="26.70657pt"/>, sextet) will
+2.  The iron fragment calculation (charge +3, *d<sup>5</sup>*, sextet) will
     yield the correct open-shell occupation for the full system. If,
     instead, the d-orbitals were partially occupied (e.g., the doublet
     state) it would be useful to introduce dummy charges around the iron
     to model the ligand field and thereby lift the degeneracy to obtain
     the correct occupation.
-3.  <img alt="$C_s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2b5bd0bee00271e01a0c9266f09fb5c3.svg?invert_in_darkmode&sanitize=true" align=middle width="17.886165pt" height="22.38192pt"/> symmetry is used for all of the calculations. It is not
+3.  *C<sub>s</sub>* symmetry is used for all of the calculations. It is not
     necessary that the same symmetry be used in all of the calculations,
     provided that the order and orientation of the atoms is preserved.
 4.  The unset scf:\* directive is used immediately before the
@@ -715,7 +715,7 @@ following directive which should be inserted in the top-level of input
 
 This directive specifies the convergence threshold for the calculation.
 The convergence threshold is the norm of the orbital gradient, and has a
-default value in the code of <img alt="$10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6784e1fd68d75a57b35bd36247a1aefe.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/>.
+default value in the code of 10<sup>-4</sup>.  
 
 The norm of the orbital gradient corresponds roughly to the precision
 available in the wavefunction, and the energy should be converged to
@@ -732,10 +732,10 @@ in the energy, and about four significant figures in the density and
 energy derivative with respect to nuclear coordinates. However, greater
 precision may be required for calculations involving weakly interacting
 systems, floppy molecules, finite-difference of gradients to compute the
-Hessian, and for post-Hartree-Fock calculations. A threshold of
-<img alt="$10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ec4c25dce67266d40679a50bf9d75e70.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> is adequate for most such purposes, and a threshold of
-<img alt="$10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3638e50463da9c60c05d8519c65d3982.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> might be necessary for very high accuracy or very weak
-interactions. A threshold of <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/> should be regarded as the best
+Hessian, and for post-Hartree-Fock calculations. A threshold of 10<sup>-6</sup>
+ is adequate for most such purposes, and a threshold of 10<sup>-8</sup>
+ might be necessary for very high accuracy or very weak
+interactions. A threshold of 10<sup>-8</sup> should be regarded as the best
 that can be attained in most circumstances.
 
 ## MAXITER -- iteration limit
@@ -906,10 +906,10 @@ section presents some information that may help the user understand the
 output, and illustrates how to use the output information to estimate
 file sizes.
 
-If integrals are stored with a threshold of greater than <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>,
+If integrals are stored with a threshold of greater than 10<sup>-10</sup>,
 then the integrals are stored in a 32-bit fixed-point format (with
 appropriate treatment for large values to retain precision). If
-integrals are stored with a threshold less than <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>, however,
+integrals are stored with a threshold less than 10<sup>-10</sup>, however,
 the values are stored in 64-bit floating-point format. If a
 replicated-data calculation is being run, then 8 bits are used for each
 basis function label, unless there are more than 256 functions, in which
@@ -920,7 +920,15 @@ less than 256; labels are relative to the start of the block).
 Thus, the number (*W*) of 64-bit words required to store *N* integrals,
 may be computed as
 
-<img alt="$W = &#10;\begin{cases} &#10;  N,  &amp; \mbox{8-bit labels and 32-bit values} \\&#10;  \frac{3}{2}N, &amp; \mbox{16-bit labels and 32-bit values} \\&#10;  \frac{3}{2}N, &amp; \mbox{8-bit labels and 64-bit values} \\&#10;  2N, &amp; \mbox{16-bit labels and 64-bit values}&#10;\end{cases}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/64578eecf7e7887527d86aa023d3995b.svg?invert_in_darkmode&sanitize=true" align=middle width="315.713145pt" height="96.98733pt"/>
+|no. 64-bit words | labels | values |
+|:---------------:|:------:|--------|
+|      N          | 8-bit  | 32-bit |
+|     1.5N        |16-bit  | 32-bit |
+|     1.5N        | 8-bit  | 64-bit |
+|      2N         |16-bit  | 64-bit |
+
+Table 1: number (*W*) of 64-bit words required to store *N* integrals  
+
 
 The actual number of words required can exceed this computed value by up
 to one percent, due to bookkeeping overhead, and because the file itself
@@ -1224,7 +1232,7 @@ one.
 | "convergence"              | default         | info each iteration                         |
 | "mulliken ao"              | never           | Mulliken population of basis functions      |
 
-Table 1: SCF Print Control Specifications  
+Table 2: SCF Print Control Specifications  
 
 
 ## Hartree-Fock or SCF, MCSCF and MP2 Gradients
@@ -1252,13 +1260,12 @@ explicitly invoked via print control. These are as follows:
 | "forces"      | low             | details of force components |
 | "timing"      | default         | timing for each phase       |
 
-Table 2: Gradient Print Control Specifications  
+Table 3: Gradient Print Control Specifications  
 
 
 
 ## References
 
-<references/>
 
 1.  Wong, A. T. and Harrison, R. J. (1995) "Approaches to large-scale
     parallel self-consistent field calculation", *J. Comp. Chem.*
@@ -1268,6 +1275,4 @@ Table 2: Gradient Print Control Specifications
     Harrison, R. J.; Kendall, R. A. and Littlefield, R. J. (1996)
     "Toward high-performance computational chemistry: I. Scalable Fock
     matrix construction algorithms", *J. Comp. Chem.* **17**, 109-123,
-    doi:[10.1002/(SICI)1096-987X(19960115)17:1%3C109::AID-JCC9%3E3.0.CO;2-V]
-(https://doi.org/10.1002/(SICI)1096-987X(19960115)17:1%3C109::AID-JCC9%3E3.0.CO;2-V)
    
