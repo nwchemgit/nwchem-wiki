@@ -86,7 +86,7 @@ END
 In our case Babel did this for us and the entire system is defined as
 one residue with the name LIG (see columns 4 and 5). We can leave it as,
 but I will redefine residue name to NN3 (keep it to 3 characters !).
-Again running `sed 's/LIG/NN3/' n3o3-step1.pdb \> n3o3-step2.pdb`
+Again running `sed 's/LIG/NN3/' n3o3-step1.pdb > n3o3-step2.pdb`
 ```
 ATOM      1  O   NN3     1       1.562   0.180  -1.368  1.00  0.00           O  
 ATOM      2  N   NN3     1       1.316   0.936  -0.424  1.00  0.00           N  
@@ -188,9 +188,9 @@ Unresolved atom types in fragment NN3
  *   0: pre_mkfrg failed 9999  
  **********
 ```
-As part of this process skeleton fragment file (NN3.frg\_TMP) will be
+As part of this process skeleton fragment file (`NN3.frg_TMP`) will be
 generated that can be modified into the final correct form. Let us take
-a look at NN3.frg_TMP
+a look at `NN3.frg_TMP`
 ```
 # This is an automatically generated fragment file  
 # Atom types and connectivity were derived from coordinates  
