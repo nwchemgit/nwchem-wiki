@@ -262,7 +262,7 @@ us to the next step of defining new parameter file for our calculation.
 ## Generation of new parameter files
 
 Continuing with our fragment construction in [Generation of new fragment
-files](#generation-of-new=fragment-files) section, we now
+files](#generation-of-new-fragment-files) section, we now
 need to define VDW parameters for our new atom types NX and OX. The best
 way to do it is to create `amber.par` file in the directory where you plan
 to rerun final prepare  
@@ -279,7 +279,7 @@ OX     16.00000 6.35968E-01 1.76830E-01                            1 1111111111
 End
 ```
 The format of this file is documented in [Format of NWChem parameter
-file](#Format_of_NWChem_parameter_file). How to actually
+file](#format-of-nwchem-parameter-file). How to actually
 choose the appropriate values for VDW parameters is a whole new subject,
 which I do not think anybody yet fully addressed. The practical strategy
 is to copy from known atom types, which are chemically similar to the
