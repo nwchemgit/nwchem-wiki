@@ -6,7 +6,7 @@ title: "NWChem Website"
 ## NWChem: Open Source High-Performance Computational Chemistry
 
 
-<img src="Bylaska-Figure3.PNG" style="float:left; margin-right:10px; alt="drawing" width="160"/> 
+<img src="Bylaska-Figure3.webp" style="float:left; margin-right:10px; alt="drawing" width="160"/> 
 NWChem aims to provide its
 users with computational chemistry tools that are scalable both in their
 ability to efficiently treat large scientific  problems,
