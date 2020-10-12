@@ -3,7 +3,7 @@
 
 ## Where is the User's Manual?
 
-The NWChem User's Manual is now at [https://github.com/nwchemgit/nwchem/wiki](https://github.com/nwchemgit/nwchem/wiki) 
+The NWChem User's Manual is now at [https://github.com/nwchemgit/nwchem/wiki](https://github.com/nwchemgit/nwchem/wiki) 
 
 ## Where do I go for help with a Global Arrays problem?
 
@@ -27,22 +27,25 @@ URL <https://github.com/nwchemgit/nwchem/wiki/Compiling-NWChem>
 ## How to fix `configure: error: could not compile simple C MPI program`
 
 When compiling the tools directory, you might see the compilation
-stopping with the message `configure: error: could not compile simple C
-MPI program` This is most likely due to incorrect settings for the
+stopping with the message
+```
+configure: error: could not compile simple C MPI program
+```
+This is most likely due to incorrect settings for the
 `MPI_LIB`, `MPI_INCLUDE` and `LIBMPI` environment variables. The
-suggested course of action is a) to use NWChem 6.6, b) unset all of the
-three variables above and c) point your `PATH` env. variable to the
-location of mpif90. If bash is your shell choice, this can be
+suggested course of action is to unset all of the
+three variables above and point your `PATH` env. variable to the
+location of `mpif90`. If bash is your shell choice, this can be
 accomplished by typing
 
 ```
-unset MPI_LIB
-unset MPI_INCLUDE 
-unset LIBMPI
-export PATH="directory where mpif90 is located":$PATH
+unset MPI_LIB
+unset MPI_INCLUDE
+unset LIBMPI
+export PATH="directory where mpif90 is located":$PATH
 ```
 
-## What's this business with ARMCI and ARMCI\_NETWORK?
+## What's this business with ARMCI and ARMCI\NETWORK?
 
 ARMCI is a library used by Global Arrays (both ARMCI and GA source code
 is located in NWChem's tools directory). More information can be found
@@ -88,9 +91,11 @@ failure, some of which may be worked around in the input.
 1\. Strictly linear molecules with 3 or more atoms. AUTOZ does not
 generate linear bend coordinates, but, just as in a real Z-matrix, you
 can specify a dummy center that is not co-linear. There are two relevant
-tips: i) constrain the dummy center to be not co-linear otherwise the
+tips:
+* constrain the dummy center to be not co-linear otherwise the
 center could become co-linear. Also, the inevitable small forces on the
-dummy center can confuse the optimizer. ii) put the dummy center far
+dummy center can confuse the optimizer.
+* put the dummy center far
 enough away so that only one connection is generated.
 
 E.g., this input for acetylene will not use internals
@@ -207,7 +212,7 @@ Some ARMCI\_NETWORK values (e.g. OPENIB) depend on the
 recommend a value of -- at least -- 2048, e.g. in bash shell parlance
 
 ```
-export ARMCI_DEFAULT_SHMMAX=2048
+export ARMCI_DEFAULT_SHMMAX=2048
 ```
 
 A value of 2048 for ARMCI\_DEFAULT\_SHMMAX corresponds to 2048 GBytes,
@@ -217,7 +222,7 @@ parameter `kernel.shmmax` to be greater than 2147483648. You can check
 the current value of `kernel.shmmax` on your system by typing
 
 ```
-sysctl kernel.shmmax
+sysctl kernel.shmmax
 ```
 
 More detail about kernel.shmmax can be found at the webpage
