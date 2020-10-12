@@ -15,7 +15,7 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 The NWChem software can handle:  
-<img src="pt55.png" style="float:right; margin-right:2px; alt="drawing" width="130"/>
+<img src="pt55.webp" style="float:right; margin-right:2px; alt="drawing" width="130"/>
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
