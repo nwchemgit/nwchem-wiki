@@ -25,7 +25,7 @@ Web resources:
 For many of the space groups there are multiple choices of symmetry
 transformations. They are denoted as settings for each of the groups. By
 default, the code will use the first setting. By defining `setting <integer setting>`
-on the symmetry input line (see [Symmetry Group Input](SYMMETRY----Symmetry-Group-Input.html) paragraph),
+on the symmetry input line (see [Symmetry Group Input](SYMMETRY----Symmetry-Group-Input) paragraph),
 you can tell the code to choose a different setting/symmetry
 transformation.  
 
