@@ -6,9 +6,9 @@ feedback on this page content.
 ## User interface software
 
   - **ECCE** Extensible Computational Chemistry Environment
-    <http://ecce.emsl.pnl.gov/> <sup id="a1">[1](#f1)</sup>
+    <https://github.com/FriendsofECCE/ECCE> <sup id="a1">[1](#f1)</sup>
   - **EMSL Arrows** Evolution of Chemical and Materials Computation
-    <http://www.nwchem-sw.org/index.php/EMSL_Arrows>
+    <https://nwchemgit.github.io/EMSL_Arrows.html>
   - **Avogadro** reads cube files, generates NWChem input files,
     analyzes output files (including frequencies) <http://avogadro.cc>
   - **WebMO** World Wide Web-based interface to computational chemistry
@@ -23,14 +23,10 @@ feedback on this page content.
     <https://www.scienomics.com/maps-platform/simulate/quantum/nwchem-plugin/>
   - **CULGI** computational platform
     <https://www.culgi.com/software/features-quantum-chemistry/>
-  - **KiSThelP** predicts thermodynamic properties and rate constants
-    from NWChem results <http://kisthelp.univ-reims.fr/>
   - **Chemcraft** <http://www.chemcraftprog.com>
   - **ASE** Atomic Simulation Environment <http://wiki.fysik.dtu.dk/ase>
   - **Ascalaph**
     <http://www.biomolecular-modeling.com/Ascalaph/index.html>
-  - **Molecular Design Toolkit**
-    <http://bionano.autodesk.com/MolecularDesignToolkit/>
   - **MoCalc2012** <http://mocalc2012.sourceforge.net/>
   - **Chemissian** <http://www.chemissian.com/>
   - **Gausssum** a GUI application that can analyze the output since
@@ -42,11 +38,13 @@ feedback on this page content.
 
 ## Codes using NWChem wavefunctions and/or post-processing NWChem output files
 
+  - **KiSThelP** predicts thermodynamic properties and rate constants
+    from NWChem results <http://kisthelp.univ-reims.fr/>
   - **Fiesta** is a Gaussian-basis GW and Bethe-Salpeter code
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
   - **JANPA** performs Natural Population Analysis <http://janpa.sf.net>
   - **CamCASP** Cambridge package for Calculation of Anisotropic Site
-    Properties <http://www-stone.ch.cam.ac.uk/documentation/camcasp/users_guide.pdf>
+    Properties <https://gitlab.com/anthonyjs/camcasp> <https://app.ph.qmul.ac.uk/wiki/ajm:camcasp:start>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
     <https://www.chemshell.org>
@@ -58,7 +56,7 @@ feedback on this page content.
     <http://hase-group.ttu.edu/venus.html>
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
-    <http://www.votca.org> <http://doc.votca.org/xtp-manual.pdf>
+    <http://www.votca.org> 
   - **PyDP4** is Python workflow for DP4 analysis of organic molecules
     <https://github.com/KristapsE/PyDP4>
   - **Fafoom** Flexible algorithm for optimization of molecules
@@ -89,14 +87,14 @@ The following programs can display cube files from [ charge density
 ESP](Properties#Gaussian_Cube_Files) and/or use
 [Molden](Properties#Moldenfile) files
 
-  - **gOpenMol** <http://www.csc.fi/~laaksone/gopenmol/gopenmol.html>
-  - **Molden** <http://www.cmbi.ru.nl/molden/howtoget.html>
+  - **gOpenMol** <https://web.archive.org/web/20090518024059/http://www.csc.fi/english/pages/g0penMol>
+  - **Molden** <https://www3.cmbi.umcn.nl/molden/>
   - **Molekel** <http://ugovaretto.github.io/molekel/>
   - **GaussView** <http://www.gaussian.com/g_prod/gv5.htm>
   - **VMD** <http://www.ks.uiuc.edu/Research/vmd>
   - **VESTA** <http://jp-minerals.org/vesta/en/>
   - **Jamberoo**
-    <http://sf.anu.edu.au/~vvv900/cct/appl/jmoleditor/index.html>
+    <http://www.jamberoo.org/>
   - **Molden2AIM** is a utility program which can be used to create AIM-WFN, AIM-WFX, and NBO-47 files from a Molden file
      <https://github.com/zorkzou/Molden2AIM>
   - **Multiwfn** is a wavefunction analysis program <http://sobereva.com/multiwfn>
@@ -110,7 +108,7 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
   - **NCIPLOT** <https://github.com/aoterodelaroza/nciplot>
   - **Multiwfn** <http://sobereva.com/multiwfn/>
   - **Postg** <https://github.com/aoterodelaroza/postg>
-  - **GPUAM** <http://www.fqt.izt.uam.mx/html/Profes/JGO/GPUAM/GPUAM.html>
+  - **GPUAM** <http://www.fqt.izt.uam.mx/Profes/JGO/GPUAM/GPUAM.html>
   - **CHARGEMOL** <https://sourceforge.net/projects/ddec/>
 
 
