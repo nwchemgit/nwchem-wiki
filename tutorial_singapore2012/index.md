@@ -9,8 +9,9 @@
 * [Relativity and Spectroscopy](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/5_NWChem_Relativity_Spectroscopy_BSE.pdf)
 
 * [MD and QM/MM](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/6_NWChem_MD_QMMM.pdf)  
- tar file with QM/MM hands-on exercises available at [https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/tutorialqmm_new.tar.bz2](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/tutorialqmm_new.tar.bz2)
- [https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/prepare-0.tar.bz2](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/prepare-0.tar.bz2)
+ tar file with QM/MM hands-on exercises available at  
+ [https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/tutorialqmm_new.tar.bz2](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/tutorialqmm_new.tar.bz2)  
+ [https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/prepare-0.tar.bz2](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/prepare-0.tar.bz2)  
 
 * [Plane-Wave](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/7_NWChem_NWPW.pdf)
 
