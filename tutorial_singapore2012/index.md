@@ -1,4 +1,4 @@
-##Material from the 2012  A*STAR in Singapore on October 23-25, 2012
+##Material from the NWChem tutorial at A*STAR in Singapore on October 23-25, 2012
 
 * [Introduction](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_singapore2012/2_NWChem_Intro.pdf)
 
