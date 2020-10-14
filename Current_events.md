@@ -105,14 +105,13 @@ and bug fixes. The key features of NWChem 6.6 include:
     [MR-CCSD(T)](http://www.nwchem-sw.org/index.php/Release66:TCE#CCSD.28T.29_and_MRCCSD.28T.29_implementations_for_Intel_MIC_architectures)
   - The supported version of the Global Arrays library is now
     [5-4](http://hpc.pnl.gov/globalarrays/release_notes.shtml#5.4b)
-  - New ARMCI\_NETWORK=MPI-PR (MPI progress ranks). It is the
+  - New ARMCI_NETWORK=MPI-PR (MPI progress ranks). It is the
     recommended option (performance-wise) when no other native ports are
     available.
   - Streamlined installation (automated detection of MPI variables)
   - Improved ScaLapack and ELPA integration. The current ELPA interface
     is compatible with the 2015.05 release.
-  - Improved parallelization in DFT [Charge-Density fitting]
-  (https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html#specification-of-basis-sets-for-the-dft-module)
+  - Improved parallelization in DFT [Charge-Density fitting](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html#specification-of-basis-sets-for-the-dft-module)
     (removed semi-direct option)
   - Improved parallel scalability of
     [Semi-direct MP2](https://nwchemgit.github.io/MP2.html)
@@ -189,7 +188,7 @@ benchmarks. Our solution scales up to a total of 62560 cores with the
 concurrent utilization of Intel Xeon processors and Intel Xeon Phi
 coprocessors. New CCSD(T) implementation is available in the 6.5 release
 of NWchem
-<http://sc14.supercomputing.org/schedule/event_detail?evid=pap217>
+<http://sc14.supercomputing.org/schedule/event_detail-evid=pap217.html>
 
 ### NWChem 6.5 has been released
 
