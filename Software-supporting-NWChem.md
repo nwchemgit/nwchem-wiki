@@ -78,13 +78,13 @@ feedback on this page content.
   - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://github.com/aiidateam/aiida-nwchem>
   - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
   - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/charmm/documentation/by-version/c42b1/params/doc/nwchem/>
-
+ - **kMap** is a program for simulation and data analysis in photoemission tomography <https://github.com/brands-d/kMap>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
-The following programs can display cube files from [ charge density
-](DPLOT#GAUSSIAN_--_Gaussian_Cube_format) and [
-ESP](Properties#Gaussian_Cube_Files) and/or use
+The following programs can display cube files from
+[charge density](DPLOT#GAUSSIAN_--_Gaussian_Cube_format) and
+[ESP](Properties#Gaussian_Cube_Files) and/or use
 [Molden](Properties#Moldenfile) files
 
   - **gOpenMol** <https://web.archive.org/web/20090518024059/http://www.csc.fi/english/pages/g0penMol>

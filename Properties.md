@@ -362,7 +362,7 @@ codes, e.g.
 
 More details at
 <https://sites.google.com/site/alvarovazquezmayagoitia/goals/codes/nwchem-notes/generator-of-aim-wavefunction-files-nwchem>  
-**WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](http://zorkzou.github.io/Molden2AIM) program.
+**WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
 
 ## Moldenfile
 ```
@@ -380,7 +380,8 @@ input Molden files, e.g.
     keyword)
   - [orbkit](http://orbkit.github.io/)
   - [Molden2qmc](http://github.com/Konjkov/molden2qmc)
-  - [Molden2AIM](http://zorkzou.github.io/Molden2AIM)
+  - [Molden2AIM](https://github.com/zorkzou/Molden2AIM)
+  - [Multiwfn](http://sobereva.com/multiwfn/)
 
 the `MOLDEN_NORM` option allows the renormalization of the basis set
 coefficients. By default, the coefficient values from input are not
