@@ -111,31 +111,21 @@ and bug fixes. The key features of NWChem 6.6 include:
   - Streamlined installation (automated detection of MPI variables)
   - Improved ScaLapack and ELPA integration. The current ELPA interface
     is compatible with the 2015.05 release.
-  - Improved parallelization in DFT [Charge-Density
-    fitting](http://www.nwchem-sw.org/index.php/Release66:Density_Functional_Theory_for_Molecules#Specification_of_Basis_Sets_for_the_DFT_Module)
+  - Improved parallelization in DFT [Charge-Density fitting]
+  (https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html#specification-of-basis-sets-for-the-dft-module)
     (removed semi-direct option)
-  - Improved parallel scalability of [Semi-direct
-    MP2](http://www.nwchem-sw.org/index.php/Release66:MP2)
+  - Improved parallel scalability of
+    [Semi-direct MP2](https://nwchemgit.github.io/MP2.html)
   - Improved stability of in-core installation (e.g. `USE_NOIO=y`) of
-    [Semi-direct MP2](http://www.nwchem-sw.org/index.php/Release66:MP2)
-  - Improvements in Xeon Phi offloading for single reference \[Intel
-    Xeon Phi port for
-    [MR-CCSD(T)](http://www.nwchem-sw.org/index.php/Release66:TCE#CCSD.28T.29_and_MRCCSD.28T.29_implementations_for_Intel_MIC_architectures)
-    CCSD(T)\]
+    [Semi-direct MP2](https://nwchemgit.github.io/MP2.html)
+  - Improvements in Xeon Phi offloading for single reference
+    [Intel Xeon Phi port for MR-CCSD(T)]
+    (https://nwchemgit.github.io/TCE.html#ccsdt-and-mrccsdt-implementations-for-intel-mic-architectures)
   - New LINUX64 architecture available: ppc64le
-  - Bug fix for CDFT (same as
-    <http://www.nwchem-sw.org/images/Cdft.patch.gz>)
+  - Bug fix for CDFT
   - Bug fix for anisotropic part of the DFT polarizabilities
   - Bug fix in PSPW implementation of Electron Transfer calculation
     (i.e. periodic version of ET module)
-
-### Dr. Jakowski named an EMSL visiting scientist
-
-Dr. Jacek Jakowski will work with Drs. Edo Apra and Niri Govind to
-develop a pilot implementation of DFTB in NWChem. This collaboration
-with Dr. Jakowski will result in a unique computational capability and
-position NWChem for mesoscale simulations in chemistry.
-<http://www.emsl.pnnl.gov/emslweb/news/jakowski-named-emsl-visiting-scientist>
 
 ### NWChem among 13 science projects selected to run on the 300-petaFLOPS Summit
 
@@ -163,7 +153,8 @@ the field of computational chemistry to the NWChem software package.
 NWChem aims to provide its users with computational chemistry tools that
 can handle (bio)molecules, nanostructures, and solid-state from quantum
 to classical, and all combinations thereof.
-<http://www.nsccs.ac.uk/NWChem2015.php>
+<https://web.archive.org/web/20150911003831/https://www.nsccs.ac.uk/NWChem2015.php>
+
 
 ### EMSL Named an Intel Parallel Computing Center
 
@@ -177,11 +168,11 @@ The modernized codes will be applicable to several science drivers
 including studies of aerosol particles, soil chemistry, biosystems,
 hormone-cofactor functionality in proteins, ionic liquids in cells,
 spectroscopies, new materials and large-scale reaction mechanisms.
-<http://www.emsl.pnl.gov/emslweb/news/emsl-named-intel%C2%AE-parallel-computing-center>.
+<https://web.archive.org/web/20170502154826/http://www.emsl.pnl.gov/emslweb/news/emsl-named-intel%C2%AE-parallel-computing-center>
 
 ### NWChem SC2014 paper
 
-![Pic1\_sc2014.png](Pic1_sc2014.png) This paper
+![Pic1\_sc2014.webp](Pic1_sc2014.webp) This paper
 presents the implementation and performance of the highly accurate
 CCSD(T) quantum chemistry method on the Intel Xeon Phi coprocessor
 within the context of the NWChem computational chemistry package. The
@@ -291,16 +282,6 @@ capabilities.
   - Mingw32 port for Windows 32-bit environments. Developer: Edoardo
     Apra.
 
-### NWChem 6.5 soon to be released
-
-We have now entered the NWChem code freeze for release 6.5. Please
-refrain from checking in new development code and limit checkins to bug
-fixes. As of yet we have not branched the release. The plan is to
-stabilize the current development and branch the release later (end of
-August/beginning of September). This avoids duplication of work and
-checking fixes in in two places (the development branch and the release
-branch) as well as weird inconsistencies that may arise from forgotten
-checkins.
 
 ### NWChem 6.3 release now available
 
@@ -320,21 +301,16 @@ solely a bug fix release with the same functionality as NWChem 6.1.
 ### NWChem Schedules Tutorials and Hands-On Training
 
 Centers or sites interested in hosting a workshop or tutorial with or
-without hands-on training, please contact Karol Kowalski.
+without hands-on training, please contact nwchemgit@gmail.com
 
-The NWChem developers will be holding:
+Past tutorial/training sessions:
 
-  - Tutorials are being planned in the US, India, and Italy. Updates
-    will be provided soon.
   - A three-day tutorial and hands-on training at
     [A\*STAR](http://www.acrc.a-star.edu.sg/135/workshops.html) in
     Singapore on October 23-25, 2012
   - A three-day tutorial and hands-on training at the [National
     Supercomputer Center](http://www.vlcc.cn/nwchem2012/) in Beijing on
     October 17-19, 2012
-
-Past tutorial/training sessions:
-
   - A two-day tutorial and hands-on training at [the LONI
     Institute](http://www.institute.loni.org/NWChem2012/) on the
     Louisiana State University (Baton Rouge, LA) campus June 8-9, 2012
