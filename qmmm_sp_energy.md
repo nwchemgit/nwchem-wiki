@@ -22,8 +22,8 @@ The relevant settings for QM/MM interface block for energy and gradient
 calculations include
 
   - [bqzone](qmmm_bq_zone)
-  - [mm\_charges](qmmm_mm_charges)
-  - [link\_atoms](qmmm_link_atoms)
-  - [link\_ecp](qmmm_link_ecp).
+  - [mm_charges](qmmm_mm_charges)
+  - [link_atoms](qmmm_link_atoms)
+  - [link_ecp](qmmm_link_ecp).
 
 [qmmm_example3](qmmm_example3)
