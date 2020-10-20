@@ -111,7 +111,7 @@ guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orb
 a [charged atomic density
 guess](Hartree-Fock-Theory-for-Molecules#atomic-guess-orbitals-with-charged-atoms). For
 self-exchange ET reactions such as this one, you can use the
-[REORDER](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors) keyword
+[REORDER](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) keyword
 to move the electron from the first helium to the second.
 
 Example input :
