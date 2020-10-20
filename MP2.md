@@ -231,7 +231,7 @@ orbital 7 into the 6th position. This is accomplished by
 ```
 
 The swap capability is examined in more detail in [Input/output of MO
-vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors).
+vectors](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors).
 
 ## RI-MP2 fitting basis
 

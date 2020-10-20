@@ -59,7 +59,7 @@ calculation will be a spin-restricted, high-spin, open-shell SCF
 calculation (keyword ROHF). The open-shell orbitals must be the highest
 occupied orbitals. If necessary, any starting vectors may be rearranged
 through the use of the SWAP keyword on the
-[VECTORS](#vectors----inputoutput-of-mo-vectors) directive
+[VECTORS](#vectors-inputoutput-of-mo-vectors) directive
 to accomplish this.
 
 A spin-unrestricted solution can also be performed by specifying the
@@ -1028,10 +1028,10 @@ actions are
   - Examining an analysis of the initial orbitals
     ([Printing](#printing-information-from-the-SCF_Module))
     and then swapping them to attain the desired occupation
-    ([VECTORS](#vectors----inputoutput-of-mo-vectors)).
+    ([VECTORS](#vectors-inputoutput-of-mo-vectors)).
   - Converging the calculation in a minimal basis set, which is usually
     easier, and then projecting into a larger basis set
-    ([VECTORS](#vectors----inputoutput-of-mo-vectors)).
+    ([VECTORS](#vectors-inputoutput-of-mo-vectors)).
   - Using the fragment orbital initial guess ([Fragment molecular
     orbitals](#superposition-of-fragment-molecular-orbitals)).
 

@@ -37,7 +37,7 @@ E.g.,
 ```
 The input molecular orbitals (see the vectors directive in [MCSCF
 Vectors](#VECTORS_--_Input/output_of_MO_vectors) and [SCF
-Vectors](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors))
+Vectors](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors))
 must be arranged in order
 
 1.  doubly occupied orbitals,
@@ -97,12 +97,12 @@ default vectors are taken from the previous MCSCF or SCF calculation. To
 specify another input file use the VECTORS directive. Vectors are by
 default output to the input file, and may be redirected using the output
 keyword. The swap keyword of the
-[VECTORS](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors)
+[VECTORS](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)
 directive may be used to reorder orbitals to obtain the correct active
 space.
 
 The
-[LOCK](Hartree-Fock-Theory-for-Molecules#vectors----inputoutput-of-mo-vectors)
+[LOCK](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)
 keyword allows the user to specify that the ordering of orbitals will be
 locked to that of the initial vectors, insofar as possible. The default
 is to order by ascending orbital energies within each orbital space. One
