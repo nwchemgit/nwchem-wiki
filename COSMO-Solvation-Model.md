@@ -277,3 +277,195 @@ run directory.
 5. E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E. 
 6. V. Barone, M. Cossi (1997). "A new definition of cavities for the computation of solvation free energies by the polarizable continuum model". Journal of Chemical Physics 107: 3210-3221. doi:10.1063/1.474671. 
 7. E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E. 
+
+### Solvents List - Solvent keyword
+
+The short name for the solvent from the table can be used  with the `solvent` keyword to define the solvent.  
+Example with acetonitrile.
+```
+cosmo
+  solvent acetntrl
+end
+```
+
+| Long name                       | short name| dielec |
+|---------------------------------|----------|-------:|
+| acetic acid                     | acetacid |  6.2528|
+| acetone                         | acetone  |  20.493|
+| acetonitrile                    | acetntrl |  35.688|
+| acetophenone                    | acetphen |  17.440|
+| aniline                         | aniline  |  6.8882|
+| anisole                         | anisole  |  4.2247|
+| benzaldehyde                    | benzaldh |  18.220|
+| benzene                         | benzene  |  2.2706|
+| benzonitrile                    | benzntrl |  25.592|
+| benzyl chloride                 | benzylcl |  6.7175|
+| 1-bromo-2-methylpropane         | brisobut |  7.7792|
+| bromobenzene                    | brbenzen |  5.3954|
+| bromoethane                     | brethane |  9.01  |
+| bromoform                       | bromform |  4.2488|
+| 1-bromooctane                   | broctane |  5.0244|
+| 1-bromopentane                  | brpentan |  6.269 |
+| 2-bromopropane                  | brpropa2 |  9.3610|
+| 1-bromopropane                  | brpropan |  8.0496|
+| butanal                         | butanal  |  13.450|
+| butanoic acid                   | butacid  |  2.9931|
+| 1-butanol                       | butanol  |  17.332|
+| 2-butanol                       | butanol2 |  15.944|
+| butanone                        | butanone |  18.246|
+| butanonitrile                   | butantrl |  24.291|
+| butyl acetate                   | butile   |  4.9941|
+| butylamine                      | nba      |  4.6178|
+| n-butylbenzene                  | nbutbenz |  2.360 |
+| sec-butylbenzene                | sbutbenz |  2.3446|
+| tert-butylbenzene               | tbutbenz |  2.3447|
+| carbon disulfide                | cs2      |  2.6105|
+| carbon tetrachloride            | carbntet |  2.2280|
+| chlorobenzene                   | clbenzen |  5.6968|
+| sec-butyl chloride              | secbutcl |  8.3930|
+| chloroform                      | chcl3    |  4.7113|
+| 1-chlorohexane                  | clhexane |  5.9491|
+| 1-chloropentane                 | clpentan |  6.5022|
+| 1-chloropropane                 | clpropan |  8.3548|
+| o-chlorotoluene                 | ocltolue |  4.6331|
+| m-cresol                        | m-cresol |  12.440|
+| o-cresol                        | o-cresol |  6.760 |
+| cyclohexane                     | cychexan |  2.0165|
+| cyclohexanone                   | cychexon |  15.619|
+| cyclopentane                    | cycpentn |  1.9608|
+| cyclopentanol                   | cycpntol |  16.989|
+| cyclopentanone                  | cycpnton |  13.58 |
+| cis-decalin                     | declncis |  2.2139|
+| trans-decalin                   | declntra |  2.1781|
+| decalin (cis/trans mixture)     | declnmix |  2.196 |
+| n-decane                        | decane   |  1.9846|
+| 1-decanol                       | decanol  |  7.5305|
+| 1,2-dibromoethane               | edb12    |  4.9313|
+| dibromomethane                  | dibrmetn |  7.2273|
+| dibutyl ether                   | butyleth |  3.0473|
+| o-dichlorobenzene               | odiclbnz |  9.9949|
+| 1,2-dichloroethane              | edc12    |  10.125|
+| cis-dichloroethylene            | c12dce   |  9.200 |
+| trans-dichloroethylene          | t12dce   |  2.140 |
+| dichloromethane                 | dcm      |  8.930 |
+| diethyl ether                   | ether    |  4.2400|
+| diethyl sulfide                 | et2s     |  5.723 |
+| diethylamine                    | dietamin |  3.5766|
+| diiodomethane                   | mi       |  5.320 |
+| diisopropyl ether               | dipe     |  3.380 |
+| dimethyl disulfide              | dmds     |  9.600 |
+| dimethylsulfoxide               | dmso     |  46.826|
+| N,N-dimethylacetamide           | dma      |  37.781|
+| cis-1,2-dimethylcyclohexane     | cisdmchx |  2.060 |
+| N,N-dimethylformamide           | dmf      |  37.219|
+| 2,4-dimethylpentane             | dmepen24 |  1.8939|
+| 2,4-dimethylpyridine            | dmepyr24 |  9.4176|
+| 2,6-dimethylpyridine            | dmepyr26 |  7.1735|
+| 1,4-dioxane                     | dioxane  |  2.2099|
+| diphenyl ether                  | phoph    |  3.730 |
+| dipropylamine                   | dproamin |  2.9112|
+| n-dodecane                      | dodecan  |  2.0060|
+| 1,2-ethanediol                  | meg      |  40.245|
+| ethanethiol                     | etsh     |  6.667 |
+| ethanol                         | ethanol  |  24.852|
+| ethyl acetate                   | etoac    |  5.9867|
+| ethyl formate                   | etome    |  8.3310|
+| ethylbenzene                    | eb       |  2.4339|
+| ethylphenyl ether               | phenetol |  4.1797|
+| fluorobenzene                   | c6h5f    |  5.420 |
+| 1-fluorooctane                  | foctane  |  3.890 |
+| formamide                       | formamid |  108.94|
+| formic acid                     | formacid |  51.100|
+| n-heptane                       | heptane  |  1.9113|
+| 1-heptanol                      | heptanol |  11.321|
+| 2-heptanone                     | heptnon2 |  11.658|
+| 4-heptanone                     | heptnon4 |  12.257|
+| n-hexadecane                    | hexadecn |  2.0402|
+| n-hexane                        | hexane   |  1.8819|
+| hexanoic acid                   | hexnacid |  2.600 |
+| 1-hexanol                       | hexanol  |  12.51 |
+| 2-hexanone                      | hexanon2 |  14.136|
+| 1-hexene                        | hexene   |  2.0717|
+| 1-hexyne                        | hexyne   |  2.615 |
+| iodobenzene                     | c6h5i    |  4.5470|
+| 1-iodobutane                    | iobutane |  6.173 |
+| iodoethane                      | c2h5i    |  7.6177|
+| 1-iodohexadecane                | iohexdec |  3.5338|
+| iodomethane                     | ch3i     |  6.8650|
+| 1-iodopentane                   | iopentan |  5.6973|
+| 1-iodopropane                   | iopropan |  6.9626|
+| isopropylbenzene                | cumene   |  2.3712|
+| p-isopropyltoluene              | p-cymene |  2.2322|
+| mesitylene                      | mesityln |  2.2650|
+| methanol                        | methanol |  32.613|
+| 2-methoxyethanol                | egme     |  17.200|
+| methyl acetate                  | meacetat |  6.8615|
+| methyl benzoate                 | mebnzate |  6.7367|
+| methyl butanoate                | mebutate |  5.5607|
+| methyl formate                  | meformat |  8.8377|
+| 4-methyl-2-pentanone            | mibk     |  12.887|
+| methyl propanoate               | mepropyl |  6.0777|
+| 2-methyl-1-propanol             | isobutol |  16.777|
+| 2-methyl-2-propanol             | terbutol |  12.470|
+| N-methylaniline                 | nmeaniln |  5.9600|
+| methylcyclohexane               | mecychex |  2.024 |
+| N-methylformamide (E/Z mixture) | nmfmixtr |  181.56|
+| 2-methylpentane                 | isohexan |  1.890 |
+| 2-methylpyridine                | mepyrid2 |  9.9533|
+| 3-methylpyridine                | mepyrid3 |  11.645|
+| 4-methylpyridine                | mepyrid4 |  11.957|
+| nitrobenzene                    | c6h5no2  |  34.809|
+| nitroethane                     | c2h5no2  |  28.290|
+| nitromethane                    | ch3no2   |  36.562|
+| 1-nitropropane                  | ntrprop1 |  23.730|
+| 2-nitropropane                  | ntrprop2 |  25.654|
+| o-nitrotoluene                  | ontrtolu |  25.669|
+| n-nonane                        | nonane   |  1.9605|
+| 1-nonanol                       | nonanol  |  8.5991|
+| 5-nonanone                      | nonanone |  10.600|
+| n-octane                        | octane   |  1.9406|
+| 1-octanol                       | octanol  |  9.8629|
+| 2-octanone                      | octanon2 |  9.4678|
+| n-pentadecane                   | pentdecn |  2.0333|
+| pentanal                        | pentanal |  10.000|
+| n-pentane                       | npentane |  1.8371|
+| pentanoic acid                  | pentacid |  2.6924|
+| 1-pentanol                      | pentanol |  15.130|
+| 2-pentanone                     | pentnon2 |  15.200|
+| 3-pentanone                     | pentnon3 |  16.780|
+| 1-pentene                       | pentene  |  1.9905|
+| E-2-pentene                     | e2penten |  2.051 |
+| pentyl acetate                  | pentacet |  4.7297|
+| pentylamine                     | pentamin |  4.2010|
+| perfluorobenzene                | pfb      |  2.029 |
+| phenylmethanol                  | benzalcl |  12.457|
+| propanal                        | propanal |  18.500|
+| propanoic acid                  | propacid |  3.440 |
+| 1-propanol                      | propanol |  20.524|
+| 2-propanol                      | propnol2 |  19.264|
+| propanonitrile                  | propntrl |  29.324|
+| 2-propen-1-ol                   | propenol |  19.011|
+| propyl acetate                  | propacet |  5.5205|
+| propylamine                     | propamin |  4.9912|
+| pyridine                        | pyridine |  12.978|
+| tetrachloroethene               | c2cl4    |  2.268 |
+| tetrahydrofuran                 | thf      |  7.4257|
+| tetrahydrothiophene-S,S-dioxide | sulfolan |  43.962|
+| tetralin                        | tetralin |  2.771 |
+| thiophene                       | thiophen |  2.7270|
+| thiophenol                      | phsh     |  4.2728|
+| toluene                         | toluene  |  2.3741|
+| tributyl phosphate              | tbp      |  8.1781|
+| 1,1,1-trichloroethane           | tca111   |  7.0826|
+| 1,1,2-trichloroethane           | tca112   |  7.1937|
+| trichloroethene                 | tce      |  3.422 |
+| triethylamine                   | et3n     |  2.3832|
+| 2,2,2-trifluoroethanol          | tfe222   |  26.726|
+| 1,2,4-trimethylbenzene          | tmben124 |  2.3653|
+| 2,2,4-trimethylpentane          | isoctane |  1.9358|
+| n-undecane                      | undecane |  1.9910|
+| m-xylene                        | m-xylene |  2.3478|
+| o-xylene                        | o-xylene |  2.5454|
+| p-xylene                        | p-xylene |  2.2705|
+| xylene (mixture)                | xylenemx |  2.3879|
+| water                           | h2o      |  78.400|
