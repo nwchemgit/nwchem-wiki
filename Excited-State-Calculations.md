@@ -106,20 +106,20 @@ encompasses all of the above-mentioned methods implemented. To use this
 module, one needs to specify TDDFT on the task directive, e.g.,
 
 ```
-     TASK TDDFT ENERGY
+     TASK TDDFT ENERGY
 ```
 
 for a single-point excitation energy calculation, and
 
 ```
-     TASK TDDFT OPTIMIZE
+     TASK TDDFT OPTIMIZE
 ```
 
 for an excited-state geometry optimization (and perhaps an adiabatic
 excitation energy calculation), and
 
 ```
-     TASK TDDFT FREQUENCIES
+     TASK TDDFT FREQUENCIES
 ```
 
 for an excited-state vibrational frequency calculation. The TDDFT module
@@ -136,32 +136,32 @@ subsections TARGET and TARGETSYM for more detail.
 Individual parameters and keywords may be supplied in the TDDFT input
 block. The syntax is:
 ```
- TDDFT
-   [(CIS||RPA) default RPA]  
-   [NROOTS <integer nroots default 1>]  
-   [MAXVECS <integer maxvecs default 1000>] 
-   [(SINGLET||NOSINGLET) default SINGLET]  
-   [(TRIPLET||NOTRIPLET) default TRIPLET]  
-   [THRESH <double thresh default 1e-4>]  
-   [MAXITER <integer maxiter default 100>]  
-   [TARGET <integer target default 1>]  
-   [TARGETSYM <character targetsym default 'none'>]  
-   [SYMMETRY]  
-   [ECUT] <-cutoff energy>  
-   [EWIN] <-lower cutoff energy>  <-higher cutoff energy>  
-   [ALPHA] <integer lower orbital>  <integer upper orbital>  
-   [BETA] <integer lower orbital>  <integer upper orbital>  
-   [CIVECS]  
-   [GRAD, END]  
-   [CDSPECTRUM]  
+ TDDFT
+   [(CIS||RPA) default RPA]  
+   [NROOTS <integer nroots default 1>]  
+   [MAXVECS <integer maxvecs default 1000>] 
+   [(SINGLET||NOSINGLET) default SINGLET]  
+   [(TRIPLET||NOTRIPLET) default TRIPLET]  
+   [THRESH <double thresh default 1e-4>]  
+   [MAXITER <integer maxiter default 100>]  
+   [TARGET <integer target default 1>]  
+   [TARGETSYM <character targetsym default 'none'>]  
+   [SYMMETRY]  
+   [ECUT] <-cutoff energy>  
+   [EWIN] <-lower cutoff energy>  <-higher cutoff energy>  
+   [ALPHA] <integer lower orbital>  <integer upper orbital>  
+   [BETA] <integer lower orbital>  <integer upper orbital>  
+   [CIVECS]  
+   [GRAD, END]  
+   [CDSPECTRUM]  
    [GIAO]
-   [VELOCITY]  
-   [ALGORITHM <integer algorithm default 0>]  
-   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
-            [virtual <integer nfzv default 0>]]  
-   [PRINT (none||low||medium||high||debug)  
-     <string list_of_names ...>]
- END
+   [VELOCITY]  
+   [ALGORITHM <integer algorithm default 0>]  
+   [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
+            [virtual <integer nfzv default 0>]]  
+   [PRINT (none||low||medium||high||debug)  
+     <string list_of_names ...>]
+ END
 ```
 The user can also specify the reference wave function in the DFT input
 block (even when CIS and TDHF calculations are requested). See the
@@ -169,13 +169,13 @@ section of Sample input and output for more details.
 
 Since each keyword has a default value, a minimal input file will be
 ```
- GEOMETRY
-  Be 0.0 0.0 0.0  
- END  
- BASIS  
-  Be library 6-31G**  
- END  
- TASK TDDFT ENERGY
+ GEOMETRY
+  Be 0.0 0.0 0.0  
+ END  
+ BASIS  
+  Be library 6-31G**  
+ END  
+ TASK TDDFT ENERGY
 ```
 Note that the keyword for the asymptotic correction must be given in the
 DFT input block, since all the effects of the correction (and also
@@ -318,37 +318,38 @@ calculations.
 
 ### GRAD -- TDDFT gradients
 
-Analytical TDDFT gradients can be calculated by specifying a grad block
-within the main TDDFT block
+Analytical TDDFT gradients can be calculated by specifying a `grad` block
+within the main `TDDFT` block
 
 For example, the following will perform a TDDFT optimization on the
 first singlet excited state (S1). Note that the civecs keyword must be
 specified. To perform a single TDDFT gradient, replace the optimize
 keyword with gradient in the task line. A complete TDDFT optimization
 input example is given the Sample Inputs section. A TDDFT gradients
-calculation allows one to calculate the excited state density of a
-specific excited state. This is written to a file with the dmat suffix.
+calculation can be used to calculate the density of a
+specific excited state.
+The excited stated density is written to a file with the dmat suffix.
 
 ```
 tddft
- nroots 2
- algorithm 1
- notriplet
- target 1
- targetsym a
- civecs
- grad
-   root 1
- end
+ nroots 2
+ algorithm 1
+ notriplet
+ target 1
+ targetsym a
+ civecs
+ grad
+   root 1
+ end
 end
-task tddft optimize
+task tddft optimize
 ```
 
 At the moment the following exchange-correlation functionals are
 supported with TDDFT
 gradients
 ```
-LDA, BP86, PBE, BLYP, B3LYP, PBE0, BHLYP, CAM-B3LYP, LC-PBE, LC-PBE0, BNL, LC-wPBE, LC-wPBEh, LC-BLYP
+LDA, BP86, PBE, BLYP, B3LYP, PBE0, BHLYP, CAM-B3LYP, LC-PBE, LC-PBE0, BNL, LC-wPBE, LC-wPBEh, LC-BLYP
 ```
 ### CDSpectrum -- optical rotation calculations
 
@@ -391,28 +392,28 @@ or DFT calculation). No orbitals are frozen by default. To exclude the
 atom-like core regions altogether, one may request
 
 ```
- FREEZE atomic
+ FREEZE atomic
 ```
 
 To specify the number of lowest-lying occupied orbitals be excluded, one
 may use
 
 ```
- FREEZE 10
+ FREEZE 10
 ```
 
 which causes 10 lowest-lying occupied orbitals excluded. This is
 equivalent to writing
 
 ```
- FREEZE core 10
+ FREEZE core 10
 ```
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
 
 ```
- FREEZE virtual 5
+ FREEZE virtual 5
 ```
 
 ### PRINT -- the verbosity
@@ -448,285 +449,285 @@ The following is a sample input for a spin-restricted TDDFT calculation
 of singlet excitation energies for the water molecule at the
 B3LYP/6-31G\*.
 ```
-START h2o  
-TITLE "B3LYP/6-31G* H2O"  
+START h2o  
+TITLE "B3LYP/6-31G* H2O"  
 GEOMETRY 
- O     0.00000000     0.00000000     0.12982363  
- H     0.75933475     0.00000000    -0.46621158 
- H    -0.75933475     0.00000000    -0.46621158  
+ O     0.00000000     0.00000000     0.12982363  
+ H     0.75933475     0.00000000    -0.46621158 
+ H    -0.75933475     0.00000000    -0.46621158  
 END  
 BASIS  
- * library 6-31G* 
+ * library 6-31G* 
 END  
 DFT  
- XC B3LYP  
+ XC B3LYP  
 END  
 TDDFT  
- RPA 
- NROOTS 20  
+ RPA 
+ NROOTS 20  
 END  
-TASK TDDFT ENERGY
+TASK TDDFT ENERGY
 ```
 To perform a spin-unrestricted TDHF/aug-cc-pVDZ calculation for the CO+
 radical,
 ```
-START co  
-TITLE "TDHF/aug-cc-pVDZ CO+"  
-CHARGE 1  
+START co  
+TITLE "TDHF/aug-cc-pVDZ CO+"  
+CHARGE 1  
 GEOMETRY  
- C  0.0  0.0  0.0  
- O  1.5  0.0  0.0  
+ C  0.0  0.0  0.0  
+ O  1.5  0.0  0.0  
 END  
 BASIS  
- * library aug-cc-pVDZ  
+ * library aug-cc-pVDZ  
 END  
 DFT  
- XC HFexch  
- MULT 2  
+ XC HFexch  
+ MULT 2  
 END  
 TDDFT  
- RPA  
- NROOTS 5  
+ RPA  
+ NROOTS 5  
 END  
-TASK TDDFT ENERGY
+TASK TDDFT ENERGY
 ```
 A geometry optimization followed by a frequency calculation for an
 excited state is carried out for BF at the CIS/6-31G\* level in the
 following sample input.
 ```
-START bf  
-TITLE "CIS/6-31G* BF optimization frequencies"  
+START bf  
+TITLE "CIS/6-31G* BF optimization frequencies"  
 GEOMETRY  
- B 0.0 0.0 0.0  
- F 0.0 0.0 1.2  
+ B 0.0 0.0 0.0  
+ F 0.0 0.0 1.2  
 END  
 BASIS  
- * library 6-31G*  
+ * library 6-31G*  
 END  
 DFT  
- XC HFexch  
+ XC HFexch  
 END  
 TDDFT  
- CIS  
- NROOTS 3  
- NOTRIPLET  
- TARGET 1  
+ CIS  
+ NROOTS 3  
+ NOTRIPLET  
+ TARGET 1  
 END  
-TASK TDDFT OPTIMIZE  
-TASK TDDFT FREQUENCIES
+TASK TDDFT OPTIMIZE  
+TASK TDDFT FREQUENCIES
 ```
 TDDFT with an asymptotically corrected SVWN exchange-correlation
 potential. Casida-Salahub scheme has been used with the shift value of
 0.1837 a.u. supplied as an input parameter.
 ```
-START tddft_ac_co  
+START tddft_ac_co  
 GEOMETRY  
- O 0.0 0.0  0.0000  
- C 0.0 0.0  1.1283  
+ O 0.0 0.0  0.0000  
+ C 0.0 0.0  1.1283  
 END  
-BASIS SPHERICAL  
- C library aug-cc-pVDZ  
- O library aug-cc-pVDZ  
+BASIS SPHERICAL  
+ C library aug-cc-pVDZ  
+ O library aug-cc-pVDZ  
 END  
 DFT  
- XC Slater VWN_5  
- CS00 0.1837  
+ XC Slater VWN_5  
+ CS00 0.1837  
 END  
 TDDFT  
- NROOTS 12  
+ NROOTS 12  
 END  
-TASK TDDFT ENERGY
+TASK TDDFT ENERGY
 ```
 TDDFT with an asymptotically corrected B3LYP exchange-correlation
 potential. Hirata-Zhan-Apra-Windus-Dixon scheme has been used (this is
 only meaningful with B3LYP functional).
 ```
-START tddft_ac_co  
+START tddft_ac_co  
 GEOMETRY  
- O 0.0 0.0  0.0000  
- C 0.0 0.0  1.1283  
+ O 0.0 0.0  0.0000  
+ C 0.0 0.0  1.1283  
 END  
-BASIS SPHERICAL  
- C library aug-cc-pVDZ  
- O library aug-cc-pVDZ  
+BASIS SPHERICAL  
+ C library aug-cc-pVDZ  
+ O library aug-cc-pVDZ  
 END  
 DFT  
- XC B3LYP  
- CS00  
+ XC B3LYP  
+ CS00  
 END  
 TDDFT  
- NROOTS 12  
+ NROOTS 12  
 END  
-TASK TDDFT ENERGY
+TASK TDDFT ENERGY
 ```
 TDDFT for core states. The following example illustrates the usage of an
 energy cutoff and energy and orbital windows.[9]
 
 ```
 echo  
-start h2o_core  
-memory 1000 mb  
-geometry units au noautosym noautoz  
-  O 0.00000000     0.00000000     0.22170860  
-  H 0.00000000     1.43758081    -0.88575430  
-  H 0.00000000    -1.43758081    -0.88575430  
+start h2o_core  
+memory 1000 mb  
+geometry units au noautosym noautoz  
+  O 0.00000000     0.00000000     0.22170860  
+  H 0.00000000     1.43758081    -0.88575430  
+  H 0.00000000    -1.43758081    -0.88575430  
 end  
 basis  
- O library 6-31g*  
- H library 6-31g*  
+ O library 6-31g*  
+ H library 6-31g*  
 end  
 dft  
- xc beckehandh  
- print "final vector analysis"  
+ xc beckehandh  
+ print "final vector analysis"  
 end  
-task dft  
+task dft  
 tddft  
- ecut -10  
- nroots 5  
- notriplet  
- thresh 1d-03  
+ ecut -10  
+ nroots 5  
+ notriplet  
+ thresh 1d-03  
 end  
-task tddft  
+task tddft  
 tddft  
- ewin -20.0 -10.0  
- cis  
- nroots 5  
- notriplet  
- thresh 1d-03  
+ ewin -20.0 -10.0  
+ cis  
+ nroots 5  
+ notriplet  
+ thresh 1d-03  
 end  
-task tddft  
+task tddft  
 dft  
- odft  
- mult 1  
- xc beckehandh  
- print "final vector analysis"  
+ odft  
+ mult 1  
+ xc beckehandh  
+ print "final vector analysis"  
 end  
-task dft  
+task dft  
 tddft  
- alpha 1 1  
- beta 1 1  
- cis  
- nroots 10  
- notriplet  
- thresh 1d-03  
+ alpha 1 1  
+ beta 1 1  
+ cis  
+ nroots 10  
+ notriplet  
+ thresh 1d-03  
 end  
-task tddft
+task tddft
 ```
 TDDFT optimization with LDA of Pyridine with the 6-31G basis[10]
 
 ```
 echo  
-start tddftgrad_pyridine_opt  
-title "TDDFT/LDA geometry optimization of Pyridine with 6-31G"  
-geometry nocenter  
- N     0.00000000    0.00000000    1.41599295  
- C     0.00000000   -1.15372936    0.72067272  
- C     0.00000000    1.15372936    0.72067272  
- C     0.00000000   -1.20168790   -0.67391011  
- C     0.00000000    1.20168790   -0.67391011  
- C     0.00000000    0.00000000   -1.38406147  
- H     0.00000000   -2.07614628    1.31521089  
- H     0.00000000    2.07614628    1.31521089  
- H     0.00000000    2.16719803   -1.19243296  
- H     0.00000000   -2.16719803   -1.19243296  
- H     0.00000000    0.00000000   -2.48042299  
- symmetry c1  
+start tddftgrad_pyridine_opt  
+title "TDDFT/LDA geometry optimization of Pyridine with 6-31G"  
+geometry nocenter  
+ N     0.00000000    0.00000000    1.41599295  
+ C     0.00000000   -1.15372936    0.72067272  
+ C     0.00000000    1.15372936    0.72067272  
+ C     0.00000000   -1.20168790   -0.67391011  
+ C     0.00000000    1.20168790   -0.67391011  
+ C     0.00000000    0.00000000   -1.38406147  
+ H     0.00000000   -2.07614628    1.31521089  
+ H     0.00000000    2.07614628    1.31521089  
+ H     0.00000000    2.16719803   -1.19243296  
+ H     0.00000000   -2.16719803   -1.19243296  
+ H     0.00000000    0.00000000   -2.48042299  
+ symmetry c1  
 end  
-basis spherical  
-* library "6-31G"  
+basis spherical  
+* library "6-31G"  
 end  
 driver  
-  clear  
-  maxiter 100  
+  clear  
+  maxiter 100  
 end  
 dft  
-  iterations 500  
-  xc slater 1.0 vwn_5 1.0  
-  grid xfine  
-  grid euler  
-  direct  
+  iterations 500  
+  xc slater 1.0 vwn_5 1.0  
+  grid xfine  
+  grid euler  
+  direct  
 end  
 tddft  
-  nroots 2  
-  algorithm 1  
-  notriplet  
-  target 1  
-  targetsym a  
-  civecs  
-  grad  
-    root 1  
-  end  
+  nroots 2  
+  algorithm 1  
+  notriplet  
+  target 1  
+  targetsym a  
+  civecs  
+  grad  
+    root 1  
+  end  
 end  
-task tddft optimize
+task tddft optimize
 ```
 TDDFT calculation followed by a calculation of the transition density
 for a specific excited state using the DPLOT block
 ```
 echo  
-start h2o-td  
-title h2o-td  
-memory total 800 stack 400 heap 50 global 350 mb  
-charge 0  
-geometry units au noautoz nocenter  
-symmetry group c1  
- O    0.00000000000000      0.00000000000000      0.00000000000000  
- H    0.47043554760291      1.35028113274600      1.06035416576826  
- H   -1.74335410533480     -0.23369304784300      0.27360785442967  
+start h2o-td  
+title h2o-td  
+memory total 800 stack 400 heap 50 global 350 mb  
+charge 0  
+geometry units au noautoz nocenter  
+symmetry group c1  
+ O    0.00000000000000      0.00000000000000      0.00000000000000  
+ H    0.47043554760291      1.35028113274600      1.06035416576826  
+ H   -1.74335410533480     -0.23369304784300      0.27360785442967  
 end  
-basis "ao basis" print  
- H    S  
-    13.0107010              0.19682158E-01  
-     1.9622572              0.13796524  
-     0.44453796             0.47831935  
- H    S  
-     0.12194962             1.0000000  
- H    P  
-     0.8000000              1.0000000  
- O    S  
-  2266.1767785             -0.53431809926E-02  
-   340.87010191            -0.39890039230E-01  
-    77.363135167           -0.17853911985  
-    21.479644940           -0.46427684959  
-     6.6589433124          -0.44309745172  
- O    S  
-     0.80975975668          1.0000000  
- O    S  
-     0.25530772234          1.0000000  
- O    P  
-    17.721504317            0.43394573193E-01  
-     3.8635505440           0.23094120765  
-     1.0480920883           0.51375311064  
- O    P  
-     0.27641544411          1.0000000  
- O    D  
-     1.2000000              1.0000000  
+basis "ao basis" print  
+ H    S  
+    13.0107010              0.19682158E-01  
+     1.9622572              0.13796524  
+     0.44453796             0.47831935  
+ H    S  
+     0.12194962             1.0000000  
+ H    P  
+     0.8000000              1.0000000  
+ O    S  
+  2266.1767785             -0.53431809926E-02  
+   340.87010191            -0.39890039230E-01  
+    77.363135167           -0.17853911985  
+    21.479644940           -0.46427684959  
+     6.6589433124          -0.44309745172  
+ O    S  
+     0.80975975668          1.0000000  
+ O    S  
+     0.25530772234          1.0000000  
+ O    P  
+    17.721504317            0.43394573193E-01  
+     3.8635505440           0.23094120765  
+     1.0480920883           0.51375311064  
+ O    P  
+     0.27641544411          1.0000000  
+ O    D  
+     1.2000000              1.0000000  
 end  
 dft  
- xc bhlyp  
- grid fine  
- direct  
- convergence energy 1d-5  
+ xc bhlyp  
+ grid fine  
+ direct  
+ convergence energy 1d-5  
 end  
 tddft  
- rpa  
- nroots 5  
- thresh 1d-5  
- singlet  
- notriplet  
- civecs  
+ rpa  
+ nroots 5  
+ thresh 1d-5  
+ singlet  
+ notriplet  
+ civecs  
 end  
-task tddft energy  
+task tddft energy  
 dplot  
- civecs h2o-td.civecs_singlet  
- root 2  
- LimitXYZ  
-  -3.74335 2.47044 50  
-  -2.23369 3.35028 50  
-  -2 3.06035 50  
-   gaussian  
-   output root-2.cube  
+ civecs h2o-td.civecs_singlet  
+ root 2  
+ LimitXYZ  
+  -3.74335 2.47044 50  
+  -2.23369 3.35028 50  
+  -2 3.06035 50  
+   gaussian  
+   output root-2.cube  
 end  
-task dplot
+task dplot
 ```
 TDDFT protocol for calculating the valence-to-core (1s) X-ray emission spectrum [11]
 
