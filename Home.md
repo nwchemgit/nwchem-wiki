@@ -1,3 +1,8 @@
+---
+title: NWChem User Documentation
+summary: Main index page for the NWChem's User Documentation
+some_url: https://nwchemgit.github.io
+---
 ![](https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png)
   
 # NWChem User Documentation
