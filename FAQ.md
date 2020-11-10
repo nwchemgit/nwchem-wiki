@@ -16,16 +16,16 @@ website at <http://hpc.pnl.gov/globalarrays/>
 ## Where do I go for help with NWChem problems?
 
 Please post your NWChem issue to the NWChem forum hosted on Google Groups at
-<https://groups.google.com/forum/#!forum/nwchem-forum>
+[https://groups.google.com/forum/#!forum/nwchem-forum](https://groups.google.com/forum/#!forum/nwchem-forum)
 
-## Where do I find the instructions for installing NWChem?
+## Where do I find the installation instructions?
 
 For updated instructions for compiling NWChem please visit the following
-URL <https://github.com/nwchemgit/nwchem/wiki/Compiling-NWChem>
+URL [https://nwchemgit.github.io/Compiling-NWChem.html](https://nwchemgit.github.io/Compiling-NWChem.html)
 
 # Installation Problems
 
-## How to fix `configure: error: could not compile simple C MPI program`
+## How to fix a `configure: error: could not ...`
 
 When compiling the tools directory, you might see the compilation
 stopping with the message
@@ -46,22 +46,23 @@ unset LIBMPI
 export PATH="directory where mpif90 is located":$PATH
 ```
 
-## What's this business with ARMCI and ARMCI\NETWORK?
+## What are ARMCI and ARMCI_NETWORK?
 
 ARMCI is a library used by Global Arrays (both ARMCI and GA source code
 is located in NWChem's tools directory). More information can be found
-at the following URL <http://hpc.pnl.gov/armci> If your installation
+at the following URL <http://hpc.pnl.gov/armci>  
+If your installation
 uses a fast network and you are aiming to get optimal communication
 performance, you might want to assign a non-default value to
-`ARMCI_NETWORK`. The following links contained useful information about
-`ARMCI_NETWORK`: [ Choosing the ARMCI
-library](ARMCI) and [ Setting up the proper
-environment\_variables when compiling
-NWChem](Compiling-NWChem#Setting_up_the_proper_environment_variables)
+`ARMCI_NETWORK`.  
+The following links contained useful information about
+`ARMCI_NETWORK`:  
+- [ Choosing the ARMCI library](ARMCI)   
+- [ Choosing the proper environment variables when compiling NWChem](Compiling-NWChem#Setting_up_the_proper_environment_variables)  
 
 # Input Problems
 
-## I get the message: `! warning: processed input with no task`. What is wrong?
+## How to fix `! warning: processed input with no task`
 
 Have you used emacs to create your input file? Emacs usually does not
 put and an end-of-line as a last character of the file, therefore the
@@ -69,7 +70,7 @@ NWChem input parser ignores the last line of your input (the one
 containing the task directive). To fix the problem, add one more blank
 line after the task line and your task directive will be executed.
 
-## AUTOZ fails to generate valid internal coordinates. Now what?
+## `AUTOZ fails to generate valid internal coordinates`
 
 If AUTOZ fails, NWChem will default to using Cartesian coordinates (and
 ignore any zcoord data) so you don't have to do anything unless you
@@ -89,7 +90,7 @@ able to figure out how to connect things.
 Once the obvious has been checked, there are several possible modes of
 failure, some of which may be worked around in the input.
 
-1\. Strictly linear molecules with 3 or more atoms. AUTOZ does not
+1. Strictly linear molecules with 3 or more atoms. AUTOZ does not
 generate linear bend coordinates, but, just as in a real Z-matrix, you
 can specify a dummy center that is not co-linear. There are two relevant
 tips:
@@ -124,7 +125,7 @@ E.g., this input for acetylene will not use internals
            end
 ```
 
-2\. Larger molecules that contain a strictly linear chain of four or
+2. Larger molecules that contain a strictly linear chain of four or
 more atoms (that ends in a free atom). For these molecules the autoz
 will fail and the code can currently not recover by using cartesians.
 One has to explicitly define noautoz in the geometry input to make it
@@ -132,7 +133,7 @@ work. If internal coordinates are required one can fix it in the same
 manner as described above. However, you can also force a connection to a
 real nearby atom.
 
-3\. Very highly connected systems generate too many internal coordinates
+3. Very highly connected systems generate too many internal coordinates
 which can make optimization in redundant internals less efficient than
 in Cartesians. For systems such as clusters of atoms or small molecules,
 try using a smaller value of the scaling factor for covalent radii
