@@ -103,26 +103,26 @@ enough away so that only one connection is generated.
 E.g., this input for acetylene will not use internals
 
 ``` 
-           geometry
-             h  0  0  0
-             c  0  0  1
-             c  0  0  2.2
-             h  0  0  3.2
-           end
+ geometry
+   h  0  0  0
+   c  0  0  1
+   c  0  0  2.2
+   h  0  0  3.2
+ end
 
-           but this one will
+ but this one will
 
-           geometry
-             zcoord
-               bond    2 3  3.0  cx constant
-               angle 1 2 3 90.0 hcx constant
-             end
-             h  0  0  0
-             c  0  0  1
-             x  3  0  1
-             c  0  0  2.2
-             h  0  0  3.2
-           end
+ geometry
+   zcoord
+     bond    2 3  3.0  cx constant
+     angle 1 2 3 90.0 hcx constant
+   end
+   h  0  0  0
+   c  0  0  1
+   x  3  0  1
+   c  0  0  2.2
+   h  0  0  3.2
+ end
 ```
 
 2. Larger molecules that contain a strictly linear chain of four or
@@ -174,42 +174,42 @@ The key points are
 Job 1.
 
 ``` 
-         start ammonia
-         permanent_dir /u/myfiles
+ start ammonia
+ permanent_dir /u/myfiles
 
-         geometry
-           zmatrix
-             n
-             h 1 nh
-             h 1 nh 2 hnh
-             h 1 nh 2 hnh 3 hnh -1
-           variables
-             nh 1.
-             hnh 115.
-           end
-         end
+ geometry
+   zmatrix
+     n
+     h 1 nh
+     h 1 nh 2 hnh
+     h 1 nh 2 hnh 3 hnh -1
+   variables
+     nh 1.
+     hnh 115.
+   end
+ end
 
-         basis
-           n library 3-21g; h library 3-21g
-         end
+ basis
+   n library 3-21g; h library 3-21g
+ end
 
-         task scf optimize
+ task scf optimize
 ```
 
 Job 2.
 
 ``` 
-         restart ammonia
-         permanent_dir /u/myfiles
+ restart ammonia
+ permanent_dir /u/myfiles
 
-         task scf optimize
+ task scf optimize
 ```
 
 # Execution Problems
 
-## How do I set the correct value for `ARMCI_DEFAULT_SHMMAX`?
+## How do I set the value of `ARMCI_DEFAULT_SHMMAX`?
 
-Some ARMCI\_NETWORK values (e.g. OPENIB) depend on the
+Some ARMCI_NETWORK values (e.g. OPENIB) depend on the
 `ARMCI_DEFAULT_SHMMAX` value for large allocations of Global memory. We
 recommend a value of -- at least -- 2048, e.g. in bash shell parlance
 
@@ -217,9 +217,9 @@ recommend a value of -- at least -- 2048, e.g. in bash shell parlance
 export ARMCI_DEFAULT_SHMMAX=2048
 ```
 
-A value of 2048 for ARMCI\_DEFAULT\_SHMMAX corresponds to 2048 GBytes,
-equal to 2048\*1024\*1024=2147483648 bytes. For
-ARMCI\_DEFAULT\_SHMMAX=2048 to work, it is necessary that kernel
+A value of 2048 for ARMCI_DEFAULT_SHMMAX corresponds to 2048 GBytes,
+equal to 2048*1024*1024=2147483648 bytes. For
+ARMCI_DEFAULT_SHMMAX=2048 to work, it is necessary that kernel
 parameter `kernel.shmmax` to be greater than 2147483648. You can check
 the current value of `kernel.shmmax` on your system by typing
 
