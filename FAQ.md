@@ -3,7 +3,8 @@
 
 ## Where is the User's Manual?
 
-The NWChem User's Manual is now at [https://github.com/nwchemgit/nwchem/wiki](https://github.com/nwchemgit/nwchem/wiki) 
+The NWChem User's Manual is now at
+[https://nwchemgit.github.io/Home.html](https://nwchemgit.github.io/Home.html)
 
 ## Where do I go for help with a Global Arrays problem?
 
