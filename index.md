@@ -1,12 +1,10 @@
 ---
 title: "NWChem Website"
 ---
-<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png" style="float:left; margin-right:5px; alt="drawing" width="120"/>
-<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/emsl_logo2.svg" style="float:right; margin-leftt:5px; alt="drawing" width="160"/>
+<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png" style="float:left; margin-right:50px; alt="drawing" height="90" width="103"/>
+<img alt="EMSL logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/emsl_logo2.svg" style="float:right; margin-left:5px; alt="drawing" height="70" width="148"/>
 ## NWChem: Open Source High-Performance Computational Chemistry
 
-
-<img src="Bylaska-Figure3.webp" style="float:left; margin-right:10px; alt="drawing" width="160"/> 
 NWChem aims to provide its
 users with computational chemistry tools that are scalable both in their
 ability to efficiently treat large scientific  problems,
@@ -15,7 +13,7 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 The NWChem software can handle:  
-<img src="pt55.webp" style="float:right; margin-right:2px; alt="drawing" width="130"/>
+<img src="pt55.webp" style="float:right; margin-right:2px; alt="drawing" height="163" width="154"/>
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -44,7 +42,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 
 ### EMSL Arrows
 
-<img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" width="160"/> 
+<img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" height="160" width="160"/>
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
