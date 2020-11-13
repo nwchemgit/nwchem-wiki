@@ -1,9 +1,9 @@
 ---
 title: "NWChem Website"
 ---
-<img alt="NWChem logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/MS3_logo_cropped.png" style="float:left; margin-right:50px; alt="drawing" height="90" width="103"/>
-<img alt="EMSL logo" src="https://raw.githubusercontent.com/nwchemgit/nwchem/master/contrib/git.nwchem/emsl_logo2.svg" style="float:right; margin-left:5px; alt="drawing" height="70" width="148"/>
-## NWChem: Open Source High-Performance Computational Chemistry
+<img src="header.webp" style="float:center;  alt="header" height="150" width="800"/>
+  
+<!---## NWChem: Open Source High-Performance Computational Chemistry--->
 
 NWChem aims to provide its
 users with computational chemistry tools that are scalable both in their
