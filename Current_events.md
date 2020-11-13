@@ -57,23 +57,20 @@ this release possible. This release includes several new capabilities
 and bug fixes. The key features of NWChem 6.6 include:
 
   - New qmd module
-    [AIMD](http://www.nwchem-sw.org/index.php/Release66:Gaussian_Basis_AIMD)
+    [AIMD](https://nwchemgit.github.io/Gaussian-Basis-AIMD.html)
     (NVT, NVE) for molecular and finite systems. It can be used with all
     Gaussian basis set ground and excited-state methods in NWChem that
     can provide an energy/gradient (analytic or numerical). It can also
-    be combined with COSMO. A qmd\_analysis standalone code is also
+    be combined with COSMO. A qmd_analysis standalone code is also
     provided to analyze the trajectory data.
   - York-Karplus approach in
-    [COSMO](http://www.nwchem-sw.org/index.php/Release66:COSMO_Solvation_Model)
+    [COSMO](https://nwchemgit.github.io/COSMO-Solvation-Model.html)
     (keywords to invoke the Klamt-Schuurmann approach is included in the
     documentation). With the extensive changes that were made in the
     COSMO module, the Klamt-Schuurman approach is not perfectly backward
     compatible with the previous 6.5 release. Some cases show small
     differences in the energies. We are working on a patch for backward
     compatibility.
-  - Improvements in the
-    [NWXC](http://www.nwchem-sw.org/index.php/Release66:Density_Functional_Theory_for_Molecules#NWXC_--_higher_order_derivatives_for_density_functionals)
-    module (experimental)
   - Integration of FEFF6 library into AIMD (FEFF is an automated program
     for ab initio multiple scattering calculations of X-ray Absorption
     Fine Structure (XAFS), X-ray Absorption Near-Edge Structure (XANES)
@@ -84,7 +81,7 @@ and bug fixes. The key features of NWChem 6.6 include:
     include PAW potential library in the PSPW simulation.
   - Grimme2, and Grimme3 potentials added to NWPW
   - MGGA-MVS Exchange functional added to [gaussian DFT
-    module](http://www.nwchem-sw.org/index.php/Release66:Density_Functional_Theory_for_Molecules#Exchange-Correlation_Functionals)
+    module](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules#exchange-correlation-functionals)
   - Initial convergence of NWPW wavefunctions now done using finer grids
     in successive stages.
   - Reading and writing of NWPW wavefunctions in ASCII format. To use
@@ -102,7 +99,7 @@ and bug fixes. The key features of NWChem 6.6 include:
   - Trajectories from the NWChem molecular dynamics module can be
     exported in the xyz format
   - Intel Xeon Phi port for
-    [MR-CCSD(T)](http://www.nwchem-sw.org/index.php/Release66:TCE#CCSD.28T.29_and_MRCCSD.28T.29_implementations_for_Intel_MIC_architectures)
+    [MR-CCSD(T)](https://nwchemgit.github.io/TCE.html#ccsdt-and-mrccsdt-implementations-for-intel-mic-architectures)
   - The supported version of the Global Arrays library is now
     [5-4](http://hpc.pnl.gov/globalarrays/release_notes.shtml#5.4b)
   - New ARMCI_NETWORK=MPI-PR (MPI progress ranks). It is the
@@ -111,7 +108,7 @@ and bug fixes. The key features of NWChem 6.6 include:
   - Streamlined installation (automated detection of MPI variables)
   - Improved ScaLapack and ELPA integration. The current ELPA interface
     is compatible with the 2015.05 release.
-  - Improved parallelization in DFT [Charge-Density fitting](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html#specification-of-basis-sets-for-the-dft-module)
+  - Improved parallelization in DFT [Charge-Density fitting](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules#specification-of-basis-sets-for-the-dft-module)
     (removed semi-direct option)
   - Improved parallel scalability of
     [Semi-direct MP2](https://nwchemgit.github.io/MP2.html)
