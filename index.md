@@ -38,12 +38,11 @@ the condensed phase, and enabling innovative and integrated research at
 EMSL. At the same time continued development is needed to enable NWChem
 to effectively utilize architectures of tens of petaflops and beyond.
 
-### *NWChem version 7.0.2 can be downloaded from this* 
-[link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.2-release)
+### *NWChem version 7.0.2 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.2-release)
 
 ### EMSL Arrows
 
-<img src="myarrowmovie.gif" style="float:right; margin-left:10px; alt="drawing" height="160" width="160"/>
+<img src="myarrowmovie.webp" style="float:right; margin-left:10px; alt="drawing" height="160" width="160"/>
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
@@ -58,7 +57,7 @@ for more information see
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
 [EMSL Arrows API](https://arrows.emsl.pnnl.gov/api) </span>
 
-### [Documentation](Home)
+### [NWChem Documentation](Home)
 
 ### NWChem Citation
 
