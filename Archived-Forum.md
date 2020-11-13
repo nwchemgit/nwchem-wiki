@@ -1,6 +1,6 @@
 # Archived Forum
 
-Clicking the link below will bring you to the archived forum entries from the old www.nwchem-sw.org website
+Clicking the link below will bring you to the archived forum entries from the old NWChem website
 
 <a href="oldforum.html">NWChem's Corner</a>
 

@@ -710,7 +710,7 @@ Once you have added the [EPEL
 repository](https://fedoraproject.org/wiki/EPEL) to you RedHat 6
 installation, you can have a more efficient NWChem build. The settings
 are exactly the same as
-[Centos 7.1](http://www.nwchem-sw.org/index.php?title=Compiling_NWChem#NWChem_6.6_on_Centos_7.1)
+[Centos 7.1](Compiling-NWChem.html#nwchem-68-on-centos-71fedora-27)
 
 #### NWChem 6.6 on OpenSuse 13
 
