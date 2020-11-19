@@ -1,7 +1,24 @@
 ---
 title: "NWChem Website"
 ---
-<img src="header.webp" style="float:center;  alt="header" height="150" width="800"/>
+<style>
+  .img-container {
+    position: relative;
+    padding-bottom: 18.71%;/* 100*(1-(w-h)/w)*/
+    height: 0;
+    }
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+</style>
+<div class="img-container">
+<img src="header.webp"  height="131" width="700" frameborder="0" ></img>
+</div>
   
 <!---## NWChem: Open Source High-Performance Computational Chemistry--->
 
