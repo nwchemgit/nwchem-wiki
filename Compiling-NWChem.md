@@ -710,7 +710,7 @@ Once you have added the [EPEL
 repository](https://fedoraproject.org/wiki/EPEL) to you RedHat 6
 installation, you can have a more efficient NWChem build. The settings
 are exactly the same as
-[Centos 7.1](Compiling-NWChem.html#nwchem-68-on-centos-71fedora-27)
+[Centos 7.1](Compiling-NWChem#nwchem-68-on-centos-71fedora-27)
 
 #### NWChem 6.6 on OpenSuse 13
 
@@ -1499,7 +1499,7 @@ pacman -S msys/make
 A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL). 
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
 
-https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
+[https://msdn.microsoft.com/en-us/commandline/wsl/install_guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
 Once Ubuntu is installed, the quickest method to install NWChem is by fetching the Ubuntu NWChem package by typing
 ```
