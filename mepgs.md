@@ -125,3 +125,7 @@ In the above example, after performing a frequency analysis for the
 saddle point, the information of the force constant matrix is reused
 (freq directive) in order to be able to follow the transition state
 mode.
+
+Example input and output files can be find at
+[https://github.com/nwchemgit/nwchem/blob/master/QA/tests/mep-test/mep-test.nw](https://github.com/nwchemgit/nwchem/blob/master/QA/tests/mep-test/mep-test.nw)
+[https://github.com/nwchemgit/nwchem/blob/master/QA/tests/mep-test/mep-test.out](https://github.com/nwchemgit/nwchem/blob/master/QA/tests/mep-test/mep-test.out)
