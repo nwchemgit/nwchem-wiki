@@ -243,14 +243,13 @@ of the six possible views down a Cartesian axis.
 
 It uses the free utilities
 
-```
+
  - rasmol 
-   (http://www.umass.edu/microbio/rasmol) 
+   [https://www.umass.edu/microbio/rasmol](http://www.umass.edu/microbio/rasmol)
    to manipulate the molecule and generate the individual frames
  - convert from ImageMagick 
-   (http://www.imagemagick.org/)
+   [https://www.imagemagick.org](https://www.imagemagick.org)
    to combine the frames into an animated gif
-```
 
 It should be easy to modify the script to other file formats or
 animation tools.
