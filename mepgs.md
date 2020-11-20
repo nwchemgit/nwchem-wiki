@@ -12,30 +12,19 @@ Optional input for this module is specified within the compound
 directive,
 ```
       MEPGS 
-
         OPTTOL <real opttol default 3e-4>
-
         EPREC <real eprec default 1e-7>
-
         STRIDE <real stride default 0.1>
-
         EVIB <real evib default 1e-4>
-
         MAXMEP <integer maxiter default 250>
-
         MAXITER <integer maxiter default 20>
-
         INHESS <integer inhess default 2>
-
         (BACKWARD || FORWARD) <string default both>
-
         (MSWG || NOMSWG) <string default NOMSWG>
-
         (XYZ || NOXYZ) 
-
       END
 ```
-# Convergence criteria
+### Convergence criteria
 
 The user may request a specific value for the tolerance with the keyword
 `OPTTOL` which will couple all the convergence criteria in the following
@@ -46,7 +35,7 @@ way:
              XRMS   4.0*OPTTOL
              XMAX   6.0*OPTTOL
 ```
-# Available precision
+### Available precision
 
         EPREC <real eprec default 1e-7>
 
@@ -55,7 +44,7 @@ the energy is coupled to the convergence criteria (see Section
 [TROPT](tropt) ).
 Note that the default EPREC for DFT calculations is 5e-6 instead of 1e-7.
 
-# Controlling the step length
+### Controlling the step length
 ```
         STRIDE <real stride default 0.1>
 ```
@@ -63,42 +52,42 @@ A dynamic stride (`stride`) is used to control the step length during
 the minimum energy path walking when taking the Euler step as starting
 point.
 
-# Moving away from the saddle point
+### Moving away from the saddle point
 ```
         EVIB <real evib default 1e-4>
 ```
 The expected decrease in energy (`evib`) assuming a quadratic
 approximation around the saddle structure to be obtained.
 
-# Maximum number of MEPGS steps
+### Maximum number of MEPGS steps
 ```
         MAXMEP <integer maxmep default 250>
 ```
 By default at most 250 minimum energy path steps will be taken, but this
 may be modified with this directive.
 
-#Maximum number of steps
+###Maximum number of steps
 ```
         MAXITER <integer maxiter default 20>
 ```
 By default at most 20 **constrained** geometry optimization steps will
 be taken, but this may be modified with this directive.
 
-#Initial Hessian
+###Initial Hessian
 ```
         INHESS <integer inhess default 2>
 ```
 With this option the MEPGS module will be able to transform Cartesian
 Hessian from previous frequency calculation.
 
-# Selecting the side to traverse
+### Selecting the side to traverse
 ```
         (BACKWARD || FORWARD) <string default both>
 ```
 With this option the MEPGS module will select which side of the minimum
 energy path to explore. By default both sides are explored for a MEPGS run.
 
-# Using mass
+### Using mass
 ```
         (MSWG || NOMSWG) <string default NOMSWG>
 ```
@@ -106,7 +95,7 @@ With this option the MEPGS will trigger the use of mass when following
 the minimum energy path. Mass is not used as default, if mass is used
 then this formally becomes an intrinsic reaction coordinate.
 
-# Minimum energy path saved XYZ file
+### Minimum energy path saved XYZ file
 ```
         XYZ [<string xyz default $fileprefix>]
         NOXYZ
@@ -123,7 +112,7 @@ For example, the input
 will cause a trajectory file filename.xyz to be created in the permanent
 directory.
 
-#MEPGS usage
+###MEPGS usage
 ```
         start somename
         geometry; <saddle point body > ; end   

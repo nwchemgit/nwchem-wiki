@@ -1,9 +1,9 @@
 ## TROPT
 
 The TROPT module is one of three drivers (see Section
-[Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER)
+[Stepper](Geometry-Optimization#geometry-optimization-with-stepper)
 for documentation on STEPPER and Section
-[Driver module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER)
+[Driver module](Geometry-Optimization#geometry-optimization-with-DRIVER)
 for documentation on DRIVER) to perform a geometry optimization function
 on the molecule defined by input using the `GEOMETRY` directive (see
 Section [Geometry](Geometry)).
@@ -54,7 +54,7 @@ directive,
 
       END
 ```
-#Convergence criteria
+###Convergence criteria
 ```
         (LOOSE || DEFAULT || TIGHT)
         GMAX <real value>
@@ -100,7 +100,7 @@ The old criterion may be recovered with the input
 ```
        gmax 0.0008; grms 1; xrms 1; xmax 1
 ```
-#Available precision
+###Available precision
 ```
         EPREC <real eprec default 1e-7>
 ```
@@ -117,7 +117,7 @@ flat energy surfaces, in this case a more tight EPREC value is
 recommended. Note that the default EPREC for DFT calculations is 5e-6
 instead of 1e-7.
 
-#Controlling the step length
+###Controlling the step length
 ```
         TRUST <real trust default 0.3>
 ```
@@ -125,7 +125,7 @@ A dynamic trust radius (`trust`) is used to control the step during
 optimization processes both minimization and saddle-point searches. It
 defaults to 0.3 for minimizations and 0.1 for saddle-point searches.
 
-#Backstepping in TROPT
+###Backstepping in TROPT
 
 If a step taken during the optimization is too large or in the wrong
 direction (e.g., the step causes the energy to go up for a
@@ -133,14 +133,14 @@ minimization), the TROPT optimizer will automatically “backstep” and
 reduce the current value of the trust radius in order to avoid a
 permanent “backsteping”.
 
-#Maximum number of steps
-````
+###Maximum number of steps
+```
         MAXITER <integer maxiter default 20>
 ```
 By default at most 20 geometry optimization steps will be taken, but
 this may be modified with this directive.
 
-#Discard restart information
+###Discard restart information
 ```
         CLEAR
 ```
@@ -149,7 +149,7 @@ optimization, and, to facilitate a restart also stores which mode is
 being followed for a saddle-point search. This option deletes all
 restart data.
 
-#Regenerate internal coordinates
+###Regenerate internal coordinates
 ```
         REDOAUTOZ
 ```
@@ -157,7 +157,7 @@ Deletes Hessian data and regenerates internal coordinates at the current
 geometry. Useful if there has been a large change in the geometry that
 has rendered the current set of coordinates invalid or non-optimal.
 
-#Initial Hessian
+###Initial Hessian
 ```
         INHESS <integer inhess default 0>
 ```
@@ -192,7 +192,7 @@ using SCF to start a large MP2 optimization. The SCF vibrational modes
 are expected to be stiffer than the MP2, so scaling the initial Hessian
 by a number less than one might be beneficial.
 
-#Mode or variable to follow to saddle point
+###Mode or variable to follow to saddle point
 ```
         (MODDIR || VARDIR) <integer dir default 0>
         (FIRSTNEG || NOFIRSTNEG)
@@ -224,7 +224,7 @@ reaction direction). If `NOFIRSTNEG` is specified, the code will not
 take the first negative direction and will continue doing mode-following
 until that mode goes negative.
 
-#Optimization history as XYZ file
+###Optimization history as XYZ file
 ```
         XYZ [<string xyz default $fileprefix>]
         NOXYZ
@@ -240,7 +240,7 @@ For example, the input
 will cause a trajectory file filename.xyz to be created in the permanent
 directory.
 
-#Print options
+###Print options
 
 The UNIX command `"egrep '^@' < output"` will extract a pretty table
 summarizing the optimization.
