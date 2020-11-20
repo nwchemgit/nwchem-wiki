@@ -75,10 +75,8 @@ in NWChem:
     nuclear coordinates.
   - optimize - Minimize the energy by varying the molecular structure.
     By default, this geometry optimization is presently driven by the
-    [Driver
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER),
-    but the [Stepper
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER)
+    [Driver module](Geometry-Optimization#geometry-optimization-with-driver),
+    but the [Stepper module](Geometry-Optimization#geometry-optimization-with-stepper)
     may also be used.
   - saddle - Conduct a search for a transition state (or saddle point)
     using either [Driver
