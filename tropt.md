@@ -1,13 +1,12 @@
 ## TROPT
 
 The TROPT module is one of three drivers (see Section
-<a href="#sec:stepper" data-reference-type="ref" data-reference="sec:stepper">[sec:stepper]</a>
+[Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER)
 for documentation on STEPPER and Section
-<a href="#sec:driver" data-reference-type="ref" data-reference="sec:driver">[sec:driver]</a>
+[Driver module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER)
 for documentation on DRIVER) to perform a geometry optimization function
 on the molecule defined by input using the `GEOMETRY` directive (see
-Section
-<a href="#sec:geom" data-reference-type="ref" data-reference="sec:geom">[sec:geom]</a>).
+Section [Geometry](Geometry)).
 Geometry optimization is either an energy minimization or a transition
 state optimization. The algorithm programmed in TROPT is a trust region
 quasi-newton optimization and approximate energy Hessian updates.
