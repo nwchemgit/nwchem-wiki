@@ -18,9 +18,17 @@ Good search engine for NWChem Linux packages: [https://pkgs.org/search/?q=nwchem
 Example of NWChem RPM installation under RedHat 6 x86_64
 
 ```
-sudo yum -y install http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 sudo yum update
-sudo yum install nwchem-openmpi.x86_64
+sudo yum install nwchem
+```
+
+Example of NWChem RPM installation under Centos 7 x86_64
+
+```
+sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum update
+sudo yum install nwchem
 ```
 
 # NWChem availability on macOS
