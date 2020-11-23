@@ -13,13 +13,13 @@ and quantum regions.
  [ [link_ecp](qmmm_link_ecp)  <(auto||user) default auto>]  
  [ [region](qmmm_region)   < [region1]  [region2]  [region3] > ]  
  [ [method](qmmm_method)   [method1]  [method2]  [method3]  ]  
- [ [maxiter](qmmm_maxiter)  [maxiter1] [maxiter2] [maxiter3] ]  
- [ [ncycles](qmmm_ncycles)  < [number] default 1 > ]  
- [ [density](qmmm_density)  [espfit] [static] [dynamical] ]  
+ [ [maxiter](Qmmm_maxiter)  [maxiter1] [maxiter2] [maxiter3] ]  
+ [ [ncycles](Qmmm_ncycles)  < [number] default 1 > ]  
+ [ [density](Qmmm_density)  [espfit] [static] [dynamical] ]  
  [ [xyz](qmmm_xyz)  ]  
- [ [convergence](qmmm_convergence) <double precision default 1.0d-4>] ]  
+ [ [convergence](Qmmm_convergence) <double precision default 1.0d-4>] ]  
  [ [load](qmmm_load) ]  
- [ [nsamples](qmmm_nsamples) ]  
+ [ [nsamples](Qmmm_nsamples) ]  
  end
 ```
  Detailed explanation of the subdirectives in the QM/MM
@@ -37,18 +37,18 @@ Detailed explanation of the subdirectives in the QM/MM input block is given belo
 
 [qmmm_link_ecp](qmmm_link_ecp)
 
-[qmmm_region](qmmm_region)
+[qmmm_region](Qmmm_region)
 
 [qmmm_method](qmmm_method)
 
-[qmmm_maxiter](qmmm_maxiter)
+[qmmm_maxiter](Qmmm_maxiter)
 
-[qmmm_ncycles](qmmm_ncycles)
+[qmmm_ncycles](Qmmm_ncycles)
 
-[qmmm_density](qmmm_density)
+[qmmm_density](Qmmm_density)
 
 [qmmm_load](qmmm_load)
 
 [qmmm_convergence](Qmmm_convergence)
 
-[qmmm_nsamples](qmmm_nsamples)
+[qmmm_nsamples](Qmmm_nsamples)

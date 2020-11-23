@@ -22,7 +22,7 @@ a simple input block that may be used for this system.
 ```
 The *noshake solute*, shown in the above example is a recommended
 directive for QM/MM simulations that involve
-[optimizations](qmmm_optimization). Otherwise
+[optimizations](Qmmm_optimization). Otherwise
 user has to ensure that the [optimization
 method](qmmm_method) for classical solute atoms
 is a steepest descent
