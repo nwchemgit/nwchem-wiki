@@ -47,6 +47,8 @@ correction besides the electrostatic and cavitation/dispersion
 contribution to the solvation free energy, when a comparison to
 experimental data is made.
 
+## COSMO Input Parameters  
+
 Invoking the COSMO solvation model is done by specifying the input COSMO
 input block with the input options as:
 ```
@@ -265,6 +267,17 @@ that, as per general rule in NWChem, all names are case insensitive.
 and placed in one of the these locations - directory specified by the
 environmental variable NWCHEM_COSMO_LIBRARY, permanent directory, or
 run directory.
+## COSMO Usage Tips
+
+Authors of the paper https://dx.doi.org/10.1021/jp810292n report that  
+"* ... the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
+Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
+```
+cosmo
+ minbem 3
+ ificos 1
+end
+```
 
 ## References
 
