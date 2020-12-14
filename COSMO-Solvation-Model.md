@@ -270,7 +270,7 @@ run directory.
 ## COSMO Usage Tips
 
 Authors of the paper https://dx.doi.org/10.1021/jp810292n report that  
-"* ... the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
+" ... *the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
 Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
 ```
 cosmo
@@ -281,7 +281,7 @@ end
 
 ## References
 
-<references/>
+
 
 1.  Klamt, A; Schuurmann, G (1993). "COSMO: A new approach to dielectric screening in solvents with explicit expressions for the screening energy and its gradient". Journal of the Chemical Society, Perkin Transactions 2: 799-805. doi:10.1039/P29930000799. 
 2. York, D.M.; Karplus, M. (1999). "A smooth solvation potential based on the conductor-like screening model". Journal of physical chemistry A 103: 11060-11079. doi:10.1021/jp992097l. 
