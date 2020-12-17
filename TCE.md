@@ -1019,7 +1019,7 @@ The spin-free 4-index transformation algorithms are exclusively
 compatible with the GA I/O scheme, although out-of-core algorithms for
 the 4-index transformation are accessible using the 2emet options. See
 [Alternative storage of two-electron
-integrals](#2EMET_--_alternative_storage_of_two-electron_integrals)
+integrals](#2emet-alternative-storage-of-two-electron-integrals) 
 for details.
 
 ### DIIS -- the convergence acceleration
@@ -2232,6 +2232,8 @@ ga_create error with 2EMET=3, then switch to algorithm 4 and add split
 ## Using coprocessor architectures
 
 ### CCSD(T) and MRCCSD(T) implementations for Intel MIC architectures
+
+<span style="color:red;">This option is no longer available from version 7.0.0</span>
 
 NWChem 6.5 and 6.6 offer the possibility of using Intel Xeon Phi
 hardware to perform the most computationally intensive part of the
