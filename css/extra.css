@@ -1,0 +1,15 @@
+<style>
+  .img-container {
+    position: relative;
+    padding-bottom: 18.71%; 
+    height: 0;
+    }
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+</style>
