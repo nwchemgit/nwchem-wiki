@@ -79,6 +79,7 @@ feedback on this page content.
   - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
   - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/charmm/documentation/by-version/c42b1/params/doc/nwchem/>
  - **kMap** is a program for simulation and data analysis in photoemission tomography <https://github.com/brands-d/kMap>
+ - **QMCube** is a Python suite focused on multiscale QM/MM simulations of biological systems <https://github.com/sergio-marti/qm3>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
