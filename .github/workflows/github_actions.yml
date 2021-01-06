@@ -1,0 +1,51 @@
+name: NWChem-wiki.mirroring
+
+on: [push, pull_request]
+
+jobs:
+  mirorr_dotwiki2repo:
+    runs-on: [ubuntu-latest]  
+    steps:
+      - name: Checkout nwchem-wiki
+        uses: actions/checkout@v2
+        with:
+          repository: edoapra/nwchem-wiki
+          fetch-depth: 0
+      - name: fetch and merge
+        run: |
+          git config user.name "edoapra"
+          git config user.email "edoardo.apra@gmail.com"
+          git config pull.rebase false
+          git remote add upstream https://github.com/edoapra/nwchem.wiki > /dev/null 2>&1
+          git fetch origin
+          git fetch upstream
+          git merge upstream/master --no-edit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+            
+  mirorr_repo2dotwiki:
+    needs: mirorr_dotwiki2repo
+    runs-on: [ubuntu-latest]  
+    steps:
+      - name: Checkout nwchem.wiki
+        uses: actions/checkout@v2
+        with:
+          repository: edoapra/nwchem.wiki
+          fetch-depth: 0
+      - name: fetch and merge
+        run: |
+          git config user.name "edoapra"
+          git config user.email "edoardo.apra@gmail.com"
+          git config pull.rebase false
+          git remote add upstream https://github.com/edoapra/nwchem-wiki > /dev/null 2>&1
+          git fetch origin
+          git fetch upstream
+          git merge upstream/master --no-edit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
