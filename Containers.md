@@ -18,3 +18,8 @@ https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.so
 
 # Singularity
 
+Singularity recipes for NWChem are available at.  
+https://github.com/edoapra/nwchem-singularity
+
+Singularity images are available at  
+https://cloud.sylabs.io/library/edoapra
