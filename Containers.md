@@ -13,8 +13,6 @@ This example uses the input file `h2o_b2lyp.nw` available on the host directory 
 The associated Dockerfile is available at  
 [https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets](https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets) 
 
-NWChem documentation available on the NWChem website at   
-[https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets](https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets) 
 
 # Singularity
 
