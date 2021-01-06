@@ -31,7 +31,7 @@ jobs:
           branch: ${{ github.ref }}
             
   mirror_repo2dotwiki:
-    needs: mirorr_dotwiki2repo
+    needs: mirror_dotwiki2repo
     runs-on: [ubuntu-latest]  
     steps:
       - name: Checkout nwchem.wiki
