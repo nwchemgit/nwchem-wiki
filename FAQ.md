@@ -25,7 +25,7 @@ URL [https://nwchemgit.github.io/Compiling-NWChem.html](https://nwchemgit.github
 
 # Installation Problems
 
-## How to fix a `configure: error: could not ...`
+## `configure: error: could not ...`
 
 When compiling the tools directory, you might see the compilation
 stopping with the message
@@ -62,7 +62,7 @@ The following links contained useful information about
 
 # Input Problems
 
-## How to fix `! warning: processed input with no task`
+## `! warning: processed input with no task`
 
 Have you used emacs to create your input file? Emacs usually does not
 put and an end-of-line as a last character of the file, therefore the
