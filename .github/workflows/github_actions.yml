@@ -1,7 +1,10 @@
 name: NWChem-wiki.mirroring
-
-on: [push, pull_request]
-
+on:
+  push:
+  pull_request:
+  release:
+  schedule:
+    - cron: '0 0/3 * * *'
 jobs:
   mirorr_dotwiki2repo:
     runs-on: [ubuntu-latest]  
