@@ -229,3 +229,31 @@ sysctl kernel.shmmax
 
 More detail about kernel.shmmax can be found at the webpage
 <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html>
+
+
+## WSL execution problems
+
+NWChem runs on Windows Subsystem for Linux (WSL) can crash with the error message
+```
+--------------------------------------------------------------------------
+WARNING: Linux kernel CMA support was requested via the
+btl_vader_single_copy_mechanism MCA variable, but CMA support is
+not available due to restrictive ptrace settings.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: hostabc
+--------------------------------------------------------------------------
+[hostabc:16805] 1 more process has sent help message help-btl-vader.txt / cma-permission-denied
+[hostabc:16805] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+```
+
+The error can be fixed with the following command
+```
+echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+```
+
+More details at
+[https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710](https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710)
+[https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html](https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html)
