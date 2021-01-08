@@ -43,7 +43,7 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
           [output <string output_filename default input_movecs>] \  
  XC [[acm] [b3lyp] [beckehandh] [pbe0]\  
     [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke97-d] [becke98] \  
-     [hcth] [hcth120] [hcth147]\  
+     [hcth] [hcth120] [hcth147] [hcth147@tz2p]\
      [hcth407] [becke97gga1]  [hcth407p]\  
      [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\  
      [xpkzb99] [cpkzb99] [xtpss03] [ctpss03] [xctpssh]\ 
@@ -181,7 +181,7 @@ has the same effect.
 ## XC and DECOMP -- Exchange-Correlation Potentials
 ```
  XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\  
-    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \  
+    [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] [hcth147@tz2p] \
      [hcth407] [becke97gga1] [hcth407p] \  
      [optx] [hcthp14] [mpw91] [mpw1k] [xft97] [cft97] [ft97] [op] [bop] [pbeop]\  
      [m05] [m05-2x] [m06] [m06-l] [m06-2x] [m06-hf] [m08-hx] [m08-so] [m11] [m11-l]\  
@@ -391,6 +391,7 @@ where
 | hcth        | * | * | *  |      |       | N   |  [11]  |
 | hcth120     | * | * | *  |      |       | N   |  [12]  |
 | hcth147     | * | * | *  |      |       | N   |  [12]  |
+| hcth147@tz2p| * | * | *  |      |       | N   |  [61]  |
 | hcth407     | * | * | *  |      |       | N   |  [19]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [18]  |
 | hcthp14     | * | * | *  |      |       | N   |  [21]  |
@@ -557,6 +558,7 @@ to nuclear position.
 58. D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
 59. Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
 60. Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
+61. A. D. Boese and J. M. L. Martin, J. Chem. Phys. 119, 3005 (2003).  
 
 ### Meta-GGA Functionals
 
