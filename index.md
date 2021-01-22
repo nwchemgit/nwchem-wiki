@@ -22,14 +22,15 @@ title: "NWChem Website"
   
 <!---## NWChem: Open Source High-Performance Computational Chemistry--->
 
-NWChem aims to provide its
-users with computational chemistry tools that are scalable both in their
+<br>
+The NWChem  software contains 
+computational chemistry tools that are scalable both in their
 ability to efficiently treat large scientific  problems,
  and in their use of available computing resources
 from high-performance parallel supercomputers to conventional
 workstation clusters.
 
-The NWChem software can handle:  
+NWChem can handle:  
 <img src="pt55.webp" style="float:right; margin-right:2px; alt="drawing" height="120" width="120"/>
 
   * Biomolecules, nanostructures, and solid-state
@@ -55,7 +56,7 @@ the condensed phase, and enabling innovative and integrated research at
 EMSL. At the same time continued development is needed to enable NWChem
 to effectively utilize architectures of tens of petaflops and beyond.
 
-### *NWChem version 7.0.2 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.2-release)
+#### *NWChem version 7.0.2 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.0.2-release)
 
 ### EMSL Arrows
 
