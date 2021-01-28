@@ -1,185 +1,94 @@
 # Compiling NWChem from source
 
+
 On this page, a step-by-step description of the build process and
 necessary and optional environment variables is outlined. In addition,
 based on the experiences of developers and users how-to's for various
 platforms have been created. These how-to's will be updated with
-additional platforms and better environment variables over time.
+additional platforms and better environment variables over time.  
+
+Download of the NWChem source is a step needed before compilation. Details for downloading
+as well as instructions for installing pre-compiled version of NWChem are available at the
+[Download page](Download).
 
 ## Setting up the proper environment variables
 
-  - **NWCHEM\_TOP** defines the top directory of the NWChem source tree,
+  - `$NWCHEM_TOP` defines the top directory of the NWChem source tree,
     e.g.
 
-When dealing with source from a ***NWChem release*** (6.8 in this
-example)
+When dealing with source from a ***NWChem release*** (6.8 in this example)
 ```
 export NWCHEM_TOP=<your path>/nwchem-6.8
 ```
-when using the ***NWChem development*** source
-```
-export NWCHEM_TOP=<your path>/nwchem
-```
-  - $NWCHEM\_TARGET defines your target platform, e.g.
+  - `$NWCHEM_TARGET` defines your target platform, e.g.
 ```
 export NWCHEM_TARGET=LINUX64
 ```
-<table>
-<caption>The platforms that available are:</caption>
-<thead>
-<tr>
-<th>NWCHEM_TARGET</th>
-<th>Platform</th>
-<th>OS/Version</th>
-<th>Compilers</th>
-</tr>
-</thead>
-<tbody>
-<tr class="even">
-<td>LINUX</td>
-<td>x86<br />
-ppc<br/>
-arm</td>
-<td>RedHat, Suse<br />
-Suse</td>
-<td>GNU, Intel, PGI<br />
-GNU, xlf</td>
-</tr>
-<tr class="odd">
-<td>LINUX64</td>
-<td>ia64<br />
-x86_64<br />
-ppc64</br>
-ppc64le</br>
-aarch64</td>
-<td>RedHat<br />
-SLES, RedHat<br />
-SLES, RedHat</td>
-<td>Intel<br />
-GNU, PGI, Flang, Intel<br />
-xlf</td>
-</tr>
-<tr class="even">
-<td>BGL<br />
-BGP<br />
-BGQ</td>
-<td>Blue Gene/L<br />
-Blue Gene/P<br />
-Blue Gene/Q</td>
-<td>SLES (login) CNK (compute)</td>
-<td>blrts_xlf<br />
-bgxlf_r<br />
-bgxlf_r</td>
-</tr>
-<tr class="even">
-<td>MACX<br />
-MACX64</td>
-<td>Apple MacOSX</td>
-<td>OSX</td>
-<td>GNU, Intel</td>
-</tr>
-<tr class="odd">
-<td>MinGW<br />
-</td>
-<td>Intel x86</td>
-<td>Windows with MinGW<br />
-Windows</td>
-<td>GNU</td>
-</tr>
-</tbody>
-</table>
+The following platforms are available:
 
+| NWCHEM_TARGET | Platform | OS         | Compilers |
+|---------------|:---------|------------|-----------|
+| LINUX         | x86      | Linux      | GNU, Intel, PGI|
+|               | ppc      | Linux      | GNU, IBM  |
+|               | arm      | Linux      | GNU, flang |
+| LINUX64       | x86_64   | Linux      | GNU, Intel, PGI, Flang|
+|               | ppc64le  | Linux      | GNU, IBM |
+|               | aarch64  | Linux      | GNU, flang |
+| MACX          | x86      | Darwin     | GNU, Intel |
+| MACX64 	| x86_64   | Darwin     | GNU, Intel |
+| BGL           |Blue Gene/L|           | IBM |
+| BGP           |Blue Gene/P|           | IBM |
+| BGQ           |Blue Gene/Q|           | IBM |
+  
 <br>
-  - **ARMCI_NETWORK** must be defined in order to achieve best
+  
+  - `$ARMCI_NETWORK` must be defined in order to achieve best
     performance on high performance networks, e.g.
 ```
-export ARMCI_NETWORK=OPENIB
+export ARMCI_NETWORK=MPI-PR
 ```
 For a single processor system, this environment variable does not have
 to be defined.
+Supported combination of ARMCI_NETWORK and NWCHEM_TARGET variables:  
 
-<table>
-<caption>Supported combination of ARMCI_NETWORK and NWCHEM_TARGET variables:</caption>
-<thead>
-<tr>
-<th>ARMCI_NETWORK</th>
-<th>NWCHEM_TARGET</th>
-<th>Network</th>
-<th>Protocol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="even">
-<td>OPENIB</td>
-<td>LINUX, LINUX64</td>
-<td>Mellanox InfiniBand</td>
-<td>Verbs</td>
-</tr>
-<tr class="odd">
-<td>MPI-PR</td>
-<td>LINUX64</td>
-<td>Any network</td>
-<td>MPI</td>
-</tr>
-<tr class="even">
-<td>MPI-MT<br />
-MPI-SPAWN</td>
-<td>LINUX64</td>
-<td>MPI support multi-threading multiple</td>
-<td>MPI-2</td>
-</tr>
-<tr class="odd">
-<td>MPI-TS</td>
-<td>any</td>
-<td>any network with MPI</td>
-<td>MPI</td>
-</tr>
-<tr class="even">
-<td>MPI-PT</td>
-<td>any</td>
-<td>any network with MPI</td>
-<td>MPI</td>
-</tr>
-<tr class="even">
-<td>BGMLMPI</td>
-<td>BGL</td>
-<td>IBM Blue Gene/L</td>
-<td>BGLMPI</td>
-</tr>
-<tr class="odd">
-<td>DCMFMPI</td>
-<td>BGP</td>
-<td>IBM Blue Gene/P</td>
-<td>DCMF, MPI</td>
-</tr>
-</tbody>
-</table>
 
+| ARMCI_NETWORK | NWCHEM_TARGET | Network               | Protocol  |
+| --------------|---------------|-----------------------|-----------|
+| OPENIB 	| LINUX, LINUX64|Mellanox InfiniBand    | Verbs     |
+| MPI-PR 	| LINUX64 	|Any network 	        |   MPI     |
+| MPI-MT<br />MPI-SPAWN| LINUX64|MPI supporting<br />multi-threading multiple| 	MPI-2|
+| MPI-TS<br /> MPI-PT|any 	        |any network with MPI 	|   MPI     |
+| BGMLMPI 	| BGL   	| IBM Blue Gene/L 	| BGLMPI    |
+| DC		MFMPI 	| BGP   	| IBM Blue Gene/P 	| DCMF,MPI  |
+  
 <br>
+
 Please see [Choosing the ARMCI Library](ARMCI) for
 additional information on choosing the right network
 options.
 
 ### MPI variables
 
-| Variable     | Description                                                                                                                      |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| USE\_MPI     | Set to "y" to indicate that NWChem should be compiled with MPI                                                                   |
-| USE\_MPIF    | Set to "y" for the NWPW module to use fortran-bindings of MPI (Generally set when USE\_MPI is set)                               |
-| USE\_MPIF4   | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. (Generally set when USE\_MPI is set on most platforms) |
-| LIBMPI       | Name of the MPI library that should be linked with -l (eg. -lmpich)                                                              |
-| MPI\_LIB     | Directory where the MPI library resides                                                                                          |
-| MPI\_INCLUDE | Directory where the MPI include files reside                                                                                     |  
+| Variable     | Description |
+| ------------ | -------------------------------------------------------------------------------- |
+| `USE_MPI`    | Set to "y" to indicate that NWChem should be compiled with MPI                   |
+| `USE_MPIF`   | Set to "y" for the NWPW module to use fortran-bindings of MPI. <br /> (Generally set when USE\_MPI is set)                               |
+| `USE_MPIF4`  | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. <br /> (Generally set when USE\_MPI is set on most platforms) |
+| `LIBMPI`     | Name of the MPI library that should be linked with -l (eg. -lmpich)              |
+| `MPI_LIB`    | Directory where the MPI library resides                                          |
+| `MPI_INCLUDE`| Directory where the MPI include files reside                                     |  
   
 <br>
 #### <span style="color:red;">Automatic detection of MPI variables with mpif90</span>
 
 **_New in NWChem 6.6_**: If the
-location of the mpif90 command is part of your PATH env. variable,
-NWChem will figure out the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE
-(if they are not set). Therefore, we do **NOT** recommend to set LIBMPI,
-MPI\_LIB and MPI\_INCLUDE and add the location of mpif90 to the PATH
-variable, instead.
+location of the `mpif90` command is part of your `PATH` env. variable,
+NWChem will figure out the values of `LIBMPI`, `MPI_LIB` and `MPI_INCLUDE`
+(if they are not set). Therefore, we do **NOT** recommend to set `LIBMPI`,
+`MPI_LIB` and `MPI_INCLUDE` and add the location of `mpif90` to the `PATH`
+variable, instead. Therefore, the next section can be considered obsolete in the most common cases.
+
+#### Obsolete:  How to se the MPI variables
 
 The output of the command
 
@@ -242,22 +151,18 @@ export LIBMPI=&quot;-lmpi_f90 -lmpi_f77 -lmpi -ldl -Wl,--export-dynamic -lnsl -l
 </table>
   
 <br>
-Note:
+
+#### How to start NWChem
 
 When MPI is used, the appropriate MPI run command should be used to
 start an NWChem calculation, e.g.
 ```
-  % mpirun -np 8 $NWCHEM_TOP/bin/${NWCHEM_TARGET}/nwchem h2o.nw
-```
-When all nodes are connected via shared memory and the ch\_shmem version
-of MPICH is installed and used, NWChem can be called directly, e.g.
-```
-  % $NWCHEM_TOP/bin/${NWCHEM_TARGET}/nwchem -np 8 h2o.nw
+  % mpirun -np 8 $NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem h2o.nw
 ```
 
 ### NWCHEM_MODULES
 
-  - **NWCHEM\_MODULES** defines the modules to be compiled, e.g.
+  - `$NWCHEM_MODULES` defines the modules to be compiled, e.g.
 ```
 export NWCHEM_MODULES="all python"
 ```
@@ -285,7 +190,7 @@ of junk files), e.g.
 export USE_NOFSCHECK=TRUE
 ```
 **USE\_NOIO** can be set to avoid NWChem 6.5 doing I/O for the ddscf,
-mp2 and ccsd modules (it automatically sets USE\_NOFSCHECK, too). It is
+mp2 and ccsd modules (it automatically sets `USE_NOFSCHECK`, too). It is
 strongly recommended on large clusters or supercomputers or any computer
 lacking any fast and large local filesystem.
 ```
@@ -315,7 +220,7 @@ to be included in the code, e.g.
 ```
 export CCSDTQ=TRUE
 ```
-**Setting Python environment variables**
+### Setting Python environment variables
 
 Python programs may be embedded into the NWChem input and used to
 control the execution of NWChem. To build with Python, Python needs to
@@ -355,8 +260,8 @@ hardware include:
 | OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                          |
 | GotoBLAS    | <http://www.tacc.utexas.edu/tacc-projects/gotoblas2>                                          |  
 | Intel MKL   | <http://www.intel.com/software/products/mkl>                                                  |
-| ATLAS       | <http://math-atlas.sf.net>                                                                    |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
+| IBM ESSL    | Available only on IBM hardware <https://www.ibm.com/support/knowledgecenter/en/SSFHY8_6.3/navigation/welcome.html> |
 
 <br>
 _**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT
