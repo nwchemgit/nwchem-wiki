@@ -183,31 +183,29 @@ specifics.
 
 ## Adding optional environmental variables
 
-**USE\_NOFSCHECK** can be set to avoid NWChem creating files for each
+**USE_NOFSCHECK** can be set to avoid NWChem creating files for each
 process when testing the size of the scratch directory (a.k.a. creation
 of junk files), e.g.
 ```
 export USE_NOFSCHECK=TRUE
 ```
-**USE\_NOIO** can be set to avoid NWChem 6.5 doing I/O for the ddscf,
+**USE_NOIO** can be set to avoid NWChem 6.5 doing I/O for the ddscf,
 mp2 and ccsd modules (it automatically sets `USE_NOFSCHECK`, too). It is
 strongly recommended on large clusters or supercomputers or any computer
 lacking any fast and large local filesystem.
 ```
 export USE_NOIO=TRUE
 ```
-**LIB\_DEFINES** can be set to pass additional defines to the C
+**LIB_DEFINES** can be set to pass additional defines to the C
 preprocessor (for both Fortran and C), e.g.
 ```
 export LIB_DEFINES=-DDFLT_TOT_MEM=16777216
 ```
-Note: -DDFLT\_TOT\_MEM sets the default dynamic memory available for
+Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
 NWChem to run, where the units are in doubles. Instead of manually
-defining these one can optionally use the `getmem.nwchem` script in the
+defining this environment variable, one can use the [`getmem.nwchem`](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
 $NWCHEM\_TOP/contrib directory. This script should be run after an
-initial build of the binary has been completed. The script will assess
-memory availability and make an educated guess, recompile the
-appropriate files and relink.
+initial build of the binary has been completed. The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink.
 
 **MRCC\_METHODS** can be set to request the multireference coupled
 cluster capability to be included in the code, e.g.
