@@ -5,6 +5,9 @@ on:
   release:
   schedule:
     - cron: '0 0 * * *'
+  repository_dispatch:
+    types: [backend_automation]
+  workflow_dispatch:
 jobs:
   mirror_dotwiki2repo:
     runs-on: [ubuntu-latest]  
