@@ -386,7 +386,7 @@ set nwpw:lcao_iterations 2 #specifies the number of LCAO iterations.
 The PSPW code can now handle PAW potentials. To use them the
 pseudopotentials input block is used to redirect the code to use the paw
 potentials located in the default paw potential library
-(`$NWCHEM\_TOP/src/nwpw/libraryp/paw_default`). For example, to redirect
+(`$NWCHEM_TOP/src/nwpw/libraryp/paw_default`). For example, to redirect
 the code to use PAW potentials for carbon and hydrogen, the following
 input would be used.
 ```
@@ -441,11 +441,8 @@ as
 
 where the coefficients <img alt="$c_{n\alpha}^I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9912f4d7691c2b7812f92088b00f8e79.svg?invert_in_darkmode&sanitize=true" align=middle width="23.69697pt" height="27.59823pt"/>are given by
 
-<center>
+$$ c_{n\alpha}^I = <\tilde{p}_{\alpha}^I | \tilde{\psi}_n>$$
 
-<img alt="$c_{n\alpha}^I = &amp;lt;\tilde{p}_{\alpha}^I | \tilde{\psi}_n &amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b97223e50c4b75539ed4b91fc749cdc1.svg?invert_in_darkmode&sanitize=true" align=middle width="125.571105pt" height="30.55107pt"/>
-
-</center>
 
 This decomposition can be expressed using an invertible linear
 transformation, <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/>, is defined which relates the stiff one-electron
@@ -477,23 +474,12 @@ are orthonormal to the atomic orbitals. Blöchl defined the invertible
 linear transformations
 by
 
-<center>
+$$T = 1 + \sum_I \sum_{\alpha} (|\tilde{\varphi}_{\alpha}^I> - |\varphi_{\alpha}^I<)<p_{\alpha}^I|$$
 
-<img alt="$T = 1 + \sum_I \sum_{\alpha} (|\tilde{\varphi}_{\alpha}^I&amp;gt; - |\varphi_{\alpha}^I&amp;gt;)&amp;lt;p_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/96a32e61cc6a97808d8d505057fbd426.svg?invert_in_darkmode&sanitize=true" align=middle width="274.860795pt" height="27.59823pt"/>
+$$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I> - |\tilde{\varphi}_{\alpha}^I>)<\tilde{\varphi}_{\alpha}^I|$$
 
-</center>
+$$|\tilde{p}_{\alpha}^I> = \sum_{\beta} [<\tilde{p}^I | \varphi^I >]_{\alpha\beta}^{-1} | p_{\beta}^I>$$
 
-<center>
-
-<img alt="$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I&amp;gt; - |\tilde{\varphi}_{\alpha}^I&amp;gt;)&amp;lt;\tilde{\varphi}_{\alpha}^I|$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7bec6e5df80e00243278d844c268b152.svg?invert_in_darkmode&sanitize=true" align=middle width="277.411695pt" height="30.18576pt"/>
-
-</center>
-
-<center>
-
-<img alt="$|\tilde{p}_{\alpha}^I&amp;gt; = \sum_{\beta} [&amp;lt;\tilde{p}^I | \varphi^I &amp;gt;]_{\alpha\beta}^{-1} |p_{\beta}^I&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8eaaf5c0ae8c493088ada6f6f2c8c5cf.svg?invert_in_darkmode&sanitize=true" align=middle width="233.214795pt" height="28.83969pt"/>
-
-</center>
 
 The main effect of the PAW transformation is that the fast variations of
 the valence wave function in the atomic sphere region are projected out
@@ -503,7 +489,9 @@ that may be expanded in a plane wave basis set of a manageable size.
 The expression for the total energy in PAW method can be separated into
 the following 15 terms.
 
-<img alt="$E_{PAW} = &amp;#10; \tilde{E}_{kinetic-pw}+\tilde{E}_{vlocal-pw}+\tilde{E}_{Coulomb-pw}+\tilde{E}_{xc-pw} + E_{ion-ion}\\ +E_{kinetic-atom}+E_{local-atom}+E_{xc-atom}+ E_{cmp-vloc}+E_{hartree-atom}\\ +E_{cmp-cmp} + E_{cmp-pw}+E_{valence-core}+E_{kinetic-core}+E_{ion-core} $" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a05e70c963973f10ff38478d6b3547c.svg?invert_in_darkmode&sanitize=true" align=middle width="568.32435pt" height="88.29348pt"/>
+$$E_{PAW} = \tilde{E}_{kinetic-pw} + \tilde{E}_{vlocal-pw} + \tilde{E}_{Coulomb-pw} + \tilde{E}_{xc-pw} + E_{ion-ion}$$
+$$      + E_{cmp-cmp} + E_{cmp-pw} + E_{valence-core} + E_{kinetic-core} + E_{ion-core}$$
+
 
 
 The first five terms are essentially the same as for a standard
@@ -654,12 +642,9 @@ densities
 
 The matrix elements contained in the above formula
 are
+$$(t_{atom}^I )_{\alpha \beta}= {\delta_{m_\alpha m_\beta} \delta_{l_\alpha l_\beta }}{2}  \int_0^{r_{cut}^I}  \left[ (\varphi_{n_\alpha l_\alpha}^I (r))'  (\varphi_{n_\beta l_\beta}^I (r))' - (\tilde{\varphi}_{n_\alpha l_\alpha}^I (r))' (\tilde{\varphi}_{n_\beta l_\beta}^I (r))' \\
++ l_\alpha (l_\alpha+1)  \frac{ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_{n_\beta l_\beta}^I (r) - \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r) \; \; \; \; \; \; \; \; \;  }{r^2 } \right]  dr$$
 
-<center>
-
-<img alt="$(t_{atom}^I )_{\alpha \beta}= {\delta_{m_\alpha m_\beta} \delta_{l_\alpha l_\beta }}{2}  \int_0^{r_{cut}^I}  [ (\varphi_{n_\alpha l_\alpha}^I (r))^'  (\varphi_{n_\beta l_\beta}^I (r))^' - (\tilde{\varphi}_{n_\alpha l_\alpha}^I (r))^' (\tilde{\varphi}_{n_\beta l_\beta}^I (r))^' + l_\alpha (l_\alpha+1)  \frac{ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_{n_\beta l_\beta}^I (r) - \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r)}{r^2 } ]  dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b0000e69ee5630d296a4132b8ac5caf0.svg?invert_in_darkmode&sanitize=true" align=middle width="787.043895pt" height="105.84651pt"/>
-
-</center>
 
 <center>
 
