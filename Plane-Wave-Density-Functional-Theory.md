@@ -326,7 +326,7 @@ block.
     Note Ewald summation is only used if the simulation\_cell is
     periodic.
 
-Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>".
+Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -523,6 +523,7 @@ where
 </center>
 
 
+
 <img alt="$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\ + \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2 $" src="svgs/0df3a031b119b9a2b3c868b59e78f681.svg?invert_in_darkmode&sanitize=true" align=middle width="714.572595pt" height="60.10323pt"/>
 
 The local potential in the <img alt="$\tilde{E}_{vlocal-pw}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed7e25bd59dfd54bb862a0196b05c232.svg?invert_in_darkmode&sanitize=true" align=middle width="73.65996pt" height="30.18576pt"/> term is the Fourier
@@ -562,23 +563,14 @@ $$ \sum_j \sum_{\mu\nu} <\tilde{\psi}_j|\tilde{p}_{\mu}^I>  <\tilde{p}_{\nu}^I|\
 The next three terms are the terms containing the compensation charge
 densities.
 
-<center>
+$$E_{cmp-vloc}= \sum_{\mathbf{G}} [\rho_{cmp} (\mathbf{G}) \tilde{V}_{local}(\mathbf{G})+\tilde{\rho}_{cmp}(\mathbf{G})(V_{local}(\mathbf{G})-\tilde{V}_{local}(\mathbf{G}))] + \\
+\int (\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(V_{local}(r)-\tilde{V}_{local}(\mathbf{r}))d\mathbf{r}$$
 
-<img alt="$E_{cmp-vloc}= \sum_{\mathbf{G}} [\rho_{cmp} (\mathbf{G}) \tilde{V}_{local}(\mathbf{G})+\tilde{\rho}_{cmp}(\mathbf{G})(V_{local}(\mathbf{G})-\tilde{V}_{local}(\mathbf{G}))] &amp;#10;+\int (\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(V_{local}(r)-\tilde{V}_{local}(\mathbf{r}))d\mathbf{r}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/61ca7aee9f8a6092a4d41a7fa2b30140.svg?invert_in_darkmode&sanitize=true" align=middle width="784.7169pt" height="51.78921pt"/>
+$$E_{cmp-cmp}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} [ \rho_{cmp}(\mathbf{G}) \tilde{\rho}_{cmp}(\mathbf{G})- \frac{1}{2} \tilde{\rho}_{cmp}(\mathbf{G})\tilde{\rho}_{cmp}(\mathbf{G})] + \\
+ \frac{1}{2} \iint \frac{(\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(\rho_{cmp}(\mathbf{r}')-\tilde{\rho}_{cmp}(\mathbf{r}'))} {|\mathbf{r}-\mathbf{r}'|}  d\mathbf{r} d\mathbf{r}'$$
 
-</center>
 
-<center>
-
-<img alt="$E_{cmp-cmp}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} &amp;#10;[ \rho_{cmp}(\mathbf{G}) \tilde{\rho}_{cmp}(\mathbf{G})&amp;#10;- \frac{1}{2} \tilde{\rho}_{cmp}(\mathbf{G})\tilde{\rho}_{cmp}(\mathbf{G})]&amp;#10;+ \frac{1}{2} \iint \frac{(\rho_{cmp}(\mathbf{r})-\tilde{\rho}_{cmp}(\mathbf{r}))(\rho_{cmp}(\mathbf{r}')-\tilde{\rho}_{cmp}(\mathbf{r}'))} {|\mathbf{r}-\mathbf{r}'|}  d\mathbf{r} d\mathbf{r}'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/58f0ff22a55e59412d3bffbac17ff167.svg?invert_in_darkmode&sanitize=true" align=middle width="855.759795pt" height="35.69577pt"/>
-
-</center>
-
-<center>
-
-<img alt="$E_{cmp-pw}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} \rho_{cmp}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5befec376218cfd100814a1a21223383.svg?invert_in_darkmode&sanitize=true" align=middle width="276.733545pt" height="27.72033pt"/>
-
-</center>
+$$E_{cmp-pw}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} \rho_{cmp}(\mathbf{G}) \tilde{\rho}(\mathbf{G})$$
 
 In the first two formulas the first terms are computed using plane-waves
 and the second terms are computed using Gaussian two center integrals.
@@ -1962,7 +1954,8 @@ along the trajectory of <img alt="$\bold{s}\left(\bold{R}\right)$" src="https://
 is given
 by
 
-<img alt="$V_{meta}\left(\bold{s},t\right) = \sum_{t_g=0}^{t_g&amp;lt;t} W(t) \exp\left(-\sum_{i=1}^{d}\frac{({s_i}-{s_i}^{t_g})^2}{2\sigma_i^2}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/83a17ab474b69e3a28cdfa82b2bb6c58.svg?invert_in_darkmode&sanitize=true" align=middle width="359.438145pt" height="37.80348pt"/>
+$$V_{meta}\left(\pmb{s},t\right) = \sum_{t_g=0}^{t_g<} W(t) \exp\left(-\sum_{i=1}^{d}\frac{({s_i}-{s_i}^{t_g})^2}{2\sigma_i^2}\right)$$
+
 
 where
 <img alt="$W(t)=W_0 \exp\left(-\frac{V_{meta}\left(\bold{s},t-\Delta t\right)}{k_B T_{tempered}}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b6380e48009b8ba62daa7b38a4b38831.svg?invert_in_darkmode&sanitize=true" align=middle width="234.305445pt" height="37.80348pt"/>
@@ -1976,8 +1969,7 @@ corresponds to standard molecular dynamics because
 and therfore there is no bias. <img alt="$T_{tempered}=\infty$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0d51bc543d9e21b68ced229d5732fca1.svg?invert_in_darkmode&sanitize=true" align=middle width="104.057415pt" height="22.38192pt"/>
 corresponds to standard metadynamics since in this case
 <img alt="$W(t)=W_0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d58716ccf76b6173a819a3ce8284f153.svg?invert_in_darkmode&sanitize=true" align=middle width="80.26689pt" height="24.56553pt"/>=constant. A positive, finite value of <img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/> (eg.
-<img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/> >=1500 K) corresponds to *well-tempered* metadynamics in
-which <img alt="$0&amp;lt;W(t)\le W_0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/25b01a875d4ea15b6d5844dbbfe7024d.svg?invert_in_darkmode&sanitize=true" align=middle width="106.86819pt" height="24.56553pt"/>.
+<img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/> >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)\le W_0\).
 
 For sufficiently large <img alt="$t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width="5.913963pt" height="20.1465pt"/>, the history potential
 <img alt="$V_{meta}\left(\bold{s},t\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/392e208085b8f9af761c4619c8dcf343.svg?invert_in_darkmode&sanitize=true" align=middle width="76.505715pt" height="24.56553pt"/> will nearly flatten the free energy
@@ -2061,10 +2053,9 @@ This describes the bond distance between any pair of atoms <img alt="$i$" src="h
 
 #### Angle Collective Variable
 
-This describes the bond angle formed at <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> by the triplet
-<img alt="$&amp;lt;jik&amp;gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8cb7383c6dd45f500dfd0bb39264b7f8.svg?invert_in_darkmode&sanitize=true" align=middle width="59.6475pt" height="22.74591pt"/>"
+This describes the bond angle formed at <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> by the triplet \(<ijk>\)
 
-<img alt="$s\left(r_{ij},r_{ik}\right) = \frac{\bold{r}_{ij}\cdot\bold{r}_{ik}}{r_{ij}r_{ik}}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/37f0e0317abf31f95c5902d1b0c10c3b.svg?invert_in_darkmode&sanitize=true" align=middle width="131.80266pt" height="27.3438pt"/>
+$$s\left(r_{ij},r_{ik}\right) = \frac{\pmb{r}_{ij}\cdot\pmb{r}_{ik}}{r_{ij}r_{ik}}$$
 
 #### Coordination Collective Variable
 
@@ -2086,7 +2077,8 @@ is
 <img alt="$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3601f11912ffe438c9e1ba76f363c68.svg?invert_in_darkmode&sanitize=true" align=middle width="116.48505pt" height="33.8712pt"/>
 
 where <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> and <img alt="$m$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width="14.379255pt" height="14.10255pt"/> are integers (m > n) chosen such that
-<img alt="$\xi_{ij}\approx 1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84700304a3d7acf0008cfbe96f43964d.svg?invert_in_darkmode&sanitize=true" align=middle width="48.800565pt" height="22.74591pt"/> when <img alt="$r_{ij}&amp;lt;r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/70c5fddc4b0f648ba5d4cc8f918c0990.svg?invert_in_darkmode&sanitize=true" align=middle width="51.295365pt" height="22.74591pt"/> and
+<img alt="$\xi_{ij}\approx 1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84700304a3d7acf0008cfbe96f43964d.svg?invert_in_darkmode&sanitize=true" align=middle width="48.800565pt" height="22.74591pt"/> when
+\(r_{ij}<r_{0}\)  and
 <img alt="$\xi_{ij}\rightarrow 0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75a2aa9692825f1c8a743993e42c61ac.svg?invert_in_darkmode&sanitize=true" align=middle width="52.43997pt" height="22.74591pt"/> when <img alt="$r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/92e0822b1528090efc2435d2ae60c9ee.svg?invert_in_darkmode&sanitize=true" align=middle width="18.103965pt" height="14.10255pt"/> is much larger than <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/>.
 For example, the parameters of the O-H coordination in water is well
 described by <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> =1.6 Å, 
@@ -2231,7 +2223,7 @@ sub-block.
     Note Ewald summation is only used if the simulation\_cell is
     periodic.
 
-` Default set to be `<img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>`.`
+ Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
