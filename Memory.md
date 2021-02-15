@@ -60,7 +60,7 @@ The code will abort if it detects an inconsistent memory specification.
 The following memory directives also allocate 8 megabytes, but specify a
 complete partitioning as well:
 ```
-memory total 8 mb stack 2 mb  heap 2 global 4 mb   
+memory total 8 mb stack 2 mb  heap 2 mb global 4 mb   
 memory stack 2 mb heap 2 mb global 4 mb
 ```
 The optional keywords verify and noverify in the directive give the user
