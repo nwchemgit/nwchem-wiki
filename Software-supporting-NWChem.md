@@ -75,11 +75,13 @@ feedback on this page content.
   - **Shermo** is a general code for calculating molecular thermodynamic properties 
 <http://sobereva.com/soft/shermo/>
   - **QCengine** is a program executor and IO standardizer for quantum chemistry.<https://github.com/MolSSI/QCEngine>
-  - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://github.com/aiidateam/aiida-nwchem>
+  - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://aiida-nwchem.readthedocs.io/>
   - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
   - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/charmm/documentation/by-version/c42b1/params/doc/nwchem/>
  - **kMap** is a program for simulation and data analysis in photoemission tomography <https://github.com/brands-d/kMap>
  - **QMCube** is a Python suite focused on multiscale QM/MM simulations of biological systems <https://github.com/sergio-marti/qm3>
+ - **autodE** is a Python module designed for the automated generation of reaction profiles <https://duartegroup.github.io/autodE>
+ - **GoodVibes** is a Python program to compute thermochemical data from electronic structure calculations <https://github.com/bobbypaton/GoodVibes>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
