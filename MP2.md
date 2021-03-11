@@ -517,7 +517,7 @@ mp2
    fos   0.56  
 end
 ```
-Default values are FSS=1.2, FOS=0.3 for MP2, and FSS=1.13, FOS=1.27 for
+Default values are FSS=0.333333333, FOS=1.2 for MP2, and FSS=1.13, FOS=1.27 for
 CCSD.
 
 ## References
