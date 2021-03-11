@@ -77,14 +77,14 @@ seven orbitals would be frozen (the oxygen 1*s*, and the silicon
 <center>
 
 | Period | Elements | Core Orbitals                                                                              | Number of Core |
-| ------ | -------- | ------------------------------------------------------------------------------------------ | -------------- |
-| 0      | H - He   | \-                                                                                         | 0              |
-| 1      | Li - Ne  | 1*s*                                                                                     | 1              |
-| 2      | Na - Ar  | 1*s*2*s*2*p*                                                                             | 5              |
-| 3      | K - Kr   | 1*s*2*s*2*p*3*s*3*p*                                                             | 9              |
-| 4      | Rb - Xe  | 1*s*2*s*2*p*3*s*3*p*4*s*3*d*4*p*                                                 | 18             |
-| 5      | Cs - Rn  | 1*s*2*s*2*p*3*s*3*p*4*s*3*d*4*p*5*s*4*d*5*p*                                     | 27             |
-| 6      | Fr - Lr  | 1*s*2*s*2*p*3*s*3*p*4*s*3*d*4*p*5*s*4*d*5*p*6*s*4*f*5*d*6*p*    | 43             |
+| ------ | -------- | ----------------------------------- | -------------- |
+| 0      | H - He   | \-                                  | 0              |
+| 1      | Li - Ne  | *1s*                                | 1              |
+| 2      | Na - Ar  | *1s2s2p*                            | 5              |
+| 3      | K - Kr   | *1s2s2p3s3p*                        | 9              |
+| 4      | Rb - Xe  | *1s2s2p3s3p4s3d4p*                  | 18             |
+| 5      | Cs - Rn  | *1s2s2p3s3p4s3d4p5s4d5p*            | 27             |
+| 6      | Fr - Lr  | *1s2s2p3s3p4s3d4p5s4d5p6s4f5d6p*    | 43             |
 
 Number of orbitals considered "core" in the "freeze by atoms" algorithm
 
