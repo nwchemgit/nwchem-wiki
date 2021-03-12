@@ -319,3 +319,6 @@ Hardware used:
 
 * EMSL cascade [specifications](https://www.emsl.pnnl.gov/MSC/UserGuide/cascade/cascade_overview.html#nodes)  
 * EMSL tahoma [specifications](https://www.emsl.pnnl.gov/MSC/UserGuide/tahoma/tahoma_overview.html#nodes)
+
+
+![benchmarks/siosi8.png](benchmarks/siosi8.png)
