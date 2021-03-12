@@ -57,8 +57,8 @@ feedback on this page content.
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
     <http://www.votca.org> 
-  - **PyDP4** is Python workflow for DP4 analysis of organic molecules
-    <https://github.com/KristapsE/PyDP4>
+  - **DP4-AI** integrates NMR-AI, software for automatic processing, assignment and visualisation of raw NMR data
+    <https://github.com/KristapsE/DP4-AI>
   - **Fafoom** Flexible algorithm for optimization of molecules
     <https://github.com/adrianasupady/fafoom>
   - **Pymatgen** Python Materials Genomics open-source Python library for materials analysis
