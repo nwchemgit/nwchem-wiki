@@ -171,36 +171,34 @@ calculation, the default is to use the previous MO vectors.
 The optional keyword INPUT allows the user to specify the source of the
 input molecular orbital vectors as any of the following:
 
-  - ATOMIC -- eigenvectors of a Fock-like matrix formed from a
+  - `ATOMIC` -- eigenvectors of a Fock-like matrix formed from a
     superposition of the atomic densities (the default guess). See
     [Atomic
     guess](#atomic-guess-orbitals-with-charged-atoms) and
     [Accuracy of initial guess](#accuracy-of-initial-guess).
-  - HCORE -- eigenvectors of the bare-nucleus Hamiltonian or the
+  - `HCORE` -- eigenvectors of the bare-nucleus Hamiltonian or the
     one-electron Hamiltonian.
   - filename -- the name of a file containing the MO vectors from a
     previous calculation. Note that unless the path is fully qualified,
     or begins with a dot ("."), then it is assumed to reside in the
     directory for permanent files (see [File
-    directories](Top-level#Scratch_Dir)).
-  - PROJECT basisname filename -- projects the existing MO vectors in
+    directories](Permanent_Dir)).
+  - `PROJECT basisname filename` -- projects the existing MO vectors in
     the file filename from the smaller basis with name basisname into
     the current basis. The definition of the basis basisname must be
     available in the current database, and the basis must be smaller
     than the current basis. In addition, the geometry used for the
     previous calculations must have the atoms in the same order and in
     the same orientation as the current geometry.
-  - FRAGMENT file1 ... -- assembles starting MO vectors from previously
+  - `FRAGMENT file1 ...` -- assembles starting MO vectors from previously
     performed calculations on fragments of the system and is described
     in more detail in [Superposition of fragment molecular
-    orbitals](#superposition_of-fragment-molecular-orbitals).
+    orbitals](#superposition-of-fragment-molecular-orbitals).
     Even though there are some significant restrictions in the use of
-    the initial implementation of this method (see [Superposition of
-    fragment molecular
-    orbitals](#superposition-of-fragment-molecular-orbitals)),
+    the initial implementation of this method,
     this is the most powerful initial guess option within the code. It
-    is particularly indispensable for open shell metallic systems.
-  - ROTATE input\_geometry input\_movecs -- rotates MO vectors generated
+    is very effective for open shell metallic systems.
+  - `ROTATE input_geometry input_movecs` -- rotates MO vectors generated
     at a previous geometry to the current active geometry.
 
 The molecular orbitals are saved every iteration if more than 600
@@ -212,7 +210,7 @@ closed-closed, open-open, and virtual-virtual blocks of the Fock matrix.
 The name of the file used to store the MO vectors is determined as
 follows:
 
-  - if the OUTPUT keyword was specified on the VECTORS directive, then
+  - if the `OUTPUT` keyword was specified on the `VECTORS` directive, then
     the filename that follows this keyword is used, or
   - if the input vectors were read from a file, this file is reused for
     the output vectors (overwriting the input vectors); else,
