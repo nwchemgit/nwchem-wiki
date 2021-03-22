@@ -20,11 +20,11 @@ Good search engine for NWChem Linux packages: [https://pkgs.org/search/?q=nwchem
 ```
 sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 sudo yum update
-sudo yum install nwchem
+sudo yum install nwchem nwchem-openmpi environment-modules
 ```
 In order to run NWChem, you must type
 ```
-module load mpi/openmpi-x86_64
+module load openmpi-x86_64
 ```
 The name of the NWChem executable is
 ```
@@ -36,7 +36,7 @@ nwchem_openmpi
 ```
 sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum update
-sudo yum install nwchem
+sudo yum install nwchem nwchem-openmpi Lmod
 ```
 In order to run NWChem, you must type
 ```
