@@ -10,8 +10,8 @@ CHARGE <real charge default 0>
 The charge directive, in conjunction with the charges of atomic nuclei
 (which can be changed via the geometry input, cf. Section [Geometry](Geometry)),
 determines the total number of electrons in the chemical system.
-Therefore, a charge n specification removes "n" electrons from the
-chemical system. Similarly, charge -n adds "n" electrons. is zero if
+Therefore, a `charge n` specification removes "n" electrons from the
+chemical system. Similarly, `charge -n` adds "n" electrons. is zero if
 this directive is omitted. An example of a case where the directive
 would be needed is for a calculation on a doubly charged cation. In such
 a case, the directive is simply,
@@ -26,8 +26,8 @@ there are an integral number of electrons.
 
 The charge may be changed between tasks, and is used by all wavefunction
 types. For instance, in order to compute the first two vertical
-ionization energies of \(LiH\), one might optimize the geometry of
-\(LiH\) using a UHF SCF wavefunction, and then perform energy
+ionization energies of LiH, one might optimize the geometry of
+LiH using a UHF SCF wavefunction, and then perform energy
 calculations at the optimized geometry on LiH<sup>+</sup> and LiH<sup>2+</sup> in
 turn. This is accomplished with the following
 input:
