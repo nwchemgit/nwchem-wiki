@@ -145,11 +145,8 @@ task. The form of the directive in such cases is as follows:
 TASK <string task> [ignore]
 ```
 The supported tasks that can be accessed with this form of the TASK
-directive are listed below, with the corresponding entries for string
-variable
-```
-<task>
-```
+directive are listed below, with the corresponding entries for the string
+variable `<task>`  
 
   - python - Execute a [Python program](Python).
   - rtdbprint - Print the contents of the database.
