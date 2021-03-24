@@ -147,10 +147,9 @@ TASK <string task> [ignore]
 The supported tasks that can be accessed with this form of the TASK
 directive are listed below, with the corresponding entries for string
 variable
-
+```
 <task>
-
-.
+```
 
   - python - Execute a [Python program](Python).
   - rtdbprint - Print the contents of the database.
@@ -181,7 +180,7 @@ form a single string, and must consist of valid UNIX command(s). If the
 string includes white space, it must be enclosed in double quotes.
 
 For example, the TASK directive to tell process zero to copy the
-molecular orbitals file to a backup location /piofs/save can be input as
+molecular orbitals file to a backup location `/piofs/save` can be input as
 follows:
 ```
 task shell "cp *.movecs /piofs/save"
@@ -285,8 +284,8 @@ on any BSSE calculation.
 The energy evaluation involves 1 + 2N calculations, i.e. one for the
 supermolecule and two for the N monomers. [S. Simon, M. Duran, J. J.
 Dannenberg, J. Chem. Phys., 105, 11024 (1996)] NWChem stores the vector
-files for each calculation (<string monomer name>.bsse.movecs), and one
-hessian file (<string monomer name>.bsse.hess). The code does not assign
+files for each calculation (`<string monomer name>.bsse.movecs`), and one
+hessian file (`<string monomer name>.bsse.hess`). The code does not assign
 automatically the basis set for the ghost atoms, you must assign the
 corresponding bqX for each element, instead.
 
