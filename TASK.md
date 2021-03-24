@@ -339,11 +339,11 @@ basis "ao basis" 
 end  
 charge 2  
 scf; direct; end  
-mp2; end  
+mp2; freeze atomic;end  
 bsse   
  mon metal 1   
  charge 2   
- input_wghost "scf; maxiter 200; end"   
+ input_wghost "scf\; maxiter 200\; end"   
  mon water 2 3 4  
 end  
 task mp2 optimize
