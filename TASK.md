@@ -267,24 +267,24 @@ BSSE 
  [ON]  
 END
 ```
-MON defines the monomer's name and its atoms; <string monomer name>
+`MON` defines the monomer's name and its atoms; <string monomer name>
 defines the name of the monomer, <integer atoms> is the list of atoms
 corresponding to the monomer (where such a list is relative to the
 initial geometry). This information is needed for each monomer. With the
-tag INPUT the user can modify any calculation attributes for each
+tag `INPUT` the user can modify any calculation attributes for each
 monomer without ghost. For example, the iterations number and the grid
 can be changed in a DFT calculation (see the example of the interaction
-between Zn<sup>2+</sup> and water). INPUT\_WGHOST is the same than INPUT but
+between Zn<sup>2+</sup> and water). `INPUT_WGHOST` is the same as `INPUT` but
 for the monomer with ghost. The input changes will be applied within
 this and for the following calculations, you should be cautious
-reverting the changes for the next monomers. CHARGE assigns a charge to
+reverting the changes for the next monomers. `CHARGE` assigns a charge to
 a monomer and it must be consistent with the total charge in the whole
-system (see Section [Charge](Charge)). The options OFF and ON turns off and
+system (see Section [Charge](Charge)). The options `OFF` and `ON` turns off and
 on any BSSE calculation.
 
 The energy evaluation involves 1 + 2N calculations, i.e. one for the
-supermolecule and two for the N monomers. \[S. Simon, M. Duran, J. J.
-Dannenberg, J. Chem. Phys., 105, 11024 (1996)\] NWChem stores the vector
+supermolecule and two for the N monomers. [S. Simon, M. Duran, J. J.
+Dannenberg, J. Chem. Phys., 105, 11024 (1996)] NWChem stores the vector
 files for each calculation (<string monomer name>.bsse.movecs), and one
 hessian file (<string monomer name>.bsse.hess). The code does not assign
 automatically the basis set for the ghost atoms, you must assign the
