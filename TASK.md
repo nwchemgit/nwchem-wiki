@@ -284,7 +284,7 @@ Dannenberg, J. Chem. Phys., 105, 11024 (1996)] NWChem stores the vector
 files for each calculation (`<string monomer name>.bsse.movecs`), and one
 hessian file (`<string monomer name>.bsse.hess`). The code does not assign
 automatically the basis set for the ghost atoms, you must assign the
-corresponding bqX for each element, instead.
+corresponding `bqX` for each element, instead.
 
 ### Examples
 
@@ -313,7 +313,7 @@ bsse 
 end
 task dft energy
 ```
-Changing maxiter for a specific monomer: (Zn<sup>2+</sup>(H<sub>2</sub>O))
+Changing `maxiter` for a specific monomer: (Zn<sup>2+</sup>(H<sub>2</sub>O))
 ```
 title znwater  
 start znwater  
