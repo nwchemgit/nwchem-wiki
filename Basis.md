@@ -3,8 +3,8 @@
 # Basis sets
 
 NWChem currently supports basis sets consisting of generally contracted
-Cartesian Gaussian functions up to a maximum angular momentum of six (h
-functions), and also sp (or L) functions. The BASIS directive is used to
+Cartesian Gaussian functions up to a maximum angular momentum of six (*h*
+functions), and also *sp* (or L) functions. The BASIS directive is used to
 define these, and also to specify use of an [Effective Core
 Potential](ECP) that is associated with a
 basis set.
@@ -103,24 +103,24 @@ Basis sets are associated with centers by using the tag of a center in a
 [geometry](Geometry) that has either been input by
 the user or is available elsewhere. Each atom or center with the same
 tag will have the same basis set. All atoms must have basis functions
-assigned to them -- only dummy centers (X or Bq) may have no basis
+assigned to them -- only dummy centers (`X` or `Bq`) may have no basis
 functions. To facilitate the specification of the geometry and the basis
 set for any chemical system, the matching process of a basis set tag to
 a geometry tag first looks for an exact match. If no match is found,
 NWChem will attempt to match, ignoring case, the name or symbol of the
-element. E.g., all hydrogen atoms in a system could be labeled "H1",
-"H2", ..., in the geometry but only one basis set specification for "H"
-or "hydrogen" is necessary. If desired, a special basis may be added to
-one or more centers (e.g., "H1") by providing a basis for that tag. If
+element. E.g., all hydrogen atoms in a system could be labeled "`H1`",
+"`H2`", ..., in the geometry but only one basis set specification for "`H`"
+or "`hydrogen`" is necessary. If desired, a special basis may be added to
+one or more centers (e.g., "`H1`") by providing a basis for that tag. If
 the matching mechanism fails then NWChem stops with an appropriate error
 message.
 
-A special set of tags, "\*" and tags ending with a "\*" (E.g. "H\*") can
+A special set of tags, "`*`" and tags ending with a "`*`" (E.g. "`H*`") can
 be used in combination with the keyword
 [library](#basis-set-library). These tags facilitate the
 definition of a certain type of basis set of all atoms, or a group of
 atoms, in a geometry using only a single or very few basis set entries.
-The "\*" tag will not place basis sets on dummy atoms, Bq\* can be used
+The "`*`" tag will not place basis sets on dummy atoms, `Bq*` can be used
 for that if necessary.
 
 Examined next is how to reference standard basis sets in the basis set
@@ -171,7 +171,7 @@ the directory /usr/d3g681/nwchem/libraries/ for atom si, rather than
 look for them in the default libraries. When a directory is defined the
 code will search for the basis set in a file with the name 6-31g.
 
-The "\*" tag can be used to efficiently define basis set input
+The "`*`" tag can be used to efficiently define basis set input
 directives for large numbers of atoms. An example is:
 ```
  basis  
@@ -190,17 +190,17 @@ directive can be used:
 This directive tells the code to assign the basis sets 3-21g to all the
 atoms in the geometry, except the hydrogen atoms. Remember that the user
 will have to explicitly define the hydrogen basis set in this
-directive\! One may also define tags that end with a "\*":
+directive! One may also define tags that end with a "`*`":
 ```
  basis  
    oxy*  library 3-21g   
  end
 ```
 This directive tells the code to assign the basis sets 3-21g to all atom
-tags in the geometry that start with "oxy".
+tags in the geometry that start with "`oxy`".
 
 If standard basis sets are to be placed upon a dummy center, the
-variable <tag_in_lib> must also be entered on this line, to identify the
+variable `<tag_in_lib>` must also be entered on this line, to identify the
 correct atom type to use from the basis function library (see the ghost
 atom example in [SET](Top-level#SET) and below).
 For example: To specify the cc-pvdz basis for a calculation on the water
@@ -229,7 +229,7 @@ library.
 
 There are also contractions in the standard library for both a point
 nucleus and a finite nucleus of Gaussian shape. These are usually
-distinguished by the suffix \_pt and \_fi. It is the user's
+distinguished by the suffix `_pt` and `_fi`. It is the user's
 responsibility to ensure that the contraction matches the nuclear type
 specified in the geometry object. The specification of a finite nucleus
 basis set does NOT automatically set the nuclear type for that atom to
@@ -261,7 +261,7 @@ associated with a center using an input line of the following form:
        ...
 ```
 The variable <shell_type> identifies the angular momentum of the shell,
-*s*, *p*, *d*, .... NWChem is configured to handle up to h shells. The
+*s*, *p*, *d*, .... NWChem is configured to handle up to *h* shells. The
 keyword rel marks the shell as relativistic -- see the Section  on [relativistic
 all-electron
 approximations](Relativistic-All-electron-Approximations) for more
