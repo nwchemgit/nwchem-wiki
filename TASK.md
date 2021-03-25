@@ -54,7 +54,7 @@ variable <theory>:
   - rimp2 - MP2 using the RI approximation
   - ccsd - Coupled-cluster single and double excitations
   - ccsd(t) - Coupled-cluster linearized triples approximation
-    1.  ccsd+t(ccsd)\# - Fourth order triples contribution
+  - ccsd+t(ccsd) - Fourth order triples contribution
   - mcscf - Multiconfiguration SCF
   - selci - Selected configuration interaction with perturbation
     correction
