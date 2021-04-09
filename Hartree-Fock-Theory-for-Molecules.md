@@ -327,8 +327,10 @@ This directive will cause the initial orbitals to be read from the file
 will be swapped with those on atom 1. The final orbitals obtained in the
 calculation will be written to the file "try2.movecs".
 
+### VECTORS ROTATE keyword
+
 The following example shows how the ROTATE keyword can be used to rotate
-MO vectors calculated at geometry geom1 to geometry geom2, which has a
+MO vectors calculated at geometry `geom1` to geometry `geom2`, which has a
 different rotational orientation:
 
 ```
@@ -344,7 +346,7 @@ end
 task dft
 ```
 
-### Superposition of fragment molecular orbitals
+### VECTORS FRAGMENT keyword - Superposition of fragment molecular orbitals
 
 The fragment initial guess is particularly useful in the following
 instances:
