@@ -78,8 +78,8 @@ The user should be aware that, by default, molecular orbitals are
 symmetry adapted in NWChem. This may not be desirable for fully
 unrestricted wavefunctions. In such cases, the user has the option of
 defeating the defaults by specifying the keywords
-[ADAPT](#adapt---symmetry-adaptation-of-mos) OFF and
-[SYM](#sym----use-of-symmetry) OFF .
+[ADAPT](#adapt-symmetry-adaptation-of-mos) OFF and
+[SYM](#sym-use-of-symmetry) OFF .
 
 The keywords RHF and ROHF are provided in the code for completeness. It
 may be necessary to specify these in order to modify the behavior of a
