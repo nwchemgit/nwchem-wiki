@@ -133,6 +133,8 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
  MULT <integer mult default 1>  
  NOIO  
  PRINT||NOPRINT
+ SYM <string (ON||OFF) default ON>
+ ADAPT <string (ON||OFF) default ON>
 ```
 The following sections describe these keywords and optional
 sub-directives that can be specified for a DFT calculation in NWChem.
@@ -1983,3 +1985,8 @@ dft
 end  
 task sodft
 ```
+## SYM and ADAPT 
+
+The options `SYM` and `ADAPT` works the same way as the analogous options for the SCF code.
+Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules#sym-use-of-symmetry) and
+[ADAPT](Hartree-Fock-Theory-for-Molecules#adapt-symmetry-adaptation-of-mos), respectively.
