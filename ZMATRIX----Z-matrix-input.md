@@ -96,16 +96,16 @@ Z-matrix input with optional parameter specified as -1.
 
 The Z-matrix input shown above is interpreted as follows:
 
-1.  tag1  
+1.  `tag1`  
     Only a tag is required for the first center.
-2.  tag2 i R  
+2.  `tag2 i R`  
     The second center requires specification of its tag and the bond
     length (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) distance to a previous atom, which is identified by i.
-3.  tag3 i R j alpha  
+3.  `tag3 i R j alpha`  
     The third center requires specification of its tag, its bond length
     distance (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) to one of the two previous centers (identified
     by the value of i), and the bond angle  <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>.
-4.  tag i R j alpha k beta \[\<integer orient default 0\>\]  
+4.  `tag i R j alpha k beta [<integer orient default 0>]`  
     The fourth, and all subsequent centers, require the tag, a bond
     length (<img alt="$R_{Ci}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6edf639cf81543afd1beeabac800ceae.svg?invert_in_darkmode&sanitize=true" align=middle width="27.267735pt" height="22.38192pt"/>) relative to center i, the bond angle with
     centers i and j ( <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>), and either the
@@ -169,7 +169,7 @@ or may not be identical.
  end
 ```
 The following example illustrates the Z-matrix input for the molecule
-<img alt="$CH_3CF_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cdaae9d00c367465fffd1cfa2ee4dead.svg?invert_in_darkmode&sanitize=true" align=middle width="63.8088pt" height="22.38192pt"/>. This input uses the numbers of centers to specify the
+CH<sub>3</sub>CF<sub>3</sub>. This input uses the numbers of centers to specify the
 connectivity information (i, j, and k), and uses symbolic variables for
 the Z-matrix parameters R, alpha, and beta, which are defined in the
 inputs for the VARIABLES and CONSTANTS directives.
