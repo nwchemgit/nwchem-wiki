@@ -1,11 +1,11 @@
 ## ZMATRIX -- Z-matrix input
 
-The ZMATRIX directive is an optional directive that can be used within
-the compound GEOMETRY directive to specify the structure of the system
+The `ZMATRIX` directive is an optional directive that can be used within
+the compound `GEOMETRY` directive to specify the structure of the system
 with a Z-matrix, which can include both internal and Cartesian
-coordinates. The ZMATRIX directive is itself a compound directive that
-can include the VARIABLES and CONSTANTS directives, depending on the
-options selected. The general form of the compound ZMATRIX directive is
+coordinates. The `ZMATRIX` directive is itself a compound directive that
+can include the `VARIABLES` and `CONSTANTS` directives, depending on the
+options selected. The general form of the compound `ZMATRIX` directive is
 as follows:
 ```
    [ZMATRIX || ZMT || ZMAT 
@@ -20,7 +20,7 @@ as follows:
    (END || ZEND)]
 ```
 The input module recognizes three possible spellings of this directive
-name. It can be invoked with ZMATRIX, ZMT, or ZMAT. The user can specify
+name. It can be invoked with `ZMATRIX`, `ZMT`, or `ZMAT`. The user can specify
 the molecular structure using either Cartesian coordinates or internal
 coordinates (bond lengths, bond angles and dihedral angles. The Z-matrix
 input for a center defines connectivity, bond length, and bond or
@@ -41,13 +41,13 @@ or BQ at the start of the tag.
 Bond lengths, bond angles and dihedral angles (denoted below as R,
 alpha, and beta, respectively) may be specified either as numerical
 values or as symbolic strings that must be subsequently defined using
-the VARIABLES or CONSTANTS directives. The numerical values of the
-symbolic strings labeled VARIABLES may be subject to changes during a
+the `VARIABLES` or `CONSTANTS` directives. The numerical values of the
+symbolic strings labeled `VARIABLES` may be subject to changes during a
 geometry optimization say, while the numerical values of the symbolic
-strings labeled CONSTANTS will stay frozen to the value given in the
+strings labeled `CONSTANTS` will stay frozen to the value given in the
 input. The same symbolic string can be used more than once, and any
 mixture of numeric data and symbols is acceptable. Bond angles (α) must
-be in the range 0 \< α \< 180.
+be in the range 0 < α < 180.
 
 The Z-matrix input is specified sequentially as follows:
 ```
@@ -135,7 +135,7 @@ Each line contains the name of a variable followed by its value.
 Optionally, an equals sign (=) can be included between the symbol and
 its value, for clarity in reading the input file.
 
-Following the VARIABLES directive, the CONSTANTS directive may be used
+Following the `VARIABLES` directive, the `CONSTANTS` directive may be used
 to define any Z-matrix symbolic variables that remain unchanged during
 geometry optimizations. To freeze the Cartesian coordinates of an atom,
 refer to [Applying constraints in geometry
@@ -147,11 +147,11 @@ The general form of this directive is as follows:
    ...
 ```
 Each line contains the name of a variable followed by its value. As with
-the VARIABLES directive, an equals sign (=) can be included between the
+the `VARIABLES` directive, an equals sign (=) can be included between the
 symbol and its value.
 
-The end of the Z-matrix input using the compound ZMATRIX directive is
-signaled by a line containing either END or ZEND, following all input
+The end of the Z-matrix input using the compound `ZMATRIX` directive is
+signaled by a line containing either `END` or `ZEND`, following all input
 for the directive itself and its associated optional directives.
 
 A simple example is presented for water. All Z-matrix parameters are
@@ -172,7 +172,7 @@ The following example illustrates the Z-matrix input for the molecule
 CH<sub>3</sub>CF<sub>3</sub>. This input uses the numbers of centers to specify the
 connectivity information (i, j, and k), and uses symbolic variables for
 the Z-matrix parameters R, alpha, and beta, which are defined in the
-inputs for the VARIABLES and CONSTANTS directives.
+inputs for the `VARIABLES` and `CONSTANTS` directives.
 ```
 geometry  
  zmatrix  
