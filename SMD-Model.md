@@ -38,7 +38,7 @@ radii of Mantina et al.
 
 Mantina, M.; Valero, R.; Cramer, C. J.; Truhlar, D. G. “Atomic Radii of
 the Elements.” In CRC Handbook of Chemistry and Physics, 91st Edition,
-2010-2011; Haynes, W. M., Ed.; CRC Press: Boca Raton, FL, 2010; pp 949-950.
+2010-2011; Haynes, W. M., Ed.; CRC Press: Boca Raton, FL, 2010; pp 9-49.
 
 The scaling factor equals 1.52 for group 17 elements heavier than Br
 (i.e., for I and At) and 1.18 for all other elements for which there are
