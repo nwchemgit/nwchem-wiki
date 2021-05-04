@@ -38,8 +38,7 @@ radii of Mantina et al.
 
 Mantina, M.; Valero, R.; Cramer, C. J.; Truhlar, D. G. “Atomic Radii of
 the Elements.” In CRC Handbook of Chemistry and Physics, 91st Edition,
-2010-2011; Haynes, W. M., Ed.; CRC Press: Boca Raton, FL, 2010; pp 9-49
-– 9-50.
+2010-2011; Haynes, W. M., Ed.; CRC Press: Boca Raton, FL, 2010; pp 949-950.
 
 The scaling factor equals 1.52 for group 17 elements heavier than Br
 (i.e., for I and At) and 1.18 for all other elements for which there are
@@ -267,34 +266,38 @@ descriptors:
 
 ```
 dielec (real input)
-dielectric constant at 298 K
 ```
+dielectric constant at 298 K  
 
 ```
 sola (real input) 
-Abraham’s hydrogen bond acidity   
 ```
+Abraham’s hydrogen bond acidity   
 
 ```
 solb (real input) 
-Abraham’s hydrogen bond basicity
-  
-solc (real input) 
-aromaticity as a fraction of non-hydrogenic solvent atoms that are aromatic carbon atoms
-
-solg (real input) 
-macroscopic surface tension of the solvent at an air/solvent interface at 298 K in units of cal mol–1 Å–2 (note that 1 dyne/cm = 1.43932 cal mol–1 Å–2)
 ```
+Abraham’s hydrogen bond basicity  
+
+```
+solc (real input)
+```
+aromaticity as a fraction of non-hydrogenic solvent atoms that are aromatic carbon atoms  
+
+```
+solg (real input)
+```
+macroscopic surface tension of the solvent at an air/solvent interface at 298 K in units of cal mol–1 Å–2 (note that 1 dyne/cm = 1.43932 cal mol–1 Å–2)  
 
 ```
 solh (real input)
-electronegative halogenicity as the fraction of non-hydrogenic solvent atoms that are F, Cl, or Br 
 ```
+electronegative halogenicity as the fraction of non-hydrogenic solvent atoms that are F, Cl, or Br  
 
 ```
 soln (real input)
-index of refraction at optical frequencies at 293 K
 ```
+index of refraction at optical frequencies at 293 K  
 
 An example of an SMD input file is as
 follows:
