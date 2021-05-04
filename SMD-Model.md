@@ -59,15 +59,16 @@ block
 The SMD input options are as follows:
 
 ```
-do_cosmo_smd (logical input)
-.true.  (perform a ground-state SMD calculation) or
-.false. (default)
+do_cosmo_smd <logical do_cosmo_smd default .true.>
 ```
+The `do_cosmo_smd` keyword instructs NWChem to perform a ground-state SMD calculation
+
 
 ```
-solvent (keyword) 
- a solvent keyword from a list of available SMD solvent names below:
+solvent (keyword)
 ```
+ a solvent keyword from a list of available SMD solvent names below:
+
 
 | Keyword     | Name                            |
 | ----------- | ------------------------------- |
