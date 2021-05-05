@@ -102,6 +102,7 @@ The following programs can display cube files from
   - **Molden2AIM** is a utility program which can be used to create AIM-WFN, AIM-WFX, and NBO-47 files from a Molden file
      <https://github.com/zorkzou/Molden2AIM>
   - **Multiwfn** is a wavefunction analysis program <http://sobereva.com/multiwfn>
+  - **CrystalExplorer** is a program for Hirshfeld surface analysis, visualization and quantitative analysis of molecular crystals that can read NWChem Molden Files <https://crystalexplorer.net/>
 
 ## Programs post-processing AIM files
 
