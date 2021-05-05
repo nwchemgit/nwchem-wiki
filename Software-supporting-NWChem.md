@@ -82,6 +82,7 @@ feedback on this page content.
  - **QMCube** is a Python suite focused on multiscale QM/MM simulations of biological systems <https://github.com/sergio-marti/qm3>
  - **autodE** is a Python module designed for the automated generation of reaction profiles <https://duartegroup.github.io/autodE>
  - **GoodVibes** is a Python program to compute thermochemical data from electronic structure calculations <https://github.com/bobbypaton/GoodVibes>
+ - **ChemDyME** is a Kinetically Steered, Automated Mechanism Generation Through Combined Molecular Dynamics and Master Equation Calculations <https://github.com/RobinShannon/ChemDyME>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
