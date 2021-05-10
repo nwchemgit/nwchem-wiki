@@ -1,6 +1,6 @@
 # Controlling NWChem with Python
 
-Python (version 1.5.1) programs may be embedded into the NWChem input
+Python programs may be embedded into the NWChem input
 and used to control the execution of NWChem. Python is a very powerful
 and widely used scripting language that provides useful things such as
 variables, conditional branches and loops, and is also readily extended.
