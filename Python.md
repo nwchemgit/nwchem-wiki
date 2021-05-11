@@ -76,7 +76,7 @@ there are some gotchas
   - The calls to NWChem functions are all collective (i.e., all nodes
     must execute them). If these calls are not made collectively your
     program may deadlock (i.e., cease to make progress).
-  - When writing to the database (rtdb\_put()) it is the data from node
+  - When writing to the database (`rtdb_put()`) it is the data from node
     zero that is written.
   - NWChem overrides certain default signal handlers so care must be
     taken when creating processes (see Section 38.3.11).
@@ -97,32 +97,32 @@ Python has been extended with a module named "nwchem" which is
 automatically imported and contains the following NWChem-specific
 commands. They all handle NWChem-related errors by raising the exception
 "NWChemError", which may be handled in the standard Python manner (see
-Section 38.3.9).
+Section describing [scanning example](#scaning-a-basis-exponent-yet-again----plotting-and-handling-child-processes)).
 
-  - input\_parse(string) -- invokes the standard NWChem input parser
+  - `input_parse(string)` -- invokes the standard NWChem input parser
     with the data in string as input. Note that the usual behavior of
     NWChem will apply -- the parser only reads input up to either end of
-    input or until a TASK directive is encountered (the task directive
+    input or until a `TASK` directive is encountered (the task directive
     is not executed by the parser).
-  - task\_energy(theory) -- returns the energy as if computed with the
-    NWChem directive TASK ENERGY <THEORY>.
-  - task\_gradient(theory) -- returns a tuple (energy,gradient) as if
-    computed with the NWChem directive TASK GRADIENT <THEORY>.
-  - task\_optimize(theory) -- returns a tuple (energy,gradient) as if
-    computed with the NWChem directive TASK OPTIMIZE <THEORY>. The
+  - `task_energy(theory)` -- returns the energy as if computed with the
+    NWChem directive `TASK ENERGY <THEORY>`.
+  - `task_gradient(theory)` -- returns a tuple (energy,gradient) as if
+    computed with the NWChem directive `TASK GRADIENT <THEORY>`.
+  - `task_optimize(theory)` -- returns a tuple (energy,gradient) as if
+    computed with the NWChem directive `TASK OPTIMIZE <THEORY>`. The
     energy and gradient will be those at the last point in the
     optimization and consistent with the current geometry in the
     database.
-  - ga\_nodeid() -- returns the number of the parallel process.
-  - rtdb\_print(print\_values) -- prints the contents of the RTDB. If
-    print\_values is 0, only the keys are printed, if it is 1 then the
+  - `ga_nodeid()` -- returns the number of the parallel process.
+  - `rtdb_print(prin\_values)` -- prints the contents of the RTDB. If
+    `print_values` is 0, only the keys are printed, if it is 1 then the
     values are also printed.
-  - rtdb\_put(name, values) or rtdb\_put(name, values, type) -- puts the
+  - `rtdb_put(name, values)` or `rtdb_put(name, values, type)` -- puts the
     values into the database with the given name. In the first form, the
     type is inferred from the first value, and in the second form the
     type is specified using the last argument as one of INT, DBL,
     LOGICAL, or CHAR.
-  - rtdb\_get(name) -- returns the data from the database associated
+  - `rtdb_get(name)` -- returns the data from the database associated
     with the given name.
 
 An
