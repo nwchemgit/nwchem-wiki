@@ -83,6 +83,7 @@ feedback on this page content.
  - **autodE** is a Python module designed for the automated generation of reaction profiles <https://duartegroup.github.io/autodE>
  - **GoodVibes** is a Python program to compute thermochemical data from electronic structure calculations <https://github.com/bobbypaton/GoodVibes>
  - **ChemDyME** is a Kinetically Steered, Automated Mechanism Generation Through Combined Molecular Dynamics and Master Equation Calculations <https://github.com/RobinShannon/ChemDyME>
+ - **xtbdft** is a wrapper script for multi-level molecular modelling powered by CREST/GFN2-XTB and NWChem (DFT) <https://github.com/sibo/xtbdft>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
