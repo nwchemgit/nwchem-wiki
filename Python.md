@@ -79,7 +79,7 @@ there are some gotchas
   - When writing to the database (`rtdb_put()`) it is the data from node
     zero that is written.
   - NWChem overrides certain default signal handlers so care must be
-    taken when creating processes (see Section 38.3.11).
+    taken when creating processes (see Section describing [a scanning example](#scaning-a-basis-exponent-yet-again----plotting-and-handling-child-processes)).
 
 ## NWChem extensions
 
@@ -97,7 +97,7 @@ Python has been extended with a module named "nwchem" which is
 automatically imported and contains the following NWChem-specific
 commands. They all handle NWChem-related errors by raising the exception
 "NWChemError", which may be handled in the standard Python manner (see
-Section describing [scanning example](#scaning-a-basis-exponent-yet-again----plotting-and-handling-child-processes)).
+Section describing [handling exception](#handling-exceptions-from-nwchem)).
 
   - `input_parse(string)` -- invokes the standard NWChem input parser
     with the data in string as input. Note that the usual behavior of
@@ -114,7 +114,7 @@ Section describing [scanning example](#scaning-a-basis-exponent-yet-again----plo
     optimization and consistent with the current geometry in the
     database.
   - `ga_nodeid()` -- returns the number of the parallel process.
-  - `rtdb_print(prin\_values)` -- prints the contents of the RTDB. If
+  - `rtdb_print(print_values)` -- prints the contents of the RTDB. If
     `print_values` is 0, only the keys are printed, if it is 1 then the
     values are also printed.
   - `rtdb_put(name, values)` or `rtdb_put(name, values, type)` -- puts the
