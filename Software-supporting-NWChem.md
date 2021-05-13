@@ -84,6 +84,7 @@ feedback on this page content.
  - **GoodVibes** is a Python program to compute thermochemical data from electronic structure calculations <https://github.com/bobbypaton/GoodVibes>
  - **ChemDyME** is a Kinetically Steered, Automated Mechanism Generation Through Combined Molecular Dynamics and Master Equation Calculations <https://github.com/RobinShannon/ChemDyME>
  - **xtbdft** is a wrapper script for multi-level molecular modelling powered by CREST/GFN2-XTB and NWChem (DFT) <https://github.com/sibo/xtbdft>
+ - **OctaDist** is an inorganic chemistry and crystallography program for computing the distortion parameters in coordination complexes <https://octadist.github.io>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
