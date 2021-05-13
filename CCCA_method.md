@@ -36,58 +36,56 @@ available in this calculation. Alternatively the geometry optimization
 by B3LYP/cc-pVTZ is performed before the single point energy evaluation.
 For open shell molecules, the number of unpaired electrons must be given
 explicitly.
-
+```
 CCCA
 
-`       [(ENERGY||OPTIMIZE)   default ENERGY]`  
-`       [(DFT||DIRECT)   default DFT]`  
-`       [(MP2||MBPT2)   default MP2]`  
-`       [(RHF||ROHF||UHF)   default RHF]`  
-`       [(CCSD(T)||TCE)   default CCSD(T)]`  
-`       [NOPEN   <integer number of unpaired electrons   default   0 >]`  
-`       [(THERM||NOTHERM)   default  THERM]`  
-`       [(PRINT||NOPRINT) default NOPRINT]`  
-`       [BASIS `<basis name for orbital projection guess>`]`  
-`       [MOVEC `<file name for orbital projection guess>`]`  
-`END`
-
+       [(ENERGY||OPTIMIZE)   default ENERGY] 
+       [(DFT||DIRECT)   default DFT]  
+       [(MP2||MBPT2)   default MP2]  
+       [(RHF||ROHF||UHF)   default RHF]  
+       [(CCSD(T)||TCE)   default CCSD(T)]  
+       [NOPEN   <integer number of unpaired electrons   default   0 >]  
+       [(THERM||NOTHERM)   default  THERM]  
+       [(PRINT||NOPRINT) default NOPRINT]  
+       [BASIS <basis name for orbital projection guess>]  
+       [MOVEC <file name for orbital projection guess>]  
+END
+```
 One example of input file for single point energy evaluation is given
 here:
-
-start h2o\_ccca
+```
+start h2o_ccca
 
 title "H2O, ccCA test"
 
 geometry units au
 
-` H       0.0000000000   1.4140780900  -1.1031626600`  
-` H       0.0000000000  -1.4140780900  -1.1031626600`  
-` O       0.0000000000   0.0000000000  -0.0080100000`
-
+ H       0.0000000000   1.4140780900  -1.1031626600  
+ H       0.0000000000  -1.4140780900  -1.1031626600  
+ O       0.0000000000   0.0000000000  -0.0080100000
 end
 
 task ccca
-
+```
 An input file for the ground state of O2 with geometry optimization is
 given below:
-
-start o2\_ccca
+```
+start o2_ccca
 
 title "O2, ccCA test"
 
 geometry units au
 
-` O       0.0000000000   0.0000000000  -2.0000`  
-` O       0.0000000000   0.0000000000   0.0000`
+ O       0.0000000000   0.0000000000  -2.0000  
+ O       0.0000000000   0.0000000000   0.0000
 
 end
 
 ccca
-
-` optimize`  
-` dft`  
-` nopen 2`
-
+ optimize
+ dft  
+ nopen 2
 end
 
 task ccca
+```
