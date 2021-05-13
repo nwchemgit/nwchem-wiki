@@ -45,12 +45,12 @@ Examining the keywords on the first line of the BASIS directive:
     the SET directive (see [SET](Top-level#SET)).
 
   -   [SPHERICAL or CARTESIAN](#-spherical-or-cartesian)   
-    The keywords spherical and cartesian offer the option of using
+    The keywords `spherical` and `cartesian` offer the option of using
     either spherical-harmonic (5 d, 7 f, 9 g, ...) or Cartesian (6 d, 10
     f, 15 g, ...) angular functions. The default is Cartesian. Note that
     the correlation-consistent basis sets were designed using spherical
-    harmonics and to use these, the spherical keyword should be present
-    in the BASIS directive. The use of spherical functions also helps
+    harmonics and to use these, the `spherical` keyword should be present
+    in the `BASIS` directive. The use of spherical functions also helps
     eliminate problems with linear dependence.
 
 |    | Cartesian       | Spherical                                             |
