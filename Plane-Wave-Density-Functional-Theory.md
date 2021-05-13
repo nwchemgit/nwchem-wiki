@@ -293,7 +293,7 @@ END
 The following list describes the keywords contained in the PSPW input
 block.
 
-  - `cell_name` - name of the simulation\_cell named `cell_name`. See
+  - `cell_name` - name of the simulation_cell named `cell_name`. See
     section [Simulation Cell](#simulation-cell).
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
@@ -315,15 +315,15 @@ block.
     cutoff.
   - `ecut` - value for the cutoff energy used to define the density.
     Default is set to be the maximum value that will fit within the
-    simulation\_cell `cell_name`.
+    simulation_cell `cell_name`.
   - `wcut` - value for the cutoff energy used to define the one-electron
     orbitals. Default is set to be the maximum value that will fit
-    within the simulation\_cell `cell_name`.
+    within the simulation_cell `cell_name`.
   - `ncut` - value for the number of unit cells to sum over (in each
     direction) for the real space part of the Ewald summation. Note
-    Ewald summation is only used if the simulation\_cell is periodic.
+    Ewald summation is only used if the simulation_cell is periodic.
   - `rcut` - value for the cutoff radius used in the Ewald summation.
-    Note Ewald summation is only used if the simulation\_cell is
+    Note Ewald summation is only used if the simulation_cell is
     periodic.
 
 Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
@@ -338,7 +338,7 @@ Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$
   - EFIELD - optional keyword which if specified causes an atomic
     electric field analysis to be performed at the end of the
     simulation.
-  - ALLOW\_TRANSLATION - By default the the center of mass forces are
+  - ALLOW_TRANSLATION - By default the the center of mass forces are
     projected out of the computed forces. This optional keyword if
     specified allows the center of mass forces to not be zero.
   - TRANSLATION - By default the the center of mass forces are projected
@@ -767,7 +767,7 @@ citations the references to Grimme's work.
 
 (<span style="color: red;">*Warning - To use this capability in NWChem
 6.6 the user must explicitly include the nwxc module in the
-NWCHEM\_MODULES list when compiling. Unfortunately, there was too much
+NWCHEM_MODULES list when compiling. Unfortunately, there was too much
 uncertainty in how the nwxc computed higher-order derivatives used by
 some of the functionality in nwdft module to include it in a release for
 all the functionality in NWChem. We are planning to have a debug release
@@ -804,7 +804,7 @@ Potentials](Density-Functional-Theory-for-Molecules#XC_and_DECOMP_--_Exchange-Co
 ```
 These functional can be invoked by prepending the "new" directive before
 the exchange correlation potetntials in the input directive, XC new
-slater vwn\_5.
+slater vwn_5.
 
 That is, this statement in the input file
 ```
@@ -957,26 +957,26 @@ states are specified in the pspw calculation then the virtual density of
 states will also be generated in addition to the filled density of
 states.
 
-The following files are generated and written to the permanent\_dir for
+The following files are generated and written to the permanent_dir for
 restricted calculations
 
-  - file\_prefix.smear\_dos\_both - total density of states
-  - file\_prefix.smear\_fdos\_both - density of states of filled states
-  - file\_prefix.smear\_vdos\_both - density of states of virtual states
+  - file_prefix.smear_dos_both - total density of states
+  - file_prefix.smear_fdos_both - density of states of filled states
+  - file_prefix.smear_vdos_both - density of states of virtual states
 
 For unrestricted calculations
 
-  - file\_prefix.smear\_dos\_alpha - total density of states for up
+  - file_prefix.smear_dos_alpha - total density of states for up
     electrons
-  - file\_prefix.smear\_dos\_beta - total density of states for down
+  - file_prefix.smear_dos_beta - total density of states for down
     electrons
-  - file\_prefix.smear\_fdos\_alpha - density of states for filled up
+  - file_prefix.smear_fdos_alpha - density of states for filled up
     electrons
-  - file\_prefix.smear\_fdos\_beta - density of states for filled down
+  - file_prefix.smear_fdos_beta - density of states for filled down
     electrons
-  - file\_prefix.smear\_vdos\_alpha - density of states for virtual up
+  - file_prefix.smear_vdos_alpha - density of states for virtual up
     electrons
-  - file\_prefix.smear\_vdos\_beta - density of states for virtual down
+  - file_prefix.smear_vdos_beta - density of states for virtual down
     electrons
 
 The nwpw:dos:actlist variable is used to specify the atoms used to
@@ -996,76 +996,76 @@ nwpw
 end
 ```
 The following additional files are generated and written to the
-permanent\_dir for restricted calculations
+permanent_dir for restricted calculations
 
-  - file\_prefix.mulliken\_dos\_both\_s - total s projected density of
+  - file_prefix.mulliken_dos_both_s - total s projected density of
     restricted states
-  - file\_prefix.mulliken\_fdos\_both\_s - s projected density of states
+  - file_prefix.mulliken_fdos_both_s - s projected density of states
     of filled restricted states
-  - file\_prefix.mulliken\_vdos\_both\_s - s projected density of states
+  - file_prefix.mulliken_vdos_both_s - s projected density of states
     of virtual restricted states
-  - file\_prefix.mulliken\_dos\_both\_p - total p projected density of
+  - file_prefix.mulliken_dos_both_p - total p projected density of
     states
-  - file\_prefix.mulliken\_fdos\_both\_p - p projected density of states
+  - file_prefix.mulliken_fdos_both_p - p projected density of states
     of filled states
-  - file\_prefix.mulliken\_vdos\_both\_p - p projected density of states
+  - file_prefix.mulliken_vdos_both_p - p projected density of states
     of virtual states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_both\_all - total of projected density
+  - file_prefix.mulliken_dos_both_all - total of projected density
     of filled and virtual restricted states
-  - file\_prefix.mulliken\_fdos\_both\_all - total of projected density
+  - file_prefix.mulliken_fdos_both_all - total of projected density
     of filled restricted states
-  - file\_prefix.mulliken\_vdos\_both\_all - total of projected density
+  - file_prefix.mulliken_vdos_both_all - total of projected density
     of states of virtual restricted states
 
 Similarly for unrestricted calculations
 
-  - file\_prefix.mulliken\_dos\_alpha\_s - total s projected density of
+  - file_prefix.mulliken_dos_alpha_s - total s projected density of
     up states
-  - file\_prefix.mulliken\_fdos\_alpha\_s - s projected density of
+  - file_prefix.mulliken_fdos_alpha_s - s projected density of
     states of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_s - s projected density of
+  - file_prefix.mulliken_vdos_alpha_s - s projected density of
     states of virtual up states
-  - file\_prefix.mulliken\_dos\_alpha\_p - total p projected density of
+  - file_prefix.mulliken_dos_alpha_p - total p projected density of
     up states
-  - file\_prefix.mulliken\_fdos\_alpha\_p - p projected density of
+  - file_prefix.mulliken_fdos_alpha_p - p projected density of
     states of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_p - p projected density of
+  - file_prefix.mulliken_vdos_alpha_p - p projected density of
     states of virtual up states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_dos_alpha_all - total of projected density
     of filled up states
-  - file\_prefix.mulliken\_fdos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_fdos_alpha_all - total of projected density
     of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_vdos_alpha_all - total of projected density
     of states of virtual up states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_beta\_s - total s projected density of
+  - file_prefix.mulliken_dos_beta_s - total s projected density of
     down states
-  - file\_prefix.mulliken\_fdos\_beta\_s - s projected density of states
+  - file_prefix.mulliken_fdos_beta_s - s projected density of states
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_s - s projected density of states
+  - file_prefix.mulliken_vdos_beta_s - s projected density of states
     of virtual down states
-  - file\_prefix.mulliken\_dos\_beta\_p - total p projected density of
+  - file_prefix.mulliken_dos_beta_p - total p projected density of
     down states
-  - file\_prefix.mulliken\_fdos\_beta\_p - p projected density of states
+  - file_prefix.mulliken_fdos_beta_p - p projected density of states
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_p - p projected density of states
+  - file_prefix.mulliken_vdos_beta_p - p projected density of states
     of virtual down states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_beta\_all - total of projected density
+  - file_prefix.mulliken_dos_beta_all - total of projected density
     of filled down states
-  - file\_prefix.mulliken\_fdos\_beta\_all - total of projected density
+  - file_prefix.mulliken_fdos_beta_all - total of projected density
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_all - total of projected density
+  - file_prefix.mulliken_vdos_beta_all - total of projected density
     of states of virtual down states
 
 ### Point Charge Analysis
@@ -1167,7 +1167,7 @@ LIMITXYZ [units <string Units default angstroms>]
 By default the grid spacing and the limits of the cell to be plotted are
 defined by the input wavefunctions. Alternatively the user can use the
 LIMITXYZ sub-directive to specify other limits. The grid is generated
-using No\_Of\_Spacings + 1 points along each direction. The known names
+using No_Of_Spacings + 1 points along each direction. The known names
 for Units are angstroms, au and bohr.
 
 ## Band Tasks - Multiple k-point Calculations
@@ -1237,7 +1237,7 @@ END
 ```
 The following list describes these keywords.
 
-  - `cell_name` - name of the simulation\_cell named `cell_name`. See
+  - `cell_name` - name of the simulation_cell named `cell_name`. See
     [Simulation Cell](#simulation-Cell).
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
@@ -1258,15 +1258,15 @@ The following list describes these keywords.
     cutoff.
   - `ecut` - value for the cutoff energy used to define the density.
     Default is set to be the maximum value that will fit within the
-    simulation\_cell `cell_name`.
+    simulation_cell `cell_name`.
   - `wcut` - value for the cutoff energy used to define the one-electron
     orbitals. Default is set to be the maximum value that will fix
-    within the simulation\_cell `cell_name`.
+    within the simulation_cell `cell_name`.
   - `ncut` - value for the number of unit cells to sum over (in each
     direction) for the real space part of the Ewald summation. Note
-    Ewald summation is only used if the simulation\_cell is periodic.
+    Ewald summation is only used if the simulation_cell is periodic.
   - `rcut` - value for the cutoff radius used in the Ewald summation.
-    Note Ewald summation is only used if the simulation\_cell is
+    Note Ewald summation is only used if the simulation_cell is
     periodic.
 
  Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
@@ -1274,8 +1274,8 @@ The following list describes these keywords.
   - (Vosko || PBE96 || revPBE) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
     Ernzerhof GGA functional.
-  - SIMULATION\_CELL (see section -sec:pspw\_cell-)
-  - BRILLOUIN\_ZONE (see section -sec:band\_brillouin\_zone-)
+  - SIMULATION_CELL (see section -sec:pspw_cell-)
+  - BRILLOUIN_ZONE (see section -sec:band_brillouin_zone-)
   - MONKHORST-PACK - Alternatively, the MONKHORST-PACK keyword can be
     used to enter a MONKHORST-PACK sampling of the Brillouin zone.
   - `smear` - value for smearing broadending
@@ -1289,8 +1289,8 @@ The following list describes these keywords.
 ### Brillouin Zone
 
 To supply the special points of the Brillouin zone, the user defines a
-brillouin\_zone sub-block within the NWPW block. Listed below is the
-format of a brillouin\_zone
+brillouin_zone sub-block within the NWPW block. Listed below is the
+format of a brillouin_zone
 sub-block.
 ```
 NWPW  
@@ -1379,26 +1379,26 @@ states are specified in the pspw calculation then the virtual density of
 states will also be generated in addition to the filled density of
 states.
 
-The following files are generated and written to the permanent\_dir for
+The following files are generated and written to the permanent_dir for
 restricted calculations
 
-  - file\_prefix.smear\_dos\_both - total density of states
-  - file\_prefix.smear\_fdos\_both - density of states of filled states
-  - file\_prefix.smear\_vdos\_both - density of states of virtual states
+  - file_prefix.smear_dos_both - total density of states
+  - file_prefix.smear_fdos_both - density of states of filled states
+  - file_prefix.smear_vdos_both - density of states of virtual states
 
 For unrestricted calculations
 
-  - file\_prefix.smear\_dos\_alpha - total density of states for up
+  - file_prefix.smear_dos_alpha - total density of states for up
     electrons
-  - file\_prefix.smear\_dos\_beta - total density of states for down
+  - file_prefix.smear_dos_beta - total density of states for down
     electrons
-  - file\_prefix.smear\_fdos\_alpha - density of states for filled up
+  - file_prefix.smear_fdos_alpha - density of states for filled up
     electrons
-  - file\_prefix.smear\_fdos\_beta - density of states for filled down
+  - file_prefix.smear_fdos_beta - density of states for filled down
     electrons
-  - file\_prefix.smear\_vdos\_alpha - density of states for virtual up
+  - file_prefix.smear_vdos_alpha - density of states for virtual up
     electrons
-  - file\_prefix.smear\_vdos\_beta - density of states for virtual down
+  - file_prefix.smear_vdos_beta - density of states for virtual down
     electrons
 
 The nwpw:dos:actlist variable is used to specify the atoms used to
@@ -1416,88 +1416,88 @@ nwpw
 end
 ```
 The following additional files are generated and written to the
-permanent\_dir for restricted calculations
+permanent_dir for restricted calculations
 
-  - file\_prefix.mulliken\_dos\_both\_s - total s projected density of
+  - file_prefix.mulliken_dos_both_s - total s projected density of
     restricted states
-  - file\_prefix.mulliken\_fdos\_both\_s - s projected density of states
+  - file_prefix.mulliken_fdos_both_s - s projected density of states
     of filled restricted states
-  - file\_prefix.mulliken\_vdos\_both\_s - s projected density of states
+  - file_prefix.mulliken_vdos_both_s - s projected density of states
     of virtual restricted states
-  - file\_prefix.mulliken\_dos\_both\_p - total p projected density of
+  - file_prefix.mulliken_dos_both_p - total p projected density of
     states
-  - file\_prefix.mulliken\_fdos\_both\_p - p projected density of states
+  - file_prefix.mulliken_fdos_both_p - p projected density of states
     of filled states
-  - file\_prefix.mulliken\_vdos\_both\_p - p projected density of states
+  - file_prefix.mulliken_vdos_both_p - p projected density of states
     of virtual states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_both\_all - total of projected density
+  - file_prefix.mulliken_dos_both_all - total of projected density
     of filled and virtual restricted states
-  - file\_prefix.mulliken\_fdos\_both\_all - total of projected density
+  - file_prefix.mulliken_fdos_both_all - total of projected density
     of filled restricted states
-  - file\_prefix.mulliken\_vdos\_both\_all - total of projected density
+  - file_prefix.mulliken_vdos_both_all - total of projected density
     of states of virtual restricted states
 
 Similarly for unrestricted calculations
 
-  - file\_prefix.mulliken\_dos\_alpha\_s - total s projected density of
+  - file_prefix.mulliken_dos_alpha_s - total s projected density of
     up states
-  - file\_prefix.mulliken\_fdos\_alpha\_s - s projected density of
+  - file_prefix.mulliken_fdos_alpha_s - s projected density of
     states of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_s - s projected density of
+  - file_prefix.mulliken_vdos_alpha_s - s projected density of
     states of virtual up states
-  - file\_prefix.mulliken\_dos\_alpha\_p - total p projected density of
+  - file_prefix.mulliken_dos_alpha_p - total p projected density of
     up states
-  - file\_prefix.mulliken\_fdos\_alpha\_p - p projected density of
+  - file_prefix.mulliken_fdos_alpha_p - p projected density of
     states of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_p - p projected density of
+  - file_prefix.mulliken_vdos_alpha_p - p projected density of
     states of virtual up states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_dos_alpha_all - total of projected density
     of filled up states
-  - file\_prefix.mulliken\_fdos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_fdos_alpha_all - total of projected density
     of filled up states
-  - file\_prefix.mulliken\_vdos\_alpha\_all - total of projected density
+  - file_prefix.mulliken_vdos_alpha_all - total of projected density
     of states of virtual up states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_beta\_s - total s projected density of
+  - file_prefix.mulliken_dos_beta_s - total s projected density of
     down states
-  - file\_prefix.mulliken\_fdos\_beta\_s - s projected density of states
+  - file_prefix.mulliken_fdos_beta_s - s projected density of states
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_s - s projected density of states
+  - file_prefix.mulliken_vdos_beta_s - s projected density of states
     of virtual down states
-  - file\_prefix.mulliken\_dos\_beta\_p - total p projected density of
+  - file_prefix.mulliken_dos_beta_p - total p projected density of
     down states
-  - file\_prefix.mulliken\_fdos\_beta\_p - p projected density of states
+  - file_prefix.mulliken_fdos_beta_p - p projected density of states
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_p - p projected density of states
+  - file_prefix.mulliken_vdos_beta_p - p projected density of states
     of virtual down states
 
 ...
 
-  - file\_prefix.mulliken\_dos\_beta\_all - total of projected density
+  - file_prefix.mulliken_dos_beta_all - total of projected density
     of filled down states
-  - file\_prefix.mulliken\_fdos\_beta\_all - total of projected density
+  - file_prefix.mulliken_fdos_beta_all - total of projected density
     of filled down states
-  - file\_prefix.mulliken\_vdos\_beta\_all - total of projected density
+  - file_prefix.mulliken_vdos_beta_all - total of projected density
     of states of virtual down states
 
 
 ### Two-Component Wavefunctions (Spin-Orbit ZORA)
 
-### BAND\_DPLOT - Generate Gaussian Cube Files
+### BAND_DPLOT - Generate Gaussian Cube Files
 
-The BAND BAND\_DPLOT task is used to generate plots of various types of
+The BAND BAND_DPLOT task is used to generate plots of various types of
 electron densities (or orbitals) of a crystal. The electron density is
 calculated on the specified set of grid points from a Band calculation.
 The output file generated is in the Gaussian Cube format. Input to the
-BAND\_DPLOT task is contained within the BAND\_DPLOT sub-block.
+BAND_DPLOT task is contained within the BAND_DPLOT sub-block.
 ```
 NWPW   
 ...  
@@ -1507,11 +1507,11 @@ NWPW
 ...
 END
 ```
-To run a BAND\_DPLOT calculation the following directive is used:
+To run a BAND_DPLOT calculation the following directive is used:
 
 `TASK BAND BAND_DPLOT`
 
-Listed below is the format of a BAND\_DPLOT
+Listed below is the format of a BAND_DPLOT
 sub-block.
 ```
 NWPW
@@ -1532,7 +1532,7 @@ NWPW
 ...
 END
 ```
-The following list describes the input for the BAND\_DPLOT sub-block.
+The following list describes the input for the BAND_DPLOT sub-block.
 
 `VECTORS <string input_wavefunctions default input_movecs>`
 
@@ -1567,7 +1567,7 @@ LIMITXYZ [units <string Units default angstroms>]
 By default the grid spacing and the limits of the cell to be plotted are
 defined by the input wavefunctions. Alternatively the user can use the
 LIMITXYZ sub-directive to specify other limits. The grid is generated
-using No\_Of\_Spacings + 1 points along each direction. The known names
+using No_Of_Spacings + 1 points along each direction. The known names
 for Units are angstroms, au and bohr.
 
 ## Car-Parrinello
@@ -1643,7 +1643,7 @@ END
 ```
 The following list describes the input for the Car-Parrinello sub-block.
 
-  - `cell_name` - name of the the simulation\_cell named `cell_name`.
+  - `cell_name` - name of the the simulation_cell named `cell_name`.
     See section [Simulation Cell](#simulation-cell).
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
@@ -1665,15 +1665,15 @@ The following list describes the input for the Car-Parrinello sub-block.
     velocities.
   - `ecut` - value for the cutoff energy used to define the density.
     Default is set to be the maximum value that will fit within the
-    simulation\_cell `cell_name`.
+    simulation_cell `cell_name`.
   - `wcut` - value for the cutoff energy used to define the one-electron
     orbitals. Default is set to be the maximum value that will fit
-    within the simulation\_cell `cell_name`.
+    within the simulation_cell `cell_name`.
   - `ncut` - value for the number of unit cells to sum over (in each
     direction) for the real space part of the Ewald summation. Note
-    Ewald summation is only used if the simulation\_cell is periodic.
+    Ewald summation is only used if the simulation_cell is periodic.
   - `rcut` - value for the cutoff radius used in the Ewald summation.
-    Note Ewald summation is only used if the simulation\_cell is
+    Note Ewald summation is only used if the simulation_cell is
     periodic.
 
  Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
@@ -1684,7 +1684,7 @@ The following list describes the input for the Car-Parrinello sub-block.
   - Nose-Hoover or Temperature - optional subblock which if specified
     causes the simulation to perform Nose-Hoover dynamics. If this
     subblock is not specified the simulation performs constant energy
-    dynamics. See section -sec:pspw\_nose- for a description of the
+    dynamics. See section -sec:pspw_nose- for a description of the
     parameters. Note that the Temperature subblock is just a reordering
     of the Nose-Hoover subblock.
       - `Period_electron` \(\equiv P_{electron}\) - estimated period for
@@ -1697,11 +1697,11 @@ The following list describes the input for the Car-Parrinello sub-block.
         motion
       - `Chainlength_electron` - number of electron thermostat chains
       - `Chainlength_ion` - number of ion thermostat chains
-  - SA\_decay - optional subblock which if specified causes the
+  - SA_decay - optional subblock which if specified causes the
     simulation to run a simulated annealing simulation. For simulated
     annealing to work the Nose-Hoover subblock needs to be specified.
     The initial temperature are taken from the Nose-Hoover subblock. See
-    section -sec:pspw\_nose- for a description of the parameters.
+    section -sec:pspw_nose- for a description of the parameters.
       - `sa_scale_c` \(\equiv \tau_{electron}\) - decay rate in atomic
         units for electronic temperature.
       - `sa_scale_r` \(\equiv \tau_{ionic}\) - decay rate in atomic
@@ -1716,8 +1716,8 @@ The following list describes the input for the Car-Parrinello sub-block.
   - `eigmotion_filename` - name of the eigmotion motion file. See
     section [EIGMOTION motion file](#eigmotion-motion-file)
     for a description of the datafile.
-  - `ion_motion_filename` - name of the ion\_motion motion file. See
-    section [ION\_MOTION motion file](#ion_motion-motion-file)- for a description of the
+  - `ion_motion_filename` - name of the ion_motion motion file. See
+    section [ION_MOTION motion file](#ion_motion-motion-file)- for a description of the
     datafile.
   - MULLIKEN - optional keyword which if specified causes an omotion
     motion file to be created.
@@ -1806,7 +1806,7 @@ end do
 end do
 [line 2*n_ion+4: ] ....
 ```
-#### ION\_MOTION motion file
+#### ION_MOTION motion file
 
 Datafile that stores ion positions and velocities as a function of
 time
@@ -2140,13 +2140,13 @@ The functionality of this task is now performed automatically by the
 PSPW and BAND. For backward compatibility, we provide a description of
 the input to this task.
 
-The steepest\_descent task is used to optimize the one-electron orbitals
+The steepest_descent task is used to optimize the one-electron orbitals
 with respect to the total energy. In addition it can also be used to
 optimize geometries. This method is meant to be used for coarse
 optimization of the one-electron orbitals.
 
-Input to the steepest\_descent simulation is contained within the
-steepest\_descent sub-block.
+Input to the steepest_descent simulation is contained within the
+steepest_descent sub-block.
 ```
 NWPW   
 ...   
@@ -2156,14 +2156,14 @@ NWPW
 ...  
 END
 ```
-To run a steepest\_descent calculation the following directive is used:
+To run a steepest_descent calculation the following directive is used:
 ```
 TASK PSPW steepest_descent  
 TASK BAND steepest_descent 
 ```
-The steepest\_descent sub-block contains a great deal of input,
+The steepest_descent sub-block contains a great deal of input,
 including pointers to data, as well as parameter input. Listed below is
-the format of a STEEPEST\_DESCENT
+the format of a STEEPEST_DESCENT
 sub-block.
 ```
 NWPW  
@@ -2191,12 +2191,12 @@ NWPW
 ...  
 END
 ```
-The following list describes the input for the STEEPEST\_DESCENT
+The following list describes the input for the STEEPEST_DESCENT
 sub-block.
 
-  - `cell_name` - name of the simulation\_cell named `cell_name`. See
+  - `cell_name` - name of the simulation_cell named `cell_name`. See
     [Simulation Cell](#simulation-cell).
-  - GEOMETRY\_OPTIMIZE - optional keyword which if specified turns on
+  - GEOMETRY_OPTIMIZE - optional keyword which if specified turns on
     geometry optimization.
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
@@ -2218,9 +2218,9 @@ sub-block.
     within the simulation_cell `cell_name`.
   - `ncut` - value for the number of unit cells to sum over (in each
     direction) for the real space part of the Ewald summation. Note
-    Ewald summation is only used if the simulation\_cell is periodic.
+    Ewald summation is only used if the simulation_cell is periodic.
   - `rcut` - value for the cutoff radius used in the Ewald summation.
-    Note Ewald summation is only used if the simulation\_cell is
+    Note Ewald summation is only used if the simulation_cell is
     periodic.
 
  Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
@@ -2235,8 +2235,8 @@ sub-block.
 ## Simulation Cell
 
 The simulation cell parameters are entered by defining a
-simulation\_cell sub-block within the PSPW block. Listed below is the
-format of a simulation\_cell sub-block.
+simulation_cell sub-block within the PSPW block. Listed below is the
+format of a simulation_cell sub-block.
 ```
 NWPW 
 ...   
@@ -2466,7 +2466,7 @@ geometry units angstrom nocenter noautosym noautoz print xyz
  H^ 0.5654E+01 -0.2540E+01 -0.7127E+00  
 end
 ```
-Another way to specify the MM atoms is to use the mm\_tags option which
+Another way to specify the MM atoms is to use the mm_tags option which
 appends the atoms with a " ^ ".
 ```
 geometry units angstrom nocenter noautosym noautoz print xyz  
@@ -2488,7 +2488,7 @@ NWPW
   END  
 END
 ```
-The option "mm\_tags off" can be used to remove the " ^ " from the
+The option "mm_tags off" can be used to remove the " ^ " from the
 atoms, i.e.
 ```
 NWPW  
@@ -2594,7 +2594,7 @@ NWPW
  END  
 END
 ```
-## PSP\_GENERATOR
+## PSP_GENERATOR
 
 A one-dimensional pseudopotential code has been integrated into NWChem.
 This code allows the user to modify and develop pseudopotentials.
@@ -2605,7 +2605,7 @@ Libraries](#Pseudopotential_and_PAW_basis_Libraries)) will be
 more complete, so that the user will not have explicitly generate
 pseudopotentials using this module.
 
-Input to the PSP\_GENERATOR task is contained within the PSP\_GENERATOR
+Input to the PSP_GENERATOR task is contained within the PSP_GENERATOR
 sub-block.
 ```
 NWPW   
@@ -2616,11 +2616,11 @@ NWPW
 ...  
 END
 ```
-To run a PSP\_GENERATOR calculation the following directive is used:
+To run a PSP_GENERATOR calculation the following directive is used:
 
 `TASK PSPW PSP_GENERATOR`
 
-Listed below is the format of a PSP\_GENERATOR
+Listed below is the format of a PSP_GENERATOR
 sub-block.
 ```
 NWPW  
@@ -2644,7 +2644,7 @@ NWPW
 ...   
 END
 ```
-The following list describes the input for the PSP\_GENERATOR sub-block.
+The following list describes the input for the PSP_GENERATOR sub-block.
 
   - `psp_name` - name that points to a.
   - `element` - Atomic symbol.
@@ -2652,15 +2652,15 @@ The following list describes the input for the PSP\_GENERATOR sub-block.
   - `mass` - mass number for the atom
   - `ncore` - number of core states
   - `nvalence` - number of valence states.
-  - ATOMIC\_FILLING:.....(see below)
+  - ATOMIC_FILLING:.....(see below)
   - `filling` - occupation of atomic state
   - CUTOFF:....(see below)
   - `rcore` - value for the semicore radius (see below)
 
-### ATOMIC\_FILLING Block
+### ATOMIC_FILLING Block
 
 This required block is used to define the reference atom which is used
-to define the pseudopotential. After the ATOMIC\_FILLING: <ncore>
+to define the pseudopotential. After the ATOMIC_FILLING: <ncore>
 <nvalence> line, the core states are listed (one per line), and then the
 valence states are listed (one per line). Each state contains two
 integer and a value. The first integer specifies the radial quantum
@@ -2722,9 +2722,9 @@ CUTOFF: 2
  p 1.275   
  d 1.275
 ```
-### SEMICORE\_RADIUS
+### SEMICORE_RADIUS
 
-Specifying the SEMICORE\_RADIUS option turns on the semicore correction
+Specifying the SEMICORE_RADIUS option turns on the semicore correction
 approximation proposed by Louie et al (S.G. Louie, S. Froyen, and M.L.
 Cohen, Phys. Rev. B, **26**(, 1738, (1982)). This approximation is known
 to dramatically improve results for systems containing alkali and
@@ -2807,10 +2807,10 @@ END
 ```
 The following list describes these keywords.
 
-  - `cell_name` - name of the the simulation\_cell named `cell_name`.
+  - `cell_name` - name of the the simulation_cell named `cell_name`.
     The current version of PAW only accepts periodic unit cells. See
     [Simulation Cell](#simulation-cell).
-  - GEOMETRY\_OPTIMIZE - optional keyword which if specified turns on
+  - GEOMETRY_OPTIMIZE - optional keyword which if specified turns on
     geometry optimization.
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
@@ -2831,10 +2831,10 @@ The following list describes these keywords.
     cutoff.
   - `ecut` - value for the cutoff energy used to define the density.
     Default is set to be the maximum value that will fit within the
-    simulation\_cell `cell_name`.
+    simulation_cell `cell_name`.
   - `wcut` - value for the cutoff energy used to define the one-electron
     orbitals. Default is set to be the maximum value that will fix
-    within the simulation\_cell `cell_name`.
+    within the simulation_cell `cell_name`.
   - `ncuth` - value for the number of unit cells to sum over (in each
     direction) for the real space part of the smooth compensation
     summation.
@@ -2848,9 +2848,9 @@ Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$
     Ernzerhof GGA functional.
   - MULT - optional keyword which if specified allows the user to define
     the spin multiplicity of the system
-  - INTEGRATE\_MULT\_L - optional keyword which if specified allows the
+  - INTEGRATE_MULT_L - optional keyword which if specified allows the
     user to define the angular XC integration of the augmented region
-  - SIMULATION\_CELL (see [Simulation Cell](#simulation-cell) )
+  - SIMULATION_CELL (see [Simulation Cell](#simulation-cell) )
   - CAR-PARRINELLO (see [Car-Parrinello](#car-parrinello) )
   - `mapping` - for a value of 1 slab FFT is used, for a value of 2 a
     2d-Hilbert FFT is used.
@@ -2968,7 +2968,7 @@ e.g. c.teter have to be prepended with the "<TETER>" keyword.
 
 If you wish to redirect the code to a different directory other than the
 default one, you need to set the environmental variable
-NWCHEM\_NWPW\_LIBRARY to the new location of the libraryps directory.
+NWCHEM_NWPW_LIBRARY to the new location of the libraryps directory.
 
 ## NWPW RTDB Entries and Miscellaneous DataFiles
 
@@ -2995,8 +2995,8 @@ in the RTDB, and must be specified using the GEOMETRY directive.
 
 The one-electron orbitals are stored in a wavefunction datafile. This is
 a binary file and cannot be directly edited. This datafile is used by
-steepest\_descent and Car-Parrinello tasks and can be generated using
-the wavefunction\_initializer or wavefunction\_expander tasks.
+steepest_descent and Car-Parrinello tasks and can be generated using
+the wavefunction_initializer or wavefunction_expander tasks.
 
 ### Velocity Wavefunction Datafile
 
@@ -3018,7 +3018,7 @@ automatically generated.
 The one-dimensional pseudopotentials are stored in a one-dimensional
 pseudopotential file ("atomname.psp"). This is an ASCII file and can be
 directly edited with a text editor or can be generated using the
-pspw\_generator task. However, these datafiles are usually atomatically
+pspw_generator task. However, these datafiles are usually atomatically
 generated.
 
 The data stored in the one-dimensional pseudopotential file is
@@ -3637,7 +3637,7 @@ respectively. In the present calculations T0=3500K and τ=4.134e+4 au
 initial values determined by T=Te=3500K and (2π/ω)=250 a.u. (6 fs).
 Annealing proceeded for 50000 steps, until a temperature of 10K was
 reached. After which, the metastable structure is optimized using the
-driver optimizer. The keyword SA\_decay is used to enter the decay
+driver optimizer. The keyword SA_decay is used to enter the decay
 rates, τelectron and τion, used in the simulated annealing algorithm in
 the constant temperature car-parrinello simulation. The decay rates are
 in units of au (conversion 1 au = 2.41889e-17 seconds).
@@ -3877,7 +3877,7 @@ output:[Media:catom-pspw.nwout](catom-pspw.nwout))
 
 The following example uses the PSPW module to optimize the unit cell and
 geometry for a diamond crystal. The fractional coordinates and the unit
-cell are defined in the geometry block. The simulation\_cell block is
+cell are defined in the geometry block. The simulation_cell block is
 not needed since NWPW automatically uses the unit cell defined in the
 geometry
 block.
@@ -4246,12 +4246,12 @@ cell.
 
 (input:[Media:diamond-structure.nw](diamond-structure.nw),
 output:[Media:diamond-structure.nwout](diamond-structure.nwout),
-[file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat))
+[file:diamondfcc.restricted_band.dat](diamondfcc.restricted_band.dat))
 
 The following example uses the BAND module to calculate the band
 structure for the FCC cell of the a diamond crystal. The fractional
 coordinates and the unit cell are defined in the geometry block. The
-simulation\_cell block is not needed since NWPW automatically uses the
+simulation_cell block is not needed since NWPW automatically uses the
 unit cell defined in the geometry
 block.
 ```
@@ -4302,8 +4302,8 @@ end
 task band structure
 ```
 This calculation outputs the
-[file:diamondfcc.restricted\_band.dat](diamondfcc.restricted_band.dat))
-data file in the permanent\_directory. A plotting (e.g. gnuplot or
+[file:diamondfcc.restricted_band.dat](diamondfcc.restricted_band.dat))
+data file in the permanent_directory. A plotting (e.g. gnuplot or
 xmgrace) can be used to display the band structure.
 
 <center>
@@ -4415,7 +4415,7 @@ end
 task band dos
 ```
 
-This calculation outputs the ![diamond-dos.dos.dat](diamond-dos.dos.dat) data file in the permanent\_directory. A plotting
+This calculation outputs the ![diamond-dos.dos.dat](diamond-dos.dos.dat) data file in the permanent_directory. A plotting
 (e.g. gnuplot or xmgrace) can be used to display the density of
 states.
 
@@ -4840,9 +4840,9 @@ diamond crystal using the a Metropolis Monte-Carlo algorithm.
 <!-- (input:[Media:diamond-nvt.nw](diamond-nvt.nw),
 output:[Media:diamond-nvt.nwout.gz](diamond-nvt.nwout.gz),
 datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz),
-[Media:diamond-nvt.ion\_motion.gz](diamond-nvt.ion_motion.gz),
+[Media:diamond-nvt.ion_motion.gz](diamond-nvt.ion_motion.gz),
 [Media:diamond-nvt.xyz.gz](diamond-nvt.xyz.gz),
-[Media:diamond\_nvt\_234.cif.gz](diamond_nvt_234.cif.gz)) -->
+[Media:diamond_nvt_234.cif.gz](diamond_nvt_234.cif.gz)) -->
 
 ![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
 T=300K.](diamond-nvt.gif "NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
@@ -4922,9 +4922,9 @@ algorithm.
 (input:[Media:diamond-metropolis.nw](diamond-metropolis.nw),
 output:[Media:diamond-metropolis.nwout.gz](diamond-metropolis.nwout.gz),
 datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz),
-[Media:diamond-metropolis.ion\_motion.gz](diamond-metropolis.ion_motion.gz),
+[Media:diamond-metropolis.ion_motion.gz](diamond-metropolis.ion_motion.gz),
 [Media:diamond-metropolis.xyz.gz](diamond-metropolis.xyz.gz),
-[Media:diamond\_metropolis\_1234.cif.gz](diamond_metropolis_1234.cif.gz))
+[Media:diamond_metropolis_1234.cif.gz](diamond_metropolis_1234.cif.gz))
 ```
 title "Metropolis NPT simulation of diamond - this input is used to put the system in equilibrium"  
 echo  
