@@ -14,7 +14,7 @@ with the aug-cc-pVnZ (n=T,D,Q) series of basis sets, \(\Delta E_{CC}\) is the co
 
 \(\Delta E_{CV}\) is the core-valence correction,
 
-\(\Delta E_{CV} = E_{MP2(FC1)/aug-cc-pCVTZ} \; \ ; \; \; \;  -  E_{MP2/aug-cc-pVTZ}\)
+\(\Delta E_{CV} = E_{MP2(FC1)/aug-cc-pCVTZ} \; \; \; \; \;  -  E_{MP2/aug-cc-pVTZ}\)
 
 \(\Delta E_{SR}\) is the scalar-relativistic correction,
 
