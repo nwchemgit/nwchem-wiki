@@ -325,6 +325,10 @@ Notes:
     For ACML the int64 libraries should be chosen, e.g. in the case of
     ACML 4.4.0 using a PGI compiler
     /opt/acml/4.4.0/pgi64\_int64/lib/libacml.a
+    
+**_New in NWChem 7.0.2_**: 
+1. The environment variable `BUILD_OPENBLAS` can be used to automatically build the OpenBLAS library during a NWChem compilation (either using `BLAS_SIZE=8` or `BLAS_SIZE=4`)
+2. The environment variable `BUILD_SCALAPACK` can be used to automatically build the ScaLapack library during a NWChem compilation (either using `SCALAPACK_SIZE=8` or `SCALAPACK_SIZE=4`)
 
 ### Linking in NBO
 
