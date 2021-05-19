@@ -238,7 +238,7 @@ should be set as 2.7
 
 You will also need to set PYTHONPATH to include any modules that you are
 using in your input. Examples of Python within NWChem are in the
-$NWCHEM\_TOP/QA/tests/pyqa and $NWCHEM\_TOP/contrib/python directories.
+`$NWCHEM_TOP/QA/tests/pyqa3` and `$NWCHEM_TOP/contrib/python` directories.
 
 ### Optimized math libraries
 
@@ -314,7 +314,7 @@ Notes:
 ```
           #INTERFACE64 = 1
 ```
-                needs to be changed to
+   needs to be changed to
 ```
           INTERFACE64 = 1
 ```
