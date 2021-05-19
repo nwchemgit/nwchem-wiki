@@ -15,6 +15,12 @@ Fedora and EPEL: [https://admin.fedoraproject.org/updates/search/nwchem](https:/
 
 Good search engine for NWChem Linux packages: [https://pkgs.org/search/?q=nwchem](https://pkgs.org/search/?q=nwchem)
 
+## Example of NWChem installation on Debian/Ubuntu
+
+```
+sudo apt-get  install nwchem
+```
+
 ## Example of NWChem RPM installation under RedHat 6 x86_64
 
 ```
