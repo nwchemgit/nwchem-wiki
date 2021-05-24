@@ -85,6 +85,7 @@ feedback on this page content.
  - **ChemDyME** is a Kinetically Steered, Automated Mechanism Generation Through Combined Molecular Dynamics and Master Equation Calculations <https://github.com/RobinShannon/ChemDyME>
  - **xtbdft** is a wrapper script for multi-level molecular modelling powered by CREST/GFN2-XTB and NWChem (DFT) <https://github.com/sibo/xtbdft>
  - **OctaDist** is an inorganic chemistry and crystallography program for computing the distortion parameters in coordination complexes <https://octadist.github.io>
+ - **PyADF** is a scripting framework for multiscale quantum chemistry <https://github.com/chjacob-tubs/pyadf-releases>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
