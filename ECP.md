@@ -33,7 +33,7 @@ These are summed into the full potential
 The spin-orbit potential is obtained from the difference between the
 REPs for the two \(j\) values for a given \(l\), and may be represented in
 terms of an effective spin-orbit operator,
-\(H^{SO} = \mathbf{s} \cdot \sum_{l=1}^{L-1} \frac{2}{2l+1} \Delta U^{REP}_l \sum_{mm'}\langle{lm} \vert \hat{l} \vert {lm'} \rangle \langle{lm'} \vert.\)
+\(H^{SO} = \mathbf{\hat{s}} \cdot \sum_{l=1}^{L-1} \frac{2}{2l+1} \Delta U^{REP}_l \sum_{mm'}\vert {lm} \rangle \langle{lm} \vert \mathbf{\hat{l}} \vert {lm'} \rangle \langle{lm'} \vert.\)
 
 where
 
@@ -48,7 +48,7 @@ as an effective spin-orbit operator without further factors introduced.
 The effective potentials, both scalar and spin-orbit, are fitted to
 Gaussians with the form
 
-\(r^{2}U_{l}(r) = \,\! \sum_{k} A_{lk} r^{n_{lk}} e^{-B_{lk}r^{2}}\)
+\(U_{l}(r) =  r^{-2} \sum_{k} A_{lk} r^{n_{lk}} e^{-B_{lk}r^{2}}\)
 
 where \(A_{lk}\) is the contraction coefficient, \(n_{lk}\) is the
 exponent of the \(r\) term (r-exponent), and \(B_{lk}\) is the Gaussian
