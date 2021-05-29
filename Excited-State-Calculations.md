@@ -292,17 +292,17 @@ will be considered.
 ### EWIN -- energy window
 
 This keyword enables a restricted energy window between a lower energy
-cutoff and a higher energy cutoff. For example, ewin -20.0 -10.0 will
+cutoff and a higher energy cutoff. For example, `ewin -20.0 -10.0` will
 only consider excitations from occupied orbitals within the specified
 energy window
 
 ### Alpha, Beta -- alpha, beta orbital windows
 
 Orbital windows can be specified using the following keywords:
-
- * alpha 1 4
- * beta 2 5
-
+```
+  alpha 1 4
+  beta 2 5
+```
 Here alpha excitations will be considered from orbitals 1 through 4
 depending on the number of roots requested and beta excitations will be
 considered from orbitals 2 through 5 depending on the number of roots
