@@ -609,11 +609,12 @@ becomes
 `cam` represents the attenuation parameter &mu;, `cam_alpha` and
 `cam_beta` are the  &alpha; and &beta; parameters that control the
 amount of short-range DFT and long-range HF Exchange according to the
-Ewald decomposition. As <img alt="\(r_{12} \rightarrow 0\)" src="svgs/8175ba1917135d1efdde5463e7eb7c98.svg?invert_in_darkmode&sanitize=true" align=middle width="55.01331pt" height="21.10812pt"/>, the HF exchange
-fraction is <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>, while the DFT exchange fraction is
-<img alt="\((1-\alpha)\)" src="svgs/491890f3829ee2642d52fc90dd9a270f.svg?invert_in_darkmode&sanitize=true" align=middle width="51.506895pt" height="24.56553pt"/>. As <img alt="\(r_{12} \rightarrow \infty\)" src="svgs/c0e7cebce699a3e05c018ea42a78a091.svg?invert_in_darkmode&sanitize=true" align=middle width="63.201765pt" height="14.10255pt"/>, the HF exchange
-fraction approaches <img alt="\(\alpha + \beta\)" src="svgs/c1a73141d41bf7fb1026a4ac24f6110a.svg?invert_in_darkmode&sanitize=true" align=middle width="40.708305pt" height="22.74591pt"/> and the DFT exchange fraction
-approaches <img alt="\((1- \alpha - \beta)\)" src="svgs/5457bd6eac3dc5ac9a603bfc82e48e38.svg?invert_in_darkmode&sanitize=true" align=middle width="81.681105pt" height="24.56553pt"/>. In the HSE functional, the HF part
+Ewald decomposition. As r<sub>12</sub> &rarr; 0, the HF exchange
+fraction is &alpha;,
+ while the DFT exchange fraction is 1 - &alpha;.
+ As r<sub>12</sub> &rarr; &infin;,
+ the HF exchange fraction approaches &alpha; + &beta;  and the DFT exchange fraction
+approaches 1 - &alpha; - &beta;. In the HSE functional, the HF part
 is short-ranged and DFT is long-ranged.
 
 Range separated functionals (or long-range corrected or LC) can be
