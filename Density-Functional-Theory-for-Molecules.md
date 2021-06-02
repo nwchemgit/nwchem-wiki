@@ -606,8 +606,8 @@ becomes
 ```
  cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
 ```
-`cam` represents the attenuation parameter <img alt="\(\mu\)" src="svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> , `cam_alpha` and
-`cam_beta` are parameters <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> and <img alt="\(\beta\)" src="svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/> that control the
+`cam` represents the attenuation parameter &mu;, `cam_alpha` and
+`cam_beta` are the  &alpha; and &beta; parameters that control the
 amount of short-range DFT and long-range HF Exchange according to the
 Ewald decomposition. As <img alt="\(r_{12} \rightarrow 0\)" src="svgs/8175ba1917135d1efdde5463e7eb7c98.svg?invert_in_darkmode&sanitize=true" align=middle width="55.01331pt" height="21.10812pt"/>, the HF exchange
 fraction is <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>, while the DFT exchange fraction is
