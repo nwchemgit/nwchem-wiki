@@ -1556,21 +1556,21 @@ Effective Potential method (see R. T. Sharp and G. K. Horton, Phys. Rev.
 Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
 165 (1993)) Three variants of these methods are included in NWChem:
 
-  - sic perturbative This is the default option for the sic directive.
+  - `sic perturbative` This is the default option for the sic directive.
     After a self-consistent calculation, the Kohn-Sham orbitals are
-    localized with the Foster-Boys algorithm (see section 10.15) and the
+    localized with the Foster-Boys algorithm (see section on [orbital localization](Hartree-Fock-Theory-for-Molecules.html#orbital-localization)) and the
     self-interaction energy is added to the total energy. All
     exchange-correlation functionals implemented in the NWChem can be
     used with this option.
-  - sic oep With this option the optimized effective potential is built
+  - `sic oep` With this option the optimized effective potential is built
     in each step of the self-consistent process. Because the
     electrostatic potential generated for each orbital involves a
     numerical integration, this method can be expensive.
-  - sic oep-loc This option is similar to the oep option with the
+  - `sic oep-loc` This option is similar to the oep option with the
     addition of localization of the Kohn-Sham orbitals in each step of
     the self-consistent process.
 
-With oep and oep-loc options a xfine grid (see section 11.10) must be
+With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](Density-Functional-Theory-for-Molecules#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
 implementation of this method can be found in J. Garza, J. A. Nichols
