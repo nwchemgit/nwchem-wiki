@@ -52,6 +52,14 @@ The name of the NWChem executable is
 ```
 nwchem_openmpi
 ```
+Serial runs (using a single process) on a input file named `n2.nw` can be performed with the command
+```
+nwchem_openmpi n2.nw
+```
+Parallel runs (using more than one process) can be performed with the command
+```
+mpirun -np 2 nwchem_openmpi n2.nw
+```
 
 # NWChem availability on macOS
 
@@ -69,4 +77,4 @@ NWChem can be installed  on Linux or MacOS from the [conda-forge](https://conda-
 conda install -c conda-forge nwchem
 ```
 More details at https://github.com/conda-forge/nwchem-feedstock
-```
+
