@@ -1558,7 +1558,7 @@ Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
 
   - `sic perturbative` This is the default option for the sic directive.
     After a self-consistent calculation, the Kohn-Sham orbitals are
-    localized with the Foster-Boys algorithm (see section on [orbital localization](Hartree-Fock-Theory-for-Molecules.html#orbital-localization)) and the
+    localized with the Foster-Boys algorithm (see section on [orbital localization](Hartree-Fock-Theory-for-Molecules#orbital-localization)) and the
     self-interaction energy is added to the total energy. All
     exchange-correlation functionals implemented in the NWChem can be
     used with this option.
