@@ -1664,26 +1664,27 @@ where:
 
 <img alt="$$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$" src="svgs/3666d4a12cd1c98a47524620f9a0e3c5.svg?invert_in_darkmode&sanitize=true" align=middle width="425.340795pt" height="39.36735pt"/>
 
-In this equation, the <img alt="\(s_6\)" src="svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> term depends in the functional and basis
-set used, <img alt="\(C_6^{ij}\)" src="svgs/1d08f5f7b2ad785243464d2366c2de89.svg?invert_in_darkmode&sanitize=true" align=middle width="23.59599pt" height="30.9705pt"/> is the dispersion coefficient between pairs of
-atoms. <img alt="\(R_{vdw}\)" src="svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/> and <img alt="\(R_{ij}\)" src="svgs/52acdd56bf90ef8224aaf3db0446f911.svg?invert_in_darkmode&sanitize=true" align=middle width="23.15016pt" height="22.38192pt"/> are related with van der Waals atom
-radii and the nucleus distance respectively. The <img alt="\(\alpha\)" src="svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/> value
+  In this equation, the  *s<sub>6</sub>* term depends in the functional and basis
+  set used, *C<sub>6</sub><sup>ij</sup>* is the dispersion coefficient between pairs of
+  atoms.  *R<sub>vdw</sub>* and  *R<sub>ij</sub>* are related with van der Waals atom
+radii and the nucleus distance respectively. The  *&alpha;* value
 contributes to control the corrections at intermediate distances.
 
-There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>:* 
+There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*: 
 
 1.  <img alt="$$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$" src="svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  
 where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
 J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
-Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use vdw 0)  
+Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use `vdw 0`)  
 
-2.  <img alt="$$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$" src="svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use vdw 1)  
+2.  <img alt="$$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$" src="svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use `vdw 1)`  
 
-3.  <img alt="$$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$" src="svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use vdw 2)  
+3.  <img alt="$$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$" src="svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use `vdw 2`)  
 
-Note that in each option there is a certain set of <img alt="\(C_6\)" src="svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> and
-<img alt="\(R_{vdw}\)" src="svgs/999715cd04ee6ac29e6dfbacdae8273d.svg?invert_in_darkmode&sanitize=true" align=middle width="35.99871pt" height="22.38192pt"/>. ALso note that Grimme only defined parameters for elements
-up to Z=54 for the dispersion correction above. <img alt="\(C_6\)" src="svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> values for
+Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
+Also note that Grimme only defined parameters for elements
+up to Z=54 for the dispersion correction above. 
+*C<sub>6</sub>* values for
 elements above Z=54 have been set to zero.
 
   For options `vdw 1` and `vdw 2` , there are s<sub>6</sub> values by default for
@@ -1703,20 +1704,19 @@ E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup
 
 
 This new dispersion correction covers elements through Z=94.
-<img alt="\(C^{ij}_{n} (n=6,8)\)" src="svgs/4ac510c831b43d15c8ac9326e45069b3.svg?invert_in_darkmode&sanitize=true" align=middle width="92.56137pt" height="27.10224pt"/> are coordination and geometry dependent. Details
+  *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
 about the functional form can be found in S. Grimme, J. Antony, S.
 Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010).
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
-  - vdw 3 (s6 and alpha cannot be set manually). Functionals for which
+  - `vdw 3` (s6 and alpha cannot be set manually). Functionals for which
     DFT-D3 is available in NWChem are BLYP, B3LYP, BP86, Becke97-D,
     PBE96, TPSS, PBE0, B2PLYP, BHLYP, TPSSH, PWB6K, B1B95, SSB-D,
     MPW1B95, MPWB1K, M05, M05-2X, M06L, M06, M06-2X, and M06HF
 
-<!-- end list -->
 
-  - vdw 4 triggers the DFT-D3BJ dispersion model. Currently only BLYP,
+  - `vdw 4` triggers the DFT-D3BJ dispersion model. Currently only BLYP,
     B3LYP, BHLYP, TPSS, TPSSh,  B2-PLYP, B97-D, BP86, PBE96, PW6B95, revPBE, B3PW91, pwb6k, b1b95, CAM-B3LYP, LC-wPBE,  HCTH120, MPW1B95, BOP, OLYP,  BPBE, OPBE and SSB  are supported.
 
 This capability is also supported for energy gradients and Hessian. Is
