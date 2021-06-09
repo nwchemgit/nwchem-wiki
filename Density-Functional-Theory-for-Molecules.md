@@ -1686,12 +1686,12 @@ Note that in each option there is a certain set of <img alt="\(C_6\)" src="svgs/
 up to Z=54 for the dispersion correction above. <img alt="\(C_6\)" src="svgs/b1a57ffb35b6053ddad04400a4b2a017.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> values for
 elements above Z=54 have been set to zero.
 
-For options vdw 1 and vdw 2 , there are <img alt="\(s_6\)" src="svgs/e9349752e05540dee73fddefcedf36f1.svg?invert_in_darkmode&sanitize=true" align=middle width="14.20485pt" height="14.10255pt"/> values by default for
+  For options `vdw 1` and `vdw 2` , there are s<sub>6</sub> values by default for
 some functionals and triple-zeta plus double polarization basis set
 (TZV2P):
 
-  - vdw 1. BLYP 1.40, PBE 0.70 and BP86 1.30.
-  - vdw 2. BLYP 1.20, PBE 0.75, BP86 1.05, B3LYP 1.05, Becke97-D 1.25
+  - `vdw 1` BLYP 1.40, PBE 0.70 and BP86 1.30.
+  - `vdw 2` BLYP 1.20, PBE 0.75, BP86 1.05, B3LYP 1.05, Becke97-D 1.25
     and TPSS 1.00.
 
 Grimme's DFT-D3 is also available. Here the dispersion term has the
