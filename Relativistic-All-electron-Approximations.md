@@ -163,10 +163,9 @@ The approximate methods described in this section are all based on
 Dyall's modified Dirac Hamiltonian. This Hamiltonian is entirely
 equivalent to the original Dirac Hamiltonian, and its solutions have the
 same properties. The modification is achieved by a transformation on the
-small component, extracting out <img alt="$\sigma\cdot{\mathbf{p}}/2mc$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c46aed4b12babd9287a19c391bc35863.svg?invert_in_darkmode&sanitize=true" align=middle width="70.10916pt" height="24.56553pt"/>. This
+small component, extracting out &sigma;&sdot;**p**/2mc. This
 gives the modified small component the same symmetry as the large
-component, and in fact it differs from the large component only at order
-<img alt="$\alpha^2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/faf31b8936b189d00880b729b0055112.svg?invert_in_darkmode&sanitize=true" align=middle width="17.06529pt" height="26.70657pt"/>. The advantage of the modification is that the operators
+component, and in fact it differs from the large component only at order &alpha;<sup>2</sup>. The advantage of the modification is that the operators
 now resemble the operators of the Breit-Pauli Hamiltonian, and can be
 classified in a similar fashion into spin-free, spin-orbit and spin-spin
 terms. It is the spin-free terms which have been implemented in NWChem,
