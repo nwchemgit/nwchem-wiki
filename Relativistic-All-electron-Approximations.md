@@ -219,11 +219,11 @@ syntax:
 
 The first sub-option gives the capability to limit the two-electron
 corrections to those in which the small components in any density must
-be on the same center. This reduces the <img alt="$(LL\vert SS)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/66ddaf52ed41bfc115c68b4e5fe18344.svg?invert_in_darkmode&sanitize=true" align=middle width="61.55721pt" height="24.56553pt"/> contributions
-to at most three-center integrals and the <img alt="$(SS\vert SS)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/59ab9338b3084d63a183235bed9b6a2c.svg?invert_in_darkmode&sanitize=true" align=middle width="61.245855pt" height="24.56553pt"/> contributions
+be on the same center. This reduces the *(LL|SS)* contributions
+to at most three-center integrals and the *(SS|SS)* contributions
 to two centers. For a case with only one relativistic atom this option
-is redundant. The second controls the inclusion of the <img alt="$(SS\vert SS)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/59ab9338b3084d63a183235bed9b6a2c.svg?invert_in_darkmode&sanitize=true" align=middle width="61.245855pt" height="24.56553pt"/>
-integrals which are of order <img alt="$\alpha^4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b4500a19b399c81e85b5c18d7b910cf6.svg?invert_in_darkmode&sanitize=true" align=middle width="17.06529pt" height="26.70657pt"/>. For light atoms they may
+is redundant. The second controls the inclusion of the *(SS|SS)*
+integrals which are of order &alpha;<sup>4</sup>. For light atoms they may
 safely be neglected, but for heavy atoms they should be included.
 
 In addition to the selection of this keyword in the RELATIVISTIC
