@@ -333,6 +333,202 @@ programs.
 -       COSMO-SMD:solvent   -- where the solvent keyword is from Table of SMD solvent names below
 -       None                 -- Gas-phase calculation, no solvation model included in the calculations
 ```
+
+ The available  SMD `solvent` keywords are given  below:
+
+
+| Keyword     | Name                            |
+| ----------- | ------------------------------- |
+| h2o         | water (default)                 |
+| water       | water (default)                 |
+| acetacid    | acetic acid                     |
+| acetone     | acetone                         |
+| acetntrl    | acetonitrile                    |
+| acetphen    | acetophenone                    |
+| aniline     | aniline                         |
+| anisole     | anisole                         |
+| benzaldh    | benzaldehyde                    |
+| benzene     | benzene                         |
+| benzntrl    | benzonitrile                    |
+| benzylcl    | benzyl chloride                 |
+| brisobut    | 1-bromo-2-methylpropane         |
+| brbenzen    | bromobenzene                    |
+| brethane    | bromoethane                     |
+| bromform    | bromoform                       |
+| broctane    | 1-bromooctane                   |
+| brpentan    | 1-bromopentane                  |
+| brpropa2    | 2-bromopropane                  |
+| brpropan    | 1-bromopropane                  |
+| butanal     | butanal                         |
+| butacid     | butanoic acid                   |
+| butanol     | 1-butanol                       |
+| butanol2    | 2-butanol                       |
+| butanone    | butanone                        |
+| butantrl    | butanonitrile                   |
+| butile      | butyl acetate                   |
+| nba         | butylamine                      |
+| nbutbenz    | n-butylbenzene                  |
+| sbutbenz    | sec-butylbenzene                |
+| tbutbenz    | tert-butylbenzene               |
+| cs2         | carbon disulfide                |
+| carbntet    | carbon tetrachloride            |
+| clbenzen    | chlorobenzene                   |
+| secbutcl    | sec-butyl chloride              |
+| chcl3       | chloroform                      |
+| clhexane    | 1-chlorohexane                  |
+| clpentan    | 1-chloropentane                 |
+| clpropan    | 1-chloropropane                 |
+| ocltolue    | o-chlorotoluene                 |
+| m-cresol    | m-cresol                        |
+| o-cresol    | o-cresol                        |
+| cychexan    | cyclohexane                     |
+| cychexon    | cyclohexanone                   |
+| cycpentn    | cyclopentane                    |
+| cycpntol    | cyclopentanol                   |
+| cycpnton    | cyclopentanone                  |
+| declncis    | cis-decalin                     |
+| declntra    | trans-decalin                   |
+| declnmix    | decalin (cis/trans mixture)     |
+| decane      | n-decane                        |
+| decanol     | 1-decanol                       |
+| edb12       | 1,2-dibromoethane               |
+| dibrmetn    | dibromomethane                  |
+| butyleth    | dibutyl ether                   |
+| odiclbnz    | o-dichlorobenzene               |
+| edc12       | 1,2-dichloroethane              |
+| c12dce      | cis-dichloroethylene            |
+| t12dce      | trans-dichloroethylene          |
+| dcm         | dichloromethane                 |
+| ether       | diethyl ether                   |
+| et2s        | diethyl sulfide                 |
+| dietamin    | diethylamine                    |
+| mi          | diiodomethane                   |
+| dipe        | diisopropyl ether               |
+| dmds        | dimethyl disulfide              |
+| dmso        | dimethyl sulfoxide              |
+| dma         | N,N-dimethylacetamide           |
+| cisdmchx    | cis-1,2-dimethylcyclohexane     |
+| dmf         | N,N-dimethylformamide           |
+| dmepen24    | 2,4-dimethylpentane             |
+| dmepyr24    | 2,4-dimethylpyridine            |
+| dmepyr26    | 2,6-dimethylpyridine            |
+| dioxane     | 1,4-dioxane                     |
+| phoph       | diphenyl ether                  |
+| dproamin    | dipropylamine                   |
+| dodecan     | n-dodecane                      |
+| meg         | 1,2-ethanediol                  |
+| etsh        | ethanethiol                     |
+| ethanol     | ethanol                         |
+| etoac       | ethyl acetate                   |
+| etome       | ethyl formate                   |
+| eb          | ethylbenzene                    |
+| phenetol    | ethyl phenyl ether              |
+| c6h5f       | fluorobenzene                   |
+| foctane     | 1-fluorooctane                  |
+| formamid    | formamide                       |
+| formacid    | formic acid                     |
+| heptane     | n-heptane                       |
+| heptanol    | 1-heptanol                      |
+| heptnon2    | 2-heptanone                     |
+| heptnon4    | 4-heptanone                     |
+| hexadecn    | n-hexadecane                    |
+| hexane      | n-hexane                        |
+| hexnacid    | hexanoic acid                   |
+| hexanol     | 1-hexanol                       |
+| hexanon2    | 2-hexanone                      |
+| hexene      | 1-hexene                        |
+| hexyne      | 1-hexyne                        |
+| c6h5i       | iodobenzene                     |
+| iobutane    | 1-iodobutane                    |
+| c2h5i       | iodoethane                      |
+| iohexdec    | 1-iodohexadecane                |
+| ch3i        | iodomethane                     |
+| iopentan    | 1-iodopentane                   |
+| iopropan    | 1-iodopropane                   |
+| cumene      | isopropylbenzene                |
+| p-cymene    | p-isopropyltoluene              |
+| mesityln    | mesitylene                      |
+| methanol    | methanol                        |
+| egme        | 2-methoxyethanol                |
+| meacetat    | methyl acetate                  |
+| mebnzate    | methyl benzoate                 |
+| mebutate    | methyl butanoate                |
+| meformat    | methyl formate                  |
+| mibk        | 4-methyl-2-pentanone            |
+| mepropyl    | methyl propanoate               |
+| isobutol    | 2-methyl-1-propanol             |
+| terbutol    | 2-methyl-2-propanol             |
+| nmeaniln    | N-methylaniline                 |
+| mecychex    | methylcyclohexane               |
+| nmfmixtr    | N-methylformamide (E/Z mixture) |
+| isohexan    | 2-methylpentane                 |
+| mepyrid2    | 2-methylpyridine                |
+| mepyrid3    | 3-methylpyridine                |
+| mepyrid4    | 4-methylpyridine                |
+| c6h5no2     | nitrobenzene                    |
+| c2h5no2     | nitroethane                     |
+| ch3no2      | nitromethane                    |
+| ntrprop1    | 1-nitropropane                  |
+| ntrprop2    | 2-nitropropane                  |
+| ontrtolu    | o-nitrotoluene                  |
+| nonane      | n-nonane                        |
+| nonanol     | 1-nonanol                       |
+| nonanone    | 5-nonanone                      |
+| octane      | n-octane                        |
+| octanol     | 1-octanol                       |
+| octanon2    | 2-octanone                      |
+| pentdecn    | n-pentadecane                   |
+| pentanal    | pentanal                        |
+| npentane    | n-pentane                       |
+| pentacid    | pentanoic acid                  |
+| pentanol    | 1-pentanol                      |
+| pentnon2    | 2-pentanone                     |
+| pentnon3    | 3-pentanone                     |
+| pentene     | 1-pentene                       |
+| e2penten    | E-2-pentene                     |
+| pentacet    | pentyl acetate                  |
+| pentamin    | pentylamine                     |
+| pfb         | perfluorobenzene                |
+| benzalcl    | phenylmethanol                  |
+| propanal    | propanal                        |
+| propacid    | propanoic acid                  |
+| propanol    | 1-propanol                      |
+| propnol2    | 2-propanol                      |
+| propntrl    | propanonitrile                  |
+| propenol    | 2-propen-1-ol                   |
+| propacet    | propyl acetate                  |
+| propamin    | propylamine                     |
+| pyridine    | pyridine                        |
+| c2cl4       | tetrachloroethene               |
+| thf         | tetrahydrofuran                 |
+| sulfolan    | tetrahydrothiophene-S,S-dioxide |
+| tetralin    | tetralin                        |
+| thiophen    | thiophene                       |
+| phsh        | thiophenol                      |
+| toluene     | toluene                         |
+| tbp         | tributyl phosphate              |
+| tca111      | 1,1,1-trichloroethane           |
+| tca112      | 1,1,2-trichloroethane           |
+| tce         | trichloroethene                 |
+| et3n        | triethylamine                   |
+| tfe222      | 2,2,2-trifluoroethanol          |
+| tmben124    | 1,2,4-trimethylbenzene          |
+| isoctane    | 2,2,4-trimethylpentane          |
+| undecane    | n-undecane                      |
+| m-xylene    | m-xylene                        |
+| o-xylene    | o-xylene                        |
+| p-xylene    | p-xylene                        |
+| xylenemx    | xylene (mixture)                |
+  
+<br/><br/> 
+
+When a solvent is specified by name, the descriptors for the solvent are
+based on the Minnesota Solvent Descriptor Database:
+
+Winget, P.; Dolney, D. M.; Giesen, D. J.; Cramer, C. J.; Truhlar, D. G.
+Minnesota Solvent Descriptor Database. University of Minnesota:
+Minneapolis, MN, 2010. <http://comp.chem.umn.edu/solvation/mnsddb.pdf>
+
 ## ESMILES Reactions - How to Calculate Reaction Energies
 
 Everything between inside the Arrows block is parsed. Note that the
