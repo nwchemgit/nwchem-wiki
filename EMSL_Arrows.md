@@ -251,8 +251,6 @@ available:
 -       dft        -- NWChem Gaussian DFT  
 -       pspw   -- NWChem Plane-Wave DFT (periodic boundary conditions, Γ point)  
 -       pspw4 -- NWChem Plane-Wave DFT (aperiodic boundary conditions)  
--       paw      -- NWChem PAW DFT (periodic boundary conditions, Γ point)  
--       paw4    -- NWChem PAW DFT  (aperiodic boundary conditions)  
 -       mp2      -- NWChem MP2 program  
 -       ccsd(t)  -- NWChem CCSD(T)  
 -       pm3      -- Mopac7 PM3  
@@ -328,9 +326,9 @@ The default solvation type is solvation\_type{COSMO}. The following
 solvation types are available with the Gaussian DFT, MP2 and CCSD(T)
 programs.
 ```
--       COSMO            -- The COSMO solvation model of Klampt and Shuurman
+-       COSMO            -- The COSMO solvation model of Klampt and Shuurman (solvent=water)
 
--       COSMO-SMD   -- The extended Minnesota COSMO solvation model of Cramer et al.
+-       COSMO-SMD           -- The extended Minnesota COSMO solvation model of Cramer et al. (solvent=water)
 
 -       COSMO-SMD:solvent   -- where the solvent keyword is from Table of SMD solvent names below
 
