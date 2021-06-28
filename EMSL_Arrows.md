@@ -532,18 +532,11 @@ Minneapolis, MN, 2010. <http://comp.chem.umn.edu/solvation/mnsddb.pdf>
 
 ## ESMILES Reactions - How to Calculate Reaction Energies
 
-Everything between inside the Arrows block is parsed. Note that the
-start of the block is the Arrows:: keyword, and the end of the block is
-denoted by the ::Arrows keyword.
 
 The basic input is a chemical reaction where the molecules are specified
 using smiles strings or esmiles strings (vida infra), e.g.
 ```
-Arrows::
-  
-reaction: C(Cl)(Cl)(Cl)O + C --> C(Cl)(Cl)Cl + CO :reaction
-  
-::Arrows
+   C(Cl)(Cl)(Cl)O + C --> C(Cl)(Cl)Cl + CO
 ```
 Note that the reaction: :reaction keywords have only one ":", whereas
 the Arrows keywords use two colons.
@@ -595,34 +588,19 @@ cas=value, cid=value, csid=value where value is the id. The chemical
 structure input types can be mixed and matched in the reaction input.
 The following reaction inputs are all equivalent.
 ```
-Arrows::  
   
-reaction: trichloromethanol + methane --> chloroform + methyl alcohol :reaction  
-reaction: trichloromethanol + C --> chloroform + kegg=D02309 :reaction  
-reaction: trichloromethanol + C --> chloroform + cas=67-56-1 :reaction  
-reaction: trichloromethanol + C --> chloroform + cid=887 :reaction  
-reaction: trichloromethanol + C --> chloroform + csid=864 :reaction  
-reaction: trichloromethanol + C --> chloroform + InChI=1S/CH4O/c1-2/h2H,1H3 :reaction  
+trichloromethanol + methane --> chloroform + methyl alcohol
+trichloromethanol + C --> chloroform + kegg=D02309
+trichloromethanol + C --> chloroform + cas=67-56-1
+trichloromethanol + C --> chloroform + cid=887
+trichloromethanol + C --> chloroform + csid=864
+trichloromethanol + C --> chloroform + InChI=1S/CH4O/c1-2/h2H,1H3
   
-::Arrows  
-
-A reaction input can be just a single molecule, i.e.
-
-Arrows::  
-  
-reaction: C(Cl)(Cl)(Cl)O :reaction  
-  
-::Arrows  
 ```
-The energies outputted for this trivial reaction are just the energies
-from the electronic structure calculations. To calculate atomization
-energies the following input can be used.
+
+To calculate atomization energies the following input can be used.
 ```
-Arrows::  
-  
-reaction: C(Cl)(Cl)(Cl)O  --> [C]  mult{3} + 3 [Cl] mult{2} + [O] mult{3} :reaction  
-  
-::Arrows
+ C(Cl)(Cl)(Cl)O  --> [C]  mult{3} + 3 [Cl] mult{2} + [O] mult{3}
 ```
 ## MAP Function for Adding Options to Reactions
 
