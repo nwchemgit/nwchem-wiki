@@ -329,8 +329,11 @@ solvation types are available with the Gaussian DFT, MP2 and CCSD(T)
 programs.
 ```
 -       COSMO            -- The COSMO solvation model of Klampt and Shuurman
+
 -       COSMO-SMD   -- The extended Minnesota COSMO solvation model of Cramer et al.
+
 -       COSMO-SMD:solvent   -- where the solvent keyword is from Table of SMD solvent names below
+
 -       None                 -- Gas-phase calculation, no solvation model included in the calculations
 ```
 
