@@ -105,7 +105,8 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
               [nodiis] [lshift <real lshift default 0.5>] \  
               [nolevelshifting] \  
               [hl_tol <real hl_tol default 0.1>] \  
-              [rabuck [n_rabuck <integer n_rabuck default 25>]]  
+              [rabuck [n_rabuck <integer n_rabuck default 25>]\
+              [fast] ]  
  GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
       [(becke||erf1||erf2||ssf) default erf1] \  
@@ -885,7 +886,8 @@ file](#sample-input-file).
              [levlon <real levlon default 0.0>] \  
              [levloff <real levloff default 0.0>] \  
              [(lshift <real lshift default 0.5>) || nolevelshifting] \  
-             [rabuck [n_rabuck <integer n_rabuck default 25>]]
+             [rabuck [n_rabuck <integer n_rabuck default 25>] \
+             [fast] ]
 ```
 Convergence is satisfied by meeting any or all of three criteria;
 
@@ -995,13 +997,27 @@ the SCF convergence (A. D. Rabuck and G. E. Scuseria, J. Chem. Phys
 ```
  CONVERGENCE rabuck [n_rabuck <integer n_rabuck default 25>]]
 ```
-where the optional value n\_rabuck determines the number of SCF cycles
+where the optional value `n_rabuck` determines the number of SCF cycles
 during which the method will be active. For example, to set equal to 30
 the number of cycles where the Rabuck method is active, you need to use
 the following line
 ```
  CONVERGENCE rabuck 30
 ```
+  
+`convergence fast` turns on a series of parameters that most often speed-up convergence, but not in 100% of the cases.
+```
+  CONVERGENCE fast
+```
+  Here is an input snippet that would give you the same result as convergence fast
+```
+dft
+convergence lshift 0. ncydp 0 dampon 1d99 dampoff 1d-4 damp 40
+end
+set quickguess t
+task dft  
+```
+  
 ## CDFT -- Constrained DFT
 
 This option enables the constrained DFT formalism by Wu and Van Voorhis
