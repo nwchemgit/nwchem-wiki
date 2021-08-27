@@ -1185,8 +1185,8 @@ basis
  H library 6-31g*  
 end  
 occup     
- 6 6 # core-hole in beta  
- 1.0 0.0  
+ 6 6      # occupation list for 6 alpha and 6 beta orbitals 
+ 1.0 0.0  # core-hole in the first beta orbital
  1.0 1.0  
  1.0 1.0  
  1.0 1.0  
