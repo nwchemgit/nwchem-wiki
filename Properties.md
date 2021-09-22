@@ -370,11 +370,11 @@ MOLDENFILE
 MOLDEN_NORM (JANPA | | NWCHEM || NONE)
 ```
 This keyword generates files using the [Molden
-format](http://www.cmbi.ru.nl/molden/molden_format.html). The resulting
+format](https://www3.cmbi.umcn.nl/molden/molden_format.html). The resulting
 Molden file (.molden) should compatible with a variety of codes that can
 input Molden files, e.g.
 
-  - [Molden](http://www.cmbi.ru.nl/molden/)
+  - [Molden](https://www3.cmbi.umcn.nl/molden/)
   - [JANPA](http://janpa.sf.net) (the nwchem2molden step is no longer
     required when using .molden files and the `MOLDEN_NORM JANPA`
     keyword)
@@ -387,7 +387,7 @@ the `MOLDEN_NORM` option allows the renormalization of the basis set
 coefficients. By default, the coefficient values from input are not
 modified. Using the `JANPA` value coefficients are normalized following
 [JANPA](https://sourceforge.net/p/janpa/wiki/nwchem2molden/)'s
-convention, while the `NWCHEM` will produce coefficients normalized
+convention (where basis coefficients are normalized to unity), while the `NWCHEM` will produce coefficients normalized
 according to NWChem's convention. Using `MOLDEN_NORM` equal `NONE` will
 leave the input coefficients unmodified.  
 It is strongly recommended to use **spherical** [basis set](Basis) when using the NWChem Molden output for JANPA analysis
