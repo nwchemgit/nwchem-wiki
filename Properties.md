@@ -73,7 +73,7 @@ parameters that can be defined in the input. For the shielding the user
 can define the number of atoms for which the shielding tensor should be
 calculated, followed by the list of specific atom centers. In the case
 of spin-spin coupling the number of atom pairs, followed by the atom
-pairs, can be defined (i.e., spinspin 1 1 2 will calculate the coupling
+pairs, can be defined (i.e., `spinspin 1 1 2` will calculate the coupling
 for one pair, and the coupling will be between atoms 1 and 2).
 
 For both the NMR spin-spin and hyperfine coupling the isotope that has
@@ -132,19 +132,19 @@ Response calculations are currently supported only for order 1 (linear
 response), single frequency, electric field and mixed electric-magnetic
 field perturbations. The output consists of the electric polarizability
 and optical rotation tensors (alpha, beta for optical rotation) in
-atomic units. If the 'velocity' or 'giao' keywords are absent, the
+atomic units. If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster. The isotropic optical rotation is origin independent when using
-the velocity gauge or with GIAOs [1]. With the keyword 'bdtensor', a
+the velocity gauge or with GIAOs [1]. With the keyword `bdtensor`, a
 fully origin-invariant optical rotation tensor is calculated [1,6].
-Note that 'velocity' and 'orbeta' are incompatible. An input line 'set
-prop:newaoresp 0' outside of the 'properties' block forces the use of an
+Note that `velocity` and `orbeta` are incompatible. An input line `set
+prop:newaoresp 0` outside of the `properties` block forces the use of an
 older version of the response code, which has fewer features (in
 particular, no working GIAO opetical rotation) but which has been tested
 more thoroughly. In the default newer version you may encounter
-undocumented features (bugs). 'analysis' triggers an analysis of the
+undocumented features (bugs). `analysis` triggers an analysis of the
 response tensors in terms of molecular orbitals. If the property input
-block also contains the keyword 'pmlocalization', then the analysis is
+block also contains the keyword `pmlocalization`, then the analysis is
 performed in terms of Pipek-Mezey localized MOs, otherwise the canonical
 set is used (this feature may currently not work, please check the sum
 of the analysis carefully). See Ref. [6] for an example. Works with HF
@@ -199,20 +199,20 @@ end
 ```
 #### Raman Keywords
 
-  - NORMAL and RESONANCE: Type of Raman plot to make.
-  - LORENTZIAN and GAUSSIAN: Generation of smoothed spectra (rather than
+  - `NORMAL` and `RESONANCE`: Type of Raman plot to make.
+  - `LORENTZIAN` and `GAUSSIAN`: Generation of smoothed spectra (rather than
     sticks) using either a Lorentzian function or a Gaussian function.
-    The default is LORENTZIAN.
-  - LOW and HIGH: The default range in which to generate the Raman
-    spectrum plot is (0.0, highest wavenumber normal mode) cm-1. The LOW
-    and HIGH keywords modify the frequency range.
-  - FIRST and LAST: The default range of indices of normal modes used in
-    the plot is (7, number of normal modes). The FIRST and LAST keywords
+    The default is `LORENTZIAN`.
+  - `LOW` and `HIGH`: The default range in which to generate the Raman
+    spectrum plot is (0.0, highest wavenumber normal mode) cm-1. The `LOW`
+    and `HIGH` keywords modify the frequency range.
+  - `FIRST` and `LAST`: The default range of indices of normal modes used in
+    the plot is (7, number of normal modes). The `FIRST` and `LAST` keywords
     modify the range of indices.
-  - WIDTH:Controls the width in the smoothed peaks, using Lorentzians or
-    Gaussians, in the plot. The default value for WIDTH is 20.0.
-  - DQ: Size of the steps along the normal modes. The default value for
-    DQ is 0.01. It is related to the step size dR used in numerical
+  - `WIDTH`: Controls the width in the smoothed peaks, using Lorentzians or
+    Gaussians, in the plot. The default value for `WIDTH` is 20.0.
+  - `DQ`: Size of the steps along the normal modes. The default value for
+    `DQ` is 0.01. It is related to the step size dR used in numerical
     evaluation of polarizability derivative
 
 #### Raman Output
@@ -236,16 +236,16 @@ Please refer to the following papers for further details:
 
 ### Nbofile
 
-The keyword NBOFILE does not execute the Natural Bond Analysis code, but
+The keyword `NBOFILE` does not execute the Natural Bond Analysis code, but
 simply creates an input file to be used as input to the stand-alone NBO
 code. All other properties are calculated upon request.
 
 Following the successful completion of an electronic structure
 calculation, a Natural Bond Orbital (NBO) analysis may be carried out by
-providing the keyword NBOFILE in the PROPERTY directive. NWChem will
-query the rtdb and construct an ASCII file, <file_prefix>.gen, that may
+providing the keyword `NBOFILE` in the `PROPERTY` directive. NWChem will
+query the rtdb and construct an ASCII file, `<file_prefix>.gen`, that may
 be used as input to the stand alone version of the NBO program, gennbo.
-<file_prefix> is equal to string following the START directive. The
+`<file_prefix>` is equal to string following the `START` directive. The
 input deck may be edited to provide additional options to the NBO
 calculation, (see the NBO user's manual for details.)
 
@@ -254,8 +254,8 @@ the NWChem software. See the INSTALL file in the source for details.
 
 ## Gaussian Cube Files
 
-Electrostatic potential (keyword *esp*) and the magnitude of the
-electric field (keyword *efield*) on the grid can be generated in the
+Electrostatic potential (keyword `esp`) and the magnitude of the
+electric field (keyword `efield`) on the grid can be generated in the
 form of the Gaussian Cube File. This behavior is triggered by the
 inclusion of grid keyword as shown
 below
@@ -264,7 +264,7 @@ below
 ```
 where
 
-  - pad dx [dy dz] - specifies amount of padding (in angstroms) in
+  - `pad dx [dy dz]` - specifies amount of padding (in angstroms) in
     x,y, and z dimensions that will be applied in the automatic
     construction of the rectangular grid volume based on the geometry of
     the system. If only one number is provided then the same amount of
@@ -273,19 +273,19 @@ where
 
 <!-- end list -->
 
-  - rmin x y z - specifies the coordinates (in angstroms) of the minimum
+  - `rmin x y z` - specifies the coordinates (in angstroms) of the minimum
     corner of the rectangular grid volume. This will override any
     padding in this direction.
 
 <!-- end list -->
 
-  - rmax x y z - specifies the coordinates (in angstroms) of the maximum
+  - `rmax x y z` - specifies the coordinates (in angstroms) of the maximum
     corner of the rectangular grid volume. This will override any
     padding in this direction.
 
 <!-- end list -->
 
-  - ngrid nx [ny nz] - specifies number of grid points along each
+  - `ngrid nx [ny nz]` - specifies number of grid points along each
     dimension. If only one number is provided then the same number of
     grid points are assumed all dimensions. In the absence of this
     directive the number of grid points would be computed such that grid
@@ -294,10 +294,10 @@ where
 
 <!-- end list -->
 
-  - output filename - specifies name of the output cube file. The
-    default behavior is to use \<prefix\>-elp.cube or \<prefix\>-elf.cube
+  - `output filename` - specifies name of the output cube file. The
+    default behavior is to use `<prefix>-elp.cube` or `<prefix>-elf.cube`
     file names for electrostatic potential or electric field
-    respectively. Here <prefix> denotes the system name as specified in
+    respectively. Here `<prefix>` denotes the system name as specified in
     start directive. Note that Gaussian cube files will be written in
     the run directory (where the input file resides).
 
