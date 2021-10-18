@@ -1365,13 +1365,13 @@ below.
 | ------------------------- | ----------- | ------------------------------------ |
 | "time"                    | vary        | CPU and wall times                   |
 | "tile"                    | vary        | Orbital range tiling information     |
-| "t1"                      | debug       | <img alt="$T_1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b1aadae6dafc7da339f61626db58e355.svg?invert_in_darkmode&sanitize=true" align=middle width="16.09839pt" height="22.38192pt"/> excitation amplitude dumping |
-| "t2"                      | debug       | <img alt="$T_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b48cd4fc1cc1b8c602c81734763b31f0.svg?invert_in_darkmode&sanitize=true" align=middle width="16.09839pt" height="22.38192pt"/> excitation amplitude dumping |
-| "t3"                      | debug       | <img alt="$T_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4025cf3981c802483ddf735af283a602.svg?invert_in_darkmode&sanitize=true" align=middle width="16.09839pt" height="22.38192pt"/> excitation amplitude dumping |
-| "t4"                      | debug       | <img alt="$T_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1bb0637e12d67715e8b82e190b60229e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.09839pt" height="22.38192pt"/> excitation amplitude dumping |
+| "t1"                      | debug       | T<sub>1</sub> excitation amplitude dumping |
+| "t2"                      | debug       | T<sub>2</sub> excitation amplitude dumping |
+| "t3"                      | debug       | T<sub>3</sub> excitation amplitude dumping |
+| "t4"                      | debug       | T<sub>4</sub>  excitation amplitude dumping |
 | "general information"     | default     | General information                  |
 | "correlation information" | default     | TCE information                      |
-| "mbpt2"                   | debug       | Caonical HF MBPT2 test               |
+| "mbpt2"                   | debug       | Canonical HF MBPT2 test               |
 | "get_block"              | debug       | I/O information                      |
 | "put_block"              | debug       | I/O information                      |
 | "add_block"              | debug       | I/O information                      |
