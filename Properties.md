@@ -218,7 +218,7 @@ end
 #### Raman Output
 
 Raman spectrum in stick format and smoothed using Lorentzians or
-Gaussians stored in a filename with format [fname].normal.  
+Gaussians stored in a filename with format `[fname].normal`.  
 The number of points is 1000 by default. This value can be changed by adding the following [SET](SET) directive to the input file
 ```
 set raman:numpts <integer>
@@ -243,9 +243,9 @@ code. All other properties are calculated upon request.
 Following the successful completion of an electronic structure
 calculation, a Natural Bond Orbital (NBO) analysis may be carried out by
 providing the keyword `NBOFILE` in the `PROPERTY` directive. NWChem will
-query the rtdb and construct an ASCII file, `<file_prefix>.gen`, that may
-be used as input to the stand alone version of the NBO program, gennbo.
-`<file_prefix>` is equal to string following the `START` directive. The
+query the rtdb and construct an ASCII file, *file_prefix*`.gen`, that may
+be used as input to the stand alone version of the NBO program, GenNBO.
+*file_prefix* is equal to string following the `START` directive. The
 input deck may be edited to provide additional options to the NBO
 calculation, (see the NBO user's manual for details.)
 
@@ -271,19 +271,15 @@ where
     padding will be applied in all dimensions. The default setting is 4
     angstrom padding in all dimensions.
 
-<!-- end list -->
 
   - `rmin x y z` - specifies the coordinates (in angstroms) of the minimum
     corner of the rectangular grid volume. This will override any
     padding in this direction.
 
-<!-- end list -->
-
   - `rmax x y z` - specifies the coordinates (in angstroms) of the maximum
     corner of the rectangular grid volume. This will override any
     padding in this direction.
 
-<!-- end list -->
 
   - `ngrid nx [ny nz]` - specifies number of grid points along each
     dimension. If only one number is provided then the same number of
@@ -292,12 +288,11 @@ where
     spacing will be close to 0.2 angstrom, but not exceeding 50 grid
     points in either dimension.
 
-<!-- end list -->
 
   - `output filename` - specifies name of the output cube file. The
-    default behavior is to use `<prefix>-elp.cube` or `<prefix>-elf.cube`
+    default behavior is to use *prefix*`-elp.cube` or *prefix*`-elf.cube`
     file names for electrostatic potential or electric field
-    respectively. Here `<prefix>` denotes the system name as specified in
+    respectively. Here *prefix* denotes the system name as specified in
     start directive. Note that Gaussian cube files will be written in
     the run directory (where the input file resides).
 
