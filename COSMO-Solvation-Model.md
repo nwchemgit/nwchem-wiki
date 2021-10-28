@@ -90,7 +90,7 @@ attempt to match based on atom name and only then the element name.
 Otherwise radius will be set based on default parameters. The file has
 to present in one of the three location ( in the order of preference) -
 directory specified by the environmental variable
-NWCHEM_COSMO_LIBRARY, permanent directory, and run directory. This
+`NWCHEM_COSMO_LIBRARY`, permanent directory, and run directory. This
 directive is replacing previous facility of loading COSMO radii
 parameters through `set cosmo:map cosmo.par` directive. See example at
 the end of this section.
@@ -159,10 +159,10 @@ used.
 
 The `lineq` parameter serves to select the numerical algorithm to solve
 the linear equations yielding the effective charges that represent the
-polarization of the medium. `lineq 0` selects an iterative method
-(default), `lineq 1` selects a dense matrix linear equation solver. For
+polarization of the medium. `lineq 0` selects a dense matrix linear equation solver
+(default), `lineq 1` selects an iterative method. For
 large molecules where the number of effective charges is large, the
-codes selects the iterative method.
+code selects the iterative method.
 
 `zeta` sets the width of the Gaussian charge distributions that were
 suggested by York and Karplus to avoid singularities when two surface
