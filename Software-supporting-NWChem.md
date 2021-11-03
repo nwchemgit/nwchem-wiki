@@ -1,3 +1,5 @@
+# Software supporting NWChem
+
 While we have done our best to compile an exhaustive list of software
 using NWChem, we might have missed packages and/or incorrectly described
 some software features. Please use the [Github Issue feature](https://github.com/nwchemgit/nwchem/issues) to provide
