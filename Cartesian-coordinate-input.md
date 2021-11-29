@@ -54,7 +54,7 @@ The Cartesian coordinates of the atom in the molecule are specified as
 real numbers supplied for the variables `x`, `y`, and `z` following the
 characters entered for the tag. The values supplied for the coordinates
 must be in the units specified by the value of the variable <units> on
-the first line of the GEOMETRY directive input.
+the first line of the `GEOMETRY` directive input.
 
 After the Cartesian coordinate input, optional velocities may be entered
 as real numbers for the variables `vx`, `vy`, and `vz`. The velocities should
