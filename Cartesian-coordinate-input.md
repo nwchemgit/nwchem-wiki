@@ -20,7 +20,7 @@ interpreted as follows:
   - If the entry for `<tag>` begins with either the symbol or name of an
     element (regardless of case), then the center is treated as an atom
     of that type. The default charge is the atomic number (adjusted for
-    the presence of ECPs by the ECP NELEC directive ; see Section 8).
+    the presence of ECPs by the ECP [NELEC](ECP#scalar-ecps) directive).
     Additional characters can be added to the string, to distinguish
     between atoms of the same element (For example, the tags `oxygen`, `O`,
     `o34`, `olonepair`, and `Oxygen-ether`, will all be interpreted as oxygen
