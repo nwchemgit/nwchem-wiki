@@ -33,11 +33,11 @@ interpreted as follows:
     non-zero charge.
 
 It is important to be aware of the following points regarding the
-definitions and usage of the values specified for the variable <tag> to
+definitions and usage of the values specified for the variable `<tag>` to
 describe the centers in a system:
 
   - If the tag begins with characters that cannot be matched against an
-    atom, and those characters are not BQ or X, then a fatal error is
+    atom, and those characters are not `BQ` or `X`, then a fatal error is
     generated.
   - The tag of a center is used in the
     [BASIS](Basis) and
@@ -67,13 +67,13 @@ nuclear model. The default charge for an atom is its atomic number,
 adjusted for the presence of [ECPs](ECP). In order
 to specify a different value for the charge on a particular atom, the
 user must enter the keyword charge, followed by the desired value for
-the variable <charge>.
+the variable `<charge>`.
 
 The default mass for an atom is taken to be the mass of its most
 abundant naturally occurring isotope or of the isotope with the longest
 half-life. To model some other isotope of the element, its mass must be
 defined explicitly by specifying the keyword mass, followed by the value
-(in atomic mass units) for the variable <mass>.
+(in atomic mass units) for the variable `<mass>`.
 
 The default nuclear model is a point nucleus. The keyword `nucleus` (or
 `nucl` or `nuc`) followed by the model name `<nucmodel>` overrides this
@@ -90,5 +90,5 @@ geometry of some or all of the atoms or centers using a Z-matrix
 description. In such a case, the user supplies the input tag line
 described above for any centers to be described by Cartesian
 coordinates, and then specifies the remainder of the system using the
-optional ZMATRIX directive described below in [Z-matrix
+optional `ZMATRIX` directive described below in [Z-matrix
 input](#ZMATRIX_--_Z-matrix_input).
