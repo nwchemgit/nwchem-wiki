@@ -61,7 +61,7 @@ as real numbers for the variables `vx`, `vy`, and `vz`. The velocities should
 be given in atomic units and are used in QMD and PSPW calculations.
 
 The Cartesian coordinate input line also contains the optional keywords
-charge, mass and nucleus, which allow the user to specify the charge of
+`charge`, `mass` and `nucleus`, which allow the user to specify the charge of
 the atom (or center) and its mass (in atomic mass units), and the
 nuclear model. The default charge for an atom is its atomic number,
 adjusted for the presence of [ECPs](ECP). In order
@@ -75,13 +75,13 @@ half-life. To model some other isotope of the element, its mass must be
 defined explicitly by specifying the keyword mass, followed by the value
 (in atomic mass units) for the variable <mass>.
 
-The default nuclear model is a point nucleus. The keyword nucleus (or
-nucl or nuc) followed by the model name <nucmodel> overrides this
-default. Allowed values of <nucmodel> are point or pt and finite or fi.
+The default nuclear model is a point nucleus. The keyword `nucleus` (or
+`nucl` or `nuc`) followed by the model name `<nucmodel>` overrides this
+default. Allowed values of `<nucmodel>` are `point` or `pt` and `finite` or `fi`.
 The finite option is a nuclear model with a Gaussian shape. The RMS
 radius of the Gaussian is determined by the atomic mass number via the
-formula <img alt="$r_{\rm RMS} = 0.836*A^{1/3}+0.57$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c08bddd524a278e961b7c30456b8f03.svg?invert_in_darkmode&sanitize=true" align=middle width="193.611495pt" height="29.12679pt"/> fm. The mass number A is
-derived from the variable <mass>.
+  formula r<sub>RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm. The mass number A is
+derived from the variable `<mass>`.
 
 The geometry of the system can be specified entirely in Cartesian
 coordinates by supplying a `<tag>` line of the type described above for
