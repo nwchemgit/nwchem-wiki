@@ -22,10 +22,10 @@ interpreted as follows:
     of that type. The default charge is the atomic number (adjusted for
     the presence of ECPs by the ECP NELEC directive ; see Section 8).
     Additional characters can be added to the string, to distinguish
-    between atoms of the same element (For example, the tags oxygen, O,
-    o34, olonepair, and Oxygen-ether, will all be interpreted as oxygen
+    between atoms of the same element (For example, the tags `oxygen`, `O`,
+    `o34`, `olonepair`, and `Oxygen-ether`, will all be interpreted as oxygen
     atoms.).
-  - If the entry for `<tag>` begins with the characters bq or x
+  - If the entry for `<tag>` begins with the characters `bq` or `x`
     (regardless of case), then the center is treated as a dummy center
     with a default zero charge (Note: a tag beginning with the
     characters xe will be interpreted as a xenon atom rather than as a
@@ -51,13 +51,13 @@ describe the centers in a system:
     are used to determine the number of electrons in the system.
 
 The Cartesian coordinates of the atom in the molecule are specified as
-real numbers supplied for the variables x, y, and z following the
+real numbers supplied for the variables `x`, `y`, and `z` following the
 characters entered for the tag. The values supplied for the coordinates
 must be in the units specified by the value of the variable <units> on
 the first line of the GEOMETRY directive input.
 
 After the Cartesian coordinate input, optional velocities may be entered
-as real numbers for the variables vx, vy, and vz. The velocities should
+as real numbers for the variables `vx`, `vy`, and `vz`. The velocities should
 be given in atomic units and are used in QMD and PSPW calculations.
 
 The Cartesian coordinate input line also contains the optional keywords
@@ -84,7 +84,7 @@ formula <img alt="$r_{\rm RMS} = 0.836*A^{1/3}+0.57$" src="https://raw.githubuse
 derived from the variable <mass>.
 
 The geometry of the system can be specified entirely in Cartesian
-coordinates by supplying a <tag> line of the type described above for
+coordinates by supplying a `<tag>` line of the type described above for
 each atom or center. The user has the option, however, of supplying the
 geometry of some or all of the atoms or centers using a Z-matrix
 description. In such a case, the user supplies the input tag line
