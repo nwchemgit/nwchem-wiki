@@ -64,11 +64,14 @@ To print the DUCC Hamiltonian, you must set up a CCSD calculation with the follo
 You must set the printing parameters at the end of the input file:  
 ```
         set tce:qducc T
-        set tce:nactv ### (The number of active virtual orbitals. Remember that all occupied orbitals are active as well)
+        set tce:nactv ### (The number of active virtual orbitals. 
+                           Remember that all occupied orbitals are active as well)
+        set tce:nonhf F/T (If a non-RHF reference is used, set to T. Otherwise, keep as F.)
+        set tce:ducc_model ### (Determines how the similarity transformed Hamiltonian is truncated. See note below.)
 ```
 _Notes:_
 
-* The full form of the DUCC Hamiltonian is intractable and the equations defining the approximation that is currently implemented can be found in "N. P. Bauman, E. J. Bylaska, S. Krishnamoorthy, G. H. Low, N. Wiebe, C. E. Granade, M. Roetteler, M. Troyer, and K. Kowalski, J. Chem. Phys. 151, 014107 (2019)" and "N. P. Bauman, G. H. Low, and K. Kowalski, J. Chem. Phys. 151, 234114 (2019)." In contrast to these early publications, the full form of the two-electron integral is printed.    
+* Six models for the truncation of the similarity transformed are implemented and numbered 1-6. They correspond to approximations A(2)-A(7), respectively, that are detailed in [arXiv:2110.12077](https://arxiv.org/abs/2110.12077). Model 3 corresponds to the earliest implementation described in [J. Chem. Phys. 151, 014107 (2019)](https://doi.org/10.1063/1.5094643) and [J. Chem. Phys. 151, 234114 (2019)]( https://doi.org/10.1063/1.5128103). In contrast to these early publications, the full form of the two-electron integral is printed. Model 2 is an aggressive truncation and is not recommended for use. 
 * The entire two-electron integral is printed out since the DUCC Hamiltonian does not have the same symmetry as the bare Hamiltonian. Instead of the 8-fold symmetry, it has dual 4-fold symmetries    
 ```
         (IJ|KL) = (JI|LK) = (KL|IJ) = (LK|JI)  
