@@ -163,6 +163,8 @@ end
 
 set tce:qducc T
 set tce:nactv 4
+set tce:nonhf F
+set tce:ducc_model 3
 
 task tce energy
 ```
