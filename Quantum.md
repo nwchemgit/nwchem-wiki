@@ -1,3 +1,5 @@
+# Quantum
+
 The quantum features are routines for printing out one- and
 two-electron integrals that can be utilized in quantum algorithms. The
 outputs can be interpreted and formatted in
