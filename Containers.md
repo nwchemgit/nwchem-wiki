@@ -2,6 +2,11 @@
 
 Dockerfile recipes are available at the repository [https://github.com/nwchemgit/nwchem-dockerfiles](https://github.com/nwchemgit/nwchem-dockerfiles)
 
+Docker images of the master branch can be obtained with the command
+```
+docker pull ghcr.io/nwchemgit/nwchem-dev/amd64:latest
+```
+
 Docker images are available at [https://hub.docker.com/u/nwchemorg](https://hub.docker.com/u/nwchemorg)
 
 The following docker command will pull the NWChem 7.0.0 image and run it in parallel using three processes 
