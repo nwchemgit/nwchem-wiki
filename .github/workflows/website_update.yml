@@ -61,12 +61,14 @@ jobs:
           bash ./install_mkdocs.sh
           mkdocs -h || true
       - name: checkout archived forum
-        uses: actions/checkout@v2
-        with:
-          path: mkdocs
-          repository: nwchemgit/archivedforum
-          persist-credentials: false
-          fetch-depth: 1
+        shell: bash
+        working-directory: mkdocs
+        run: |
+          git clone -b $GITHUB_REF_NAME --depth 1  --filter=blob:none --sparse \
+          https://github.com/nwchemgit/archivedforum
+          cd archivedforum
+          git sparse-checkout set Special_AWCforum 
+          pwd
       - name: move archiveforum source
         shell: bash
         working-directory: mkdocs/docs/
@@ -84,11 +86,11 @@ jobs:
           ls -lart || true
           ls -lart site/index.html || true
       - name: checkout website
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.REPOSITORY_TOKEN }}
-          path: mkdocs/nwchemgit.github.io
-          repository: nwchemgit/nwchemgit.github.io
+        shell: bash
+        working-directory: mkdocs
+        run: |
+          git clone -b $GITHUB_REF_NAME --depth 1  --filter=blob:none --sparse \
+          https://github.com/nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
         shell: bash
         working-directory: mkdocs
