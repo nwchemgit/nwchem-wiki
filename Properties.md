@@ -167,15 +167,15 @@ implemented in NWChem.
 
 Please refer to the following papers for further details:
 
-1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235
-2.  J. Autschbach, Comp. Lett. 3, (2007), 131
-3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103
+1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)
+2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)
+3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)
 4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
-    J. Chem. Phys. 131 (2009), 214103
+    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)
 5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
-    (2006), 194110
+    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)
 6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
-    (2012), 4336-4346
+    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)
 
 ### Raman
 
