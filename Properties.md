@@ -138,7 +138,8 @@ Response calculations are currently supported only for
 The output consists of the electric polarizability
 and optical rotation tensors (alpha, beta for optical rotation) in
 atomic units.  
-The `response` keyword requires two arguments: response order and frequency in Hartree energy units (e.g. `response 1 0`).  
+The `response` keyword requires two arguments: response order and frequency in Hartree energy units
+(the `aoresponse` keyword can be used with same effect as the `response` keyword).  
 If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster.   
