@@ -64,6 +64,7 @@ jobs:
       - name: checkout archived forum
         uses: actions/checkout@v2
         with:
+          repository: nwchemgit/archivedforum
           persist-credentials: false
           fetch-depth: 1
       - name: move archiveforum source
