@@ -138,12 +138,12 @@ Response calculations are currently supported only for
 The output consists of the electric polarizability
 and optical rotation tensors (alpha, beta for optical rotation) in
 atomic units.  
-The `response` keyword requires two arguments: response order and frequency in Hartree energy units (e.g. `response 1 0`)
+The `response` keyword requires two arguments: response order and frequency in Hartree energy units (e.g. `response 1 0`).  
 If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster.   
 The isotropic optical rotation is origin independent when using
-the velocity gauge or with GIAOs [1].   
+the velocity gauge (by means of `velocity` keyword) or with GIAOs[1] (by means of the `giao` keyword).   
 With the keyword `bdtensor`, a
 fully origin-invariant optical rotation tensor is calculated [1,6].  
 Note that `velocity` and `orbeta` are incompatible.   
@@ -263,7 +263,7 @@ as described in reference [9].
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
 property
- polfromsos
+ polfrom
 end
 
 task dft property
@@ -274,7 +274,7 @@ end
 task dft property
 ```
   
-#### SOS Reference
+#### SOO Reference
 
 Please refer to the following paper  for further details  
 9.  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). DOI: 10.1177/0003702820923392
