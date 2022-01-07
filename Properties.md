@@ -143,7 +143,7 @@ If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster.   
 The isotropic optical rotation is origin independent when using
-the velocity gauge (by means of `velocity` keyword) or with GIAOs[1] (by means of the `giao` keyword).   
+the velocity gauge (by means of `velocity` keyword) or with GIAOs [1] (by means of the `giao` keyword).   
 With the keyword `bdtensor`, a
 fully origin-invariant optical rotation tensor is calculated [1,6].  
 Note that `velocity` and `orbeta` are incompatible.   
@@ -182,7 +182,7 @@ Please refer to the following papers for further details:
 Raman calculations can be performed by specifying the Raman block. These
 calculations are performed in conjunction with polarizability
 calculations. Detailed description of input parameters at
-<http://pubs.acs.org/doi/suppl/10.1021/jp411039m>
+[https://pubs.acs.org/doi/10.1021/jp411039m#notes-1](https://pubs.acs.org/doi/10.1021/jp411039m#notes-1)
 ```
 RAMAN 
  [ (NORMAL | | RESONANCE) default NORMAL ]  
@@ -243,10 +243,9 @@ set raman:numpts <integer>
 Please refer to the following papers for further details:
 
 7.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
-    Theoretical Chemistry 987, 32 (2012). DOI:
-    10.1016/j.comptc.2011.08.027.
+    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)
 8.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
-    118 , 517 (2014). DOI: 10.1021/jp411039m
+    118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)
 
 
 ### Polarizability computed with the Sum over Orbitals method
@@ -277,7 +276,7 @@ task dft property
 #### SOO Reference
 
 Please refer to the following paper  for further details  
-9.  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). DOI: 10.1177/0003702820923392
+9.  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)
   
 ### Nbofile
 
