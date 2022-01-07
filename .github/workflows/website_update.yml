@@ -18,6 +18,7 @@ jobs:
         shell: bash
         run: |
           env|egrep GITHU
+          env|egrep runner
           cd $GITHUB_WORKSPACE
           cd ..
           ls -lart
@@ -31,13 +32,13 @@ jobs:
         shell: bash
         run: |
           pwd
-          ls -Rlart contrib
+          ls -Rlart ../nwchem/contrib
       - name: Set up Python 3
         uses: actions/setup-python@v2
       
       - name: install mkdocs and plugins
         shell: bash
-        working-directory: contrib/mkdocs
+        working-directory: ../nwchem/contrib/mkdocs
         run: |
           pwd
           bash ./install_mkdocs.sh
@@ -45,31 +46,31 @@ jobs:
       - name: checkout wiki
         uses: actions/checkout@v2
         with:
-          path: contrib/mkdocs/docs
+          path: ../nwchem/contrib/mkdocs/docs
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
           fetch-depth: 1
       - name: check wiki source
         shell: bash
-        working-directory: contrib/mkdocs
+        working-directory: ../nwchem/contrib/mkdocs
         run: |
           ls -lrt docs
       - name: checkout archived forum
         uses: actions/checkout@v2
         with:
-          path: contrib/mkdocs/docs/archivedforum
+          path: ../nwchem/contrib/mkdocs/docs/archivedforum
           repository: nwchemgit/archivedforum
           persist-credentials: false
           fetch-depth: 1
       - name: soft-link archiveforum source
         shell: bash
-        working-directory: contrib/mkdocs/docs/
+        working-directory: ../nwchem/contrib/mkdocs/docs/
         run: |
           ls -lrt archivedforum
           mv archivedforum/Special_AWCforum .
       - name: build website
         shell: bash
-        working-directory: contrib/mkdocs
+        working-directory: ../nwchem/contrib/mkdocs
         run: |
           MKDOCS_SERVE=B bash ./build_website.sh
           ls -lart || true
@@ -78,11 +79,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.REPOSITORY_TOKEN }}
-          path: contrib/mkdocs/nwchemgit.github.io
+          path: ../nwchem/contrib/mkdocs/nwchemgit.github.io
           repository: nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
         shell: bash
-        working-directory: contrib/mkdocs
+        working-directory: ../nwchem/contrib/mkdocs
         run: |
           rsync --exclude=.git -a site/* nwchemgit.github.io/.
           ls -lart site/index.html || true
@@ -92,20 +93,20 @@ jobs:
           git log -1
       - name: Commit changes
         shell: bash
-        working-directory: contrib/mkdocs/nwchemgit.github.io
+        working-directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
         run: |
             pwd
             ls -lrt ../
             bash ../commit_changes.sh
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          directory: contrib/mkdocs/nwchemgit.github.io
-          github_token: ${{ secrets.REPOSITORY_TOKEN }}
-          branch: ${{ github.ref }}
-          repository: nwchemgit/nwchemgit.github.io
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
+#          github_token: ${{ secrets.REPOSITORY_TOKEN }}
+#          branch: ${{ github.ref }}
+#          repository: nwchemgit/nwchemgit.github.io
       - name: Check commit result
         shell: bash
-        working-directory: contrib/mkdocs/nwchemgit.github.io
+        working-directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
         run: |
             git log -2
