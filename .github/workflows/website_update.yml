@@ -14,7 +14,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout nwchem code
+      - name: checkout wiki
+        uses: actions/checkout@v2
+        with:
+          repository: nwchemgit/nwchem-wiki
+          persist-credentials: false
+          fetch-depth: 1
+      - name: move wiki source under docs
+        shell: bash
+        working-directory: ../
+        run: |
+          pwd
+          ls -l
+          mv nwchem-wiki docs
+          mkdir -p nwchem-wiki/mkdocs
+          mv docs nwchem-wiki/mkdocs/.
+      - name: Checkout mkdocs from the nwchem repository
         shell: bash
         run: |
           env|egrep GITHU
@@ -28,49 +43,41 @@ jobs:
           git sparse-checkout set contrib/mkdocs
           pwd
           ls -lrta
-      - name: check nwchem/contrib/mkdocs
+          mv contrib/mkdocs/* $GITHUB_WORKSPACE/mkdocs/.
+      - name: check mkdocs directory
         shell: bash
         run: |
           pwd
-          ls -Rlart ../nwchem/contrib
+          ls -lart
+          ls -lart mkdocs
+          ls -lart mkdocs/docs
       - name: Set up Python 3
         uses: actions/setup-python@v2
       
       - name: install mkdocs and plugins
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs
+        working-directory: mkdocs
         run: |
           pwd
           bash ./install_mkdocs.sh
           mkdocs -h || true
-      - name: checkout wiki
-        uses: actions/checkout@v2
-        with:
-          path: ../nwchem/contrib/mkdocs/docs
-          repository: nwchemgit/nwchem-wiki
-          persist-credentials: false
-          fetch-depth: 1
-      - name: check wiki source
-        shell: bash
-        working-directory: ../nwchem/contrib/mkdocs
-        run: |
-          ls -lrt docs
       - name: checkout archived forum
         uses: actions/checkout@v2
         with:
-          path: ../nwchem/contrib/mkdocs/docs/archivedforum
-          repository: nwchemgit/archivedforum
           persist-credentials: false
           fetch-depth: 1
-      - name: soft-link archiveforum source
+      - name: move archiveforum source
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs/docs/
+        working-directory: mkdocs/docs/
         run: |
-          ls -lrt archivedforum
-          mv archivedforum/Special_AWCforum .
+          echo ' ### ls on $GITHUB_WORKSPACE ###'
+          ls -lart $GITHUB_WORKSPACE|tail -2
+          echo ' ### ls on $GITHUB_WORKSPACE/archivedforum ###'          
+          ls -lrt $GITHUB_WORKSPACE/archivedforum
+          mv $GITHUB_WORKSPACE/archivedforum/Special_AWCforum .
       - name: build website
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs
+        working-directory: mkdocs
         run: |
           MKDOCS_SERVE=B bash ./build_website.sh
           ls -lart || true
@@ -79,11 +86,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.REPOSITORY_TOKEN }}
-          path: ../nwchem/contrib/mkdocs/nwchemgit.github.io
+          path: mkdocs/nwchemgit.github.io
           repository: nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs
+        working-directory: mkdocs
         run: |
           rsync --exclude=.git -a site/* nwchemgit.github.io/.
           ls -lart site/index.html || true
@@ -93,7 +100,7 @@ jobs:
           git log -1
       - name: Commit changes
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
+        working-directory: mkdocs/nwchemgit.github.io
         run: |
             pwd
             ls -lrt ../
@@ -101,12 +108,12 @@ jobs:
 #      - name: Push changes
 #        uses: ad-m/github-push-action@master
 #        with:
-#          directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
+#          directory: mkdocs/nwchemgit.github.io
 #          github_token: ${{ secrets.REPOSITORY_TOKEN }}
 #          branch: ${{ github.ref }}
 #          repository: nwchemgit/nwchemgit.github.io
       - name: Check commit result
         shell: bash
-        working-directory: ../nwchem/contrib/mkdocs/nwchemgit.github.io
+        working-directory: mkdocs/nwchemgit.github.io
         run: |
             git log -2
