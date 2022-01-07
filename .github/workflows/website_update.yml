@@ -1,4 +1,5 @@
-name: NWChem website update
+name: NWChem-website.update
+
 on:
   release:
   schedule:
