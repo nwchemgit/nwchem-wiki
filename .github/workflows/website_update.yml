@@ -25,7 +25,6 @@ jobs:
         run: |
           pwd
           ls -l
-#          mv nwchem-wiki docs
           mkdir -p mkdocs/docs
           rsync -a --exclude=.git --exclude=mkdocs * mkdocs/docs/.
           ls -lrt mkdocs/docs|tail -4
