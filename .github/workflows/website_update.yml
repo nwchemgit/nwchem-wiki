@@ -22,13 +22,13 @@ jobs:
           fetch-depth: 1
       - name: move wiki source under docs
         shell: bash
-        working-directory: ../
         run: |
           pwd
           ls -l
-          mv nwchem-wiki docs
-          mkdir -p nwchem-wiki/mkdocs
-          mv docs nwchem-wiki/mkdocs/.
+#          mv nwchem-wiki docs
+          mkdir -p mkdocs/docs
+          rsync -a --exclude=.git --exclude=mkdocs * mkdocs/docs/.
+          ls -lrt mkdocs/docs|tail -4
       - name: Checkout mkdocs from the nwchem repository
         shell: bash
         run: |
