@@ -10,6 +10,9 @@ on:
   workflow_dispatch:
 jobs:
   mirror_dotwiki2repo:
+    if: |
+      github.event_name == 'schedule' ||
+      (!contains(github.event.head_commit.message, 'ci skip'))
     runs-on: [ubuntu-latest]  
     steps:
       - name: Checkout nwchem-wiki
@@ -34,6 +37,9 @@ jobs:
           branch: ${{ github.ref }}
             
   mirror_repo2dotwiki:
+    if: |
+      github.event_name == 'schedule' ||
+      (!contains(github.event.head_commit.message, 'ci skip'))
     needs: mirror_dotwiki2repo
     runs-on: [ubuntu-latest]  
     steps:
