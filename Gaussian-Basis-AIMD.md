@@ -197,7 +197,7 @@ task tddft qmd
 ```
  
 ### Property calculation in a Molecular Dynamics simulation
-
+The following is a sample input for an MD simulation that compute polarizability by means of the [SOS method](Properties#polarizability-computed-with-the-sum-over-orbitals-method) at each time step.
 
 ```
 start qmd_prop_h2o_svr  
