@@ -128,7 +128,8 @@ property
  convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
-Response calculations are currently supported only for 
+Response calculations are currently supported only for   
+  
 - order 1 (linear response),   
 - single frequency,   
 - electric field   
