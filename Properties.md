@@ -129,10 +129,10 @@ property
 end
 ```
 Response calculations are currently supported only for 
- * order 1 (linear response), 
- * single frequency, 
- * electric field  
- * mixed electric-magnetic field perturbations.   
+- order 1 (linear response),   
+- single frequency,   
+- electric field   
+- mixed electric-magnetic field perturbations.    
 
 The output consists of the electric polarizability
 and optical rotation tensors (alpha, beta for optical rotation) in
