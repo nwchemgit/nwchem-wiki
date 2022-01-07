@@ -250,7 +250,7 @@ Please refer to the following papers for further details:
 
 ### Polarizability computed with the Sum over Orbitals method
   
-As an alternative to the [linear response method](#response-calculations), the Sum over Orbitals method is available to compute polarizabilities. Results of these method are much less accurate than linear response calculations, with values off by a factor of 2-4x. However, the qualitative nature of this results can be used to compute Raman when coupled with [QMD](Gaussian-Basis-AIMD), as described in reference [9].
+As an alternative to the [linear response method](#response-calculations), the Sum over Orbitals method is available to compute polarizabilities. Results of these method are much less accurate than linear response calculations, with values off by a factor of 2-4x. However, the qualitative nature of this results can be used to compute Raman frequencies when coupled with [QMD](Gaussian-Basis-AIMD), as described in reference [9].
   
 Sample input computing polarizability both with the SOS method and the linear response method:
 ```
