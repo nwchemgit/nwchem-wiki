@@ -119,7 +119,9 @@ For example, property 5 will calculate properties on the current geometry every 
 If present, the code will look for the tddft block and calculate the absorption spectrum.  
 For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.    
 
-## Sample input
+## Sample input files
+
+### Ground state Molecular Dynamics
 
 The following is a sample input for a ground state MD simulation. The
 simulation is 200 steps long with a 10 a.u. time step, using the
@@ -152,6 +154,9 @@ qmd
 end  
 task dft qmd
 ```
+  
+### Excited state Molecular Dynamics
+  
 The following is a sample input for an excited state MD simulation on
 the first excited state. The simulation is 200 steps long with a 10 a.u.
 time step, run in the microcanonical ensemble. Center-of-mass rotations
@@ -188,6 +193,40 @@ qmd
   thermostat  none  
   print_xyz   5  
 end  
+task tddft qmd
+```
+ 
+### Property calculation in a Molecular Dynamics simulation
+
+
+```
+start qmd_prop_h2o_svr  
+echo  
+print low  
+geometry noautosym noautoz  
+  O   0.00000000    -0.01681748     0.11334792  
+  H   0.00000000     0.81325914    -0.34310308  
+  H   0.00000000    -0.67863597    -0.56441201  
+end  
+basis  
+  * library 6-31G*  
+end  
+dft  
+  xc pbe0  
+end  
+ 
+qmd  
+  nstep_nucl  200  
+  dt_nucl     10.0  
+  com_step    10  
+  thermostat  none  
+  print_xyz   5
+  property 1
+end  
+
+property
+ polfromsos
+end
 task tddft qmd
 ```
 Additional sample inputs can be found in $NWCHEM\_TOP/QA/tests/qmd\_\*
