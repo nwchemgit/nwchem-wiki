@@ -393,8 +393,6 @@ codes, e.g.
   - [Multiwfn](http://multiwfn.codeplex.com/)
   - [Postg](https://github.com/aoterodelaroza/postg)
 
-More details at
-<https://sites.google.com/site/alvarovazquezmayagoitia/goals/codes/nwchem-notes/generator-of-aim-wavefunction-files-nwchem>  
 **WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
 
 ## Moldenfile
