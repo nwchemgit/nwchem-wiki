@@ -128,23 +128,35 @@ property
  convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
-Response calculations are currently supported only for order 1 (linear
-response), single frequency, electric field and mixed electric-magnetic
-field perturbations. The output consists of the electric polarizability
+Response calculations are currently supported only for 
+ * order 1 (linear response), 
+ * single frequency, 
+ * electric field  
+ * mixed electric-magnetic field perturbations.   
+
+The output consists of the electric polarizability
 and optical rotation tensors (alpha, beta for optical rotation) in
-atomic units. If the `velocity` or `giao` keywords are absent, the
+atomic units.   
+If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
-faster. The isotropic optical rotation is origin independent when using
-the velocity gauge or with GIAOs [1]. With the keyword `bdtensor`, a
-fully origin-invariant optical rotation tensor is calculated [1,6].
-Note that `velocity` and `orbeta` are incompatible. An input line `set
-prop:newaoresp 0` outside of the `properties` block forces the use of an
+faster.   
+The isotropic optical rotation is origin independent when using
+the velocity gauge or with GIAOs [1].   
+With the keyword `bdtensor`, a
+fully origin-invariant optical rotation tensor is calculated [1,6].  
+Note that `velocity` and `orbeta` are incompatible.   
+The input line 
+```
+set prop:newaoresp 0
+```
+outside of the `properties` block forces the use of an
 older version of the response code, which has fewer features (in
 particular, no working GIAO opetical rotation) but which has been tested
 more thoroughly. In the default newer version you may encounter
-undocumented features (bugs). `analysis` triggers an analysis of the
-response tensors in terms of molecular orbitals. If the property input
-block also contains the keyword `pmlocalization`, then the analysis is
+undocumented features (bugs).  
+The keyword `analysis` triggers an analysis of the
+response tensors in terms of molecular orbitals.  
+If the property input block also contains the keyword `pmlocalization`, then the analysis is
 performed in terms of Pipek-Mezey localized MOs, otherwise the canonical
 set is used (this feature may currently not work, please check the sum
 of the analysis carefully). See Ref. [6] for an example. Works with HF
