@@ -145,13 +145,11 @@ the velocity gauge or with GIAOs [1].
 With the keyword `bdtensor`, a
 fully origin-invariant optical rotation tensor is calculated [1,6].  
 Note that `velocity` and `orbeta` are incompatible.   
-The input line 
-```
-set prop:newaoresp 0
-```
+The input line   
+`set prop:newaoresp 0`  
 outside of the `properties` block forces the use of an
 older version of the response code, which has fewer features (in
-particular, no working GIAO opetical rotation) but which has been tested
+particular, no working GIAO optical rotation) but which has been tested
 more thoroughly. In the default newer version you may encounter
 undocumented features (bugs).  
 The keyword `analysis` triggers an analysis of the
