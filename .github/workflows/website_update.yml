@@ -64,6 +64,7 @@ jobs:
       - name: checkout archived forum
         uses: actions/checkout@v2
         with:
+          path: mkdocs
           repository: nwchemgit/archivedforum
           persist-credentials: false
           fetch-depth: 1
@@ -71,11 +72,11 @@ jobs:
         shell: bash
         working-directory: mkdocs/docs/
         run: |
-          echo ' ### ls on $GITHUB_WORKSPACE ###'
-          ls -lart $GITHUB_WORKSPACE|tail -2
-          echo ' ### ls on $GITHUB_WORKSPACE/archivedforum ###'          
-          ls -lrt $GITHUB_WORKSPACE/archivedforum
-          mv $GITHUB_WORKSPACE/archivedforum/Special_AWCforum .
+          echo ' ### ls on mkdocs ###'
+          ls -lart ../
+          echo ' ### ls on mkdocs/archivedforum ###'          
+          ls -lrt ../archivedforum
+          mv ../archivedforum/Special_AWCforum .
       - name: build website
         shell: bash
         working-directory: mkdocs
