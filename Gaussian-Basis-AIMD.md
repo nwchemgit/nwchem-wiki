@@ -197,7 +197,7 @@ Additional sample inputs can be found in $NWCHEM\_TOP/QA/tests/qmd\_\*
 The xyz file produced by the QMD module contains the velocities (given
 in Angstrom/fs), in addition to the coordinates (given in Angstrom). The
 comment lines also contain the time step, total energy (atomic units),
-and dipole moment (atomic units). In the directory [$NWCHEM_TOP/contrib/qmd_tools](https://github.com/nwchemgit/nwchem/tree/master/contrib/qmd_tools), the code [qmd_analysis.f90](https://github.com/nwchemgit/nwchem/blob/master/contrib/qmd_tools/qmd_analysis.f90) will use the xyz trajectory as input to calculate the IR spectrum and
+and dipole moment (atomic units). In the directory [$NWCHEM_TOP/contrib/qmd_tools](https://github.com/nwchemgit/nwchem/tree/master/contrib/qmd_tools), the code [qmd_analysis.f90](https://github.com/nwchemgit/nwchem/blob/master/contrib/qmd_tools/qmd_analysis.f90) will used the xyz trajectory as input to calculate the IR spectrum and
 vibrational density of states from Fourier transforms of the dipole and
 atomic momenta autocorrelation functions, respectively. The code needs
 to be linked to a LAPACK library when compiled; the Makefile in the
@@ -205,7 +205,7 @@ directory will compile the code with the LAPACK routines included with
 the NWChem source.
 
 Here we compute the IR spectrum and the element-wise breakdown of the
-vibrational density of states for silicon tetrachloride (SiCl4). The
+  vibrational density of states for silicon tetrachloride (SiCl<sub>4</sub>). The
 following input file was used.
 ```
 start SiCl4  
