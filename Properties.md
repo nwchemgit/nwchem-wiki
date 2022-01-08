@@ -92,15 +92,15 @@ references:
 A1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
     Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
     Zeroth-Order Regular Approximation and Density Functional Theory",
-    Journal of Chemical Theory and Computation 7, 2175 (2011).  
+    Journal of Chemical Theory and Computation 7, 2175 (2011). [DOI:10.1021/ct200143w](https://dx.doi.org/10.1021/ct200143w)  
 A2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
     computations and localized orbital analysis of nuclear hyperfine
     coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
-    Comput. 2012, 8, 598–609.  
+    Comput. 2012, 8, 598–609. [DOI:10.1021/ct2008507](https://dx.doi.org/10.1021/ct2008507)    
 A3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
     computations of nuclear magnetic shielding and g-shifts with the
     zeroth-order regular approximation and range-separated hybrid
-    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292.
+    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)  
   
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
