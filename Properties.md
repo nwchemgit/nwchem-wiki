@@ -92,16 +92,16 @@ references:
 A1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
     Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
     Zeroth-Order Regular Approximation and Density Functional Theory",
-    Journal of Chemical Theory and Computation 7, 2175 (2011)
+    Journal of Chemical Theory and Computation 7, 2175 (2011).  
 A2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
     computations and localized orbital analysis of nuclear hyperfine
     coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
-    Comput. 2012, 8, 598–609.
+    Comput. 2012, 8, 598–609.  
 A3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
     computations of nuclear magnetic shielding and g-shifts with the
     zeroth-order regular approximation and range-separated hybrid
     density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292.
-
+  
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
 ```
@@ -168,15 +168,15 @@ implemented in NWChem.
 
 Please refer to the following papers for further details:
 
-B1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)
-B2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)
-B3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)
+B1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)  
+B2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)  
+B3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)  
 B4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
-    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)
+    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)  
 B5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
-    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)
+    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
 B6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
-    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)
+    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
 
 ### Raman
 
@@ -244,9 +244,9 @@ set raman:numpts <integer>
 Please refer to the following papers for further details:
 
 C1.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
-    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)
+    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)  
 C2.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
-    118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)
+    118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)  
 
 
 ### Polarizability computed with the Sum over Orbitals method
