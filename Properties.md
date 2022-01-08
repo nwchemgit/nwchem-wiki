@@ -89,15 +89,15 @@ with the ZORA model potential approach.
 For theoretical and computational details, please refer to the following
 references:
 
-1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
+A1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
     Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
     Zeroth-Order Regular Approximation and Density Functional Theory",
     Journal of Chemical Theory and Computation 7, 2175 (2011)
-2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
+A2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
     computations and localized orbital analysis of nuclear hyperfine
     coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
     Comput. 2012, 8, 598–609.
-3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
+A3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
     computations of nuclear magnetic shielding and g-shifts with the
     zeroth-order regular approximation and range-separated hybrid
     density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292.
@@ -120,11 +120,11 @@ follows:
 property
  response  1 7.73178E-2   # response order and frequency in Hartree energy units  
  velocity                 # use modified velocity gauge for electric dipole  
- orbeta                   # calculate optical rotation 'beta' directly [2]  
- giao                     # GIAO optical rotation [1,3,6], forces orbeta  
- bdtensor                 # calculates B-tilde of Refs. [1,6] 
- analysis                 # analyze response in terms of MOs [6]  
- damping 0.007            # complex response functions with damping, Ref [5] 
+ orbeta                   # calculate optical rotation 'beta' directly [B2]  
+ giao                     # GIAO optical rotation [B1,B3,B6], forces orbeta  
+ bdtensor                 # calculates B-tilde of Refs. [B1,B6] 
+ analysis                 # analyze response in terms of MOs [B6]  
+ damping 0.007            # complex response functions with damping, Ref [B5] 
  convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
@@ -144,9 +144,9 @@ If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster.   
 The isotropic optical rotation is origin independent when using
-the velocity gauge (by means of `velocity` keyword) or with GIAOs [1] (by means of the `giao` keyword).   
+the velocity gauge (by means of `velocity` keyword) or with GIAOs [B1] (by means of the `giao` keyword).   
 With the keyword `bdtensor`, a
-fully origin-invariant optical rotation tensor is calculated [1,6].  
+fully origin-invariant optical rotation tensor is calculated [B1,B6].  
 Note that `velocity` and `orbeta` are incompatible.   
 The input line
 ```
@@ -168,14 +168,14 @@ implemented in NWChem.
 
 Please refer to the following papers for further details:
 
-1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)
-2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)
-3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)
-4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
+B1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)
+B2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)
+B3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)
+B4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
     J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)
-5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
+B5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
     (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)
-6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
+B6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
     (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)
 
 ### Raman
@@ -243,9 +243,9 @@ set raman:numpts <integer>
 
 Please refer to the following papers for further details:
 
-7.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
+C1.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
     Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)
-8.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
+C2.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
     118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)
 
 
@@ -258,7 +258,7 @@ much less accurate than linear response calculations, with values off
 by a factor of 2-4x. However, the qualitative nature of this results
 can be used to compute Raman frequencies when coupled with
 [QMD](Gaussian-Basis-AIMD.md#property-calculation-in-a-molecular-dynamics-simulation),
-as described in reference [9].
+as described in reference [^9].
   
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
@@ -274,10 +274,8 @@ end
 task dft property
 ```
   
-#### SOO Reference
-
-Please refer to the following paper  for further details  
-9.  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)
+ 
+[^9]:  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)
   
 ### Nbofile
 
