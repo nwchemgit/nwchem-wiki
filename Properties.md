@@ -258,7 +258,7 @@ much less accurate than linear response calculations, with values off
 by a factor of 2-4x. However, the qualitative nature of this results
 can be used to compute Raman frequencies when coupled with
 [QMD](Gaussian-Basis-AIMD.md#property-calculation-in-a-molecular-dynamics-simulation),
-as described in reference [^9].
+as described in reference [D1].
   
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
@@ -275,7 +275,7 @@ task dft property
 ```
   
  
-[^9]:  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)
+[D1]:  E. Aprà, As. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)
   
 ### Nbofile
 
