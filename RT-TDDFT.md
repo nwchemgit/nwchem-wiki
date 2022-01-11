@@ -359,9 +359,10 @@ end
 
 ```
 field "gpulse"
-  type gaussian   # Gaussian enveloped quasi-monochromatic pulse: E(t) = exp( -(t-t0)^2 / 2s^2)
+  type gaussian   # Gaussian enveloped quasi-monochromatic pulse: E(t) = max * exp( -(t-t0)^2 / 2s^2) * sin(w0*t + phi0)
   polarization x  # = x, y, z
   frequency 0.12  # frequency of laser pulse in au (e.g., 0.12 au = 3.27 eV)
+  phase 0.0       # phase shift of laser pulse (in rad)
   center 200.0    # center of Gaussian envelope (in au time)
   width 50.0      # width of Gaussian pulse (in au time)
   max 0.0001      # maximum value of electric field
@@ -689,7 +690,7 @@ task dft energy
 ## (Gaussian-enveloped) z-polarized E-field tuned to a transition at
 ## 10.25 eV.  The envelope takes the form:
 ##
-## G(t) = exp(-(t-t0)^ / 2s^2)
+## G(t) = exp(-(t-t0)^2 / 2s^2)
 ##
 ## The target excitation has an energy (frequency) of w = 0.3768 au
 ## and thus an oscillation period of T = 2 pi / w = 16.68 au
