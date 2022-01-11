@@ -111,10 +111,10 @@ become unstable and/or inaccurate for larger time steps, which depends
 on the integrator used. Very roughly speaking, the second order Magnus
 integrator should be reliable for time steps up to 0.2 au. Second, you
 must choose a time step small enough to capture the oscillations of
-interest, i.e., to resolve an excitation of energy <img alt="$\omega$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ae4fb5973f393577570881fc24fc2054.svg?invert_in_darkmode&sanitize=true" align=middle width="10.781595pt" height="14.10255pt"/>, your time
-step needs to be smaller than <img alt="$\pi / \omega$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/87993fbf847434803c2454e87093dc46.svg?invert_in_darkmode&sanitize=true" align=middle width="28.89513pt" height="24.56553pt"/>, and typically a tenth of
+interest, i.e., to resolve an excitation of energy &omega;, your time
+step needs to be smaller than &pi;/&omega;, and typically a tenth of
 that for accuracy. For example, to capture high energy oscillations such
-as core-level excitations (e.g., <img alt="$\omega = 50$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/130501d8bc013f1b8aaeb348a5e32a95.svg?invert_in_darkmode&sanitize=true" align=middle width="49.030575pt" height="21.10812pt"/> au) you might want a
+as core-level excitations (e.g., &omega; = 50au) you might want a
 relative small time step:
 
 ```
@@ -132,7 +132,7 @@ time step.
 
 This option sets a label for the output for convenient parsing (e.g.,
 with "grep"). Every output line with time-dependent data will begin with
-this string (set to "<rt_tddft>: " by default). For example setting:
+this string (set to `<rt_tddft>: ` by default). For example setting:
 
 ```
 rt_tddft
@@ -152,7 +152,7 @@ nameofrun      2.20000  -7.589146713114E+001     # Etot
 
 ### NCHECKS -- Number of run-time check points
 
-This option takes an integer number (default 10), or "\*" which means
+This option takes an integer number (default 10), or `*` which means
 every step, which sets the total of number of run-time checkpoints,
 where various sanity checks are made such as symmetries, idempotency,
 traces, etc. These checks are not terribly efficient (e.g., involve
@@ -171,10 +171,10 @@ end
 
 This sets the number of print points, i.e., the total number of
 time-dependent observables (e.g., dipole, charge, energy) that are
-computed and printed. It either takes an integer number or `"*"` which
+computed and printed. It either takes an integer number or `*` which
 means every time step (this is the default). Since there is no
 appreciable cost to computing and printing these quantities, there is
-usually no need to change this from `"*"`.
+usually no need to change this from `*`.
 
 ```
 rt_tddft
@@ -209,11 +209,11 @@ end
 
 This option controls various numerical tolerances:
 
-  - zero: threshold for checks that quantities are zero, e.g., in
+  - `zero`: threshold for checks that quantities are zero, e.g., in
     symmetry checks (default 1e-8)
-  - series: numerical convergence for series, e.g., matrix
+  - `series`: numerical convergence for series, e.g., matrix
     exponentiation (default 1e-10)
-  - interpol: numerical convergence for interpolation, e.g., in Magnus
+  - `interpol`: numerical convergence for interpolation, e.g., in Magnus
     propagator (default 1e-7)
 
 Occasionally it is useful to loosen the interpolation tolerances if the
@@ -395,11 +395,11 @@ end
 ### EXCITE -- Excitation rules
 
 This sets the rules for applying external fields to the system. It takes
-the form "excite <geom> with <field>", where <geom> is the name of a
+the form `excite <geom> with <field>`, where `<geom>` is the name of a
 geometry fragment (defaults to "geometry" which is the default geometry
-name), and <field> is the name of a [field
+name), and `<field>` is the name of a [field
 structure](RT-TDDFT#field----sub-block-for-specifying-external-electric-fields).
-Assuming, for example, you have defined a field name "kick" this option
+Assuming, for example, you have defined a field name `kick` this option
 takes the form (note that quotes are optional and shown for clarity):
 
 ```
