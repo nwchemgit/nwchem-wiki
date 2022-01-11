@@ -55,7 +55,7 @@ The [charge](Charge), [geometry](Geometry), [basis
 set](Basis), and
 [DFT](Density-Functional-Theory-for-Molecules) options are
 all specified as normal, using their respective syntax. Real-time TDDFT
-parameters are supplied in the RT\_TDDFT block (note, nothing is
+parameters are supplied in the `RT_TDDFT` block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
 discussed in detail
 afterwards.
@@ -171,10 +171,10 @@ end
 
 This sets the number of print points, i.e., the total number of
 time-dependent observables (e.g., dipole, charge, energy) that are
-computed and printed. It either takes an integer number or "\*" which
+computed and printed. It either takes an integer number or `"*"` which
 means every time step (this is the default). Since there is no
 appreciable cost to computing and printing these quantities, there is
-usually no need to change this from "\*".
+usually no need to change this from `"*"`.
 
 ```
 rt_tddft
@@ -231,8 +231,8 @@ end
 ### PROPAGATOR -- Selecting the integrator method
 
 This selects the propagator (i.e., time integrator) method. Possible
-choices include "euler" for Euler integration (terrible, you should
-never use this), "rk4" for 4th order Runge-Kutta, and "magnus" for 2nd
+choices include `euler` for Euler integration (terrible, you should
+never use this), `rk4` for 4th order Runge-Kutta, and `magnus` for 2nd
 order Magnus with self-consistent interpolation. In virtually all cases
 Magnus is superior in terms of stability. Euler or rk4 are perhaps only
 useful for debugging or simplicity (e.g., for code development).
@@ -248,7 +248,7 @@ end
 ### EXP -- Selecting the matrix exponentiation method
 
 This selects the method for exponentiation matrices. For now this can
-either be "pseries" for a contractive power series or "diag" for
+either be `pseries` for a contractive power series or `diag` for
 diagonalization. In general the power series (default) is faster.
 
 ```
@@ -294,7 +294,7 @@ This option sets the static Fock matrix flag, meaning the time-dependent
 Fock matrix will not be recalculated at each time, but instead use the
 t=0 value. This will drastically increase the simulation speed since the
 bulk of the work is spent rebuilding the TD Fock matrix, but will give
-non-physical results. For example, using "static" to compute an
+non-physical results. For example, using `static` to compute an
 absorption spectrum will result in excitations corresponding to the raw
 eigenvalue differences without electron-hole relaxation. This option has
 few uses besides dry-runs and debugging.
@@ -312,21 +312,21 @@ end
 This sets the various time-dependent properties that are to be computed
 and printed at each print point. Note that for many of these options,
 the values are computed and printed for each geometry specified in the
-input deck, not only the active one (i.e., the one set using "set
-geometry ..." in the input deck). Possible choices are:
+input deck, not only the active one (i.e., the one set using `set
+geometry ...` in the input deck). Possible choices are:
 
-  - dipole: Dipole moment
-  - quadrupole: Quadrupole moment
-  - field: External (applied) electric field
-  - moocc: Molecular orbital occupations
-  - energy: Components of system energy (e.g., core, XC, total, etc)
-  - cputime: CPU time taken in simulation so far (useful for checking
+  - `dipole`: Dipole moment
+  - `quadrupole`: Quadrupole moment
+  - `field`: External (applied) electric field
+  - `moocc`: Molecular orbital occupations
+  - `energy`: Components of system energy (e.g., core, XC, total, etc)
+  - `cputime`: CPU time taken in simulation so far (useful for checking
     scaling)
-  - charge: Electronic charge (computed from density matrix, not from
+  - `charge`: Electronic charge (computed from density matrix, not from
     the XC grid)
-  - convergence: Convergence information (e.g., from Magnus)
-  - s2: <S2> value (openshell only)
-  - \*: Print all quantities
+  - `convergence`: Convergence information (e.g., from Magnus)
+  - `s2`: <S2> value (openshell only)
+  - `*`: Print all quantities
 
 The defaults correspond to:
 
@@ -416,9 +416,9 @@ This block is used to control visualization of the electronic charge
 density, which is typically used during a resonant excitation. This is a
 two stage process. During the propagation, a series of density matrices
 will be dumped to file (see options below). After propagation, if the
-"dplot" option is set, the code will read in options from a separate
+`dplot` option is set, the code will read in options from a separate
 DPLOT block and convert the density matrix snapshots to a corresponding
-series of real-space charge density "cube"
+series of real-space charge density `cube`
 files.
 
 ```
@@ -431,7 +431,7 @@ end
 ```
 
 ### LOAD RESTART ###
-This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new tmax
+This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new `tmax`
 
 ```
 rt_tddft
@@ -459,9 +459,9 @@ simultaneously excites all electronic modes of that polarization. The
 three resulting dipole moments are then Fourier transformed to give the
 frequency-dependent linear polarizability, and thus the absorption
 spectrum. The full input deck is
-[RT\_TDDFT\_h2o\_abs.nw](RT_TDDFT_h2o_abs.nw) and
+[RT_TDDFT_h2o_abs.nw](RT_TDDFT_h2o_abs.nw) and
 the corresponding output is
-[RT\_TDDFT\_h2o\_abs.nwo.gz](RT_TDDFT_h2o_abs.nwo.gz).
+[RT_TDDFT_h2o_abs.nwo.gz](RT_TDDFT_h2o_abs.nwo.gz).
 
 ```
 title "Water TD-PBE0 absorption spectrum"
@@ -556,7 +556,7 @@ task dft rt_tddft
 After running the simulation, we extract the x-dipole moment for the
 x-kick and similarly for the y and z-kicks (see "contrib/parsers"
 directory for this script or download here:
-[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz) ).
+[RT_TDDFT_scripts.tgz](RT_TDDFT_scripts.tgz) ).
 
 ```
 nw_rtparse.py -xdipole -px -tkick_x h2o_abs.nwo > x.dat
@@ -604,7 +604,7 @@ Here, you can just use your favorite Fourier transform utility or
 analysis software, but for convenience there is also a simple GNU Octave
 fft1d.m utility in the "contrib/parsers" directory of the trunk or
 download here:
-[RT\_TDDFT\_scripts.tgz](RT_TDDFT_scripts.tgz)
+[RT_TDDFT_scripts.tgz](RT_TDDFT_scripts.tgz)
 Note, options are hardcoded at the moment, so the switches above are not
 correct instead edit the file and run (also it reads file rather than
 redirect from stdin). Assuming the FFT output takes the form (w, Re, Im,
@@ -645,9 +645,9 @@ The procedure is outlined below, and the corresponding frequency extent
 of the pulse is shown on the absorption figure in orange. Note that it
 only covers one excitation, i.e., the field selectively excites one
 mode. The full input deck is
-[RT\_TDDFT\_h2o\_resonant.nw](RT_TDDFT_h2o_resonant.nw)
+[RT_TDDFT_h2o\_resonant.nw](RT_TDDFT_h2o_resonant.nw)
 and the output is
-[RT\_TDDFT\_h2o\_resonant.nwo.gz](RT_TDDFT_h2o_resonant.nwo.gz).
+[RT_TDDFT_h2o\_resonant.nwo.gz](RT_TDDFT_h2o_resonant.nwo.gz).
 
 <img alt="Absorption spectrum and excitation bandwidth" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/RT_TDDFT_h2o_resonant_spec_field.png" align=middle with="244pt" height="200pt"/>  
 
