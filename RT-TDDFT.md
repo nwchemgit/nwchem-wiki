@@ -292,7 +292,7 @@ end
 
 This option sets the static Fock matrix flag, meaning the time-dependent
 Fock matrix will not be recalculated at each time, but instead use the
-t=0 value. This will drastically increase the simulation speed since the
+*t=0* value. This will drastically increase the simulation speed since the
 bulk of the work is spent rebuilding the TD Fock matrix, but will give
 non-physical results. For example, using `static` to compute an
 absorption spectrum will result in excitations corresponding to the raw
@@ -575,8 +575,8 @@ yield the the x,x element of the 3x3 linear polarizability tensor, and
 similarly for the y,y and z,z elements. Here I am using an FFT utility,
 although any discrete Fourier transform will do. To accelerate
 convergence of the FFT, I have damped the time signals by
-<img alt="$\exp(-t / \tau)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5e63d73d92b58041531afaf7d225930d.svg?invert_in_darkmode&sanitize=true" align=middle width="73.711935pt" height="24.56553pt"/> which results in Lorentzians with FWHM of
-<img alt="$2 / \tau$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/37a3e0871d016fe54fe36230326b31bd.svg?invert_in_darkmode&sanitize=true" align=middle width="25.390035pt" height="24.56553pt"/> and have also "zero padded" the data with 50000 points.
+*exp(-t /&tau;)* which results in Lorentzians with FWHM of
+*2 / &tau;* and have also "zero padded" the data with 50000 points.
 This is not critical for extracting frequencies, but creates "cleaner"
 spectra, although care must be taken to damp sufficiently if padding to
 avoid artifacts (see small ripples around 23 eV in plot below). After
@@ -585,11 +585,11 @@ absorption, which is constructed from the trace of the polarizability
 matrix, i.e., the sum of the imaginary parts of the FFTs of the dipole
 moments.
 
-<img alt="$S (\omega) = \frac{4 \pi \omega}{3 c \kappa} \mathrm{Tr} [ \mathrm{Im} \alpha(\omega) ]$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4125d04d9944d0dda37cf19a3cdb6030.svg?invert_in_darkmode&sanitize=true" align=middle width="163.404945pt" height="27.72033pt"/>
-,
+*S (&omega;) = (4&pi;&omega;)/(3c&kappa;)  *Tr[Im* &alpha;(&omega;)*]  
 
-where <img alt="$c$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3e18a4a28fdee1744e5e3f79d13b9ff6.svg?invert_in_darkmode&sanitize=true" align=middle width="7.087278pt" height="14.10255pt"/> is the speed of light (137 in atomic units), <img alt="$\kappa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5c62da39aa7289df62d937cb24a31161.svg?invert_in_darkmode&sanitize=true" align=middle width="9.435855pt" height="14.10255pt"/> is
-the kick electric field strength, and <img alt="$\alpha(\omega)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/82c0292c15b78490b6d50b8ab62a100a.svg?invert_in_darkmode&sanitize=true" align=middle width="34.05864pt" height="24.56553pt"/> is the linear
+
+where *c* is the speed of light (137 in atomic units), *&kappa;*  is
+the kick electric field strength, and *&alpha;(&omega;)* is the linear
 polarizabilty tensor computed from the Fourier transforms of the
 time-dependent dipole moments. For example,
 
