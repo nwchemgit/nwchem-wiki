@@ -802,9 +802,10 @@ found in the corresponding
 ## Sample input file
 
 A simple example calculates the geometry of water, using the metaGGA
-functionals xtpss03 and ctpss03. This also highlights some of the print
-features in the DFT module. Note that you must use the line task dft
-freq numerical because analytic hessians are not available for the
+functionals `xtpss03` and `ctpss03`. This also highlights some of the print
+features in the DFT module. Note that you must use the line
+`task dft freq numerical`
+because analytic hessians are not available for the
 metaGGAs:
 ```
 title "WATER 6-311G* meta-GGA XC geometry"  
@@ -872,7 +873,7 @@ Convergence is satisfied by meeting any or all of three criteria;
 
   - convergence of the total energy; this is defined to be when the
     total DFT energy at iteration N and at iteration N-1 differ by a
-    value less than some value (the default is 1e-6). This value can be
+    value less than a threshold value (the default is 1e-6). This value can be
     modified using the key word,
 ```
        CONVERGENCE energy <real energy default 1e-6>
@@ -898,7 +899,7 @@ dominant, then level-shifting is automatically initiated. There are a
 variety of ways to customize this procedure to whatever is desired.
 
 An alternative optimization strategy is to specify, by using the change
-in total energy (from iterations when N and N-1), when to turn damping,
+in total energy (between iterations N and N-1), when to turn damping,
 level-shifting, and/or DIIS on/off. Start and stop keywords for each of
 these is available as,
 ```
@@ -1006,14 +1007,14 @@ described in the paper: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502
  CDFT <integer fatom1 latom1> [<integer fatom2 latom2>] (charge||spin <real constaint_value>) \ 
       [pop (becke||mulliken||lowdin) default lowdin]
 ```
-Variables fatom1 and latom1 define the first and last atom of the group
+Variables `fatom1` and `latom1` define the first and last atom of the group
 of atoms to which the constraint will be applied. Therefore the atoms in
 the same group should be placed continuously in the geometry input. If
-fatom2 and latom2 are specified, the difference between group 1 and 2
+`fatom2` and `latom2` are specified, the difference between group 1 and 2
 (i.e. 1-2) is constrained.
 
-The constraint can be either on the charge or the spin density (\# of
-alpha - beta electrons) with a user specified constraint\_value. Note:
+The constraint can be either on the charge or the spin density (number of
+alpha - beta electrons) with a user specified `constraint_value`. Note:
 No gradients have been implemented for the spin constraints case.
 Geometry optimizations can only be performed using the charge
 constraint.
