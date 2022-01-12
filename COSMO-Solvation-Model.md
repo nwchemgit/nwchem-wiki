@@ -134,7 +134,7 @@ For examples see Stefanovich et al.[^5] and Barone et al.[^6]
 "Rsolv" is no longer used.
 
 `iscren` is a flag to define the dielectric charge scaling option.
-`iscren 1` implies the original scaling from Klamt and Schüürmann,
+`iscren 1` implies the original scaling from Klamt and Schürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. `iscren 0` implies the modified scaling suggested
 by Stefanovich and Truong[^7], mainly "(&epsilon;-1)/&epsilon;".
@@ -142,7 +142,7 @@ Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
 The next two parameters define the tesselation of the unit sphere. The
-approach still follows the original proposal by Klamt and Schüürmann to
+approach still follows the original proposal by Klamt and Schürmann to
 some degree. Basically a tesselation is generated from `minbem` refining
 passes starting from either an octahedron or an icosahedron. Each level
 of refinement partitions the triangles of the current tesselation into
@@ -168,7 +168,7 @@ code selects the iterative method.
 suggested by York and Karplus to avoid singularities when two surface
 charges coincide. The default value is `zeta 0.98` this value was chosen
 to ensure that the results of the current implementation are as close as
-possible to those of the original Klamt and Schuurmann based
+possible to those of the original Klamt and Schürmann based
 implementation.
 
 `gamma_s` modifies the width of the smooth switching function that
@@ -195,7 +195,7 @@ COSMO solvation from an unconverged electron density can generate
 unphysical charges that lock the calculation into strange electron
 distributions.
 
-`do_cosmo_ks` is a flag to turn on the Klamt-Schuurmann model
+`do_cosmo_ks` is a flag to turn on the Klamt-Schürmann model
 
 `do_cosmo_yk` is a flag to turn on the York-Karplus model (default)
 
@@ -282,13 +282,13 @@ end
 ## References
 ///Footnotes Go Here///
 
-[^1]:  Klamt, A; Schuurmann, G (1993). "COSMO: A new approach to dielectric screening in solvents with explicit expressions for the screening energy and its gradient". Journal of the Chemical Society, Perkin Transactions 2: 799-805. doi:10.1039/P29930000799.
-[^2]: York, D.M.; Karplus, M. (1999). "A smooth solvation potential based on the conductor-like screening model". Journal of physical chemistry A 103: 11060-11079. doi:10.1021/jp992097l.
-[^3]: A. Bondi (1964). "van der Waals volums and radii". Journal of Physical Chemistry 68: 441-451. doi:10.1021/j100785a001.
-[^4]: A. Klamt, V. Jonas (1998). "Refinement and parametrization of COSMO-RS". Journal of physical chemistry A 102: 5074-5085. doi:10.1021/jp980017s.
-[^5]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E.
-[^6]: V. Barone, M. Cossi (1997). "A new definition of cavities for the computation of solvation free energies by the polarizable continuum model". Journal of Chemical Physics 107: 3210-3221. doi:10.1063/1.474671.
-[^7]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E.
+[^1]:  Klamt, A; Schürmann, G (1993). "COSMO: A new approach to dielectric screening in solvents with explicit expressions for the screening energy and its gradient". Journal of the Chemical Society, Perkin Transactions 2: 799-805. [DOI:10.1039/P29930000799](https://dx.doi.org/10.1039/P29930000799)
+[^2]: York, D.M.; Karplus, M. (1999). "A smooth solvation potential based on the conductor-like screening model". Journal of physical chemistry A 103: 11060-11079. [DOI:10.1021/jp992097l](https://dx.doi.org/10.1021/jp992097l)
+[^3]: A. Bondi (1964). "van der Waals volums and radii". Journal of Physical Chemistry 68: 441-451. [DOI:10.1021/j100785a001](https://dx.doi.org/10.1021/j100785a001)
+[^4]: A. Klamt, V. Jonas (1998). "Refinement and parametrization of COSMO-RS". Journal of physical chemistry A 102: 5074-5085. [DOI:10.1021/jp980017s](https://dx.doi.org/10.1021/jp980017s)
+[^5]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. [DOI:10.1016/0009-2614(95)00898-E](https://dx.doi.org/10.1016/0009-2614(95)00898-E)
+[^6]: V. Barone, M. Cossi (1997). "A new definition of cavities for the computation of solvation free energies by the polarizable continuum model". Journal of Chemical Physics 107: 3210-3221. [DOI:10.1063/1.474671](https://dx.doi.org/10.1063/1.474671)
+[^7]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. [DOI:10.1016/0009-2614(95)00898-E](https://dx.doi.org/10.1016/0009-2614(95)00898-E)
 [^8]: A. V. Marenich, C. J. Cramer, D. G. Truhlar (2009). "Universal Solvation Model Based on Solute Electron Density and on a Continuum Model of the Solvent Defined by the Bulk Dielectric Constant and Atomic Surface Tensions". The Journal of Physical Chemistry B 113: 6378-6396. [DOI:10.1021/jp810292n](https://dx.doi.org/10.1021/jp810292n).
 
 ### Solvents List - Solvent keyword
