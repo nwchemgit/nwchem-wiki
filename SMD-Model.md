@@ -329,11 +329,6 @@ task dft energy
 ## References
 ///Footnotes Go Here///
 
-[^1]: Marenich, A. V.; Cramer, C. J.; Truhlar, D. G. Universal solvation model
-based on solute electron density and on a continuum model of the solvent
-defined by the bulk dielectric constant and atomic surface tensions. J.
-Phys. Chem. B 2009, 113, 6378-6396. [DOI:10.1021/jp810292n](http://dx.doi.org/10.1021/jp810292n).
-[^2:] Winget, P.; Dolney, D. M.; Giesen, D. J.; Cramer, C. J.; Truhlar, D. G.
-Minnesota Solvent Descriptor Database. University of Minnesota:
-Minneapolis, MN, 2010. [http://comp.chem.umn.edu/solvation/mnsddb.pdf](http://comp.chem.umn.edu/solvation/mnsddb.pdf)
+[^1]: Marenich, A. V.; Cramer, C. J.; Truhlar, D. G. "Universal solvation model based on solute electron density and on a continuum model of the solvent defined by the bulk dielectric constant and atomic surface tensions". J. Phys. Chem. B 2009, 113, 6378-6396. [DOI:10.1021/jp810292n](http://dx.doi.org/10.1021/jp810292n).  
+[^2:] Winget, P.; Dolney, D. M.; Giesen, D. J.; Cramer, C. J.; Truhlar, D. G. "Minnesota Solvent Descriptor Database". University of Minnesota: Minneapolis, MN, 2010. [http://comp.chem.umn.edu/solvation/mnsddb.pdf](http://comp.chem.umn.edu/solvation/mnsddb.pdf)
 
