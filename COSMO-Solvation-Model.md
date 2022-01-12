@@ -269,7 +269,7 @@ environmental variable NWCHEM_COSMO_LIBRARY, permanent directory, or
 run directory.
 ## COSMO Usage Tips
 
-Authors of the paper https://dx.doi.org/10.1021/jp810292n report that  
+Authors of the paper [^8] report that  
 " ... *the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
 Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
 ```
@@ -289,6 +289,7 @@ end
 [^5]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E.
 [^6]: V. Barone, M. Cossi (1997). "A new definition of cavities for the computation of solvation free energies by the polarizable continuum model". Journal of Chemical Physics 107: 3210-3221. doi:10.1063/1.474671.
 [^7]: E. V. Stefanovich, T. N. Truong (1995). "Optimized atomic radii for quantum dielectric continuum solvation models". Chemical Physics Letters 244: 65-74. doi:10.1016/0009-2614(95)00898-E.
+[^8]: A. V. Marenich, C. J. Cramer, D. G. Truhlar (2009). "Universal Solvation Model Based on Solute Electron Density and on a Continuum Model of the Solvent Defined by the Bulk Dielectric Constant and Atomic Surface Tensions". The Journal of Physical Chemistry B 113: 6378-6396. [DOI:10.1021/jp810292n](https://dx.doi.org/10.1021/jp810292n).
 
 ### Solvents List - Solvent keyword
 
