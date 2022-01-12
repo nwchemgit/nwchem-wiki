@@ -40,7 +40,8 @@ of the system followed by the solution-phase energy, and returns the
 electrostatic contribution to the solvation free energy. At the present
 gradients are calculated analytically, but frequencies are calculated by
 finite difference of the gradients. Known problems include that the code
-does not work with spherical basis functions. The non-electrostatic
+does not work with spherical basis functions.  
+The non-electrostatic
 contributions can be calculated by turning on the [SMD model](SMD-Model). It should
 be noted that one must in general take into account the standard state
 correction besides the electrostatic and cavitation/dispersion
@@ -69,6 +70,7 @@ cosmo
   [sw_tol <real swtol default 1.0e-4>]  
   [do_gasphase  <logical do_gasphase default True>] 
   [do_cosmo_ks]
+  [do_cosmo_yk]
   [do_cosmo_smd]
 end
 ```
