@@ -2,7 +2,7 @@
 
 There are (at least) three algorithms within NWChem that compute the
 Møller-Plesset (or many-body) perturbation theory second-order
-correction[1] to the Hartree-Fock energy (MP2). They vary in
+correction[^1] to the Hartree-Fock energy (MP2). They vary in
 capability, the size of system that can be treated and use of other
 approximations
 
@@ -18,16 +18,16 @@ approximations
 TASK MP2
 ```
 
-  - Fully-direct[2] -- this is of utility if only limited I/O
+  - Fully-direct[^2] -- this is of utility if only limited I/O
     resources are available (up to about 2800 functions). Only RHF
     references and energies are available. This is selected by
-    specifying direct\_mp2 on the task directive, e.g.
+    specifying `direct_mp2` on the task directive, e.g.
 
 ```
 TASK DIRECT_MP2
 ```
 
-  - Resolution of the identity (RI) approximation MP2 (RI-MP2)[3] --
+  - Resolution of the identity (RI) approximation MP2 (RI-MP2)[^3] --
     this uses the RI approximation and is therefore only exact in the
     limit of a complete fitting basis. However, with some care, high
     accuracy may be obtained with relatively modest fitting basis sets.
@@ -155,9 +155,9 @@ for computing very accurate geometries or numerical frequencies, greater
 precision may be desirable.
 
 This option increases the precision to which both the SCF (from
-<img alt="$10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ec4c25dce67266d40679a50bf9d75e70.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> to <img alt="$10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3638e50463da9c60c05d8519c65d3982.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/>) and CPHF (from <img alt="$10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6784e1fd68d75a57b35bd36247a1aefe.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> to <img alt="$10^{-6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ec4c25dce67266d40679a50bf9d75e70.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/>)
+10<sup>-6</sup> to 10<sup>-8</sup> and CPHF 10<sup>-4</sup> to $10<sup>-6</sup>
 are solved, and also tightens thresholds for computation of the AO and
-MO integrals (from <img alt="$10^{-9}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a9b53cbe5062c1d96ddd43e5494ce6cb.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> to <img alt="$10^{-11}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bd2a39dedd522990e0b71f9f2eaa2bf.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>) within the MP2 code.
+MO integrals (from 10<sup>-9</sup> to 10<sup>-11</sup> within the MP2 code.
 
 ## SCRATCHDISK -- Limiting I/O usage
 
@@ -197,7 +197,7 @@ below.
 | "information"           | low         | General information about calc.            |
 | "integral i/o"          | high        | File size information                      |
 | "mo ints"               | debug       |                                            |
-| "pair energies"         | debug       | (working only in direct\_mp2)              |
+| "pair energies"         | debug       | (working only in `direct_mp2`)             |
 | "partial pair energies" | debug       | Pair energy matrix each time it is updated |
 | "progress reports"      | default     | Report completion of time-consuming steps  |
 | "reference"             | high        | Details about reference wavefunction       |
@@ -283,7 +283,7 @@ file /scratch/h2o.3c, use this directive
 The type of RI approximation used in the RI-MP2 calculation is
 controlled by means of the RIAPPROX directive. The two possible values
 are V and SVS (case sensitive), which correspond to the approximations
-with the same names described by Vahtras et al.[4]. The default is V.
+with the same names described by Vahtras et al.[^4]. The default is V.
 
 ## Advanced options for RI-MP2
 
@@ -297,9 +297,9 @@ basis integrals which is carried out via diagonalization. If the fitting
 basis includes near linear dependencies, there will be small eigenvalues
 which can ultimately lead to non-physical RI-MP2 correlation energies.
 Eigenvectors of the fitting matrix are discarded if the corresponding
-eigenvalue is less than <img alt="$mineval$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4048d8a28d93b0fc38ce6d867852b042.svg?invert_in_darkmode&sanitize=true" align=middle width="59.870415pt" height="22.74591pt"/> which defaults to <img alt="$10^{-8}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3638e50463da9c60c05d8519c65d3982.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/>. This
+eigenvalue is less than `min eval` which defaults to 10<sup>-8</sup>. This
 parameter may be changed by setting the a parameter in the database. For
-instance, to set it to <img alt="$10^{-10}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7e66fb4017db9bbbc21f10b17fe18e42.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>
+instance, to set it to 10<sup>-10</sup>
 
 ```
  set "mp2:fit min eval" 1e-10
@@ -404,7 +404,7 @@ accomplished using a SET directive of the form,
  set "mp2:energy mem minimize" <string mem_opt default I>
 ```
 
-A value of I entered for the string mem\_opt means that a strategy to
+A value of I entered for the string `mem_opt` means that a strategy to
 minimize I/O will be employed. A value of C tells the code to use a
 strategy that minimizes computation.
 
@@ -460,7 +460,7 @@ external electric field and is not the expectation value of the operator
 over the wavefunction. It has been shown that evaluating the MP2 density
 through a derivative provides more accurate results, presumably because
 this matches the way experiments probe the electron density more
-closely[5][6][7][8].
+closely[^5][^6][^7][^8].
 
 Only dipole moments are printed by the MP2 gradient code, but natural
 orbitals are produced and stored in the permanent directory with a file
@@ -494,12 +494,12 @@ task mp2 property
 Note that the MP2 linear response density matrix is not necessarily positive
 definite so it is not unusual to see a few small negative natural
 orbital occupation numbers. Significant negative occupation numbers have
-been argued to be a sign that the system might be near degenerate[9].
+been argued to be a sign that the system might be near degenerate[^9].
 
 ## SCS-MP2 -- Spin-Component Scaled MP2
 
 Each MP2 output contains the calculation of the SCS-MP2 correlation
-energies as suggested by S.Grimme[10]
+energies as suggested by S.Grimme[^10]
 
 The SCS keyword is only required for gradients calculations:
 ```
@@ -521,48 +521,48 @@ Default values are FSS=0.333333333, FOS=1.2 for MP2, and FSS=1.13, FOS=1.27 for
 CCSD.
 
 ## References
+///Footnotes Go Here///
 
-<references/>
 
-1.  Møller, C. and Plesset, M.S. (1934) "Note on an approximation
+[^1]:  Møller, C. and Plesset, M.S. (1934) "Note on an approximation
     treatment for many-electron systems", *Physical Review* **46**
     618-622,
     doi:[http://dx.doi.org/10.1103/PhysRev.46.618](http://dx.doi.org/10.1103/PhysRev.46.618).
-2.  Wong, A.T.; Harrison, R.J. and Rendell, A.P. (1996) "Parallel direct
+[^2]:  Wong, A.T.; Harrison, R.J. and Rendell, A.P. (1996) "Parallel direct
     four-index transformations", *Theoretica Chimica Acta* **93**
     317-331,
     doi:[http://dx.doi.org/10.1007/BF01129213](http://dx.doi.org/10.1007/BF01129213).
-3.  Bernholdt, D.E. and Harrison, R.J. (1996) "Large-scale correlated
+[^3]:  Bernholdt, D.E. and Harrison, R.J. (1996) "Large-scale correlated
     electronic structure calculations: the RI-MP2 method on parallel
     computers", *Chemical Physics Letters* **250** (5-6) 477-484,
     doi:[http://dx.doi.org/10.1016/0009-2614(96)00054-1](http://dx.doi.org/10.1016/0009-2614(96)00054-1)
-4.  Vahtras, O.; Almlöf, J. and Feyereisen, M. W. (1993) "Integral
+[^4]:  Vahtras, O.; Almlöf, J. and Feyereisen, M. W. (1993) "Integral
     approximations for LCAO-SCF calculations", *Chem. Phys. Lett.*
     **213**, 514-518, doi:
     [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614(93)89151-7)
-5.  Raghavachari, K. and Pople, J. A. (1981) "Calculation of
+[^5]:  Raghavachari, K. and Pople, J. A. (1981) "Calculation of
     one-electron properties using limited configuration interaction
     techniques", *Int. J. Quantum Chem.* **20**, 1067-1071, doi:
     [10.1002/qua.560200503](http://dx.doi.org/10.1002/qua.560200503).
-6.  Diercksen, G. H. F.; Roos, B. O. and Sadlej, A. J. (1981)
+[^6]:  Diercksen, G. H. F.; Roos, B. O. and Sadlej, A. J. (1981)
     "Legitimate calculation of first-order molecular properties in the
     case of limited CI functions. Dipole moments", *Chem. Phys.* **59**,
     29-39, doi:
     [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104(81)80082-1).
-7.  Rice, J. E. and Amos, R. D. (1985) "On the efficient evaluation of
+[^7]:  Rice, J. E. and Amos, R. D. (1985) "On the efficient evaluation of
     analytic energy gradients", *Chem. Phys. Lett.* **122**, 585-590,
     doi:
     [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614(85)87275-4).
-8.  Wiberg, K. B.; Hadad, C. M.; LePage, T. J.; Breneman, C. M. and
+[^8]:  Wiberg, K. B.; Hadad, C. M.; LePage, T. J.; Breneman, C. M. and
     Frisch, M. J. (1992) "Analysis of the effect of electron correlation
     on charge density distributions", *J. Phys. Chem.* **96**, 671-679,
     doi: [10.1021/j100181a030](http://dx.doi.org/10.1021/j100181a030).
-9.  Gordon, M. S.; Schmidt, M. W.; Chaban, G. M.; Glaesemann, K. R.;
+[^9]:  Gordon, M. S.; Schmidt, M. W.; Chaban, G. M.; Glaesemann, K. R.;
     Stevens, W. J. and Gonzalez, C. (1999) "A natural orbital diagnostic
     for multiconfigurational character in correlated wave functions",
     *J. Chem. Phys.* **110**, 4199-4207, doi:
     [10.1063/1.478301](http://dx.doi.org/10.1063/1.478301).
-10. S. Grimme, "Improved second-order Møller-Plesset perturbation theory
+[^10]: S. Grimme, "Improved second-order Møller-Plesset perturbation theory
     by separate scaling of parallel- and antiparallel-spin pair
     correlation energies", J. Chem. Phys., 118, (2003), 9095-9102,
     doi:[10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).
