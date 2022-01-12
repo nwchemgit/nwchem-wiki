@@ -154,26 +154,26 @@ Coulomb potential in the Dunlap scheme. The charge density fitting basis
 set must have the name "cd basis". This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
 [SET](SET) directive. If this basis set is not
-defined by input, the <img alt="\(O(N^4)\)" src="svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/> exact Coulomb contribution is computed.
+defined by input, the O(N<sup>4</sup>) exact Coulomb contribution is computed.
 
 The user also has the option of specifying a third basis set for the
 evaluation of the exchange-correlation potential. This basis set must
-have the name "xc basis". If this basis set is not specified by input,
+have the name `xc basis`. If this basis set is not specified by input,
 the exchange contribution (XC) is evaluated by numerical quadrature. In
 most applications, this approach is efficient enough, so the "xc basis"
 basis set is not generally required.
 
 For the DFT module, the input options for defining the basis sets in a
-given calculation can be summarized as follows;
+given calculation can be summarized as follows:
 
-  - "ao basis" - Kohn-Sham molecular orbitals; required for all
+  - `ao basis` - Kohn-Sham molecular orbitals; required for all
     calculations
-  - "cd basis" - charge density fitting basis set; optional, but
+  - `cd basis` - charge density fitting basis set; optional, but
     recommended for evaluation of the Coulomb potential
   - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
     and usually not recommended
 
-## VECTORS and MAX\_OVL -- KS-MO Vectors
+## VECTORS and MAX_OVL -- KS-MO Vectors
 
 The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 ```
@@ -212,17 +212,15 @@ in the DFT Module (see table below for full list of functionals). The
 default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
-this approximation the exchange functional is the Slater <img alt="\(\rho^{1/3}\)" src="svgs/9d1e8d8cdb10bf2a8f81456e9af8ad9b.svg?invert_in_darkmode&sanitize=true" align=middle width="28.233315pt" height="29.12679pt"/>
-functional (from J.C. Slater, Quantum Theory of Molecules and Solids,
-Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill,
-New York, 1974)), and the correlation functional is the
-Vosko-Wilk-Nusair (VWN) functional (functional V) (S.J. Vosko, L. Wilk
-and M. Nusair, Can. J. Phys. 58, 1200 (1980)). The parameters used in
+this approximation the exchange functional is the Slater *&rho;<sup>1/3</sup>*
+functional[^1], and the correlation functional is the
+Vosko-Wilk-Nusair (VWN) functional (functional V)[^2].
+The parameters used in
 this formula are obtained by fitting to the Ceperley and Alder Quantum
 Monte-Carlo solution of the homogeneous electron gas.
 
 These defaults can be invoked explicitly by specifying the following
-keywords within the DFT module input directive, XC slater vwn\_5.
+keywords within the DFT module input directive, `XC slater vwn_5`.
 
 That is, this statement in the input file
 ```
@@ -320,11 +318,8 @@ functionals, the user has the alternative of specifying combined
 exchange and correlation functionals.
 
 The available hybrid functionals (where a Hartree-Fock Exchange
-component is present) consist of the Becke "half and half" (see A.D.
-Becke, J. Chem. Phys. 98, 1372 (1992)), the adiabatic connection method
-(see A.D. Becke, J. Chem. Phys. 98, 5648 (1993)), B3LYP (popularized by
-Gaussian9X), Becke 1997 ("Becke V" paper: A.D.Becke, J. Chem. Phys.,
-107, 8554 (1997)).
+component is present) consist of the Becke "half and half"[^13], the adiabatic connection method[^14],
+Becke 1997 ("Becke V" paper[^15]).
 
 The keyword `beckehandh` specifies that the exchange-correlation energy
 will be computed
@@ -485,7 +480,7 @@ to nuclear position.
 ###  References for XC Functionals
 ///Footnotes Go Here///
 
-[^1]:  J.C. Slater and K.H. Johnson, Phys. Rev. B 5, 844 (1972)
+[^1]:  J.C. Slater and K.H. Johnson, Phys. Rev. B 5, 844 (1972). J.C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
 [^2]:  S.J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980)
 [^3]:  J.P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981).
 [^4]:  J.P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992)
