@@ -342,7 +342,7 @@ end
 This sub-block is used to specify external electric fields, each of
 which must be given a unique name. Numerous fields can be specified, but
 each will applied to the system only if an appropriate [excitation
-rule](RT-TDDFT#excite----excitation-rules) is set.
+rule](#excite-excitation-rules) is set.
 There are a few preset field types; others would have to be manually
 coded. Note the names are arbitrary, but chosen here to be
 descriptive:
@@ -397,7 +397,7 @@ This sets the rules for applying external fields to the system. It takes
 the form `excite <geom> with <field>`, where `<geom>` is the name of a
 geometry fragment (defaults to "geometry" which is the default geometry
 name), and `<field>` is the name of a [field
-structure](RT-TDDFT#field----sub-block-for-specifying-external-electric-fields).
+structure](#field-sub-block-for-specifying-external-electric-fields).
 Assuming, for example, you have defined a field name `kick` this option
 takes the form (note that quotes are optional and shown for clarity):
 
