@@ -19,13 +19,13 @@ Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
 Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015).
 ```
 QMD
-  [dt_nucl <double default 10.0>]  
-  [nstep_nucl <integer default 1000>]  
-  [targ_temp <double default 298.15>]  
-  [thermostat <string default none> <thermostat parameters>]  
-  [rand_seed <integer default new one generated for each run>]  
-  [com_step <integer default 100>]  
-  [print_xyz <integer default 1>]  
+  [dt_nucl <double default 10.0>]  
+  [nstep_nucl <integer default 1000>]  
+  [targ_temp <double default 298.15>]  
+  [thermostat <string default none> <thermostat parameters>]  
+  [rand_seed <integer default new one generated for each run>]  
+  [com_step <integer default 100>]  
+  [print_xyz <integer default 1>]  
   [linear]   
   [property <integer default 1>] 
   [tddft <integer default 1>]   
@@ -33,7 +33,7 @@ END
 ```
 The module is called as:
 ```
-task <level of theory> qmd
+task <level of theory> qmd
 ```
 where <level of theory> is any Gaussian basis set method in NWChem
 
@@ -63,26 +63,26 @@ the nuclei. Possible options are:
 
   - **none**
 
-   No thermostat is used, i.e. an NVE ensemble is simulated. Default  
+   No thermostat is used, i.e. an NVE ensemble is simulated. Default  
 
   - **svr** `<double default 1000.0>`
 
-   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello,
- J. Chem. Phys. 126, 014101 (2007)  
-   Number sets the relaxation parameter of the thermostat  
+   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello,
+ J. Chem. Phys. 126, 014101 (2007)  
+   Number sets the relaxation parameter of the thermostat  
 
   - **langevin** `<double default 0.1>`
 
-   Langevin dynamics, implementation according to Bussi and Parrinello Phys. Rev. E 75, 056707 (2007)  
-   Number sets the value of the friction  
+   Langevin dynamics, implementation according to Bussi and Parrinello Phys. Rev. E 75, 056707 (2007)  
+   Number sets the value of the friction  
 
   - **berendsen** `<double default 1000.0>`  
 
-   Berendsen thermostat, number sets the relaxation parameter of the thermostat  
+   Berendsen thermostat, number sets the relaxation parameter of the thermostat  
 
   - **rescale**
 
-   Velocity rescaling, i.e. isokinetic ensemble  
+   Velocity rescaling, i.e. isokinetic ensemble  
 
 ### rand\_seed -- Seed for the random number generator
 
@@ -130,29 +130,29 @@ stochastic velocity rescaling thermostat with a relaxation parameter of
 translations will be removed every 10 steps and trajectory information
 will be output to the xyz file every 5 steps.
 ```
-start qmd_dft_h2o_svr  
+start qmd_dft_h2o_svr  
 echo  
-print low  
-geometry noautosym noautoz  
-  O   0.00000000    -0.01681748     0.11334792  
-  H   0.00000000     0.81325914    -0.34310308  
-  H   0.00000000    -0.67863597    -0.56441201  
+print low  
+geometry noautosym noautoz  
+  O   0.00000000    -0.01681748     0.11334792  
+  H   0.00000000     0.81325914    -0.34310308  
+  H   0.00000000    -0.67863597    -0.56441201  
 end  
 basis  
-  * library 6-31G*  
+  * library 6-31G*  
 end  
 dft  
-  xc pbe0  
+  xc pbe0  
 end  
 qmd  
-  nstep_nucl  200  
-  dt_nucl     10.0  
-  targ_temp   200.0  
-  com_step    10  
-  thermostat  svr 100.0  
-  print_xyz   5  
+  nstep_nucl  200  
+  dt_nucl     10.0  
+  targ_temp   200.0  
+  com_step    10  
+  thermostat  svr 100.0  
+  print_xyz   5  
 end  
-task dft qmd
+task dft qmd
 ```
   
 ### Excited state Molecular Dynamics
@@ -163,37 +163,37 @@ time step, run in the microcanonical ensemble. Center-of-mass rotations
 and translations will be removed every 10 steps and trajectory
 information will be output to the xyz file every 5 steps.
 ```
-start qmd_tddft_h2o_svr  
+start qmd_tddft_h2o_svr  
 echo  
-print low  
-geometry noautosym noautoz  
-  O   0.00000000    -0.01681748     0.11334792  
-  H   0.00000000     0.81325914    -0.34310308  
-  H   0.00000000    -0.67863597    -0.56441201  
+print low  
+geometry noautosym noautoz  
+  O   0.00000000    -0.01681748     0.11334792  
+  H   0.00000000     0.81325914    -0.34310308  
+  H   0.00000000    -0.67863597    -0.56441201  
 end  
 basis  
-  * library 6-31G*  
+  * library 6-31G*  
 end  
 dft  
-  xc pbe0  
+  xc pbe0  
 end  
 tddft  
-  nroots 5  
-  notriplet  
-  target 1  
-  civecs  
-  grad  
-    root 1  
-  end  
+  nroots 5  
+  notriplet  
+  target 1  
+  civecs  
+  grad  
+    root 1  
+  end  
 end  
 qmd  
-  nstep_nucl  200  
-  dt_nucl     10.0  
-  com_step    10  
-  thermostat  none  
-  print_xyz   5  
+  nstep_nucl  200  
+  dt_nucl     10.0  
+  com_step    10  
+  thermostat  none  
+  print_xyz   5  
 end  
-task tddft qmd
+task tddft qmd
 ```
  
 ### Property calculation in a Molecular Dynamics simulation
@@ -203,34 +203,34 @@ polarizability by means of the
 at each time step.
 
 ```
-start qmd_prop_h2o_svr  
+start qmd_prop_h2o_svr  
 echo  
-print low  
-geometry noautosym noautoz  
-  O   0.00000000    -0.01681748     0.11334792  
-  H   0.00000000     0.81325914    -0.34310308  
-  H   0.00000000    -0.67863597    -0.56441201  
+print low  
+geometry noautosym noautoz  
+  O   0.00000000    -0.01681748     0.11334792  
+  H   0.00000000     0.81325914    -0.34310308  
+  H   0.00000000    -0.67863597    -0.56441201  
 end  
 basis  
-  * library 6-31G*  
+  * library 6-31G*  
 end  
 dft  
-  xc pbe0  
+  xc pbe0  
 end  
  
 qmd  
-  nstep_nucl  200  
-  dt_nucl     10.0  
-  com_step    10  
-  thermostat  none  
-  print_xyz   5
+  nstep_nucl  200  
+  dt_nucl     10.0  
+  com_step    10  
+  thermostat  none  
+  print_xyz   5
   property 1
 end  
 
 property
  polfromsos
 end
-task tddft qmd
+task tddft qmd
 ```
 
 Additional sample inputs can be found in $NWCHEM\_TOP/QA/tests/qmd\_\*
@@ -252,37 +252,37 @@ Here we compute the IR spectrum and the element-wise breakdown of the
   vibrational density of states for silicon tetrachloride (SiCl<sub>4</sub>). The
 following input file was used.
 ```
-start SiCl4  
+start SiCl4  
 echo  
-print low  
-geometry noautosym noautoz  
-  Si              -0.00007905     0.00044148     0.00000001  
-  Cl               0.71289590     1.00767685     1.74385011  
-  Cl              -2.13658008    -0.00149375    -0.00000001  
-  Cl               0.71086735    -2.01430142    -0.00000001  
-  Cl               0.71289588     1.00767684    -1.74385011  
+print low  
+geometry noautosym noautoz  
+  Si              -0.00007905     0.00044148     0.00000001  
+  Cl               0.71289590     1.00767685     1.74385011  
+  Cl              -2.13658008    -0.00149375    -0.00000001  
+  Cl               0.71086735    -2.01430142    -0.00000001  
+  Cl               0.71289588     1.00767684    -1.74385011  
 end  
 basis  
-  * library 6-31G  
+  * library 6-31G  
 end  
 dft  
-  xc hfexch 1.0  
+  xc hfexch 1.0  
 end  
 qmd  
-  nstep_nucl  20000  
-  dt_nucl     10.0  
-  targ_temp   20.0  
-  com_step    10  
-  rand_seed   12345  
-  thermostat  none  
+  nstep_nucl  20000  
+  dt_nucl     10.0  
+  targ_temp   20.0  
+  com_step    10  
+  rand_seed   12345  
+  thermostat  none  
 end  
-task dft qmd
+task dft qmd
 ```
 The IR spectrum and vibrational density of states were generated from
 the [qmd\_analysis code](qmd_tools.tar.gz) with the following
 command.
 ```
-./qmd_analysis -xyz SiCl4.xyz -steps 15000 -skip 5000 -ts 10.0 -temp 20.0 -smax 800 -width 10.0
+./qmd_analysis -xyz SiCl4.xyz -steps 15000 -skip 5000 -ts 10.0 -temp 20.0 -smax 800 -width 10.0
 ```
 where we have skipped the first 5000 steps from the simulation and only
 used the data from the last 15000 steps to compute the spectra. The time
