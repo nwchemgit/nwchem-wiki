@@ -1031,7 +1031,7 @@ convergence problems with multiple constraints, the user is advised to
 do one constraint first and to use the resulting orbitals for the next
 step of the constrained calculations.
 
-It is best to put "convergence nolevelshifting" in the dft directive to
+It is best to put `convergence nolevelshifting` in the dft directive to
 avoid issues with gradient calculations and convergence in CDFT. Use
 orbital swap to get a broken-symmetry solution.
 
@@ -1438,9 +1438,9 @@ default values will be adequate for the calculation, but different
 values can be specified in the input for the DFT module using the
 keywords described below.
 
-The input parameter accCoul is used to define the tolerance in Schwarz
+The input parameter `accCoul` is used to define the tolerance in Schwarz
 screening for the Coulomb integrals. Only integrals with estimated
-values greater than <img alt="\(10^{(-accCoul)}\)" src="svgs/564fa44e7bfa893835654c63524ec3fd.svg?invert_in_darkmode&sanitize=true" align=middle width="84.27243pt" height="29.12679pt"/> are evaluated.
+values greater than 10<sup>(-accCoul) are evaluated.
 ```
  TOLERANCES accCoul <integer accCoul default 8>
 ```
@@ -1450,14 +1450,14 @@ due to negligible density is also possible with the use of,
  TOLERANCES tol_rho <real tol_rho default 1e-10>
 ```
 XC functional computation is bypassed if the corresponding density
-elements are less than tol\_rho.
+elements are less than `tol_rho`.
 
 A screening parameter, radius, used in the screening of the Becke or
 Delley spatial weights is also available as,
 ```
  TOLERANCES radius <real radius default 25.0>
 ```
-where radius is the cutoff value in bohr.
+where `radius` is the cutoff value in bohr.
 
 The tolerances as discussed previously are insured at convergence. More
 sleazy tolerances are invoked early in the iterative process which can
@@ -1487,12 +1487,12 @@ directive. The input to exercise this option is as follows,
   noio
 ```
 If this keyword is encountered, then the two matrices (inverted
-charge-density and exchange-correlation) are computed \`\`on-the-fly''
+charge-density and exchange-correlation) are computed "on-the-fly"
 whenever needed.
 
 The `INCORE` option is always assumed to be true but can be overridden
 with the option `DIRECT` in which case all integrals are computed
-\`\`on-the-fly''.
+"on-the-fly".
 
 The `SEMIDIRECT` option controls caching of integrals. A full description
 of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect----recomputation-of-integrals) section. Some functionality
@@ -1512,7 +1512,7 @@ input line is as follows;
   MULT <integer mult default 1>
 ```
 When the keyword `MULT` is specified, the user can define the integer
-variable mult, where mult is equal to the number of alpha electrons
+variable `mult`, where mult is equal to the number of alpha electrons
 minus beta electrons, plus 1.
 
 When `MULT` is set to a negative number. For example, if `MULT = -3`, a
@@ -1526,13 +1526,13 @@ spin-unrestricted wavefunction).
 
 ## CGMIN -- Quadratic convergence algorithm
 
-The cgmin keyword will use the quadratic convergence algorithm. It is
+The `cgmin` keyword will use the quadratic convergence algorithm. It is
 possible to turn the use of the quadratic convergence algorithm off with
-the nocgmin keyword.
+the `nocgmin` keyword.
 
 ## RODFT -- Restricted open-shell DFT
 
-The rodft keyword will perform restricted open-shell calculations. This
+The `rodft` keyword will perform restricted open-shell calculations. This
 keyword can only be used with the CGMIN keyword.
 
 ## SIC -- Self-Interaction Correction
@@ -1641,8 +1641,8 @@ basis
 end
 ```
 
-Please note that the <q>ghost</q> oxygen atom has been labeled bqO, and
-not just bq.
+Please note that the *ghost* oxygen atom has been labeled `bqO`, and
+not just `bq`.
 
 ## DISP -- Empirical Long-range Contribution (vdW)
 ```
@@ -1719,7 +1719,7 @@ possible to be deactivated with OFF.
 
 ## NOSCF --Non Self-Consistent Calculations
 
-The noscf keyword allows one to calculate the non self-consistent energy
+The `noscf` keyword can be used to to calculate the non self-consistent energy
 for a set of input vectors. For example, the following input shows how a
 non self-consistent B3LYP energy can be calculated using a
 self-consistent set of vectors calculated at the Hartree-Fock level.
@@ -1782,7 +1782,7 @@ and the website <http://gatsby.ucmerced.edu/wiki/XDM>
 ```
  PRINT||NOPRINT
 ```
-The PRINT||NOPRINT options control the level of output in the DFT.
+The `PRINT||NOPRINT` options control the level of output in the DFT.
 Please see some examples using this directive in [Sample input
 file](#sample-input-file). Known controllable print options
 are:
