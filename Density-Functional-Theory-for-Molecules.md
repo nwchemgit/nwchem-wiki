@@ -233,7 +233,7 @@ is equivalent to the simple line
 ```
 task dft
 ```
-The DECOMP directive causes the components of the energy corresponding
+The `DECOMP` directive causes the components of the energy corresponding
 to each functional to be printed, rather than just the total
 exchange-correlation energy which is the default. You can see an example
 of this directive in the [sample
@@ -246,7 +246,7 @@ how to use these options.
 ### Exchange-Correlation Functionals
 
 There are several Exchange and Correlation functionals in addition to
-the default slater and vwn\_5 functionals. These are either local or
+the default `slater` and `vwn_5` functionals. These are either local or
 gradient-corrected functionals (GCA); a full list can be found in the
 table below.
 
@@ -285,15 +285,15 @@ becke88 nonlocal 0.542  xperdew91 nonlocal 0.167
 ```
 ### Setting up common exchange-correlation functionals
 
-  - B3LYP: xc b3lyp
-  - PBE0: xc pbe0
-  - PBE96: xc xpbe96 cpbe96
-  - PW91: xc xperdew91 perdew91
-  - BHLYP: xc bhlyp
-  - Becke Half and Half: xc beckehandh
-  - BP86: xc becke88 perdew86
-  - BP91: xc becke88 perdew91
-  - BLYP: xc becke88 lyp
+  - B3LYP: `xc b3lyp`
+  - PBE0: `xc pbe0`
+  - PBE96: `xc xpbe96 cpbe96`
+  - PW91: `xc xperdew91 perdew91`
+  - BHLYP: `xc bhlyp`
+  - Becke Half and Half: `xc beckehandh`
+  - BP86: `xc becke88 perdew86`
+  - BP91: `xc becke88 perdew91`
+  - BLYP: `xc becke88 lyp`
 
 Minnesota Functionals
 
@@ -914,8 +914,8 @@ on/off as desired.
 
 Another strategy can be to simply specify how many iterations (cycles)
 you wish each type of procedure to be used. The necessary keywords to
-control the number of damping cycles (ncydp), the number of DIIS cycles
-(ncyds), and the number of level-shifting cycles (ncysh) are input as,
+control the number of damping cycles (`ncydp`), the number of DIIS cycles
+(`ncyds`), and the number of level-shifting cycles (`ncysh`) are input as,
 ```
  CONVERGENCE  [ncydp <integer ncydp default 2>] \  
               [ncyds <integer ncyds default 30>] \  
@@ -1059,7 +1059,7 @@ task dft
 ```
 ## SMEAR -- Fractional Occupation of the Molecular Orbitals
 
-The SMEAR keyword is useful in cases with many degenerate states near
+The `SMEAR` keyword is useful in cases with many degenerate states near
 the HOMO (eg metallic clusters)
 ```
  SMEAR <real smear default 0.001>
@@ -1314,7 +1314,7 @@ accuracies.
 In addition to the simple keyword specifying the desired accuracy as
 described above, the user has the option of specifying a custom
 quadrature of this type in which ALL atoms have the same grid
-specification. This is accomplished by using the gausleg keyword.
+specification. This is accomplished by using the `gausleg` keyword.
 
 #### Gauss-Legendre angular grid
 
@@ -1335,13 +1335,13 @@ points per center (or 64000 points per center before pruning).
 #### Lebedev angular grid
 
 A second quadrature is the Lebedev scheme for the angular
-components11.6. Within this numerical integration procedure various
+components. Within this numerical integration procedure various
 levels of accuracy have also been defined and are available to the user.
 The input for this type of grid takes the form,
 ```
  GRID lebedev <integer radpts > <integer iangquad >
 ```
-In this context the variable iangquad specifies a certain number of
+In this context the variable `iangquad` specifies a certain number of
 angular points as indicated by the table below:
 
 <center>
@@ -1533,7 +1533,7 @@ the `nocgmin` keyword.
 ## RODFT -- Restricted open-shell DFT
 
 The `rodft` keyword will perform restricted open-shell calculations. This
-keyword can only be used with the CGMIN keyword.
+keyword can only be used with the `CGMIN` keyword.
 
 ## SIC -- Self-Interaction Correction
 ```
@@ -1837,7 +1837,7 @@ encounters the TASK directive ([TASK](TASK)).
  TASK SODFT
 ```
 Input parameters are the same as for the DFT. Some of the DFT options
-are not available in the SODFT. These are max\_ovl and sic.
+are not available in the SODFT. These are `max_ovl` and `sic`.
 
 Besides using the standard ECP and basis sets, see [Effective Core
 Potentials](ECP) for details, one also has to specify a
