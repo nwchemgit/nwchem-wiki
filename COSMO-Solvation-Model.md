@@ -93,11 +93,8 @@ attempt to match based on atom name and only then the element name.
 Otherwise radius will be set based on default parameters. The file has
 to present in one of the three location ( in the order of preference) -
 directory specified by the environmental variable
-`NWCHEM_COSMO_LIBRARY`, permanent directory, and run directory. This
-directive is replacing previous facility of loading COSMO radii
-parameters through `set cosmo:map cosmo.par` directive. See example at
-the end of this section.
-
+`NWCHEM_COSMO_LIBRARY`, permanent directory, and run directory. 
+  
 `radius` is an array that specifies the radius of the spheres associated
 with each atom and that make up the molecule-shaped cavity. These values
 will override default radii setting including those specified in the
@@ -217,7 +214,7 @@ geometry
  h                  .7545655371         .0000000000         .5243010666  
  h                 -.7545655371         .0000000000         .5243010666  
 end  
-basis segment cartesian  
+basis
  o library 6-31g**  
  h library 6-31g**  
 end  
@@ -242,7 +239,7 @@ geometry
  hw                  .7545655371         .0000000000         .5243010666  
  h                  -.7545655371         .0000000000         .5243010666  
 end  
-basis segment cartesian  
+basis
  * library 6-31g**  
 end
 
@@ -254,7 +251,7 @@ end
 
 task scf energy
 ```
-where `water.par` may the following form:
+where the `water.par` file has the following form:
 ```
 O 1.40
 H 1.16
@@ -271,8 +268,9 @@ will set a different radii of 1.06 to hydrogen atoms named HW. Note
 that, as per general rule in NWChem, all names are case insensitive.
 
 and placed in one of the these locations - directory specified by the
-environmental variable NWCHEM_COSMO_LIBRARY, permanent directory, or
-run directory.
+environmental variable `NWCHEM_COSMO_LIBRARY`, permanent directory, or
+run directory.  
+
 ## COSMO Usage Tips
 
 Authors of the paper [^8] report that  
