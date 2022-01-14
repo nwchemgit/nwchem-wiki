@@ -227,8 +227,7 @@ the current value of `kernel.shmmax` on your system by typing
 sysctl kernel.shmmax
 ```
 
-More detail about kernel.shmmax can be found at the webpage
-<https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html>
+More detail about kernel.shmmax can be found at this [link](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html)
 
 
 ## WSL execution problems
@@ -255,8 +254,8 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 
 More details at
-[https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710](https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710)
-[https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html](https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html)
+* [https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710](https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710)  
+* [https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html](https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html)  
 
 ## How do I increase the number of digits of the S matrix printout
 
