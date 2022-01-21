@@ -1267,6 +1267,6 @@ Table 3: Gradient Print Control Specifications
 ## References
 ///Footnotes Go Here///
 
-[1^]:  Wong, A. T. and Harrison, R. J. (1995) "Approaches to large-scale parallel self-consistent field calculation", *J. Comp. Chem.*  **16**, 1291-1300, doi: [10.1002/jcc.540161010](http://dx.doi.org/10.1002/jcc.540161010)
+[^1]:  Wong, A. T. and Harrison, R. J. (1995) "Approaches to large-scale parallel self-consistent field calculation", *J. Comp. Chem.*  **16**, 1291-1300, doi: [10.1002/jcc.540161010](http://dx.doi.org/10.1002/jcc.540161010)  
 [^2]:  Foster, I. T.; Tilson, J. L.; Wagner, A. F.; Shepard, R. L.; Harrison, R. J.; Kendall, R. A. and Littlefield, R. J. (1996)   "Toward high-performance computational chemistry: I. Scalable Fock matrix construction algorithms", *J. Comp. Chem.* **17**, 109-123,
    
