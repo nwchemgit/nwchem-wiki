@@ -1190,7 +1190,7 @@ using the Pipek-Mezey algorithm. If the additional directive
 
 is included, then the Foster-boys algorithm is used. The partitioning of
 core-orbitals is performed using the atomic information described in the section describing how to [freeze the orbitals
-](MP2.html#freeze-freezing-orbitals).
+](MP2#freeze-freezing-orbitals).
 
 In the next release, this functionality will be extended to included all
 wavefunctions using molecular orbitals.
