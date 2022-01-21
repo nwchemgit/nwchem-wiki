@@ -5,8 +5,8 @@ restricted Hartree-Fock (RHF) wavefunctions, restricted high-spin
 open-shell Hartree-Fock (ROHF) wavefunctions, and spin-unrestricted
 Hartree-Fock (UHF) wavefunctions. The Hartree-Fock equations are solved
 using a conjugate-gradient method with an orbital Hessian based
-preconditioner[1]. The module supports both replicated data and
-distributed data Fock builders[2].
+preconditioner[^1]. The module supports both replicated data and
+distributed data Fock builders[^2].
 
 The SCF directive provides input to the SCF module and is a compound
 directive that encloses additional directives specific to the SCF
@@ -1109,7 +1109,7 @@ This directive contains only two keywords: one for the PCG method and
 the other for the exact Hessian (Newton Raphson, or NR). Use of PCG or
 NR is determined by the input specified for nr\_switch on the NR
 directive, [Controlling the
-Newton-Raphson](#nr----controlling-the-newton-raphson) above.
+Newton-Raphson](#nr-controlling-the-newton-raphson) above.
 
 Specifying the keyword pcg on the LEVEL directive allows the user to
 define the level shifting for the approximate (i.e., PCG) method.
@@ -1121,13 +1121,13 @@ accuracy that must be attained in the solution before the level shifting
 is changed to the value specified by input in the real variable final.
 Level shifts and gradient thresholds are specified in atomic units.
 
-For the PCG method (as specified using the keyword pcg), the defaults
+For the PCG method (as specified using the keyword `pcg`), the defaults
 for this input are 20.0 for initial, 0.5 for tol, and 0.0 for final.
 This means that the approximate Hessian will be shifted by 20.0 until
 the maximum element of the gradient falls below 0.5, at which point the
 shift will be set to zero.
 
-For the exact Hessian (as specified using the keyword nr), the defaults
+For the exact Hessian (as specified using the keyword `nr`), the defaults
 are all zero. The exact Hessian is usually not shifted since this
 destroys quadratic convergence. An example of an input directive that
 applies a shift of 0.2 to the exact Hessian is as follows:
@@ -1189,8 +1189,8 @@ using the Pipek-Mezey algorithm. If the additional directive
 ```
 
 is included, then the Foster-boys algorithm is used. The partitioning of
-core-orbitals is performed using the atomic information described in
-Section 16.1.
+core-orbitals is performed using the atomic information described in the section describing how to [freeze the orbitals
+](MP2.html#freeze-freezing-orbitals).
 
 In the next release, this functionality will be extended to included all
 wavefunctions using molecular orbitals.
@@ -1265,14 +1265,8 @@ Table 3: Gradient Print Control Specifications
 
 
 ## References
+///Footnotes Go Here///
 
-
-1.  Wong, A. T. and Harrison, R. J. (1995) "Approaches to large-scale
-    parallel self-consistent field calculation", *J. Comp. Chem.*
-    **16**, 1291-1300, doi:
-    [10.1002/jcc.540161010](http://dx.doi.org/10.1002/jcc.540161010)
-2.  Foster, I. T.; Tilson, J. L.; Wagner, A. F.; Shepard, R. L.;
-    Harrison, R. J.; Kendall, R. A. and Littlefield, R. J. (1996)
-    "Toward high-performance computational chemistry: I. Scalable Fock
-    matrix construction algorithms", *J. Comp. Chem.* **17**, 109-123,
+[1^]:  Wong, A. T. and Harrison, R. J. (1995) "Approaches to large-scale parallel self-consistent field calculation", *J. Comp. Chem.*  **16**, 1291-1300, doi: [10.1002/jcc.540161010](http://dx.doi.org/10.1002/jcc.540161010)
+[^2]:  Foster, I. T.; Tilson, J. L.; Wagner, A. F.; Shepard, R. L.; Harrison, R. J.; Kendall, R. A. and Littlefield, R. J. (1996)   "Toward high-performance computational chemistry: I. Scalable Fock matrix construction algorithms", *J. Comp. Chem.* **17**, 109-123,
    
