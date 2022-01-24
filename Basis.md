@@ -90,7 +90,7 @@ Order of functions.
     suppress this output.
 
 ### REL keyword
-  - `REL` :  
+  `REL` :  
     This keyword marks the entire basis as a relativistic basis for the
     purposes of the Dyall-modified-Dirac relativistic integral code. The
     marking of the basis set is necessary for the code to make the
