@@ -15,6 +15,8 @@ library](#basis-set-library) that is included in the release
 of NWChem. Alternatively, the user can specify particular functions
 explicitly in the input, to define a particular basis set.
 
+## BASIS directive
+
 The general form of the BASIS directive is as follows:
 ```
  BASIS [<string name default "ao basis">] \  
@@ -262,7 +264,7 @@ associated with a center using an input line of the following form:
 ```
 The variable <shell_type> identifies the angular momentum of the shell,
 *s*, *p*, *d*, .... NWChem is configured to handle up to *h* shells. The
-keyword rel marks the shell as relativistic -- see the Section  on [relativistic
+keyword `rel` marks the shell as relativistic -- see the Section  on [relativistic
 all-electron
 approximations](Relativistic-All-electron-Approximations) for more
 details. Subsequent lines define the primitive function exponents and

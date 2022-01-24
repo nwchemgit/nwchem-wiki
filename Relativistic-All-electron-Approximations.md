@@ -245,7 +245,7 @@ user to ensure that the basis sets are correctly specified.
 
 There is one further requirement in the specification of the basis sets.
 In the ao basis, it is necessary to add the `rel` keyword either to the
-[basis](Basis#basis-sets] directive or the (library)[Basis#basis-set-library] tag line (See below for examples). The
+[basis](Basis#basis-sets) directive or the (library)[Basis#basis-set-library] tag line (See below for examples). The
 former marks the basis functions specified by the tag as relativistic,
 the latter marks the whole basis as relativistic. The marking is
 actually done at the unique shell level, so that it is possible not only
