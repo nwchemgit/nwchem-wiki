@@ -234,11 +234,11 @@ directive block, it is necessary to supply basis sets in addition to the
 needed: the *atomic FW* basis set, the *large component* basis set and the
 *small* component basis set. The atomic FW basis set should be included in
 the `ao basis`. The large and small components should similarly be
-incorporated in basis sets named large component and small component,
+incorporated in basis sets named `large component` and `small component`,
 respectively. For the two-electron approximation, only two basis sets
 are needed. These are the large component and the small component. The
 large component should be included in the `ao basis` and the small
-component is specified separately as small component, as for the
+component is specified separately as `small component`, as for the
 one-electron approximation. This means that the two approximations can
 not be run correctly without changing the `ao basis`, and it is up to the
 user to ensure that the basis sets are correctly specified.
