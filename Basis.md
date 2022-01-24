@@ -32,9 +32,10 @@ The general form of the BASIS directive is as follows:
        ...  
  END
 ```
-Examining the keywords on the first line of the BASIS directive:
+The folllwing sections examine the keywords on the first line of the BASIS directive:
 
-  - `name` :  
+### Basis set NAME
+ `NAME` :    
     By default, the basis set is stored in the database with the name
     "ao basis". Another name may be specified in the BASIS directive,
     thus, multiple basis sets may be stored simultaneously in the
@@ -46,7 +47,8 @@ Examining the keywords on the first line of the BASIS directive:
     The user can associate the "ao basis" with another named basis using
     the SET directive (see [SET](Top-level#SET)).
 
-  -   [SPHERICAL or CARTESIAN](#-spherical-or-cartesian)   
+### SPHERICAL or CARTESIAN
+  `SPHERICAL` || `CARTESIAN` :   
     The keywords `spherical` and `cartesian` offer the option of using
     either spherical-harmonic (5 d, 7 f, 9 g, ...) or Cartesian (6 d, 10
     f, 15 g, ...) angular functions. The default is Cartesian. Note that
@@ -320,7 +322,7 @@ exchange](https://www.basissetexchange.org/).
 The user can use a mixture of library basis and explicit basis set input
 to define the basis sets used on the various atoms.
 
-For example, the following BASIS directive augments the Dunning cc-pvdz
+For example, the following `BASIS` directive augments the Dunning cc-pvdz
 basis set for the water molecule with a diffuse s-shell on oxygen and
 adds the aug-cc-pVDZ diffuse functions onto the hydrogen.
 ```
