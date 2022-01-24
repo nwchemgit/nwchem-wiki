@@ -31,7 +31,9 @@ Dyall's approach is currently available at the Hartree-Fock level. The
 derivatives have been implemented, allowing both methods to be used in
 geometry optimizations and frequency calculations.
 
-The RELATIVISTIC directive provides input for the implemented
+## RELATIVISTIC directive
+
+The `RELATIVISTIC` directive provides input for the implemented
 relativistic approximations and is a compound directive that encloses
 additional directives specific to the
 approximations:
