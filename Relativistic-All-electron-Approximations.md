@@ -230,7 +230,7 @@ safely be neglected, but for heavy atoms they should be included.
 
 In addition to the selection of this keyword in the `RELATIVISTIC`
 directive block, it is necessary to supply basis sets in addition to the
-[`ao basis`](Basis#basis-sets). For the one-electron approximation, three basis sets are
+[`ao basis`](Basis#basis-set-name). For the one-electron approximation, three basis sets are
 needed: the *atomic FW* basis set, the *large component* basis set and the
 *small* component basis set. The atomic FW basis set should be included in
 the `ao basis`. The large and small components should similarly be
@@ -245,7 +245,7 @@ user to ensure that the basis sets are correctly specified.
 
 There is one further requirement in the specification of the basis sets.
 In the ao basis, it is necessary to add the `rel` keyword either to the
-[basis](Basis#rel-keyword) directive or the (library)[Basis#basis-set-library] tag line (See below for examples). The
+[basis](Basis#rel-keyword) directive or the [library](Basis#basis-set-library) tag line (See below for examples). The
 former marks the basis functions specified by the tag as relativistic,
 the latter marks the whole basis as relativistic. The marking is
 actually done at the unique shell level, so that it is possible not only
