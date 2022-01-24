@@ -50,8 +50,8 @@ The folllwing sections examine the keywords on the first line of the BASIS direc
 ### SPHERICAL or CARTESIAN
   `SPHERICAL` || `CARTESIAN` :   
     The keywords `spherical` and `cartesian` offer the option of using
-    either spherical-harmonic (5 d, 7 f, 9 g, ...) or Cartesian (6 d, 10
-    f, 15 g, ...) angular functions. The default is Cartesian. Note that
+    either spherical-harmonic (5 *d*, 7 *f*, 9 *g*, ...) or Cartesian (6 *d*, 10
+    *f*, 15 *g*, ...) angular functions. The default is Cartesian. Note that
     the correlation-consistent basis sets were designed using spherical
     harmonics and to use these, the `spherical` keyword should be present
     in the `BASIS` directive. The use of spherical functions also helps
@@ -79,18 +79,17 @@ The folllwing sections examine the keywords on the first line of the BASIS direc
 | 8  | f<sub>yyz</sub> |                                                       |
 | 9  | f<sub>yzz</sub> |                                                       |
 | 10 | f<sub>zzz</sub> |                                                       |
+ 
+Order of functions.  
+<br>
   
-<br/>
-Order of functions.
-
-
-  - `PRINT` or `NOPRINT` :  
+### PRINT keyword
+  `PRINT` or `NOPRINT` :  
     The default is for the input module to print all basis sets
     encountered. Specifying the keyword noprint allows the user to
     suppress this output.
 
-<!-- end list -->
-
+### REL keyword
   - `REL` :  
     This keyword marks the entire basis as a relativistic basis for the
     purposes of the Dyall-modified-Dirac relativistic integral code. The
