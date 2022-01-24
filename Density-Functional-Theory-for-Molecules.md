@@ -1847,15 +1847,15 @@ can be found in [Effective Core
 Potentials](ECP#spin-orbit-ecps). At this time we have not
 included any spin-orbit potentials in the basis set library. However,
 one can get these from the Stuttgart/Köln web pages    
-(http://www.tc.uni-koeln.de/PP/clickpse.en.html).  See [Effective Core
-Potentials](ECP) for details how to define the SO ECPs
+[http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html).
+See [Effective Core Potentials](ECP) for details how to define the SO ECPs
 
 Note: One should use a combination of ECP and SO potentials that were
 designed for the same size core, i.e. don't use a small core ECP
 potential with a large core SO potential (it will produce erroneous
 results).
 
-The following is an example of a calculation of <img alt="\(UO_2\)" src="svgs/06f075d510ceac444f473cefd7f488b2.svg?invert_in_darkmode&sanitize=true" align=middle width="31.993995pt" height="22.38192pt"/>:
+The following is an example of a calculation of UO<sub>2<\sub>:   
 ```
 start uo2_sodft  
 echo  

@@ -65,24 +65,24 @@ Douglas-Kroll approximation can be invoked by specifying:
                 <string (FPP||DKH||DKFULL|DK3|DK3FULL) default DKH>]
 ```
 The ON|OFF string is used to turn on or off the Douglas-Kroll
-approximation. By default, if the DOUGLAS-KROLL keyword is found, the
+approximation. By default, if the `DOUGLAS-KROLL` keyword is found, the
 approximation will be used in the calculation. If the user wishes to
 calculate a non-relativistic quantity after turning on Douglas-Kroll,
-the user will need to define a new RELATIVISTIC block and turn the
-approximation OFF. The user could also simply put a blank RELATIVISTIC
+the user will need to define a new `RELATIVISTIC` block and turn the
+approximation `OFF`. The user could also simply put a blank `RELATIVISTIC`
 block in the input file and all options will be turned off.
 
-The FPP is the approximation based on free-particle projection
-operators[^11] whereas the DKH and DKFULL approximations are based on
+The `FPP` is the approximation based on free-particle projection
+operators[^11] whereas the `DKH` and `DKFULL` approximations are based on
 external-field projection operators[^12]. The latter two are
-considerably better approximations than the former. DKH is the
+considerably better approximations than the former. `DKH` is the
 Douglas-Kroll-Hess approach and is the approach that is generally
-implemented in quantum chemistry codes. DKFULL includes certain
-cross-product integral terms ignored in the DKH approach (see for
+implemented in quantum chemistry codes. `DKFULL` includes certain
+cross-product integral terms ignored in the `DKH` approach (see for
 example Häberlen and Rösch[^13]). The third-order Douglas-Kroll
 approximation has been implemented by T. Nakajima and K.
-Hirao[^14][^15]. This approximation can be called using DK3 (DK3
-without cross-product integral terms) or DK3FULL (DK3 with cross-product
+Hirao[^14][^15]. This approximation can be called using `DK3` (DK3
+without cross-product integral terms) or `DK3FULL` (DK3 with cross-product
 integral terms).
 
 The contracted basis sets used in the calculations should reflect the
@@ -110,19 +110,19 @@ basis" (see [Basis Sets](Basis)).
 
 The spin-free and spin-orbit one-electron zeroth-order regular
 approximation (ZORA) have been implemented. ZORA can be accessed only 
-via the DFT and SO-DFT modules. The use of relativistic
+via the [DFT](Density-Functional-Theory-for-Molecules) and [SO-DFT](Density-Functional-Theory-for-Molecules#spin-orbit-density-functional-theory-sodft) modules. The use of relativistic
 effects with ZORA can be invoked by specifying:
 
 ```
  ZORA [<string (ON||OFF) default ON>
 ```
 
-The ON|OFF string is used to turn on or off ZORA. By default, if the
-ZORA keyword is found, the approximation will be used in the
+The `ON`|`OFF` string is used to turn on or off ZORA. By default, if the
+`ZORA` keyword is found, the approximation will be used in the
 calculation. If the user wishes to calculate a non-relativistic quantity
-after turning on ZORA, the user will need to define a new RELATIVISTIC
+after turning on ZORA, the user will need to define a new `RELATIVISTIC`
 block and turn the approximation OFF. The user can also simply put a
-blank RELATIVISTIC block in the input file and all options will be
+blank `RELATIVISTIC` block in the input file and all options will be
 turned off.
 
 To increase the accuracy of ZORA calculations, the following settings may be used 
@@ -135,7 +135,7 @@ in the relativistic block
  end
 ```
 
-To invoke the relativistic ZORA model potential approach due to van Wullen (references 16 & 17).
+To invoke the relativistic ZORA model potential approach due to van Wullen (references [^16] and [^17]).
 
 For model potentials constructed from 4-component densities:  
 ```
@@ -189,7 +189,7 @@ are in the one-electron integrals. This is the equivalent of the
 Douglas-Kroll(-Hess) approximation as it is usually applied.
 
 The use of these approximations can be invoked with the use of the
-DYALL-MOD-DIRAC directive in the RELATIVISTIC directive block. The
+`DYALL-MOD-DIRAC` directive in the `RELATIVISTIC` directive block. The
 syntax is as follows.
 
 ```
@@ -197,19 +197,19 @@ syntax is as follows.
                  [ (NESC1E || NESC2E) default NESC1E ]
 ```
 
-The ON|OFF string is used to turn on or off the Dyall's modified Dirac
-approximation. By default, if the DYALL-MOD-DIRAC keyword is found, the
+The `ON`|`OFF` string is used to turn on or off the Dyall's modified Dirac
+approximation. By default, if the `DYALL-MOD-DIRAC` keyword is found, the
 approximation will be used in the calculation. If the user wishes to
 calculate a non-relativistic quantity after turning on Dyall's modified
-Dirac, the user will need to define a new RELATIVISTIC block and turn
-the approximation OFF. The user could also simply put a blank
-RELATIVISTIC block in the input file and all options will be turned off.
+Dirac, the user will need to define a new `RELATIVISTIC` block and turn
+the approximation `OFF`. The user could also simply put a blank
+`RELATIVISTIC` block in the input file and all options will be turned off.
 
-Both one- and two-electron approximations are available NESC1E ||
-NESC2E, and both have analytic gradients. The one-electron approximation
-is the default. The two-electron approximation specified by NESC2E has
+Both one- and two-electron approximations are available `NESC1E` ||
+`NESC2E`, and both have analytic gradients. The one-electron approximation
+is the default. The two-electron approximation specified by `NESC2E` has
 some sub options which are placed on the same logical line as the
-DYALL-MOD-DIRAC directive, with the following
+`DYALL-MOD-DIRAC` directive, with the following
 syntax:
 
 ```
@@ -226,7 +226,7 @@ is redundant. The second controls the inclusion of the *(SS|SS)*
 integrals which are of order &alpha;<sup>4</sup>. For light atoms they may
 safely be neglected, but for heavy atoms they should be included.
 
-In addition to the selection of this keyword in the RELATIVISTIC
+In addition to the selection of this keyword in the `RELATIVISTIC`
 directive block, it is necessary to supply basis sets in addition to the
 ao basis. For the one-electron approximation, three basis sets are
 needed: the atomic FW basis set, the large component basis set and the
