@@ -263,6 +263,7 @@ It should also be noted that the relativistic code will NOT work with
 basis sets that contain sp shells, nor will it work with ECPs. Both of
 these are tested and flagged as an error.
 
+### Examples for DYALL-MOD-DIRAC
 Some examples follow. The first example sets up the data for
 relativistic calculations on water with the one-electron approximation
 and the two-electron approximation, using the library basis sets.
