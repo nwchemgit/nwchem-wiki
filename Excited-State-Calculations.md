@@ -181,7 +181,7 @@ Since each keyword has a default value, a minimal input file will be
 Note that the keyword for the asymptotic correction must be given in the
 DFT input block, since all the effects of the correction (and also
 changes in the computer program) occur in the SCF calculation stage. See
-[DFT](Density-Functional-Theory-for-Molecules#lb94-and-cs00----asymptotic-correction) (keywords `CS00` and `LB94`) for details.
+[DFT](Density-Functional-Theory-for-Molecules#lb94-and-cs00-asymptotic-correction) (keywords `CS00` and `LB94`) for details.
 
 ## Keywords of TDDFT input block
 
