@@ -273,7 +273,7 @@ feasible.
 
 ### SYMMETRY -- restricting the excited state symmetry
 
-By adding this keyword to the input block, the user can request the
+By adding the `SYMMETRY` keyword to the input block, the user can request the
 module to generate the initial guess vectors transforming as the same
 irreducible representation as `TARGETSYM`. This causes the final excited
 state roots be (exclusively) dominated by those with the specified
@@ -311,7 +311,7 @@ requested.
 
 ### CIVECS -- CI vectors
 
-This keyword will result in the CI vectors being written out. By default
+The `CIVECS` keyword will result in the CI vectors being written out. By default
 this is off. Please note this can be a very large file, so avoid turning
 on this keyword if you are calculating a very large number of roots. CI
 vectors are needed for excited-state gradient and transition density
@@ -323,13 +323,13 @@ Analytical TDDFT gradients can be calculated by specifying a `grad` block
 within the main `TDDFT` block
 
 For example, the following will perform a TDDFT optimization on the
-first singlet excited state (S1). Note that the civecs keyword must be
-specified. To perform a single TDDFT gradient, replace the optimize
-keyword with gradient in the task line. A complete TDDFT optimization
+first singlet excited state (S1). Note that the `civecs` keyword must be
+specified. To perform a single TDDFT gradient, replace the `optimize`
+keyword with `gradient` in the task line. A complete TDDFT optimization
 input example is given the Sample Inputs section. A TDDFT gradients
 calculation can be used to calculate the density of a
 specific excited state.
-The excited stated density is written to a file with the dmat suffix.
+The excited stated density is written to a file with the `.dmat` suffix.
 
 ```
 tddft
@@ -388,7 +388,7 @@ diminished substantially.
 
 Some of the lowest-lying core orbitals and/or some of the highest-lying
 virtual orbitals may be excluded in the CIS, TDHF, and TDDFT
-calculations by this keyword (this does not affect the ground state HF
+calculations by the `FREEZE` keyword (this does not affect the ground state HF
 or DFT calculation). No orbitals are frozen by default. To exclude the
 atom-like core regions altogether, one may request
 
@@ -410,7 +410,7 @@ equivalent to writing
  FREEZE core 10
 ```
 
-To freeze the highest virtual orbitals, use the virtual keyword. For
+To freeze the highest virtual orbitals, use the `virtual` keyword. For
 instance, to freeze the top 5 virtuals
 
 ```
@@ -419,7 +419,7 @@ instance, to freeze the top 5 virtuals
 
 ### PRINT -- the verbosity
 
-This keyword changes the level of output verbosity. One may also request
+The `PRINT` keyword changes the level of output verbosity. One may also request
 some particular items in the table
 below.
 
