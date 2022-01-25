@@ -374,7 +374,7 @@ decreasing memory requirement, the four algorithms are:
   - ALGORITHM 4 : Disk-based, single tensor contraction.
 
 The incore algorithm stores all the trial and product vectors in memory
-across different nodes with the GA, and often decreases the MAXITER
+across different nodes with the GA, and often decreases the [`MAXITER`](##maxiter-the-maximum-number-of-davidson-iteration)
 value to accommodate them. The disk-based algorithm stores the vectors
 on disks across different nodes with the DRA, and retrieves each vector
 one at a time when it is needed. The multiple and single tensor
