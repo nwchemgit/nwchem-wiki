@@ -285,7 +285,7 @@ specified when `SYMMETRY` is invoked.
 
 ### ECUT -- energy cutoff
 
-The `ECUT` keyword enables restricted excitation window TDDFT (REW-TDDFT).
+The `ECUT` keyword enables restricted excitation window TDDFT (REW-TDDFT)[^9].
 This is an approach best suited for core excitations. By specifying this
 keyword only excitations from occupied states below the energy cutoff
 will be considered.
