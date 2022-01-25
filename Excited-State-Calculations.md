@@ -101,9 +101,10 @@ former.
 
 ## Input syntax
 
-The module is called TDDFT as TDDFT employing a hybrid HF-DFT functional
+The module is called `TDDFT` as time-dependent density functional
+theory employing a hybrid HF-DFT functional
 encompasses all of the above-mentioned methods implemented. To use this
-module, one needs to specify TDDFT on the task directive, e.g.,
+module, one needs to specify `TDDFT` on the task directive, e.g.,
 
 ```
      TASK TDDFT ENERGY
@@ -126,14 +127,14 @@ for an excited-state vibrational frequency calculation. The TDDFT module
 first invokes DFT module for a ground-state calculation (regardless of
 whether the calculations uses a HF reference as in CIS or TDHF or a DFT
 functional), and hence there is no need to perform a separate
-ground-state DFT calculation prior to calling a TDDFT task. When no
+ground-state DFT calculation prior to calling a `TDDFT` task. When no
 second argument of the task directive is given, a single-point
 excitation energy calculation will be assumed. For geometry
 optimizations, it is usually necessary to specify the target excited
 state and its irreducible representation it belongs to. See the
-subsections TARGET and TARGETSYM for more detail.
+subsections (`TARGET` and `TARGETSYM`](#target-and-targetsym---the-target-root-and-its-symmetry) for more detail.
 
-Individual parameters and keywords may be supplied in the TDDFT input
+Individual parameters and keywords may be supplied in the `TDDFT` input
 block. The syntax is:
 ```
  TDDFT
@@ -180,15 +181,15 @@ Since each keyword has a default value, a minimal input file will be
 Note that the keyword for the asymptotic correction must be given in the
 DFT input block, since all the effects of the correction (and also
 changes in the computer program) occur in the SCF calculation stage. See
-[DFT](Density-Functional-Theory-for-Molecules) (keyword CS00 and LB94) for details.
+[DFT](Density-Functional-Theory-for-Molecules#lb94-and-cs00----asymptotic-correction) (keywords `CS00` and `LB94`) for details.
 
 ## Keywords of TDDFT input block
 
 ### CIS and RPA -- the Tamm-Dancoff approximation
 
-These keywords toggle the Tamm-Dancoff approximation. CIS means that the
+These keywords toggle the Tamm-Dancoff approximation. `CIS` means that the
 Tamm-Dancoff approximation is used and the CIS or Tamm-Dancoff TDDFT
-calculation is requested. RPA, which is the default, requests TDHF (RPA)
+calculation is requested. `RPA`, which is the default, requests TDHF (RPA)
 or TDDFT calculation.
 
 The performance of CIS (Tamm-Dancoff TDDFT) and RPA (TDDFT) are
@@ -203,14 +204,14 @@ instability problems.
 ### NROOTS -- the number of excited states
 
 One can specify the number of excited state roots to be determined. The
-default value is 1. It is advised that the users request several more
+default value for `NROOTS` is 1. It is advised that the users request several more
 roots than actually needed, since owing to the nature of the trial
 vector algorithm, some low-lying roots can be missed when they do not
 have sufficient overlap with the initial guess vectors.
 
 ### MAXVECS -- the subspace size
 
-This keyword limits the subspace size of Davidson's algorithm; in other
+The `MAXVECS` keyword limits the subspace size of Davidson's algorithm; in other
 words, it is the maximum number of trial vectors that the calculation is
 allowed to hold. Typically, 10 to 20 trial vectors are needed for each
 excited state root to be converged. However, it need not exceed the
@@ -219,19 +220,19 @@ orbitals. The default value is 1000.
 
 ### SINGLET and NOSINGLET -- singlet excited states
 
-SINGLET (NOSINGLET) requests (suppresses) the calculation of singlet
+`SINGLET || NOSINGLET` requests (suppresses) the calculation of singlet
 excited states when the reference wave function is closed shell. The
-default is SINGLET.
+default is `SINGLET`.
 
 ### TRIPLET and NOTRIPLET -- triplet excited states
 
-TRIPLET (NOTRIPLET) requests (suppresses) the calculation of triplet
+`TRIPLET || NOTRIPLET` requests (suppresses) the calculation of triplet
 excited states when the reference wave function is closed shell. The
-default is TRIPLET.
+default `is TRIPLET`.
 
 ### THRESH -- the convergence threshold of Davidson iteration
 
-This keyword specifies the convergence threshold of Davidson's iterative
+The `THRESH` keyword specifies the convergence threshold of Davidson's iterative
 algorithm to solve a matrix eigenvalue problem. The threshold refers to
 the norm of residual, namely, the difference between the left-hand side
 and right-hand side of the matrix eigenvalue equation with the current
@@ -241,7 +242,7 @@ are usually converged to 1e-5 hartree.
 ### MAXITER -- the maximum number of Davidson iteration
 
 It typically takes 10-30 iterations for the Davidson algorithm to get
-converged results. The default value is 100.
+converged results. The default value for `MAXITER` is 100.
 
 ### TARGET and TARGETSYM-- the target root and its symmetry
 
@@ -250,20 +251,20 @@ calculated analytically for a set of functionals, while excited-state
 second geometry derivatives are obtained by numerical differentiation.
 These keywords may be used to specify which excited state root is being
 used for the geometrical derivative calculation. For instance, when
-TARGET 3 and TARGETSYM a1g are included in the input block, the total
+`TARGET 3` and `TARGETSYM a1g` are included in the input block, the total
 energy (ground state energy plus excitation energy) of the third lowest
 excited state root (excluding the ground state) transforming as the
 irreducible representation a1g will be passed to the module which
-performs the derivative calculations. The default values of these
-keywords are 1 and none, respectively.
+performs the derivative calculations. The default values for `TARGET` and `TARGETSYM`
+ are `1` and `none`, respectively.
 
-The keyword TARGETSYM is essential in excited state geometry
+The keyword `TARGETSYM` is essential in excited state geometry
 optimization, since it is very common that the order of excited states
 changes due to the geometry changes in the course of optimization.
-Without specifying the TARGETSYM, the optimizer could (and would likely)
+Without specifying the `TARGETSYM`, the optimizer could (and would likely)
 be optimizing the geometry of an excited state that is different from
 the one the user had intended to optimize at the starting geometry. On
-the other hand, in the frequency calculations, TARGETSYM must be none,
+the other hand, in the frequency calculations, `TARGETSYM` must be `none`,
 since the finite displacements given in the course of frequency
 calculations will lift the spatial symmetry of the equilibrium geometry.
 When these finite displacements can alter the order of excited states
@@ -274,24 +275,24 @@ feasible.
 
 By adding this keyword to the input block, the user can request the
 module to generate the initial guess vectors transforming as the same
-irreducible representation as TARGETSYM. This causes the final excited
+irreducible representation as `TARGETSYM`. This causes the final excited
 state roots be (exclusively) dominated by those with the specified
 irreducible representation. This may be useful, when the user is
 interested in just the optically allowed transitions, or in the geometry
 optimization of an excited state root with a particular irreducible
-representation. By default, this option is not set. TARGETSYM must be
-specified when SYMMETRY is invoked.
+representation. By default, this option is not set. `TARGETSYM` must be
+specified when `SYMMETRY` is invoked.
 
 ### ECUT -- energy cutoff
 
-This keyword enables restricted excitation window TDDFT (REW-TDDFT).
+The `ECUT` keyword enables restricted excitation window TDDFT (REW-TDDFT).
 This is an approach best suited for core excitations. By specifying this
 keyword only excitations from occupied states below the energy cutoff
 will be considered.
 
 ### EWIN -- energy window
 
-This keyword enables a restricted energy window between a lower energy
+The `EWIN` keyword enables a restricted energy window between a lower energy
 cutoff and a higher energy cutoff. For example, `ewin -20.0 -10.0` will
 only consider excitations from occupied orbitals within the specified
 energy window
