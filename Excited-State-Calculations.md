@@ -777,13 +777,13 @@ Options:
 ## References
 ///Footnotes Go Here///
 
-[^1]: J. B. Foreman, M. Head-Gordon, J. A. Pople, and M. J. Frisch, *J. Phys. Chem.* **96**, 135 (1992). DOI:[10.1021/j100180a030](https://dx.doi.org/10.1021/j100180a030)    
-[^2]: C. Jamorski, M. E. Casida, and D. R. Salahub, *J. Chem. Phys.* **104**, 5134 (1996); R. Bauernschmitt and R. Ahlrichs, *Chem. Phys. Lett.* **256**, 454 (1996); R. Bauernschmitt, M. Häser, O. Treutler, and R. Ahlrichs, *Chem. Phys. Lett.* **264**, 573 (1997).  
+[^1]: J. B. Foreman, M. Head-Gordon, J. A. Pople, and M. J. Frisch, *J. Phys. Chem.* **96**, 135 (1992), DOI:[10.1021/j100180a030](https://dx.doi.org/10.1021/j100180a030)    
+[^2]: C. Jamorski, M. E. Casida, and D. R. Salahub, *J. Chem. Phys.* **104**, 5134 (1996), DOI:[10.1063/1.471140](https://dx.doi.org/10.1063/1.471140); R. Bauernschmitt and R. Ahlrichs, *Chem. Phys. Lett.* **256**, 454 (1996), DOI:[10.1016/0009-2614(96)00440-X](https://dx.doi.org/10.1016/0009-2614(96)00440-X); R. Bauernschmitt, M. Häser, O. Treutler, and R. Ahlrichs, *Chem. Phys. Lett.* **264**, 573 (1997), DOI:[10.1016/S0009-2614(96)01343-7](https://dx.doi.org/10.1016/S0009-2614(96)01343-7).  
 [^3]: S. Hirata and M. Head-Gordon, *Chem. Phys. Lett.* **314**, 291 (1999).  DOI:[10.1016/S0009-2614(99)01149-5](https://dx.doi.org/10.1016/S0009-2614(99)01149-5)     
-[^4]: R. van Leeuwen and E. J. Baerends, *Phys. Rev. A* **49**,  2421 (1994). DOI:[10.1103/PhysRevA.49.2421](https://dx.doi.org/10.1103/PhysRevA.49.2421)  
-[^5]: M. E. Casida, C. Jamorski, K. C. Casida, and D. R. Salahub, *J. Chem. Phys.* **108**, 4439 (1998). DOI:[10.1063/1.475855](https://dx.doi.org/10.1063/1.475855)
+[^4]: R. van Leeuwen and E. J. Baerends, *Phys. Rev. A* **49**,  2421 (1994), DOI:[10.1103/PhysRevA.49.2421](https://dx.doi.org/10.1103/PhysRevA.49.2421)  
+[^5]: M. E. Casida, C. Jamorski, K. C. Casida, and D. R. Salahub, *J. Chem. Phys.* **108**, 4439 (1998), DOI:[10.1063/1.475855](https://dx.doi.org/10.1063/1.475855)
 [^6]: S. Hirata, C.-G. Zhan, E. Aprà, T. L. Windus, and D. A. Dixon, *J. Phys. Chem. A* **107**, 10154 (2003).  DOI:[10.1021/jp035667x](https://dx.doi.org/10.1021/jp035667x)  
-[^8]: D. J. Tozer and N. C. Handy, *J. Chem. Phys.* **109**, 10180 (1998). DOI:[10.1063/1.477711](https://dx.doi.org/10.1063/1.477711)  
-[^9]: K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and Real-Time Time-Dependent Density Functional Theory Studies of Core-Level Near-Edge X-Ray Absorption", *J. Chem. Theory Comput.*, 2012, **8** (9), pp 3284–3292. DOI:[10.1021/ct3005613](https://dx.doi.org/10.1021/ct3005613)  
-[^10]: D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State Energy Gradients within Time-Dependent Density Functional Theory" *J. Chem. Theory Comput.*, 2013, **9** (12), pp 5490–5503. DOI:[10.1021/ct4007772](https://dx.doi.org/10.1021/ct4007772)  
-[^11]: Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission Spectroscopy of Transition Metal", *J. Chem. Theory Comput*., 2015, **11** (12), pp 5804–5809. DOI:[10.1021/acs.jctc.5b00763](https://dx.doi.org/10.1021/acs.jctc.5b00763)  
+[^8]: D. J. Tozer and N. C. Handy, *J. Chem. Phys.* **109**, 10180 (1998), DOI:[10.1063/1.477711](https://dx.doi.org/10.1063/1.477711)  
+[^9]: K. Lopata, B. E. Van Kuiken, M. Khalil, N. Govind, "Linear-Response and Real-Time Time-Dependent Density Functional Theory Studies of Core-Level Near-Edge X-Ray Absorption", *J. Chem. Theory Comput.*, 2012, **8** (9), pp 3284–3292, DOI:[10.1021/ct3005613](https://dx.doi.org/10.1021/ct3005613)  
+[^10]: D. W. Silverstein, N. Govind,  H. J. J. van Dam, L. Jensen, "Simulating One-Photon Absorption and Resonance Raman Scattering Spectra Using Analytical Excited State Energy Gradients within Time-Dependent Density Functional Theory" *J. Chem. Theory Comput.*, 2013, **9** (12), pp 5490–5503, DOI:[10.1021/ct4007772](https://dx.doi.org/10.1021/ct4007772)  
+[^11]: Y. Zhang, S. Mukamel, M. Khalil, N. Govind, "Simulating Valence-to-Core X-ray Emission Spectroscopy of Transition Metal", *J. Chem. Theory Comput*., 2015, **11** (12), pp 5804–5809, DOI:[10.1021/acs.jctc.5b00763](https://dx.doi.org/10.1021/acs.jctc.5b00763)  
