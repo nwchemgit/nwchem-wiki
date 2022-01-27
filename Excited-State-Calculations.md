@@ -479,49 +479,56 @@ To perform a spin-unrestricted TDHF/aug-cc-pVDZ calculation for the CO+
 radical,
 ```
 START co  
-TITLE "TDHF/aug-cc-pVDZ CO+"  
-CHARGE 1  
-GEOMETRY  
- C  0.0  0.0  0.0  
- O  1.5  0.0  0.0  
-END  
-BASIS  
- * library aug-cc-pVDZ  
-END  
-DFT  
- XC HFexch  
- MULT 2  
-END  
-TDDFT  
- RPA  
- NROOTS 5  
-END  
-TASK TDDFT ENERGY
+title "TDHF/aug-cc-pVDZ CO+"  
+charge 1  
+geometry  
+ c  0.0  0.0  0.0  
+ o  0.0  0.0  1.5
+ symmetry c2v # enforcing abelian symmetry
+end  
+basis  
+ * library aug-cc-pvdz  
+end  
+dft  
+ xc hfexch  
+ mult 2  
+end
+task dft optimize
+tddft  
+ rpa  
+ nroots 5  
+end  
+task tddft energy
 ```
 A geometry optimization followed by a frequency calculation for an
 excited state is carried out for BF at the CIS/6-31G\* level in the
 following sample input.
 ```
-START bf  
-TITLE "CIS/6-31G* BF optimization frequencies"  
-GEOMETRY  
- B 0.0 0.0 0.0  
- F 0.0 0.0 1.2  
-END  
-BASIS  
- * library 6-31G*  
-END  
-DFT  
- XC HFexch  
-END  
-TDDFT  
- CIS  
- NROOTS 3  
- NOTRIPLET  
- TARGET 1  
-END  
-TASK TDDFT OPTIMIZE  
-TASK TDDFT FREQUENCIES
+start bf  
+title "CIS/6-31G* BF optimization frequencies"  
+geometry  
+ b 0.0 0.0 0.0  
+ f 0.0 0.0 1.2
+ symmetry c2v # enforcing abelian symmetry
+end  
+basis  
+ * library 6-31g*  
+end  
+dft  
+ xc hfexch  
+end  
+tddft  
+ cis  
+ nroots 3  
+ notriplet  
+ target 1  
+  civecs  
+  grad  
+    root 1  
+  end  
+end  
+task tddft optimize  
+task tddft frequencies
 ```
 TDDFT with an asymptotically corrected SVWN exchange-correlation
 potential. Casida-Salahub scheme has been used with the shift value of
@@ -531,6 +538,7 @@ START tddft_ac_co
 GEOMETRY  
  O 0.0 0.0  0.0000  
  C 0.0 0.0  1.1283  
+ symmetry c2v # enforcing abelian symmetry
 END  
 BASIS SPHERICAL  
  C library aug-cc-pVDZ  
@@ -553,6 +561,7 @@ START tddft_ac_co
 GEOMETRY  
  O 0.0 0.0  0.0000  
  C 0.0 0.0  1.1283  
+ symmetry c2v # enforcing abelian symmetry
 END  
 BASIS SPHERICAL  
  C library aug-cc-pVDZ  
@@ -649,10 +658,7 @@ driver
 end  
 dft  
   iterations 500  
-  xc slater 1.0 vwn_5 1.0  
   grid xfine  
-  grid euler  
-  direct  
 end  
 tddft  
   nroots 2  
