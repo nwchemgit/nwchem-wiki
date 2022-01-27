@@ -416,8 +416,14 @@ instance, to freeze the top 5 virtuals
 ```
  FREEZE virtual 5
 ```
+### TRIALS -- restart
 
-### PRINT -- the verbosity
+Setting the keyword `trials` restart the calculation from the trials vector of a previous run.
+
+```
+trials 
+```
+### PRINT -- output verbosity
 
 The `PRINT` keyword changes the level of output verbosity. One may also request
 some particular items in the table
