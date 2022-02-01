@@ -7,8 +7,11 @@ Docker images of the master branch are hosted at [https://ghcr.io](https://ghcr.
 ```
  docker run --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev/[arch] input.nw
 ```
-where the `[arch]` option can have the values `amd64`, `arm64`, `ppc64le` or `armv7`  
-
+where the `[arch]` option can have the values `amd64`, `arm64`, `ppc64le` or `armv7` . For example, the following command can be used on `amd64` (a.k.a. `x86_64`) hardware:
+```
+ docker run --rm -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev/amd64 input.nw
+```
+where the input file `input.nw` is located in the `/tmp` directory.
   
 
 Older Docker images are available at [https://hub.docker.com/u/nwchemorg](https://hub.docker.com/u/nwchemorg)
