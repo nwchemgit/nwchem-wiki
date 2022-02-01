@@ -21,7 +21,7 @@ docker run --rm  --entrypoint='mpirun' -v /tmp:/data ghcr.io/nwchemgit/nwchem-de
 This example uses the input file `xvdw.nw` available on the host directory `/tmp`
 
 The associated Dockerfile is available at  
-[https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets](https://github.com/nwchemgit/nwchem-dockerfiles/tree/master/nwchem-700.fedora.sockets) 
+[https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile](https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile) 
 
 
 # Singularity
