@@ -957,7 +957,7 @@ tolerance to 0.01 would be,
 Direct inversion of the iterative subspace with extrapolation of up to
 10 Fock matrices is a default optimization procedure. For large
 molecular systems the amount of available memory may preclude the
-ability to store this number of <img alt="\(N^2\)" src="svgs/4c87ee198ded31321f89b44a38a0ad5a.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> arrays in global memory. The
+ability to store this number of *N<sup>2</sup>* arrays in global memory. The
 user may then specify the number of Fock matrices to be used in the
 extrapolation (must be greater than three (3) to be effective). To set
 the number of Fock matrices stored and used in the extrapolation
@@ -1696,7 +1696,7 @@ following
 form:
  
 
-E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup>
+<var>E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup></var>
 
 
 This new dispersion correction covers elements through Z=94.
@@ -1855,7 +1855,7 @@ designed for the same size core, i.e., don't use a small core ECP
 potential with a large core SO potential (it will produce erroneous
 results).
 
-The following is an example of a calculation of UO<sub>2<\sub>:   
+The following is an example of a calculation of UO<sub>2</sub>:   
 ```
 start uo2_sodft  
 echo  
