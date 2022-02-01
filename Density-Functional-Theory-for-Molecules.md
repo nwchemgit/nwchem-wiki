@@ -161,7 +161,7 @@ evaluation of the exchange-correlation potential. This basis set must
 have the name `xc basis`. If this basis set is not specified by input,
 the exchange contribution (XC) is evaluated by numerical quadrature. In
 most applications, this approach is efficient enough, so the "xc basis"
-basis set is not generally required.
+basis set is not required.
 
 For the DFT module, the input options for defining the basis sets in a
 given calculation can be summarized as follows:
@@ -171,7 +171,7 @@ given calculation can be summarized as follows:
   - `cd basis` - charge density fitting basis set; optional, but
     recommended for evaluation of the Coulomb potential
   - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
-    and usually not recommended
+    and not recommended
 
 ## VECTORS and MAX_OVL -- KS-MO Vectors
 
@@ -212,7 +212,7 @@ in the DFT Module (see table below for full list of functionals). The
 default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
-this approximation the exchange functional is the Slater *&rho;<sup>1/3</sup>*
+this approximation, the exchange functional is the Slater *&rho;<sup>1/3</sup>*
 functional[^1], and the correlation functional is the
 Vosko-Wilk-Nusair (VWN) functional (functional V)[^2].
 The parameters used in
@@ -235,7 +235,7 @@ task dft
 ```
 The `DECOMP` directive causes the components of the energy corresponding
 to each functional to be printed, rather than just the total
-exchange-correlation energy which is the default. You can see an example
+exchange-correlation energy that is the default. You can see an example
 of this directive in the [sample
 input](#sample-input-file).
 
@@ -256,7 +256,7 @@ computation expense), is invoked by specifying
   XC HFexch
 ```
 Note that the user also has the ability to include only the local or
-nonlocal contributions of a given functional. In addition the user can
+nonlocal contributions of a given functional. In addition, the user can
 specify a multiplicative prefactor (the variable <prefactor> in the
 input) for the local/nonlocal component or total. An example of this
 might be,
@@ -267,13 +267,13 @@ The user should be aware that the Becke88 local component is simply the
 Slater exchange and should be input as such.
 
 Any combination of the supported exchange functional options can be
-used. For example the popular Gaussian B3 exchange could be specified
+used. For example, the popular Gaussian B3 exchange could be specified
 as:
 ```
   XC slater 0.8 becke88 nonlocal 0.72 HFexch 0.2
 ```
 Any combination of the supported correlation functional options can be
-used. For example B3LYP could be specified
+used. For example, B3LYP could be specified
 as:
 ```
 XC vwn_1_rpa 0.19 lyp 0.81 HFexch 0.20  slater 0.80 becke88 nonlocal 0.72
@@ -327,7 +327,7 @@ as
 
 E<sub>XC</sub> &asymp; &frac12;E<sub>X</sub><sup>HF</sup> + &frac12;E<sub>X</sub><sup>Slater</sup> + &frac12;E<sub>C</sub><sup>PW91LDA</sup>  
 
-We know this is NOT the correct Becke prescribed implementation which
+We know this is NOT the correct Becke prescribed implementation that 
 requires the XC potential in the energy expression. But this is what is
 currently implemented as an approximation to it.
 
@@ -565,8 +565,8 @@ and citations 14-27 therein for thorough background)
 
 Note: both TPSS and PKZB correlation require the PBE GGA CORRELATION
 (which is itself dependent on an LDA). The decision has been made to use
-these functionals with the accompanying local PW91LDA. The user does not
-have the ability to set the local part of these metaGGA functionals.
+these functionals with the accompanying local PW91LDA. The user cannot
+ set the local part of these metaGGA functionals.
 
 ### Range-Separated Functionals
 
@@ -578,7 +578,7 @@ we can split the the Exchange interaction as
 
 <img alt="$$E_{X} = E_X^{LR} + E_X^{SR}$$" src="svgs/7b23a639e12d5c9a1bfa2148db98ab10.svg?invert_in_darkmode&sanitize=true" align=middle width="130.9704pt" height="27.59823pt"/>
 
-Therefore the long-range HF Exchange energy
+Therefore, the long-range HF Exchange energy
 becomes
 
 <img alt="$$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$" src="svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>  
@@ -781,7 +781,7 @@ potentials.
 
 The keyword `CS00`, when supplied with a real value of shift (in atomic
 units), will perform Casida-Salahub '00 asymptotic correction. This is
-primarily intended for use in conjunction with
+primarily intended for use with
 [TDDFT](Excited-State-Calculations). The shift is normally
 positive (which means that the original uncorrected exchange-correlation
 potential must be shifted down).
@@ -791,7 +791,7 @@ program will automatically supply it according to the semi-empirical
 formula of Zhan, Nichols, and Dixon (again, see
 [TDDFT](Excited-State-Calculations) for more details and
 references). As the Zhan's formula is calibrated against B3LYP results,
-it is most meaningful to use this in conjunction with the B3LYP
+it is most meaningful to use this with the B3LYP
 functional, although the program does not prohibit (or even warn) the
 use of any other functional.
 
@@ -894,7 +894,7 @@ Convergence is satisfied by meeting any or all of three criteria;
 The default optimization strategy is to immediately begin direct
 inversion of the iterative subspace. Damping is also initiated (using
 70% of the previous density) for the first 2 iteration. In addition, if
-the HOMO - LUMO gap is small and the Fock matrix somewhat diagonally
+the HOMO - LUMO gap is small and the Fock matrix diagonally
 dominant, then level-shifting is automatically initiated. There are a
 variety of ways to customize this procedure to whatever is desired.
 
@@ -913,7 +913,7 @@ these is available as,
 So, for example, damping, DIIS, and/or level-shifting can be turned
 on/off as desired.
 
-Another strategy can be to simply specify how many iterations (cycles)
+Another strategy can be to specify how many iterations (cycles)
 you wish each type of procedure to be used. The necessary keywords to
 control the number of damping cycles (`ncydp`), the number of DIIS cycles
 (`ncyds`), and the number of level-shifting cycles (`ncysh`) are input as,
@@ -1008,7 +1008,7 @@ described in the paper: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502
       [pop (becke||mulliken||lowdin) default lowdin]
 ```
 Variables `fatom1` and `latom1` define the first and last atom of the group
-of atoms to which the constraint will be applied. Therefore the atoms in
+of atoms to which the constraint will be applied. Therefore, the atoms in
 the same group should be placed continuously in the geometry input. If
 `fatom2` and `latom2` are specified, the difference between group 1 and 2
 (i.e. 1-2) is constrained.
@@ -1220,7 +1220,7 @@ composition.
 
 
 In order to determine the level of radial and angular quadrature needed
-to give us the target accuracy we computed total DFT energies at the LDA
+to give us the target accuracy, we computed total DFT energies at the LDA
 level of theory for many homonuclear atomic, diatomic and triatomic
 systems in rows 1-4 of the periodic table. In each case all bond lengths
 were set to twice the Bragg-Slater radius. The total DFT energy of the
@@ -1851,7 +1851,7 @@ one can get these from the Stuttgart/Köln web pages
 See [Effective Core Potentials](ECP) for details how to define the SO ECPs
 
 Note: One should use a combination of ECP and SO potentials that were
-designed for the same size core, i.e. don't use a small core ECP
+designed for the same size core, i.e., don't use a small core ECP
 potential with a large core SO potential (it will produce erroneous
 results).
 
