@@ -899,7 +899,7 @@ dominant, then level-shifting is automatically initiated. There are a
 variety of ways to customize this procedure to whatever is desired.
 
 An alternative optimization strategy is to specify, by using the change
-in total energy (between iterations N and N-1), when to turn damping,
+in total energy (between iterations <var>N</var> and <var>N-1</var>), when to turn damping,
 level-shifting, and/or DIIS on/off. Start and stop keywords for each of
 these is available as,
 ```
@@ -1692,11 +1692,10 @@ some functionals and triple-zeta plus double polarization basis set
     and TPSS 1.00.
 
 Grimme's DFT-D3 is also available. Here the dispersion term has the
-following
-form:
+following form:
  
 
-<var>E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup></var>
+<var>E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup></var>   
 
 
 This new dispersion correction covers elements through Z=94.
@@ -1706,7 +1705,7 @@ Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010).
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
-  - `vdw 3` (s6 and alpha cannot be set manually). Functionals for which
+  - `vdw 3` (`s6` and `alpha` cannot be set manually). Functionals for which
     DFT-D3 is available in NWChem are BLYP, B3LYP, BP86, Becke97-D,
     PBE96, TPSS, PBE0, B2PLYP, BHLYP, TPSSH, PWB6K, B1B95, SSB-D,
     MPW1B95, MPWB1K, M05, M05-2X, M06L, M06, M06-2X, and M06HF
