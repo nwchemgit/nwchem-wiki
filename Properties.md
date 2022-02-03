@@ -263,7 +263,7 @@ as described in reference [D1].
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
 property
- polfrom
+ polfromsos
 end
 
 task dft property
