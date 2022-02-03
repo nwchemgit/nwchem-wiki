@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Sleep for 5 minutes
+        run: sleep 300s
       - name: checkout wiki
         uses: actions/checkout@v2
         with:
