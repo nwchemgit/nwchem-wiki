@@ -8,7 +8,7 @@
 | I-2-2                                                            | i5        | number of parameter sets                        |
 | I-2-3                                                            | i5        | default parameter set                           |
 | I-2-4                                                            | i5        | number of z-matrix definition                   |
-| For each parameter set one card I-3                              |
+| For each parameter set one card I-3|
 | I-3-1                                                            | a         | residue name for parameter set                  |
 | For each atom one deck II                                        |
 | II-1-1                                                           | i5        | atom sequence number                            |
@@ -46,7 +46,8 @@
 |                                                                  |           | other : intramolecular solute interactions only |
 | II-2-7                                                           | 25x,f12.6 | atomic partial charge                           |
 | II-2-8                                                           | f12.6     | atomic polarizability                           |
-| Any number of cards in deck III to specify complete connectivity |
+| Any number of cards in deck III to  |
+| specify complete connectivity |
 | III-1-1                                                          | 16i5      | connectivity, duplication allowed               |
 | One blank card to signal the end of the connectivity list        |
 | For each z-matrix definition one card IV                         |
