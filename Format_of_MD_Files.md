@@ -64,8 +64,9 @@
 
 
 </center>
+  
 ## Format of segment file (1 of 7)  
-
+  
 <center>
 
 |                                     |        |                                             |
@@ -93,6 +94,7 @@
 
 
 </center>
+
 ## Format of segment file (2 of 7)  
 
 <center>
@@ -128,8 +130,9 @@
 
 
 </center>
+  
 ## Format of segment file (3 of 7)  
-
+  
 <center>
 
 |                                       |        |                                               |
@@ -152,8 +155,9 @@
 
 
 </center>
+  
 ## Format of segment file (4 of 7)  
-
+  
 <center>
 
 |                                      |        |                                         |
@@ -175,7 +179,8 @@
 |  |
 
 
-</center>
+</center> 
+  
 ## Format of segment file (5 of 7)  
 
 <center>
@@ -202,8 +207,9 @@
 
 
 </center>
+   
 ## Format of segment file (6 of 7)  
-
+  
 <center>
 
 |                                      |          |                                                     |
@@ -226,6 +232,7 @@
 |  |
 
 </center>
+  
 ## Format of segment file (7 of 7)  
 
 <center>
@@ -243,10 +250,9 @@
 | VII-1-7                                   | f12.6  | torson i-j-k-l  |
 |  |
 
-Format of segment file (7 of
-7)
 
 </center>
+  
 ## Format of sequence file 
 
 <center>
@@ -277,6 +283,7 @@ Format of segment file (7 of
 
 
 </center>
+  
 ## Format of trajectory file
 <center>
 
@@ -347,6 +354,7 @@ Format of segment file (7 of
 
 
 </center>
+  
 ## Format of free energy file  
 <center>
 
@@ -368,6 +376,7 @@ Format of segment file (7 of
 
 
 </center>
+  
 ## Format of root mean square deviation file  
 <center>
 
@@ -395,6 +404,7 @@ Format of segment file (7 of
 
 
 </center>
+  
 ## Format of property file  
 
 <center>
