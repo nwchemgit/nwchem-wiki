@@ -262,7 +262,8 @@
 | Card                                                         | Format | Description                                                |
 | I-1-1                                                        | a1     | $ to identify the start of a sequence                      |
 | I-1-2                                                        | a10    | name of the sequence                                       |
-| Any number of cards 1 and 2 in deck II to specify the system |
+| Any number of cards 1 and 2 in deck II |
+| to specify the system |
 | II-1-1                                                       | i5     | segment number                                             |
 | II-1-2                                                       | a10    | segment name, last character will be determined from chain |
 | II-2-1                                                       | a      | break to identify a break in the molecule chain            |
@@ -278,7 +279,8 @@
 | II-2-1                                                       | a6     | repeat to repeat next ncard cards ncount times             |
 | II-2-2                                                       | i5     | number of cards to repeat (ncards)                         |
 | II-2-3                                                       | i5     | number of times to repeat cards (ncount)                   |
-| Any number of cards in deck II to specify the system         |
+| Any number of cards in deck II |
+| to specify the system         |
 |  |
 
 
