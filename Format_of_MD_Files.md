@@ -1,3 +1,5 @@
+## Format of fragment file  
+
 <center>
 
 |                                                                  |           |                                                 |
@@ -60,10 +62,9 @@
 | IV-1-7                                                           | f12.6     | torson i-j-k-l                                  |
 |  |
 
-Format of fragment
-file
 
 </center>
+## Format of segment file (1 of 7)  
 
 <center>
 
@@ -90,10 +91,9 @@ file
 | I-4-1                               | f12.6  | dipole correction energy                    |
 |  |
 
-Format of segment file (1 of
-7)
 
 </center>
+## Format of segment file (2 of 7)  
 
 <center>
 
@@ -126,10 +126,9 @@ Format of segment file (1 of
 |  |
 |  |
 
-Format of segment file (2 of
-7)
 
 </center>
+## Format of segment file (3 of 7)  
 
 <center>
 
@@ -151,10 +150,9 @@ Format of segment file (2 of
 | III-2-2                               | e12.5  | bond force constant in \(kJ nm^{2} mol^{-1}\) |
 |  |
 
-Format of segment file (3 of
-7)
 
 </center>
+## Format of segment file (4 of 7)  
 
 <center>
 
@@ -176,10 +174,9 @@ Format of segment file (3 of
 | IV-2-2                               | e12.5  | angle force constant in \(kJ mol^{-1}\) |
 |  |
 
-Format of segment file (4 of
-7)
 
 </center>
+## Format of segment file (5 of 7)  
 
 <center>
 
@@ -203,10 +200,9 @@ Format of segment file (4 of
 | V-2-3                               | e12.5  | proper dihedral force constant in \(kJ mol^{-1}\) |
 |  |
 
-Format of segment file (5 of
-7)
 
 </center>
+## Format of segment file (6 of 7)  
 
 <center>
 
@@ -229,9 +225,8 @@ Format of segment file (5 of
 | VI-2-2                               | e12.5    | improper dihedral force constant in \(kJ mol^{-1}\) |
 |  |
 
-Format of segment file (6 of 7)
-
 </center>
+## Format of segment file (7 of 7)  
 
 <center>
 
@@ -252,6 +247,7 @@ Format of segment file (7 of
 7)
 
 </center>
+## Format of sequence file 
 
 <center>
 
@@ -279,11 +275,9 @@ Format of segment file (7 of
 | Any number of cards in deck II to specify the system         |
 |  |
 
-Format of sequence
-file
 
 </center>
-
+## Format of trajectory file
 <center>
 
 |                                                                              |           |                                                               |
@@ -351,11 +345,9 @@ file
 | II-6-7                                                                       | 3e12.6    | solute atom forces, if lfs (on new card if both lxs and lvs)  |
 |  |
 
-Format of trajectory
-file
 
 </center>
-
+## Format of free energy file  
 <center>
 
 |                                         |         |                                                                      |
@@ -374,11 +366,9 @@ file
 | I-4-4                                   | e20.12  | average exponent forward perturbation energy at current \(\lambda\)  |
 |  |
 
-Format of free energy
-file
 
 </center>
-
+## Format of root mean square deviation file  
 <center>
 
 |                                          |        |                                                                  |
@@ -403,10 +393,9 @@ file
 | III-2-3                                  | f12.6  | average segment rms deviation after superimposition              |
 |  |
 
-Format of root mean square deviation
-file
 
 </center>
+## Format of property file  
 
 <center>
 
@@ -421,6 +410,5 @@ file
 | II-1-1                                        | 4(1pe12.5) | value of property                   |
 |  |
 
-Format of property file
 
 </center>
