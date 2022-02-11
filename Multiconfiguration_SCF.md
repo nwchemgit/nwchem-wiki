@@ -22,7 +22,7 @@ functions.
    [LEVEL <real shift default 0.1d0>]  
  END
 ```
-Note that the ACTIVE, ACTELEC, and MULTIPLICITY directives are required.
+Note that the `ACTIVE`, `ACTELEC`, and `MULTIPLICITY` directives are required.
 The symmetry and multiplicity may alternatively be entered using the
 STATE directive.
 
@@ -47,7 +47,7 @@ must be arranged in order
 ## ACTELEC -- Number of active electrons
 
 The number of electrons in the CASSCF active space must be specified
-using the ACTELEC directive. An error is reported if the number of
+using the `ACTELEC` directive. An error is reported if the number of
 active electrons and the multiplicity are inconsistent.
 
 The number of closed shells is determined by subtracting the number of
@@ -71,7 +71,7 @@ integer in the range 1--8 using the same numbering of representations as
 output by the SCF program. Note that only Abelian point groups are
 supported.
 
-E.g., to specify a <img alt="$B_1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fe468915e44d9e34d437fbf99b371809.svg?invert_in_darkmode&sanitize=true" align=middle width="18.95025pt" height="22.38192pt"/> state when using the <img alt="$C_{2v}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fbae2e8884819f6fd147d3039ef3a9bc.svg?invert_in_darkmode&sanitize=true" align=middle width="25.19517pt" height="22.38192pt"/> group
+E.g., to specify a B<sub>1</sub> state when using the C<sub>2v</sub> group
 ```
  symmetry 3
 ```
@@ -79,7 +79,7 @@ E.g., to specify a <img alt="$B_1$" src="https://raw.githubusercontent.com/wiki/
 
 The electronic state (spatial symmetry and multiplicity) may
 alternatively be specified using the conventional notation for an
-electronic state, such as <img alt="$^3B_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6e2161ad2ba92369ce803c5813cce493.svg?invert_in_darkmode&sanitize=true" align=middle width="26.324595pt" height="26.70657pt"/> for a triplet state of <img alt="$B_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2b7de9b9b655b068f97484efba8812fb.svg?invert_in_darkmode&sanitize=true" align=middle width="18.95025pt" height="22.38192pt"/>
+electronic state, such as <sup>3</sup>B<sub>2</sub> for a triplet state of B<sub>2</sub>
 symmetry. This would be accomplished with the input
 ```
  state 3b2
@@ -108,7 +108,7 @@ locked to that of the initial vectors, insofar as possible. The default
 is to order by ascending orbital energies within each orbital space. One
 application where locking might be desirable is a calculation where it
 is necessary to preserve the ordering of a previous geometry, despite
-flipping of the orbital energies. For such a case, the LOCK directive
+flipping of the orbital energies. For such a case, the `LOCK` directive
 can be used to prevent the SCF calculation from changing the ordering,
 even if the orbital energies change.
 
@@ -131,7 +131,7 @@ Hessian until some degree of convergence is obtained, whereupon it will
 attempt to use the exact orbital-orbital Hessian which makes the micro
 iterations more expensive but potentially reduces the total number of
 macro iterations. Either choice may be forced throughout the calculation
-by specifying the appropriate keyword on the HESSIAN directive.
+by specifying the appropriate keyword on the `HESSIAN` directive.
 
 E.g., to specify the one-electron approximation throughout
 ```
