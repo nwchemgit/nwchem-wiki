@@ -36,3 +36,9 @@
 
   - [Multiconfiguration SCF](Multiconfiguration_SCF)
 
+<!-- end list -->
+
+  - [GW calculations](GW)
+
+<!-- end list -->
+
