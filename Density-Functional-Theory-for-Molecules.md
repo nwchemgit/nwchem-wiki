@@ -1827,7 +1827,7 @@ DFT Print Control Specifications
 
 The spin-orbit DFT module (SODFT) in the NWChem code allows for the variational   
 treatment of the one-electron spin-orbit operator within the DFT framework. Calculations   
-can be performed either with an electron relativistic approach (ZORA) or with an    
+can be performed either with an electron relativistic approach ([ZORA](Relativistic-All-electron-Approximations.md#zeroth-order-regular-approximation-zora)) or with an    
 effective core potential (ECP) and a matching spin-orbit potential (SO). The current   
 implementation does NOT use symmetry.
 
