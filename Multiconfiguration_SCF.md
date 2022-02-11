@@ -9,7 +9,7 @@ functions.
    STATE <string state>  
    ACTIVE <integer nactive>  
    ACTELEC <integer nactelec>  
-   MULTIPLICITY `<integer multiplicity>  
+   MULTIPLICITY <integer multiplicity>  
    [SYMMETRY <integer symmetry default 1>]  
    [VECTORS [[input] <string input_file default file_prefix.movecs>]   
           [swap <integer vec1 vec2> ...] \  
@@ -94,7 +94,7 @@ which is equivalent to
 Calculations are best started from RHF/ROHF molecular orbitals (see
 [SCF](Hartree-Fock-Theory-for-Molecules)), and by
 default vectors are taken from the previous MCSCF or SCF calculation. To
-specify another input file use the VECTORS directive. Vectors are by
+specify another input file use the `VECTORS` directive. Vectors are by
 default output to the input file, and may be redirected using the output
 keyword. The swap keyword of the
 [VECTORS](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)
