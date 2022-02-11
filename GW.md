@@ -8,7 +8,7 @@ by many-body perturbation theory (MBPT) methods. In particular, the
 seen recent interest in its application to molecules due to a
 promising cost/accuracy ratio.
 
-The *GW* module implemented in NWChem takes a [DFT](Density-Functional-Theory-for-Molecules.md)
+The *GW* module implemented in NWChem takes a [DFT](Density-Functional-Theory-for-Molecules)
 mean-field approximation to the Green's function, *G<sub>0</sub>*, in order to
 solve the quasiparticle equation at the one-shot *G<sub>0</sub>W<sub>0</sub>* or
 at various *levels* of the eigenvalue self-consistent *GW* approach (ev*GW*).
@@ -51,7 +51,7 @@ normal.
 In addition to an atomic orbital [basis set](Basis.md), the *GW* module **requires** 
 an *auxiliary basis set* to be provided in order to fit the four-center 
 electron repulsion integrals. The auxliary basis set can have either the
- `cd basis` or `ri basis` names (see also [DFT](Density-Functional-Theory-for-Molecules.md#specification-of-basis-sets-for-the-dft-module)). Three combinations can be obtained:
+ `cd basis` or `ri basis` names (see also [DFT](Density-Functional-Theory-for-Molecules#specification-of-basis-sets-for-the-dft-module)). Three combinations can be obtained:
 
   - If a `ri basis` is given without a `cd basis`,
     the ground-state DFT will be performed without density fitting,
