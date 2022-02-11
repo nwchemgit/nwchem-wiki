@@ -8,7 +8,7 @@ by many-body perturbation theory (MBPT) methods. In particular, the
 seen recent interest in its application to molecules due to a
 promising cost/accuracy ratio.
 
-The *GW* module implemented in NWChem takes a [DFT](Density-Functional-Theory-for-Molecules)
+The *GW* module implemented in NWChem takes a [DFT](Density-Functional-Theory-for-Molecules.md)
 mean-field approximation to the Green's function, *G<sub>0</sub>*, in order to
 solve the quasiparticle equation at the one-shot *G<sub>0</sub>W<sub>0</sub>* or
 at various *levels* of the eigenvalue self-consistent *GW* approach (ev*GW*).
@@ -20,7 +20,7 @@ For example, it has been known that a large fraction of exact exchange
 is needed for the accurate prediction of core-level binding energies at the
 one-shot *G<sub>0</sub>W<sub>0</sub>* level.
 
-For further theoretical and details about the actual implementation in
+For further theoretical insights and details about the actual implementation in
 NWChem, please refer to the following paper:
 
   - D. Mejia-Rodriguez, A. Kunitsa, E. Apr&agrave;, N. Govind,
@@ -51,7 +51,7 @@ normal.
 In addition to an atomic orbital [basis set](Basis.md), the *GW* module **requires** 
 an *auxiliary basis set* to be provided in order to fit the four-center 
 electron repulsion integrals. The auxliary basis set can have either the
- `cd basis` or `ri basis` names (see also [DFT](Density-Functional-Theory-for-Molecules#specification-of-basis-sets-for-the-dft-module)). Three combinations can be obtained:
+ `cd basis` or `ri basis` names (see also [DFT](Density-Functional-Theory-for-Molecules.md#specification-of-basis-sets-for-the-dft-module)). Three combinations can be obtained:
 
   - If a `ri basis` is given without a `cd basis`,
     the ground-state DFT will be performed without density fitting,
@@ -109,6 +109,9 @@ only the Green's function *G* is updated with the quasiparticle energies
 of the previous iterations. *W<sub>0</sub>* is kept fixed.
 
 Both partial self-consistent cycles run for `eviter` number of cycles.
+
+The use of `EVGW` or `EVGW0` will trigger the use of a scissor-shift
+operator for all states not updated in the *evGW* cycle.
 
 ### METHOD
 
@@ -183,9 +186,141 @@ state closest to the Fermi level (HOMO) unless the keyword
 [`CORE`](#core-and-first) is present. The virtual states will **always**
 be counted from the state closest to the Fermi level upwards.
 
+A **-1** following either `occ` or `vir` stands for all
+states in the respective space.
+
 
 ### CONVERGENCE
 
 The converegnce threshold of the quasiparticle equations can
 be controlled with the keyword `CONVERGENCE` and might be
 given either in `eV` or Hartree `au`.
+
+## Sample Input File
+
+ - A *GW* calculation requesting the core-level binding 
+energies of all 1*s* states (6 Fluorines and 6 Carbons)
+using the [CD-GW](#method) method.
+
+```
+title "CDGW C6F6 core"
+start
+echo
+
+memory 2000 mb
+
+geometry
+ C     -0.21589696     1.38358991     0.00000000
+ C     -1.30618181     0.50480033     0.00000000
+ C     -1.09023026    -0.87871037     0.00000000
+ C      0.21590562    -1.38360671     0.00000000
+ C      1.30610372    -0.50476737     0.00000000
+ C      1.09020243     0.87883094     0.00000000
+ F     -0.42025331     2.69273557     0.00000000
+ F     -2.54211642     0.98238922     0.00000000
+ F     -2.12174279    -1.71033945     0.00000000
+ F      0.42026196    -2.69275237     0.00000000
+ F      2.54203111    -0.98237286     0.00000000
+ F      2.12188428     1.71024875     0.00000000
+end
+
+basis "ao basis" spherical
+ * library cc-pvdz
+end
+
+basis "cd basis" spherical
+ * library cc-pvdz-ri
+end
+
+dft
+ xc xpbe96 0.55 hfexch 0.45 cpbe96 1.0
+ direct
+end
+
+gw
+ core
+ eta 0.01
+ method cdgw
+ solver newton 15
+ states alpha occ 12
+end
+
+task dft gw
+```
+
+ - A *valence* *GW* calculation to obtain the vertical ionization
+potential and the vertical electron affinity of the water
+molecule using the [analytic](#method) method.
+
+```
+start
+
+geometry
+O     -0.000545       1.517541       0.000000
+H      0.094538       0.553640       0.000000
+H      0.901237       1.847958       0.000000
+end
+
+basis "ao basis" spherical
+ h library def2-svp
+ o library def2-svp
+end
+
+basis "cd basis" spherical
+ h library def2-universal-jkfit
+ o library def2-universal-jkfit
+end
+
+dft
+ mult 1
+ xc pbe96
+ grid fine
+ direct
+end
+
+gw
+ states alpha occ 1 vir 1
+end
+
+task dft gw
+```
+
+ - An ev*GW*<sub>0</sub> calculation with 10 iterations
+using the [analytic](#method) method.
+All occupied energies, but only 10 virtual ones, are
+updated using *GW*. The rest of the virtual states
+are shifted using the so-called scissor operator.
+
+```
+start
+
+geometry
+O     -0.000545       1.517541       0.000000
+H      0.094538       0.553640       0.000000
+H      0.901237       1.847958       0.000000
+end
+
+basis "ao basis" spherical
+ h library def2-svp
+ o library def2-svp
+end
+
+basis "cd basis" spherical
+ h library def2-universal-jkfit
+ o library def2-universal-jkfit
+end
+
+dft
+ mult 1
+ xc pbe96
+ grid fine
+ direct
+end
+
+gw
+ evgw0 10
+ states alpha occ -1 vir 10
+end
+
+task dft gw
+```
