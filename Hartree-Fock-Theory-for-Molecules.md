@@ -117,8 +117,8 @@ The underlying assumption in the use of symmetry in Fock matrix
 construction is that the density is totally symmetric. If the orbitals
 are symmetry contaminated, this assumption may not be valid -- which
 could result in incorrect energies and poor convergence of the
-calculation. It is thus advisable when specifying ADAPT OFF to also
-specify SYM OFF ([Use of Symmetry](#sym----use-of-symmetry)).
+calculation. It is thus advisable when specifying `ADAPT OFF` to also
+specify `SYM OFF` ([Use of Symmetry](#sym-use-of-symmetry)).
 
 ## TOL2E -- integral screening threshold
 ```
@@ -129,15 +129,15 @@ threshold for the evaluation of the energy and related Fock-like
 matrices. The Schwarz inequality is used to screen the product of
 integrals and density matrices in a manner that results in an accuracy
 in the energy and Fock matrices that approximates the value specified
-for tol2e.
+for `tol2e`.
 
 It is generally not necessary to set this parameter directly. Specify
-instead the required precision in the wavefunction, using the THRESH
+instead the required precision in the wavefunction, using the `THRESH`
 directive ([Convergence
-threshold](#thresh----convergence-threshold)). The default
+threshold](#thresh-convergence-threshold)). The default
 threshold is the minimum of 10<sup>-7</sup> and 0.01 times the requested
 convergence threshold for the SCF calculation ([Convergence
-threshold](#thresh----convergence-threshold)).
+threshold](#thresh-convergence-threshold)).
 
 The input to specify the threshold explicitly within the SCF directive
 is, for example:
@@ -442,7 +442,7 @@ The following points are important in using the fragment initial guess:
     order as in the full system. This is readily accomplished by first
     generating the full geometry with atoms for each fragment
     contiguous, splitting this into numbered fragments and specifying
-    the fragment MO files in the correct order on the VECTORS directive.
+    the fragment MO files in the correct order on the `VECTORS` directive.
 3.  The occupation of orbitals is preserved when they are merged from
     the fragments to the full molecule and the resulting occupation must
     match the requested occupation for the full molecule. E.g., a
@@ -455,7 +455,7 @@ The following points are important in using the fragment initial guess:
     presence of other fragments.
 5.  MO vectors of partially occupied or strongly polarized systems are
     very sensitive to orientation. While it is possible to specify the
-    same fragment MO vector file multiple times in the VECTORS
+    same fragment MO vector file multiple times in the `VECTORS`
     directive, it is usually much better to do a separate calculation
     for each fragment.
 6.  Linear dependencies which were present in a fragment calculation may
