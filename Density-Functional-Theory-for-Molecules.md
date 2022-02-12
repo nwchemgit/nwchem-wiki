@@ -175,7 +175,7 @@ given calculation can be summarized as follows:
 
 ## VECTORS and MAX_OVL -- KS-MO Vectors
 
-The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
+The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules.md#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 ```
  MAX_OVL
 ```
@@ -719,8 +719,10 @@ dft
  iterations 100  
  direct  
  end  
-task dft energy  
-#or alternatively  
+task dft energy
+```
+or alternatively
+```
 dft  
  xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25  
  cam 0.33 cam_alpha 0.0 cam_beta 1.0  
@@ -1554,7 +1556,7 @@ Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
 
   - `sic perturbative` This is the default option for the sic directive.
     After a self-consistent calculation, the Kohn-Sham orbitals are
-    localized with the Foster-Boys algorithm (see section on [orbital localization](Hartree-Fock-Theory-for-Molecules#orbital-localization)) and the
+    localized with the Foster-Boys algorithm (see section on [orbital localization](Hartree-Fock-Theory-for-Molecules.md#orbital-localization)) and the
     self-interaction energy is added to the total energy. All
     exchange-correlation functionals implemented in the NWChem can be
     used with this option.
@@ -1566,7 +1568,7 @@ Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
     addition of localization of the Kohn-Sham orbitals in each step of
     the self-consistent process.
 
-With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](Density-Functional-Theory-for-Molecules#grid-numerical-integration-of-the-xc-potential) ) must be
+With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](Density-Functional-Theory-for-Molecules.md#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
 implementation of this method can be found in J. Garza, J. A. Nichols
@@ -1843,7 +1845,7 @@ Besides using the standard ECP and basis sets, see [Effective Core
 Potentials](ECP) for details, one also has to specify a
 spin-orbit (SO) potential. The input specification for the SO potential
 can be found in [Effective Core
-Potentials](ECP#spin-orbit-ecps). At this time we have not
+Potentials](ECP.md#spin-orbit-ecps). At this time we have not
 included any spin-orbit potentials in the basis set library. However,
 one can get these from the Stuttgart/Köln web pages    
 [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html).
@@ -1984,5 +1986,5 @@ task sodft
 ## SYM and ADAPT 
 
 The options `SYM` and `ADAPT` works the same way as the analogous options for the SCF code.
-Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules#sym-use-of-symmetry) and
-[ADAPT](Hartree-Fock-Theory-for-Molecules#adapt-symmetry-adaptation-of-mos), respectively.
+Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
+[ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
