@@ -1,7 +1,6 @@
 name: NWChem-website.update
 on:
   push:
-  pull_request:
   release:
   schedule:
     - cron: '5 0 * * *'
