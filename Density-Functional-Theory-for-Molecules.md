@@ -173,7 +173,7 @@ given calculation can be summarized as follows:
   - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
     and not recommended
 
-## VECTORS and MAX_OVL -- KS-MO Vectors
+## VECTORS and MAX_OVL: KS-MO Vectors
 
 The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules.md#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 ```
