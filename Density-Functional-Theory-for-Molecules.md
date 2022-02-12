@@ -173,7 +173,7 @@ given calculation can be summarized as follows:
   - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
     and not recommended
 
-## VECTORS and MAX_OVL &mdash; KS-MO Vectors
+## VECTORS and MAX_OVL: KS-MO Vectors
 
 The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules.md#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 ```
@@ -181,7 +181,7 @@ The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-M
 ```
 has the same effect.
 
-## XC and DECOMP -- Exchange-Correlation Potentials
+## XC and DECOMP: Exchange-Correlation Potentials
 ```
  XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\  
     [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] [hcth147@tz2p] \
@@ -771,7 +771,7 @@ For details of the theory, please see the following reference:
     perturbative second-order correlation" Journal of Chemical Physics
     124, 034108 (2006) [10.1063/1.2148954](https://doi.org/10.1063/1.2148954)
 
-### LB94 and CS00 -- Asymptotic correction
+### LB94 and CS00: Asymptotic correction
 
 The keyword `LB94` will correct the asymptotic region of the XC definition
 of exchange-correlation potential by the van-Leeuwen-Baerends
@@ -830,7 +830,7 @@ end
 task dft optimize   
 task dft freq numerical
 ```
-## ITERATIONS or MAXITER -- Number of SCF iterations
+## ITERATIONS or MAXITER: Number of SCF iterations
 ```
  ITERATIONS or MAXITER <integer iterations default 30>
 ```
@@ -850,7 +850,7 @@ iterations is reached or convergence is met. See an example that uses
 this directive in [Sample input
 file](#sample-input-file).
 
-## CONVERGENCE -- SCF Convergence Control
+## CONVERGENCE: SCF Convergence Control
 ```
  CONVERGENCE [energy <real energy default 1e-6>] \  
              [density <real density default 1e-5>] \  
@@ -1000,7 +1000,7 @@ set quickguess t
 task dft  
 ```
   
-## CDFT -- Constrained DFT
+## CDFT: Constrained DFT
 
 This option enables the constrained DFT formalism by Wu and Van Voorhis
 described in the paper: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502
@@ -1060,7 +1060,7 @@ dft
 end  
 task dft
 ```
-## SMEAR -- Fractional Occupation of the Molecular Orbitals
+## SMEAR: Fractional Occupation of the Molecular Orbitals
 
 The `SMEAR` keyword is useful in cases with many degenerate states near
 the HOMO (eg metallic clusters)
@@ -1073,7 +1073,7 @@ the paper: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384
 (1996). The user must be aware that an additional energy term is added
 to the total energy in order to have energies and gradients consistent.
 
-## FON -- Calculations with fractional numbers of electrons
+## FON: Calculations with fractional numbers of electrons
 
 ###  Restricted
 ```
@@ -1150,7 +1150,7 @@ end
 task dft
 ```
 
-## OCCUP -- Controlling the occupations of molecular orbitals
+## OCCUP: Controlling the occupations of molecular orbitals
 
 Example:
 ```
@@ -1182,7 +1182,7 @@ dft
 end  
 task dft
 ```
-## GRID -- Numerical Integration of the XC Potential
+## GRID: Numerical Integration of the XC Potential
 ```
  GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
       [(gausleg||lebedev ) default lebedev ] \  
@@ -1429,7 +1429,7 @@ Erf*n* partitioning functions
 
 This keyword turns off storage of grid points and weights on disk.
 
-## TOLERANCES -- Screening tolerances
+## TOLERANCES: Screening tolerances
 ```
  TOLERANCES [[tight] [tol_rho <real tol_rho default 1e-10>] \  
              [accCoul <integer accCoul default 8>] \  
@@ -1474,7 +1474,7 @@ This option sets all tolerances to their default/user specified values
 at the very first
 iteration.
 
-## DIRECT, SEMIDIRECT and NOIO -- Hardware Resource Control
+## DIRECT, SEMIDIRECT and NOIO: Hardware Resource Control
 ```
  DIRECT||INCORE  
  SEMIDIRECT [filesize <integer filesize default disksize>]  
@@ -1498,11 +1498,11 @@ with the option `DIRECT` in which case all integrals are computed
 "on-the-fly".
 
 The `SEMIDIRECT` option controls caching of integrals. A full description
-of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect----recomputation-of-integrals) section. Some functionality
+of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect-recomputation-of-integrals) section. Some functionality
 which is only compatible with the `DIRECT` option will not, at present,
 work when using `SEMIDIRECT`.
 
-## ODFT and MULT -- Open shell systems
+## ODFT and MULT: Open shell systems
 ```
  ODFT
  MULT <integer mult default 1>
@@ -1527,18 +1527,18 @@ The keyword `ODFT` is unnecessary except in the context of forcing a
 singlet system to be computed as an open shell system (i.e., using a
 spin-unrestricted wavefunction).
 
-## CGMIN -- Quadratic convergence algorithm
+## CGMIN: Quadratic convergence algorithm
 
 The `cgmin` keyword will use the quadratic convergence algorithm. It is
 possible to turn the use of the quadratic convergence algorithm off with
 the `nocgmin` keyword.
 
-## RODFT -- Restricted open-shell DFT
+## RODFT: Restricted open-shell DFT
 
 The `rodft` keyword will perform restricted open-shell calculations. This
 keyword can only be used with the `CGMIN` keyword.
 
-## SIC -- Self-Interaction Correction
+## SIC: Self-Interaction Correction
 ```
 sic [perturbative || oep || oep-loc ]
 <default perturbative>
@@ -1568,7 +1568,7 @@ Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
     addition of localization of the Kohn-Sham orbitals in each step of
     the self-consistent process.
 
-With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](Density-Functional-Theory-for-Molecules.md#grid-numerical-integration-of-the-xc-potential) ) must be
+With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
 implementation of this method can be found in J. Garza, J. A. Nichols
@@ -1579,7 +1579,7 @@ sic energy can be printed out using:
 print "SIC information"
 ```
 
-## MULLIKEN -- Mulliken analysis
+## MULLIKEN: Mulliken analysis
 
 Mulliken analysis of the charge distribution is invoked by the keyword:
 
@@ -1600,7 +1600,7 @@ end
 task dft
 ```
 
-## FUKUI -- Fukui Indices
+## FUKUI: Fukui Indices
 
 Fukui inidces analysis is invked by the keyword:
 
@@ -1618,7 +1618,7 @@ analysis can be obtained using the following
  end  
  task dft
 ```
-## BSSE -- Basis Set Superposition Error
+## BSSE: Basis Set Superposition Error
 
 Particular care is required to compute BSSE by the counter-poise method
 for the DFT module. In order to include terms deriving from the
@@ -1647,7 +1647,7 @@ end
 Please note that the *ghost* oxygen atom has been labeled `bqO`, and
 not just `bq`.
 
-## DISP -- Empirical Long-range Contribution (vdW)
+## DISP: Empirical Long-range Contribution (vdW)
 ```
  DISP \
       [ vdw <real vdw integer default 2]] \
@@ -1719,7 +1719,7 @@ To use the Grimme DFT-D3 dispersion correction, use the option
 This capability is also supported for energy gradients and Hessian. Is
 possible to be deactivated with OFF.
 
-## NOSCF --Non Self-Consistent Calculations
+## NOSCF: Non Self-Consistent Calculations
 
 The `noscf` keyword can be used to to calculate the non self-consistent energy
 for a set of input vectors. For example, the following input shows how a
@@ -1751,7 +1751,7 @@ end
 task dft energy
 ```
 
-## XDM -- Exchange-hole dipole moment dispersion model
+## XDM: Exchange-hole dipole moment dispersion model
 ```
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
