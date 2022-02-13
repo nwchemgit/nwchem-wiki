@@ -404,11 +404,11 @@ where
 | bc95        |    | * |     | *   |       | N   |  [^33]  |
 | cpw6b95     |    | * |     | *   |       | N   |  [^36]  |
 | cpwb6k      |    | * |     | *   |       | N   |  [^36]  |
-| xm05        | * |    |     | *   | *    | N   |  [^37]  |
-| cm05        |    | * |     | *   |       | N   |  [^37]  |
-| m05-2x      | * | * |     | *   | *    | N   |  [^38]  |
-| xm05-2x     | * |    |     | *   | *    | N   |  [^38]  |
-| cm05-2x     |    | * |     | *   |       | N   |  [^38]  |
+| xm05        | * |    |     | *   | *    | N   |  [^37,^39]  |
+| cm05        |    | * |     | *   |       | N   |  [^37,^39]  |
+| m05-2x      | * | * |     | *   | *    | N   |  [^40]  |
+| xm05-2x     | * |    |     | *   | *    | N   |  [^40]  |
+| cm05-2x     |    | * |     | *   |       | N   |  [^40]  |
 | xctpssh     |    |    |     | *   | *    | N   |  [^29]  |
 | bb1k        |    |    |     | *   | *    | N   |  [^34]  |
 | mpw1b95     |    |    |     | *   | *    | N   |  [^35]  |
@@ -419,15 +419,15 @@ where
 | vs98        |    |    |     | *   | *    | N   |  [^41]  |
 | xvs98       | * |    |     | *   |       | N   |  [^41]  |
 | cvs98       |    | * |     | *   |       | N   |  [^41]  |
-| m06-L       | * | * |     | *   |       | N   |  [^40]  |
-| xm06-L      | * |    |     | *   |       | N   |  [^40]  |
-| cm06-L      |    | * |     | *   |       | N   |  [^40]  |
-| m06-hf      |    |    |     | *   | *    | N   |  [^41]  |
-| xm06-hf     | * |    |     | *   | *    | N   |  [^41]  |
-| cm06-hf     |    | * |     | *   |       | N   |  [^41]  |
-| m06         |    |    |     | *   | *    | N   |  [^42]  |
-| xm06        | * |    |     | *   | *    | N   |  [^42]  |
-| cm06        |    | * |     | *   |       | N   |  [^42]  |
+| m06-L       | * | * |     | *   |       | N   |  [^42]  |
+| xm06-L      | * |    |     | *   |       | N   |  [^42]  |
+| cm06-L      |    | * |     | *   |       | N   |  [^42]  |
+| m06-hf      |    |    |     | *   | *    | N   |  [^43]  |
+| xm06-hf     | * |    |     | *   | *    | N   |  [^43]  |
+| cm06-hf     |    | * |     | *   |       | N   |  [^43]  |
+| m06         |    |    |     | *   | *    | N   |  [^44]  |
+| xm06        | * |    |     | *   | *    | N   |  [^44]  |
+| cm06        |    | * |     | *   |       | N   |  [^44]  |
 | m06-2x      |    |    |     | *   | *    | N   |  [^42]  |
 | xm06-2x     | * |    |     | *   | *    | N   |  [^42]  |
 | cm06-2x     |    | * |     | *   |       | N   |  [^42]  |
@@ -523,7 +523,7 @@ to nuclear position.
 [^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
 [^42]: Y. Zhao, D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006)
 [^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
-[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. (2006)
+[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
 [^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
 [^46]: Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008)
 [^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
@@ -1757,7 +1757,7 @@ XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 See details (including list of a1 and a2 parameters) in A.
 Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
-and the website <http://gatsby.ucmerced.edu/wiki/XDM>
+and the website <http://schooner.chem.dal.ca/wiki/XDM>
 ```
     geometry 
       O         -0.190010095135     -1.168397415155      0.925531922479
