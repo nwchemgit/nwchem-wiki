@@ -63,7 +63,7 @@ option to choose. However, we observe the following:
     `ARMCI-MPI` branch *mpi3rma* is recommended.
   - The performance of `ARMCI-MPI` is greatly enhanced by
     [Casper](http://www.mcs.anl.gov/project/casper/). See [this
-    link](http://www.mcs.anl.gov/publication/casper-asynchronous-progress-model-mpi-rma-many-core-architectures)
+    link](https://pmodels.github.io/casper-www/publication.html) 
     for design details and [this
     page](https://wiki.mpich.org/armci-mpi/index.php/Casper) for
     instructions on how to use it.
