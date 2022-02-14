@@ -193,7 +193,7 @@
 | V-1-4                               | i5     | proper dihedral atom k                            |
 | V-1-5                               | i5     | proper dihedral atom l                            |
 | V-1-6                               | i5     | proper dihedral type                              |
-|                                     |        | 0: \(C\cos(m\phi-\delta)\)                        |
+|                                     |        | 0: (*C*cos(m&phi;-&delta;)                        |
 | V-1-7                               | i5     | proper dihedral parameter origin                  |
 |                                     |        | 0: from database, next card ignored               |
 |                                     |        | 1: from next card                                 |
