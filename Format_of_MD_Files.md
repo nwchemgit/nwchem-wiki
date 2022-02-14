@@ -319,7 +319,7 @@
 | II-4-7                                                                       | i10       | number of solute atoms                  |
 |  | |
 | **For each solvent molecule one card II-5** ||
-| **for each atom, if standard precision* ||
+| **for each atom, if standard precision** ||
 | II-5-1                                                                       | 3f8.3     | solvent atom coordinates, if lxw or lvw                       |
 | II-5-4                                                                       | 3f8.3     | solvent atom velocities, if lvw                               |
 | II-5-7                                                                       | 3f8.1     | solvent atom forces, if lfw                                   |
