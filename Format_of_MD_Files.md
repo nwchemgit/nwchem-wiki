@@ -316,21 +316,25 @@
 | II-4-8                                                                       | l1        | logical lps for solute induced dipoles                        |
 | II-4-5                                                                       | i10       | number of solvent molecules                                   |
 | II-4-6                                                                       | i10       | number of solvent atoms                                       |
-| II-4-7                                                                       | i10       | number of solute atoms                                        |
-|  |
-| For each solvent molecule one card II-5 for each atom, if standard precision |
+| II-4-7                                                                       | i10       | number of solute atoms                  |
+|  | |
+| **For each solvent molecule one card II-5** ||
+| **for each atom, if standard precision* ||
 | II-5-1                                                                       | 3f8.3     | solvent atom coordinates, if lxw or lvw                       |
 | II-5-4                                                                       | 3f8.3     | solvent atom velocities, if lvw                               |
 | II-5-7                                                                       | 3f8.1     | solvent atom forces, if lfw                                   |
-| For each solute atom one card II-6 for each atom, if standard precision      |
+| **For each solute atom one card II-6** ||
+| **for each atom, if standard precision**     ||
 | II-6-1                                                                       | 3f8.3     | solute atom coordinates, if lxs or lvs                        |
 | II-6-4                                                                       | 3f8.3     | solute atom velocities, if lvs                                |
 | II-6-7                                                                       | 3f8.1     | solute atom forces, if lfs                                    |
-| For each solvent molecule one card II-5 for each atom, if high precision     |
+| **For each solvent molecule one card II-5** ||
+| **for each atom, if high precision**     ||
 | II-5-1                                                                       | 3e12.6    | solvent atom coordinates, if lxw or lvw                       |
 | II-5-4                                                                       | 3e12.6    | solvent atom velocities, if lvw                               |
 | II-5-7                                                                       | 3e12.6    | solvent atom forces, if lfw (on new card if both lxw and lvw) |
-| For each solute atom one card II-6 for each atom, if high precision          |
+| **For each solute atom one card II-6**  |  |
+| **for each atom, if high precision**          |  |
 | II-6-1                                                                       | 3e12.6    | solute atom coordinates, if lxs or lvs                        |
 | II-6-4                                                                       | 3e12.6    | solute atom velocities, if lvs                                |
 | II-6-7                                                                       | 3e12.6    | solute atom forces, if lfs (on new card if both lxs and lvs)  |
@@ -394,10 +398,12 @@
 | :-------------------------------------------- | :--------- | :---------------------------------- |
 | 1                                             | i7         | number nprop of recorded properties |
 | I-1-2                                         | 1x,2a10    | date and time                       |
-| For each of the nprop properties one card I-2 |
+| For each of the nprop properties one card I-2 |            |                                     |
 | I-2-1                                         | a50        | description of recorded property    |
-| For each recorded step one deck II            |
+| For each recorded step one deck II            |            |                                     |
 | II-1-1                                        | 4(1pe12.5) | value of property                   |
+
+
 
 
 
