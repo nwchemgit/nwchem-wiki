@@ -31,9 +31,8 @@ Global Arrays:
 
  
 
-|                |                                              |  |
-| :------------- | :------------------------------------------- | :------------------------- |
-| ARMCI_NETWORK | Result                                       | Notes                                                                                           |
+| ARMCI_NETWORK  | Result                                       | Notes                      |             
+| :------------- | :------------------------------------------- | :------------------------- |                             
 | `MPI-PR`       | ARMCI with progress rank                     | Recommended, except on Blue Gene/Q.                                                             |
 | `MPI-PT`       | ARMCI with progress thread                   | Appropriate for Blue Gene/Q.                                                                    |
 | `MPI-MT`       | ARMCI over multi-threaded MPI                | [Do not use Open-MPI 1.x.](https://github.com/open-mpi/ompi/issues/157)                         |
