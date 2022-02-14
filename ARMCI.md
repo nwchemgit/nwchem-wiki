@@ -32,14 +32,14 @@ Global Arrays:
 <center>
 
 |                |                       |                                              |  |
-| -------------- | --------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| -------------- | :-------------------- | :------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | ARMCI_NETWORK | Additional options    | Result                                       | Notes                                                                                           |
-| MPI-PR         |                       | ARMCI with progress rank                     | Recommended, except on Blue Gene/Q.                                                             |
-| MPI-PT         |                       | ARMCI with progress thread                   | Appropriate for Blue Gene/Q.                                                                    |
-| MPI-MT         |                       | ARMCI over multi-threaded MPI                | [Do not use Open-MPI 1.x.](https://github.com/open-mpi/ompi/issues/157)                         |
-| MPI-TS         |                       | ARMCI over MPI without data server           |                                                                                                 |
-| MPI-SPAWN      |                       | ARMCI over MPI using dynamic processes       | Requires MPI\_Comm\_spawn support.                                                              |
-| ARMCI          | EXTERNAL\_ARMCI\_PATH | Uses ARMCI-MPI (please use *mpi3rma* branch) | See [the ARMCI-MPI NWChem page](https://wiki.mpich.org/armci-mpi/index.php/NWChem) for details. |
+| `MPI-PR`       |                       | ARMCI with progress rank                     | Recommended, except on Blue Gene/Q.                                                             |
+| `MPI-PT`       |                       | ARMCI with progress thread                   | Appropriate for Blue Gene/Q.                                                                    |
+| `MPI-MT`       |                       | ARMCI over multi-threaded MPI                | [Do not use Open-MPI 1.x.](https://github.com/open-mpi/ompi/issues/157)                         |
+| `MPI-TS`       |                       | ARMCI over MPI without data server           |                                                                                                 |
+| `MPI-SPAWN`    |                       | ARMCI over MPI using dynamic processes       | Requires MPI_Comm_spawn support.                                                              |
+| `ARMCI`        | `EXTERNAL_ARMCI_PATH` | Uses ARMCI-MPI (please use *mpi3rma* branch) | See [the ARMCI-MPI NWChem page](https://wiki.mpich.org/armci-mpi/index.php/NWChem) for details. |
 
 </center>
 
@@ -56,7 +56,7 @@ option to choose. However, we observe the following:
   - On Intel True Scale and Omni Path systems, `MPI-PR` is more reliable
     than `OPENIB` or `MPI-SPAWN`. `ARMCI-MPI` with Casper and Intel MPI is
     also recommended. See [this page](https://github.com/jeffhammond/HPCInfo/blob/master/ofi/NWChem-OPA.md)
-    for details. Contact [Jeff Hammond](mailto:jeff.r.hammond@intel.com)
+    for details. Contact [Jeff Hammond](mailto:jeff.science@gmail.com>)
     for assistance.
   - On IBM Blue Gene/Q, one must use the *mpi2rma* branch of `ARMCI-MPI`
     because MPI-3 is not fully supported. On all other platforms, the
