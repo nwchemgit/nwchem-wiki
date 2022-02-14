@@ -62,14 +62,12 @@
 | IV-1-5                                                           | f12.6     | bond length i-j                                 |
 | IV-1-6                                                           | f12.6     | angle i-j-k                                     |
 | IV-1-7                                                           | f12.6     | torson i-j-k-l                                  |
-|  |
 
 
-</center>
+
   
 ## Format of segment file (1 of 7)  
   
-<center>
 
 | Card                                | Format | Description                                 |
 | :---------------------------------- | :----- | :------------------------------------------ |
@@ -91,14 +89,12 @@
 | 1-3-8                               | i5     | default parameter set                       |
 | For each parameter set one card I-4 |
 | I-4-1                               | f12.6  | dipole correction energy                    |
-|  |
 
 
-</center>
+
 
 ## Format of segment file (2 of 7)  
 
-<center>
 
 | Card                                 | Format | Description                                            |
 | :----------------------------------- | :----- | :----------------------------------------------------- |
@@ -125,15 +121,11 @@
 |                                      |        | other : intramolecular solute interactions only        |
 | II-2-3                               | f12.6  | atomic partial charge in e                             |
 | II-2-4                               | f12.6  | atomic polarizability (4 &pi; &epsilon;<sub>o</sub> in nm<sup>3</sup>) |
-|  |
-|  |
 
 
-</center>
   
 ## Format of segment file (3 of 7)  
   
-<center>
 
 
 | Card                                  | Format | Description                                   |
@@ -151,14 +143,12 @@
 | For each parameter set one card III-2 |
 | III-2-1                               | f12.6  | bond length in nm                             |
 | III-2-2                               | e12.5  | bond force constant in (kJ nm<sup>2</sup> mol<sup>-1</sup>) |
-|  |
 
 
-</center>
+
   
 ## Format of segment file (4 of 7)  
   
-<center>
 
 | Card                                 | Format | Description                             |
 | :----------------------------------- | :----- | :-------------------------------------- |
@@ -175,14 +165,11 @@
 | For each parameter set one card IV-2 |
 | IV-2-1                               | f10.6  | angle in radians                        |
 | IV-2-2                               | e12.5  | angle force constant in (kJ mol<sup>-1</sup>) |
-|  |
 
 
-</center> 
   
 ## Format of segment file (5 of 7)  
 
-<center>
 
 | Card                                | Format | Description                                       |
 | :---------------------------------- | :----- | :------------------------------------------------ |
@@ -201,14 +188,14 @@
 | V-2-1                               | i3     | multiplicity                                      |
 | V-2-2                               | f10.6  | proper dihedral in radians                        |
 | V-2-3                               | e12.5  | proper dihedral force constant in (kJ mol<sup>-1</sup>) |
-|  |
 
 
-</center>
+
+
    
 ## Format of segment file (6 of 7)  
   
-<center>
+
 
 | Card                                 | Format   | Description                                         |
 | :----------------------------------- | :------- | :-------------------------------------------------- |
@@ -226,9 +213,9 @@
 | For each parameter set one card VI-2 |
 | VI-2-1                               | 3x,f10.6 | improper dihedral in radians                        |
 | VI-2-2                               | e12.5    | improper dihedral force constant in (kJ mol<sup>-1</sup>) |
-|  |
 
-</center>
+
+
   
 ## Format of segment file (7 of 7)  
 
@@ -244,14 +231,14 @@
 | VII-1-5                                   | f12.6  | bond length i-j |
 | VII-1-6                                   | f12.6  | angle i-j-k     |
 | VII-1-7                                   | f12.6  | torson i-j-k-l  |
-|  |
 
 
-</center>
+
+
   
 ## Format of sequence file 
 
-<center>
+
 
 | Card                                                         | Format | Description                                                |
 | :----------------------------------------------------------- | :----- | :--------------------------------------------------------- |
@@ -276,13 +263,13 @@
 | II-2-3                                                       | i5     | number of times to repeat cards (ncount)                   |
 | Any number of cards in deck II |
 | to specify the system         |
-|  |
 
 
-</center>
+
+
   
 ## Format of trajectory file
-<center>
+
 
 
 | Card                                                                         | Format    | Description                           |
@@ -347,13 +334,12 @@
 | II-6-1                                                                       | 3e12.6    | solute atom coordinates, if lxs or lvs                        |
 | II-6-4                                                                       | 3e12.6    | solute atom velocities, if lvs                                |
 | II-6-7                                                                       | 3e12.6    | solute atom forces, if lfs (on new card if both lxs and lvs)  |
-|  |
 
 
-</center>
+
   
 ## Format of free energy file  
-<center>
+
 
 | Card                                    | Format  | Description                                                          |
 | :-------------------------------------- | :------ | :------------------------------------------------------------------- |
@@ -368,13 +354,13 @@
 | I-4-2                                   | e20.12  | average temperature at current \(\lambda\)                           |
 | I-4-3                                   | e20.12  | average exponent reverse perturbation energy at current \(\lambda\)  |
 | I-4-4                                   | e20.12  | average exponent forward perturbation energy at current \(\lambda\)  |
-|  |
 
 
-</center>
+
+
   
 ## Format of root mean square deviation file  
-<center>
+
 
 | Card                                     | Format | Description                                                      |
 | :--------------------------------------- | :----- | :--------------------------------------------------------------- |
@@ -395,14 +381,14 @@
 | III-2-1                                  | a5     | segment name                                                     |
 | III-2-2                                  | i6     | segment number                                                   |
 | III-2-3                                  | f12.6  | average segment rms deviation after superimposition              |
-|  |
 
 
-</center>
+
+
   
 ## Format of property file  
 
-<center>
+
 
 | Card                                          | Format     | Description                         |
 | :-------------------------------------------- | :--------- | :---------------------------------- |
@@ -412,7 +398,7 @@
 | I-2-1                                         | a50        | description of recorded property    |
 | For each recorded step one deck II            |
 | II-1-1                                        | 4(1pe12.5) | value of property                   |
-|  |
 
 
-</center>
+
+
