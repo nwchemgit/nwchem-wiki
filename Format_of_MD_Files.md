@@ -71,9 +71,8 @@
   
 <center>
 
-|                                     |        |                                             |
-| ----------------------------------- | ------ | ------------------------------------------- |
 | Card                                | Format | Description                                 |
+| :---------------------------------- | :----- | :------------------------------------------ |
 | I-0-1                               |        | \# lines at top are comments                |
 | I-1-1                               | a1     | $ to identify the start of a segment        |
 | I-1-2                               | a10    | name of the segment, the tenth character    |
@@ -101,9 +100,8 @@
 
 <center>
 
-|                                      |        |                                                        |
-| ------------------------------------ | ------ | ------------------------------------------------------ |
 | Card                                 | Format | Description                                            |
+| :----------------------------------- | :----- | :----------------------------------------------------- |
 | For each atom one deck II            |
 | II-1-1                               | i5     | atom sequence number                                   |
 | II-1-2                               | a6     | atom name                                              |
@@ -162,9 +160,8 @@
   
 <center>
 
-|                                      |        |                                         |
-| ------------------------------------ | ------ | --------------------------------------- |
 | Card                                 | Format | Description                             |
+| :----------------------------------- | :----- | :-------------------------------------- |
 | For each angle a deck IV             |
 | IV-1-1                               | i5     | angle sequence number                   |
 | IV-1-2                               | i5     | angle atom i                            |
@@ -187,9 +184,8 @@
 
 <center>
 
-|                                     |        |                                                   |
-| ----------------------------------- | ------ | ------------------------------------------------- |
 | Card                                | Format | Description                                       |
+| :---------------------------------- | :----- | :------------------------------------------------ |
 | For each proper dihedral a deck V   |
 | V-1-1                               | i5     | proper dihedral sequence number                   |
 | V-1-2                               | i5     | proper dihedral atom i                            |
@@ -214,9 +210,8 @@
   
 <center>
 
-|                                      |          |                                                     |
-| ------------------------------------ | -------- | --------------------------------------------------- |
 | Card                                 | Format   | Description                                         |
+| :----------------------------------- | :------- | :-------------------------------------------------- |
 | For each improper dihedral a deck VI |
 | VI-1-1                               | i5       | improper dihedral sequence number                   |
 | VI-1-2                               | i5       | improper dihedral atom i                            |
@@ -239,9 +234,8 @@
 
 <center>
 
-|                                           |        |                 |
-| ----------------------------------------- | ------ | --------------- |
 | Card                                      | Format | Description     |
+| :---------------------------------------- | :----- | :-------------- |
 | For each z-matrix definition one card VII |
 | VII-1-1                                   | i5     | atom i          |
 | VII-1-2                                   | i5     | atom j          |
@@ -259,9 +253,8 @@
 
 <center>
 
-|                                                              |        |                                                            |
-| ------------------------------------------------------------ | ------ | ---------------------------------------------------------- |
 | Card                                                         | Format | Description                                                |
+| :----------------------------------------------------------- | :----- | :--------------------------------------------------------- |
 | I-1-1                                                        | a1     | $ to identify the start of a sequence                      |
 | I-1-2                                                        | a10    | name of the sequence                                       |
 | Any number of cards 1 and 2 in deck II |
@@ -291,9 +284,9 @@
 ## Format of trajectory file
 <center>
 
-|                                                                              |           |                                                               |
-| ---------------------------------------------------------------------------- | --------- | ------------------------------------------------------------- |
-| Card                                                                         | Format    | Description                                                   |
+
+| Card                                                                         | Format    | Description                           |
+| :--------------------------------------------------------------------------- | :-------- | :------------------------------------ |
 | I-1-1                                                                        | a6        | keyword header                                                |
 | I-2-1                                                                        | i10       | number of atoms per solvent molecule                          |
 | I-2-2                                                                        | i10       | number of solute atoms                                        |
@@ -362,9 +355,8 @@
 ## Format of free energy file  
 <center>
 
-|                                         |         |                                                                      |
-| --------------------------------------- | ------- | -------------------------------------------------------------------- |
 | Card                                    | Format  | Description                                                          |
+| :-------------------------------------- | :------ | :------------------------------------------------------------------- |
 | For each step in \(\lambda\) one deck I |
 | I-1-1                                   | i7      | number nderiv of data summed in derivative decomposition array deriv |
 | I-1-2                                   | i7      | length ndata of total derivative array drf                           |
@@ -384,9 +376,8 @@
 ## Format of root mean square deviation file  
 <center>
 
-|                                          |        |                                                                  |
-| ---------------------------------------- | ------ | ---------------------------------------------------------------- |
 | Card                                     | Format | Description                                                      |
+| :--------------------------------------- | :----- | :--------------------------------------------------------------- |
 | For each analyzed time step one card I-1 |
 | I-1-1                                    | f12.6  | time in ps                                                       |
 | I-1-2                                    | f12.6  | total rms deviation of the selected atoms before superimposition |
@@ -413,9 +404,8 @@
 
 <center>
 
-|                                               |            |                                     |
-| --------------------------------------------- | ---------- | ----------------------------------- |
 | Card                                          | Format     | Description                         |
+| :-------------------------------------------- | :--------- | :---------------------------------- |
 | 1                                             | i7         | number nprop of recorded properties |
 | I-1-2                                         | 1x,2a10    | date and time                       |
 | For each of the nprop properties one card I-2 |
