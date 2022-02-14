@@ -343,17 +343,17 @@
 
 | Card                                    | Format  | Description                                                          |
 | :-------------------------------------- | :------ | :------------------------------------------------------------------- |
-| For each step in \(\lambda\) one deck I |
+| For each step in &lambda; one deck I |
 | I-1-1                                   | i7      | number nderiv of data summed in derivative decomposition array deriv |
 | I-1-2                                   | i7      | length ndata of total derivative array drf                           |
-| I-1-3                                   | f12.6   | current value of \(\lambda\)                                         |
-| I-1-4                                   | f12.6   | step size of \(\lambda\)                                             |
+| I-1-3                                   | f12.6   | current value of &lambda;                                         |
+| I-1-4                                   | f12.6   | step size of &lambda;                                             |
 | I-2-1                                   | 4e12.12 | derivative decomposition array deriv(1:24)                           |
 | I-3-1                                   | 4e12.12 | total derivative array dfr(1:nda)                                    |
-| I-4-1                                   | i10     | size of ensemble at current \(\lambda\)                              |
-| I-4-2                                   | e20.12  | average temperature at current \(\lambda\)                           |
-| I-4-3                                   | e20.12  | average exponent reverse perturbation energy at current \(\lambda\)  |
-| I-4-4                                   | e20.12  | average exponent forward perturbation energy at current \(\lambda\)  |
+| I-4-1                                   | i10     | size of ensemble at current &lambda;                              |
+| I-4-2                                   | e20.12  | average temperature at current &lambda;                           |
+| I-4-3                                   | e20.12  | average exponent reverse perturbation energy at current &lambda;  |
+| I-4-4                                   | e20.12  | average exponent forward perturbation energy at current &lambda;  |
 
 
 
