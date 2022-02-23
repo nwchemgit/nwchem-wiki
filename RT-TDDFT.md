@@ -552,8 +552,8 @@ task dft rt_tddft
 ```
 
 After running the simulation, we extract the x-dipole moment for the
-x-kick and similarly for the y and z-kicks (see "contrib/parsers"
-directory for this script or download here:
+x-kick and similarly for the y and z-kicks (see ["contrib/parsers"
+directory](https://github.com/nwchemgit/nwchem/tree/master/contrib/parsers) for this script or download here:
 [RT_TDDFT_scripts.tgz](RT_TDDFT_scripts.tgz) ).
 
 ```
