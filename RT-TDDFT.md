@@ -465,8 +465,7 @@ the corresponding output is
 ```
 title "Water TD-PBE0 absorption spectrum"
 echo
-scratch_dir ./scratch
-permanent_dir ./perm
+
 
 start water
 
