@@ -385,3 +385,14 @@ $NWCHEM_TOP/src/tools/ga-5.7.2/global/src/global.util.c by increaseing the numbe
 ```
 
 [https://nwchemgit.github.io/Special_AWCforum/sp/id3358.html](https://nwchemgit.github.io/Special_AWCforum/sp/id3358.html)
+
+## Linear Dependencies
+
+
+Two or more basis functions can be consider linearly dependent when they span the same region of space. This can result in SCF converge problems. Analysis of the eigenvectors of the S<sup>-1/2</sup> matrix (where S is the overlap matrix) is used to detect linear dependencies: if there are eigenvalues  close to zero, the basis set goes through the process of canonical orthogonalization (as described in Section 3.4.5 of [Szabo & Ostlund "Modern Quantum Chemistry" book](https://store.doverpublications.com/0486691861.html)). This has net effect of a reduction of number of basis function used, compared to the original number set by input. 
+By setting 
+```
+set lindep:n_dep 0
+``` 
+this orthogonalization process is skipped.
+
