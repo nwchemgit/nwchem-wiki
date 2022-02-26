@@ -72,7 +72,7 @@ line after the task line and your task directive will be executed.
 
 ## Input problem: AUTOZ fails to generate valid internal coordinates
 
-If AUTOZ fails, NWChem will default to using Cartesian coordinates (and
+If [AUTOZ](Keywords-on-the-GEOMETRY-directive.md) fails, NWChem will default to using Cartesian coordinates (and
 ignore any zcoord data) so you don't have to do anything unless you
 really need to use internal coordinates. An exception are certain cases
 where we have a molecule that contains a linear chain of 4 or more
