@@ -23,9 +23,7 @@ Please post your NWChem issue to the NWChem forum hosted on Google Groups at
 For updated instructions for compiling NWChem please visit the following
 URL [https://nwchemgit.github.io/Compiling-NWChem.html](https://nwchemgit.github.io/Compiling-NWChem.html)
 
-# Installation Problems
-
-## `configure: error: could not ...`
+## Installation Problem for the tools directory
 
 When compiling the tools directory, you might see the compilation
 stopping with the message
@@ -60,17 +58,19 @@ The following links contained useful information about
 - [ Choosing the ARMCI library](ARMCI)   
 - [ Choosing the proper environment variables when compiling NWChem](Compiling-NWChem#Setting_up_the_proper_environment_variables)  
 
-# Input Problems
+## Input Problem: no output
 
-## `! warning: processed input with no task`
-
+You might encounter the following error message:
+```
+! warning: processed input with no task
+```
 Have you used emacs to create your input file? Emacs usually does not
 put and an end-of-line as a last character of the file, therefore the
 NWChem input parser ignores the last line of your input (the one
 containing the task directive). To fix the problem, add one more blank
 line after the task line and your task directive will be executed.
 
-## `AUTOZ fails to generate valid internal coordinates`
+## Input problem: AUTOZ fails to generate valid internal coordinates
 
 If AUTOZ fails, NWChem will default to using Cartesian coordinates (and
 ignore any zcoord data) so you don't have to do anything unless you
@@ -205,9 +205,7 @@ Job 2.
  task scf optimize
 ```
 
-# Execution Problems
-
-## How do I set the value of `ARMCI_DEFAULT_SHMMAX`?
+## Execution Problem: How do I set the value of ARMCI_DEFAULT_SHMMAX?
 
 Some ARMCI_NETWORK values (e.g. OPENIB) depend on the
 `ARMCI_DEFAULT_SHMMAX` value for large allocations of Global memory. We
