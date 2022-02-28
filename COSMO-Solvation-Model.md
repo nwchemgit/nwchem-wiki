@@ -206,8 +206,7 @@ HF/6-31G** level of
 theory:
 ```
 start  
-echo  
- title "h2o"  
+ 
 geometry  
  o                  .0000000000         .0000000000        -.0486020332  
  h                  .7545655371         .0000000000         .5243010666  
@@ -231,8 +230,7 @@ the former can be loaded using an external file through the `parameters`
 directive
 ```
 start  
-echo  
- title "h2o"  
+
 geometry  
  ow                  .0000000000         .0000000000        -.0486020332  
  hw                  .7545655371         .0000000000         .5243010666  
