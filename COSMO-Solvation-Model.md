@@ -39,8 +39,7 @@ In the current implementation the code calculates the gas-phase energy
 of the system followed by the solution-phase energy, and returns the
 electrostatic contribution to the solvation free energy. At the present
 gradients are calculated analytically, but frequencies are calculated by
-finite difference of the gradients. Known problems include that the code
-does not work with spherical basis functions.  
+finite difference of the gradients.     
 The non-electrostatic
 contributions can be calculated by turning on the [SMD model](SMD-Model). It should
 be noted that one must in general take into account the standard state
