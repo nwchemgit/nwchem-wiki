@@ -1842,14 +1842,14 @@ Input parameters are the same as for the DFT. Some of the DFT options
 are not available in the SODFT. These are `max_ovl` and `sic`.
 
 Besides using the standard ECP and basis sets, see [Effective Core
-Potentials](ECP) for details, one also has to specify a
+Potentials](ECP.md) for details, one also has to specify a
 spin-orbit (SO) potential. The input specification for the SO potential
 can be found in [Effective Core
 Potentials](ECP.md#spin-orbit-ecps). At this time we have not
 included any spin-orbit potentials in the basis set library. However,
 one can get these from the Stuttgart/Köln web pages    
 [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html).
-See [Effective Core Potentials](ECP) for details how to define the SO ECPs
+
 
 Note: One should use a combination of ECP and SO potentials that were
 designed for the same size core, i.e., don't use a small core ECP
