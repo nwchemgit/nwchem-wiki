@@ -244,7 +244,7 @@ are usually converged to 1e-5 hartree.
 It typically takes 10-30 iterations for the Davidson algorithm to get
 converged results. The default value for `MAXITER` is 100.
 
-### TARGET and TARGETSYM-- the target root and its symmetry
+### TARGET and TARGETSYM: the target root and its symmetry
 
 At the moment, excited-state first geometry derivatives can be
 calculated analytically for a set of functionals, while excited-state
