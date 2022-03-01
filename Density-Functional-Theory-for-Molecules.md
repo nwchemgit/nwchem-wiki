@@ -27,7 +27,7 @@ DFT input is provided using the compound DFT directive
  END
 ```
 The actual DFT calculation will be performed when the input module
-encounters the [TASK](TASK) directive.
+encounters the [TASK](TASK.md) directive.
 ```
  TASK DFT
 ```
@@ -145,7 +145,7 @@ sub-directives that can be specified for a DFT calculation in NWChem.
 The DFT module requires at a minimum the basis set for the Kohn-Sham
 molecular orbitals. This basis set must be in the default basis set
 named "ao basis", or it must be assigned to this default name using the
-[SET](SET) directive.
+[SET](SET.md) directive.
 
 In addition to the basis set for the Kohn-Sham orbitals, the charge
 density fitting basis set can also be specified in the input directives
@@ -153,7 +153,7 @@ for the DFT module. This basis set is used for the evaluation of the
 Coulomb potential in the Dunlap scheme. The charge density fitting basis
 set must have the name "cd basis". This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
-[SET](SET) directive. If this basis set is not
+[SET](SET.md) directive. If this basis set is not
 defined by input, the O(N<sup>4</sup>) exact Coulomb contribution is computed.
 
 The user also has the option of specifying a third basis set for the
@@ -784,14 +784,14 @@ potentials.
 The keyword `CS00`, when supplied with a real value of shift (in atomic
 units), will perform Casida-Salahub '00 asymptotic correction. This is
 primarily intended for use with
-[TDDFT](Excited-State-Calculations). The shift is normally
+[TDDFT](Excited-State-Calculations.md). The shift is normally
 positive (which means that the original uncorrected exchange-correlation
 potential must be shifted down).
 
 When the keyword `CS00` is specified without the value of shift, the
 program will automatically supply it according to the semi-empirical
 formula of Zhan, Nichols, and Dixon (again, see
-[TDDFT](Excited-State-Calculations) for more details and
+[TDDFT](Excited-State-Calculations.md) for more details and
 references). As the Zhan's formula is calibrated against B3LYP results,
 it is most meaningful to use this with the B3LYP
 functional, although the program does not prohibit (or even warn) the
@@ -799,7 +799,7 @@ use of any other functional.
 
 Sample input files of asymptotically corrected TDDFT calculations can be
 found in the corresponding
-[section](Excited-State-Calculations).
+[section](Excited-State-Calculations.md#sample-input).
 
 ## Sample input file
 
@@ -1498,7 +1498,7 @@ with the option `DIRECT` in which case all integrals are computed
 "on-the-fly".
 
 The `SEMIDIRECT` option controls caching of integrals. A full description
-of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules#direct-and-semidirect-recomputation-of-integrals) section. Some functionality
+of this option is described in the [Hartree-Fock](Hartree-Fock-Theory-for-Molecules.md#direct-and-semidirect-recomputation-of-integrals) section. Some functionality
 which is only compatible with the `DIRECT` option will not, at present,
 work when using `SEMIDIRECT`.
 
@@ -1834,7 +1834,7 @@ effective core potential (ECP) and a matching spin-orbit potential (SO). The cur
 implementation does NOT use symmetry.
 
 The actual SODFT calculation will be performed when the input module
-encounters the TASK directive ([TASK](TASK)).
+encounters the TASK directive ([TASK](TASK.md)).
 ```
  TASK SODFT
 ```
