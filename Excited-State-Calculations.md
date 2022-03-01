@@ -132,7 +132,7 @@ second argument of the task directive is given, a single-point
 excitation energy calculation will be assumed. For geometry
 optimizations, it is usually necessary to specify the target excited
 state and its irreducible representation it belongs to. See the
-subsections (`TARGET` and `TARGETSYM`](#target-and-targetsym---the-target-root-and-its-symmetry) for more detail.
+subsections (`TARGET` and `TARGETSYM`](#target-and-targetsym-the-target-root-and-its-symmetry) for more detail.
 
 Individual parameters and keywords may be supplied in the `TDDFT` input
 block. The syntax is:
