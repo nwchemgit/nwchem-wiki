@@ -185,7 +185,7 @@ changes in the computer program) occur in the SCF calculation stage. See
 
 ## Keywords of TDDFT input block
 
-### CIS and RPA -- the Tamm-Dancoff approximation
+### CIS and RPA: the Tamm-Dancoff approximation
 
 These keywords toggle the Tamm-Dancoff approximation. `CIS` means that the
 Tamm-Dancoff approximation is used and the CIS or Tamm-Dancoff TDDFT
@@ -201,7 +201,7 @@ Hermitian eigenvalue problem. The latter has much greater chance of
 aborting the calculation due to triplet near instability or other
 instability problems.
 
-### NROOTS -- the number of excited states
+### NROOTS: the number of excited states
 
 One can specify the number of excited state roots to be determined. The
 default value for `NROOTS` is 1. It is advised that the users request several more
@@ -209,7 +209,7 @@ roots than actually needed, since owing to the nature of the trial
 vector algorithm, some low-lying roots can be missed when they do not
 have sufficient overlap with the initial guess vectors.
 
-### MAXVECS -- the subspace size
+### MAXVECS: the subspace size
 
 The `MAXVECS` keyword limits the subspace size of Davidson's algorithm; in other
 words, it is the maximum number of trial vectors that the calculation is
@@ -218,19 +218,19 @@ excited state root to be converged. However, it need not exceed the
 product of the number of occupied orbitals and the number of virtual
 orbitals. The default value is 1000.
 
-### SINGLET and NOSINGLET -- singlet excited states
+### SINGLET and NOSINGLET: singlet excited states
 
 `SINGLET || NOSINGLET` requests (suppresses) the calculation of singlet
 excited states when the reference wave function is closed shell. The
 default is `SINGLET`.
 
-### TRIPLET and NOTRIPLET -- triplet excited states
+### TRIPLET and NOTRIPLET: triplet excited states
 
 `TRIPLET || NOTRIPLET` requests (suppresses) the calculation of triplet
 excited states when the reference wave function is closed shell. The
 default `is TRIPLET`.
 
-### THRESH -- the convergence threshold of Davidson iteration
+### THRESH: the convergence threshold of Davidson iteration
 
 The `THRESH` keyword specifies the convergence threshold of Davidson's iterative
 algorithm to solve a matrix eigenvalue problem. The threshold refers to
@@ -239,7 +239,7 @@ and right-hand side of the matrix eigenvalue equation with the current
 solution vector. With the default value of 1e-4, the excitation energies
 are usually converged to 1e-5 hartree.
 
-### MAXITER -- the maximum number of Davidson iteration
+### MAXITER: the maximum number of Davidson iteration
 
 It typically takes 10-30 iterations for the Davidson algorithm to get
 converged results. The default value for `MAXITER` is 100.
@@ -271,7 +271,7 @@ When these finite displacements can alter the order of excited states
 including the target state, the frequency calculation is not be
 feasible.
 
-### SYMMETRY -- restricting the excited state symmetry
+### SYMMETRY: restricting the excited state symmetry
 
 By adding the `SYMMETRY` keyword to the input block, the user can request the
 module to generate the initial guess vectors transforming as the same
@@ -283,21 +283,21 @@ optimization of an excited state root with a particular irreducible
 representation. By default, this option is not set. `TARGETSYM` must be
 specified when `SYMMETRY` is invoked.
 
-### ECUT -- energy cutoff
+### ECUT: energy cutoff
 
 The `ECUT` keyword enables restricted excitation window TDDFT (REW-TDDFT)[^9].
 This is an approach best suited for core excitations. By specifying this
 keyword only excitations from occupied states below the energy cutoff
 will be considered.
 
-### EWIN -- energy window
+### EWIN: energy window
 
 The `EWIN` keyword enables a restricted energy window between a lower energy
 cutoff and a higher energy cutoff. For example, `ewin -20.0 -10.0` will
 only consider excitations from occupied orbitals within the specified
 energy window
 
-### Alpha, Beta -- alpha, beta orbital windows
+### Alpha, Beta: alpha, beta orbital windows
 
 Orbital windows can be specified using the following keywords:
 ```
@@ -309,7 +309,7 @@ depending on the number of roots requested and beta excitations will be
 considered from orbitals 2 through 5 depending on the number of roots
 requested.
 
-### CIVECS -- CI vectors
+### CIVECS: CI vectors
 
 The `CIVECS` keyword will result in the CI vectors being written out. By default
 this is off. Please note this can be a very large file, so avoid turning
@@ -317,7 +317,7 @@ on this keyword if you are calculating a very large number of roots. CI
 vectors are needed for excited-state gradient and transition density
 calculations.
 
-### GRAD -- TDDFT gradients
+### GRAD: TDDFT gradients
 
 Analytical TDDFT gradients can be calculated by specifying a `grad` block
 within the main `TDDFT` block
@@ -352,16 +352,16 @@ gradients
 ```
 LDA, BP86, PBE, BLYP, B3LYP, PBE0, BHLYP, CAM-B3LYP, LC-PBE, LC-PBE0, BNL, LC-wPBE, LC-wPBEh, LC-BLYP
 ```
-### CDSpectrum -- optical rotation calculations
+### CDSpectrum: optical rotation calculations
 
 Perform optical rotation calculations.
 We recommend to use the `GIAO` keyword
 
-### VELOCITY -- velocity gauge
+### VELOCITY: velocity gauge
 
 Perform CD spectrum calculations with the velocity gauge.
 
-### ALGORITHM -- algorithms for tensor contractions
+### ALGORITHM: algorithms for tensor contractions
 
 There are four distinct algorithms to choose from, and the default value
 of 0 (optimal) means that the program makes an optimal choice from the
@@ -384,7 +384,7 @@ is particularly effective (in terms of speed) for CIS and TDHF, since
 the number of the direct evaluations of two-electron integrals is
 diminished substantially.
 
-### FREEZE -- the frozen core/virtual approximation
+### FREEZE: the frozen core/virtual approximation
 
 Some of the lowest-lying core orbitals and/or some of the highest-lying
 virtual orbitals may be excluded in the CIS, TDHF, and TDDFT
@@ -416,14 +416,14 @@ instance, to freeze the top 5 virtuals
 ```
  FREEZE virtual 5
 ```
-### TRIALS -- restart
+### TRIALS: restart
 
 Setting the keyword `trials` restart the calculation from the trials vector of a previous run.
 
 ```
 trials 
 ```
-### PRINT -- output verbosity
+### PRINT: output verbosity
 
 The `PRINT` keyword changes the level of output verbosity. One may also request
 some particular items in the table
