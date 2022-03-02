@@ -24,7 +24,7 @@ feedback on this page content.
     analysis of NWChem output files
     <https://www.scienomics.com/maps-platform/simulate/quantum/nwchem-plugin/>
   - **CULGI** computational platform
-    <https://www.culgi.com/software/features-quantum-chemistry/>
+    <https://www.plm.automation.siemens.com/global/en/products/simcenter/culgi.html>
   - **Chemcraft** <http://www.chemcraftprog.com>
   - **ASE** Atomic Simulation Environment <http://wiki.fysik.dtu.dk/ase>
   - **Ascalaph**
