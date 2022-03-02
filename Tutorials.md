@@ -22,7 +22,7 @@ Links to material of past NWChem Tutorials
 # Links containing NWChem material
 
 * Quantum Chemistry Course at Radboud University - Nijmegen
-[https://www.theochem.ru.nl/quantumchemistry](https://www.theochem.ru.nl/quantumchemistry)
+[https://www.theochem.ru.nl/quantumchemistry](https://www.theochem.ru.nl/quantumchemistry/)
 * NWChem tips from C.J. O'Brien (NCSU)  
 [https://sites.google.com/a/ncsu.edu/cjobrien-nwchem-tips/](https://sites.google.com/a/ncsu.edu/cjobrien-nwchem-tips/)
 

@@ -256,10 +256,10 @@ hardware include:
 |-------------|-----------------------------------------------------------------------------------------------|
 | BLIS        | <https://github.com/flame/blis>                                                               |    
 | OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                          |
-| GotoBLAS    | <http://www.tacc.utexas.edu/tacc-projects/gotoblas2>                                          |  
-| Intel MKL   | <http://www.intel.com/software/products/mkl>                                                  |
+| GotoBLAS    | <https://www.tacc.utexas.edu/research-development/tacc-software/gotoblas2>                    |  
+| Intel MKL   | <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html>                  |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
-| IBM ESSL    | Available only on IBM hardware <https://www.ibm.com/support/knowledgecenter/en/SSFHY8_6.3/navigation/welcome.html> |
+| IBM ESSL    | Available only on IBM hardware <https://www.ibm.com/docs/en/essl/6.3> |
 
 <br>
 _**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT
@@ -321,7 +321,7 @@ Notes:
   - ACML and MKL can support 64-bit integers if the appropriate library
     is chosen. For MKL, one can choose the ILP64 Version of Intel® MKL
     and the correct recipe can be extracted from the website
-    <https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor>.
+    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html>.
     For ACML the int64 libraries should be chosen, e.g. in the case of
     ACML 4.4.0 using a PGI compiler
     /opt/acml/4.4.0/pgi64\_int64/lib/libacml.a
@@ -496,7 +496,7 @@ make
 
 #### NWChem 6.8 on Centos 7.1/Fedora 27
 Once you have added the [EPEL
-repository](https://fedoraproject.org/wiki/EPEL) to your Centos/Fedora/RedHat
+repository](https://docs.fedoraproject.org/en-US/epel/) to your Centos/Fedora/RedHat
 installation, you can have a more efficient NWChem build. 
 ```
 sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
@@ -605,7 +605,7 @@ make
   - Download and unpack latest NWChem tarball to the directory of your
     choosing, say /Users/johndoe/nwchem
   - Install Homebrew as described at
-<http://brew.sh>
+<https://brew.sh>
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
@@ -769,7 +769,7 @@ Set the environmental variables for compilation:
 #### Example: OLCF Titan
 
 These are variables used for compilation on the [OLCF Titan, a Cray
-XK7](https://www.olcf.ornl.gov/computing-resources/titan-cray-xk7/) We
+XK7](https://www.olcf.ornl.gov/olcf-resources/compute-systems/titan/) We
 assume use of Portland Group compilers programming environment (`module
 load PrgEnv-pgi`)
 ```
@@ -811,7 +811,7 @@ Set the environmental variables for compilation:
 #### Example: NERSC Edison
 
 These are variables used for compilation on [NERSC Edison, a Cray
-XC30](https://www.nersc.gov/users/computational-systems/edison/), as of
+XC30](https://www.nersc.gov/assets/Uploads/Edison-Overview.pdf), as of
 October 23rd 2015, when using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu PrgEnv-intel`). Very similar settings
 can be applied to other Cray XC30 computers, such as [the UK ARCHER
@@ -849,7 +849,7 @@ COMEX_MAX_NB_OUTSTANDING=6
 
 These are variables used for compilation on the Haswell partition of
 [NERSC Edison, a Cray
-XC40](https://www.nersc.gov/users/computational-systems/cori), as of
+XC40](https://www.nersc.gov/systems/cori/), as of
 November 6th 2016, when using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu
 PrgEnv-intel`).
@@ -1209,7 +1209,7 @@ More details on this topic discussed a
 ## MingW
 The current recommended approach for building a NWChem binary for a
 Windows platform is to build with the
-[MinGW/Mingw32](http://www.mingw.org/) environment. MinGW can be
+[MinGW/Mingw32](https://sourceforge.net/projects/mingw/files/) environment. MinGW can be
 installed using a semi-automatic tool mingw-get-setup.exe
 (http://sourceforge.net/projects/mingw/files/Installer/). A basic MinGW
 installation is required (Basic Setup), plus pthreads-32,
@@ -1274,7 +1274,7 @@ A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL).
 This option gives the best performance on Windows when [WLS 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) is used.
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
 
-[https://msdn.microsoft.com/en-us/commandline/wsl/install_guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
+[https://docs.microsoft.com/en-us/windows/wsl/install](https://docs.microsoft.com/en-us/windows/wsl/install)
 
 Once Ubuntu is installed, the quickest method to install NWChem is by fetching the Ubuntu NWChem package by typing
 ```

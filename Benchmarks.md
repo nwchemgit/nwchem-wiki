@@ -122,7 +122,7 @@ Iteration   3 using    7 trial vectors
 # Performance tests of the GPU implementation of non-iterative part of the CCSD(T) approach
 
 Recent tests of the GPU CCSD(T) implementation performed on Titan Cray
-XK7 [1](https://www.olcf.ornl.gov/computing-resources/titan-cray-xk7/)
+XK7 [1](https://www.olcf.ornl.gov/olcf-resources/compute-systems/titan)
 system at ORNL (C<sub>22</sub>H<sub>14</sub>, 378 basis set functions,
 C1 symmetry; 98 nodes: 8 cores per node + 1GPU)
 

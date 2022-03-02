@@ -20,7 +20,6 @@ title: "NWChem Website"
 <img src="header.webp" alt="header" height="131" width="700" frameborder="0" ></img>
 </div>
   
-<!---## NWChem: Open Source High-Performance Computational Chemistry--->
 
 <br>
 The NWChem  software contains 
@@ -47,7 +46,7 @@ State. Researchers interested in contributing to NWChem should review
 the [Developers page](Developer). The
 code is distributed as open-source under the terms of the [Educational
 Community License
-version 2.0](http://opensource.org/licenses/ecl2.php) (ECL 2.0).
+version 2.0](https://opensource.org/licenses/ecl2.php) (ECL 2.0).
 
 The NWChem development strategy is focused on providing new and
 essential scientific capabilities to its users in the areas of kinetics
@@ -73,7 +72,7 @@ for more information see
 [EMSL Arrows - an easier way to use nwchem](Current_events#emsl-arrows-an-easier-way-to-use-nwchem) and [EMSL Arrows](EMSL_Arrows)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[EMSL Arrows API](https://arrows.emsl.pnnl.gov/api) </span>
+[EMSL Arrows API](https://arrows.emsl.pnnl.gov//api) </span>
 
 ### [NWChem Documentation](Home)
 

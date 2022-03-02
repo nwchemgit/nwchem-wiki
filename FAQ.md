@@ -16,7 +16,7 @@ website at <http://hpc.pnl.gov/globalarrays/>
 ## Where do I go for help with NWChem problems?
 
 Please post your NWChem issue to the NWChem forum hosted on Google Groups at
-[https://groups.google.com/forum/#!forum/nwchem-forum](https://groups.google.com/forum/#!forum/nwchem-forum)
+[https://groups.google.com/g/nwchem-forum](https://groups.google.com/g/nwchem-forum)
 
 ## Where do I find the installation instructions?
 
