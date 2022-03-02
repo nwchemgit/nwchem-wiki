@@ -39,7 +39,7 @@ for the TASK directive are discussed in the following sections.
 This is the most commonly used version of the TASK directive, and it has
 the following form:
 ```
-TASK <string theory> [<string operation default energy>] [ignore]
+TASK <string theory> [<string operation default energy>] [ignore]
 ```
 The string <theory> specifies the level of theory to be used in the
 calculations for this task. NWChem currently supports ten different
@@ -75,30 +75,30 @@ in NWChem:
     nuclear coordinates.
   - optimize - Minimize the energy by varying the molecular structure.
     By default, this geometry optimization is presently driven by the
-    [Driver module](Geometry-Optimization#geometry-optimization-with-driver),
-    but the [Stepper module](Geometry-Optimization#geometry-optimization-with-stepper)
+    [Driver module](Geometry-Optimization.md#geometry-optimization-with-driver),
+    but the [Stepper module](Geometry-Optimization.md#geometry-optimization-with-stepper)
     may also be used.
   - saddle - Conduct a search for a transition state (or saddle point)
     using either [Driver
-    module](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-DRIVER)
+    module](Geometry-Optimization.md#geometry-optimization-with-driver)
     (the default) or
-    [Stepper](Hessians-and-Vibrational-Frequencies#geometry-optimization-with-STEPPER).
+    [Stepper](Geometry-Optimization.md#geometry-optimization-with-stepper).
   - hessian - Compute second derivatives. See [hessian
-    section](Hessians-and-Vibrational-Frequencies#hessians) for
+    section](Hessians-and-Vibrational-Frequencies.md#hessians) for
     analytic hessians.
   - frequencies or freq - Compute second derivatives and print out an
     analysis of molecular vibrations. See [vibration
-    section](Hessians-and-Vibrational-Frequencies#vibrational-frequencies)
+    section](Hessians-and-Vibrational-Frequencies.md#vibrational-frequencies)
     for controls for vibration calculations.
   - vscf - Compute anharmonic contributions to the vibrational modes.
-    See the [vibrational SCF section](VSCF) for options.
+    See the [vibrational SCF section](VSCF.md) for options.
   - property - Calculate the properties for the wave function.
   - dynamics - Perform classical molecular dynamics.
   - thermodynamics - Perform multi-configuration thermo-dynamic
     integration using classical MD
 
 NOTE: See [PSPW
-Tasks](Plane-Wave-Density-Functional-Theory#pspw-tasks---gamma-point-calculations) for
+Tasks](Plane-Wave-Density-Functional-Theory.md#pspw-tasks-gamma-point-calculations) for
 the complete list of operations that accompany the NWPW module.
 
 The user should be aware that some of these operations (gradient,
@@ -115,22 +115,22 @@ is very simple, since the energy evaluation is the default for the
 string operation. For an SCF energy calculation, the input line is
 simply
 ```
-task scf
+task scf
 ```
 Equivalently, the operation can be specified explicitly, using the
 directive
 ```
-task scf energy
+task scf energy
 ```
 Similarly, to perform a geometry optimization using density functional
 theory, the TASK directive is
 ```
-task dft optimize
+task dft optimize
 ```
 The optional keyword ignore can be used to allow execution to continue
 even if the task fails, as discussed above. An example with the keyword
 ignore can be found in the [DFT
-example](Density-Functional-Theory-for-Molecules#sample-input-file).
+example](Density-Functional-Theory-for-Molecules.md#sample-input-file).
 
 ### TASK Directive for Special Operations
 
@@ -142,7 +142,7 @@ of theories (e.g., property evaluation). Instead of requiring theory and
 operation as input, the directive needs only a string identifying the
 task. The form of the directive in such cases is as follows:
 ```
-TASK <string task> [ignore]
+TASK <string task> [ignore]
 ```
 The supported tasks that can be accessed with this form of the TASK
 directive are listed below, with the corresponding entries for the string
@@ -164,7 +164,7 @@ fully UNIX-style operating system. This directive causes specified
 processes to be executed using the Bourne shell. This form of the task
 directive is:
 ```
-TASK shell [(<integer-range process = 0>||all)]  <string command>
+TASK shell [(<integer-range process = 0>||all)]  <string command>
 ```
 The keyword shell is required for this directive. It specifies that the
 given command will be executed in the Bourne shell. The user can also
@@ -180,17 +180,17 @@ For example, the TASK directive to tell process zero to copy the
 molecular orbitals file to a backup location `/piofs/save` can be input as
 follows:
 ```
-task shell "cp *.movecs /piofs/save"
+task shell "cp *.movecs /piofs/save"
 ```
 The TASK directive to tell all processes to list the contents of their
 /scratch directories is as follows:
 ```
-task shell all "ls -l /scratch"
+task shell all "ls -l /scratch"
 ```
 The TASK directive to tell processes 0 to 10 to remove the contents of
 the current directory is as follows:
 ```
-task shell 0:10:1 "/bin/rm -f *"
+task shell 0:10:1 "/bin/rm -f *"
 ```
 Note that NWChem's ability to quote special input characters is very
 limited when compared with that of the Bourne shell. To execute all but
@@ -204,7 +204,7 @@ directive](TASK),
 and it has the following
 form:
 ```
-TASK QMMM <string theory> [<string operation default energy>] [ignore]
+TASK QMMM <string theory> [<string operation default energy>] [ignore]
 ```
 The string <theory> specifies the QM theory to be used in the QM/MM
 simulation. If theory is "md" this is not a QM/MM simulation and will
@@ -229,16 +229,16 @@ theory, the directive is very simple. As with the general task
 directive, the QM/MM energy evaluation is the default. For a DFT energy
 calculation the task directive input is,
 
-`task qmmm dft`
+`task qmmm dft`
 
 or completely as
 
-`task qmmm dft energy`
+`task qmmm dft energy`
 
 To do a molecular dynamics simulation of a QM/MM system using the SCF
 level of theory the task directive input would be
 
-`task qmmm scf dynamics`
+`task qmmm scf dynamics`
 
 The optional keyword ignore can be used to allow execution to continue
 even if the task fails, as discussed above.
@@ -253,14 +253,14 @@ frequencies, at the level of theory that allows these tasks, can be
 obtained with the BSSE correction. The input options for the BSSE
 section are:
 ```
-BSSE   
- MON <string monomer name> <integer natoms>  
- [INPUT [<string input>]]    
- [INPUT_WGHOST[<string input>]]    
- [CHARGE [<real charge>]]    
- [ MULT <integer mult>]  
- [OFF]    
- [ON]  
+BSSE   
+ MON <string monomer name> <integer natoms>  
+ [INPUT [<string input>]]    
+ [INPUT_WGHOST[<string input>]]    
+ [CHARGE [<real charge>]]    
+ [ MULT <integer mult>]  
+ [OFF]    
+ [ON]  
 END
 ```
 `MON` defines the monomer's name and its atoms; <string monomer name>
@@ -291,56 +291,56 @@ corresponding `bqX` for each element, instead.
 The dimer (FH)<sub>2</sub>
 
 ```
-title dimer  
-start dimer  
-geometry units angstrom  
-  symmetry c1   
-  F 1.47189 2.47463 -0.00000   
-  H 1.47206 3.29987 0.00000    
-  F 1.46367 -0.45168 0.00000   
-  H 1.45804 0.37497 -0.00000  
+title dimer  
+start dimer  
+geometry units angstrom  
+  symmetry c1   
+  F 1.47189 2.47463 -0.00000   
+  H 1.47206 3.29987 0.00000    
+  F 1.46367 -0.45168 0.00000   
+  H 1.45804 0.37497 -0.00000  
 end  
-basis "ao basis"   
-  F library 6-31G   
-  H library 6-31G   
-  bqF library F 6-31G   
-  bqH library H 6-31G 
+basis "ao basis"   
+  F library 6-31G   
+  H library 6-31G   
+  bqF library F 6-31G   
+  bqH library H 6-31G 
 end
-dft; xc slater 1.0 vwn_5 1.0; direct; end 
-bsse 
- mon first 1 2   
- mon second 3 4  
+dft; xc slater 1.0 vwn_5 1.0; direct; end 
+bsse 
+ mon first 1 2   
+ mon second 3 4  
 end
-task dft energy
+task dft energy
 ```
 Changing `maxiter` for a specific monomer: (Zn<sup>2+</sup>(H<sub>2</sub>O))
 ```
-title znwater  
-start znwater  
+title znwater  
+start znwater  
 echo  
-geometry noautoz units angstrom  
-  symmetry c1   
-  Zn -1.89334 -0.72741 -0.00000   
-  O -0.20798 0.25012 0.00000    
-  H -0.14200 1.24982 -0.00000   
-  H 0.69236 -0.18874 -0.00000  
+geometry noautoz units angstrom  
+  symmetry c1   
+  Zn -1.89334 -0.72741 -0.00000   
+  O -0.20798 0.25012 0.00000    
+  H -0.14200 1.24982 -0.00000   
+  H 0.69236 -0.18874 -0.00000  
 end  
-basis "ao basis"   
-  O library 6-31G   
-  Zn library 6-31G   
-  H library 6-31G   
-  bqO library O 6-31G   
-  bqZn library Zn 6-31G   
-  bqH library H 6-31G  
+basis "ao basis"   
+  O library 6-31G   
+  Zn library 6-31G   
+  H library 6-31G   
+  bqO library O 6-31G   
+  bqZn library Zn 6-31G   
+  bqH library H 6-31G  
 end  
-charge 2  
-scf; direct; end  
-mp2; freeze atomic;end  
-bsse   
- mon metal 1   
- charge 2   
- input_wghost "scf\; maxiter 200\; end"   
- mon water 2 3 4  
+charge 2  
+scf; direct; end  
+mp2; freeze atomic;end  
+bsse   
+ mon metal 1   
+ charge 2   
+ input_wghost "scf\; maxiter 200\; end"   
+ mon water 2 3 4  
 end  
-task mp2 optimize
+task mp2 optimize
 ```
