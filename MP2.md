@@ -55,7 +55,7 @@ All three MP2 tasks share the same input block.
    [SCRATCHDISK <integer>] 
  END
 ```
-## FREEZE -- Freezing orbitals
+## FREEZE: Freezing orbitals
 
 All MP2 modules support frozen core orbitals, however, only the direct
 MP2 and RI-MP2 modules support frozen virtual orbitals.
@@ -130,7 +130,7 @@ or equivalently, using the optional keyword core
 Again, note that if the 10 orbitals to be frozen do not correspond to
 the first 10 orbitals, then the swap keyword of the VECTORS directive
 must be used to order the input orbitals correctly ([MO
-vectors](#vectors----mo-vectors)).
+vectors](#vectors-mo-vectors)).
 
 To freeze the highest virtual orbitals, use the virtual keyword. For
 instance, to freeze the top 5 virtuals
@@ -142,7 +142,7 @@ instance, to freeze the top 5 virtuals
 Again, note that this only works for the direct-MP2 and RI-MP2 energy
 codes.
 
-## TIGHT -- Increased precision
+## TIGHT: Increased precision
 
 The TIGHT directive can be used to increase the precision in the MP2
 energy and gradients.
@@ -159,7 +159,7 @@ This option increases the precision to which both the SCF (from
 are solved, and also tightens thresholds for computation of the AO and
 MO integrals (from 10<sup>-9</sup> to 10<sup>-11</sup> within the MP2 code.
 
-## SCRATCHDISK -- Limiting I/O usage
+## SCRATCHDISK: Limiting I/O usage
 
 This directive - used only in the semi-direct algorithm - allows to
 limit the per process disk usage. Mandatory argument for this keyword is
@@ -207,7 +207,7 @@ Printable items in the MP2 modules and their default print levels
 
 </center>
 
-## VECTORS -- MO vectors
+## VECTORS: MO vectors
 
 All of the (supported) MP2 modules require use of converged canonical
 SCF (RHF or UHF) orbitals for correct results. The vectors are by
@@ -219,7 +219,7 @@ to obtain vectors from the file /tmp/h2o.movecs, use the directive
  vectors /tmp/h2o.movecs
 ```
 
-As noted above ([FREEZE](#freeze----freezing-orbitals)) if
+As noted above ([FREEZE](#freeze-freezing-orbitals)) if
 the SCF orbitals are not in the correct order, it is necessary to
 permute the input orbitals using the swap keyword of the VECTORS
 directive. For instance, if it is desired to freeze a total six orbitals
@@ -267,7 +267,7 @@ with the name "small fitting basis" and then defines this to be the
  set "ri-mp2 basis" "small fitting basis"
 ```
 
-## FILE3C -- RI-MP2 3-center integral filename
+## FILE3C: RI-MP2 3-center integral filename
 
 The default name for the file used to store the transformed 3-center
 integrals is "file_prefix.mo3cint" in the scratch directory. This may
@@ -278,7 +278,7 @@ file /scratch/h2o.3c, use this directive
  file3c /scratch/h2o.3c
 ```
 
-## RIAPPROX -- RI-MP2 Approximation
+## RIAPPROX: RI-MP2 Approximation
 
 The type of RI approximation used in the RI-MP2 calculation is
 controlled by means of the RIAPPROX directive. The two possible values
@@ -496,7 +496,7 @@ definite so it is not unusual to see a few small negative natural
 orbital occupation numbers. Significant negative occupation numbers have
 been argued to be a sign that the system might be near degenerate[^9].
 
-## SCS-MP2 -- Spin-Component Scaled MP2
+## SCS-MP2: Spin-Component Scaled MP2
 
 Each MP2 output contains the calculation of the SCS-MP2 correlation
 energies as suggested by S.Grimme[^10]
