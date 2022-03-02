@@ -2,7 +2,7 @@
 
 Dockerfile recipes are available at the repository [https://github.com/nwchemgit/nwchem-dockerfiles](https://github.com/nwchemgit/nwchem-dockerfiles)
 
-Docker images of the master branch are hosted at [https://ghcr.io](https://ghcr.io) and can be used with the following command  
+Docker images of the master branch are hosted at [https://ghcr.io](https://github.com/features/packages) and can be used with the following command  
 
 ```
  docker run --shm-size 256m  --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev/[arch] input.nw
