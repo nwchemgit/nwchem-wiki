@@ -17,7 +17,7 @@ title: "NWChem Website"
   }
 </style>
 <div class="img-container">
-<img src="header.webp"  height="131" width="700" frameborder="0" ></img>
+<img src="header.webp" alt="header" height="131" width="700" frameborder="0" ></img>
 </div>
   
 <!---## NWChem: Open Source High-Performance Computational Chemistry--->
@@ -31,7 +31,7 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 NWChem can handle:  
-<img src="pt55.webp" style="float:right; margin-right:2px; alt="drawing" height="120" width="120"/>
+<img src="pt55.webp" style="float:right; margin-right:2px;" alt="drawing" height="120" width="120"/>
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -60,7 +60,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 
 ### EMSL Arrows
 
-<img src="myarrowmovie.webp" style="float:right; margin-left:10px; alt="drawing" height="160" width="160"/>
+<img src="myarrowmovie.webp" style="float:right; margin-left:10px;" alt="drawing" height="160" width="160"/>
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
