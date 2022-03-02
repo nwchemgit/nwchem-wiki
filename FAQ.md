@@ -56,7 +56,7 @@ performance, you might want to assign a non-default value to
 The following links contained useful information about
 `ARMCI_NETWORK`:  
 - [ Choosing the ARMCI library](ARMCI)   
-- [ Choosing the proper environment variables when compiling NWChem](Compiling-NWChem#Setting_up_the_proper_environment_variables)  
+- [ Choosing the proper environment variables when compiling NWChem](Compiling-NWChem.md#setting-up-the-proper-environment-variables)  
 
 ## Input Problem: no output
 
