@@ -94,8 +94,8 @@ feedback on this page content.
 
 The following programs can display cube files from
 [charge density](DPLOT.md#gaussian-gaussian-cube-format) and
-[ESP](Properties.md#Gaussian_Cube_Files) and/or use
-[Molden](Properties.md#Moldenfile) files
+[ESP](Properties.md#gaussian-Cube-Files) and/or use
+[Molden](Properties.md#moldenfile) files
 
   - **gOpenMol** <https://web.archive.org/web/20090518024059/http://www.csc.fi/english/pages/g0penMol>
   - **Molden** <https://www3.cmbi.umcn.nl/molden/>
