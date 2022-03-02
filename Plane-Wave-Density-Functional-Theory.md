@@ -1,7 +1,7 @@
 ##### Contents  
 
 * [1 Pseudopotential plane-wave density functional theory (NWPW)](#pseudopotential-plane-wave-density-functional-theory-nwpw)
-   - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks---gamma-point-calculations)
+   - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks-gamma-point-calculations)
       - [1.1.1 PAW Potentials](#paw-potentials) 
          - [1.1.1.1 PAW Implementation Notes](#paw-implementation-notes)
       - [1.1.2 Exchange-Correlation Potentials](#exchange-correlation-potentials)
@@ -170,7 +170,7 @@ for the NWChem 6.6 release.* </span>
 If you are a first time user of this module it is recommended that you
 skip the next five sections and proceed directly to the tutorials.
 
-## PSPW Tasks - Gamma Point Calculations
+## PSPW Tasks: Gamma Point Calculations
 
 All input to the PSPW Tasks is contained within the compound PSPW block,
 ```
@@ -1090,7 +1090,7 @@ set nwpw_APC:Gc 2.5
 set nwpw_APC:nga 3 
 set nwpw_APC:gamma 0.6 0.9 1.35  
 ```
-### PSPW_DPLOT - Generate Gaussian Cube Files
+### PSPW_DPLOT: Generate Gaussian Cube Files
 
 The pspw dplot task is used to generate plots of various types of
 electron densities (or orbitals) of a molecule. The electron density is
@@ -1170,7 +1170,7 @@ LIMITXYZ sub-directive to specify other limits. The grid is generated
 using No_Of_Spacings + 1 points along each direction. The known names
 for Units are angstroms, au and bohr.
 
-## Band Tasks - Multiple k-point Calculations
+## Band Tasks: Multiple k-point Calculations
 
 All input to the Band Tasks is contained within the compound NWPW block,
 ```
@@ -1491,7 +1491,7 @@ Similarly for unrestricted calculations
 
 ### Two-Component Wavefunctions (Spin-Orbit ZORA)
 
-### BAND_DPLOT - Generate Gaussian Cube Files
+### BAND_DPLOT: Generate Gaussian Cube Files
 
 The BAND BAND_DPLOT task is used to generate plots of various types of
 electron densities (or orbitals) of a crystal. The electron density is
@@ -2741,7 +2741,7 @@ Scheffler, Comp. Phys. Comm.,**119**,67 (1999)), and is better behaved
 for taking derivatives (i.e. calculating ionic forces) than the
 expansion suggested by Louie et al.
 
-## PAW Tasks - Legacy Implementation
+## PAW Tasks: Legacy Implementation
 
 (<span style="color: red;">*This capability is now available in PSPW. It
 is recommended that this module only be used for testing purposes.*
