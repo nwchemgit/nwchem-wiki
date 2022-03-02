@@ -46,7 +46,7 @@ feedback on this page content.
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
   - **JANPA** performs Natural Population Analysis <http://janpa.sf.net>
   - **CamCASP** Cambridge package for Calculation of Anisotropic Site
-    Properties <https://gitlab.com/anthonyjs/camcasp> <https://app.ph.qmul.ac.uk/wiki/ajm:camcasp:start>
+    Properties <https://gitlab.com/anthonyjs/camcasp> <https://gitlab.com/anthonyjs/camcasp/-/wikis/home>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
     <https://www.chemshell.org>
@@ -55,7 +55,7 @@ feedback on this page content.
   - **LICHEM** interfaces between QM and MM software
     <http://github.com/kratman/LICHEM_QMMM>
   - **VENUS** interfaces NWChem with chemical dynamics
-    <http://hase-group.ttu.edu/venus.html>
+    <https://www.depts.ttu.edu/chemistry/Venus/index.php>
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
   - **VOTCA-XTP** is a GW-BSE code to calculate excited state properties
     <http://www.votca.org> 
