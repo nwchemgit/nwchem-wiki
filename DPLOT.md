@@ -21,7 +21,7 @@ The quantities stored in local memory are:
 The stack memory setting in the input file must be sufficient to hold
 these quantities in local memory on a processor.
 
-## GAUSSIAN -- Gaussian Cube format
+## GAUSSIAN: Gaussian Cube format
 ```
  GAUSSIAN
 ```
@@ -29,14 +29,14 @@ A outputfile is generate in Gaussian Cube format. You can visualize this
 file using gOpenMol (after converting the Gaussian Cube file with
 gcube2plt), Molden or Molekel.
 
-## TITLE -- Title directive
+## TITLE: Title directive
 ```
  TITLE <string Title default Unknown Title>
 ```
 This sub-directive specifies a title line for the generated input to the
 Insight program or for the Gaussian cube file. Only one line is allowed.
 
-## LIMITXYZ -- Plot limits
+## LIMITXYZ: Plot limits
 ```
  LIMITXYZ [units <string Units default angstroms>]  
   <real X_From> <real X_To> <integer No_Of_Spacings_X>  
@@ -47,7 +47,7 @@ This sub-directive specifies the limits of the cell to be plotted. The
 grid is generated using No_Of_Spacings + 1 points along each
 direction. The known names for Units are angstroms, au and bohr.
 
-## SPIN -- Density to be plotted
+## SPIN: Density to be plotted
 ```
  SPIN <string Spin default total>
 ```
@@ -55,7 +55,7 @@ This sub-directive specifies what kind of density is to be computed.
 The known names for Spin are `total`, `alpha`, `beta` and `spindens`, the last
 being computed as the difference between α and β electron densities.
 
-## OUTPUT -- Filename
+## OUTPUT: Filename
 ```
  OUTPUT <string File_Name default dplot>
 ```
@@ -63,7 +63,7 @@ This sub-directive specifies the name of the generated input to the
 Insight program or the generated Gaussian cube file. The name `OUTPUT` is
 reserved for the standard NWChem output.
 
-## VECTORS -- MO vector file name
+## VECTORS: MO vector file name
 ```
  VECTORS <string File_Name default movecs> [<string File_Name2>]
 ```
@@ -72,7 +72,7 @@ the second file is optionally given the density is computed as the
 difference between the corresponding electron densities. The vector
 files have to match.
 
-## WHERE -- Density evaluation
+## WHERE: Density evaluation
 ```
  WHERE <string Where default grid>
 ```
@@ -83,7 +83,7 @@ performed on the set of a grid points specified by the sub-directive
 generated), `nuclei` (the density is computed at the position of the
 nuclei and written to the NWChem output) and `g+n` (both).
 
-## ORBITAL -- Orbital sub-space
+## ORBITAL: Orbital sub-space
 ```
  ORBITALS [<string Option default density>]
  <integer No_Of_Orbitals>  
@@ -99,11 +99,11 @@ and sub-directive `where` is automatically set to `grid`. Also specification
 of two orbital files conflicts with the view option. alpha orbitals are
 always plotted unless `spin` is set to `beta`.
 
-## CIVECS -- CI vectors
+## CIVECS: CI vectors
 ```
 CIVECS [<string Name of civecs file>]
 ```
-## DENSMAT -- Density matrix
+## DENSMAT: Density matrix
 ```
 DENSMAT [<string Name of density matrix file>]
 ```
