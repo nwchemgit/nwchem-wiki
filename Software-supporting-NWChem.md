@@ -94,7 +94,7 @@ feedback on this page content.
 
 The following programs can display cube files from
 [charge density](DPLOT.md#gaussian-gaussian-cube-format) and
-[ESP](Properties.md#gaussian-Cube-Files) and/or use
+[ESP](Properties.md#gaussian-cube-Files) and/or use
 [Molden](Properties.md#moldenfile) files
 
   - **gOpenMol** <https://web.archive.org/web/20090518024059/http://www.csc.fi/english/pages/g0penMol>
@@ -112,7 +112,7 @@ The following programs can display cube files from
 
 ## Programs post-processing AIM files
 
-NWChem can generate [AIM](Properties.md#Aimfile) wavefunction
+NWChem can generate [AIM](Properties.md#aimfile) wavefunction
 files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
   - **XAIM** <http://www.quimica.urv.es/XAIM>
