@@ -1843,7 +1843,7 @@ the CCSDTQ equations in general.
 ### Input
 
 The input commands for TCE response properties exclusively use set
-directives (see [SET](Top-level#SET)) instead of TCE input
+directives (see [SET](SET.md)) instead of TCE input
 block keywords. There are currently only three commands available:
 
 ```
