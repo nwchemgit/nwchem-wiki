@@ -3,7 +3,7 @@
 The TASK directive is used to tell the code what to do. The input
 directives are parsed sequentially until a TASK directive is
 encountered, as described in [Input File
-Structure](Getting-Started#input-file-structure). At that
+Structure](Getting-Started.md#input-file-structure). At that
 point, the calculation or operation specified in the TASK directive is
 performed. When that task is completed, the code looks for additional
 input to process until the next TASK directive is encountered, which is
@@ -29,7 +29,7 @@ termination, and is recognized by all forms of the TASK directive. When
 a TASK directive includes the keyword ignore, a warning message is
 printed if the task fails, and code execution continues with the next
 task. An example of this feature is given in the [sample input
-file](Density-Functional-Theory-for-Molecules#sample-input-file).
+file](Density-Functional-Theory-for-Molecules.md#sample-input-file).
 
 The input options, keywords, and defaults for each of these four forms
 for the TASK directive are discussed in the following sections.
@@ -104,7 +104,7 @@ the complete list of operations that accompany the NWPW module.
 The user should be aware that some of these operations (gradient,
 optimize, dynamics, thermodynamics) require computation of derivatives
 of the energy with respect to the molecular coordinates. If analytical
-derivatives are not available ([Capabilities](Capabilities)),
+derivatives are not available ([Capabilities](Capabilities.md)),
 they must be computed numerically, which can be very computationally
 intensive.
 
@@ -136,7 +136,7 @@ example](Density-Functional-Theory-for-Molecules.md#sample-input-file).
 
 This form of the TASK directive is used in instances where the task to
 be performed does not fit the model of the previous version (such as
-execution of a [Python program](Python)), or if the operation
+execution of a [Python program](Python.md)), or if the operation
 has not yet been implemented in a fashion that applies to a wide range
 of theories (e.g., property evaluation). Instead of requiring theory and
 operation as input, the directive needs only a string identifying the
@@ -148,11 +148,11 @@ The supported tasks that can be accessed with this form of the TASK
 directive are listed below, with the corresponding entries for the string
 variable `<task>`  
 
-  - python - Execute a [Python program](Python).
+  - python - Execute a [Python program](Python.md).
   - rtdbprint - Print the contents of the database.
   - cphf - Invoke the CPHF module.
   - property - Perform miscellaneous property calculations.
-  - dplot - Execute a [DPLOT run](DPLOT).
+  - dplot - Execute a [DPLOT run](DPLOT.md).
 
 This directive also recognizes the keyword ignore, which allows
 execution to continue after a task has failed.
@@ -200,7 +200,7 @@ script in a file and execute the file from within NWChem.
 ### TASK Directive for QM/MM simulations
 
 This is very similar to the most commonly used version of the [TASK
-directive](TASK),
+directive](TASK.md),
 and it has the following
 form:
 ```
@@ -211,7 +211,7 @@ simulation. If theory is "md" this is not a QM/MM simulation and will
 result in an appropriate error. The level of theory may be any QM method
 that can compute gradients but those algorithms in NWChem that do not
 support analytic gradients should be avoided (see
-[Capabilities](Capabilities)).
+[Capabilities](Capabilities.md)).
 
 The string <operation> is used to specify the calculation that will be
 performed in the QM/MM task. The default operation is a single point
@@ -275,7 +275,7 @@ for the monomer with ghost. The input changes will be applied within
 this and for the following calculations, you should be cautious
 reverting the changes for the next monomers. `CHARGE` assigns a charge to
 a monomer and it must be consistent with the total charge in the whole
-system (see Section [Charge](Charge)). The options `OFF` and `ON` turns off and
+system (see Section [Charge](Charge.md)). The options `OFF` and `ON` turns off and
 on any BSSE calculation.
 
 The energy evaluation involves 1 + 2N calculations, i.e. one for the
