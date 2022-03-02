@@ -17,7 +17,7 @@ title: "NWChem Website"
   }
 </style>
 <div class="img-container">
-<img src="header.webp" alt="header" height="131" width="700" frameborder="0" ></img>
+<img src="header.webp" alt="header" height="131" width="700" style="border:0;" />
 </div>
   
 
