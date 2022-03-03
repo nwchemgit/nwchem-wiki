@@ -199,5 +199,5 @@ The overlap between the ET reactant and product states (<i>S<sub>RP</sub></i>) i
 small, so the magnitude of the coupling between the states is also
 small. If the fragment guess or charged atomic density guess were not
 used, the Mulliken spin population would be 0.5 on both He atoms, the
-overlap between the ET reactant and product states would be 100 % and an
+overlap between the ET reactant and product states would be 100% and an
 infinite <i>V<sub>RP</sub></i> would result.
