@@ -1,7 +1,7 @@
 # **TO BE REVISED. MOST OF THE CONTENT HERE IS OBSOLETE**
 
 The current wiki has
-been created to provide documentation related to NWChem \[1\]. This
+been created to provide documentation related to NWChem. This
 includes the user manual, tutorials and common practices, as well as
 programmer references, as well as other useful information. In order to
 make this wiki as useful as possible to the NWChem community a certain
