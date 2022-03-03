@@ -63,7 +63,7 @@ defined is labeled as C (C for current). The values entered for these
 tags for centers defined in the Z-matrix input are interpreted in the
 same way as the <tag> entries for Cartesian coordinates described above
 (see [Cartesian coordinate
-input](#Cartesian_coordinate_input)). Figures 1, 2 and 3
+input](Cartesian-coordinate-input.md)). Figures 1, 2 and 3
 display the relationships between the input data and the definitions of
 centers and angles.
 
@@ -138,8 +138,7 @@ its value, for clarity in reading the input file.
 Following the `VARIABLES` directive, the `CONSTANTS` directive may be used
 to define any Z-matrix symbolic variables that remain unchanged during
 geometry optimizations. To freeze the Cartesian coordinates of an atom,
-refer to [Applying constraints in geometry
-optimizations](#Applying_constraints_in_geometry_optimizations).
+refer to [Applying constraints in geometry optimizations.md](ZCOORD-Forcing-internal-coordinates.md#applying_constraints-in-geometry-optimizations).
 The general form of this directive is as follows:
 ```
  CONSTANTS  
@@ -208,7 +207,7 @@ end
 ```
 The input for any centers specified with Cartesian coordinates must be
 specified using the format of the <tag> lines described in [Cartesian
-coordinate input](#Cartesian_coordinate_input) above.
+coordinate input](Cartesian-coordinate-input.md) above.
 However, in order to correctly specify these Cartesian coordinates
 within the Z-matrix, the user must understand the orientation of centers
 specified using internal coordinates. These are arranged as follows:

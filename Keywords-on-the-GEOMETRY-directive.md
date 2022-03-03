@@ -5,15 +5,15 @@ keywords and optional input on the main line of the GEOMETRY directive.
 As described above, the first line of the directive has the general
 form,
 ```
- GEOMETRY [<string name default geometry>] \  
-          [units <string units default angstroms>] \  
-          [bqbq] \  
-          [print [xyz] || noprint] \ 
-          [center || nocenter] \
-          [autosym [real tol default 1d-2] || noautosym]  
-          [autoz || noautoz] \  
-          [adjust] \  
-          [(nuc || nucl || nucleus) <string nucmodel>]
+ GEOMETRY [<string name default geometry>] \  
+          [units <string units default angstroms>] \  
+          [bqbq] \  
+          [print [xyz] || noprint] \ 
+          [center || nocenter] \
+          [autosym [real tol default 1d-2] || noautosym]  
+          [autoz || noautoz] \  
+          [adjust] \  
+          [(nuc || nucl || nucleus) <string nucmodel>]
 ```
 All of the keywords and input on this line are optional. The following
 list describes all options and their defaults.
@@ -22,7 +22,7 @@ list describes all options and their defaults.
     geometry, and all NWChem modules look for a geometry with this name.
     However, multiple geometries may be specified by using a different
     name for each. Subsequently, the user can direct a module to a named
-    geometry by using the [SET](SET) directive (see the example in the [SET Section](SET))
+    geometry by using the [SET](SET.md) directive (see the example in the [SET Section](SET.md))
     to associate the default name of geometry with the alternate name.
   - `units` - keyword specifying that a value will be entered by the user
     for the string variable <units>. The default units for the geometry
@@ -83,17 +83,17 @@ list describes all options and their defaults.
     optimizations. The `noautoz` keyword disables use of internal
     coordinates. The `autoz` keyword is provided only for backward
     compatibility. See [Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates) for
+    coordinates](ZCOORD-Forcing-internal-coordinates) for
     a more detailed description of redundant internal coordinates,
     including how to force the definition of specific internal variables
     in combination with automatically generated variables.
   - `adjust` - This indicates that an existing geometry is to be adjusted.
     Only new input for the redundant internal coordinates may be
-    provided ([ZCOORD -- Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates)). It
+    provided ([ZCOORD: Forcing internal
+    coordinates](ZCOORD-Forcing-internal-coordinates)). It
     is not possible to define new centers or to modify the point group
     using this keyword. See [Forcing internal
-    coordinates](ZCOORD----Forcing-internal-coordinates) for
+    coordinates](ZCOORD-Forcing-internal-coordinates) for
     an example of its usage.
   - `nucleus` - keyword to specify the default model for the nuclear
     charge distribution. The following values are recognized:
@@ -115,13 +115,13 @@ using the keywords and input options described above.
 The following directives all specify the same geometry for  H<sub>2</sub> (a
 bond length of 0.732556 Å):
 ```
- geometry                           geometry units nm     
-   h 0 0 0                            h 0 0 0             
-   h 0 0 0.732556                     h 0 0 0.0732556     
- end                                end                  
+ geometry                           geometry units nm     
+   h 0 0 0                            h 0 0 0             
+   h 0 0 0.732556                     h 0 0 0.0732556     
+ end                                end                  
 
- geometry units pm                  geometry units atomic  
-   h 0 0 0                            h 0 0 0               
-   h 0 0 73.2556                      h 0 0 1.3843305       
- end                                end
+ geometry units pm                  geometry units atomic  
+   h 0 0 0                            h 0 0 0               
+   h 0 0 73.2556                      h 0 0 1.3843305       
+ end                                end
 ```

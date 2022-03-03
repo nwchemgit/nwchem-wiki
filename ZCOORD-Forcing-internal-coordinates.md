@@ -14,7 +14,7 @@ ZCOORD within the geometry directive. The general form of the ZCOORD
 directive is as
 follows:
 ```
- ZCOORD  
+ ZCOORD  
     CVR_SCALING <real value>  
     BOND    <integer i> <integer j> \  
             [<real value>] [<string name>] [constant]  
@@ -26,12 +26,12 @@ follows:
 ```
 The centers i, j, k and l must be specified using the numbers of the
 centers, as supplied in the input for the Cartesian coordinates. The
-ZCOORD input parameters are defined as follows:
+`ZCOORD` input parameters are defined as follows:
 
-  - cvr\_scaling -- scaling factor applied to van der Waals radii.
-  - bond -- a bond between the two centers.
-  - angle -- an angle among the three atoms i, j and k.
-  - torsion -- a torsion (or dihedral) angle. The angle between the
+  - `cvr_scaling` -- scaling factor applied to van der Waals radii.
+  - `bond` -- a bond between the two centers.
+  - `angle` -- an angle among the three atoms i, j and k.
+  - `torsion` -- a torsion (or dihedral) angle. The angle between the
     planes i-j-k and j-k-l.
 
 A value may be specified for a user-defined internal coordinate, in
