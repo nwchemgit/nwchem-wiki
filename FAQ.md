@@ -394,3 +394,10 @@ set lindep:n_dep 0
 ``` 
 this orthogonalization process is skipped.
 
+## Discrepancy on the number of basis functions: spherical vs cartesian functions
+
+If you are comparing NWChem results with the ones obtained from  other codes and you believe  there is a
+discrepancy in the number of basis functions, keep in mind that NWChem uses cartesian functions by default, while other codes could be using spherical functions, instead.  
+More details in the documentation at the link [https://nwchemgit.github.io/Basis.html#spherical-or-cartesian](https://nwchemgit.github.io/Basis.html#spherical-or-cartesian).
+
+See also the following [forum entries](https://groups.google.com/g/nwchem-forum/search?q=default%20cartesian).
