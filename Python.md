@@ -79,7 +79,7 @@ there are some gotchas
   - When writing to the database (`rtdb_put()`) it is the data from node
     zero that is written.
   - NWChem overrides certain default signal handlers so care must be
-    taken when creating processes (see Section describing [a scanning example](#scaning-a-basis-exponent-yet-again----plotting-and-handling-child-processes)).
+    taken when creating processes (see Section describing [a scanning example](#scaning-a-basis-exponent-yet-again-plotting-and-handling-child-processes)).
 
 ## NWChem extensions
 
@@ -126,7 +126,7 @@ Section describing [handling exception](#handling-exceptions-from-nwchem)).
     with the given name.
 
 An
-[example](#accessing-geometry-information----a-temporary-hack)
+[example](#accessing-geometry-information-a-temporary-hack)
 below explains, in lieu of a Python wrapper for the geometry object, how
 to obtain the Cartesian molecular coordinates directly from the
 database.
@@ -456,7 +456,7 @@ If your Python program detects an error, raise an unhandled exception.
 Do not call exit(1) since this may circumvent necessary clean-up of the
 NWChem execution environment.
 
-### Accessing geometry information -- a temporary hack
+### Accessing geometry information: a temporary hack
 
 In an ideal world the geometry and basis set objects would have full
 Python wrappers, but until then a back-door solution will have to
@@ -526,7 +526,7 @@ NWChem input and pass it to `input_parse()` rather than setting
 parameters directly in the
 database.
 
-### Scaning a basis exponent yet again -- plotting and handling child processes
+### Scaning a basis exponent yet again: plotting and handling child processes
 ```
  geometry units au  
    O 0 0 0; H 0 1.430 -1.107; H 0 -1.430 -1.107  
@@ -570,7 +570,7 @@ example](#scanning-a-basis-exponent-revisited) is modified so
 that instead of writing the data to a file for subsequent visualization,
 it is saved for subsequent visualization with Gnuplot (you'll need both
 Gnuplot and the corresponding package for Python in your PYTHONPATH.
-Look at <http://monsoon.harvard.edu/~mhagger/download>).
+Look at <https://web.archive.org/web/20010717060625/http://monsoon.harvard.edu/~mhagger/download/>).
 
 The issue is that NWChem traps various signals from the O/S that usually
 indicate bad news in order to provide better error handling and reliable
