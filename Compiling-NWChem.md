@@ -399,7 +399,7 @@ and COPTIMIZE have been tested by the NWChem developers (using the
 internal QA suites, among others), while any modification might produce
 incorrect results.
 
-# How-to: Linux platforms
+## How-to: Linux platforms
 
   - **Common environmental variables for building in serial or in
     parallel with MPI**
@@ -435,7 +435,7 @@ mpif90 to the PATH variable, instead.
 % make nwchem_config
 % make FC=gfortran >& make.log
 ```
-#### NWChem 6.6 on Ubuntu 14.04 (Trusty Tahr)
+### NWChem 6.6 on Ubuntu 14.04 (Trusty Tahr)
 
 These instruction are likely to work (with minor modifications) on all
 Debian based distributions
@@ -465,7 +465,7 @@ make nwchem_config NWCHEM_MODULES="all python"
 make 64_to_32
 make
 ```
-#### NWChem 6.6 on Fedora 22
+### NWChem 6.6 on Fedora 22
 
   - Packages
 required:
@@ -496,7 +496,7 @@ make nwchem_config NWCHEM_MODULES="all python"
 make
 ```
 
-#### NWChem 6.8 on Centos 7.1/Fedora 27
+### NWChem 6.8 on Centos 7.1/Fedora 27
 Once you have added the [EPEL
 repository](https://docs.fedoraproject.org/en-US/epel/) to your Centos/Fedora/RedHat
 installation, you can have a more efficient NWChem build. 
@@ -535,7 +535,7 @@ make nwchem_config NWCHEM_MODULES="all python"
 make 64_to_32  
 make
 ```
-#### NWChem 6.6 on RedHat 6
+### NWChem 6.6 on RedHat 6
 
   - Packages required:
 
@@ -559,7 +559,7 @@ export PATH=/usr/lib64/openmpi/bin/:$PATH
 make nwchem_config NWCHEM_MODULES="all python"
 make
 ```
-#### NWChem 6.6 on RedHat 6 & EPEL repository
+### NWChem 6.6 on RedHat 6 & EPEL repository
 
 Once you have added the [EPEL
 repository](https://fedoraproject.org/wiki/EPEL) to you RedHat 6
@@ -567,7 +567,7 @@ installation, you can have a more efficient NWChem build. The settings
 are exactly the same as
 [Centos 7.1](Compiling-NWChem#nwchem-68-on-centos-71fedora-27)
 
-#### NWChem 6.6 on OpenSuse 13
+### NWChem 6.6 on OpenSuse 13
 
   - Packages
 required:
@@ -600,9 +600,9 @@ make 64_to_32
 make
 ```
 
-# How to: Mac platforms
+## How to: Mac platforms
 
-## Compilation of NWChem 6.5 release on Mac OS X 10.9 x86\_64
+### Compilation of NWChem 6.5 release on Mac OS X 10.9 x86\_64
 
   - Download and unpack latest NWChem tarball to the directory of your
     choosing, say /Users/johndoe/nwchem
@@ -639,7 +639,7 @@ make nwchem_config
 make
 ```
 
-## Compilation of NWChem 6.6 on Mac OS X 10.10 (Yosemite) x86\_64
+### Compilation of NWChem 6.6 on Mac OS X 10.10 (Yosemite) x86\_64
 
 #### Method \#1: using gfortran from hpc.sf.net and mpich from macports
 
@@ -734,7 +734,7 @@ USE_OPENMP=T
 MPICH and ARMCI-MPI work reliably on Mac. See [Choosing the ARMCI
 Library](ARMCI) for details on ARMCI-MPI
 
-# How-to: Cray platforms
+## How-to: Cray platforms
 
 Common environmental variables for building and running on the Cray XT, XE, XC and XK:
 ```
@@ -759,7 +759,7 @@ Common environmental variables for building and running on the Cray XT, XE, XC a
 The step `make 64_to_32` is required only if either SCALAPACK\_SIZE or
 BLAS\_SIZE are set equal to 4.
 
-#### Method \#2: ARMCI\_NETWORK=MPI-PR
+### Method \#2: ARMCI\_NETWORK=MPI-PR
 
 This is a **<span style="color:#FF0000">new option available in NWChem
 6.6.</span>**
@@ -768,7 +768,7 @@ Set the environmental variables for compilation:
 ```
   % export ARMCI_NETWORK=MPI-PR
 ```
-#### Example: OLCF Titan
+### Example: OLCF Titan
 
 These are variables used for compilation on the [OLCF Titan, a Cray
 XK7](https://www.olcf.ornl.gov/olcf-resources/compute-systems/titan/) We
@@ -886,7 +886,7 @@ MPICH_GNI_NDREG_MAXSIZE=16777216
 MPICH_GNI_MBOX_PLACEMENT=nic
 COMEX_MAX_NB_OUTSTANDING=6
 ```
-# How-to: Intel Xeon Phi
+## How-to: Intel Xeon Phi
 
 This section describes both the newer KNL and older KNC hardware, in
 reverse chronological order.
@@ -1041,7 +1041,7 @@ utilized.
 % export ARMCI_OPENIB_DEVICE=mlx4_0
 ```
 
-# How-to: IBM platforms
+## How-to: IBM platforms
 
   - **Compiling NWChem on BLUEGENE/L**
 
@@ -1163,7 +1163,7 @@ To compile, the following commands should be used:
 % make FC=xlf >& make.log
 ```
 
-# How-to: Commodity clusters with Infiniband
+## How-to: Commodity clusters with Infiniband
 
 Common environmental variables for building and running on most
 Infiniband clusters are:
@@ -1190,7 +1190,7 @@ Infiniband clusters are:
   
   make >& make.log
 ```
-# How-to: Commodity clusters with Intel Omni-Path
+## How-to: Commodity clusters with Intel Omni-Path
 
   - On  clusters with the Intel	Omni-Path network, the following
     environment variables should be defined
@@ -1207,8 +1207,8 @@ More details on this topic discussed a
 
 * [https://github.com/GlobalArrays/ga/issues/126](https://github.com/GlobalArrays/ga/issues/126)
 
-# How-to: Windows Platforms
-## MingW
+## How-to: Windows Platforms
+### MingW
 The current recommended approach for building a NWChem binary for a
 Windows platform is to build with the
 [MinGW/Mingw32](https://sourceforge.net/projects/mingw/files/) environment. MinGW can be
@@ -1261,7 +1261,7 @@ Then, you can start the compilation by typing
 % make nwchem_config  
 % make FC=gfortran DEPEND_CC=gcc
 ```
-### MSYS2
+#### MSYS2
 
 https://github.com/msys2/msys2/wiki/MSYS2-installation
 ```
@@ -1271,7 +1271,7 @@ pacman -S mingw32/mingw-w64-i686-python3
 pacman -S msys/make
 ```
 
-## WSL on Windows 10
+### WSL on Windows 10
 A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL).
 This option gives the best performance on Windows when [WLS 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) is used.
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
@@ -1283,7 +1283,7 @@ Once Ubuntu is installed, the quickest method to install NWChem is by fetching t
 sudo apt install nwchem
 ``` 
 
-# General site installation
+## General site installation
 
 The build procedures outlined above will allow use of NWChem within the
 NWChem directory structure. The code will look for the basis set library
