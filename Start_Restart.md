@@ -10,8 +10,8 @@ database will result in the desired action. It is usually more prudent
 to specify the directive explicitly, using the following
 format:
 ```
-(RESTART || START) [<string file_prefix default input_file_prefix>] \  
-                   [rtdb <string rtdb_file_name default file_prefix.db>]
+(RESTART || START) [<string file_prefix default input_file_prefix>] \  
+                   [rtdb <string rtdb_file_name default file_prefix.db>]
 ```
 The START directive indicates that the calculation is one in which a new
 database is to be created. Any relevant information that already exists
@@ -21,7 +21,7 @@ created in the course of the calculation.
 
 E.g., to start a new calculation on water, one might specify
 ```
-start water
+start water
 ```
 which will make all files begin with "water.".
 
@@ -80,7 +80,7 @@ calculation is performed as if a RESTART directive had been encountered.
 For example, NWChem can be run using an input file with the name
 water.nw by typing the UNIX command line,
 ```
-nwchem water.nw
+nwchem water.nw
 ```
 If the NWChem input file water.nw does not contain a START or RESTART
 directive, the code sets the variable <file_prefix> to water. Files
@@ -88,15 +88,15 @@ created by the job will have this prefix, and the database will be named
 water.db. If the database water.db does not exist already, the code
 behaves as if the input file contains the directive,
 ```
-start water
+start water
 ```
 If the database water.db does exist, the code behaves as if the input
 file contained the directive,
 ```
-restart water
+restart water
 ```
 ### Use of permanent_dir
-We suggest the user to add the [permanent directory](#use-of-permanent-dir) line to the input file. This allows to store files in a specific directory for easy re-use between start and restart stages.  
+We suggest the user to add the [permanent directory](Permanent_dir.md) line to the input file. This allows to store files in a specific directory for easy re-use between start and restart stages.  
 The start file then becomes
 
 ```

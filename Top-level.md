@@ -4,26 +4,26 @@ Top-level directives are directives that can affect all modules in the code. Som
 
 The following sections describe each of the top-level directives in detail, noting all keywords, options, required input, and defaults.
 
-* [START/RESTART](Start_Restart)
+* [START/RESTART](Start_Restart.md)
 
-* [PERMANENT_DIR](Permanent_Dir)
+* [PERMANENT_DIR](Permanent_Dir.md)
 
-* [SCRATCH_DIR](Scratch_Dir)
+* [SCRATCH_DIR](Scratch_Dir.md)
 
-* [MEMORY](Memory)
+* [MEMORY](Memory.md)
 
-* [ECHO](ECHO)
+* [ECHO](ECHO.md)
 
-* [TITLE](TITLE)
+* [TITLE](TITLE.md)
 
-* [PRINT / NOPRINT](Print_Noprint)
+* [PRINT / NOPRINT](Print_Noprint.md)
 
-* [SET](SET)
+* [SET](SET.md)
 
-* [UNSET](UNSET)
+* [UNSET](UNSET.md)
 
-* [STOP](STOP)
+* [STOP](STOP.md)
 
-* [TASK](TASK)
+* [TASK](TASK.md)
 
-* [ECCE_PRINT](ECCE_PRINT)
+* [ECCE_PRINT](ECCE_PRINT.md)
