@@ -35,7 +35,7 @@ citation:
 
 By using DIRDYVTST, a user can carry out electronic structure
 calculations with NWChem and use the resulting energies, gradients, and
-Hessians for direct dynamics calculations with [POLYRATE](https://comp.chem.umn.edu/polyrate/ "link"). 
+Hessians for direct dynamics calculations with [POLYRATE](https://comp.chem.umn.edu/polyrate/). 
 This program
 prepares the file30 input for POLYRATE from NWChem electronic structure
 calculations of energies, gradients and Hessians at the reactant,
@@ -44,7 +44,7 @@ Cartesian geometries for the reactants, products, and saddle points need
 to be input to this program; optimization of geometries is not performed
 in this program. Note that DIRDYVTST is based on the DIRDYGAUSS program
 and is similar to two other programs: DDUTILITIES and GAUSSRATE. Users
-of this module are encouraged to read the [POLYRATE manual](https://comp.chem.umn.edu/polyrate/190727_Polyrate_17-C_manuall.pdf "link") since they
+of this module are encouraged to read the [POLYRATE manual](https://comp.chem.umn.edu/polyrate/190727_Polyrate_17-C_manuall.pdf) since they
 will need to create the file fu5 input to run calculations with
 POLYRATE.
 
@@ -102,7 +102,7 @@ form:
 
 The use of symmetry in the calculation is controlled by the keyword
 `autosym | noautosym` which is used as described in the
-[geometry](Geometry) directive. `Autosym` is on by
+[geometry](Geometry.md) directive. `Autosym` is on by
 default. A couple words of warning here. The tolerance related to
 `autosym` can cause problems when taking the initial step off of the
 transition state. If the tolerance is too large and the initial step
@@ -120,13 +120,13 @@ in the DIRDYVTST module.
 #### Basis specification
 
 The basis name on the theory or sptheory directive is that specified on
-a [basis set directive](Release66:Basis) and not the name of
+a [basis set directive](Basis.md) and not the name of
 a standard basis in the library. If not specified, the basis set for the
 sptheory defaults to the theory basis which defaults to "ao basis".
 
 #### Effective core potentials
 
-If an [effective core potential](Release66:ECP) is specified
+If an [effective core potential](ECP.md) is specified
 in the usual fashion outside of the DIRDYVTST input then this will be
 used in all calculations. If an alternative ECP name (the name specified
 on the ECP directive in the same manner as done for basis sets) is
@@ -318,7 +318,7 @@ frequencies and eigenvectors will be printed along the MEP.
 #### Restart
 
 DIRDYVTST calculations should be
-[restarted](Release66:Top-level#START_and_RESTART_--_Start-up_mode)
+[restarted](Start_Restart.md)
 through the normal NWChem mechanism. The user needs to change the start
 directive to a restart directive and get rid of any information that
 will overwrite important information in the RTDB. The file.db and
