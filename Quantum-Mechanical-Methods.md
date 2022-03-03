@@ -1,3 +1,6 @@
+ # Quantum Mechanical Methods
+ 
+
  ## [Hartree-Fock (HF) Theory](Hartree-Fock-Theory-for-Molecules)
 
 <!-- end list -->
