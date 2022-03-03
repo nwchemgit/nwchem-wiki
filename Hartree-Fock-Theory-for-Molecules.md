@@ -1050,7 +1050,7 @@ Newton-Raphson can be disabled temporarily or permanently (see
 [Controlling the
 Newton-Raphson](#nr-controlling-the-newton-raphson)), and
 level-shifting can be applied to the matrix (see
-[Level-shifting](#level-level-shifting-the-orbital-Hessian)).
+[Level-shifting](#level-level-shifting-the-orbital-hessian)).
 In some cases, both options may be necessary to achieve final
 convergence.
 

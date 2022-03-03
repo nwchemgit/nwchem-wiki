@@ -5,46 +5,46 @@ complete active space SCF (CASSCF) calculations with at most 20 active
 orbitals and about 500 basis
 functions.
 ```
- MCSCF  
-   STATE <string state>  
-   ACTIVE <integer nactive>  
-   ACTELEC <integer nactelec>  
-   MULTIPLICITY <integer multiplicity>  
-   [SYMMETRY <integer symmetry default 1>]  
-   [VECTORS [[input] <string input_file default file_prefix.movecs>]   
-          [swap <integer vec1 vec2> ...] \  
-          [output <string output_file default input_file>] \  
-          [lock]  
-   [HESSIAN (exact||onel)]  
-   [MAXITER <integer maxiter default 20>]  
-   [THRESH  <real thresh default 1.0e-4>]  
-   [TOL2E <real tol2e default 1.0e-9>] 
-   [LEVEL <real shift default 0.1d0>]  
- END
+ MCSCF  
+   STATE <string state>  
+   ACTIVE <integer nactive>  
+   ACTELEC <integer nactelec>  
+   MULTIPLICITY <integer multiplicity>  
+   [SYMMETRY <integer symmetry default 1>]  
+   [VECTORS [[input] <string input_file default file_prefix.movecs>]   
+          [swap <integer vec1 vec2> ...] \  
+          [output <string output_file default input_file>] \  
+          [lock]  
+   [HESSIAN (exact||onel)]  
+   [MAXITER <integer maxiter default 20>]  
+   [THRESH  <real thresh default 1.0e-4>]  
+   [TOL2E <real tol2e default 1.0e-9>] 
+   [LEVEL <real shift default 0.1d0>]  
+ END
 ```
 Note that the `ACTIVE`, `ACTELEC`, and `MULTIPLICITY` directives are required.
 The symmetry and multiplicity may alternatively be entered using the
 STATE directive.
 
-## ACTIVE -- Number of active orbitals
+## ACTIVE: Number of active orbitals
 
 The number of orbitals in the CASSCF active space must be specified
 using the ACTIVE directive.
 
 E.g.,
 ```
- active 10
+ active 10
 ```
 The input molecular orbitals (see the vectors directive in [MCSCF
-Vectors](#VECTORS_--_Input/output_of_MO_vectors) and [SCF
-Vectors](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors))
+Vectors](#vectors-inputoutput-of-mo-vectors) and [SCF
+Vectors](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors))
 must be arranged in order
 
 1.  doubly occupied orbitals,
 2.  active orbitals, and
 3.  unoccupied orbitals.
 
-## ACTELEC -- Number of active electrons
+## ACTELEC: Number of active electrons
 
 The number of electrons in the CASSCF active space must be specified
 using the `ACTELEC` directive. An error is reported if the number of
@@ -62,9 +62,9 @@ the determinant wavefunction.
 
 E.g., to obtain a triplet state
 ```
- multiplicity 3
+ multiplicity 3
 ```
-## SYMMETRY -- Spatial symmetry of the wavefunction
+## SYMMETRY: Spatial symmetry of the wavefunction
 
 This species the irreducible representation of the wavefunction as an
 integer in the range 1--8 using the same numbering of representations as
@@ -73,36 +73,36 @@ supported.
 
 E.g., to specify a B<sub>1</sub> state when using the C<sub>2v</sub> group
 ```
- symmetry 3
+ symmetry 3
 ```
-## STATE -- Symmetry and multiplicity
+## STATE: Symmetry and multiplicity
 
 The electronic state (spatial symmetry and multiplicity) may
 alternatively be specified using the conventional notation for an
 electronic state, such as <sup>3</sup>B<sub>2</sub> for a triplet state of B<sub>2</sub>
 symmetry. This would be accomplished with the input
 ```
- state 3b2
+ state 3b2
 ```
 which is equivalent to
 ```
- symmetry 4 
- multiplicity 3
+ symmetry 4 
+ multiplicity 3
 ```
-## VECTORS -- Input/output of MO vectors
+## VECTORS: Input/output of MO vectors
 
 Calculations are best started from RHF/ROHF molecular orbitals (see
-[SCF](Hartree-Fock-Theory-for-Molecules)), and by
+[SCF](Hartree-Fock-Theory-for-Molecules.md)), and by
 default vectors are taken from the previous MCSCF or SCF calculation. To
 specify another input file use the `VECTORS` directive. Vectors are by
 default output to the input file, and may be redirected using the output
 keyword. The swap keyword of the
-[VECTORS](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)
+[VECTORS](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors)
 directive may be used to reorder orbitals to obtain the correct active
 space.
 
 The
-[LOCK](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)
+[LOCK](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors)
 keyword allows the user to specify that the ordering of orbitals will be
 locked to that of the initial vectors, insofar as possible. The default
 is to order by ascending orbital energies within each orbital space. One
@@ -124,7 +124,7 @@ follows:
     that in the case of degenerate occupations that this does not fully
     determine the orbitals.
 
-## HESSIAN -- Select preconditioner
+## HESSIAN: Select preconditioner
 
 The MCSCF will use a one-electron approximation to the orbital-orbital
 Hessian until some degree of convergence is obtained, whereupon it will
@@ -135,11 +135,11 @@ by specifying the appropriate keyword on the `HESSIAN` directive.
 
 E.g., to specify the one-electron approximation throughout
 ```
- hessian onel
+ hessian onel
 ```
-## LEVEL -- Level shift for convergence
+## LEVEL: Level shift for convergence
 
-The [Hessian](Hessians-and-Vibrational-Frequencies)
+The [Hessian](Hessians-and-Vibrational-Frequencies.md)
 used in the MCSCF optimization is by default level shifted by 0.1 until
 the orbital gradient norm falls below 0.01, at which point the level
 shift is reduced to zero. The initial value of 0.1 may be changed using
@@ -148,13 +148,12 @@ more stable in some instances.
 
 E.g., to set the initial level shift to 0.5
 ```
- level 0.5
+ level 0.5
 ```
 ## PRINT and NOPRINT
 
 Specific output items can be selectively enabled or disabled using the
-[print control
-mechanism](Top-level#PRINT_.2F_NOPRINT) with the
+[print control mechanism](Print_Noprint.md) with the
 available print options listed in the table
 below.
 
