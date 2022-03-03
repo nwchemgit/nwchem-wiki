@@ -99,19 +99,19 @@ The keyword <tt>FMO</tt> can be used to compute electronic couplings by means of
 ```
 fmo
 ```
-An example input file can be found in  the [etrans-fmo QA directory](../tree/master/QA/tests/etrans-fmo)
+An example input file can be found in  the [etrans-fmo QA directory](https://github.com/nwchemgit/nwchem/tree/master/QA/tests/etrans-fmo)
 -->
 ## Example
 
 The following example is for a simple electron transfer reaction,
-<img alt="$He_{} \rightarrow He^{ +}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/071c03bc68d9e9cb99efa0d16a160ace.svg?invert_in_darkmode&sanitize=true" align=middle width="81.53376pt" height="26.12412pt"/>. The ET calculation is easy to execute,
+He &rarr; He<sup>+</sup>. The ET calculation is easy to execute,
 but it is crucial that ET reactant and product wavefunctions reflect
 localized states. This can be accomplished using either a [fragment
-guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals), or
+guess](Hartree-Fock-Theory-for-Molecules.md#vectors-fragment-superposition-of-fragment-molecular-orbitals), or
 a [charged atomic density
-guess](Hartree-Fock-Theory-for-Molecules#atomic-guess-orbitals-with-charged-atoms). For
+guess](Hartree-Fock-Theory-for-Molecules.md#atomic-guess-orbitals-with-charged-atoms). For
 self-exchange ET reactions such as this one, you can use the
-[REORDER](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) keyword
+[REORDER](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) keyword
 to move the electron from the first helium to the second.
 
 Example input :
