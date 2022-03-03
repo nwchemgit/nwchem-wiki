@@ -1,4 +1,4 @@
-## ZCOORD -- Forcing internal coordinates
+## ZCOORD: Forcing internal coordinates
 
 By default redundant internal coordinates are generated for use in
 geometry optimizations. Connectivity is inferred by comparing
@@ -44,7 +44,7 @@ is not modified during a geometry optimization with
 Each internal coordinate may also be named either for easy
 identification in the output, or for the application of constraints
 ([Applying constraints in geometry
-optimizations](ZCOORD----Forcing-internal-coordinates.md#applying-constraints-in-geometry-optimizations)).
+optimizations](#applying-constraints-in-geometry-optimizations)).
 
 If the keyword adjust is specified on the main GEOMETRY directive, only
 ZCOORD data may be specified and it can be used to change the
