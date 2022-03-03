@@ -10,14 +10,14 @@ the modules to share data, or to share access to files containing data.
 
 It is not necessary for the user to be intimately familiar with the
 contents of the
-[database](NWChem-Architecture#database-structure) in order
+[database](#database-structure) in order
 to run NWChem. However, a nodding acquaintance with the design of the
 code will help in clarifying the logic behind the input requirements,
 especially when restarting jobs or performing multiple tasks within one
 job.
 
 As described above ([Input File
-Structure](Getting-Started#input-file-structure)), all
+Structure](Getting-Started.md#input-file-structure)), all
 start-up directives are processed at the beginning of the job by the
 main program, and then the input module is invoked. Each input directive
 usually results in one or more entries being made in the database. When
@@ -43,11 +43,11 @@ stored directly in the database, and contain the following information:
 4.  the N items of data of the specified type
 
 It is possible to enter data directly into the database using the [SET
-directive](SET). For example, to store a (64-bit precision)
+directive](SET.md). For example, to store a (64-bit precision)
 three-element real array with the name "reference energies" in the
 database, the directive is as follows:
 
-`set "reference energies" 0.0 1.0 -76.2`
+`set "reference energies" 0.0 1.0 -76.2`
 
 NWChem determines the data to be real (based on the type of the first
 element, 0.0), counts the number of elements in the array, and enters
@@ -61,8 +61,8 @@ Objects are built in the database by storing associated data as multiple
 entries, using an internally consistent naming convention. This data is
 managed exclusively by the subroutines (or methods) that are associated
 with the object. Currently, the code has two main objects: basis sets
-and geometries. [GEOMETRY](Geometry) and
-[BASIS](Basis) present a complete discussion of the input to
+and geometries. [GEOMETRY](Geometry.md) and
+[BASIS](Basis.md) present a complete discussion of the input to
 describe these objects.
 
 As an illustration of what comprises a geometry object, the following
@@ -70,15 +70,15 @@ table contains a partial listing of the database contents for a water
 molecule geometry named "test geom". Each entry contains the field test
 geom, which is the unique name of the object.
 ```
-Contents of RTDB h2o.db  
+Contents of RTDB h2o.db  
 -----------------------  
-Entry                                   Type[nelem]  
----------------------------  ----------------------  
-geometry:test geom:efield             double[3]      
-geometry:test geom:coords             double[9]      
-geometry:test geom:ncenter               int[1]      
-geometry:test geom:charges            double[3]      
-geometry:test geom:tags                 char[6] 
+Entry                                   Type[nelem]  
+---------------------------  ----------------------  
+geometry:test geom:efield             double[3]      
+geometry:test geom:coords             double[9]      
+geometry:test geom:ncenter               int[1]      
+geometry:test geom:charges            double[3]      
+geometry:test geom:tags                 char[6] 
 ...
 ```
 Using this convention, multiple instances of objects may be stored with
@@ -91,13 +91,13 @@ names.
 The runtime database contents for the file h2o.db listed above were
 generated from the user-specified input directive,
 ```
- geometry "test geom"  
-   O     0.00000000    0.00000000    0.00000000 
-   H     0.00000000    1.43042809   -1.10715266 
-   H     0.00000000   -1.43042809   -1.10715266  
- end
+ geometry "test geom"  
+   O     0.00000000    0.00000000    0.00000000 
+   H     0.00000000    1.43042809   -1.10715266 
+   H     0.00000000   -1.43042809   -1.10715266  
+ end
 ```
-The [GEOMETRY](Geometry) directive allows the user to specify
+The [GEOMETRY](Geometry.md) directive allows the user to specify
 the coordinates of the atoms (or centers), and identify the geometry
 with a unique name.
 
@@ -109,7 +109,7 @@ input to force NWChem to look for a geometry with a name other than
 geometry. For example, to specify use of the geometry with the name
 "test geom" in the example above, the SET directive is as follows:
 ```
-set geometry "test geom"
+set geometry "test geom"
 ```
 NWChem will automatically check for such indirections when loading
 geometries. Storage of data associated with basis sets, the other
@@ -129,6 +129,6 @@ job.
 Sometimes, however, this persistence is undesirable, and it is necessary
 to return an NWChem module to its default behavior by restoring the
 database to its input-free state. In such a case, the
-[UNSET](UNSET) directive can be used to delete all database
+[UNSET](UNSET.md) directive can be used to delete all database
 entries associated with a given module (including both inputs and
 outputs).

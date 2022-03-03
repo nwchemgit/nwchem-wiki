@@ -12,7 +12,7 @@ NWChem consists of independent modules that perform the various
 functions of the code. Examples of modules include the input parser, SCF
 energy, SCF analytic gradient, DFT energy, etc.. Data is passed between
 modules and saved for restart using a disk-resident database or dumpfile
-(see [NWChem Architecture](NWChem-Architecture)).
+(see [NWChem Architecture](NWChem-Architecture.md)).
 
 The input to NWChem is composed of commands, called directives, which
 define data (such as basis sets, geometries, and filenames) and the
@@ -23,7 +23,7 @@ Structure](#input-file-structure)) which provide critical job
 control information, and are processed before all other input. Most
 directives are specific to a particular module and define data that is
 used by that module only. A few directives (see [Top-level
-Directives](Top-level))
+Directives](Top-level.md))
 potentially affect all modules, for instance by specifying the total
 electric charge on the system.
 
@@ -41,7 +41,7 @@ All input is free format and case is ignored except for actual data
 module-specific directives (i.e., compound directives) can appear in any
 order, with the exception of the TASK directive (see [Input File
 Structure](#input-file-structure) and
-[Tasks](TASK)) which is used to invoke an
+[Tasks](TASK.md)) which is used to invoke an
 NWChem module. All input for a given task must precede the TASK
 directive. This input specification rule allows the concatenation of
 multiple tasks in a single NWChem input file.
@@ -107,11 +107,11 @@ ECHO
 After the input file has been scanned for the start-up directives, it is
 rewound and read sequentially. Input is processed either by the
 top-level parser (for the directives listed in [Top-level
-Directives](Top-level), such as TITLE, SET, ...) or
+Directives](Top-level.md), such as TITLE, SET, ...) or
 by the parsers for specific computational modules (e.g., SCF, DFT, ...).
 Any directives that have already been processed (e.g., MEMORY) are
 ignored. Input is read until a TASK directive (see
-[Tasks](TASK)) is encountered. A TASK
+[Tasks](TASK.md)) is encountered. A TASK
 directive requests that a calculation be performed and specifies the
 level of theory and the operation to be performed. Input processing then
 stops and the specified task is executed. The position of the TASK
@@ -161,20 +161,20 @@ directive. The Dunning cc-pvdz basis is obtained from the NWChem basis
 library, as specified by the BASIS directive input. The TASK directive
 requests an SCF geometry optimization.
 
-The [GEOMETRY directive](Geometry) defaults to
+The [GEOMETRY directive](Geometry.md) defaults to
 Cartesian coordinates and Angstrøms (options include atomic units and
 Z-matrix format). The input blocks for the BASIS and GEOMETRY directives
 are structured in similar fashion, i.e., name, keyword, ..., end (In
 this simple example, there are no keywords). The BASIS input block must
 contain basis set information for every atom type in the geometry with
-which it will be used. Refer to [Basis](Basis) for a
+which it will be used. Refer to [Basis](Basis.md) for a
 description of available basis sets and a discussion of how to define
 new ones.
 
 The last line of this sample input file (task scf optimize) tells the
 program to optimize the molecular geometry by minimizing the SCF energy.
 (For a description of possible tasks and the format of the TASK
-directive, refer to [Tasks](TASK))
+directive, refer to [Tasks](TASK.md))
 
 If the input is stored in the file `n2.nw`, the command to run this job on
 a typical UNIX workstation is as follows:
@@ -227,7 +227,7 @@ title "H2O+ : 6-31g** UMP2 frequencies"
 task mp2 freq
 ```
 The START directive
-([START/RESTART](Start_Restart) tells
+([START/RESTART](Start_Restart.md) tells
 NWChem that this run is to be started from the beginning. This directive
 need not be at the beginning of the input file, but it is commonly
 placed there. Existing database or vector files are to be ignored or
@@ -235,8 +235,7 @@ overwritten. The entry h2o\_freq on the START line is the prefix to be
 used for all files created by the calculation. This convention allows
 different jobs to run in the same directory or to share the same scratch
 directory
-[SCRATCH\_DIR](Scratch_Dir)/
-[PERMANENT\_DIR](Permanent_Dir),
+[SCRATCH\_DIR](Scratch_Dir.md)/[PERMANENT\_DIR](Permanent_Dir.md),
 as long as they use different prefix names in this field.
 
 As in the first sample problem, the geometry is given in Cartesian
@@ -266,7 +265,7 @@ relevant input for a given problem. The TASK directive causes the code
 to perform the specified calculation using the parameters set in the
 preceding directives. In this case, the first task is an SCF calculation
 with geometry optimization, specified with the input scf and optimize.
-(See [Tasks](TASK) for a list of
+(See [Tasks](TASK.md) for a list of
 available tasks and operations.)
 
 After the completion of any task, settings in the database are used in
@@ -335,13 +334,13 @@ In the input file:
   - \# (the hash or pound symbol) is the comment character. All
     characters following \# (up to the end of the physical line) are
     ignored.
-  - If any input line (excluding [Python programs](Python) begins
+  - If any input line (excluding [Python programs](Python.md) begins
     with the string INCLUDE (ignoring case) and is followed by a valid
     file name, then the data in that file are read as if they were
     included into the current input file at the current line. Up to
     three levels of nested include files are supported. The user should
     note that inputting a basis set from the standard basis library
-    ([Basis Sets](Basis)) uses one level of include.
+    ([Basis Sets](Basis.md)) uses one level of include.
   - Data is read from the input file until an end-of-file is detected,
     or until the string EOF (ignoring case) is encountered at the
     beginning of an input line.
@@ -354,10 +353,10 @@ line of input with one or more fields. Compound directives can have
 multiple input lines, and can also include other optional simple and
 compound directives. A compound directive is terminated with an END
 directive. The directives START (see
-[START/RESTART](Start_Restart)) and
-ECHO (see [ECHO](ECHO)) are examples of
+[START/RESTART](Start_Restart.md)) and
+ECHO (see [ECHO](ECHO.md)) are examples of
 simple directives. The directive GEOMETRY (see
-[Geometry](Geometry)) is an example of a
+[Geometry](Geometry.md)) is an example of a
 compound directive.
 
 Some limited checking of the input for self-consistency is performed by
@@ -411,7 +410,7 @@ following two lines are equivalent
 (In Fortran triplet notation, the increment, if unstated, is 1; e.g.,
 1:3 = 1:3:1.)
 
-The directive [VECTORS](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors) is presented here as an example of
+The directive [VECTORS](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) is presented here as an example of
 an NWChem input directive. The general form of the directive is as
 follows:
 ```
