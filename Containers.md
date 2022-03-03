@@ -1,4 +1,6 @@
-# Docker 
+# Containers
+
+## Docker 
 
 Dockerfile recipes are available at the repository [https://github.com/nwchemgit/nwchem-dockerfiles](https://github.com/nwchemgit/nwchem-dockerfiles)
 
@@ -24,7 +26,7 @@ The associated Dockerfile is available at
 [https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile](https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile) 
 
 
-# Singularity
+## Singularity
 
 Singularity recipes for NWChem are available at.  
 [https://github.com/edoapra/nwchem-singularity](https://github.com/edoapra/nwchem-singularity)

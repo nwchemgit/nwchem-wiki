@@ -22,18 +22,18 @@ The number of subgroups is defined in the input through a set directive:
 ```
 where the number of subgroups requested is the argument. The number of
 processors that each subgroup has access to is determined by
-Total/subgroup\_number. A separate MC simulation is performed within
+Total/subgroup_number. A separate MC simulation is performed within
 each subgroup. To use this functionality, NWChem must be compiled with
-the USE\_SUBGROUPS environmental variable set.
+the USE_SUBGROUPS environmental variable set.
 
 Each MC simulation starts at a different starting configuration, which
 is equally spaced along the reaction coordinate. The statistical
 distributions which these MC simulations produce are averaged to form
 the final statistical distribution. Output from these subgroups consists
-of various files whose names are of the form (\*.\#num). These files
+of various files whose names are of the form (`*.#num`). These files
 include restart files and other data files. The NWChem runtime database
 (RTDB) is used as input for these subgroups and must be globally
-accessible (set through the Permanent\_Dir directive) to all processes.
+accessible (set through the Permanent_Dir directive) to all processes.
 
 ## Input Syntax
 
@@ -158,10 +158,10 @@ being rconfig.
 ```
 These three options define some of the output and data analysis
 behavior. mprnt is an option which controls how often data analysis
-occurs during the simulation. Currently, every mprnt\*nob MC steps data
+occurs during the simulation. Currently, every `mprnt*nob` MC steps data
 analysis is performed and results are output to files and/or to the log
 file. Restart files are also written every mprnt number of MC steps
-during the simulation. The default value is 10. The keyword dntmc\_dir
+during the simulation. The default value is 10. The keyword dntmc_dir
 allows the definition of an alternate directory to place DNTMC specific
 ouputfiles. These files can be very large so be sure enough space is
 available. This directory should be accessible by every process
@@ -183,10 +183,10 @@ below.
 | **Name**      | **Print Level** | **Description**                                                                                                                                                                                                          |
 | "debug"       | debug           | Some debug information written in Output file.                                                                                                                                                                           |
 | "information" | none            | Some information such as energies and geometries.                                                                                                                                                                        |
-| "mcdata"      | low             | Production of a set of files (Prefix.MCdata.\\\#num). These files are a concatenated list of structures, Energies, and Dipole Moments for each accepted configuration sampled in the MC run.                             |
-| "alldata"     | low             | Production of a set of files (Prefix.Alldata.\#num). These files include the same information as MCdata files. However, they include ALL configurations (accepted or rejected).                                          |
-| "mcout"       | debug - low     | Production of a set of files (Prefix.MCout.\#num). These files contain a set of informative and debug information. Also included is the set of information which mirrors the Alldata files.                              |
-| "fdist"       | low             | Production of a file (Prefix.fdist) which contains a concatenated list of distributions every mprnt\*100 MC steps.                                                                                                       |
+| "mcdata"      | low             | Production of a set of files (`Prefix.MCdata.#num`). These files are a concatenated list of structures, Energies, and Dipole Moments for each accepted configuration sampled in the MC run.                             |
+| "alldata"     | low             | Production of a set of files (`Prefix.Alldata.#num`). These files include the same information as MCdata files. However, they include ALL configurations (accepted or rejected).                                          |
+| "mcout"       | debug - low     | Production of a set of files (`Prefix.MCout.#num`). These files contain a set of informative and debug information. Also included is the set of information which mirrors the Alldata files.                              |
+| "fdist"       | low             | Production of a file (`Prefix.fdist`) which contains a concatenated list of distributions every `mprnt*100` MC steps.                                                                                                       |
 | "timers"      | debug           | Enables some timers in the code. These timers return performance statistics in the output file every time data analysis is performed. Two timers are used. One for the mcloop itself and one for the communication step. |
 
 </center>
@@ -204,12 +204,12 @@ defines the format for some of these files.
     distribution. The error is the RMS deviation of the average at each
     point. Each entry is as follows:   
 ```    
-    \[1\] \# Total Configurations 
-    \[2\] Species number \# 
-    \[3\](R coordinate in Angstroms) (Probability) (Error) 
-    \[Repeats nob times\] 
-    \[2 and 3 Repeats for each species\]
-    \[4\] \*\*\* separator.  
+    [1] # Total Configurations 
+    [2] Species number # 
+    [3](R coordinate in Angstroms) (Probability) (Error) 
+    [Repeats nob times] 
+    [2 and 3 Repeats for each species]
+    [4] *** separator.  
  ```     
 2.  `*.MCdata.#`  
       
@@ -220,13 +220,13 @@ defines the format for some of these files.
     (r-config) or the simulation radius (r-simulation). Each entry is as
     follows: 
 ```    
-    \[1\] (Atomic label) (X Coord.) (Y Coord.) (Z Coord.) 
-    \[1 Repeats for each atom in the cluster configuration, units are in
-    angstroms\] 
-    \[2\] Ucalc = \# hartree 
-    \[3\] Dipole = (X) (Y) (Z) au
-    \[4\] Rsim = \# Angstrom 
-    \[1 through 4 repeats for each accepted configuration\]  
+    [1] (Atomic label) (X Coord.) (Y Coord.) (Z Coord.) 
+    [1 Repeats for each atom in the cluster configuration, units are in
+    angstroms] 
+    [2] Ucalc = # hartree 
+    [3] Dipole = (X) (Y) (Z) au
+    [4] Rsim = # Angstrom 
+    [1 through 4 repeats for each accepted configuration]  
 ```      
 3.  `*.MCout.#`  
       
@@ -250,24 +250,26 @@ defines the format for some of these files.
     format is not very human readable but the basic fields are described
     in short here. 
 ```
-    Random number seed Potential energy in hartrees Sum
-    of potential energy Average potential energy Sum of the squared
-    potential energy Squared potential energy Dipole moment in au (x)
-    (Y) (Z) Rmin and Rmax Rsim (Radius corresponds to r-config or r-sim
-    methods) Array of nspecies length, value indicates the number of
-    each type of monomer which lies at radius Rsim from the center of
-    mass \[r-simulation sets these to zero\] Sum of Rsim Average of Rsim
-    Number of accepted translantional moves Number of accepted
-    rotational moves Number of accepted volume moves Number of attempted
-    moves (volume) (translational) (rotational) Number of accepted moves
-    (Zero) Number of accepted moves (Zero) Number of MC steps completed
-    \[1\] (Atom label) (X Coord.) (Y Coord.) (Z Coord.) \[1 repeats for
-    each atom in cluster configurations, units are in angstroms\] \[2\]
-    Array of nspecies length, number of configurations in bin \[3\]
-    Array of nspecies length, normalized number of configurations in
-    each bin \[4\] (Value of bin in Angstroms) (Array of nspecies
-    length, normalized probability of bin) \[2 through 4 repeats nob
-    times\]
+    Random number seed Potential energy in hartrees
+    Sum of potential energy
+    Average potential energy
+    Sum of the squared potential energy
+    Squared potential energy Dipole moment in au (x) (Y) (Z)
+    Rmin and Rmax Rsim (Radius corresponds to r-config or r-sim methods)
+    Array of nspecies length, value indicates the number of  each type of monomer which lies at radius Rsim from the center of mass [r-simulation sets these to zero]
+    Sum of Rsim Average of Rsim
+    Number of accepted translantional moves
+    Number of accepted rotational moves Number of accepted volume moves
+    Number of attempted moves (volume) (translational) (rotational)
+    Number of accepted moves (Zero)
+    Number of accepted moves (Zero)
+    Number of MC steps completed
+    [1] (Atom label) (X Coord.) (Y Coord.) (Z Coord.)
+    [1 repeats for each atom in cluster configurations, units are in angstroms]
+    [2] Array of nspecies length, number of configurations in bin
+    [3] Array of nspecies length, normalized number of configurations in each bin
+    [4] (Value of bin in Angstroms) (Array of nspecies length, normalized probability of bin)
+    [2 through 4 repeats nob  times]
 ```
 
 ## DNTMC Restart
@@ -279,7 +281,7 @@ postprocessing run is done utilizing only one processor.
 
 In order to restart a DNTMC run, postprocessing is required to put
 required information into the runtime database (RTDB). During a run
-restart information is written to files (Prefix.restart.\#num) every
+restart information is written to files (`Prefix.restart.#num`) every
 mprnt MC steps. This information must be read and deposited into the
 RTDB before a restart run can be done. The number taken as an argument
 is the number of files to read and must also equal the number of
@@ -305,7 +307,7 @@ The task directive for the DNTMC module is shown below:
 ## Example
 
 This example is for a molecular cluster of 10 monomers. A 50/50 mixture
-of water and ammonia. The energies are done at the SCF/6-31++G\*\* level
+of water and ammonia. The energies are done at the SCF/6-31++G** level
 of
 theory.
 ```
