@@ -404,8 +404,8 @@ where
 | bc95        |    | * |     | *   |       | N   |  [^33]  |
 | cpw6b95     |    | * |     | *   |       | N   |  [^36]  |
 | cpwb6k      |    | * |     | *   |       | N   |  [^36]  |
-| xm05        | * |    |     | *   | *    | N   |  [^37,^39]  |
-| cm05        |    | * |     | *   |       | N   |  [^37,^39]  |
+| xm05        | * |    |     | *   | *    | N   |  [^37],[^39]  |
+| cm05        |    | * |     | *   |       | N   |  [^37],[^39]  |
 | m05-2x      | * | * |     | *   | *    | N   |  [^40]  |
 | xm05-2x     | * |    |     | *   | *    | N   |  [^40]  |
 | cm05-2x     |    | * |     | *   |       | N   |  [^40]  |
@@ -517,7 +517,6 @@ to nuclear position.
 [^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
 [^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
 [^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
-[^38]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 109, 5656 (2005)
 [^39]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Phys. 123, 161103 (2005)
 [^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
 [^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
