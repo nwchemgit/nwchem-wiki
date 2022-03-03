@@ -72,13 +72,14 @@ options.
 | Variable     | Description |
 | ------------ | -------------------------------------------------------------------------------- |
 | `USE_MPI`    | Set to "y" to indicate that NWChem should be compiled with MPI                   |
-| `USE_MPIF`   | Set to "y" for the NWPW module to use fortran-bindings of MPI. <br /> (Generally set when USE\_MPI is set)                               |
-| `USE_MPIF4`  | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. <br /> (Generally set when USE\_MPI is set on most platforms) |
+| `USE_MPIF`   | Set to "y" for the NWPW module to use fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set)                               |
+| `USE_MPIF4`  | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set on most platforms) |
 | `LIBMPI`     | Name of the MPI library that should be linked with -l (eg. -lmpich)              |
 | `MPI_LIB`    | Directory where the MPI library resides                                          |
 | `MPI_INCLUDE`| Directory where the MPI include files reside                                     |  
   
-<br>
+<br>  
+  
 #### <span style="color:red;">Automatic detection of MPI variables with mpif90</span>
 
 **_New in NWChem 6.6_**: If the
@@ -261,13 +262,14 @@ hardware include:
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 | IBM ESSL    | Available only on IBM hardware <https://www.ibm.com/docs/en/essl/6.3> |
 
-<br>
-_**New since release 7.0.0 (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e ))**_:  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT
-```
-export BLASOPT=-lopenblas
-export LAPACK_LIB=-lopenblas
-```
-
+<br>  
+  
+_**New since release 7.0.0**_ (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e )):  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT  
+```  
+export BLASOPT=-lopenblas  
+export LAPACK_LIB=-lopenblas  
+```   
+  
 NWChem can also take advantage of the [ScaLAPACK
 library](http://www.netlib.org/scalapack/) if it is installed on your
 system. The following environment variables need to be set:
