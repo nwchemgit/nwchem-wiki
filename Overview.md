@@ -1,12 +1,14 @@
-  - [Introduction](Capabilities)
+#NWChem Overview
 
-  - [Compiling NWChem](Compiling-NWChem)
+## [Introduction](Capabilities.md)
 
-  - [Getting Started](Getting-Started)
+## [Compiling NWChem](Compiling-NWChem.md)
 
-  - [Top-level Directives](Top-level)
+## [Getting Started](Getting-Started.md)
 
-  - [NWChem Architecture](NWChem-Architecture)
+## [Top-level Directives](Top-level.md)
 
-  - [Running NWChem](Running)
+## [NWChem Architecture](NWChem-Architecture.md)
+
+## [Running NWChem](Running.md)
   
