@@ -1,4 +1,4 @@
-## ZMATRIX -- Z-matrix input
+## ZMATRIX: Z-matrix input
 
 The `ZMATRIX` directive is an optional directive that can be used within
 the compound `GEOMETRY` directive to specify the structure of the system
@@ -8,16 +8,16 @@ can include the `VARIABLES` and `CONSTANTS` directives, depending on the
 options selected. The general form of the compound `ZMATRIX` directive is
 as follows:
 ```
-   [ZMATRIX || ZMT || ZMAT 
-        <string tagn> <list_of_zmatrix_variables>  
-        ...  
-        [VARIABLES 
-             <string symbol> <real value>  
-             ... ]  
-        [CONSTANTS  
-             <string symbol> <real value>  
-             ... ]  
-   (END || ZEND)]
+   [ZMATRIX || ZMT || ZMAT 
+        <string tagn> <list_of_zmatrix_variables>  
+        ...  
+        [VARIABLES 
+             <string symbol> <real value>  
+             ... ]  
+        [CONSTANTS  
+             <string symbol> <real value>  
+             ... ]  
+   (END || ZEND)]
 ```
 The input module recognizes three possible spellings of this directive
 name. It can be invoked with `ZMATRIX`, `ZMT`, or `ZMAT`. The user can specify
@@ -51,11 +51,11 @@ be in the range 0 < α < 180.
 
 The Z-matrix input is specified sequentially as follows:
 ```
-  tag1  
-  tag2 i R  
-  tag3 i R j alpha 
-  tag4 i R j alpha k beta [orient]  
-  ...
+  tag1  
+  tag2 i R  
+  tag3 i R j alpha 
+  tag4 i R j alpha k beta [orient]  
+  ...
 ```
 The structure of this input is described in more detail below. In the
 following discussion, the tag or number of the center being currently
@@ -127,9 +127,9 @@ specify initial values for any symbolic variables used to define the
 Z-matrix tags. This is done using the optional VARIABLES directive,
 which has the general form:
 ```
- VARIABLES 
-   <string symbol>  <real value>  
-   ...
+ VARIABLES 
+   <string symbol>  <real value>  
+   ...
 ```
 Each line contains the name of a variable followed by its value.
 Optionally, an equals sign (=) can be included between the symbol and
@@ -142,9 +142,9 @@ refer to [Applying constraints in geometry
 optimizations](#Applying_constraints_in_geometry_optimizations).
 The general form of this directive is as follows:
 ```
- CONSTANTS  
-   <string symbol>  <real value>  
-   ...
+ CONSTANTS  
+   <string symbol>  <real value>  
+   ...
 ```
 Each line contains the name of a variable followed by its value. As with
 the `VARIABLES` directive, an equals sign (=) can be included between the
@@ -160,13 +160,13 @@ connectivity information. This requires that all tags be unique, and
 therefore different tags are used for the two hydrogen atoms, which may
 or may not be identical.
 ```
- geometry 
-   zmatrix   
-     O  
-     H1 O 0.95  
-     H2 O 0.95 H1 108.0  
-   end  
- end
+ geometry 
+   zmatrix   
+     O  
+     H1 O 0.95  
+     H2 O 0.95 H1 108.0  
+   end  
+ end
 ```
 The following example illustrates the Z-matrix input for the molecule
 CH<sub>3</sub>CF<sub>3</sub>. This input uses the numbers of centers to specify the
@@ -174,36 +174,36 @@ connectivity information (i, j, and k), and uses symbolic variables for
 the Z-matrix parameters R, alpha, and beta, which are defined in the
 inputs for the `VARIABLES` and `CONSTANTS` directives.
 ```
-geometry  
- zmatrix  
-  C   
-  C 1 CC  
-  H 1 CH1 2 HCH1  
-  H 1 CH2 2 HCH2 3  TOR1   
-  H 1 CH3 2 HCH3 3 -TOR2   
-  F 2 CF1 1 CCF1 3  TOR3   
-  F 2 CF2 1 CCF2 6  FCH1  
-  F 2 CF3 1 CCF3 6  -FCH1 
-  variables 
-    CC    1.4888  
-    CH1   1.0790  
-    CH2   1.0789   
-    CH3   1.0789    
-    CF1   1.3667   
-    CF2   1.3669   
-    CF3   1.3669  
-  constants  
-    HCH1  104.28  
-    HCH2  104.74   
-    HCH3  104.7   
-    CCF1  112.0713   
-    CCF2  112.0341   
-    CCF3  112.0340  
-    TOR1  109.3996   
-    TOR2  109.3997  
-    TOR3  180.0000  
-    FCH1  106.7846  
- end   
+geometry  
+ zmatrix  
+  C   
+  C 1 CC  
+  H 1 CH1 2 HCH1  
+  H 1 CH2 2 HCH2 3  TOR1   
+  H 1 CH3 2 HCH3 3 -TOR2   
+  F 2 CF1 1 CCF1 3  TOR3   
+  F 2 CF2 1 CCF2 6  FCH1  
+  F 2 CF3 1 CCF3 6  -FCH1 
+  variables 
+    CC    1.4888  
+    CH1   1.0790  
+    CH2   1.0789   
+    CH3   1.0789    
+    CF1   1.3667   
+    CF2   1.3669   
+    CF3   1.3669  
+  constants  
+    HCH1  104.28  
+    HCH2  104.74   
+    HCH3  104.7   
+    CCF1  112.0713   
+    CCF2  112.0341   
+    CCF3  112.0340  
+    TOR1  109.3996   
+    TOR2  109.3997  
+    TOR3  180.0000  
+    FCH1  106.7846  
+ end   
 end
 ```
 The input for any centers specified with Cartesian coordinates must be
