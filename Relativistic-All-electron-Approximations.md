@@ -13,7 +13,7 @@ The implementation of approximate all-electron relativistic methods in
 quantum chemical codes requires the removal of the negative energy
 states and the factoring out of the spin-free terms. Both of these may
 be achieved using a transformation of the Dirac Hamiltonian known in
-general as a Foldy-Wouthuysen transformation. Unfortunately this
+general as a Foldy-Wouthuysen (FW) transformation. Unfortunately this
 transformation cannot be represented in closed form for a general
 potential, and must be approximated. One popular approach is that
 originally formulated by Douglas and Kroll[^1] and developed by
@@ -105,14 +105,14 @@ fitting basis set based on the given `ao basis` by simply uncontracting
 that basis. This again is what is commonly implemented in quantum
 chemistry codes that include the Douglas-Kroll method. Additional
 flexibility is available to the user by explicitly specifying a
-Douglas-Kroll fitting basis set. This basis set must be named `D-K
-basis` (see [Basis Sets](Basis)).
+Douglas-Kroll fitting basis set. This basis set must be named
+`D-K basis` (see [Basis Sets](Basis.md)).
 
 ## Zeroth Order regular approximation (ZORA)
 
 The spin-free and spin-orbit one-electron zeroth-order regular
 approximation (ZORA) have been implemented. ZORA can be accessed only 
-via the [DFT](Density-Functional-Theory-for-Molecules) and [SO-DFT](Density-Functional-Theory-for-Molecules#spin-orbit-density-functional-theory-sodft) modules. The use of relativistic
+via the [DFT](Density-Functional-Theory-for-Molecules.md) and [SO-DFT](Density-Functional-Theory-for-Molecules.md#spin-orbit-density-functional-theory-sodft) modules. The use of relativistic
 effects with ZORA can be invoked by specifying:
 
 ```
@@ -230,7 +230,7 @@ safely be neglected, but for heavy atoms they should be included.
 
 In addition to the selection of this keyword in the `RELATIVISTIC`
 directive block, it is necessary to supply basis sets in addition to the
-[`ao basis`](Basis#basis-set-name). For the one-electron approximation, three basis sets are
+[`ao basis`](Basis.md#basis-set-name). For the one-electron approximation, three basis sets are
 needed: the *atomic FW* basis set, the *large component* basis set and the
 *small* component basis set. The atomic FW basis set should be included in
 the `ao basis`. The large and small components should similarly be
@@ -245,7 +245,7 @@ user to ensure that the basis sets are correctly specified.
 
 There is one further requirement in the specification of the basis sets.
 In the ao basis, it is necessary to add the `rel` keyword either to the
-[basis](Basis#rel-keyword) directive or the [library](Basis#basis-set-library) tag line (See [below](#examples-for-dyall-mod-dirac) for examples). The
+[basis](Basis.md#rel-keyword) directive or the [library](Basis.md#basis-set-library) tag line (See [below](#examples-for-dyall-mod-dirac) for examples). The
 former marks the basis functions specified by the tag as relativistic,
 the latter marks the whole basis as relativistic. The marking is
 actually done at the unique shell level, so that it is possible not only
