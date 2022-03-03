@@ -196,31 +196,39 @@ below.
 Several output files are available in the DNTMC module. This section
 defines the format for some of these files.
 
-1.  \*.fdist  
+1.  `*.fdist`  
       
     This file is a concatenated list of radial distribution functions
     printed out every mprnt MC steps. Each distribution is normalized
     (sum equal to one) with respect to the entire (all species)
     distribution. The error is the RMS deviation of the average at each
-    point. Each entry is as follows: \[1\] \# Total Configurations \[2\]
-    Species number \# \[3\](R coordinate in Angstroms) (Probability)
-    (Error) \[Repeats nob times\] \[2 and 3 Repeats for each species\]
+    point. Each entry is as follows:   
+```    
+    \[1\] \# Total Configurations 
+    \[2\] Species number \# 
+    \[3\](R coordinate in Angstroms) (Probability) (Error) 
+    \[Repeats nob times\] 
+    \[2 and 3 Repeats for each species\]
     \[4\] \*\*\* separator.  
-      
-2.  \*.MCdata.\#  
+ ```     
+2.  `*.MCdata.#`  
       
     This file is a concatenated list of accepted configurations. Each
     file corresponds to a single Markov chain. The dipole is set to zero
     for methods which do not produce a dipole moment with energy
     calculations. Rsim is either the radial extent of the cluster
     (r-config) or the simulation radius (r-simulation). Each entry is as
-    follows: \[1\] (Atomic label) (X Coord.) (Y Coord.) (Z Coord.) \[1
-    Repeats for each atom in the cluster configuration, units are in
-    angstroms\] \[2\] Ucalc = \# hartree \[3\] Dipole = (X) (Y) (Z) au
-    \[4\] Rsim = \# Angstrom \[1 through 4 repeats for each accepted
-    configuration\]  
-      
-3.  \*.MCout.\#  
+    follows: 
+```    
+    \[1\] (Atomic label) (X Coord.) (Y Coord.) (Z Coord.) 
+    \[1 Repeats for each atom in the cluster configuration, units are in
+    angstroms\] 
+    \[2\] Ucalc = \# hartree 
+    \[3\] Dipole = (X) (Y) (Z) au
+    \[4\] Rsim = \# Angstrom 
+    \[1 through 4 repeats for each accepted configuration\]  
+```      
+3.  `*.MCout.#`  
       
     This file has the same format and information content as the MCdata
     file except that additional output is included. This additional
@@ -229,18 +237,20 @@ defines the format for some of these files.
     included for accepted configurations does not include dipole moment
     or radius.  
       
-4.  \*.MCall.\#  
+4.  `*.MCall.#`  
       
     This file has the same format as the MCdata file expect that it
     includes information for all configurations for which an energy is
     determined. All accepted and rejected configurations are included in
     this file.  
       
-5.  \*.restart.\#  
+5.  `*.restart.#`  
       
     This file contains the restart information for each subgroup. Its
     format is not very human readable but the basic fields are described
-    in short here. Random number seed Potential energy in hartrees Sum
+    in short here. 
+```
+    Random number seed Potential energy in hartrees Sum
     of potential energy Average potential energy Sum of the squared
     potential energy Squared potential energy Dipole moment in au (x)
     (Y) (Z) Rmin and Rmax Rsim (Radius corresponds to r-config or r-sim
@@ -258,6 +268,7 @@ defines the format for some of these files.
     each bin \[4\] (Value of bin in Angstroms) (Array of nspecies
     length, normalized probability of bin) \[2 through 4 repeats nob
     times\]
+```
 
 ## DNTMC Restart
 ```
