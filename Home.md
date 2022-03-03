@@ -7,45 +7,43 @@ some_url: https://nwchemgit.github.io
   
 # NWChem User Documentation
 
--   [Overview](Overview)
+##  [Overview](Overview)
 
 <!-- -->
 
--   [System Description](System-Description)
+##  [System Description](System-Description)
 
 <!-- -->
 
--   [Quantum Mechanical Methods](Quantum-Mechanical-Methods)
+##  [Quantum Mechanical Methods](Quantum-Mechanical-Methods)
 
 <!-- -->
 
--   [Quantum Molecular Dynamics](Quantum-Molecular-Dynamics)
+##  [Quantum Molecular Dynamics](Quantum-Molecular-Dynamics)
 
 <!-- -->
 
--   [Molecular Mechanics](Classical-Methods)
+##   [Molecular Mechanics](Classical-Methods)
 
 <!-- -->
 
--   [Hybrid Approaches](Hybrid-Approaches)
+##  [Hybrid Approaches](Hybrid-Approaches)
 
 <!-- -->
 
--   [Potential Energy Surface
-    Analysis](Potential-Energy-Surface-Analysis)
+##  [Potential Energy Surface Analysis](Potential-Energy-Surface-Analysis)
 
 <!-- -->
 
--   [Electronic Structure
-    Analysis](Electronic-Structure-Analysis)
+##  [Electronic Structure Analysis](Electronic-Structure-Analysis)
 
 <!-- -->
 
--   [Other Capabilities](Other-Capabilities)
+##  [Other Capabilities](Other-Capabilities)
 
 <!-- -->
 
--   [Examples](Examples)
+##  [Examples](Examples)
 
 <!-- -->
 
@@ -57,25 +55,25 @@ some_url: https://nwchemgit.github.io
 
 <!-- -->
 
--   [Developer](Developer)
+##  [Developer](Developer)
 
 <!-- -->
 
--   [Benchmarks](Benchmarks)
+##   [Benchmarks](Benchmarks)
 
 <!-- -->
 
--   [Containers](Containers)
+##  [Containers](Containers)
 
 <!-- -->
 
--   [FAQ](FAQ)
+##  [FAQ](FAQ)
 
 <!-- -->
 
--   [Known Bugs](Known-Bugs)
+##   [Known Bugs](Known-Bugs)
 
 <!-- -->
 
--   [Citation](Citation)
+##  [Citation](Citation)
 
