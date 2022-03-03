@@ -115,7 +115,7 @@ data, only through a (most of the time) [disk-resident run time
 database](NWChem-Architecture), which is similar to the
 GAMESS-UK dumpfile or the Gaussian checkpoint file. The run time
 database contains all the information necessary to
-[restart](Top-level#START_.2F_RESTART) a task.
+[restart](Start_Restart.md) a task.
 
 The [structure and flow of the program and input](Top-level)
 are such that it allows for performing multiple tasks within one job.
