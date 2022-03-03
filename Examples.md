@@ -1,4 +1,5 @@
-  - [Sample input files](Sample)
+# EXamples
 
+## [Sample input files](Sample.md)
 
-  - [Examples of geometries using symmetry](Geometry-examples)
+## [Examples of geometries using symmetry](Geometry-examples.md)

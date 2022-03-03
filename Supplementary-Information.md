@@ -1,5 +1,7 @@
-  - [Global Arrays](http://hpc.pnl.gov/globalarrays/)
+# Supplementary Information
 
-  - [Choosing the right ARMCI library](ARMCI)
+## [Global Arrays](http://hpc.pnl.gov/globalarrays/)
 
-  - [Software supporting NWChem](Software-supporting-NWChem)
+## [Choosing the right ARMCI library](ARMCI.md)
+
+## [Software supporting NWChem](Software-supporting-NWChem.md)

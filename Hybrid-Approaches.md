@@ -1,25 +1,15 @@
-  - [COSMO Solvation Model](COSMO-Solvation-Model)
+# Hybrid Approaches
 
-<!-- end list -->
+## [COSMO Solvation Model](COSMO-Solvation-Model.md)
 
-  - [SMD Model](SMD-Model)
+## [SMD Model](SMD-Model.md)
 
-<!-- end list -->
+## [VEM Model](VEM-Model.md)
 
-  - [VEM Model](VEM-Model)
+## [Hybrid Calculations with ONIOM](ONIOM.md)
 
-<!-- end list -->
+## [Combined quantum and molecular mechanics (QM/MM)](QMMM.md)
 
-  - [Hybrid Calculations with ONIOM](ONIOM)
+## [External charges (Bq)](Bq.md)
 
-<!-- end list -->
-
-  - [Combined quantum and molecular mechanics (QM/MM)](QMMM)
-
-<!-- end list -->
-
-  - [External charges (Bq)](Bq)
-
-<!-- end list -->
-
-  - [1D-RISM ](1D-RISM)
+## [1D-RISM ](1D-RISM.md)
