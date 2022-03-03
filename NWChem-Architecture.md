@@ -102,19 +102,19 @@ the coordinates of the atoms (or centers), and identify the geometry
 with a unique name.
 
 Unless a specific name is defined for the geometry, (such as the name
-"test geom" shown in the example), the default name of geometry is
+`"test geom"` shown in the example), the default name of geometry is
 assigned. This is the geometry name that computational modules will look
 for when executing a calculation. The SET directive can be used in the
 input to force NWChem to look for a geometry with a name other than
 geometry. For example, to specify use of the geometry with the name
-"test geom" in the example above, the SET directive is as follows:
+`"test geom"` in the example above, the SET directive is as follows:
 ```
 set geometry "test geom"
 ```
 NWChem will automatically check for such indirections when loading
 geometries. Storage of data associated with basis sets, the other
 database resident object, functions in a similar fashion, using the
-default name "ao basis".
+default name `"ao basis"`.
 
 ## Persistence of data and restart
 

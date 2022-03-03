@@ -83,7 +83,7 @@ allow you to overwrite the value of nwchem\_basis\_library in your
 ```
    % setenv NWCHEM_BASIS_LIBRARY "$NWCHEM/data-5.0/libraries/"
 ```
-Do not forget the trailing "/".
+Do not forget the trailing `"/"`.
 
 ## Input File Structure
 
@@ -322,17 +322,17 @@ In the input file:
   - a string, token, or field is a sequence of ASCII characters (NOTE:
     if the string includes blanks or tabs (i.e., white space), the
     entire string must be enclosed in double quotes).
-  - \\ (backslash) at the end of a line concatenates it with the next
+  - `\` (backslash) at the end of a line concatenates it with the next
     line. Note that a space character is automatically inserted at this
     point so that it is not possible to split tokens across lines. A
     backslash is also used to quote special characters such as
     whitespace, semi-colons, and hash symbols so as to avoid their
     special meaning (NOTE: these special symbols must be quoted with the
     backslash even when enclosed within double quotes).
-  - ; (semicolon) is used to mark the end of a logical input line within
+  - `;` (semicolon) is used to mark the end of a logical input line within
     a physical line of input.
-  - \# (the hash or pound symbol) is the comment character. All
-    characters following \# (up to the end of the physical line) are
+  - `#` (the hash or pound symbol) is the comment character. All
+    characters following `#` (up to the end of the physical line) are
     ignored.
   - If any input line (excluding [Python programs](Python.md) begins
     with the string INCLUDE (ignoring case) and is followed by a valid
@@ -376,16 +376,16 @@ conventions are used in the generic descriptions of the NWChem input.
   - variable names always appear in lower case, in computer typeface,
     and enclosed in angle brackets to distinguish them from keywords
     (e.g., `<input_filename>`, `<basisname>`, `<tag>`).
-  - $variable$ is used to indicate the substitution of the value of a
+  - `$variable$` is used to indicate the substitution of the value of a
     variable.
-  - () is used to group items (the parentheses and other special symbols
+  - `()` is used to group items (the parentheses and other special symbols
     should not appear in the input).
-  - || separate exclusive options, parameters, or formats.
-  - [  ] enclose optional entries that have a default value.
-  - < > enclose a type, a name of a value to be specified, or a
+  - `||` separate exclusive options, parameters, or formats.
+  - `[  ]` enclose optional entries that have a default value.
+  - `< >` enclose a type, a name of a value to be specified, or a
     default value, if any.
-  - \\ is used to concatenate lines in a description.
-  - ... is used to indicate indefinite continuation of a list.
+  - `\` is used to concatenate lines in a description.
+  - `...` is used to indicate indefinite continuation of a list.
 
 An input parameter is identified in the description of the directive by
 prefacing the name of the item with the type of data expected, i.e.,
@@ -448,7 +448,7 @@ The third keyword, `output`, allows the user to tell the code where to
 store the vectors, by specifying an ASCII string for the parameter
 `output_movecs`. If no entry is specified for this parameter, the default
 is to write the vectors back into either the user- specified MO vectors
-input file or, if this is not available, the file $file_prefix$.movecs.
+input file or, if this is not available, the file `$file_prefix$.movecs`.
 
 A particular example of the VECTORS directive is shown below. It
 specifies both the input and output keywords, but does not use the swap
