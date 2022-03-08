@@ -440,18 +440,18 @@ These keywords stand for the following models:
     least two occupied and unoccupied active spinorbital labels. (3)
     Version III (keyword T3A_LVL 3) uses triply excited amplitudes that
     are defined by active indices only. Each version requires defining
-    relevant set of occupied active α and β spinorbitals (ACTIVE_OA and
-    ACTIVE_OB) as well as active unoccupied α and β spinorbitals
-    (ACTIVE_VA and ACTIVE_VB).
+    relevant set of occupied active &alpha; and &beta; spinorbitals (ACTIVE_OA and
+    `ACTIVE_OB`) as well as active unoccupied &alpha; and &beta; spinorbitals
+    (`ACTIVE_VA` and `ACTIVE_VB`).
   - CCSDTQ: coupled-cluster singles, doubles, triples, & quadruples
     (also EOM-CCSDTQ),
   - CCSD(T): CCSD and perturbative connected triples,
   - CCSD[T]: CCSD and perturbative connected triples,
   - CR-CCSD[T]: completely renormalized CCSD[T] method,
   - CR-CCSD(T): completely renormalized CCSD(T) method,
-  - CCSD(2)_T: CCSD and perturbative <img alt="$CCSD(T)_T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5ebf56ead8349245137cf95ab6705db2.svg?invert_in_darkmode&sanitize=true" align=middle width="84.85587pt" height="24.56553pt"/> correction,
+  - CCSD(2)_T: CCSD and perturbative CCSD(T)_T correction,
   - CCSD(2)_TQ: CCSD and perturbative CCSD(2) correction,
-  - CCSDT(2)_Q: CCSDT and perturbative CCSDT(2)<img alt="$_Q$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d0b6053d6e75530c9603ac06fd934c9b.svg?invert_in_darkmode&sanitize=true" align=middle width="12.94689pt" height="22.38192pt"/> correction.
+  - CCSDT(2)_Q: CCSDT and perturbative CCSDT(2)_Q correction.
   - LR-CCSD(T): CCSD and perturbative locally renormalized CCSD(T)
     correction,
   - LR-CCSD(TQ)-1: CCSD and perturbative locally renormalized CCSD(TQ)
@@ -459,9 +459,9 @@ These keywords stand for the following models:
   - CREOMSD(T): EOMCCSD energies and completely renormalized
     EOMCCSD(T)(IA) correction. In this option NWCHEM prints two
     components: (1) total energy of the K-th state
-    E<sub>K</sub>=E<sub>K</sub> </sup>EOMCCSD</sup>+δ<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>(T) and (2)
+    E<sub>K</sub>=E<sub>K</sub> </sup>EOMCCSD</sup>+&delta;<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>(T) and (2)
     the so-called δ-corrected EOMCCSD excitation energy
-    ω<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=ω<sub>K</sub><sup>EOMCCSD</sup>+δ<sub>K</sub><sup> CR-EOMCCSD(T),IA</sup>(T).
+    &omega;<sub>K</sub><sup>CR-EOMCCSD(T),IA</sup>=&omega;<sub>K</sub><sup>EOMCCSD</sup>+&delta;<sub>K</sub><sup> CR-EOMCCSD(T),IA</sup>(T).
   - CREOM(T)AC: active-space CR-EOMCCSD(T) approach,
   - QCISD: quadratic configuration interaction singles & doubles,
   - CISD: configuration interaction singles & doubles,
@@ -1508,9 +1508,9 @@ TASK TCE ENERGY
 ```
 
 Active-space CCSDt/EOMCCSDt calculations (version I) of several excited
-states of the <img alt="$Be_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/650a5bafc9258057b3db4920eedd9cd7.svg?invert_in_darkmode&sanitize=true" align=middle width="27.400395pt" height="22.38192pt"/> molecule. Three highest-lying occupied α and β
-orbitals (active_oa and active_ob) and nine lowest-lying unoccupied α
-and β orbitals (active_va and active_vb) define the active space.
+states of the Be<sub>3</sub> molecule. Three highest-lying occupied &alpha; and &beta;
+orbitals (active_oa and active_ob) and nine lowest-lying unoccupied &alpha; and	&beta;
+orbitals (active_va and active_vb) define the active space.
 
 ```
 START TCE_ACTIVE_CCSDT
