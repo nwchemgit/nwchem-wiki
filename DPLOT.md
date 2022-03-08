@@ -111,7 +111,7 @@ DENSMAT [<string Name of density matrix file>]
 
 ### Charge Density
 
-Example of charge density plot (with Gaussian Cube output):
+### Example of HF charge density plot (with Gaussian Cube output)
 ```
 start n2  
 geometry  
@@ -134,6 +134,34 @@ dplot
   output chargedensity.cube  
 end  
 task scf       
+task dplot
+```
+
+### Example of CCSD charge density plot (with Gaussian Cube output)
+```
+start n2
+geometry
+ n 0 0  0.53879155
+ n 0 0 -0.53879155
+ symmetry c2v
+end
+basis; n library cc-pvdz;end
+tce
+ ccsd
+ densmat n2.densmat
+end
+task tce energy
+dplot
+ TITLE HOMO
+ LimitXYZ
+ -3.0 3.0 10
+ -3.0 3.0 10
+ -3.0 3.0 10
+ spin total
+ gaussian
+ densmat n2.densmat
+ output ccsddensity.cube
+end
 task dplot
 ```
 ### Molecular Orbital
