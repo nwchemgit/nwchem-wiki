@@ -199,9 +199,9 @@ granularity of the work to be distributed. The size of tiles (tilesize)
 defines also the local memory requirements in all TCE derived CC
 implementations. For CI/CC/EOMCC/LR-CC models based on the sinlges and
 doubles models (CISD,CCSD,EOMCCSD,LR-CCSD) the peak local memory
-requirement is proportional to the <img alt="$(tilesize)^{4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/64683788b224dc948aaa3b65bddf1565.svg?invert_in_darkmode&sanitize=true" align=middle width="72.940725pt" height="26.70657pt"/>. In approaches
+requirement is proportional to the `tilesize`<sup>4</sup>. In approaches
 accounting for triples, either in iterative or non-iterative fashion,
-the local memory usage is proportional to <img alt="$(tilesize)^{6}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4927230b0a05b93323c6d48999745879.svg?invert_in_darkmode&sanitize=true" align=middle width="72.940725pt" height="26.70657pt"/>. This means
+the local memory usage is proportional to `tilesize`<sup>6</sup>. This means
 that in the CCSD(T), CCSDt, CCSDT, CR-EOMCCSD(T), EOMCCSDt, EOMCCSDT,
 LR-CCSDT caluclations the tilesize cannot be defined too large.
 
@@ -364,7 +364,7 @@ can be performed with the following input blocks:
 
 This calculation (and any correlation calculation in the TCE module
 using a RHF or RDFT reference for a closed-shell system) skips the
-storage and computation of all β spin blocks of integrals and excitation
+storage and computation of all &beta; spin blocks of integrals and excitation
 amplitudes. ROHF-UCCSDT (U standing for spin-unrestricted) for an
 open-shell doublet system can be requested by
 
@@ -544,28 +544,28 @@ file. First, the TCE group and secondly the MRCCDATA group. In the TCE
 group the iterative level of theory is defined, e.g. BWCCSD or MKCCSD.
 This implementation was designed for complete model spaces (CMS) which
 means that the modelspace contains all Slater determinants of all
-possible (in the context of the spatial and spin symmetry, M_s)
+possible (in the context of the spatial and spin symmetry, M<sub>s</sub>)
 distributions of active electrons among active spin orbitals. The user
 can define the modelspace in two ways. As a first approach the model
 space can be defined by hand, as shown in the two examples below. The
-input of the model space starts with the "NREF" keyword followed by the
+input of the model space starts with the `NREF` keyword followed by the
 number of reference configurations that will be used, which should equal
 the number of strings for references below. In the input "2" refers to
 doubly occupied orbitals, "a" to alpha electrons, "b" to beta electrons
 and "0" identifies an unoccupied orbital. When the model space is
 defined by hand the occupation strings have to include the frozen
 orbitals as well. In the second way the CMS can be generated using the
-keyword "CAS" followed by the number of active electrons and the number
-of active orbitals. When using the "CAS" keyword we strongly recommend
+keyword `CAS` followed by the number of active electrons and the number
+of active orbitals. When using the `CAS` keyword we strongly recommend
 that users check the references that are generated.
 
 As the model space typically includes multiple configurations it is
 possible to use the MRCC method to calculate excited states instead of
 the ground state. For this reason it is required to specify the root of
-interest. The ROOT keyword followed by the root number specifies the
+interest. The `ROOT` keyword followed by the root number specifies the
 state the code calculates. The lowest root, the ground state, is
-identified as root 1. If one wants to calculate the third root the
-keyword ROOT 3 should be used. An example is given below.
+identified as `root 1`. If one wants to calculate the third root the
+keyword `ROOT 3` should be used. An example is given below.
 ```
  echo
  start tce_mrcc_bwcc 
@@ -918,8 +918,7 @@ As in the EOMCCSD input we can request any number of roots.
 In analogy to the EOMCC calculations we can customize the number of
 initial guesses by using "set tce:maxeorb" directive. For example for
 system with the symmetry with the orbital energy structure shown
-below   
-<img alt="ea ip" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/images/ea-ip-initial-guess.png" align=middle with="336pt" height="412pt"/>  
+below  *ea ip*
 one can use the energy window (in the sense of the absolute value of the
 HF orbital energies) to pinpoint the initial guesses. If one is
 interested in calculating one EA-EOMCCSD root of the a1 symmetry the
@@ -941,7 +940,7 @@ be only one such a vector corresponding to the unoccupied orbital energy
 option should be used(there are two a1 unoccupied orbitals with energies
 less than 0.16).
 
-For the IP-EOMCCSD case the "set tce:maxeorb" option works in a similar
+For the IP-EOMCCSD case the `set tce:maxeorb` option works in a similar
 way. For example if one is looks for 1 IP-EOMCCSD root of a1 symmetry ,
 
 ```
@@ -1087,21 +1086,21 @@ At the moment, the first and second geometrical derivatives of
 excitation energies that are needed in force, geometry, and frequency
 calculations are obtained by numerical differentiation. These keywords
 may be used to specify which excited state root is being used for the
-geometrical derivative calculation. For instance, when TARGET 3 and
-TARGETSYM a1g are included in the input block, the total energy (ground
+geometrical derivative calculation. For instance, when `TARGET 3` and
+`TARGETSYM a1g` are included in the input block, the total energy (ground
 state energy plus excitation energy) of the third lowest excited state
 root (excluding the ground state) transforming as the irreducible
 representation a1g will be passed to the module which performs the
 derivative calculations. The default values of these keywords are 1 and
 none, respectively.
 
-The keyword TARGETSYM is essential in excited state geometry
+The keyword `TARGETSYM` is essential in excited state geometry
 optimization, since it is very common that the order of excited states
 changes due to the geometry changes in the course of optimization.
-Without specifying the TARGETSYM, the optimizer could (and would likely)
+Without specifying the `TARGETSYM`, the optimizer could (and would likely)
 be optimizing the geometry of an excited state that is different from
 the one the user had intended to optimize at the starting geometry. On
-the other hand, in the frequency calculations, TARGETSYM must be none,
+the other hand, in the frequency calculations, `TARGETSYM` must be `none`,
 since the finite displacements given in the course of frequency
 calculations will lift the spatial symmetry of the equilibrium geometry.
 When these finite displacements can alter the order of excited states
@@ -1112,8 +1111,8 @@ feasible.
 
 By adding this keyword to the input block, the user can request the
 module to seek just the roots of the specified irreducible
-representation as TARGETSYM. By default, this option is not set.
-TARGETSYM must be specified when SYMMETRY is
+representation as `TARGETSYM`. By default, this option is not set.
+`TARGETSYM` must be specified when `SYMMETRY` is
 invoked.
 
 ### EOMSOL -- alternative solver for the right EOMCCSD eigenvalue problem
@@ -1191,9 +1190,9 @@ while the buffer root is determined with relax conv. criterion 1.0d-3.
 
 In the 5.0 version a new option has been added in order to provide more
 economical way of storing two-electron integrals used in CC calculations
-based on the RHF and ROHF references. The 2EORB keyword can be used for
+based on the RHF and ROHF references. The `2EORB` keyword can be used for
 all CC methods except for those using an active-space (CCSDt) up to NWChem version 
-6.3. After that, further optimization restricted the use of 2EORB to 
+6.3. After that, further optimization restricted the use of `2EORB` to 
 CCSD-based methods. Note that the four-index transformation is usually
 an insignificant amount of the wall time for methods involving iterative
 triples anyway. 
@@ -1211,35 +1210,35 @@ open-shell calculations.
 
 Several new computation-intensive algorithms has been added with the
 purpose of improving scalability and overcoming local memory bottleneck
-of the 5.0 2EORB 4-index transformation. In order to give the user a
+of the 5.0 `2EORB` 4-index transformation. In order to give the user a
 full control over this part of the TCE code several keywords were
 designed to define the most vital parameters that determine the
 perfromance of 4-index transformation. All new keywords must be used
-with the 2EORB keyword, and thus will not work beyond CCSD methods after 
-NWChem 6.3 (see explanation for 2EORB above). The 2emet keyword (default 
+with the `2EORB` keyword, and thus will not work beyond CCSD methods after 
+NWChem 6.3 (see explanation for `2EORB` above). The 2emet keyword (default 
 value 1 or `2emet 1`, refers to the older 4-index transformation), defines the algorithm to be
-used. By putting 2emet 2 the TCE code will execute the algoritm based on
+used. By putting `2emet 2` the TCE code will execute the algoritm based on
 the two step procedure with two intermediate files. In some instances
 this algorithm is characterized by better timings compared to algorithms
 3 and 4, although it is more memory demanding. In contrast to algorithms
 nr 1,3, and 4 this approach can make use of a disk to store intermediate
-files. For this purpose one should use the keyword idiskx (idiskx 0
+files. For this purpose one should use the keyword `idiskx` (`idiskx 0`
 causes that all intermediate files are stored on global arrays, while
-idiskx 1 tells the code to use a disk to store intermediates; default
-value of idiskx is equal 0). Algorithm nr 3 (2emet 3) uses only one
-intermediate file whereas algorithm nr 4 (2emet 4) is a version of
+`idiskx 1` tells the code to use a disk to store intermediates; default
+value of `idiskx` is equal 0). Algorithm nr 3 (`2emet 3`) uses only one
+intermediate file whereas algorithm nr 4 (`2emet 4`) is a version of
 algorithm 3 with the option of reducing the memory requirements. For
-example, by using new keyword split 4 we will reduce the size of only
-intermediate file by factor of 4 (the split keyword can be only used in
+example, by using the new keyword `split 4` we will reduce the size of only
+intermediate file by factor of 4 (the `split` keyword can be only used in
 the context of algorithm nr 4). All new algorithms (i.e. 2emet 2+) use
 the attilesize setting to define the size of the atomic tile. By default
-attilesize is set equal 30. For larger systems the use of larger values
-of attilesize is recommended (typically between 40-60).
+`attilesize` is set equal 30. For larger systems the use of larger values
+of `attilesize` is recommended (typically between 40-60).
 
-Additional algorithms are numbered 5, 6 and 9. Other values of 2emet are
+Additional algorithms are numbered 5, 6 and 9. Other values of `2emet` are
 not supported and refer to methods which do not function properly.
-Algorithms 5 and 6 were written as out-of-core <img alt="$N^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f56fbac61e4cf5d8984f6b2d8b7fbe49.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> methods (idiskx1) and are the most efficient algorithms at the present time. The
-corresponding in-core variants (idiskx 0) are available but require
+Algorithms 5 and 6 were written as out-of-core N<sup>5</sup> methods (`idiskx1`) and are the most efficient algorithms at the present time. The
+corresponding in-core variants (`idiskx 0`) are available but require
 excessive memory with respect to the methods discussed above, although
 they may be faster if sufficient memory is available (to get enough
 memory often requires excessive nodes, which decreases performance in
@@ -1271,20 +1270,20 @@ using complex heterogeneous I/O is in development. Restarting with
 algorithm 9 is not supported and attempting to use this feature with the
 present version may produce meaningless results.
 
-New is the inclusion of multiple 2emet options for the spin-orbital
+New is the inclusion of multiple `2emet` options for the spin-orbital
 transformations, which are the default when 2eorb is not set and are
 mandatory for UHF and KS references. The are currently three algorithms
 1, 2 and 3 available. The numbering scheme does not correspond in any
 way to the numbering scheme for the 2eorb case, except that `2emet 1`
 corresponds to the default algorithm present in previous releases, which
-uses the user-defined I/O scheme. Algorithm 2 (2emet 2) writes an SF
+uses the user-defined I/O scheme. Algorithm 2 (`2emet 2`) writes an SF
 file for the half-transformed integrals, which is at least an
 order-of-magnitude larger than the fully-transformed integrals, but
 stores the fully-transformed integrals in core. Thus, once the 4-index
 transformation is complete, this algorithm will perform exactly as when
 algorithm 1 is used. Unfortuntely, the spin-orbital 2-e
 fully-transformed integrals are still quite large and an algorithm
-corresponding to 2eorb/2emet=9 is available with 2emet 3. Algorithm 3 is
+corresponding to 2eorb/2emet=9 is available with `2emet 3`. Algorithm 3 is
 also limited in its scalability, but it permits relatively large
 UHF-based calculations using single workstations for patient users.
 
@@ -1333,7 +1332,7 @@ tce_ccsd_t_xmem and tce_cr_eomccsd_t_xmem).
 ### DIPOLE -- the ground- and excited-state dipole moments
 
 When this is set, the ground-state CC calculation will enter another
-round of iterative step for the so-called <img alt="$\Lambda$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b23332f99af850a48831f80dbf681ed6.svg?invert_in_darkmode&sanitize=true" align=middle width="11.372955pt" height="22.38192pt"/> equation to obtain
+round of iterative step for the so-called &Lambda; equation to obtain
 the one-particle density matrix and dipole moments. Likewise, for
 excited-states (EOM-CC), the transition moments and dipole moments will
 be computed when (and only when) this option is set. In the latter case,
@@ -1831,7 +1830,7 @@ be found in the references of those papers.
 The coupled-cluster response codes were generated in the same manner as
 the rest of the TCE, thus all previous comments on performance apply
 here as well. The improved offsets available in the CCSD and EOM-CCSD
-codes is now also available in the CCSD-Λ and CCSD-LR codes. The
+codes is now also available in the CCSD-&Lambda; and CCSD-LR codes. The
 bottleneck for CCSD-LR is the same as EOM-CCSD, likewise for CCSDT-LR
 and EOM-CCSDT. The CCSD-LR code has been tested on as many as 1024
 processors for systems with more than 2000 spin-orbitals, while the
@@ -1855,13 +1854,13 @@ set tce:respaxis <logical respaxis(3) default: T T T>
 The boolean variable lineresp invokes the linear response equations for
 the corresponding coupled-cluster method (only CCSD and CCSDT possess
 this feature) and evaluates the dipole polarizability. When lineresp is
-true, the Λ-equations will also be solved, so the dipole moment is also
+true, the &Lambda;-equations will also be solved, so the dipole moment is also
 calculated. If no other options are set, the complete dipole
 polarizability tensor will be calculated at zero frequency (static). Up
 to nine real frequencies can be set; adding more should not crash the
 code but it will calculate meaningless quantities. If one desires to
-calculate more frequencies at one time, merely change the line double
-precision afreq(9) in `$NWCHEM_TOP/src/tce/include/tce.fh`
+calculate more frequencies at one time, merely change the line `double
+precision afreq(9)` in `$NWCHEM_TOP/src/tce/include/tce.fh`
 appropriately and recompile.
 
 The user can choose to calculate response amplitudes only for certain
