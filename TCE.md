@@ -338,7 +338,7 @@ parallel performance especially in large CCSD/EOMCCSD runs.
 
 ## Keywords of TCE input block
 
-### HF, SCF, or DFT -- the reference wave function
+### HF, SCF, or DFT: the reference wave function
 
 This keyword tells the module which of the HF (SCF) or DFT module is
 going to be used for the calculation of a reference wave function. The
@@ -414,7 +414,7 @@ calculation of an open-shell doublet system,
 Note that the default model of the DFT module is
 LDA.
 
-### CCSD,CCSDT,CCSDTQ,CISD,CISDT,CISDTQ, MBPT2,MBPT3,MBPT4, etc. -- the correlation models
+### CCSD,CCSDT,CCSDTQ,CISD,CISDT,CISDTQ, MBPT2,MBPT3,MBPT4, etc.: the correlation models
 
 These keywords stand for the following models:
 
@@ -951,19 +951,19 @@ directive should be used (there is only one occupied orbital of a1
 symmetry with the absolute value of orbital energy less than 0.24),
 etc.
 
-### THRESH -- the convergence threshold of iterative solutions of amplitude equations
+### THRESH: the convergence threshold of iterative solutions of amplitude equations
 
 This keyword specifies the convergence threshold of iterative solutions
 of amplitude equations, and applies to all of the CI, CC, and MBPT
 models. The threshold refers to the norm of residual, namely, the
 deviation from the amplitude equations. The default value is 1e-6.
 
-### MAXITER -- the maximum number of iterations
+### MAXITER: the maximum number of iterations
 
 It sets the maximum allowed number iterations for the iterative
 solutions of amplitude equations. The default value is 100.
 
-### IO -- parallel I/O scheme
+### IO: parallel I/O scheme
 
 There are five parallel I/O schemes implemented for all the models,
 which need to be wisely chosen for a particular problem and computer
@@ -1021,7 +1021,7 @@ the 4-index transformation are accessible using the 2emet options. See
 integrals](#2emet-alternative-storage-of-two-electron-integrals) 
 for details.
 
-### DIIS -- the convergence acceleration
+### DIIS: the convergence acceleration
 
 It sets the number iterations in which a DIIS extrapolation is performed
 to accelerate the convergence of excitation amplitudes. The default
@@ -1039,7 +1039,7 @@ between 0.3 and 0.5 for CC calculations for ground states of
 multi-configurational character. Otherwise, the value of lshift is by
 default set equal to 0.
 
-### FREEZE -- the frozen core/virtual approximation
+### FREEZE: the frozen core/virtual approximation
 
 Some of the lowest-lying core orbitals and/or some of the highest-lying
 virtual orbitals may be excluded in the calculations by this keyword
@@ -1072,7 +1072,7 @@ instance, to freeze the top 5 virtuals
  FREEZE virtual 5
 ```
 
-### NROOTS -- the number of excited states
+### NROOTS: the number of excited states
 
 One can specify the number of excited state roots to be determined. The
 default value is 1. It is advised that the users request several more
@@ -1080,7 +1080,7 @@ roots than actually needed, since owing to the nature of the trial
 vector algorithm, some low-lying roots can be missed when they do not
 have sufficient overlap with the initial guess vectors.
 
-### TARGET and TARGETSYM -- the target root and its symmetry
+### TARGET and TARGETSYM: the target root and its symmetry
 
 At the moment, the first and second geometrical derivatives of
 excitation energies that are needed in force, geometry, and frequency
@@ -1107,7 +1107,7 @@ When these finite displacements can alter the order of excited states
 including the target state, the frequency calculation is not be
 feasible.
 
-### SYMMETRY -- restricting the excited state symmetry
+### SYMMETRY: restricting the excited state symmetry
 
 By adding this keyword to the input block, the user can request the
 module to seek just the roots of the specified irreducible
@@ -1115,7 +1115,7 @@ representation as `TARGETSYM`. By default, this option is not set.
 `TARGETSYM` must be specified when `SYMMETRY` is
 invoked.
 
-### EOMSOL -- alternative solver for the right EOMCCSD eigenvalue problem
+### EOMSOL: alternative solver for the right EOMCCSD eigenvalue problem
 
 The EOMSOL enables the user to switch between two algorithms for solving
 EOMCCSD eigenproblem. When EOMSOL is set equal to 1 (`eomsol 1`
@@ -1186,7 +1186,7 @@ In this example the CCSD equations are solved with the 1.0d-6 threshold,
 the first n (2) EOMCCSD roots are determined with the 10d-4 accuracy,
 while the buffer root is determined with relax conv. criterion 1.0d-3.
 
-### 2EORB -- alternative storage of two-electron integrals
+### 2EORB: alternative storage of two-electron integrals
 
 In the 5.0 version a new option has been added in order to provide more
 economical way of storing two-electron integrals used in CC calculations
@@ -1206,7 +1206,7 @@ transformed two-electron integrals. Savings in the memory requirements
 on the order of magnitude (and more) have been observed for large-scale
 open-shell calculations.
 
-### 2EMET -- alternative storage of two-electron integrals
+### 2EMET: alternative storage of two-electron integrals
 
 Several new computation-intensive algorithms has been added with the
 purpose of improving scalability and overcoming local memory bottleneck
@@ -1329,7 +1329,7 @@ which defines maximum memory size (in MB) for the slice of 6-dimensional
 tensors (in the current example 100 MB; for more details see QA tests
 tce_ccsd_t_xmem and tce_cr_eomccsd_t_xmem).
 
-### DIPOLE -- the ground- and excited-state dipole moments
+### DIPOLE: the ground- and excited-state dipole moments
 
 When this is set, the ground-state CC calculation will enter another
 round of iterative step for the so-called &Lambda; equation to obtain
@@ -1341,18 +1341,23 @@ three times the computational cost of excitation energies alone (note
 that the EOM-CC effective Hamiltonian is not Hermitian and has distinct
 left and right eigenvectors).
 
-### (NO)FOCK -- (not) recompute Fock matrix
+### (NO)FOCK: (not) recompute Fock matrix
 
-The default is FOCK meaning that the Fock matrix will be reconstructed
+The default is `FOCK` meaning that the Fock matrix will be reconstructed
 (as opposed to using the orbital energies as the diagonal part of Fock).
 This is essential in getting correct correlation energies with ROHF or
 DFT reference wave functions. However, currently, this module cannot
 reconstruct the Fock matrix when one-component relativistic effects are
 operative. So when a user wishes to run TCE's correlation methods with
-DK or other relativistic reference, NOFOCK must be set and orbital
+DK or other relativistic reference, `NOFOCK` must be set and orbital
 energies must be used for the Fock matrix.
 
-### PRINT -- the verbosity
+### DENSMAT
+
+Generate Density Matrix that can be used in the DPLOT module as described in
+the [Example section](DPLOT.md#example-of-ccsd-charge-density-plot-with-gaussian-cube-output). 
+
+### PRINT: the verbosity
 
 This keyword changes the level of output verbosity. One may also request
 some particular items in the table
