@@ -314,7 +314,7 @@ which performs a CCSD/cc-pVDZ calculation of the Be atom in its singlet
 ground state with a spin-restricted HF reference.
 
 New implementations of the iterative CCSD and EOMCCSD methods based on the
-improved task scheduling can be enable by the "set tce:nts T" command as
+improved task scheduling can be enable by the `set tce:nts T` command as
 in the following example:
 
 ```
@@ -550,9 +550,9 @@ can define the modelspace in two ways. As a first approach the model
 space can be defined by hand, as shown in the two examples below. The
 input of the model space starts with the `NREF` keyword followed by the
 number of reference configurations that will be used, which should equal
-the number of strings for references below. In the input "2" refers to
-doubly occupied orbitals, "a" to alpha electrons, "b" to beta electrons
-and "0" identifies an unoccupied orbital. When the model space is
+the number of strings for references below. In the input `2` refers to
+doubly occupied orbitals, `a` to alpha electrons, `b` to beta electrons
+and `0` identifies an unoccupied orbital. When the model space is
 defined by hand the occupation strings have to include the frozen
 orbitals as well. In the second way the CMS can be generated using the
 keyword `CAS` followed by the number of active electrons and the number
@@ -637,7 +637,7 @@ keyword `ROOT 3` should be used. An example is given below.
  end
  task tce energy
 ```
-This version of MRCC works only with GA as specified by the "IO GA"
+This version of MRCC works only with GA as specified by the `IO GA`
 option. In addition this code works only with the spin-orbit 4-index
 transformation, however in all circumstances an RHF Hartree-Fock initial
 calculation has to be used. In this implementation the effective
@@ -648,7 +648,7 @@ norm of the residual.
 
 In addition to the iterative single-double calculations the code can
 calculate non-iterative triples corrections. To request these triples
-corrections the keyword "SE4T" should be added to the MRCCDATA block.
+corrections the keyword `SE4T` should be added to the MRCCDATA block.
 The implementation details and the from of the triples correction are
 given in equation 20 [ [J. Chem. Phys. 137, 094112
 (2012)](http://dx.doi.org/10.1063/1.4747698)].
@@ -744,7 +744,7 @@ this approach have been described in
     K. Kowalski, [J. Chem. Phys. 137, 094112
     (2012)](http://dx.doi.org/10.1063/1.4747698).
 
-Two essential keywords have to be added to the "mrccdata" block of the
+Two essential keywords have to be added to the `mrccdata` block of the
 input:
 ```
 subgroupsize n
@@ -803,7 +803,7 @@ QA tests from the $NWCHEM_TOP/QA/tests/tce_mrcc_bwcc_subgroups directory
 with various combinations of subgroup size and total number of CPU.
 
 
-The USS corrections can be enabled by using "usspt" directive
+The USS corrections can be enabled by using `usspt` directive
 keyword in the mrccdata
 
 ```
@@ -916,7 +916,7 @@ task tce energy
 As in the EOMCCSD input we can request any number of roots.
 
 In analogy to the EOMCC calculations we can customize the number of
-initial guesses by using "set tce:maxeorb" directive. For example for
+initial guesses by using `set tce:maxeorb` directive. For example for
 system with the symmetry with the orbital energy structure shown
 below  *ea ip*
 one can use the energy window (in the sense of the absolute value of the
@@ -1118,16 +1118,16 @@ invoked.
 ### EOMSOL -- alternative solver for the right EOMCCSD eigenvalue problem
 
 The EOMSOL enables the user to switch between two algorithms for solving
-EOMCCSD eigenproblem. When EOMSOL is set equal to 1 ("eomsol 1"
+EOMCCSD eigenproblem. When EOMSOL is set equal to 1 (`eomsol 1`
 directive in the tce group) the old solver is invoked. The advantage of
 this solver is a possibility of finding states of complicated
 configurational structure, for example doubly excited states. However,
 the dimension of the iterative space increases with each iteration and
 in effect this algorithm requires large memory allocations especially
 for large systems. In order to address this bottleneck, new algorithm
-("eomsol 2" directive in the tce group) was designed. In EOMSOL 2
+(`eomsol 2` directive in the tce group) was designed. In EOMSOL 2
 algorithm all iterations are split into microcycles corresponding to
-diis microiterations (the use of "diis" parameter is discussed earlier).
+diis microiterations (the use of `diis` parameter is discussed earlier).
 This algorithm enables the user to precisely estimate the memory usage
 in the EOMCCSD calculations, which is equal to
 diis\*nroots\*(size_x1+size_x2), where diis is the length of the DIIS
@@ -1136,7 +1136,7 @@ size of GA storing singly excited EOMCC almplitudes, and size_x2 is the
 size of GA with doubly excited EOMCC amplitudes. Generally, larger
 values of diis parameter lead to a faster convergence, however, this
 happens at the expense of larger memory requirements. It is recommended
-not to use in the EOMCCSD calculations with "eomsol 2" diis parameter
+not to use in the EOMCCSD calculations with `eomsol 2` diis parameter
 smaller than 5, which is its default value. The EOMSOL 2 algorithm uses
 the CIS vectors as initial guesses, and for this reason is suited mainly
 to track singly excited states. By default, the EOMSOL 1 option is
@@ -1160,7 +1160,7 @@ task tce energy
 ```
 
 the CCSD equations will be converged to the 1.0d-6 threshold while the
-EOMCCSD ones to 1.0d-4. This option shoul dbe used with the "eomsol 2"
+EOMCCSD ones to 1.0d-4. This option shoul dbe used with the `eomsol 2`
 option. In some situations finding several (n) roots to the EOMCCSD
 equations can be quite challenging. To by-pass this problem one can use
 the "n+1" model, i.e., we request another root to be converged. Usually,
@@ -1614,7 +1614,7 @@ and the number of lowest unoccupied orbitals (nuact) that will be
 considered as the active orbitals. In any type of the active-space
 CR-EOMCCSD(T) calculatoins based on the RHF and ROHF references more
 efficient versions of the orbital 4-index transformation can be invoked
-(i.e., 2emet 13 or 2emet 14).
+(i.e., `2emet 13` or `2emet 14`).
 
 ```
 title "uracil-6-31-Gs-act"
@@ -1661,7 +1661,7 @@ task tce energy
 ```
 
 The active-space in the active-space CR-EOMCCSD(T) calculations can be
-alternatively specified by defining the energy "window"
+alternatively specified by defining the energy `window`
 [emin_act,emax_act]. All orbitals with orbital energies falling into
 this widnow will considered as active (the active space in the following
 example is different from the one used in the previous example).
@@ -1748,7 +1748,7 @@ END
 TASK TCE ENERGY
 ```
 
-The CCSD calculations for the triplet state of the <img alt="$C_{20}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e9758f9071518083d5e4c173d6cfc8e.svg?invert_in_darkmode&sanitize=true" align=middle width="24.761055pt" height="22.38192pt"/> molecule.
+The CCSD calculations for the triplet state of the C<sub>20</sub> molecule.
 New algorithms for 4-index tranformation are used.
 
 ```
@@ -1957,8 +1957,8 @@ For workstations, this condition is trivially met. Restart files must be
 persistent to be useful, so volatile file systems or those which are
 periodicly erased should not be used for check-pointing.
 
-Restart is possible for all ground-state amplitudes (*T*, Λ and
-<img alt="$T^{(1)}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b975fbba8cc3b82ca7ae5bb0de31de6.svg?invert_in_darkmode&sanitize=true" align=middle width="28.617105pt" height="29.12679pt"/>) but not for excited-state amplitudes, as in an EOM-CC
+Restart is possible for all ground-state amplitudes (*T*, &Lambda; and
+T<sup>(1)</sup> but not for excited-state amplitudes, as in an EOM-CC
 calculation. The latter functionality is under development.
 
 Restart capability is useful in the following situations:
@@ -1975,7 +1975,7 @@ not advised due to the phase issue in the molecular orbital
 coefficients. If the phase changes, the amplitudes will no longer be a
 useful guess and may lead to nonsense results. Expert users may be able
 to use restart when the geometry varies using careful choices in the SCF
-input by using the "rotate" and "lock" options but this use of restart
+input by using the `rotate` and `lock` options but this use of restart
 is not supported.
 
 If SF encounters a failure during restart I/O, the job will fail. The
@@ -2009,12 +2009,12 @@ The boolean variables read_integrals and save_integrals control which
 integrals are read/saved. The first location is the 1-e integrals, the
 second is for the 2-e integrals, and the third is for dipole integrals.
 The fourth and fifth positions are reserved for quadrupole and octupole
-integrals but this functionality is not available. The read_t, read_l,
-read_tr, save_t, save_l and save_tr variables control the
-reading/saving of the <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/>, Λ and <img alt="$T^{(1)}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b975fbba8cc3b82ca7ae5bb0de31de6.svg?invert_in_darkmode&sanitize=true" align=middle width="28.617105pt" height="29.12679pt"/> (response) amplitudes.
+integrals but this functionality is not available. The `read_t`, `read_l`,
+`read_tr`, `save_t`, `save_l` and `save_tr` variables control the
+reading/saving of the T, &Lambda; and T<sup>(1)</sup> (response) amplitudes.
 Restart control on the response amplitudes is implicitly controlled by
 the value of respaxis (see above). Requesting amplitudes that are beyond
-the scope of a given calculation, such as <img alt="$T_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4025cf3981c802483ddf735af283a602.svg?invert_in_darkmode&sanitize=true" align=middle width="16.09839pt" height="22.38192pt"/> in a CCSD calculation,
+the scope of a given calculation, such as T<sub>3</sub> in a CCSD calculation,
 does not produce an error as these commands will never be processed.
 
 Attempting to restart with a set of amplitudes without the corresponding
@@ -2036,7 +2036,7 @@ as the number of DIIS cycles being used.
 The user shall not change the tilesize when reading in saved amplitudes.
 The results of this are catastrophic and under no circumstance will this
 lead to physically meaningful results. Restart does not work for 2eorb
-and 2emet 9; no error will be produced but the results may be
+and `2emet 9`; no error will be produced but the results may be
 meaningless.
 
 ### Examples
