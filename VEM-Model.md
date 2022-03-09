@@ -1,14 +1,17 @@
-## VEM (Vertical Excitation or Emission) Model
+# VEM (Vertical Excitation or Emission) Model
+
+## Overview
 
 The VEM is a model for calculating the vertical excitation (absorption)
 or vertical emission (fluorescence) energy in solution according to a
 two-time-scale model of solvent polarization. The model is described in reference[^1].  
 
 The current implementation is based on the VEM(d,RD) algorithm as
-described in the above paper. The method is available only at the TDDFT
+described in the above paper. The method is available only at the [TDDFT](Excited-State-Calculations.md)
 level of theory, including both full-linear response TDDFT (sometimes
 called LR-TDDFT or regular TDDFT) and the Tamm–Dancoff approximation,
-TDDFT-TDA (sometimes just called TDA). The configuration interaction
+[TDDFT-TDA](Excited-State-Calculations.md#cis-and-rpa-the-tamm-dancoff-approximation)
+(sometimes just called TDA). The configuration interaction
 singles (CIS) wave function method can also be used along with VEM by
 considering CIS to be a special case of TDDFT-TDA.
 
@@ -60,16 +63,26 @@ In this case, the user needs to provide values of ground- and
 excited-state spherically averaged molecular polarizabilities of the
 solvent.
 
+## Syntax
+
 The VEM-specific input options are as
 follows:
 
-`do_cosmo_vem (integer input))`  
-`0` (do not do any VEM calculation even if the task tddft gradient line is present; default).  
-`1` (do a nonequilibrium VEM excitation energy calculation;  
+### DO_COSMO_VEM:  
+
+```
+ do_cosmo_vem <integer do_cosmo_vem default 0>
+```
+
+The `do_cosmo_vem` can be set to the following values:  
+* `0` (do not do any VEM calculation even if the task tddft gradient line is present; default).  
+* `1` (do a nonequilibrium VEM excitation energy calculation;  
 in this case the `task tddft gradient` line should be present, too)    
-`2` (do an equilibrium VEM excitation energy calculation followed by  
+* `2` (do an equilibrium VEM excitation energy calculation followed by  
 a nonequilibrium emission energy calculation;  
 `task tddft gradient` line should be present)    
+
+### VEM Solvent
 
 The VEM solvent (which is water by default) can be specified by using
 the solvent keyword described in the SMD section of this manual or by
@@ -94,6 +107,8 @@ calculations using the COSMO algorithm with the SMD Coulomb radii by
 default. If the user wants to use the default COSMO radii in such
 calculations (this is not recommended) the option `do_cosmo_smd .false.` should be specified.
 
+## SMSSP estimate of the solute–solvent dispersion contribution
+
 If the SMSSP estimate of a solute–solvent dispersion contribution to the
 solvatochromic shift is desired, the following options should be
 used:
@@ -103,6 +118,8 @@ user-provided value of the spherically-averaged molecular polarizability of the 
 
 `poles_cosmo_vem (real input)`  
 user-provided value of the spherically-averaged molecular polarizability of the solute in an exited state of interest (in Å<sup>3</sup>)
+
+## Examples
 
 An example of the VEM input file is provided
 below.

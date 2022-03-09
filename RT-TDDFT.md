@@ -6,7 +6,7 @@ Real-time time-dependent density functional theory (RT-TDDFT) is a
 DFT-based approach to electronic excited states based on integrating the
 time-dependent Kohn-Sham (TDKS) equations in time. The theoretical
 underpinnings, strengths, and limitations are similar to traditional
-linear-response (LR) [TDDFT](Excited-State-Calculations)
+linear-response (LR) [TDDFT](Excited-State-Calculations.md)
 methods, but instead of a frequency domain solution to the TDKS
 equations, RT-TDDFT yields a full time-resolved, potentially non-linear
 solution. Real-time simulations can be used to compute not only
@@ -85,7 +85,7 @@ RT_TDDFT
   [LOAD RESTART]
 END
 ```
-### TMAX -- Simulation time
+### TMAX: Simulation time
 
 This option specifies the maximum time (in au) to run the simulation
 before stopping, which must be a positive real number. In practice, you
@@ -101,7 +101,7 @@ rt_tddft
   ... 
 end
 ```
-### DT -- Time step
+### DT: Time step
 
 This specifies the electronic time step for time integration. A larger
 time step results in a faster simulation, but there are two issues which
@@ -127,7 +127,7 @@ end
 It is always good practice to check that your results are independent of
 time step.
 
-### TAG -- Output label
+### TAG: Output label
 
 This option sets a label for the output for convenient parsing (e.g.,
 with "grep"). Every output line with time-dependent data will begin with
@@ -149,7 +149,7 @@ nameofrun      2.20000  -7.589146713114E+001     # Etot
 ...
 ```
 
-### NCHECKS -- Number of run-time check points
+### NCHECKS: Number of run-time check points
 
 This option takes an integer number (default 10), or `*` which means
 every step, which sets the total of number of run-time checkpoints,
@@ -166,7 +166,7 @@ rt_tddft
 end
 ```
 
-### NPRINTS -- Number of print points
+### NPRINTS: Number of print points
 
 This sets the number of print points, i.e., the total number of
 time-dependent observables (e.g., dipole, charge, energy) that are
@@ -183,7 +183,7 @@ rt_tddft
 end
 ```
 
-### NRESTARTS -- Number of restart checkpoints
+### NRESTARTS: Number of restart checkpoints
 
 This sets the number of run-time check points where the time-dependent
 complex density matrix is saved to file, allowing the simulation to be
@@ -204,7 +204,7 @@ rt_tddft
 end
 ```
 
-### TOLERANCES -- Controlling numerical tolerances
+### TOLERANCES: Controlling numerical tolerances
 
 This option controls various numerical tolerances:
 
@@ -227,7 +227,7 @@ rt_tddft
 end
 ```
 
-### PROPAGATOR -- Selecting the integrator method
+### PROPAGATOR: Selecting the integrator method
 
 This selects the propagator (i.e., time integrator) method. Possible
 choices include `euler` for Euler integration (terrible, you should
@@ -244,7 +244,7 @@ rt_tddft
 end
 ```
 
-### EXP -- Selecting the matrix exponentiation method
+### EXP: Selecting the matrix exponentiation method
 
 This selects the method for exponentiation matrices. For now this can
 either be `pseries` for a contractive power series or `diag` for
@@ -258,7 +258,7 @@ rt_tddft
 end
 ```
 
-### PROF -- Run-time profiling
+### PROF: Run-time profiling
 
 This turns on run-time profiling, which will display time spent in each
 component of the code (e.g., building components of the TD Fock matrix,
@@ -273,7 +273,7 @@ rt_tddft
 end
 ```
 
-### NOPROP -- Skipping propagation
+### NOPROP: Skipping propagation
 
 This options causes the RT-TDDFT module skip propagation, i.e., to
 initialize and finalize. For now this is largely useful for skipping to
@@ -287,7 +287,7 @@ rt_tddft
 end
 ```
 
-### STATIC -- Force static Fock matrix
+### STATIC: Force static Fock matrix
 
 This option sets the static Fock matrix flag, meaning the time-dependent
 Fock matrix will not be recalculated at each time, but instead use the
@@ -306,7 +306,7 @@ rt_tddft
 end
 ```
 
-### PRINT -- Selecting time-dependent quantities to be printed
+### PRINT: Selecting time-dependent quantities to be printed
 
 This sets the various time-dependent properties that are to be computed
 and printed at each print point. Note that for many of these options,
@@ -337,7 +337,7 @@ rt_tddft
 end
 ```
 
-### FIELD -- Sub-block for specifying external electric fields
+### FIELD: Sub-block for specifying external electric fields
 
 This sub-block is used to specify external electric fields, each of
 which must be given a unique name. Numerous fields can be specified, but
@@ -391,7 +391,7 @@ field "resonant"
 end
 ```
 
-### EXCITE -- Excitation rules
+### EXCITE: Excitation rules
 
 This sets the rules for applying external fields to the system. It takes
 the form `excite <geom> with <field>`, where `<geom>` is the name of a
@@ -409,7 +409,7 @@ rt_tddft
 end
 ```
 
-### VISUALIZATION -- Sub-block for controlling 3D visualization
+### VISUALIZATION: Sub-block for controlling 3D visualization
 
 This block is used to control visualization of the electronic charge
 density, which is typically used during a resonant excitation. This is a
