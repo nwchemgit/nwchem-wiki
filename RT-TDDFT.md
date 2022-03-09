@@ -416,7 +416,7 @@ density, which is typically used during a resonant excitation. This is a
 two stage process. During the propagation, a series of density matrices
 will be dumped to file (see options below). After propagation, if the
 `dplot` option is set, the code will read in options from a separate
-DPLOT block and convert the density matrix snapshots to a corresponding
+`DPLOT` block and convert the density matrix snapshots to a corresponding
 series of real-space charge density `cube`
 files.
 

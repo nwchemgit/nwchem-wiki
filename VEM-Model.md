@@ -35,7 +35,7 @@ electronic state in solution (and vice versa in the case of an emission
 spectrum). Both the ground- and excited-state calculations involve an
 integration of the nonhomogeneous-dielectric Poisson equation for bulk
 electrostatics in terms of the COSMO model as implemented in NWChem with
-the modified COSMO scaling factor ("iscren 0") and by using the SMD
+the modified COSMO scaling factor (`iscren 0`) and by using the SMD
 intrinsic atomic Coulomb radii (by default; see the section of the
 manual describing SMD). The excited-state electron density is calculated
 using the Z-Vector "relaxed density" approach.
@@ -54,7 +54,7 @@ supersolute that involves a solute–solvent molecular cluster with one or
 a few solvent molecules added explicitly to a bare solute. The
 solute–solvent dispersion contribution to the solvatochromic shift, if
 desired, can be estimated by the solvation model with state-specific
-polarizability (SMSSP) described in refence[^3].  
+polarizability (SMSSP) described in reference[^3].  
 
 In this case, the user needs to provide values of ground- and
 excited-state spherically averaged molecular polarizabilities of the
