@@ -19,7 +19,7 @@ emission calculations in solution, and the E in VEM now stands for
 excitation/emission. Furthermore, the current version of VEM (based on
 the Marenich et al. paper[^1]) does
 not reduce to the original VEM of Li et al., but is improved as
-described in refernce[^1].
+described in reference[^1].
 
 The VEM model is based on a nonequilibrium dielectric-continuum approach
 in terms of two-time-scale solvent response. The solvent's
