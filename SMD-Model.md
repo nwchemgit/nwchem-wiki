@@ -1,5 +1,7 @@
 # SMD (Solvation Model Based on Density) Model
 
+## Overview
+
 SMD denotes “solvation model based on density” and it is described in
 detail in the 2009 paper by Marenich, Cramer and Truhlar[^1].  
 
@@ -48,16 +50,21 @@ geometry-dependent proportionality constants called atomic surface
 tensions) to the solvent-accessible surface areas (SASAs) of the
 individual atoms of the solute.
 
+## Syntax
+
 At the moment the SMD model is available in NWChem only with the DFT
 block
 
 The SMD input options are as follows:
+
+### DO_COSMO_SMD:
 
 ```
 do_cosmo_smd <logical do_cosmo_smd default .true.>
 ```
 The `do_cosmo_smd` keyword instructs NWChem to perform a ground-state SMD calculation
 
+### SOLVENT: 
 
 ```
 solvent (keyword)
@@ -294,6 +301,8 @@ electronegative halogenicity as the fraction of non-hydrogenic solvent atoms tha
 soln (real input)
 ```
 index of refraction at optical frequencies at 293 K  
+
+## Examples
 
 An example of an SMD input file is as
 follows:
