@@ -75,10 +75,10 @@ follows:
 ```
 
 The `do_cosmo_vem` can be set to the following values:  
-* `0` (do not do any VEM calculation even if the task tddft gradient line is present; default).  
-* `1` (do a nonequilibrium VEM excitation energy calculation;  
+- `0` (do not do any VEM calculation even if the task tddft gradient line is present; default).  
+- `1` (do a nonequilibrium VEM excitation energy calculation;  
 in this case the `task tddft gradient` line should be present, too)    
-* `2` (do an equilibrium VEM excitation energy calculation followed by  
+- `2` (do an equilibrium VEM excitation energy calculation followed by  
 a nonequilibrium emission energy calculation;  
 `task tddft gradient` line should be present)    
 
