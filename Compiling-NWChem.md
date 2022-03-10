@@ -74,9 +74,9 @@ options.
 | `USE_MPI`    | Set to "y" to indicate that NWChem should be compiled with MPI                   |
 | `USE_MPIF`   | Set to "y" for the NWPW module to use fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set)                               |
 | `USE_MPIF4`  | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set on most platforms) |
-| `LIBMPI`     | Name of the MPI library that should be linked with -l (eg. -lmpich)              |
-| `MPI_LIB`    | Directory where the MPI library resides                                          |
-| `MPI_INCLUDE`| Directory where the MPI include files reside                                     |  
+| `LIBMPI` (deprecated)    | Name of the MPI library that should be linked with -l (obsolete)              |
+| `MPI_LIB` (deprecated)   | Directory where the MPI library resides                                          |
+| `MPI_INCLUDE` (deprecated)| Directory where the MPI include files reside                                     |  
   
 <br>  
   
@@ -89,7 +89,7 @@ NWChem will figure out the values of `LIBMPI`, `MPI_LIB` and `MPI_INCLUDE`
 `MPI_LIB` and `MPI_INCLUDE` and add the location of `mpif90` to the `PATH`
 variable, instead. Therefore, the next section can be considered obsolete in the most common cases.
 
-#### Obsolete:  How to se the MPI variables
+#### Obsolete:  How to set the MPI variables
 
 The output of the command
 
@@ -106,52 +106,13 @@ $ mpif90 -show
 f95 -I/usr/local/mpich2.141p1/include -I/usr/local/mpich2.141p1/include -L/usr/local/mpich2.141p1/lib \
 -lmpichf90 -lmpichf90 -lmpich -lopa -lmpl -lrt -lpthread
 ```
-The corresponding environment variables
-are
+The corresponding environment variables are  
 ```
   % export USE_MPI=y
   % export LIBMPI="-lmpich -lopa -lmpl -lpthread -lmpichf90 -lfmpich -lmpich"
   % export MPI_LIB=/usr/local/mpich2.141p1/lib 
   % export MPI_INCLUDE='/usr/local/mpich2.141p1/include
 ```
-Note: a script is available since NWChem 6.5 to extract the environment variables listed above
-``
-$NWCHEM_TOP/contrib/distro-tools/getmpidefs_nwchem
-```
-<table>
-<caption>For some specific implementations the settings for MPI_LIB, MPI_INCLUDE, and LIBMPI look like:</caption>
-<thead>
-<tr>
-<th>MPI Implementation</th>
-<th>Environment variables</th>
-</tr>
-</thead>
-<tbody>
-<tr class="even">
-<td>MPICH</td>
-<td>export MPI_LOC=/usr/local #location of mpich installation<br />
-export MPI_LIB=$MPI_LOC/lib<br />
-export MPI_INCLUDE=$MPI_LOC/include<br />
-export LIBMPI=&quot;-lfmpich -lmpich -lpmpich&quot;</td>
-</tr>
-<tr class="odd">
-<td>MPICH2</td>
-<td>export MPI_LOC=/usr/local #location of mpich2 installation<br />
-export MPI_LIB=$MPI_LOC/lib<br />
-export MPI_INCLUDE=$MPI_LOC/include<br />
-export LIBMPI=&quot;-lmpich -lopa -lmpl -lrt -lpthread&quot;</td>
-</tr>
-<tr class="even">
-<td>OPENMPI</td>
-<td>export MPI_LOC=/usr/local #location of openmpi installation<br />
-export MPI_LIB=$MPI_LOC/lib<br />
-export MPI_INCLUDE=$MPI_LOC/include<br />
-export LIBMPI=&quot;-lmpi_f90 -lmpi_f77 -lmpi -ldl -Wl,--export-dynamic -lnsl -lutil&quot;</td>
-</tr>
-</tbody>
-</table>
-  
-<br>
 
 #### How to start NWChem
 
@@ -204,11 +165,11 @@ export LIB_DEFINES=-DDFLT_TOT_MEM=16777216
 ```
 Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
 NWChem to run, where the units are in doubles. Instead of manually
-defining this environment variable, one can use the [`getmem.nwchem`](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
-$NWCHEM\_TOP/contrib directory. This script should be run after an
+defining this environment variable, one can use the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
+`$NWCHEM_TOP/contrib` directory. This script should be run after an
 initial build of the binary has been completed. The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink.
 
-**MRCC\_METHODS** can be set to request the multireference coupled
+**MRCC_METHODS** can be set to request the multireference coupled
 cluster capability to be included in the code, e.g.
 ```
 export MRCC_METHODS=TRUE
@@ -232,10 +193,10 @@ The following environment variables need to be set when compiling with
 Python, together with having the location of your installed python binary part of
 the `PATH` environment variable:
 ```
-export PYTHONVERSION=2.7
+export PYTHONVERSION=3.8
 ```
-Note that the third number in the version should not be kept: 2.7.3
-should be set as 2.7
+Note that the third number in the version should not be kept: 3.8.1
+should be set as 3.8
 
 You will also need to set PYTHONPATH to include any modules that you are
 using in your input. Examples of Python within NWChem are in the
@@ -264,7 +225,7 @@ hardware include:
 
 <br>  
   
-_**New since release 7.0.0**_ (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e )):  If BLASOPT is defined, the LAPACK_LIB environment variable must be set up, too.  LAPACK_LIB must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, LAPACK_LIB can be set to the same value as BLASOPT  
+_**New since release 7.0.0**_ (after commit [6b0a971](https://github.com/nwchemgit/nwchem/commit/6b0a971207e776f43dec81974014e86caf8cee61#diff-1750a4dcc9a0a9b1773d275e96c46a1e )):  If `BLASOPT` is defined, the `LAPACK_LIB` environment variable must be set up, too.  `LAPACK_LIB` must provide the location of the library containing the LAPACK routines. For example, OpenBLAS provides the full suite of LAPACK routines, therefore, in this case, `LAPACK_LIB` can be set to the same value as BLASOPT  
 ```  
 export BLASOPT=-lopenblas  
 export LAPACK_LIB=-lopenblas  
@@ -326,7 +287,7 @@ Notes:
     <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-link-line-advisor.html>.
     For ACML the int64 libraries should be chosen, e.g. in the case of
     ACML 4.4.0 using a PGI compiler
-    /opt/acml/4.4.0/pgi64\_int64/lib/libacml.a
+    /opt/acml/4.4.0/pgi64_int64/lib/libacml.a
     
 **_New in NWChem 7.0.2_**: 
 1. The environment variable `BUILD_OPENBLAS` can be used to automatically build the OpenBLAS library during a NWChem compilation (either using `BLAS_SIZE=8` or `BLAS_SIZE=4`)
