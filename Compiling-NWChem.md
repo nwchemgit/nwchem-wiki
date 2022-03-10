@@ -115,9 +115,9 @@ are
   % export MPI_INCLUDE='/usr/local/mpich2.141p1/include
 ```
 Note: a script is available since NWChem 6.5 to extract the environment variables listed above
-
-$NWCHEM\_TOP/contrib/distro-tools/getmpidefs\_nwchem
-
+``
+$NWCHEM_TOP/contrib/distro-tools/getmpidefs_nwchem
+```
 <table>
 <caption>For some specific implementations the settings for MPI_LIB, MPI_INCLUDE, and LIBMPI look like:</caption>
 <thead>
@@ -323,7 +323,7 @@ Notes:
   - ACML and MKL can support 64-bit integers if the appropriate library
     is chosen. For MKL, one can choose the ILP64 Version of Intel® MKL
     and the correct recipe can be extracted from the website
-    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html>.
+    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-link-line-advisor.html>.
     For ACML the int64 libraries should be chosen, e.g. in the case of
     ACML 4.4.0 using a PGI compiler
     /opt/acml/4.4.0/pgi64\_int64/lib/libacml.a
