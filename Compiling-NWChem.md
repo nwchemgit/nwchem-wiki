@@ -74,7 +74,7 @@ options.
 | `USE_MPI`    | Set to "y" to indicate that NWChem should be compiled with MPI                   |
 | `USE_MPIF`   | Set to "y" for the NWPW module to use fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set)                               |
 | `USE_MPIF4`  | Set to "y" for the NWPW module to use Integer\*4 fortran-bindings of MPI. <br /> (Generally set when USE_MPI is set on most platforms) |
-| `LIBMPI` (deprecated)    | Name of the MPI library that should be linked with -l (obsolete)              |
+| `LIBMPI` (deprecated)    | Name of the MPI library that should be linked with -l               |
 | `MPI_LIB` (deprecated)   | Directory where the MPI library resides                                          |
 | `MPI_INCLUDE` (deprecated)| Directory where the MPI include files reside                                     |  
   
