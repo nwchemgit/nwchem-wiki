@@ -167,7 +167,11 @@ Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
 NWChem to run, where the units are in doubles. Instead of manually
 defining this environment variable, one can use the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
 `$NWCHEM_TOP/contrib` directory. This script should be run after an
-initial build of the binary has been completed. The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink.
+initial build of the binary has been completed. The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink. Here is an example of its usage:  
+```
+cd $NWCHEM_TOP/src
+../contrib/getmem.nwchem
+```
 
 **MRCC_METHODS** can be set to request the multireference coupled
 cluster capability to be included in the code, e.g.
