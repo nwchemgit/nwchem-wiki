@@ -6,6 +6,7 @@ additional subordinate directives that the user can specify, if needed.
 The directive therefore appears to be rather long and complicated when
 presented in its general form, as
 follows:
+
 ```
  GEOMETRY [<string name default geometry>] \  
           [units <string units default angstroms>] \  
@@ -59,44 +60,43 @@ follows:
      END]  
   END
 ```
+
 The three main parts of the GEOMETRY directive are:
 
-  - keywords on the first line of the directive (to specify such
+- keywords on the first line of the directive (to specify such
     optional input as the geometry name, input units, and print level
     for the output)
-  - symmetry information
-  - Cartesian coordinates or Z-matrix input to specify the locations of
+- symmetry information
+- Cartesian coordinates or Z-matrix input to specify the locations of
     the atoms and centers
-  - lattice parameters (needed only for periodic systems)
+- lattice parameters (needed only for periodic systems)
 
 The following sections present the input for this compound directive in
 detail, describing the options available and the usages of the various
 keywords in each of the three main parts.
 
-  - [Keywords on the GEOMETRY
+- [Keywords on the GEOMETRY
     directive](Keywords-on-the-GEOMETRY-directive.md)
 
-  - [SYMMETRY -- Symmetry Group
+- [SYMMETRY -- Symmetry Group
     Input](SYMMETRY----Symmetry-Group-Input.md)
 
-  - [Names of 3-dimensional space
+- [Names of 3-dimensional space
     groups](Names-of-3-dimensional-space-groups.md)
 
-  - [Cartesian coordinate
+- [Cartesian coordinate
     input](Cartesian-coordinate-input.md)
 
-  - [ZMATRIX -- Z-matrix
+- [ZMATRIX -- Z-matrix
     input](ZMATRIX-Z-matrix-input.md)
 
-  - [ZCOORD -- Forcing internal
+- [ZCOORD -- Forcing internal
     coordinates](ZCOORD-Forcing-internal-coordinates.md)
 
-  - [SYSTEM -- Lattice parameters for periodic
+- [SYSTEM -- Lattice parameters for periodic
     systems](SYSTEM----Lattice-parameters-for-periodic-systems.md)
 
-  - [LOAD -- Load geometry from 
+- [LOAD -- Load geometry from
      XYZ file](Geometry-load.md)
-
- 
 
 <!-- end list -->

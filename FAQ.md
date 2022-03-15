@@ -27,9 +27,11 @@ URL [https://nwchemgit.github.io/Compiling-NWChem.html](https://nwchemgit.github
 
 When compiling the tools directory, you might see the compilation
 stopping with the message
+
 ```
 configure: error: could not compile simple C MPI program
 ```
+
 This is most likely due to incorrect settings for the
 `MPI_LIB`, `MPI_INCLUDE` and `LIBMPI` environment variables. The
 suggested course of action is to unset all of the
@@ -55,15 +57,18 @@ performance, you might want to assign a non-default value to
 `ARMCI_NETWORK`.  
 The following links contained useful information about
 `ARMCI_NETWORK`:  
-- [ Choosing the ARMCI library](ARMCI)   
-- [ Choosing the proper environment variables when compiling NWChem](Compiling-NWChem.md#setting-up-the-proper-environment-variables)  
+
+- [Choosing the ARMCI library](ARMCI)
+- [Choosing the proper environment variables when compiling NWChem](Compiling-NWChem.md#setting-up-the-proper-environment-variables)  
 
 ## Input Problem: no output
 
 You might encounter the following error message:
+
 ```
 ! warning: processed input with no task
 ```
+
 Have you used emacs to create your input file? Emacs usually does not
 put and an end-of-line as a last character of the file, therefore the
 NWChem input parser ignores the last line of your input (the one
@@ -94,15 +99,16 @@ failure, some of which may be worked around in the input.
 generate linear bend coordinates, but, just as in a real Z-matrix, you
 can specify a dummy center that is not co-linear. There are two relevant
 tips:
-* constrain the dummy center to be not co-linear otherwise the
+
+- constrain the dummy center to be not co-linear otherwise the
 center could become co-linear. Also, the inevitable small forces on the
 dummy center can confuse the optimizer.
-* put the dummy center far
+- put the dummy center far
 enough away so that only one connection is generated.
 
 E.g., this input for acetylene will not use internals
 
-``` 
+```
  geometry
    h  0  0  0
    c  0  0  1
@@ -161,19 +167,19 @@ number of iterations, then it may be restarted with the second job.
 
 The key points are
 
-  - The first job contains a START directive with a name for the
+- The first job contains a START directive with a name for the
     calculation.
-  - All subsequent jobs should contain a RESTART directive with the same
+- All subsequent jobs should contain a RESTART directive with the same
     name for the calculation.
-  - All jobs must specify the same permanent directory. The default
+- All jobs must specify the same permanent directory. The default
     permanent directory is the current directory.
-  - If you want to change anything in the restart job, just put the data
+- If you want to change anything in the restart job, just put the data
     before the task directive. Otherwise, all options will be the same
     as in the original job.
 
 Job 1.
 
-``` 
+```
  start ammonia
  permanent_dir /u/myfiles
 
@@ -198,7 +204,7 @@ Job 1.
 
 Job 2.
 
-``` 
+```
  restart ammonia
  permanent_dir /u/myfiles
 
@@ -227,10 +233,10 @@ sysctl kernel.shmmax
 
 More detail about kernel.shmmax can be found at this [link](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html)
 
-
 ## WSL execution problems
 
 NWChem runs on Windows Subsystem for Linux (WSL) can crash with the error message
+
 ```
 --------------------------------------------------------------------------
 WARNING: Linux kernel CMA support was requested via the
@@ -247,13 +253,15 @@ mechanism if one is available. This may result in lower performance.
 ```
 
 The error can be fixed with the following command
+
 ```
 echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 
 More details at
-* [https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710](https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710)  
-* [https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html](https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html)  
+
+- [https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710](https://github.com/Microsoft/WSL/issues/3397#issuecomment-417876710)  
+- [https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html](https://nwchemgit.github.io/Special_AWCforum/st/id2939/mpirun_nwchem_on_Windows_Subsyst....html)  
 
 ## How do I increase the number of digits of the S matrix printout
 
@@ -262,9 +270,10 @@ the `ga_print()` function.
 
 For example, in the cagse NWChem 7.0.2, you can do this by editing the C source code in
 $NWCHEM_TOP/src/tools/ga-5.7.2/global/src/global.util.c by increaseing the number of digits from 5 to 7
+
 ```
---- global.util.c.org	1969-07-20 15:50:45.000000000 -0700
-+++ global.util.c	1969-07-20 15:51:19.000000000 -0700
+--- global.util.c.org 1969-07-20 15:50:45.000000000 -0700
++++ global.util.c 1969-07-20 15:51:19.000000000 -0700
 @@ -122,22 +122,22 @@
              case C_DBL:
                pnga_get(g_a, lo, hi, dbuf, &ld);
@@ -386,12 +395,13 @@ $NWCHEM_TOP/src/tools/ga-5.7.2/global/src/global.util.c by increaseing the numbe
 
 ## Linear Dependencies
 
+Two or more basis functions can be consider linearly dependent when they span the same region of space. This can result in SCF converge problems. Analysis of the eigenvectors of the S<sup>-1/2</sup> matrix (where S is the overlap matrix) is used to detect linear dependencies: if there are eigenvalues  close to zero, the basis set goes through the process of canonical orthogonalization (as described in Section 3.4.5 of [Szabo & Ostlund "Modern Quantum Chemistry" book](https://store.doverpublications.com/0486691861.html)). This has net effect of a reduction of number of basis function used, compared to the original number set by input.
+By setting
 
-Two or more basis functions can be consider linearly dependent when they span the same region of space. This can result in SCF converge problems. Analysis of the eigenvectors of the S<sup>-1/2</sup> matrix (where S is the overlap matrix) is used to detect linear dependencies: if there are eigenvalues  close to zero, the basis set goes through the process of canonical orthogonalization (as described in Section 3.4.5 of [Szabo & Ostlund "Modern Quantum Chemistry" book](https://store.doverpublications.com/0486691861.html)). This has net effect of a reduction of number of basis function used, compared to the original number set by input. 
-By setting 
 ```
 set lindep:n_dep 0
-``` 
+```
+
 this orthogonalization process is skipped.
 
 ## Discrepancy on the number of basis functions: spherical vs cartesian functions
@@ -399,9 +409,11 @@ this orthogonalization process is skipped.
 If you are comparing NWChem results with the ones obtained from  other codes and you believe  there is a
 discrepancy in the number of basis functions, keep in mind that NWChem uses cartesian functions by default, while other codes could be using spherical functions, instead.  
 If you need to use spherical functions, the beginning of the basis input field needs to be
+
 ```
 basis spherical
 ```
+
 More details in the documentation at the link [https://nwchemgit.github.io/Basis.html#spherical-or-cartesian](https://nwchemgit.github.io/Basis.html#spherical-or-cartesian).
 
 See also the following [forum entries](https://groups.google.com/g/nwchem-forum/search?q=default%20cartesian).
