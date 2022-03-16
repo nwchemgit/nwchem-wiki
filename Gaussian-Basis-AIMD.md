@@ -353,7 +353,7 @@ The keyword `dt_elec` sets the electronic time step in atomic units.
 #### n_states: Number of states
 
 The keyword `nstates` sets the number of electronic states to include in the calculation, i.e.
-the number of states for use with Eq. 5 of the paper above.
+the number of states for use with Eq. 5 of the 2020 Song paper.
 
 #### init_state: Initial state
 
