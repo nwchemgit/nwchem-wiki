@@ -317,7 +317,7 @@ here.
 ### NAMD: Non-adiabatic Excited Stated Molecular Dynamics
 
 For  details of the NAMD implementation, please
-refer to the following paper:
+refer to the following paper:  
 H. Song, S. A. Fischer, Y. Zhang, C. J. Cramer, S. Mukamel, N. Govind and S. Tretiak,
 ``First Principles Nonadiabatic Excited-State Molecular Dynamics in NWChem'',
 Journal of Chemical Theory and Computation  16 (10), pp. 6418-6427 (2020)
@@ -339,7 +339,10 @@ In the namd sub-block within the qmd block, please note:
 
 #### deco: Decoherence flag
 
-Granucci & Persico J. Chem. Phys. 126, 134114 (2007)
+The `deco` flag applies the decoherence correction described in the following paper:  
+G. Granucci and M. Persico,
+``Critical appraisal of the fewest switches algorithm for surface hopping'', J. Chem. Phys. 126, 134114 (2007)
+[DOI:10.1063/1.2715585](https://dx.doi.org/10.1063/1.2715585).
 
 #### dt_elec: Electronic dynamics time step
 
