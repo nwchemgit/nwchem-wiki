@@ -1808,9 +1808,7 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. <img alt="$$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$" src="svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  
-
-where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
+1. <img alt="$$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$" src="svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
 J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
 Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use `vdw 0`)  
 
