@@ -367,7 +367,7 @@ So if you want to start a calculation in the first excited state, you would set
 
 The keyword `tdks` will use Time-Dependent Kohn-Sham instead of the default [Tamm-Dancoff](Excited-State-Calculations.md#cis-and-rpa-the-tamm-dancoff-approximation) approximation.  
 The keyword requires the keyword [`odft`](Density-Functional-Theory-for-Molecules.md#odft-and-mult-open-shell-systems)
-in the `dft` input block to
+in the `dft` input block to work.  
 It can have two values:
 
 - `1` (default) selects the alpha spin channel
