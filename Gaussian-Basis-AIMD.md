@@ -329,20 +329,22 @@ Journal of Chemical Theory and Computation  16 (10), pp. 6418-6427 (2020)
   [nstates <integer default 2>]
   [dt_elec <double default 0.01>]
   [deco <logical default .false.]
+  [tdks <integer default 1>]
 [end]  
 ```
 
-In the namd sub-block within the qmd block, please note:
+In the `namd` sub-block within the `qmd` block, please note:
 
 - The number of roots requested in the tddft block must be at least nstates-1.
-- The nuclear time step (dt_nucl) must be an integer multiple of the electronic time step (mod(dt_nucl,dt_elec)
+- The nuclear time step (dt_nucl) must be an integer multiple of the electronic time step (`mod(dt_nucl,dt_elec)=0`).
 
 #### deco: Decoherence flag
 
-The `deco` flag applies the decoherence correction described in the following paper:  
+The `deco` flag applies the EDC electronic decoherence correction described in the paper:  
 G. Granucci and M. Persico,
 ``Critical appraisal of the fewest switches algorithm for surface hopping'', J. Chem. Phys. 126, 134114 (2007)
 [DOI:10.1063/1.2715585](https://dx.doi.org/10.1063/1.2715585).
+The default value is `.false.`, i.e. no decoherence correction is applied.
 
 #### dt_elec: Electronic dynamics time step
 
@@ -361,7 +363,19 @@ occupied state runs from 0 (ground state) to `nstates-1`.
 So if you want to start a calculation in the first excited state, you would set
 `init_state` to 1.
 
+#### tdks: Time-Dependent Kohn-Sham
+
+The keyword `tdks` will use Time-Dependent Kohn-Sham instead of the default [Tamm-Dancoff](Excited-State-Calculations.md#cis-and-rpa-the-tamm-dancoff-approximation) approximation.  
+The keyword requires the keyword (`odft`)[Density-Functional-Theory-for-Molecules.html#odft-and-mult-open-shell-systems]
+in the `dft` input block to
+It can have two values:
+
+- `1` (default) selects the alpha spin channel
+- `2`  selects the beta spin channel
+
 #### NAMD Input Example
+
+Example input for  fewest-switches surface-hopping (FSSH) approach.
 
 ```
 geometry noautosym nocenter
