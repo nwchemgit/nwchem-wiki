@@ -319,7 +319,7 @@ here.
 For  details of the NAMD implementation, please
 refer to the following paper:  
 H. Song, S. A. Fischer, Y. Zhang, C. J. Cramer, S. Mukamel, N. Govind and S. Tretiak,
-``First Principles Nonadiabatic Excited-State Molecular Dynamics in NWChem'',
+"First Principles Nonadiabatic Excited-State Molecular Dynamics in NWChem",
 Journal of Chemical Theory and Computation  16 (10), pp. 6418-6427 (2020)
 [DOI:10.1021/acs.jctc.0c00295](https://dx.doi.org/10.1021/acs.jctc.0c00295).
 
@@ -342,7 +342,7 @@ In the `namd` sub-block within the `qmd` block, please note:
 
 The `deco` flag applies the EDC electronic decoherence correction described in the paper:  
 G. Granucci and M. Persico,
-``Critical appraisal of the fewest switches algorithm for surface hopping'', J. Chem. Phys. 126, 134114 (2007)
+"Critical appraisal of the fewest switches algorithm for surface hopping", J. Chem. Phys. 126, 134114 (2007)
 [DOI:10.1063/1.2715585](https://dx.doi.org/10.1063/1.2715585).
 The default value is `.false.`, i.e. no decoherence correction is applied.
 
