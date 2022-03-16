@@ -1,3 +1,5 @@
+# Gaussian Basis AIMD
+
 ## Overview
 
 This module performs adiabatic ab initio molecular dynamics on finite
@@ -17,6 +19,7 @@ El-Khoury, A. L. Mifflin, W. P. Hess, H.F. Wang, C. J. Cramer, N. Govind
 "Infrared and Raman Spectroscopy from Ab Initio Molecular Dynamics and
 Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
 Phys. Chem. B, 120 (8), pp 1429–1436 (2016), [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323) (2015).
+
 ```
 QMD
   [dt_nucl <double default 10.0>]  
@@ -28,96 +31,100 @@ QMD
   [print_xyz <integer default 1>]  
   [linear]   
   [property <integer default 1>] 
-  [tddft <integer default 1>]   
+  [tddft <integer default 1>]
+  [namd ]
 END
 ```
+
 The module is called as:
+
 ```
 task <level of theory> qmd
 ```
+
 where <level of theory> is any Gaussian basis set method in NWChem
 
 ## QMD Keywords
 
-### dt\_nucl -- Nuclear time step
+### dt_nucl: Nuclear time step
 
 This specifies the nuclear time step in atomic units (1 a.u. = 0.02419
 fs). Default 10.0 a.u.
 
-### nstep\_nucl -- Simulation steps
+### nstep_nucl: Simulation steps
 
 This specifies the number of steps to take in the nuclear dynamics.
 Default 1000
 
-### targ\_temp -- Temperature of the system
+### targ\_temp: Temperature of the system
 
 This specifies the temperature to use with the thermostat. Also it is
 used in generating initial velocities from the Maxwell-Boltzmann
 distribution. Default 298.15
 K
 
-### thermostat -- Thermostat for controling temperature of the simulation
+### thermostat: Thermostat for controling temperature of the simulation
 
 This specifies the thermostat to use for regulating the temperature of
 the nuclei. Possible options are:
 
-  - **none**
+- **none**
 
    No thermostat is used, i.e. an NVE ensemble is simulated. Default  
 
-  - **svr** `<double default 1000.0>`
+- **svr** `<double default 1000.0>`
 
    Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello,
  J. Chem. Phys. 126, 014101 (2007)  
    Number sets the relaxation parameter of the thermostat  
 
-  - **langevin** `<double default 0.1>`
+- **langevin** `<double default 0.1>`
 
    Langevin dynamics, implementation according to Bussi and Parrinello Phys. Rev. E 75, 056707 (2007)  
    Number sets the value of the friction  
 
-  - **berendsen** `<double default 1000.0>`  
+- **berendsen** `<double default 1000.0>`  
 
    Berendsen thermostat, number sets the relaxation parameter of the thermostat  
 
-  - **rescale**
+- **rescale**
 
    Velocity rescaling, i.e. isokinetic ensemble  
 
-### rand\_seed -- Seed for the random number generator
+### rand_seed: Seed for the random number generator
 
 This specifies the seed for initializing the random number generator. If
 not given, a unique random seed will be generated. Even without a
 thermostat, this will influence the initial
 velocities.
 
-### com\_step -- How often center-of-mass translations and rotations are removed
+### com\_step: How often center-of-mass translations and rotations are removed
 
 This specifies that center-of-mass translations and rotations will be
 removed every com\_step steps. Default 10 COM translations and rotations
 are removed on startup (either randomized initial velocities or those
 read from the restart file).
 
-### print\_xyz -- How often to print trajectory information to xyz file
+### print\_xyz: How often to print trajectory information to xyz file
 
 This specifies that the trajectory information (coordinates, velocities,
 total energy, step number, dipole (if available)) to the xyz file. The
 units for the coordinates and velocities in the xyz file are Angstrom
 and Angstrom/fs, respectively.
 
-### linear -- Flag for linear molecules
+### linear: Flag for linear molecules
 
 If present, the code assumes the molecule is linear.
 
-### property -- How often to calculate molecular properties as part of the MD simulation
+### property: How often to calculate molecular properties as part of the MD simulation
 
 If present, the code will look for the property block and calculate the requested properties.  
 For example, property 5 will calculate properties on the current geometry every 5 steps.  
 
-### tddft -- How often to peform TDDFT calculation as part of the MD simulation  
+### tddft: How often to peform TDDFT calculation as part of the MD simulation  
 
 If present, the code will look for the tddft block and calculate the absorption spectrum.  
-For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.    
+For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.
 
 ## Sample input files
 
@@ -129,6 +136,7 @@ stochastic velocity rescaling thermostat with a relaxation parameter of
 100 a.u. and a target temperature of 200 K. Center-of-mass rotations and
 translations will be removed every 10 steps and trajectory information
 will be output to the xyz file every 5 steps.
+
 ```
 start qmd_dft_h2o_svr  
 echo  
@@ -162,6 +170,7 @@ the first excited state. The simulation is 200 steps long with a 10 a.u.
 time step, run in the microcanonical ensemble. Center-of-mass rotations
 and translations will be removed every 10 steps and trajectory
 information will be output to the xyz file every 5 steps.
+
 ```
 start qmd_tddft_h2o_svr  
 echo  
@@ -195,11 +204,12 @@ qmd
 end  
 task tddft qmd
 ```
- 
+
 ### Property calculation in a Molecular Dynamics simulation
+
 Thefollowing is a sample input for an MD simulation that compute
 polarizability by means of the
-[SOS method](Properties#polarizability-computed-with-the-sum-over-orbitals-method)
+[SOS method](Properties.md#polarizability-computed-with-the-sum-over-orbitals-method)
 at each time step.
 
 ```
@@ -251,6 +261,7 @@ the NWChem source.
 Here we compute the IR spectrum and the element-wise breakdown of the
   vibrational density of states for silicon tetrachloride (SiCl<sub>4</sub>). The
 following input file was used.
+
 ```
 start SiCl4  
 echo  
@@ -278,12 +289,15 @@ qmd
 end  
 task dft qmd
 ```
+
 The IR spectrum and vibrational density of states were generated from
-the [qmd\_analysis code](qmd_tools.tar.gz) with the following
+the [qmd_analysis code](qmd_tools.tar.gz) with the following
 command.
+
 ```
 ./qmd_analysis -xyz SiCl4.xyz -steps 15000 -skip 5000 -ts 10.0 -temp 20.0 -smax 800 -width 10.0
 ```
+
 where we have skipped the first 5000 steps from the simulation and only
 used the data from the last 15000 steps to compute the spectra. The time
 step is given as 10 a.u. since that was the time step in the simulation
@@ -297,5 +311,90 @@ half-maximum of the peaks in the resulting spectra.
 The computed IR spectrum and vibrational density of states are shown
 here.
 
-![pic1](SiCl4IR.png) 
+![pic1](SiCl4IR.png)
 ![pic2](SiCl4VDOS.png)
+
+### NAMD: Non-adiabatic Excited Stated Molecular Dynamics
+
+For  details of the NAMD implementation, please
+refer to the following paper:
+H. Song, S. A. Fischer, Y. Zhang, C. J. Cramer, S. Mukamel, N. Govind and S. Tretiak,
+``First Principles Nonadiabatic Excited-State Molecular Dynamics in NWChem'',
+Journal of Chemical Theory and Computation  16 (10), pp. 6418-6427 (2020)
+[DOI:10.1021/acs.jctc.0c00295](https://dx.doi.org/10.1021/acs.jctc.0c00295).
+
+```
+[namd]
+  [init_state <integer default 2>]
+  [nstates <integer default 2>]
+  [dt_elec <double default 0.01>]
+  [deco <logical default .false.]
+[end]  
+```
+
+In the namd sub-block within the qmd block, please note:
+
+- The number of roots requested in the tddft block must be at least nstates-1.
+- The nuclear time step (dt_nucl) must be an integer multiple of the electronic time step (mod(dt_nucl,dt_elec)
+
+#### deco: Decoherence flag
+
+Granucci & Persico J. Chem. Phys. 126, 134114 (2007)
+
+#### dt_elec: Electronic dynamics time step
+
+The keyword `dt_elec` sets the electronic time step in atomic units.
+
+#### n_states: Number of states
+
+The keyword `nstates` sets the number of electronic states to include in the calculation, i.e.
+the number of states for use with Eq. 5 of the paper above.
+
+#### init_state: Initial state
+
+The keyword `init_state` sets the initial electronic state to be occupied;
+the numbering for this keyword and the output that reports the currently
+occupied state runs from 0 (ground state) to `nstates-1`.
+So if you want to start a calculation in the first excited state, you would set
+`init_state` to 1.
+
+#### NAMD Input Example
+
+```
+geometry noautosym nocenter
+O 0.0000  0.0000  0.1197
+H 0.0000  0.7615 -0.4790
+H 0.0000 -0.7615 -0.4790
+end
+basis
+* library 6-31G*
+end
+
+dft
+  xc b3lyp
+end
+
+tddft
+  nroots 10
+  notriplet
+  cis
+  civecs
+  grad
+    root 1
+  end
+end
+
+qmd
+  nstep_nucl 50
+  dt_nucl 0.5
+  targ_temp 300.0
+  thermostat svr 500
+  namd 
+    nstates 5
+    init_state 3
+    dt_elec 0.1
+    deco .true.
+  end
+end
+task tddft qmd
+```
