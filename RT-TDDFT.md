@@ -16,9 +16,10 @@ arbitrary external stimuli (e.g., electron charge dynamics after laser
 excitation). For theoretical and computational details, please refer to
 the following paper:
 
-1.  K. Lopata, N. Govind,"Modeling Fast Electron Dynamics with Real-Time
+1. K. Lopata, N. Govind,"Modeling Fast Electron Dynamics with Real-Time
     Time-Dependent Density Functional Theory: Application to Small
     Molecules and Chromophores", J. Chem. Theory Comput., 7, 1344 (2011)
+    [DOI:10.1021/ct200137z](https://dx.doi.org/10.1021/ct200137z)
 
 This functionality is built on the [Gaussian basis set
 DFT](Density-Functional-Theory-for-Molecules) module, and
@@ -29,9 +30,9 @@ implementation assumes frozen nuclei (Born-Oppenheimer approximation).
 
 In a nutshell, running a RT-TDDFT calculation takes the following form:
 
-1.  Compute ground state density matrix with DFT module
-2.  Propagate density matrix using RT-TDDFT
-3.  Post-process resulting time-dependent observables (e.g., dipole
+1. Compute ground state density matrix with DFT module
+2. Propagate density matrix using RT-TDDFT
+3. Post-process resulting time-dependent observables (e.g., dipole
     moment)
 
 ## Units
@@ -40,14 +41,12 @@ Unless specified otherwise, all inputs and outputs are in **atomic
 units**. Some useful conversions are:
 
 | Quantity      | Conversion        |
-| ------------- |-------------------| 
-| Time          | 1 au = 0.02419 fs | 
-| Length        | 1 au = 0.5292 A   | 
+| ------------- |-------------------|
+| Time          | 1 au = 0.02419 fs |
+| Length        | 1 au = 0.5292 A   |
 | Energy        | 1 au = 27.2114 eV |
 | Electric field| 1 au = 514.2 V/nm |
 | Dipole moment | 1 au = 2.542 D    |
-
-
 
 ## Syntax
 
@@ -59,6 +58,7 @@ parameters are supplied in the `RT_TDDFT` block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
 discussed in detail
 afterwards.
+
 ```
 RT_TDDFT 
   [TMAX <double default 1000>]  
@@ -85,6 +85,7 @@ RT_TDDFT
   [LOAD RESTART]
 END
 ```
+
 ### TMAX: Simulation time
 
 This option specifies the maximum time (in au) to run the simulation
@@ -94,6 +95,7 @@ just set this to a large value to ensure you capture all the important
 dynamics (see the example of [resonant ultraviolet excitation of water](#resonant-ultraviolet-excitation-of-water)). For most
 valence excitations, for example, 1000 au is overkill so you might want
 to automatically stop at 500 au:
+
 ```
 rt_tddft
   ...  
@@ -101,6 +103,7 @@ rt_tddft
   ... 
 end
 ```
+
 ### DT: Time step
 
 This specifies the electronic time step for time integration. A larger
@@ -131,7 +134,7 @@ time step.
 
 This option sets a label for the output for convenient parsing (e.g.,
 with "grep"). Every output line with time-dependent data will begin with
-this string (set to `<rt_tddft>: ` by default). For example setting:
+this string (set to `<rt_tddft>:` by default). For example setting:
 
 ```
 rt_tddft
@@ -208,11 +211,11 @@ end
 
 This option controls various numerical tolerances:
 
-  - `zero`: threshold for checks that quantities are zero, e.g., in
+- `zero`: threshold for checks that quantities are zero, e.g., in
     symmetry checks (default 1e-8)
-  - `series`: numerical convergence for series, e.g., matrix
+- `series`: numerical convergence for series, e.g., matrix
     exponentiation (default 1e-10)
-  - `interpol`: numerical convergence for interpolation, e.g., in Magnus
+- `interpol`: numerical convergence for interpolation, e.g., in Magnus
     propagator (default 1e-7)
 
 Occasionally it is useful to loosen the interpolation tolerances if the
@@ -314,18 +317,18 @@ the values are computed and printed for each geometry specified in the
 input deck, not only the active one (i.e., the one set using `set
 geometry ...` in the input deck). Possible choices are:
 
-  - `dipole`: Dipole moment
-  - `quadrupole`: Quadrupole moment
-  - `field`: External (applied) electric field
-  - `moocc`: Molecular orbital occupations
-  - `energy`: Components of system energy (e.g., core, XC, total, etc)
-  - `cputime`: CPU time taken in simulation so far (useful for checking
+- `dipole`: Dipole moment
+- `quadrupole`: Quadrupole moment
+- `field`: External (applied) electric field
+- `moocc`: Molecular orbital occupations
+- `energy`: Components of system energy (e.g., core, XC, total, etc)
+- `cputime`: CPU time taken in simulation so far (useful for checking
     scaling)
-  - `charge`: Electronic charge (computed from density matrix, not from
+- `charge`: Electronic charge (computed from density matrix, not from
     the XC grid)
-  - `convergence`: Convergence information (e.g., from Magnus)
-  - `s2`: <S2> value (openshell only)
-  - `*`: Print all quantities
+- `convergence`: Convergence information (e.g., from Magnus)
+- `s2`: <S2> value (openshell only)
+- `*`: Print all quantities
 
 The defaults correspond to:
 
@@ -429,7 +432,8 @@ visualization
 end
 ```
 
-### LOAD RESTART ###
+### LOAD RESTART
+
 This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new `tmax`
 
 ```
@@ -439,6 +443,31 @@ rt_tddft
   load restart
 end
 ```
+
+### MOCAP: Sub-block for molecular orbital complex absorbing potential
+
+The
+K. Lopata and N. Govind,
+"Near and Above Ionization Electronic Excitations with Non-Hermitian
+Real-Time Time-Dependent Density Functional Theory",
+Journal of Chemical Theory and Computation 9 (11), 4939-4946 (2013)
+    [DOI:10.1021/ct400569s](https://dx.doi.org/10.1021/ct400569s)
+
+```
+  mocap
+    maxval 100.0     # clamp CAP at this value (in Ha)
+    emin 0.5         # any MO with eigenvalue >= 0.5 Ha will have CAP applied to it
+    prefac 1.0       # prefactor for exponential
+    expconst 1.0     # exponential constant for CAP
+    off              # turn off CAP
+    nochecks         # disable checks for speed
+    noprint          # don't print CAP value
+  end
+```
+
+#### MAXVAL: Exponential Maximum Value
+
+#### EMIN: Vacuum Energy Level
 
 ## Worked Examples
 
@@ -583,8 +612,7 @@ absorption, which is constructed from the trace of the polarizability
 matrix, i.e., the sum of the imaginary parts of the FFTs of the dipole
 moments.
 
-*S (&omega;) = (4&pi;&omega;)/(3c&kappa;)  *Tr[Im* &alpha;(&omega;)*]  
-
+*S (&omega;) = (4&pi;&omega;)/(3c&kappa;)*Tr[Im* &alpha;(&omega;)*]  
 
 where *c* is the speed of light (137 in atomic units), *&kappa;*  is
 the kick electric field strength, and *&alpha;(&omega;)* is the linear
@@ -991,3 +1019,52 @@ note, however, this starting point is highly non-physical, specifically
 converging the two fragments together and "gluing" them together
 introduces an indeterminate amount of energy to the system, but this
 simulation shows how charge dynamics simulations can be done.
+
+### MO CAP example
+
+```
+## aug-cc-pvtz/PBE0 optimized
+geometry "system" units angstroms noautosym noautoz nocenter
+  O     0.00000043     0.11188833     0.00000000
+  H     0.76000350    -0.47275229     0.00000000
+  H    -0.76000393    -0.47275063     0.00000000
+end
+
+set geometry "system"
+
+basis spherical
+  * library 6-31G*
+end
+
+dft
+  xc pbe0
+  convergence density 1d-9
+end
+task dft
+
+rt_tddft
+  dt 0.2
+  tmax 250.0
+
+  print dipole field energy charge
+
+  mocap
+    expconst 1.0     # exponential constant for CAP
+    emin 0.5         # any MO with eigenvalue >= 0.5 Ha will have CAP applied to it
+    prefac 1.0       # prefactor for exponential
+    maxval 100.0     # clamp CAP at this value (in Ha)
+    off              # turn off CAP
+    nochecks         # disable checks for speed
+    noprint          # don't print CAP value
+  end
+
+  field "kick"
+    type delta
+    max 0.0001
+    polarization z
+  end
+
+  excite "system" with "kick"
+end
+task dft rt_tddft
+```
