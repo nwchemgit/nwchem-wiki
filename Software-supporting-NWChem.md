@@ -8,13 +8,13 @@ feedback on this page content.
 ## User interface software
 
   - **ECCE** Extensible Computational Chemistry Environment
-    <https://github.com/FriendsofECCE/ECCE> <sup id="a1">[1](#f1)</sup>
+    <https://github.com/FriendsofECCE/ECCE> [^1]
   - **EMSL Arrows** Evolution of Chemical and Materials Computation
     <https://nwchemgit.github.io/EMSL_Arrows.html>
   - **Avogadro** reads cube files, generates NWChem input files,
     analyzes output files (including frequencies) <http://avogadro.cc>
   - **WebMO** World Wide Web-based interface to computational chemistry
-    packages <https://www.webmo.net/> <sup id="a2">[2](#f2)</sup>
+    packages <https://www.webmo.net/> [^2]
   - **Jmol** analyzes output and cube files
     <http://wiki.jmol.org/index.php/NWChem>
   - **Scienomics MAPS** platform has a NWChem Plugin that will allow
@@ -112,22 +112,25 @@ The following programs can display cube files from
 
 ## Programs post-processing AIM files
 
-NWChem can generate [AIM](Properties.md#aimfile) wavefunction
+NWChem can generate [AIM](Properties.md#aimfile)[^3] wavefunction
 files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
-  - **XAIM** <http://www.quimica.urv.es/XAIM>
-  - **NCIPLOT** <https://github.com/aoterodelaroza/nciplot>
-  - **Multiwfn** <http://sobereva.com/multiwfn/>
-  - **Postg** <https://github.com/aoterodelaroza/postg>
-  - **GPUAM** <http://www.fqt.izt.uam.mx/Profes/JGO/GPUAM/GPUAM.html>
-  - **CHARGEMOL** <https://sourceforge.net/projects/ddec/>
+  - **XAIM** is a graphical user interface to several programs based on some aspects of the Theory of Atoms in Molecules <http://www.quimica.urv.es/XAIM>
+  - **NCIPLOT** computates and visualizes inter- and intra-molecular non-covalent interactions <https://github.com/aoterodelaroza/nciplot>
+  - **Multiwfn** performs a variety of electronic wavefunction analysis <http://sobereva.com/multiwfn/>
+  - **Postg** calculates the dispersion energy and related quantities in gas-phase systems using the exchange-hole dipole moment (XDM) model <https://github.com/aoterodelaroza/postg>
+  - **GPUAM** computes Molecular Electrostatic Potential over Graphics Processing Units <http://www.fqt.izt.uam.mx/Profes/JGO/GPUAM/GPUAM.html>
+  - **CHARGEMOL**  computes Density Derived Electrostatic and Chemical (DDEC) net atomic charges and atomic multipoles  <https://sourceforge.net/projects/ddec/>
+  - **PAMoC** is program for the analysis of experimental and theoretical electron charge density distributions <https://www.pamoc.it/>
 
 
 
 
 
-<b id="f1">1</b> No longer been actively developed at PNNL. New development effort at
+[^1]: No longer been actively developed at PNNL. New development effort at
     <https://github.com/FriendsofECCE/ECCE/releases> [↩](#a1)
 
-<b id="f2">2</b>  The WebMo interface might not be compatible with NWChem 6.0 and
+[^2]: The WebMo interface might not be compatible with NWChem 6.0 and
     later versions [↩](#a2)
+
+[^3]: **WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties.md#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
