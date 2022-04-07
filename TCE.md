@@ -1030,13 +1030,12 @@ is performed (and in the rest of the iterations, Jacobi rotation is
 used). When zero or negative value is specified, the DIIS is turned off.
 It is not recommended to perform DIIS every iteration, whereas setting a
 large value for this parameter necessitates a large memory (disk) space
-to keep the excitation amplitudes of previous iterations. In 5.0 version
-we significantly improved the DIIS solver by re-organizing the iterative
-process and by introducing the level shift option (lshift) that enable
+to keep the excitation amplitudes of previous iterations.   
+Another tool for convergence acceleration is the level shift option (`lshift` keyword) that allows 
 to increase small orbital energy differences used in calculating the
-up-dates for cluster amplitudes. Typical values for lshift oscillates
+up-dates for cluster amplitudes. Typical values for `lshift` oscillates
 between 0.3 and 0.5 for CC calculations for ground states of
-multi-configurational character. Otherwise, the value of lshift is by
+multi-configurational character. Otherwise, the value of `lshift` is by
 default set equal to 0.
 
 ### FREEZE: the frozen core/virtual approximation
