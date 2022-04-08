@@ -20,18 +20,18 @@
 | [H. J. J. van Dam](http://www.linkedin.com/in/huubvandam) (BNL)                                                                                             | DFT, Fault tolerance                                                               |
 | [T. P. Straatsma](http://www.olcf.ornl.gov/about-olcf/groups/) (ORNL)                                                                                       | Molecular dynamics                                                                 |
 | [T. L. Windus](http://www.chem.iastate.edu/faculty/Theresa_Windus/) (Iowa State U. and AMES)                                                                | Dynamic nucleation theory                                                          |
-| [J. R. Hammond](http://jeffhammond.github.io/) ([Intel](http://pcl.intel-research.net/))                                                                    | Coupled cluster methods, performance optimization and multithreading               |
+| [J. R. Hammond](http://jeffhammond.github.io/) (Nvidia)                                                                    | Coupled cluster methods, performance optimization and multithreading               |
 | [J. Autschbach](http://www.nsm.buffalo.edu/~jochena/) (SUNY Buffalo)                                                                                        | Response properties, relativistic effects                                          |
 | [L. Jensen](http://research.chem.psu.edu/lxjgroup/) (Penn State)                                                                                            | DFT functionals, properties                                                        |
 | [M. Swart](http://iqc.udg.es/~marcel/eng/index.html) (Universitat de Girona, Spain)                                                                         | SSB-D functionals                                                                  |
 | [Q. Wu](http://pubweb.bnl.gov/~qinwu/Site/About_Me.html) (BNL)                                                                                              | Constrained DFT                                                                    |
 | [T. Van Voorhis](http://www.mit.edu/~chemistry/faculty/vanvoorhis.html) (MIT)                                                                               | Constrained DFT                                                                    |
-| [Y. Zhao](http://www.hpl.hp.com/people/yan_zhao3/) (Hewlett-Packard)                                                                                        | Minnesota (Truhlar) functionals                                                    |
-| [R. Peverati](http://www.cchem.berkeley.edu/mhggrp/Members.html) (UC Berkeley/LBNL)                                                                         | Minnesota (Truhlar) functionals                                                    |
+| Y. Zhao (Wuhan)                                                                                        | Minnesota (Truhlar) functionals                                                    |
+| R. Peverati  (FIT)                                                                         | Minnesota (Truhlar) functionals                                                    |
 | [K. Lopata](http://chem-faculty.lsu.edu/lopata/people.html) (LSU)                                                                                           | RT-TDDFT development                                                               |
 | [A. Vazquez-Mayagoitia](http://sites.google.com/site/alvarovazquezmayagoitia/) ([ANL](http://www.anl.gov))                                                  | DFT functionals, properties                                                        |
-| Kiran Bhaskharan Nair (LSU)                                                                                                                                 | Multireference Coupled Cluster (MRCC) Theory development                           |
-| [Jiri Brabec](http://crd.lbl.gov/departments/computational-science/computational-chemistry-materials-and-climate/staff/postdoctoral-fellows/jbrabec) (LBNL) | Multireference Coupled Cluster (MRCC) Theory development                           |
+| Kiran Bhaskharan Nair (WUSTL)                                                                                                                                 | Multireference Coupled Cluster (MRCC) Theory development                           |
+| Jiri Brabec (Heyrovsky Institute) | Multireference Coupled Cluster (MRCC) Theory development                           |
 |  |
 
 ## Authors and Contributors
