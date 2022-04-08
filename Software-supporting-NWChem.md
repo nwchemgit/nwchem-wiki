@@ -128,9 +128,7 @@ files (.wfn/.wfx) can be post-processed with a variety of codes, e.g.
 
 
 [^1]: No longer been actively developed at PNNL. New development effort at
-    <https://github.com/FriendsofECCE/ECCE/releases> [↩](#a1)
-
+    <https://github.com/FriendsofECCE/ECCE/releases>
 [^2]: The WebMo interface might not be compatible with NWChem 6.0 and
-    later versions [↩](#a2)
-
+    later versions
 [^3]: **WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties.md#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
