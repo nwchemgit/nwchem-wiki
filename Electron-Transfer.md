@@ -49,10 +49,10 @@ third reference details the method used in the ET module.
 3.  A. Farazdel, M. Dupuis, E. Clementi, and A. Aviram, J. Am. Chem.
     Soc., 112, 4206 (1990).
 
-## VECTORS -- input of MO vectors for ET reactant and product states
+## VECTORS: input of MO vectors for ET reactant and product states
 ```
- VECTORS [reactants] <string reactants_filename>  
- VECTORS [products ] <string products_filename>
+ VECTORS [reactants] <string reactants_filename>  
+ VECTORS [products ] <string products_filename>
 ```
 In the VECTORS directive the user specifies the source of the molecular
 orbital vectors for the ET reactant and product states. This is required
@@ -61,9 +61,9 @@ is the only required input in the ET module, although there are other
 optional keywords described
 below.
 
-## FOCK/NOFOCK -- method for calculating the two-electron contribution to  <i>V<sub>RP</sub></i>
+## FOCK/NOFOCK: method for calculating the two-electron contribution to  <i>V<sub>RP</sub></i>
 ```
-  <string (FOCK||NOFOCK) default FOCK>
+  <string (FOCK||NOFOCK) default FOCK>
 ```
 This directive enables/disables the use of the NWChem's Fock matrix
 routine in the calculation of the two-electron portion of the ET
@@ -75,9 +75,9 @@ the ET Hamiltonian with another subroutine which may be more accurate
 for systems with a small number of basis functions, although it is
 slower.
 
-## TOL2E -- integral screening threshold
+## TOL2E: integral screening threshold
 ```
- TOL2E <real tol2e default max(10e-12,min(10e-7, S(RP)*10e-7 )>
+ TOL2E <real tol2e default max(10e-12,min(10e-7, S(RP)*10e-7 )>
 ```
 The variable tol2e is used in determining the integral screening
 threshold for the evaluation of the two-electron contribution to the
@@ -89,9 +89,9 @@ than 1.0d-12 or greater than 1.0d-7.
 The input to specify the threshold explicitly within the ET directive
 is, for example:
 ```
- tol2e 1e-9
+ tol2e 1e-9
 ```
-<!---  ##  FMO -- Fragment Orbital Approach 
+<!---  ##  FMO: Fragment Orbital Approach 
 
 The keyword <tt>FMO</tt> can be used to compute electronic couplings by means of the fragment orbital approach
 (EF Valeev, V Coropceanu, DA da Silva Filho, S Salman, JL Bredas,. J. Am. Chem. Soc., 128, 9882 (2006))
