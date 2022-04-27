@@ -193,7 +193,7 @@ input molecular orbital vectors as any of the following:
   - `FRAGMENT file1 ...` -- assembles starting MO vectors from previously
     performed calculations on fragments of the system and is described
     in more detail in [Superposition of fragment molecular
-    orbitals](#superposition-of-fragment-molecular-orbitals).
+    orbitals](#vectors-fragment-superposition-of-fragment-molecular-orbitals).
     Even though there are some significant restrictions in the use of
     the initial implementation of this method,
     this is the most powerful initial guess option within the code. It
