@@ -1007,7 +1007,9 @@ can be modified by the following keywords
               [lshift <real lshift default 0.5>] \  
               [hl_tol <real hl_tol default 0.1>]]
 ```
-
+    
+### CONVERGENCE DAMP Keyword
+    
 Damping is defined to be the percentage of the previous iterations
 density mixed with the current iterations density. So, for example
 
@@ -1018,6 +1020,8 @@ density mixed with the current iterations density. So, for example
 would mix 30% of the current iteration density with 70% of the previous
 iteration density.
 
+### CONVERGENCE LSHIFT Keyword
+    
 Level-Shifting is defined as the amount of shift applied to the diagonal
 elements of the unoccupied block of the Fock matrix. The shift is
 specified by the keyword `lshift`. For example the directive,
@@ -1037,6 +1041,8 @@ tolerance to 0.01 would be,
  CONVERGENCE hl_tol 0.01
 ```
 
+### CONVERGENCE DIIS Keyword    
+    
 Direct inversion of the iterative subspace with extrapolation of up to
 10 Fock matrices is a default optimization procedure. For large
 molecular systems the amount of available memory may preclude the
@@ -1074,7 +1080,8 @@ the following line
 ```
  CONVERGENCE rabuck 30
 ```
-  
+### CONVERGENCE FAST Keyword
+      
 `convergence fast` turns on a series of parameters that most often speed-up convergence, but not in 100% of the cases.
 
 ```
