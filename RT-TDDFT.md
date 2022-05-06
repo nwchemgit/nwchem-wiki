@@ -459,7 +459,7 @@ Journal of Chemical Theory and Computation 9 (11), 4939-4946 (2013)
     emin 0.5         # any MO with eigenvalue >= 0.5 Ha will have CAP applied to it
     prefac 1.0       # prefactor for exponential
     expconst 1.0     # exponential constant for CAP
-    off              # turn off CAP
+    on               # turn on/off CAP
     nochecks         # disable checks for speed
     noprint          # don't print CAP value
   end
@@ -1053,7 +1053,7 @@ rt_tddft
     emin 0.5         # any MO with eigenvalue >= 0.5 Ha will have CAP applied to it
     prefac 1.0       # prefactor for exponential
     maxval 100.0     # clamp CAP at this value (in Ha)
-    off              # turn off CAP
+    on               # turn on CAP
     nochecks         # disable checks for speed
     noprint          # don't print CAP value
   end
