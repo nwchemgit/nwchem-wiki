@@ -1070,5 +1070,5 @@ rt_tddft
 end
 task dft rt_tddft
 ```
-
+After running the parser script on the output files from the input above using either with the `on` or `off` keywords, the following plot can be produced from the data file obtained with the command `nw_rtparse.py   -xdipole -pz -t"<rt_tddft>"`
 <img alt="Time dependent dipole with and without CAP" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/cap_dipole.png" align=middle with="364pt" height="275pt"/>
