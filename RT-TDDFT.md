@@ -468,6 +468,8 @@ Journal of Chemical Theory and Computation 9 (11), 4939-4946 (2013)
 #### MAXVAL: Exponential Maximum Value
 
 #### EMIN: Vacuum Energy Level
+    
+#### ON/OFF: Turn on/off CAP
 
 ## Worked Examples
 
@@ -1068,3 +1070,5 @@ rt_tddft
 end
 task dft rt_tddft
 ```
+
+    <img alt="Time dependent dipole with and without CAP" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/cap_dipole.png" align=middle with="364pt" height="275pt"/>
