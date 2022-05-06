@@ -470,6 +470,8 @@ Journal of Chemical Theory and Computation 9 (11), 4939-4946 (2013)
 #### EMIN: Vacuum Energy Level
     
 #### ON/OFF: Turn on/off CAP
+    
+The default value is `off`, i.e. no complex absorbing potential is applied.
 
 ## Worked Examples
 
