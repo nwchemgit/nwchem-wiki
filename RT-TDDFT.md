@@ -1071,4 +1071,4 @@ end
 task dft rt_tddft
 ```
 
-    <img alt="Time dependent dipole with and without CAP" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/cap_dipole.png" align=middle with="364pt" height="275pt"/>
+<img alt="Time dependent dipole with and without CAP" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/cap_dipole.png" align=middle with="364pt" height="275pt"/>
