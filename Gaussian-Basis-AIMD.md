@@ -46,24 +46,25 @@ where <level of theory> is any Gaussian basis set method in NWChem
 
 ## QMD Keywords
 
-### dt_nucl: Nuclear time step
+### DT_NUCL: Nuclear time step
 
 This specifies the nuclear time step in atomic units (1 a.u. = 0.02419
-fs). Default 10.0 a.u.
+fs).
+Default: 10.0 a.u.
 
-### nstep_nucl: Simulation steps
+### NSTEP_NUCL: Simulation steps
 
-This specifies the number of steps to take in the nuclear dynamics.
-Default 1000
+This specifies the number of steps to take in the nuclear dynamics.  
+Default: 1000
 
-### targ\_temp: Temperature of the system
+### TARG_TEMP: Temperature of the system
 
 This specifies the temperature to use with the thermostat. Also it is
 used in generating initial velocities from the Maxwell-Boltzmann
-distribution. Default 298.15
-K
+distribution.  
+Default: 298.15 K
 
-### thermostat: Thermostat for controling temperature of the simulation
+### THERMOSTAT: Thermostat for controling temperature of the simulation
 
 This specifies the thermostat to use for regulating the temperature of
 the nuclei. Possible options are:
@@ -91,40 +92,40 @@ the nuclei. Possible options are:
 
    Velocity rescaling, i.e. isokinetic ensemble  
 
-### rand_seed: Seed for the random number generator
+### RAND_SEED: Seed for the random number generator
 
 This specifies the seed for initializing the random number generator. If
 not given, a unique random seed will be generated. Even without a
 thermostat, this will influence the initial
 velocities.
 
-### com\_step: How often center-of-mass translations and rotations are removed
+### COM_STEP: How often center-of-mass translations and rotations are removed
 
 This specifies that center-of-mass translations and rotations will be
-removed every com\_step steps. Default 10 COM translations and rotations
+removed every `com_step` steps. Default 10 COM translations and rotations
 are removed on startup (either randomized initial velocities or those
 read from the restart file).
 
-### print\_xyz: How often to print trajectory information to xyz file
+### PRINT_XYZ: How often to print trajectory information to xyz file
 
 This specifies that the trajectory information (coordinates, velocities,
 total energy, step number, dipole (if available)) to the xyz file. The
 units for the coordinates and velocities in the xyz file are Angstrom
 and Angstrom/fs, respectively.
 
-### linear: Flag for linear molecules
+### LINEAR: Flag for linear molecules
 
 If present, the code assumes the molecule is linear.
 
-### property: How often to calculate molecular properties as part of the MD simulation
+### PROPERTY: How often to calculate molecular properties as part of the MD simulation
 
 If present, the code will look for the property block and calculate the requested properties.  
-For example, property 5 will calculate properties on the current geometry every 5 steps.  
+For example, `property 5` will calculate properties on the current geometry every 5 steps.  
 
-### tddft: How often to peform TDDFT calculation as part of the MD simulation  
+### TDDFT: How often to peform TDDFT calculation as part of the MD simulation  
 
 If present, the code will look for the tddft block and calculate the absorption spectrum.  
-For example, tddft 5 will perform tddft calculations on the current geometry every 5 steps.
+For example, `tddft 5` will perform tddft calculations on the current geometry every 5 steps.
 
 ## Sample input files
 
