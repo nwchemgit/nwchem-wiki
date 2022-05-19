@@ -221,7 +221,7 @@ in the DFT Module (see table below for full list of functionals). The
 default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
-this approximation, the exchange functional is the Slater *&rho;<sup>1/3</sup>*
+this approximation, the exchange functional is the Slater $\rho^{1/3}$
 functional[^1], and the correlation functional is the
 Vosko-Wilk-Nusair (VWN) functional (functional V)[^2].
 The parameters used in
