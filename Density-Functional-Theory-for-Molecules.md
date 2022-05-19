@@ -1805,7 +1805,7 @@ computed, the dispersion term may be added empirically through
 long-range contribution DFT-D, i.e. *E<sub>DFT-D</sub>=E<sub>DFT-KS</sub>+E<sub>disp</sub>*, 
 where:
 
-$$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$
+$$E_{disp}=-s_6\sum_{i=1}^{N_{atom}-1}\sum_{j=i+1}^{N_{atom}} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$
 
   In this equation, the  *s<sub>6</sub>* term depends in the functional and basis
   set used, *C<sub>6</sub><sup>ij</sup>* is the dispersion coefficient between pairs of
