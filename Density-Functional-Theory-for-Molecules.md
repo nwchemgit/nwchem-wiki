@@ -263,7 +263,7 @@ the default `slater` and `vwn_5` functionals. These are either local or
 gradient-corrected functionals (GCA); a full list can be found in the
 table below.
 
-The Hartree-Fock exact exchange functional, (which has <img alt="\(O(N^4)\)" src="svgs/6841e6deec263483fbfcac7124b2da91.svg?invert_in_darkmode&sanitize=true" align=middle width="48.01137pt" height="26.70657pt"/>
+The Hartree-Fock exact exchange functional, (which has $O(N^4)$
 computation expense), is invoked by specifying
 
 ```
@@ -593,16 +593,16 @@ these functionals with the accompanying local PW91LDA. The user cannot
 
 Using the Ewald decomposition
 
-<img alt="$$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$$" src="svgs/702839e7c548f54d8f5b49f0a3ad6824.svg?invert_in_darkmode&sanitize=true" align=middle width="254.98902pt" height="33.14091pt"/>
+$$\frac{1}{r_{12}} = \frac{\alpha + \beta \texttt{erf}(\mu r_{12})}{r_{12}} + \frac{1 - [\alpha + \beta \texttt{erf}(\mu r_{12})]}{r_{12}}$$"
 
 we can split the the Exchange interaction as
 
-<img alt="$$E_{X} = E_X^{LR} + E_X^{SR}$$" src="svgs/7b23a639e12d5c9a1bfa2148db98ab10.svg?invert_in_darkmode&sanitize=true" align=middle width="130.9704pt" height="27.59823pt"/>
+$$E_{X} = E_X^{LR} + E_X^{SR}$$
 
 Therefore, the long-range HF Exchange energy
 becomes
 
-<img alt="$$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$" src="svgs/f3c7b6943ed1cbb2f44e5c597ff1f40b.svg?invert_in_darkmode&sanitize=true" align=middle width="448.107495pt" height="33.14091pt"/>  
+$$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
   
 ```
  cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
@@ -828,7 +828,7 @@ For details of the theory, please see the following reference:
 
 The keyword `LB94` will correct the asymptotic region of the XC definition
 of exchange-correlation potential by the van-Leeuwen-Baerends
-exchange-correlation potential that has the correct <img alt="\(-1/r\)" src="svgs/3053de24294b49c2329426a84757d7d1.svg?invert_in_darkmode&sanitize=true" align=middle width="36.958185pt" height="24.56553pt"/> asymptotic
+exchange-correlation potential that has the correct $-1/r$ asymptotic
 behavior. The total energy will be computed by the XC definition of
 exchange-correlation functional. This scheme is known to tend to
 overcorrect the deficiency of most uncorrected exchange-correlation
@@ -1528,7 +1528,7 @@ GRID [(becke||erf1||erf2||ssf) default erf1]
 
 Erf*n* partitioning functions
 
-<img alt="$$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\  \mu^\prime_{AB} & = & \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\  \mu_{AB} & = & \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|} \end{array}$$" src="svgs/a6929e5f4f1fbe470b2d9bf0fe184888.svg?invert_in_darkmode&sanitize=true" align=middle width="268.96155pt" height="75.55119pt"/>
+$$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(\mu^\prime_{AB})\right] \\  \mu^\prime_{AB} & = & \frac{1}{\alpha} \ \frac{\mu_{AB}}{(1-\mu_{AB}^2)^n} \\  \mu_{AB} & = & \frac{{\mathbf r}_A - {\mathbf r}_B} {\left|{\mathbf r}_A - {\mathbf r}_B \right|} \end{array}$$"
 
 ### Radial grids
 
@@ -1802,10 +1802,10 @@ not just `bq`.
 
 When systems with high dependence on van der Waals interactions are
 computed, the dispersion term may be added empirically through
-long-range contribution DFT-D, i.e. <img alt="$$E_{DFT-D}=E_{DFT-KS}+E_{disp}$$" src="svgs/d77ef4554f554b6ea525e8857f0dd78e.svg?invert_in_darkmode&sanitize=true" align=middle width="217.894545pt" height="22.38192pt"/>,
+long-range contribution DFT-D, i.e. $E_{DFT-D}=E_{DFT-KS}+E_{disp}$, 
 where:
 
-<img alt="$$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$" src="svgs/3666d4a12cd1c98a47524620f9a0e3c5.svg?invert_in_darkmode&sanitize=true" align=middle width="425.340795pt" height="39.36735pt"/>
+$$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$
 
   In this equation, the  *s<sub>6</sub>* term depends in the functional and basis
   set used, *C<sub>6</sub><sup>ij</sup>* is the dispersion coefficient between pairs of
@@ -1815,13 +1815,13 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. <img alt="$$C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$" src="svgs/5bf882455a6d3bcb9b85b665b64325fe.svg?invert_in_darkmode&sanitize=true" align=middle width="216.419445pt" height="39.53334pt"/>  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
+1. $C_6^{ij}= \,\! \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
 J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
 Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use `vdw 0`)  
 
-2. <img alt="$$C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$" src="svgs/05c8b505216f0ee8c8f4b944f827a35b.svg?invert_in_darkmode&sanitize=true" align=middle width="98.800185pt" height="39.36735pt"/>. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use `vdw 1)`  
+2. $C_6^{ij}=2\,\!\frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use `vdw 1)`  
 
-3. <img alt="$$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$" src="svgs/c0dafc8fd3d85bac68dd41116a615d55.svg?invert_in_darkmode&sanitize=true" align=middle width="101.74065pt" height="42.19875pt"/> See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use `vdw 2`)  
+3. $C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$ See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use `vdw 2`)  
 
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
