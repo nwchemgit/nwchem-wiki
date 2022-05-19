@@ -1802,7 +1802,7 @@ not just `bq`.
 
 When systems with high dependence on van der Waals interactions are
 computed, the dispersion term may be added empirically through
-long-range contribution DFT-D, i.e. $E_{DFT-D}=E_{DFT-KS}+E_{disp}$, 
+long-range contribution DFT-D, i.e. *E<sub>DFT-D</sub>=E<sub>DFT-KS</sub>+E<sub>disp</sub>*, 
 where:
 
 $$E_{disp}=-s_6\sum^{N_{atom}-1}_{i=1}\sum^{N_{atom}}_{j=i+1} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$
