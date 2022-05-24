@@ -29,7 +29,7 @@ three real numbers defining the x,y,z coordinates of the atom.
 
 Within the Z-matrix input, bond lengths and Cartesian coordinates must
 be input in the user-specified units, as defined by the value specified
-for the variable <units> on the first line of the GEOMETRY directive.
+for the variable `units` on the first line of the GEOMETRY directive.
 All angles are specified in degrees.
 
 The individual centers (denoted as i, j, and k below) used to specify
@@ -61,7 +61,7 @@ The structure of this input is described in more detail below. In the
 following discussion, the tag or number of the center being currently
 defined is labeled as C (C for current). The values entered for these
 tags for centers defined in the Z-matrix input are interpreted in the
-same way as the <tag> entries for Cartesian coordinates described above
+same way as the `tag` entries for Cartesian coordinates described above
 (see [Cartesian coordinate
 input](Cartesian-coordinate-input.md)). Figures 1, 2 and 3
 display the relationships between the input data and the definitions of
@@ -117,7 +117,7 @@ The Z-matrix input shown above is interpreted as follows:
 By default, β is interpreted as a dihedral angle (see Figure 1), but if
 the optional final parameter (`orient`) is specified with the value ±1,
 then β is interpreted as the angle <img alt="$\widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f378ddbbfa1730f1afcf8fae7f95e7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="27.564405pt" height="33.24123pt"/>. The sign of
-<orient> specifies the direction of the bond angle relative to the plane
+`orient` specifies the direction of the bond angle relative to the plane
 containing the three reference atoms. If `orient` is +1, then the new
 center (C) is above the plane (Figure 2); and if `orient` is -1, then C
 is below the plane (Figure 3).
@@ -206,7 +206,7 @@ geometry
 end
 ```
 The input for any centers specified with Cartesian coordinates must be
-specified using the format of the <tag> lines described in [Cartesian
+specified using the format of the `tag` lines described in [Cartesian
 coordinate input](Cartesian-coordinate-input.md) above.
 However, in order to correctly specify these Cartesian coordinates
 within the Z-matrix, the user must understand the orientation of centers
