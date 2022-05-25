@@ -114,7 +114,7 @@ The Z-matrix input shown above is interpreted as follows:
     an orientation to the plane containing the other three centers
     (Figure 2 and 3).
 
-By default, β is interpreted as a dihedral angle (see Figure 1), but if
+By default, *β* is interpreted as a dihedral angle (see Figure 1), but if
 the optional final parameter (`orient`) is specified with the value ±1,
 then β is interpreted as the angle <img alt="$\widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f378ddbbfa1730f1afcf8fae7f95e7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="27.564405pt" height="33.24123pt"/>. The sign of
 `orient` specifies the direction of the bond angle relative to the plane
