@@ -29,7 +29,7 @@ three real numbers defining the x,y,z coordinates of the atom.
 
 Within the Z-matrix input, bond lengths and Cartesian coordinates must
 be input in the user-specified units, as defined by the value specified
-for the variable `units` on the first line of the GEOMETRY directive.
+for the variable `units` on the first line of the `GEOMETRY` directive.
 All angles are specified in degrees.
 
 The individual centers (denoted as i, j, and k below) used to specify
@@ -46,8 +46,8 @@ symbolic strings labeled `VARIABLES` may be subject to changes during a
 geometry optimization say, while the numerical values of the symbolic
 strings labeled `CONSTANTS` will stay frozen to the value given in the
 input. The same symbolic string can be used more than once, and any
-mixture of numeric data and symbols is acceptable. Bond angles (α) must
-be in the range 0 < α < 180.
+mixture of numeric data and symbols is acceptable. Bond angles (*α*) must
+be in the range 0 < *α* < 180.
 
 The Z-matrix input is specified sequentially as follows:
 ```
@@ -100,14 +100,14 @@ The Z-matrix input shown above is interpreted as follows:
     Only a tag is required for the first center.
 2.  `tag2 i R`  
     The second center requires specification of its tag and the bond
-    length (*R<sub>Ci</sub>*) distance to a previous atom, which is identified by i.
+    length (*R<sub>Ci</sub>*) distance to a previous atom, which is identified by *i*.
 3.  `tag3 i R j alpha`  
     The third center requires specification of its tag, its bond length
     distance (*R<sub>Ci</sub>*) to one of the two previous centers (identified
     by the value of i), and the bond angle  <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>.
 4.  `tag i R j alpha k beta [<integer orient default 0>]`  
     The fourth, and all subsequent centers, require the tag, a bond
-   length (*R<sub>Ci</sub>*) relative to center i, the bond angle with
+   length (*R<sub>Ci</sub>*) relative to center *i*, the bond angle with
     centers i and j ( <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>), and either the
     dihedral angle (β) between the current center and centers i, j, and
     k (Figure 1), or a second bond angle <img alt="$\beta = \widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7a54fc2c3b8cd34f0e2bd17402b0c9b3.svg?invert_in_darkmode&sanitize=true" align=middle width="59.565pt" height="33.24123pt"/> and
@@ -116,7 +116,7 @@ The Z-matrix input shown above is interpreted as follows:
 
 By default, *β* is interpreted as a dihedral angle (see Figure 1), but if
 the optional final parameter (`orient`) is specified with the value ±1,
-then β is interpreted as the angle <img alt="$\widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f378ddbbfa1730f1afcf8fae7f95e7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="27.564405pt" height="33.24123pt"/>. The sign of
+then *β* is interpreted as the angle <img alt="$\widehat{Cik}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f378ddbbfa1730f1afcf8fae7f95e7d8.svg?invert_in_darkmode&sanitize=true" align=middle width="27.564405pt" height="33.24123pt"/>. The sign of
 `orient` specifies the direction of the bond angle relative to the plane
 containing the three reference atoms. If `orient` is +1, then the new
 center (C) is above the plane (Figure 2); and if `orient` is -1, then C
@@ -138,7 +138,7 @@ its value, for clarity in reading the input file.
 Following the `VARIABLES` directive, the `CONSTANTS` directive may be used
 to define any Z-matrix symbolic variables that remain unchanged during
 geometry optimizations. To freeze the Cartesian coordinates of an atom,
-refer to [Applying constraints in geometry optimizations.md](ZCOORD-Forcing-internal-coordinates.md#applying_constraints-in-geometry-optimizations).
+refer to the section [Applying constraints in geometry optimizations](ZCOORD-Forcing-internal-coordinates.md#applying_constraints-in-geometry-optimizations).
 The general form of this directive is as follows:
 ```
  CONSTANTS  
