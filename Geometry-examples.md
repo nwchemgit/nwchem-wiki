@@ -34,14 +34,14 @@ or the *yz* planes.
  end
 ```
 
-## <img alt="$D_{2h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9435721d1c731be00e9a0dbd0129f6a3.svg?invert_in_darkmode&sanitize=true" align=middle width="27.754155pt" height="22.38192pt"/> acetylene
+## *D<sub>2h</sub>* acetylene
 
-Although acetylene has symmetry <img alt="$D_{\infty h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ab62aa1e031c2b1c2a67f743473c2abe.svg?invert_in_darkmode&sanitize=true" align=middle width="34.282215pt" height="22.38192pt"/> the subgroup <img alt="$D_{2h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9435721d1c731be00e9a0dbd0129f6a3.svg?invert_in_darkmode&sanitize=true" align=middle width="27.754155pt" height="22.38192pt"/>
+Although acetylene has symmetry *D<sub>&infin;h</sub>* the subgroup *D<sub>2h</sub>* 
 includes all operations that interchange equivalent atoms which is what
 determines how much speedup you gain from using symmetry in building a
 Fock matrix.
 
-The <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axes are the x, y, and z axes. The σ planes are the xy, xz
+The *C<sub>2</sub>* axes are the x, y, and z axes. The σ planes are the xy, xz
 and yz planes. Generally, the unique atoms are placed to use the z as
 the primary rotational axis and use the xz or yz planes as the σ plane.
 
@@ -53,9 +53,9 @@ the primary rotational axis and use the xz or yz planes as the σ plane.
  end
 ```
 
-## <img alt="$D_{2h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9435721d1c731be00e9a0dbd0129f6a3.svg?invert_in_darkmode&sanitize=true" align=middle width="27.754155pt" height="22.38192pt"/> ethylene
+## *D<sub>2h</sub>* ethylene
 
-The <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axes are the x, y, and z axes. The σ planes are the xy, xz
+The *C<sub>2</sub>* axes are the x, y, and z axes. The σ planes are the xy, xz
 and yz planes. Generally, the unique atoms are placed to use the z as
 the primary rotational axis and use the xz or yz planes as the σ plane.
 
@@ -67,10 +67,10 @@ the primary rotational axis and use the xz or yz planes as the σ plane.
  end
 ```
 
-## <img alt="$T_d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dab24416a3b37335c1fa411413282831.svg?invert_in_darkmode&sanitize=true" align=middle width="16.3878pt" height="22.38192pt"/> methane
+## T<sub>d</sub>* methane
 
-For ease of use, the primary <img alt="$C_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d19cc08043728c4034ea85a9fd4e254f.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axis should be the x=y=z axis. The
-3 <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axes are the x, y, and z.
+For ease of use, the primary *C<sub>3</sub>* axis should be the x=y=z axis. The
+3 *C<sub>2</sub>* axes are the x, y, and z.
 
 ```
  geometry units au
@@ -80,9 +80,9 @@ For ease of use, the primary <img alt="$C_3$" src="https://raw.githubusercontent
  end
 ```
 
-## <img alt="$I_h$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cb7a60250ec3ed03533037d233e9de6c.svg?invert_in_darkmode&sanitize=true" align=middle width="14.866335pt" height="22.38192pt"/> buckminsterfullerene
+## *I<sub>h</sub>* buckminsterfullerene
 
-One of the <img alt="$C_5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c585dc013630a6a779d5f4f39ebefddc.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axes is the z axis and the point of inversion is the
+One of the *C<sub>5</sub>* axes is the z axis and the point of inversion is the
 origin.
 
 ```
@@ -92,10 +92,10 @@ origin.
  end
 ```
 
-## <img alt="$S_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26a4b92ab105a03e05a9c71e86316570.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> porphyrin
+## *S<sub>4</sub>* porphyrin
 
-The <img alt="$S_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26a4b92ab105a03e05a9c71e86316570.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> and <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> rotation axis is the z axis. The reflection
-plane for the <img alt="$S_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26a4b92ab105a03e05a9c71e86316570.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> operation is the xy plane.
+The *S<sub>4</sub>* and *C<sub>2</sub>* rotation axis is the z axis. The reflection
+plane for the *S<sub>4</sub>* operation is the xy plane.
 
 ```
  geometry units angstroms
