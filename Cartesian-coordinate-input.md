@@ -91,4 +91,4 @@ description. In such a case, the user supplies the input tag line
 described above for any centers to be described by Cartesian
 coordinates, and then specifies the remainder of the system using the
 optional `ZMATRIX` directive described below in [Z-matrix
-input](ZMATRIX-Z-matrix-input.md).
+input](ZMATRIX.md).

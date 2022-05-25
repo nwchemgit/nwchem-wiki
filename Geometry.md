@@ -75,28 +75,20 @@ The following sections present the input for this compound directive in
 detail, describing the options available and the usages of the various
 keywords in each of the three main parts.
 
-- [Keywords on the GEOMETRY
-    directive](Keywords-on-the-GEOMETRY-directive.md)
+- [Keywords of the GEOMETRY directive](Keywords-on-the-GEOMETRY-directive.md)
 
-- [SYMMETRY -- Symmetry Group
-    Input](SYMMETRY----Symmetry-Group-Input.md)
+- [SYMMETRY: Symmetry Group Input](SYMMETRY----Symmetry-Group-Input.md)
 
-- [Names of 3-dimensional space
-    groups](Names-of-3-dimensional-space-groups.md)
+- [Names of 3-dimensional space groups](Names-of-3-dimensional-space-groups.md)
 
-- [Cartesian coordinate
-    input](Cartesian-coordinate-input.md)
+- [Cartesian coordinate input](Cartesian-coordinate-input.md)
 
-- [ZMATRIX -- Z-matrix
-    input](ZMATRIX-Z-matrix-input.md)
+- [ZMATRIX: Z-matrix input](ZMATRIX.md)
 
-- [ZCOORD -- Forcing internal
-    coordinates](ZCOORD-Forcing-internal-coordinates.md)
+- [ZCOORD: Forcing internal coordinates](ZCOORD-Forcing-internal-coordinates.md)
 
-- [SYSTEM -- Lattice parameters for periodic
-    systems](SYSTEM----Lattice-parameters-for-periodic-systems.md)
+- [SYSTEM: Lattice parameters for periodic systems](SYSTEM----Lattice-parameters-for-periodic-systems.md)
 
-- [LOAD -- Load geometry from
-     XYZ file](Geometry-load.md)
+- [LOAD: Load geometry from XYZ file](Geometry-load.md)
 
 <!-- end list -->
