@@ -108,9 +108,9 @@ The Z-matrix input shown above is interpreted as follows:
 4.  `tag i R j alpha k beta [<integer orient default 0>]`  
     The fourth, and all subsequent centers, require the tag, a bond
    length (*R<sub>Ci</sub>*) relative to center *i*, the bond angle with
-    centers i and j (*&alpha; = &ang;C i j*), and either the
-    dihedral angle (β) between the current center and centers i, j, and
-    k (Figure 1), or a second bond angle *&beta; = &ang; C i k * and
+    centers *i* and *j* (*&alpha; = &ang;C i j*), and either the
+    dihedral angle (*β*) between the current center and centers *i*, *j*, and
+    *k* (Figure 1), or a second bond angle *&beta; = &ang; C i k* and
     an orientation to the plane containing the other three centers
     (Figure 2 and 3).
 
