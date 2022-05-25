@@ -104,7 +104,7 @@ The Z-matrix input shown above is interpreted as follows:
 3.  `tag3 i R j alpha`  
     The third center requires specification of its tag, its bond length
     distance (*R<sub>Ci</sub>*) to one of the two previous centers (identified
-    by the value of i), and the bond angle  <img alt="$\alpha = \widehat{Cij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75131bd9f30067d5c20cee14b40231f3.svg?invert_in_darkmode&sanitize=true" align=middle width="58.61163pt" height="32.87592pt"/>.
+    by the value of *i*), and the bond angle *&alpha; = &ang;Cij*.
 4.  `tag i R j alpha k beta [<integer orient default 0>]`  
     The fourth, and all subsequent centers, require the tag, a bond
    length (*R<sub>Ci</sub>*) relative to center *i*, the bond angle with
