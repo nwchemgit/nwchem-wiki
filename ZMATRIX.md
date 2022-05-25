@@ -59,7 +59,7 @@ The Z-matrix input is specified sequentially as follows:
 ```
 The structure of this input is described in more detail below. In the
 following discussion, the tag or number of the center being currently
-defined is labeled as C (C for current). The values entered for these
+defined is labeled as *C* (*C* for current). The values entered for these
 tags for centers defined in the Z-matrix input are interpreted in the
 same way as the `tag` entries for Cartesian coordinates described above
 (see [Cartesian coordinate
@@ -119,7 +119,7 @@ the optional final parameter (`orient`) is specified with the value ±1,
 then *β* is interpreted as the angle *&ang; C i k*. The sign of
 `orient` specifies the direction of the bond angle relative to the plane
 containing the three reference atoms. If `orient` is +1, then the new
-center (C) is above the plane (Figure 2); and if `orient` is -1, then C
+center (*C*) is above the plane (Figure 2); and if `orient` is -1, then *C*
 is below the plane (Figure 3).
 
 Following the Z-matrix center definitions described above, the user can
