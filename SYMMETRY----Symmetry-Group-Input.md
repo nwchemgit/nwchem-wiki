@@ -36,7 +36,7 @@ generated through the action of the point group operators, but the user
 if free to specify all atoms. The user must know the symmetry of the
 molecule being modeled, and be able to specify the coordinates of the
 atoms in a suitable orientation relative to the rotation axes and planes
-of symmetry. The section [Geometry Examples](Geometry-Examples.md) lists a number of examples of the `GEOMETRY`
+of symmetry. The section [Geometry Examples](Geometry-examples.md) lists a number of examples of the `GEOMETRY`
 directive input for specific molecules having symmetry patterns
 recognized by NWChem. The exact point group symmetry will be forced upon
 the molecule, and atoms within 10<sup>−3</sup> A.U. of a symmetry
