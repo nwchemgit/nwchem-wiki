@@ -1,5 +1,5 @@
-SYMMETRY -- Symmetry Group Input
---------------------------------
+## SYMMETRY: Symmetry Group Input
+
 
 The SYMMETRY directive is used (optionally) within the compound GEOMETRY
 directive to specify the point group for the molecular geometry or space
@@ -27,7 +27,7 @@ expected input for the variable group\_name include such entries as:
 The SYMMETRY directive is optional. The default is no symmetry (i.e.,
 *C*<sub>1</sub> point group). Automatic detection of point group
 symmetry is available through the use of autosym in the GEOMETRY
-directive main line (discussed in [Keywords on the GEOMETRY directive](Keywords-on-the-GEOMETRY-directive)).
+directive main line (discussed in [Keywords on the GEOMETRY directive](Keywords-on-the-GEOMETRY-directive.md)).
 Note: if the SYMMETRY directive is present the autosym keyword is
 ignored.
 
@@ -36,7 +36,7 @@ generated through the action of the point group operators, but the user
 if free to specify all atoms. The user must know the symmetry of the
 molecule being modeled, and be able to specify the coordinates of the
 atoms in a suitable orientation relative to the rotation axes and planes
-of symmetry. Appendix C lists a number of examples of the GEOMETRY
+of symmetry. The section [Geometry Examples](Geometry-Examples.md) lists a number of examples of the `GEOMETRY`
 directive input for specific molecules having symmetry patterns
 recognized by NWChem. The exact point group symmetry will be forced upon
 the molecule, and atoms within 10<sup>−3</sup> A.U. of a symmetry

@@ -3137,7 +3137,7 @@ variables <img alt="$x_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit
 auxiliary energy functionals to the total
 energy.
 
-$$\begin{align} ION\_THERMOSTAT(x_R)  = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R \\ ELECTRON\_THERMOSTAT(x_e)  = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e \end{align}$$
+$$\begin{align} ION\_{THERMOSTAT}(x_R)  = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R \\ ELECTRON\_{THERMOSTAT}(x_e)  = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e \end{align}$$
 
 In these equations, the average kinetic energy for the ions is
 

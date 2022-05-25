@@ -1,4 +1,4 @@
-# EXamples
+# Examples
 
 ## [Sample input files](Sample.md)
 

@@ -3,14 +3,14 @@
 This keyword is needed only for for 1-, 2-, and 3-dimensional periodic
 systems.
 
-The `system` keyword can assume the following values
+The system keyword can assume the following values
 
-  - `polymer` -- system with 1-d translational symmetry (not currently
+  - polymer -- system with 1-d translational symmetry (not currently
     available with NWPW module).
-  - `surface` -- system with 2-d translational symmetry (not currently
+  - surface -- system with 2-d translational symmetry (not currently
     available with NWPW module).
-  - `crystal` -- system with 3-d translational symmetry.
-  - `molecule` -- no translational symmetry (this is the default)
+  - crystal -- system with 3-d translational symmetry.
+  - molecule -- no translational symmetry (this is the default)
 
 When the system possess translational symmetry, fractional coordinates
 are used in the directions where translational symmetry exists. This
