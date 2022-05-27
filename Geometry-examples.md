@@ -294,7 +294,7 @@ xy plane and one of the *&sigma;<sub>d</sub>* planes is the yz plane.
 ## *D<sub>4h</sub>* gold tetrachloride
 
 The *C<sub>4</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The
-*C>sub>2</sub>'* axes are the x and y axes and the *C<sub>2</sub>''* axes are the
+*C<sub>2</sub>'* axes are the x and y axes and the *C<sub>2</sub>''* axes are the
 x=y axis and the x=-y axis. The inversion center is the origin. The
 *&sigma;<sub>h</sub>* plane is the xy plane. The *&sigma;<sub>v</sub>* planes are the xz
 and yz planes and the *&sigma;<sub>d</sub>* planes are 1) the plane containing
