@@ -6,7 +6,7 @@ always the primary rotation axis. When in doubt about which axes and
 planes are used for the group elements, the keyword `print` may be added
 to the `SYMMETRY` directive to obtain this information.
 
-## *C<sub>s</sub>* methanol
+## *C<sub>s</sub>* &nbsp; methanol
 
 The *&sigma;<sub>h</sub>* plane is the *xy* plane.
 
@@ -21,7 +21,7 @@ The *&sigma;<sub>h</sub>* plane is the *xy* plane.
  end
 ```
 
-## *C<sub>2v</sub>* water
+## *C<sub>2v</sub>* &nbsp; water
 
 The z axis is the *C<sub>2</sub>* axis and the *&sigma;<sub>v</sub>* may be either the *xz*
 or the *yz* planes.
@@ -34,7 +34,7 @@ or the *yz* planes.
  end
 ```
 
-## *D<sub>2h</sub>* acetylene
+## *D<sub>2h</sub>* &nbsp; acetylene
 
 Although acetylene has symmetry *D<sub>&infin;h</sub>* the subgroup *D<sub>2h</sub>* 
 includes all operations that interchange equivalent atoms which is what
@@ -53,7 +53,7 @@ the primary rotational axis and use the xz or yz planes as the σ plane.
  end
 ```
 
-## *D<sub>2h</sub>* ethylene
+## *D<sub>2h</sub>* &nbsp; ethylene
 
 The *C<sub>2</sub>* axes are the x, y, and z axes. The σ planes are the xy, xz
 and yz planes. Generally, the unique atoms are placed to use the z as
@@ -67,7 +67,7 @@ the primary rotational axis and use the xz or yz planes as the σ plane.
  end
 ```
 
-## *T<sub>d</sub>* methane
+## *T<sub>d</sub>* &nbsp; methane
 
 For ease of use, the primary *C<sub>3</sub>* axis should be the x=y=z axis. The
 3 *C<sub>2</sub>* axes are the x, y, and z.
@@ -80,7 +80,7 @@ For ease of use, the primary *C<sub>3</sub>* axis should be the x=y=z axis. The
  end
 ```
 
-## *I<sub>h</sub>* buckminsterfullerene
+## *I<sub>h</sub>* &nbsp; buckminsterfullerene
 
 One of the *C<sub>5</sub>* axes is the z axis and the point of inversion is the
 origin.
@@ -92,7 +92,7 @@ origin.
  end
 ```
 
-## *S<sub>4</sub>* porphyrin
+## *S<sub>4</sub>* &nbsp; porphyrin
 
 The *S<sub>4</sub>* and *C<sub>2</sub>* rotation axis is the z axis. The reflection
 plane for the *S<sub>4</sub>* operation is the xy plane.
@@ -124,7 +124,7 @@ plane for the *S<sub>4</sub>* operation is the xy plane.
  end
 ```
 
-## *D<sub>3h</sub>* iron penta-carbonyl
+## *D<sub>3h</sub>* &nbsp; iron penta-carbonyl
 
 The *C<sub>3</sub>* axis is the z axis. The *&sigma;<sub>h</sub>* plane is the xy plane.
 One of the perpendicular *C<sub>2</sub>* axes is the x=y axis. One of the
@@ -145,7 +145,7 @@ One of the perpendicular *C<sub>2</sub>* axes is the x=y axis. One of the
  end
 ```
 
-## *D<sub>3d</sub>* sodium crown ether
+## *D<sub>3d</sub>* &nbsp; sodium crown ether
 
 The *C<sub>3</sub>* axis is the z axis. The point of inversion is the origin.
 One of the perpendicular *C<sub>2</sub>* axes is the x=y axis. One of the
@@ -170,7 +170,7 @@ each of the carbon and hydrogen atoms.
  end
 ```
 
-## *C<sub>3v</sub>* ammonia
+## *C<sub>3v</sub>* &nbsp; ammonia
 
 The *C<sub>3</sub>* axis is the z axis. One of the *&sigma;<sub>v</sub>* planes is the
 plane containing the x=y axis and the z axis.
@@ -199,7 +199,7 @@ as a *C<sub>2</sub>''* axis.) The *&sigma;<sub>h</sub>* plane is the xy plane. T
  end
 ```
 
-## *C<sub>3h</sub>* BO<sub>3</sub>H<sub>3</sub>
+## *C<sub>3h</sub>* &nbsp; BO<sub>3</sub>H<sub>3</sub>
 
 The *C<sub>3</sub>* axis is the z axis. The *&sigma;<sub>h</sub>* plane is the xy plane.
 
@@ -212,7 +212,7 @@ The *C<sub>3</sub>* axis is the z axis. The *&sigma;<sub>h</sub>* plane is the x
  end
 ```
 
-## *D<sub>5d</sub>* ferrocene
+## *D<sub>5d</sub>* &nbsp; ferrocene
 
 The *C<sub>5</sub>* axis is the z axis. The center of inversion is the origin.
 One of the perpendicular *C<sub>2</sub>* axes is the x axis. One of the
@@ -228,7 +228,7 @@ One of the perpendicular *C<sub>2</sub>* axes is the x axis. One of the
  end
 ```
 
-## *C<sub>4v</sub>*   SF<sub>5</sub>Cl
+## *C<sub>4v</sub>*  &nbsp; SF<sub>5</sub>Cl
 
 The *C<sub>4</sub>* axis is the z axis. The *&sigma;<sub>v</sub>* planes are the yz and
 the xz planes. The *&sigma;<sub>d</sub>* planes are: 1) the plane containing the
@@ -246,7 +246,7 @@ the z axis.
  end
 ```
 
-## *C<sub>2h</sub>* trans-dichloroethylene
+## *C<sub>2h</sub>* &nbsp; trans-dichloroethylene
 
 The *C<sub>2</sub>* axis is the z axis. The origin is the inversion center. The
 *&sigma;<sub>h</sub>* plane is the xy plane.
@@ -260,7 +260,7 @@ The *C<sub>2</sub>* axis is the z axis. The origin is the inversion center. The
  end
 ```
 
-## *D<sub>2d</sub>*     CH<sub>2</sub>CCH<sub>2</sub>
+## *D<sub>2d</sub>*  &nbsp;   CH<sub>2</sub>CCH<sub>2</sub>
 
 The *C<sub>2</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The x and y
 axes are the perpendicular *C<sub>2</sub>'s*. The *&sigma;<sub>d</sub>* planes are: 1)
@@ -276,7 +276,7 @@ containing the -x=y axis and the z axis.
  end
 ```
 
-## *D<sub>5h</sub>* cyclopentadiene anion
+## *D<sub>5h</sub>* &nbsp; cyclopentadiene anion
 
 The *C<sub>5</sub>* axis is the z axis (z is also the *S<sub>5</sub>* axis). The y axis
 is one of the perpendicular *C<sub>2</sub>* axes. The *&sigma;<sub>h</sub>* plane is the
@@ -291,7 +291,7 @@ xy plane and one of the *&sigma;<sub>d</sub>* planes is the yz plane.
  end
 ```
 
-## *D<sub>4h</sub>* gold tetrachloride
+## *D<sub>4h</sub>* &nbsp; gold tetrachloride
 
 The *C<sub>4</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The
 *C<sub>2</sub>'* axes are the x and y axes and the *C<sub>2</sub>''* axes are the
