@@ -199,7 +199,7 @@ as a *C<sub>2</sub>''* axis.) The *&sigma;<sub>h</sub>* plane is the xy plane. T
  end
 ```
 
-## *C<sub>3h</sub>* &nbsp; BO<sub>3</sub>H<sub>3</sub>
+## *C<sub>3h</sub>* &nbsp; H<sub>3</sub>BO<sub>3</sub>
 
 The *C<sub>3</sub>* axis is the z axis. The *&sigma;<sub>h</sub>* plane is the xy plane.
 
