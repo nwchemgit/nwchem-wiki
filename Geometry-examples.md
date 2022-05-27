@@ -296,8 +296,8 @@ xy plane and one of the *&sigma;<sub>d</sub>* planes is the yz plane.
 The *C<sub>4</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The
 *C>sub>2</sub>'* axes are the x and y axes and the *C<sub>2</sub>''* axes are the
 x=y axis and the x=-y axis. The inversion center is the origin. The
-<img alt="$\sigma_h$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f2681289ef765e2c206a33f464717f29.svg?invert_in_darkmode&sanitize=true" align=middle width="17.02536pt" height="14.10255pt"/> plane is the xy plane. The <img alt="$\sigma_v$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/427cc947be21a51a1864c29ff4aea221.svg?invert_in_darkmode&sanitize=true" align=middle width="16.32015pt" height="14.10255pt"/> planes are the xz
-and yz planes and the <img alt="$\sigma_d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f24297b17130e91cbc7746bbdd78dee.svg?invert_in_darkmode&sanitize=true" align=middle width="16.17561pt" height="14.10255pt"/> planes are 1) the plane containing
+*&sigma;<sub>h</sub>* plane is the xy plane. The *&sigma;<sub>v</sub>* planes are the xz
+and yz planes and the *&sigma;<sub>d</sub>* planes are 1) the plane containing
 the x=-y axis and the z axis and 2) the plane containing the x=y axis
 and the z axis.
 
