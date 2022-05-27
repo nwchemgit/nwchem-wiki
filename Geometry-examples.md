@@ -149,7 +149,7 @@ One of the perpendicular *C<sub>2</sub>* axes is the x=y axis. One of the
 
 The *C<sub>3</sub>* axis is the z axis. The point of inversion is the origin.
 One of the perpendicular *C<sub>2</sub>* axes is the x=y axis. One of the
-*&sigma<sub>d</sub>* planes is the plane containing the -x=y axis and the z
+*&sigma;<sub>d</sub>* planes is the plane containing the -x=y axis and the z
 axis.
 
 Note that the oxygen atom is rotated in the x-y plane 15 degrees away
