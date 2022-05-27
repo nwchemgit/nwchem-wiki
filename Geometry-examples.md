@@ -212,7 +212,7 @@ The *C<sub>3</sub>* axis is the z axis. The *&sigma;<sub>h</sub>* plane is the x
  end
 ```
 
-## *D>sub<5d</sub>* ferrocene
+## *D<sub>5d</sub>* ferrocene
 
 The *C<sub>5</sub>* axis is the z axis. The center of inversion is the origin.
 One of the perpendicular *C<sub>2</sub>* axes is the x axis. One of the
@@ -228,7 +228,7 @@ One of the perpendicular *C<sub>2</sub>* axes is the x axis. One of the
  end
 ```
 
-## *C<sub>4v</sub>* SF<sub>5</sub>Cl
+## *C<sub>4v</sub>*   SF<sub>5</sub>Cl
 
 The *C<sub>4</sub>* axis is the z axis. The *&sigma;<sub>v</sub>* planes are the yz and
 the xz planes. The *&sigma;<sub>d</sub>* planes are: 1) the plane containing the
@@ -260,10 +260,10 @@ The *C<sub>2</sub>* axis is the z axis. The origin is the inversion center. The
  end
 ```
 
-## <img alt="$D_{2d}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/04608c2c218c46f92a2c5998d5bd929a.svg?invert_in_darkmode&sanitize=true" align=middle width="26.904405pt" height="22.38192pt"/> <img alt="$CH_{2}CCH_{2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9d0ab2fc2311c7d50cf5a568808b6210.svg?invert_in_darkmode&sanitize=true" align=middle width="79.77156pt" height="22.38192pt"/>
+## *D<sub>2d</sub>*     CH<sub>2</sub>CCH<sub>2</sub>
 
-The <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axis is the z axis (z is also the <img alt="$S_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26a4b92ab105a03e05a9c71e86316570.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> axis). The x and y
-axes are the perpendicular <img alt="$C_{2}'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f49c513a19452c7794cc88a0196f0762.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="24.66849pt"/>s. The <img alt="$\sigma_d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f24297b17130e91cbc7746bbdd78dee.svg?invert_in_darkmode&sanitize=true" align=middle width="16.17561pt" height="14.10255pt"/> planes are: 1)
+The *C<sub>2</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The x and y
+axes are the perpendicular *C<sub>2</sub>'s*. The *&sigma;<sub>d</sub>* planes are: 1)
 the plane containing the x=y axis and the z axis and 2) the plane
 containing the -x=y axis and the z axis.
 
@@ -276,11 +276,11 @@ containing the -x=y axis and the z axis.
  end
 ```
 
-## <img alt="$D_{5h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e7ffbadf88dafada2cbfab62df846d59.svg?invert_in_darkmode&sanitize=true" align=middle width="27.754155pt" height="22.38192pt"/> cyclopentadiene anion
+## *D<sub>5h</sub>* cyclopentadiene anion
 
-The <img alt="$C_5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c585dc013630a6a779d5f4f39ebefddc.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axis is the z axis (z is also the <img alt="$S_5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2a8dec627a0c73f9adb52acbbc1c26d6.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> axis). The y axis
-is one of the perpendicular <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axes. The <img alt="$\sigma_h$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f2681289ef765e2c206a33f464717f29.svg?invert_in_darkmode&sanitize=true" align=middle width="17.02536pt" height="14.10255pt"/> plane is the
-xy plane and one of the <img alt="$\sigma_d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f24297b17130e91cbc7746bbdd78dee.svg?invert_in_darkmode&sanitize=true" align=middle width="16.17561pt" height="14.10255pt"/> planes is the yz plane.
+The *C<sub>5</sub>* axis is the z axis (z is also the *S<sub>5</sub>* axis). The y axis
+is one of the perpendicular *C<sub>2</sub>* axes. The *&sigma;<sub>h</sub>* plane is the
+xy plane and one of the *&sigma;<sub>d</sub>* planes is the yz plane.
 
 ```
  charge -1
@@ -291,10 +291,10 @@ xy plane and one of the <img alt="$\sigma_d$" src="https://raw.githubusercontent
  end
 ```
 
-## <img alt="$D_{4h}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ebe412def5675dc95e216199b0eade82.svg?invert_in_darkmode&sanitize=true" align=middle width="27.754155pt" height="22.38192pt"/> gold tetrachloride
+## *D<sub>4h</sub>* gold tetrachloride
 
-The <img alt="$C_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/60fe977bd0752a4efa88e64770ef019b.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> axis is the z axis (z is also the <img alt="$S_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/26a4b92ab105a03e05a9c71e86316570.svg?invert_in_darkmode&sanitize=true" align=middle width="16.570455pt" height="22.38192pt"/> axis). The
-<img alt="$C_{2}'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f49c513a19452c7794cc88a0196f0762.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="24.66849pt"/> axes are the x and y axes and the <img alt="$C_{2}''$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ff0fa09a3bd96d0485e4221f22ad76f.svg?invert_in_darkmode&sanitize=true" align=middle width="20.432445pt" height="24.66849pt"/> axes are the
+The *C<sub>4</sub>* axis is the z axis (z is also the *S<sub>4</sub>* axis). The
+*C>sub>2</sub>'* axes are the x and y axes and the *C>sub>2</sub>''* axes are the
 x=y axis and the x=-y axis. The inversion center is the origin. The
 <img alt="$\sigma_h$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f2681289ef765e2c206a33f464717f29.svg?invert_in_darkmode&sanitize=true" align=middle width="17.02536pt" height="14.10255pt"/> plane is the xy plane. The <img alt="$\sigma_v$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/427cc947be21a51a1864c29ff4aea221.svg?invert_in_darkmode&sanitize=true" align=middle width="16.32015pt" height="14.10255pt"/> planes are the xz
 and yz planes and the <img alt="$\sigma_d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0f24297b17130e91cbc7746bbdd78dee.svg?invert_in_darkmode&sanitize=true" align=middle width="16.17561pt" height="14.10255pt"/> planes are 1) the plane containing
