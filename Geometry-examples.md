@@ -187,7 +187,7 @@ plane containing the x=y axis and the z axis.
 
 The *C<sub>6</sub>* axis is the z axis. The point of inversion is the origin.
 One of the 6 perpendicular *C<sub>2</sub>'* axes is the x=y axis. (-x=y works
-as a *C><sub>2</sub>''* axis.) The *&sigma;<sub>h</sub>* plane is the xy plane. The
+as a *C<sub>2</sub>''* axis.) The *&sigma;<sub>h</sub>* plane is the xy plane. The
 *&sigma;<sub>d</sub>* planes contain the *C<sub>2</sub>''* axis and the z axis. The
 *&sigma;<sub>v</sub>* planes contain the *C<sub>2</sub>'* axis and the z axis.
 
