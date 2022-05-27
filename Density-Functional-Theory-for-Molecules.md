@@ -1568,7 +1568,7 @@ keywords described below.
 
 The input parameter `accCoul` is used to define the tolerance in Schwarz
 screening for the Coulomb integrals. Only integrals with estimated
-values greater than 10<sup>(-accCoul) are evaluated.
+values greater than 10<sup>(-accCoul)</sup> are evaluated.
 
 ```
  TOLERANCES accCoul <integer accCoul default 8>
