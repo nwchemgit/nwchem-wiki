@@ -89,6 +89,7 @@ feedback on this page content.
  - **OctaDist** is an inorganic chemistry and crystallography program for computing the distortion parameters in coordination complexes <https://octadist.github.io>
  - **PyADF** is a scripting framework for multiscale quantum chemistry <https://github.com/chjacob-tubs/pyadf-releases>
  - **UniMoVib** is a unified interface for molecular harmonic vibrational frequency calculations <https://github.com/zorkzou/UniMoVib>
+ - **MoBioTools** is toolkit to automatically setup QM/MM calculations <https://github.com/mobiochem/MoBioTools>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
