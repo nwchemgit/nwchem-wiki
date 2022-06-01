@@ -36,7 +36,7 @@ Singularity images are available at
 
 ## Podman
 
-Docker images could be used using podman commands
+Docker images could be run using podman commands
 ```
 podman run --rm --shm-size 256m --volume /tmp:/data -i -t ghcr.io/nwchemgit/nwchem-dev/amd64 xvdw.nw
 ```
