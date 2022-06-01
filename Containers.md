@@ -33,3 +33,10 @@ Singularity recipes for NWChem are available at.
 
 Singularity images are available at  
 [https://cloud.sylabs.io/library/edoapra](https://cloud.sylabs.io/library/edoapra)
+
+## Podman
+
+Docker images could be used using podman commands
+```
+podman run --rm --shm-size 256m --volume /tmp:/data -i -t ghcr.io/nwchemgit/nwchem-dev/amd64 xvdw.nw
+```
