@@ -33,6 +33,9 @@ Singularity recipes for NWChem are available at.
 
 Singularity images are available at  
 [https://cloud.sylabs.io/library/edoapra](https://cloud.sylabs.io/library/edoapra)
+or at
+[ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40x](https://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40)
+
 
 ### Instruction for running on EMSL Tahoma
 
