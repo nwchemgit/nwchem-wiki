@@ -34,6 +34,34 @@ Singularity recipes for NWChem are available at.
 Singularity images are available at  
 [https://cloud.sylabs.io/library/edoapra](https://cloud.sylabs.io/library/edoapra)
 
+### Instruction for running on EMSL Tahoma
+
+Instructions for running NWChem Singularity images on [EMSL tahoma](https://www.emsl.pnnl.gov/MSC/UserGuide/tahoma/tahoma_overview.html)
+
+```
+#!/bin/bash
+#SBATCH -N 2
+#SBATCH -t 00:29:00
+#SBATCH -A allocation_name
+#SBATCH --ntasks-per-node 18
+#SBATCH -o singularity_library.output.%j
+#SBATCH -e ./singularity_library.err.%j
+#SBATCH -J singularity_library
+#SBATCH --export ALL
+source /etc/profile.d/modules.sh
+export https_proxy=http://proxy.emsl.pnl.gov:3128
+module purge
+module load openmpi
+# remove old images
+rm -f ./nwchems_`id -u`.img
+# pull new image to the current directory
+singularity pull --name ./nwchems_`id -u`.img pull library://edoapra/default/nwchem-dev.ompi40x.ifort.skylake:latest
+# copy image from current directory to local /big_scratch/ on compute nodes
+srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
+# run
+srun singularity exec /big_scratch/nwchems.img nwchem  "file name"
+```
+
 ## Podman
 
 Docker images could be run using podman commands
