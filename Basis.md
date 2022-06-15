@@ -32,7 +32,7 @@ The general form of the BASIS directive is as follows:
        ...  
  END
 ```
-The folllwing sections examine the keywords on the first line of the BASIS directive:
+The following sections examine the keywords on the first line of the `BASIS` directive:
 
 ### Basis set NAME
  `NAME` :    
@@ -101,6 +101,8 @@ Order of functions.
     Dirac-Hamiltonian
     approximation](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation)
     for more details.
+
+## Basis sets tags
 
 Basis sets are associated with centers by using the tag of a center in a
 [geometry](Geometry) that has either been input by
