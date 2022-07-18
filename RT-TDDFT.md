@@ -22,7 +22,7 @@ the following paper:
     [DOI:10.1021/ct200137z](https://dx.doi.org/10.1021/ct200137z)
 
 This functionality is built on the [Gaussian basis set
-DFT](Density-Functional-Theory-for-Molecules) module, and
+DFT](Density-Functional-Theory-for-Molecules.md) module, and
 will work for closed-shell (spin-restricted) and open-shell (spin
 unrestricted) calculations with essentially any combination of basis set
 and exchange-correlation functional in NWChem. The current
@@ -50,9 +50,9 @@ units**. Some useful conversions are:
 
 ## Syntax
 
-The [charge](Charge), [geometry](Geometry), [basis
-set](Basis), and
-[DFT](Density-Functional-Theory-for-Molecules) options are
+The [charge](Charge.md), [geometry](Geometry.md), [basis
+set](Basis.md), and
+[DFT](Density-Functional-Theory-for-Molecules.md) options are
 all specified as normal, using their respective syntax. Real-time TDDFT
 parameters are supplied in the `RT_TDDFT` block (note, nothing is
 case-sensitive), with all possible options summarized below, and each
@@ -190,7 +190,7 @@ end
 
 This sets the number of run-time check points where the time-dependent
 complex density matrix is saved to file, allowing the simulation to be
-[restarted](RT-TDDFT#Restarts)) from that point. By
+[restarted](#load-restart)) from that point. By
 default this is set to 0. There is no significant computational cost to
 restart checkpointing, but of course there is some disk I/O cost (which
 may become somewhat significant for larger systems). For example, in the
@@ -434,7 +434,7 @@ end
 
 ### LOAD RESTART
 
-This keyword needs to be added to restart a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new `tmax`
+This keyword needs to be added to [restart](Start_Restart.md) a calculation. In the following example, the calculation will restart from the previous calculation and extend the run to the new `tmax`
 
 ```
 rt_tddft
@@ -780,9 +780,9 @@ here is to use fragments by have multiple geometries in the input deck,
 where each fragment is converged separately, then assembled together
 without SCF to use as a starting point. We use a small but diffuse basis
 and a range-separated functional (CAM-B3LYP). The input deck is
-[RT\_TDDFT\_tcne\_dimer.nw](RT_TDDFT_tcne_dimer.nw)
+[RT_TDDFT_tcne_dimer.nw](RT_TDDFT_tcne_dimer.nw)
 and the full output is
-[RT\_TDDFT\_tcne\_dimer.nwo.gz](RT_TDDFT_tcne_dimer.nwo.gz).
+[RT_TDDFT_tcne_dimer.nwo.gz](RT_TDDFT_tcne_dimer.nwo.gz).
 
 ```
 title "Tetracyanoethylene dimer charge transfer"
