@@ -18,7 +18,7 @@ used
 TASK <theory> NEB  
 TASK <theory> NEB ignore
 ```
-where \<theory\> is SCF, HF, DFT, PSPW, BAND, MP2, CCSD, TCE, etc.. The
+where `<theory>` is SCF, HF, DFT, PSPW, BAND, MP2, CCSD, TCE, etc.. The
 Task directive with the ignore option is recommended, otherwise NWChem
 will crash if the path is not optimized in the allowed maximum number of
 iterations.
@@ -74,15 +74,15 @@ The following list describes the input for the NEB block
     "midgeom" geometry to be used as the midpoint, i.e. the initial path
     is defined as a linear morphing from "geometry" --\> "midgeom" --\>
     "endgeom"
-  - XYZ\_PATH - if specified the initial path is defined from the
+  - XYZ_PATH - if specified the initial path is defined from the
     sequence of geometries contained in **xyzfilename**
   - RESET - if specified causes the NEB optimization and path to be
     started from scratch
-  - **print_shift** - setting the PRINT\_SHIFT directive causes the path
-    energies and geometries to be outputed every \<print_shift\> steps.
+  - **print_shift** - setting the `PRINT_SHIFT` directive causes the path
+    energies and geometries to be outputed every `<print_shift>` steps.
     The current path energies are appended to the file
-    jobname.neb\_epath and the current geometries are appended to the
-    file jobname.nebpath\_"current iteration".xyz.
+    `jobname.neb_epath` and the current geometries are appended to the
+    file `jobname.nebpath_"current iteration".xyz`.
 
 ## Setting up initial path
 
@@ -383,7 +383,7 @@ is used
 TASK <theory> STRING
 TASK <theory> STRING ignore
 ```
-where \<theory\> is SCF, HF, DFT, PSPW, BAND, MP2, CCSD, TCE, etc.. The
+where `<theory>` is SCF, HF, DFT, PSPW, BAND, MP2, CCSD, TCE, etc.. The
 Task directive with the ignore option is recommended, otherwise NWChem
 will crash if the path is not optimized in the allowed maximum number of
 iterations.
@@ -420,9 +420,9 @@ The following list describes the input for the STRING block
   - **nhist** - number of histories to use for quasi-Newton optimization
     (algorithm =0)
   - **tol** - value for the maximum gradient used to determine convergence
-  - **freeze1** - .true.: first bead of simulation frozen, .false.:first
+  - **freeze1** - `.true.`: first bead of simulation frozen, `.false.`:first
     bead of simulation not frozen.
-  - **freezeN** - .true.:last bead of simulation frozen, .false.:last bead
+  - **freezeN** - `.true.`:last bead of simulation frozen, `.false.`:last bead
     of simulation not frozen
   - **interpol** - 1: linear, 2: spline, 3: Akima spline
   - IMPOSE - if specified causes the initial geometries used to specify
@@ -431,15 +431,15 @@ The following list describes the input for the STRING block
     "midgeom" geometry to be used as the midpoint, i.e. the initial path
     is defined as a linear morphing from "geometry" --\> "midgeom" --\>
     "endgeom"
-  - XYZ\_PATH - if specified the initial path is defined from the
+  - XYZ_PATH - if specified the initial path is defined from the
     sequence of geometries contained in **xyzfilename**
   - RESET - if specified causes the NEB optimization and path to be
     started from scratch
   - **print_shift** - setting the PRINT\_SHIFT directive causes the path
-    energies and geometries to be outputed every \<print_shift\> steps.
+    energies and geometries to be outputed every `<print_shift>` steps.
     The current path energies are appended to the file
-    jobname.neb\_epath and the current geometries are appended to the
-    file jobname.nebpath\_"current iteration".xyz.
+    `jobname.neb_epath` and the current geometries are appended to the
+    file `jobname.nebpath _"current iteration".xyz`
 
 ## Setting up the initial path
 
