@@ -1,8 +1,8 @@
  Dynamical simulations within QM/MM framework can be
 initiated using
-
-`task qmmm `<qmtheory>` dynamics`
-
+```
+task qmmm  <qmtheory>  dynamics 
+```
 directive. User has to specify the
 [region](Qmmm_region.md) for which simulation will
 performed. If dynamics is performed only for the classical parts of the
