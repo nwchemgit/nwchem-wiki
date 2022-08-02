@@ -108,10 +108,12 @@ read from the restart file).
 
 ### PRINT_XYZ: How often to print trajectory information to xyz file
 
-This specifies that the trajectory information (coordinates, velocities,
-total energy, step number, dipole (if available)) to the xyz file. The
+This specifies how often the trajectory information (coordinates, velocities,
+total energy, step number, dipole (if available)) is written to the xyz file. The
 units for the coordinates and velocities in the xyz file are Angstrom
-and Angstrom/fs, respectively.
+and Angstrom/fs, respectively.  
+For example, `print_xyz 5` will write the xyz trajectory file every 5 steps.  
+Default: 1 
 
 ### LINEAR: Flag for linear molecules
 
@@ -121,11 +123,13 @@ If present, the code assumes the molecule is linear.
 
 If present, the code will look for the property block and calculate the requested properties.  
 For example, `property 5` will calculate properties on the current geometry every 5 steps.  
+Default: 0 (e.g properties are not computed)  
 
 ### TDDFT: How often to peform TDDFT calculation as part of the MD simulation  
 
 If present, the code will look for the tddft block and calculate the absorption spectrum.  
-For example, `tddft 5` will perform tddft calculations on the current geometry every 5 steps.
+For example, `tddft 5` will perform tddft calculations on the current geometry every 5 steps.  
+Default: 0 (e.g tddft is not run)
 
 ## Sample input files
 
