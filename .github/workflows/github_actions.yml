@@ -12,7 +12,7 @@ jobs:
     if: |
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
-    runs-on: [ubuntu-18.04]
+    runs-on: [ubuntu-20.04]
     steps:
       - name: Checkout nwchem-wiki
         uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     needs: mirror_dotwiki2repo
-    runs-on: [ubuntu-18.04]
+    runs-on: [ubuntu-20.04]
     steps:
       - name: Checkout nwchem.wiki
         uses: actions/checkout@v2
@@ -69,7 +69,7 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     needs: mirror_repo2dotwiki
-    runs-on: [ubuntu-18.04]
+    runs-on: [ubuntu-20.04]
     steps:
       - name: checkout wiki
         uses: actions/checkout@v2
