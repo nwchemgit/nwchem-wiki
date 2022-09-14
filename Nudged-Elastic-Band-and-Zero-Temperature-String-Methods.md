@@ -94,10 +94,10 @@ optimization.
 The geometries in the path are defined
 by
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \; for \;  i=1,nbeads$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2073cadf6f0a818bac16c1e10fd2cbf2.svg?invert_in_darkmode&sanitize=true" align=middle width="427.630995pt" height="31.71135pt"/>
+$$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \ for \ i=1,nbeads$$
 
-where the starting geometry (<img alt="$\vec{R}^1_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7dc52b1db4d25dcafee366bb155dc435.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>) is entered in the
-geometry block labeled "geometry", e.g.
+where the starting geometry $\vec{R}^1_{xyz}$ is entered in the
+geometry block labeled `geometry`, e.g.
 ```
 geometry nocenter noautosym noautoz  
 O  0.00000000    -0.02293938     0.00000000  
@@ -105,8 +105,8 @@ H  0.00000000     0.55046969     0.75406534
 H  0.00000000     0.55046969    -0.75406534  
 end
 ```
-and the last geometry in the path (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>) in
-entered in the geometry block label "endgeom", e.g.
+and the last geometry in the path  $\vec{R}^{nbeads}_{xyz}$ is
+entered in the geometry block label `endgeom`, e.g.
 ```
 geometry endgeom nocenter noautosym noautoz  
 O  0.00000000     0.02293938     0.00000000  
@@ -119,16 +119,15 @@ end
 The geometries for this path are defined
 by
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads/2-1} (\vec{R}^{nbeads/2}_{xyz}-\vec{R}^{1}_{xyz}), \; for \;  i=1,nbeads/2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5c318efdc4b135934edac76d5fce8ccf.svg?invert_in_darkmode&sanitize=true" align=middle width="470.583795pt" height="34.27314pt"/>
+$$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads/2-1} (\vec{R}^{nbeads/2}_{xyz}-\vec{R}^{1}_{xyz}), \ for \   i=1,nbeads/2$$  
 
 and
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{nbeads/2}_{xyz}), \; for \;  i=nbeads/2+1,nbeads$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4857e18761b0e688c304f73a0beb5ca3.svg?invert_in_darkmode&sanitize=true" align=middle width="591.579945pt" height="34.27314pt"/>
+$$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{nbeads/2}_{xyz}), \ for \  i=nbeads/2+1,nbeads$$  
 
-where the starting (<img alt="$\vec{R}^{1}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/24642979e5084eda6a69780a56aecc38.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>), middle
-(<img alt="$\vec{R}^{nbeads/2}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/453f3d4dced1ad74ee548d8c7ed9ea82.svg?invert_in_darkmode&sanitize=true" align=middle width="65.97096pt" height="34.27314pt"/>) and last (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>)
-geometries are entered in the geometry blocks "geometry", "midgeom" and
-"endgeom" respectively, e.g.
+where the starting $\vec{R}^1_{xyz}$ , middle $\vec{R}\_{xyz}^{nbeads/2}$  and last $\vec{R}^{nbeads}\_{xyz}$
+geometries are entered in the geometry blocks `geometry`, `midgeom` and
+`endgeom` respectively, e.g.
 ```
 geometry nocenter noautosym noautoz  
 O  0.00000000    -0.02293938     0.00000000  
@@ -451,10 +450,10 @@ optimization.
 The geometries in the path are defined
 by
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \; for \;  i=1,nbeads$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2073cadf6f0a818bac16c1e10fd2cbf2.svg?invert_in_darkmode&sanitize=true" align=middle width="427.630995pt" height="31.71135pt"/>
+$$\vec{R}^i\_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \  for \   i=1,nbeads$$  
 
-where the starting geometry (<img alt="$\vec{R}^1_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7dc52b1db4d25dcafee366bb155dc435.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>) is entered in the
-geometry block labeled "geometry", e.g.
+where the starting geometry  $\vec{R}^1\_{xyz}$  is entered in the
+geometry block labeled `geometry`, e.g.
 ```
 geometry nocenter noautosym noautoz  
 O  0.00000000    -0.02293938     0.00000000  
@@ -462,8 +461,8 @@ H  0.00000000     0.55046969     0.75406534
 H  0.00000000     0.55046969    -0.75406534  
 end
 ```
-and the last geometry in the path (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>) in
-entered in the geometry block label "endgeom", e.g.
+and the last geometry in the path  $\vec{R}^{nbeads}\_{xyz}$  is
+entered in the geometry block label `endgeom`, e.g.
 ```
 geometry endgeom nocenter noautosym noautoz  
 O  0.00000000     0.02293938     0.00000000  
@@ -476,16 +475,16 @@ end
 The geometries for this path are defined
 by
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads/2-1} (\vec{R}^{nbeads/2}_{xyz}-\vec{R}^{1}_{xyz}), \; for \;  i=1,nbeads/2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5c318efdc4b135934edac76d5fce8ccf.svg?invert_in_darkmode&sanitize=true" align=middle width="470.583795pt" height="34.27314pt"/>
+$$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads/2-1} (\vec{R}^{nbeads/2}_{xyz}-\vec{R}^{1}_{xyz}), \  for \   i=1,nbeads/2$$
 
 and
 
-<img alt="$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{nbeads/2}_{xyz}), \; for \;  i=nbeads/2+1,nbeads$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4857e18761b0e688c304f73a0beb5ca3.svg?invert_in_darkmode&sanitize=true" align=middle width="591.579945pt" height="34.27314pt"/>
+$$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}\_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}\_{xyz}-\vec{R}^{nbeads/2}\_{xyz}), \  for \   i=nbeads/2+1,nbeads$$
 
-where the starting (<img alt="$\vec{R}^{1}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/24642979e5084eda6a69780a56aecc38.svg?invert_in_darkmode&sanitize=true" align=middle width="33.64317pt" height="31.71135pt"/>), middle
-(<img alt="$\vec{R}^{nbeads/2}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/453f3d4dced1ad74ee548d8c7ed9ea82.svg?invert_in_darkmode&sanitize=true" align=middle width="65.97096pt" height="34.27314pt"/>) and last (<img alt="$\vec{R}^{nbeads}_{xyz}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d254a98c76a6ac0805214858d3d02c99.svg?invert_in_darkmode&sanitize=true" align=middle width="52.732845pt" height="31.71135pt"/>)
-geometries are entered in the geometry blocks "geometry", "midgeom" and
-"endgeom" respectively, e.g.
+where the starting  $\vec{R}^{1}\_{xyz}$ , middle
+$\vec{R}^{nbeads/2}\_{xyz}$  and last  $\vec{R}^{nbeads}\_{xyz}$" 
+geometries are entered in the geometry blocks `geometry`, `midgeom` and
+`endgeom` respectively, e.g.
 ```
 geometry nocenter noautosym noautoz  
 O  0.00000000    -0.02293938     0.00000000  
