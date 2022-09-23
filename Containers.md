@@ -7,18 +7,18 @@ Dockerfile recipes are available at the repository [https://github.com/nwchemgit
 Docker images of the master branch are hosted at [https://ghcr.io](https://github.com/features/packages) and can be used with the following command  
 
 ```
- docker run --shm-size 256m  --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev/[arch] input.nw
+ docker run --shm-size 256m -u `id -u` --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev input.nw
 ```
-where the `[arch]` option can have the values `amd64`, `arm64`, `ppc64le` or `armv7` . For example, the following command can be used on `amd64` (a.k.a. `x86_64`) hardware:
+For example, the following command can be used when starting from the `/tmp` directory:
 ```
- docker run --shm-size 256m  --rm -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev/amd64 input.nw
+ docker run --shm-size 256m -u `id -u` --rm -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev /data/input.nw
 ```
 where the input file `input.nw` is located in the `/tmp` directory.
 
 
 The following docker command will run NWChem in parallel using three processes 
 ```
-docker run --shm-size 256m  --rm  --entrypoint='mpirun' -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev/amd64  -np 2 nwchem /data/xvdw.nw
+docker run --shm-size 256m  -u `id -u` --rm  --entrypoint='mpirun' -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev  -np 2 nwchem /data/xvdw.nw
 ```
 This example uses the input file `xvdw.nw` available on the host directory `/tmp`
 
