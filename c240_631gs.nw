@@ -3,7 +3,7 @@ title "c240"
 echo
 start c240_dat
 
-scratch_dir /scratch
+#scratch_dir /scratch
 
 memory stack 2000 mb heap 200 mb global 2000 mb noverify
 
