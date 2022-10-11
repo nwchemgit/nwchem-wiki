@@ -63,6 +63,8 @@ singularity pull --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-sing
 srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
 # basis library files
 export SINGULARITYENV_NWCHEM_BASIS_LIBRARY=/cluster/apps/nwchem/nwchem-7.0.2/src/basis/libraries/
+# use /big_scratch as scratch_dir
+export SINGULARITYENV_SCRATCH_DIR=/big_scratch
 # run
 srun -N $SLURM_NNODES -n $SLURM_TASKS_PER_NODE singularity exec /big_scratch/nwchems.img nwchem  "file name"
 ```
