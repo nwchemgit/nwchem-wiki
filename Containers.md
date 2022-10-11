@@ -46,7 +46,7 @@ Instructions for running NWChem Singularity images on [EMSL tahoma](https://www.
 #SBATCH -N 2
 #SBATCH -t 00:29:00
 #SBATCH -A allocation_name
-#SBATCH --ntasks-per-node 18
+#SBATCH --ntasks-per-node 36
 #SBATCH -o singularity_library.output.%j
 #SBATCH -e ./singularity_library.err.%j
 #SBATCH -J singularity_library
@@ -54,7 +54,7 @@ Instructions for running NWChem Singularity images on [EMSL tahoma](https://www.
 source /etc/profile.d/modules.sh
 export https_proxy=http://proxy.emsl.pnl.gov:3128
 module purge
-module load openmpi
+module load openmpi/4.1.4
 # remove old images
 rm -f ./nwchems_`id -u`.img
 # pull new image to the current directory
@@ -62,7 +62,7 @@ singularity pull --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-sing
 # copy image from current directory to local /big_scratch/ on compute nodes
 srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
 # run
-srun singularity exec /big_scratch/nwchems.img nwchem  "file name"
+srun -N $SLURM_NNODES -n $SLURM_TASKS_PER_NODE singularity exec /big_scratch/nwchems.img nwchem  "file name"
 ```
 
 ## Podman
