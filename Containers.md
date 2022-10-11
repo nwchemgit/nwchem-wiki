@@ -61,6 +61,8 @@ rm -f ./nwchems_`id -u`.img
 singularity pull --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40x:latest
 # copy image from current directory to local /big_scratch/ on compute nodes
 srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
+# basis library files
+export SINGULARITYENV_NWCHEM_BASIS_LIBRARY=/cluster/apps/nwchem/nwchem-7.0.2/src/basis/libraries/
 # run
 srun -N $SLURM_NNODES -n $SLURM_TASKS_PER_NODE singularity exec /big_scratch/nwchems.img nwchem  "file name"
 ```
