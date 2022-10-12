@@ -56,8 +56,6 @@ export https_proxy=http://proxy.emsl.pnl.gov:3128
 module purge
 module load gcc/9.3.0
 module load openmpi/4.1.4
-# remove old images
-rm -f ./nwchems_`id -u`.img
 # pull new image to the current directory
 singularity pull -F --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40x:latest
 # copy image from current directory to local /big_scratch/ on compute nodes
