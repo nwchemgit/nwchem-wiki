@@ -34,7 +34,7 @@ Singularity recipes for NWChem are available at.
 Singularity images are available at  
 [https://cloud.sylabs.io/library/edoapra](https://cloud.sylabs.io/library/edoapra)
 or at
-[ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40x](https://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40)
+[ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi41x](https://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi41x)
 
 
 ### Instruction for running on EMSL Tahoma
@@ -57,7 +57,7 @@ module purge
 module load gcc/9.3.0
 module load openmpi/4.1.4
 # pull new image to the current directory
-singularity pull -F --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi40x:latest
+singularity pull -F --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi41x:latest
 # copy image from current directory to local /big_scratch/ on compute nodes
 srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
 # basis library files
