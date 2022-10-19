@@ -56,16 +56,17 @@ export https_proxy=http://proxy.emsl.pnl.gov:3128
 module purge
 module load gcc/9.3.0
 module load openmpi/4.1.4
+SCRATCH=/big_scratch
 # pull new image to the current directory
 singularity pull -F --name ./nwchems_`id -u`.img oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.ompi41x:latest
 # copy image from current directory to local /big_scratch/ on compute nodes
-srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img /big_scratch/nwchems.img
+srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img $SCRATCH/nwchems.img
 # basis library files
-export SINGULARITYENV_NWCHEM_BASIS_LIBRARY=/cluster/apps/nwchem/nwchem-7.0.2/src/basis/libraries/
+export SINGULARITYENV_NWCHEM_BASIS_LIBRARY=/cluster/apps/nwchem/nwchem/src/basis/libraries/
 # use /big_scratch as scratch_dir
-export SINGULARITYENV_SCRATCH_DIR=/big_scratch
+export SINGULARITYENV_SCRATCH_DIR=$SCRATCH
 # run
-srun -N $SLURM_NNODES -n $SLURM_CPUS_ON_NODE singularity exec /big_scratch/nwchems.img nwchem  "file name"
+srun --mpi=pmi2 -N $SLURM_NNODES -n $SLURM_NPROCS singularity exec --bind $SCRATCH $SCRATCH/nwchems.img nwchem  "file name"
 ```
 
 ## Podman
