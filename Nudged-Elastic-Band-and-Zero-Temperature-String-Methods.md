@@ -207,15 +207,15 @@ control the maximum and root mean square of the Cartesian step.
 
 (input:[h2o-neb.nw](h2o-neb.nw),
 output:[h2o-neb.nwout](h2o-neb.nwout), datafiles:
-[h2o-neb.neb\_epath.dat](h2o-neb.neb_epath.dat)
-[h2o-neb.neb\_final\_epath.dat](h2o-neb.neb_final_epath.dat)
+[h2o-neb.neb_epath.dat](h2o-neb.neb_epath.dat)
+[h2o-neb.neb_final_epath.dat](h2o-neb.neb_final_epath.dat)
 )
 
-(xyzfiles: [h2o-neb.nebpath\_000001.xyz](h2o-neb.nebpath_000001.xyz)
-[h2o-neb.nebpath\_000005.xyz](h2o-neb.nebpath_000005.xyz)
-[h2o-neb.nebpath\_000010.xyz](h2o-neb.nebpath_000010.xyz)
-[h2o-neb.nebpath\_000020.xyz](h2o-neb.nebpath_000020.xyz)
-[h2o-neb.nebpath\_final.xyz](h2o-neb.nebpath_final.xyz)
+(xyzfiles: [h2o-neb.nebpath_000001.xyz](h2o-neb.nebpath_000001.xyz)
+[h2o-neb.nebpath_000005.xyz](h2o-neb.nebpath_000005.xyz)
+[h2o-neb.nebpath_000010.xyz](h2o-neb.nebpath_000010.xyz)
+[h2o-neb.nebpath_000020.xyz](h2o-neb.nebpath_000020.xyz)
+[h2o-neb.nebpath_final.xyz](h2o-neb.nebpath_final.xyz)
 )
 
 
@@ -226,11 +226,6 @@ output:[h2o-neb.nwout](h2o-neb.nwout), datafiles:
 Title "H2O inversion calculation"
 echo
 start h2o-neb
-  
-memory 1600 mb  
-  
-permanent_dir ./perm2  
-scratch_dir      ./perm2  
   
 geometry nocenter noautosym noautoz  
 O  0.00000000    -0.02293938     0.00000000  
@@ -434,7 +429,7 @@ The following list describes the input for the STRING block
     sequence of geometries contained in **xyzfilename**
   - RESET - if specified causes the NEB optimization and path to be
     started from scratch
-  - **print_shift** - setting the PRINT\_SHIFT directive causes the path
+  - **print_shift** - setting the PRINT_SHIFT directive causes the path
     energies and geometries to be outputed every `<print_shift>` steps.
     The current path energies are appended to the file
     `jobname.neb_epath` and the current geometries are appended to the
@@ -450,9 +445,9 @@ optimization.
 The geometries in the path are defined
 by
 
-$$\vec{R}^i\_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \  for \   i=1,nbeads$$  
+$$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{1}_{xyz}), \  for \   i=1,nbeads$$  
 
-where the starting geometry  $\vec{R}^1\_{xyz}$  is entered in the
+where the starting geometry  $\vec{R}^1_{xyz}$  is entered in the
 geometry block labeled `geometry`, e.g.
 ```
 geometry nocenter noautosym noautoz  
@@ -461,7 +456,7 @@ H  0.00000000     0.55046969     0.75406534
 H  0.00000000     0.55046969    -0.75406534  
 end
 ```
-and the last geometry in the path  $\vec{R}^{nbeads}\_{xyz}$  is
+and the last geometry in the path  $\vec{R}^{nbeads}_{xyz}$  is
 entered in the geometry block label `endgeom`, e.g.
 ```
 geometry endgeom nocenter noautosym noautoz  
@@ -479,10 +474,10 @@ $$\vec{R}^i_{xyz} = \vec{R}^1_{xyz} + \frac{i-1}{nbeads/2-1} (\vec{R}^{nbeads/2}
 
 and
 
-$$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}\_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}\_{xyz}-\vec{R}^{nbeads/2}\_{xyz}), \  for \   i=nbeads/2+1,nbeads$$
+$$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{nbeads/2}_{xyz}), \  for \   i=nbeads/2+1,nbeads$$
 
-where the starting  $\vec{R}^{1}\_{xyz}$ , middle
-$\vec{R}^{nbeads/2}\_{xyz}$  and last  $\vec{R}^{nbeads}\_{xyz}$" 
+where the starting  $\vec{R}^{1}_{xyz}$ , middle
+$\vec{R}^{nbeads/2}_{xyz}$  and last  $\vec{R}^{nbeads}_{xyz}$" 
 geometries are entered in the geometry blocks `geometry`, `midgeom` and
 `endgeom` respectively, e.g.
 ```
@@ -504,9 +499,9 @@ H  0.00000000    -0.55046969     0.75406534
 H  0.00000000    -0.55046969    -0.75406534  
 end
 ```
-  - Using xyz\_path to explicitly input a path of geometries
+  - Using `xyz_path` to explicitly input a path of geometries
 
-The "xyz\_path" option can also be used to define the initial path, e.g.
+The `xyz_path` option can also be used to define the initial path, e.g.
 ```
 ...
 STRING
@@ -520,22 +515,22 @@ END
 (input:[HCN-string1.nw](HCN-string1.nw),
 output:[HCN-string1.nwout](HCN-string1.nwout),
 datafiles:
-[HCN-string1.string\_epath.dat](HCN-string1.string_epath.dat)
-[HCN-string1.string\_final\_epath.dat](HCN-string1.string_final_epath.dat)
+[HCN-string1.string_epath.dat](HCN-string1.string_epath.dat)
+[HCN-string1.string_final_epath.dat](HCN-string1.string_final_epath.dat)
 )
 
 (xyzfiles: [
-HCN-string1.stringpath\_000001.xyz](HCN-string1.stringpath_000001.xyz)
+HCN-string1.stringpath_000001.xyz](HCN-string1.stringpath_000001.xyz)
 [
-HCN-string1.stringpath\_000005.xyz](HCN-string1.stringpath_000005.xyz)
+HCN-string1.stringpath_000005.xyz](HCN-string1.stringpath_000005.xyz)
 [
-HCN-string1.stringpath\_000010.xyz](HCN-string1.stringpath_000010.xyz)
+HCN-string1.stringpath_000010.xyz](HCN-string1.stringpath_000010.xyz)
 [
-HCN-string1.stringpath\_000020.xyz](HCN-string1.stringpath_000020.xyz)
+HCN-string1.stringpath_000020.xyz](HCN-string1.stringpath_000020.xyz)
 [
-HCN-string1.stringpath\_000030.xyz](HCN-string1.stringpath_000030.xyz)
+HCN-string1.stringpath_000030.xyz](HCN-string1.stringpath_000030.xyz)
 [
-HCN-string1.stringpath\_final.xyz](HCN-string1.stringpath_final.xyz)
+HCN-string1.stringpath_final.xyz](HCN-string1.stringpath_final.xyz)
 )
 
 <center>
@@ -564,9 +559,6 @@ Title "HCN --> HNC Zero-Temperature String Simulation"
 echo  
 start hcn-hnc-dft  
   
-permanent_dir ./perm  
-scratch_dir ./perm  
-   
 geometry noautoz noautosym  
 C         0.00000000     0.00000000    -0.49484657  
 N         0.00000000     0.00000000     0.64616359  
@@ -757,11 +749,6 @@ Title "2SiO4H4 --> H3O3Si-O-SiO3H3 + H2O"
 echo  
 start sio4h4-dimer  
   
-memory 1800 mb  
-  
-permanent_dir ./perm  
-scratch_dir   ./perm  
-   
 geometry noautoz noautosym  
 Si        -3.90592       -0.11789        0.03791   
 O         -2.32450       -0.24327       -0.05259  
