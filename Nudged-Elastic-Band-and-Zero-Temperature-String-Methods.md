@@ -125,7 +125,7 @@ and
 
 $$\vec{R}^i_{xyz} = \vec{R}^{nbeads/2}_{xyz} + \frac{i-nbeads/2}{nbeads/2-1} (\vec{R}^{nbeads}_{xyz}-\vec{R}^{nbeads/2}_{xyz}), \ for \  i=nbeads/2+1,nbeads$$  
 
-where the starting $\vec{R}^1_{xyz}$ , middle $\vec{R}\_{xyz}^{nbeads/2}$  and last $\vec{R}^{nbeads}\_{xyz}$
+where the starting $\vec{R}^1_{xyz}$ , middle $\vec{R}_{xyz}^{nbeads/2}$  and last $\vec{R}^{nbeads}_{xyz}$
 geometries are entered in the geometry blocks `geometry`, `midgeom` and
 `endgeom` respectively, e.g.
 ```
@@ -147,9 +147,9 @@ H  0.00000000    -0.55046969     0.75406534
 H  0.00000000    -0.55046969    -0.75406534  
 end
 ```
-  - Using xyz\_path to explicitly input a path of geometries
+  - Using `xyz_path` to explicitly input a path of geometries
 
-The "xyz\_path" option can also be used to define the initial path.
+The `xyz_path` option can also be used to define the initial path.
 ```
 ...  
 NEB  
