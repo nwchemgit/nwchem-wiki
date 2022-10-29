@@ -248,7 +248,7 @@ sockets (`SOCKET IPI_CLIENT`):
 The `SOCKET` directive is only useful when used in conjunction with other
 software packages that support communication via the i-PI socket
 protocol. For more information, see the
-[i-PI documentation](http://ipi-code.org/resources/documentation/).
+[i-PI documentation](https://ipi-code.org/i-pi/user-guide.html#communication-protocol).
 
 ### Print options
 
