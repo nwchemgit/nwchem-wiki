@@ -41,9 +41,9 @@ The trajectory file(s) to be analyzed are specified with
 file  <string filename>  [ <integer firstfile>   <integer lastfile> ]
 ```
 where filename is an existing trj trajectory file. If firstfile and lastfile are specified, the specified filename needs to have a ? wild card character that will be substituted by the 3-character integer number from firstfile to lastfile, and the analysis will be performed on the series of files. For example,
-
-`file tr_md?.trj 3 6`
-
+```
+file tr_md?.trj 3 6
+```
 will instruct the analysis to be performed on files tr_md003.trj, tr_md004.trj, tr_md005.trj and tr_md006.trj.
 
 From the specified files the subset of frames to be analyzed is specified by
@@ -53,25 +53,25 @@ frames [ <integer firstframe default 1> ]  <integer lastframe>  \
        [ <integer frequency default 1> ]
 ```
 For example, to analyze the first 100 frames from the specified trajectory files, use
-
-`frames 100`
-
+```
+frames 100
+```
 To analyze every 10-th frame between frames 200 and 400 recorded on the specified trajectory files, use
-
-`frames 200 400 10`
-
+```
+frames 200 400 10
+```
 A time offset can be specified with
-
-`time <real timoff>`
-
+```
+time <real timoff>
+```
 Solute coordinates of the reference set and ech subsequent frame read from a trajectory file are translated to have the center of geometry of the specified solute molecule at the center of the simulation box. After this translation all molecules are folded back into the box according to the periodic boundary conditions. The directive for this operation is
-
-`center  <integer imol>  [ <integer jmol default imol> ]`
-
+```
+center  <integer imol>  [ <integer jmol default imol> ]
+```
 Coordinates of each frame read from a trajectory file can be rotated using
-
-`rotate ( off | x | y | z ) <real angle units degrees>`
-
+```
+rotate ( off | x | y | z ) <real angle units degrees>
+```
 If center was defined, rotation takes place after the system has been centered. The rotate directives only apply to frames read from the trajectory files, and not to the reference coordinates. Up to 100 rotate directives can be specified, which will be carried out in the order in which they appear in the input deck. rotate off cancels all previously defined rotate directives.
 
 To perform a hydrogen bond analysis:
@@ -107,9 +107,9 @@ To select the backbone atoms in residues 20 to 80 and 90 to 100 only, use
 This selection is reset to apply to all atoms after each file directive.
 
 Solvent molecules within range nm from any selected solute atom are selected by
-
-`select solvent <real range>`
-
+```
+select solvent <real range>
+```
 After solvent selection, the solute atom selection is reset to being all selected.
 
 The current selection can be saved to, or read from a file using the save and read keywords, respectively.
@@ -119,9 +119,9 @@ Some analysis are performed on groups of atoms. These groups of atoms are define
 define <integer igroup> [<real rsel>] [solvent] { <string atomlist> }
 ```
 The string atom in this definitions again takes the form
-
-`[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]`
-
+```
+[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]
+```
 where isgm and jsgm are the first and last residue numbers, and aname is an atom name. In the atomname a question mark may be used as a wildcard character.
 
 Multiple define directive can be used to define a single set of atoms.
@@ -130,34 +130,34 @@ Coordinate analysis
 -------------------
 
 To analyze the root mean square deviation from the specified reference coordinates:
-
-`rmsd`
-
+```
+rmsd
+```
 To analyze protein φ-ψ and backbone hydrogen bonding:
-
-`ramachandran`
-
+```
+ramachandran
+```
 To define a distance:
-
-`distance <integer ibond> <string atomi> <string atomj>`
-
+```
+distance <integer ibond> <string atomi> <string atomj>
+```
 To define an angle:
-
-`angle <integer iangle> <string atomi> <string atomj> <string atomk>`
-
+```
+angle <integer iangle> <string atomi> <string atomj> <string atomk>
+```
 To define a torsion:
 ```
 torsion <integer itorsion> <string atomi> <string atomj> \
                       <string atomk> <string atoml>
 ```
 To define a vector:
-
-`vector <integer ivector> <string atomi> <string atomj>`
-
+```
+vector <integer ivector> <string atomi> <string atomj>
+```
 The atom string in these definitions takes the form
-
-`<integer segment>:<string atomname> | w<integer molecule>:<string atomname>`
-
+```
+<integer segment>:<string atomname> | w<integer molecule>:<string atomname>
+```
 for solute and solvent atom specification, respectively.
 
 To define charge distribution in z-direction:
@@ -197,22 +197,22 @@ order <integer isel> <integer jsel> <string atomi> <string atomj>
 This is an experimental feature.
 
 To write the average coordinates of a trajectory
-
-`average [super] <string filename>`
-
+```
+average [super] <string filename>
+```
 To perform the coordinate analysis:
-
-`scan [ super ] <string filename>`
-
+```
+scan [ super ] <string filename>
+```
 which will create, depending on the specified analysis options files filename.rms and filename.ana. After the scan directive previously defined coordinate analysis options are all reset. Optional keyword super specifies that frames read from the trajectory file(s) are superimposed to the reference structure before the analysis is performed.
 
 Essential dynamics analysis
 ---------------------------
 
 Essential dynamics analysis is performed by
-
-`essential`
-
+```
+essential
+```
 This can be followed by one or more
 ```
 project <integer vector> <string filename>
@@ -220,11 +220,10 @@ project <integer vector> <string filename>
 to project the trajectory onto the specified vector. This will create files filename with extensions frm or trj, val, vec, _min.pdb and _max.pdb, with the projected trajectory, the projection value, the eigenvector, and the minimum and maximum projection structure.
 
 For example, an essential dynamics analysis with projection onto the first vector generating files firstvec.{trj, val, vec, _min.pdb, _max.pdb} is generated by
-
-`essential`
-
-`project 1 firstvec`
-
+```
+essential
+project 1 firstvec
+```
 Trajectory format conversion
 ----------------------------
 
@@ -244,25 +243,16 @@ The rotate directive specifies that the structure will make a full ratation ever
 
 The format of the new file is determined from the extension, which can be one of
 
-`amb    AMBER formatted trajectory file (obsolete)`
-
-`arc    DISCOVER archive file`
-
-`bam    AMBER unformatted trajectory file`
-
-`crd    AMBER formatted trajectory file`
-
-`dcd    CHARMM formatted trajectory file`
-
-`esp    gOpenMol formatted electrostatic potential files`
-
-`frm    ecce frames file (obsolete)`
-
-`pov    povray input files`
-
-`trj    NWChem trajectory file`
-
-`xyz     NWChem trajectory in xyz format`
+* `amb`    AMBER formatted trajectory file (obsolete)
+* `arc`   DISCOVER archive file
+* `bam`   AMBER unformatted trajectory file
+* `crd`   AMBER formatted trajectory file
+* `dcd`   CHARMM formatted trajectory file
+* `esp`   gOpenMol formatted electrostatic potential files
+* `frm`   ecce frames file (obsolete)
+* `pov`   povray input files
+* `trj`   NWChem trajectory file
+* `xyz `   NWChem trajectory in xyz format
 
 If no extension is specified, a trj formatted file will be written.
 
@@ -298,27 +288,27 @@ render cpk 34 45 _C??
 color green 34 45 _C??
 ```
 Coordinates written to a pov file can be scaled using
-
-`scale <real factor>`
-
+```
+scale <real factor>
+```
 A zero or negative scaling factor will scale the coordinates to lie within \[-1,1\] in all dimensions.
 
 The cpk rendering in povray files can be scaled by
-
-`cpk <real factor default 1.0>`
-
+```
+cpk <real factor default 1.0>
+```
 The stick rendering in povray files can be scaled by
-
-`stick <real factor default 1.0>`
-
+```
+stick <real factor default 1.0>
+```
 The initial sequence number of esp related files is defined by
-
-`index <integer index default 1>`
-
+```
+index <integer index default 1>
+```
 A sequence of trajectory files with unequal lengths can be converted to files with all *nclean* frames using
-
-`clean <integer nclean>`
-
+```
+clean <integer nclean>
+```
 Electrostatic potentials
 ------------------------
 
