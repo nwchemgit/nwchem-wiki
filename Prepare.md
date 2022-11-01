@@ -123,7 +123,7 @@ directory_(1-9) <string ffdir> [<string parfile>]
 Sequence file generation
 ------------------------
 
-If no existing sequence file is present in the current directory, or if the new\_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
+If no existing sequence file is present in the current directory, or if the new_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
 ```
 maxscf <integer maxscf default 20>
 ```
@@ -166,7 +166,7 @@ Topology file generation
 ```
 new_top [ new_seq ]
 ```
-Keyword new\_top is used to force the generation of a new topology file. An existing topology file for the system in the current directory will be overwritten. If keyword new\_seq is also specified, an existing sequence file will also be overwritten with a newly generated file.
+Keyword new_top is used to force the generation of a new topology file. An existing topology file for the system in the current directory will be overwritten. If keyword new_seq is also specified, an existing sequence file will also be overwritten with a newly generated file.
 ```
 amber | charmm
 ```
@@ -187,7 +187,7 @@ modify atom <string atomname> [set <integer mset> | initial | final] \
    ( type <string atomtyp> |  charge <real atomcharge> |  \
    polar <real atompolar> | dummy | self | quantum | quantum_high )
 ```
-These modify commands change the atom type, partial atomic charge, atomic polarizability, specify a dummy, self-interaction and quantum atom, respectively. If mset is specified, the modification will only apply to the specified set, which has to be 1, 2 or 3. If not specified, the modification will be applied to all three sets. The quantum region in QM/MM simulations is defined by specifying atoms with the quantum or quantum\_high label. For atoms defined quantum\_high basis sets labeled X\_H will be used. The atomnam should be specified as <integer isgm>:<string name>, where isgm is the segment number, and name is the atom name. A leading blank in an atom name should be substituted with an underscore. The modify commands may be combined. For example, the following directive changes for the specified atom the charge and atom type in set 2 and specifies the atom to be a dummy in set 3.
+These modify commands change the atom type, partial atomic charge, atomic polarizability, specify a dummy, self-interaction and quantum atom, respectively. If mset is specified, the modification will only apply to the specified set, which has to be 1, 2 or 3. If not specified, the modification will be applied to all three sets. The quantum region in QM/MM simulations is defined by specifying atoms with the quantum or quantum_high label. For atoms defined quantum_high basis sets labeled X_H will be used. The atomnam should be specified as <integer isgm>:<string name>, where isgm is the segment number, and name is the atom name. A leading blank in an atom name should be substituted with an underscore. The modify commands may be combined. For example, the following directive changes for the specified atom the charge and atom type in set 2 and specifies the atom to be a dummy in set 3.
 ```
 modify atom 12:_C1 set 2 charge 0.12 type CA set 3 dummy
 ```
@@ -240,7 +240,7 @@ noe <string atom1> <string atom3> \
 
  <real dist1> <real dist2>  <real dist3> <real forc1> <real forc2>
 ```
-This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in <img alt="$kJ mol^{-1} nm^{-2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/56c2c4cf32fcf191f3e45838c1bc1a89.svg?invert_in_darkmode&sanitize=true" align=middle width="105.854595pt" height="26.70657pt"/>.
+This directive specifies a distance restraint potential between atoms *atom1* and *atom2*, with a harmonic function with force constant *forc1* between *dist1* and *dist2*, and a harmonic function with force constant *forc2* between *dist2* and *dist3*. For distances shorter than *dist1* or larger than *dist3*, a constant force is applied such that force and energy are continuous at *dist1* and *dist3*, respectively. Distances are given in nm, force constants in $kJ mol^{-1} nm^{-2}$.
 ```
 select <integer isel> { <string atoms> }
 ```
@@ -273,7 +273,7 @@ Generating a restart file
 ```
 new_rst
 ```
-Keyword new\_rst will cause an existing restart file to be overwritten with a new file.
+Keyword new_rst will cause an existing restart file to be overwritten with a new file.
 
 The follwing directives control the manipulation of restart files, and are executed in the order in which they appear in the prepare input deck.
 ```
@@ -288,7 +288,7 @@ solvate   [ < real rshell default 1.2 > ] \
           [ sphere <real radius> ] |
           [ troct <real edge> ])
 ```
-Solvation can be specified to be in a cubic box with specified edge, rectangular box with specified edges, or in a sphere with specified radius. Solvation in a cube or rectangular box will automatically also set periodic boundary conditions. Solvation in a sphere will only allow simulations without periodic boundary conditions. The size of the cubic and rectangular boxes will be expanded by a length specified by the expand variable. If no shape is specified, solvation will be done for a cubic box with an edge that leaves rshell nm between any solute atom and a periodic image of any solute atom after the solute has been centered. An explicit write is not needed to write the restart file. The solvate will write out a file sys\_calc.rst. If not specified, the dimension of the solvation cell will be as large as to have at least a distance of rshell nm between any solute atom and the edge of the cell. The experimental troct directive generates a truncated octrahedral box.
+Solvation can be specified to be in a cubic box with specified edge, rectangular box with specified edges, or in a sphere with specified radius. Solvation in a cube or rectangular box will automatically also set periodic boundary conditions. Solvation in a sphere will only allow simulations without periodic boundary conditions. The size of the cubic and rectangular boxes will be expanded by a length specified by the expand variable. If no shape is specified, solvation will be done for a cubic box with an edge that leaves rshell nm between any solute atom and a periodic image of any solute atom after the solute has been centered. An explicit write is not needed to write the restart file. The solvate will write out a file sys_calc.rst. If not specified, the dimension of the solvation cell will be as large as to have at least a distance of rshell nm between any solute atom and the edge of the cell. The experimental troct directive generates a truncated octrahedral box.
 ```
 touch <real touch default 0.23>
 ```
@@ -302,10 +302,10 @@ expand <real xpndw default 0.1>
 ```
 The variable xpndw specifies the size in nm with which the simulation volume will be increased after solvation.
 ```
-read [rst | rst_old | pdb] `<string filename>
+read [rst | rst_old | pdb] <string filename>
 write [rst | [solute [<integer nsolvent>]] ( [large] pdb | xyz)] <string filename>
 ```
-These directives read and write the file filename in the specified format. The solute option instructs to write out the coordinates for solute and all, or if specified the first nsolvent, crystal solvent molecules only. If no format is specified, it will be derived from the extension of the filename. Recognized extensions are rst, rst\_old (read only), pdb, xyz (write only) and pov (write only). Reading and then writing the same restart file will cause the sub-block size information to be lost. If this information needs to be retained a shell copy command needs to be used. The large keyword allows PDB files to be written with more than 9999 residues. Since the PDB file will not conform to the PDB convention, this option should only be used if required. NWChem will be able to read the resulting PDB file, but other codes may not.
+These directives read and write the file filename in the specified format. The solute option instructs to write out the coordinates for solute and all, or if specified the first nsolvent, crystal solvent molecules only. If no format is specified, it will be derived from the extension of the filename. Recognized extensions are rst, rst_old (read only), pdb, xyz (write only) and pov (write only). Reading and then writing the same restart file will cause the sub-block size information to be lost. If this information needs to be retained a shell copy command needs to be used. The large keyword allows PDB files to be written with more than 9999 residues. Since the PDB file will not conform to the PDB convention, this option should only be used if required. NWChem will be able to read the resulting PDB file, but other codes may not.
 ```
 scale <real scale default -1.0>
 ```

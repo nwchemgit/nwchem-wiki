@@ -40,7 +40,7 @@ The trajectory file(s) to be analyzed are specified with
 ```
 file  <string filename>  [ <integer firstfile>   <integer lastfile> ]
 ```
-where filename is an existing trj trajectory file. If firstfile and lastfile are specified, the specified filename needs to have a ? wild card character that will be substituted by the 3-character integer number from firstfile to lastfile, and the analysis will be performed on the series of files. For example,
+where filename is an existing trj trajectory file. If firstfile and lastfile are specified, the specified filename needs to have a `?` wildcard character that will be substituted by the 3-character integer number from firstfile to lastfile, and the analysis will be performed on the series of files. For example,
 ```
 file tr_md?.trj 3 6
 ```
@@ -280,7 +280,7 @@ color ( <string color> | atom ) \\
 
       [ <string anam> ]
 ```
-for all atoms anam within a distance *rtag* from segments *iatag* through *jatag*. A question mark can be used in anam as a wild card character.
+for all atoms anam within a distance *rtag* from segments *iatag* through *jatag*. A question mark can be used in anam as a wildcard character.
 
 For example, to display all carbon atoms in segments 34 through 45 in green and rendered cpk in povray files can be specified with
 ```
@@ -291,7 +291,7 @@ Coordinates written to a pov file can be scaled using
 ```
 scale <real factor>
 ```
-A zero or negative scaling factor will scale the coordinates to lie within \[-1,1\] in all dimensions.
+A zero or negative scaling factor will scale the coordinates to lie within [-1,1] in all dimensions.
 
 The cpk rendering in povray files can be scaled by
 ```
