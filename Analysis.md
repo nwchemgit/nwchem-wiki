@@ -91,19 +91,19 @@ select ( [ super ] [ { <string atomlist> } ] |
 where {atomlist} is the set of atom names selected from the specified residues. By default all solute atoms are selected. When keyword super is specified the selecion applies to the superimposition option.
 
 The selected atoms are specified by the string atomlist which takes the form
-
-`[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]`
-
+```
+[{isgm [ - jsgm ] [,]} [:] [{aname[,]}]
+```
 where isgm and jsgm are the first and last residue numbers, and aname is an atom name. In the atomname a question mark may be used as a wildcard character.
 
 For example, all protein backbone atoms are selected by
-
-`select _N,_CA,_C`
-
+```
+select _N,_CA,_C
+```
 To select the backbone atoms in residues 20 to 80 and 90 to 100 only, use
-
-`select 20-80,90-100:_N,_CA,_C`
-
+```
+select 20-80,90-100:_N,_CA,_C
+```
 This selection is reset to apply to all atoms after each file directive.
 
 Solvent molecules within range nm from any selected solute atom are selected by
