@@ -10,41 +10,41 @@ analysis
 end
 ```
 The analysis is performed as post-analysis of trajectory files through using the task directive
-
-`task analysis`
-
+```
+task analysis
+```
 or
-
-`task analyze`
-
+```
+task analyze
+```
 System specification
 --------------------
-
-`system <string systemid>_<string calcid>`
-
-where the strings systemid and calcid are user defined names for the chemical system and the type of calculation to ber performed, respectively. These names are used to derive the filenames used for the calculation. The topoly file used will be systemid.top, while all other files are named systemid\_calcid.ext.
+```
+system <string systemid>_<string calcid>
+```
+where the strings systemid and calcid are user defined names for the chemical system and the type of calculation to ber performed, respectively. These names are used to derive the filenames used for the calculation. The topoly file used will be systemid.top, while all other files are named systemid_calcid.ext.
 
 Reference coordinates
 ---------------------
 
 Most analyses require a set of reference coordinates. These coordinates are read from a NWChem restart file by the directive,
-
-`reference <string filename>`
-
+```
+reference <string filename>
+```
 where filename is the name of an existing restart file. This input directive is required.
 
 File specification
 ------------------
 
 The trajectory file(s) to be analyzed are specified with
-
-`file  <string filename>  [ <integer firstfile>   <integer lastfile> ]`
-
+```
+file  <string filename>  [ <integer firstfile>   <integer lastfile> ]
+```
 where filename is an existing trj trajectory file. If firstfile and lastfile are specified, the specified filename needs to have a ? wild card character that will be substituted by the 3-character integer number from firstfile to lastfile, and the analysis will be performed on the series of files. For example,
 
 `file tr_md?.trj 3 6`
 
-will instruct the analysis to be performed on files tr\_md003.trj, tr\_md004.trj, tr\_md005.trj and tr\_md006.trj.
+will instruct the analysis to be performed on files tr_md003.trj, tr_md004.trj, tr_md005.trj and tr_md006.trj.
 
 From the specified files the subset of frames to be analyzed is specified by
 ```
@@ -75,21 +75,19 @@ Coordinates of each frame read from a trajectory file can be rotated using
 If center was defined, rotation takes place after the system has been centered. The rotate directives only apply to frames read from the trajectory files, and not to the reference coordinates. Up to 100 rotate directives can be specified, which will be carried out in the order in which they appear in the input deck. rotate off cancels all previously defined rotate directives.
 
 To perform a hydrogen bond analysis:
-
-`hbond [distance [[<real rhbmin default 0.0>] <real rhbmin>]] \`
-
-`      [angle [<real hbdmin> [ <real hbdmax default pi>]]] \`
-
-`      [solvent [<integer numwhb>]]`
-
+```
+hbond [distance [[<real rhbmin default 0.0>] <real rhbmin>]] \
+      [angle [<real hbdmin> [ <real hbdmax default pi>]]] \
+      [solvent [<integer numwhb>]]
+```
 Selection
 ---------
 
 Analyses can be applied to a selection of solute atoms and solvent molecules. The selection is determined by
-
-`select ( [ super ] [ { <string atomlist> } ] |`
-`   solvent <real range> | save <string filename> | read <string filename> )`
-
+```
+select ( [ super ] [ { <string atomlist> } ] |
+   solvent <real range> | save <string filename> | read <string filename> )
+```
 where {atomlist} is the set of atom names selected from the specified residues. By default all solute atoms are selected. When keyword super is specified the selecion applies to the superimposition option.
 
 The selected atoms are specified by the string atomlist which takes the form
@@ -148,11 +146,10 @@ To define an angle:
 `angle <integer iangle> <string atomi> <string atomj> <string atomk>`
 
 To define a torsion:
-
-`torsion <integer itorsion> <string atomi> <string atomj> \`
-
-`                      <string atomk> <string atoml>`
-
+```
+`torsion <integer itorsion> <string atomi> <string atomj> \
+                      <string atomk> <string atoml>
+```
 To define a vector:
 
 `vector <integer ivector> <string atomi> <string atomj>`
@@ -182,7 +179,7 @@ Analyses on pairs of atoms in predefined groups are specified by
 groups [<integer igroup> [<integer jgroup>]] [periodic [<integer ipbc default 3>]] \ 
        <string function> [<real value1> [<real value2>]] [<string filename>]
 ```
-where *igroup* and *jgroup* are groups of atoms defined with a define directive. Keyword periodic specifies that periodic boundary conditions need to be applied in *ipbc* dimensions. The type of analysis is define by *function*, *value1* and *value2*. If *filename* is specified, the analysis is applied to the reference coordinates and written to the specified file. If no filename is given, the analysis is applied to the specified trajectory and performed as part of the scan directive. Implemented analyses defined by <string function> \[<real value1> \[<real value2>\]\] include
+where *igroup* and *jgroup* are groups of atoms defined with a define directive. Keyword periodic specifies that periodic boundary conditions need to be applied in *ipbc* dimensions. The type of analysis is define by *function*, *value1* and *value2*. If *filename* is specified, the analysis is applied to the reference coordinates and written to the specified file. If no filename is given, the analysis is applied to the specified trajectory and performed as part of the scan directive. Implemented analyses defined by `<string function> [<real value1> [<real value2>]]` include
 
 -   distance to calculate the distance between the centers of geometry of the two specified groups of atoms, and
 -   distances to calculate all atomic distances between atoms in the specified groups that lie between *value1* and *value2*.
@@ -220,9 +217,9 @@ This can be followed by one or more
 ```
 project <integer vector> <string filename>
 ```
-to project the trajectory onto the specified vector. This will create files filename with extensions frm or trj, val, vec, \_min.pdb and \_max.pdb, with the projected trajectory, the projection value, the eigenvector, and the minimum and maximum projection structure.
+to project the trajectory onto the specified vector. This will create files filename with extensions frm or trj, val, vec, _min.pdb and _max.pdb, with the projected trajectory, the projection value, the eigenvector, and the minimum and maximum projection structure.
 
-For example, an essential dynamics analysis with projection onto the first vector generating files firstvec.{trj, val, vec, \_min.pdb, \_max.pdb} is generated by
+For example, an essential dynamics analysis with projection onto the first vector generating files firstvec.{trj, val, vec, _min.pdb, _max.pdb} is generated by
 
 `essential`
 
@@ -283,7 +280,7 @@ render ( cpk | stick )  [ <real rval default 1.0> ] \\
        [ <integer iatag> [ <integer jatag default iatag> ] [ <real rtag default 0.0> ] ]
        [ <string anam> ]
 ```
-for all atoms anam within a distance *rtag* from segments *iatag* through *jatag*, and a scaling factor of <img alt="$*rval*. A question mark can be used in anam as a wild card character.
+for all atoms anam within a distance *rtag* from segments *iatag* through *jatag*, and a scaling factor of *rval*. A question mark can be used in anam as a wild card character.
 
 Atom color is specified using
 ```
@@ -296,11 +293,10 @@ color ( <string color> | atom ) \\
 for all atoms anam within a distance *rtag* from segments *iatag* through *jatag*. A question mark can be used in anam as a wild card character.
 
 For example, to display all carbon atoms in segments 34 through 45 in green and rendered cpk in povray files can be specified with
-
-`render cpk 34 45 _C??`
-
-`color green 34 45 _C??`
-
+```
+render cpk 34 45 _C??
+color green 34 45 _C??
+```
 Coordinates written to a pov file can be scaled using
 
 `scale <real factor>`
