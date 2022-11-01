@@ -147,7 +147,7 @@ To define an angle:
 
 To define a torsion:
 ```
-`torsion <integer itorsion> <string atomi> <string atomj> \
+torsion <integer itorsion> <string atomi> <string atomj> \
                       <string atomk> <string atoml>
 ```
 To define a vector:
