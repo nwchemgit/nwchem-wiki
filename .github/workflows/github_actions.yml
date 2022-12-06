@@ -120,10 +120,8 @@ jobs:
         shell: bash
         working-directory: mkdocs
         run: |
-          git clone -b $GITHUB_REF_NAME --depth 1  --filter=blob:none --sparse \
-          https://github.com/nwchemgit/archivedforum
-          cd archivedforum
-          git sparse-checkout set Special_AWCforum
+          wget -q  https://github.com/nwchemgit/archivedforum/tarball/"$GITHUB_REF_NAME" -O - | tar -xz --wildcards   nwchemgit-archivedforum-*/Special_AWCforum/*
+          mv nwchemgit-archivedforum-* archivedforum
           pwd
       - name: move archiveforum source
         shell: bash
