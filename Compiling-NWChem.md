@@ -90,28 +90,29 @@ NWChem will figure out the values of `LIBMPI`, `MPI_LIB` and `MPI_INCLUDE`
 variable, instead. Therefore, the next section can be considered obsolete.
 
 #### OBSOLETE: How to set the MPI variables
+The infomation of this section should not be used becuase of the automatic detection of MPI variables described in the previous 
+[section](#automatic-detection-of-mpi-variables-with-mpif90).  
 
 ~~The output of the command~~
 
-```
-mpif90 -show
-```
+<pre><del>mpif90 -show</del></pre>
+
 
 ~~can be used to extract the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE~~
 
 ~~E.g. for MPICH2, this might look like:~~
-```
+<pre><del>
 $ mpif90 -show
 f95 -I/usr/local/mpich2.141p1/include -I/usr/local/mpich2.141p1/include -L/usr/local/mpich2.141p1/lib \
 -lmpichf90 -lmpichf90 -lmpich -lopa -lmpl -lrt -lpthread
-```
+</del></pre>
 ~~The corresponding environment variables are~~
-```
+<pre><del>
   % export USE_MPI=y
   % export LIBMPI="-lmpich -lopa -lmpl -lpthread -lmpichf90 -lfmpich -lmpich"
   % export MPI_LIB=/usr/local/mpich2.141p1/lib 
   % export MPI_INCLUDE='/usr/local/mpich2.141p1/include
-```
+</del></pre>
 
 #### How to start NWChem
 
