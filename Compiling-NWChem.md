@@ -195,7 +195,7 @@ control the execution of NWChem. To build with Python, Python needs to
 be available on your machine. The software can be download from
 <https://www.python.org> . Follow the Python instructions for
 installation and testing. NWChem has been tested with Python versions
-up to 3.10
+up to 3.11
 
 The following environment variables need to be set when compiling with
 Python, together with having the location of your installed python binary part of
@@ -300,7 +300,15 @@ Notes:
 **_New in NWChem 7.0.2_**:   
 
 1. The environment variable `BUILD_OPENBLAS` can be used to automatically build the OpenBLAS library during a NWChem compilation (either using `BLAS_SIZE=8` or `BLAS_SIZE=4`)  
-2. The environment variable `BUILD_SCALAPACK` can be used to automatically build the ScaLapack library during a NWChem compilation (either using `SCALAPACK_SIZE=8` or `SCALAPACK_SIZE=4`)  
+2. The environment variable `BUILD_SCALAPACK` can be used to automatically build the ScaLapack library during a NWChem compilation (either using `SCALAPACK_SIZE=8` or `SCALAPACK_SIZE=4`)
+
+The following settings are strongly recommended:
+```
+BUILD_OPENBLAS=1
+BUILD_SCALAPACK=1
+BLAS_SIZE=8
+SCALAPACK_SIZE=8
+```
 
 ### Linking in NBO
 
