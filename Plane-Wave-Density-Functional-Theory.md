@@ -470,13 +470,11 @@ the atomic orbitals outside a defined atomic sphere, and projector
 functions, <img alt="$p_{\alpha}^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9f91dd583ac30baa6a15f183e53d7c21.svg?invert_in_darkmode&sanitize=true" align=middle width="38.10147pt" height="27.59823pt"/>. Where I is the atomic index and
 α is the orbital index. The projector functions are constructed such
 that they are localized within the defined atomic sphere and in addition
-are orthonormal to the atomic orbitals. Blöchl defined the invertible
-linear transformations
-by
+are orthonormal to the atomic orbitals. Blöchl defined the invertible linear transformations by  
 
-$$T = 1 + \sum_I \sum_{\alpha} (|\tilde{\varphi}_{\alpha}^I> - |\varphi_{\alpha}^I<)<p_{\alpha}^I|$$
+$$T = 1 + \sum_I \sum_\alpha (|\tilde{\varphi}_\alpha^I> - |\varphi_\alpha^I > ) < p_\alpha^I|$$
 
-$$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I> - |\tilde{\varphi}_{\alpha}^I>)<\tilde{\varphi}_{\alpha}^I|$$
+$$\tilde{T} = 1 + \sum_I \sum_{\alpha} (|\varphi_{\alpha}^I> - |\tilde{\varphi}_{\alpha}^I >)<\tilde{\varphi}_{\alpha}^I|$$
 
 $$|\tilde{p}_{\alpha}^I> = \sum_{\beta} [<\tilde{p}^I | \varphi^I >]_{\alpha\beta}^{-1} | p_{\beta}^I>$$
 
