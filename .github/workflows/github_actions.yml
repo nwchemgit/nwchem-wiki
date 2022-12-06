@@ -151,12 +151,11 @@ jobs:
         shell: bash
         working-directory: mkdocs
         run: |
-          rsync --exclude=.git -a site/* nwchemgit.github.io/.
+          time -p rsync -W --exclude=.git -a site/* nwchemgit.github.io/.
           ls -lart site/index.html || true
           ls -lart nwchemgit.github.io/index.html || true
           cd nwchemgit.github.io
-          git diff --stat
-          git log -1
+          time -p git log -1
       - name: Commit changes
         shell: bash
         working-directory: mkdocs/nwchemgit.github.io
