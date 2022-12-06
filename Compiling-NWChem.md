@@ -90,7 +90,7 @@ NWChem will figure out the values of `LIBMPI`, `MPI_LIB` and `MPI_INCLUDE`
 variable, instead. Therefore, the next section can be considered obsolete.
 
 #### OBSOLETE: How to set the MPI variables
-The information of this section should not be used becuase of the automatic detection of MPI variables described in the previous 
+The information of this section should not be used because of the automatic detection of MPI variables described in the previous 
 [section](#automatic-detection-of-mpi-variables-with-mpif90).  
 
 ~~The output of the command~~
