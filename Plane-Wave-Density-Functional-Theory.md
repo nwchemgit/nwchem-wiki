@@ -425,9 +425,9 @@ high-frequency components of the wavefunction in the atomic sphere
 region. Effectively this splits the original wavefunction into two
 parts:
 
-<img alt="$\psi_n(\mathbf{r}) = \tilde{\psi}_n(\mathbf{r}) + \sum_I \psi_n^I(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/68f3a0f1e1d66f32691ef41bf0ab5c89.svg?invert_in_darkmode&sanitize=true" align=middle width="189.915495pt" height="30.55107pt"/>
+$$\psi_n(\mathbf{r}) = \tilde{\psi}_n(\mathbf{r}) + \sum_I \psi_n^I(\mathbf{r})$$
 
-The first part <img alt="$\tilde{\psi}_n(\mathbf{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/08adcb3a29f050420c64eeffd66743c2.svg?invert_in_darkmode&sanitize=true" align=middle width="40.14978pt" height="30.55107pt"/> is smooth and can be
+The first part $\tilde{\psi}_n(\mathbf{r})$ is smooth and can be
 represented using a plane wave basis set of practical size. The second
 term is localized with the atomic spheres and is represented on radial
 grids centered on the atoms
@@ -626,19 +626,19 @@ densities
 
 <center>
 
-<img alt="$E_{ion-core}= \sum_I \frac{1}{2} \iint \frac{\rho_c^I (r) \rho_c^I (r')}{|r-r'|}  drdr^' - \int  \frac{\rho_c^I (r)}{|r|}  (Z_I+Z_I^{core} ) dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/eaf6a50f69f909c52ce138457f0cb8da.svg?invert_in_darkmode&sanitize=true" align=middle width="392.716995pt" height="47.73054pt"/>
+$$E_{ion-core}= \sum_I \frac{1}{2} \iint \frac{\rho_c^{I} (r) \rho_c^{I} (r')}{|r-r'|}  drdr^{'} - \int  \frac{\rho_c^{I} (r)}{|r|}  (Z_I+Z_I^{core} ) dr$$
 
 </center>
 
-The matrix elements contained in the above formula
-are
-$$(t_{atom}^I )_{\alpha \beta}= {\delta_{m_\alpha m_\beta} \delta_{l_\alpha l_\beta }}{2}  \int_0^{r_{cut}^I}  \left[ (\varphi_{n_\alpha l_\alpha}^I (r))'  (\varphi_{n_\beta l_\beta}^I (r))' - (\tilde{\varphi}_{n_\alpha l_\alpha}^I (r))' (\tilde{\varphi}_{n_\beta l_\beta}^I (r))' \\
-+ l_\alpha (l_\alpha+1)  \frac{ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_{n_\beta l_\beta}^I (r) - \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r) \; \; \; \; \; \; \; \; \;  }{r^2 } \right]  dr$$
+The matrix elements contained in the above formula are
+
+$$(t_{atom}^{I} )_{\alpha \beta}= {\delta_{m_\alpha m_\beta} \delta_{l_\alpha l_\beta }}2  \int_0^{r_{cut}^I}  \left[
+  (\varphi_{n_\alpha l_\alpha}^{I} (r))' (\varphi_{n_\beta l_\beta}^{I} (r))' - (\tilde{\varphi}_{n_\alpha l_\alpha}^{I} (r))' (\tilde{\varphi}_{n_\beta l_\beta}^{I} (r))' + l_\alpha (l_\alpha+1)  \frac{ \varphi_{n_\alpha l_\alpha}^{I}(r) \varphi_{n_\beta l_\beta}^{I}(r) - \tilde{\varphi}_{n_\alpha l_\alpha}^{I}(r) \tilde{\varphi}_{n_\beta l_\beta}^I }{r^2 } \right]  dr$$
 
 
 <center>
 
-<img alt="$(u_{atom}^I )_{\alpha \beta} =\frac{Z_I}{4\pi} (V_{comp}^I )_{\alpha \beta}^{l=0} + \frac{2Z_I}{(\sqrt{2\pi} \sigma_I } (q_comp^I )_{\alpha \beta}^(l=0) +\delta_{m_\alpha m_\beta } \delta_{l_\alpha l_\beta } \int_0^{r_{cut}^I} [ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_(n_\beta l_\beta)^I (r) \frac{-Z_I}{r} + \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r) (-v_{ps}^I (r)) ] dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c3956550cbb1cea530525ffac2a250c2.svg?invert_in_darkmode&sanitize=true" align=middle width="728.65155pt" height="67.7325pt"/>
+$$(u_{atom}^I )_{\alpha \beta} =\frac{Z_I}{4\pi} (V_{comp}^I )_{\alpha \beta}^{l=0} + \frac{2Z_I}{(\sqrt{2\pi} \sigma_I } (q_comp^I )_{\alpha \beta}^(l=0) +\delta_{m_\alpha m_\beta } \delta_{l_\alpha l_\beta } \int_0^{r_{cut}^I} [ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_(n_\beta l_\beta)^I (r) \frac{-Z_I}{r} + \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r) (-v_{ps}^I (r)) ] dr$$
 
 </center>
 
