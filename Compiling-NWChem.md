@@ -87,26 +87,25 @@ location of the `mpif90` command is part of your `PATH` env. variable,
 NWChem will figure out the values of `LIBMPI`, `MPI_LIB` and `MPI_INCLUDE`
 (if they are not set). Therefore, we do **NOT** recommend to set `LIBMPI`,
 `MPI_LIB` and `MPI_INCLUDE` and add the location of `mpif90` to the `PATH`
-variable, instead. Therefore, the next section can be considered obsolete in the most common cases.
+variable, instead. Therefore, the next section can be considered obsolete.
 
-#### Obsolete:  How to set the MPI variables
+#### OBSOLETE: How to set the MPI variables
 
-The output of the command
+~~The output of the command~~
 
 ```
 mpif90 -show
 ```
 
-can be used to extract the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE
+~~can be used to extract the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE~~
 
-E.g. for MPICH2, this might look
-like:
+~~E.g. for MPICH2, this might look like:~~
 ```
 $ mpif90 -show
 f95 -I/usr/local/mpich2.141p1/include -I/usr/local/mpich2.141p1/include -L/usr/local/mpich2.141p1/lib \
 -lmpichf90 -lmpichf90 -lmpich -lopa -lmpl -lrt -lpthread
 ```
-The corresponding environment variables are  
+~~The corresponding environment variables are~~
 ```
   % export USE_MPI=y
   % export LIBMPI="-lmpich -lopa -lmpl -lpthread -lmpichf90 -lfmpich -lmpich"
@@ -388,10 +387,6 @@ MPI:
 % export USE_MPIF=y
 % export USE_MPIF4=y
 
-% export MPI_LOC=<your path>/openmpi-1.4.3  (for example, if you are using OpenMPI)
-% export MPI_LIB=<your path>/openmpi-1.4.3/lib
-% export MPI_INCLUDE=<your path>/openmpi-1.4.3/include
-% export LIBMPI="-lmpi_f90 -lmpi_f77 -lmpi -lpthread"
 ```
 **New in NWChem 6.6:** If the location of the mpif90 command is part of
 your PATH env. variable, NWChem will figure out the values of LIBMPI,
@@ -1119,10 +1114,6 @@ The following environment variables should be set:
 % export ARMCI_NETWORK=MPI-MT
 % export OBJECT_MODE=64
 % export USE_MPI=y
-% export LARGE_FILES=TRUE
-% export MPI_LIB=/usr/lpp/ppe.poe/lib
-% export MPI_INCLUDE=/usr/lpp/ppe.poe/include
-% export LIBMPI="-lmpi -lpthreads"
 ```
 
 To compile, the following commands should be used:
