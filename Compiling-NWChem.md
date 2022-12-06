@@ -95,17 +95,17 @@ The information of this section should not be used because of the automatic dete
 
 ~~The output of the command~~
 
-<pre><del>mpif90 -show</del></pre>
+<pre><code><del>mpif90 -show</del></code></pre>
 
 
 ~~can be used to extract the values of LIBMPI, MPI\_LIB and MPI\_INCLUDE~~
 
 ~~E.g. for MPICH2, this might look like:~~
-<pre><del>
+<pre><code><del>
 $ mpif90 -show
 f95 -I/usr/local/mpich2.141p1/include -I/usr/local/mpich2.141p1/include -L/usr/local/mpich2.141p1/lib \
 -lmpichf90 -lmpichf90 -lmpich -lopa -lmpl -lrt -lpthread
-</del></pre>
+</del></code></pre>
 ~~The corresponding environment variables are~~
 <pre><code><del>
   % export USE_MPI=y
