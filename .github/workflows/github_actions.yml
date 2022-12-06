@@ -15,7 +15,7 @@ jobs:
     runs-on: [ubuntu-20.04]
     steps:
       - name: Checkout nwchem-wiki
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
@@ -43,7 +43,7 @@ jobs:
     runs-on: [ubuntu-20.04]
     steps:
       - name: Checkout nwchem.wiki
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: nwchemgit/nwchem.wiki
           persist-credentials: false
@@ -72,7 +72,7 @@ jobs:
     runs-on: [ubuntu-20.04]
     steps:
       - name: checkout wiki
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
@@ -108,7 +108,7 @@ jobs:
           ls -lart mkdocs
           ls -lart mkdocs/docs
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
       - name: install mkdocs and plugins
         shell: bash
         working-directory: mkdocs
