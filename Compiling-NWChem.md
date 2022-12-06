@@ -107,12 +107,12 @@ f95 -I/usr/local/mpich2.141p1/include -I/usr/local/mpich2.141p1/include -L/usr/l
 -lmpichf90 -lmpichf90 -lmpich -lopa -lmpl -lrt -lpthread
 </del></pre>
 ~~The corresponding environment variables are~~
-<pre><del>
+<pre><code><del>
   % export USE_MPI=y
   % export LIBMPI="-lmpich -lopa -lmpl -lpthread -lmpichf90 -lfmpich -lmpich"
   % export MPI_LIB=/usr/local/mpich2.141p1/lib 
   % export MPI_INCLUDE='/usr/local/mpich2.141p1/include
-</del></pre>
+</del></code></pre>
 
 #### How to start NWChem
 
