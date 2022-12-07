@@ -1984,50 +1984,50 @@ The coordination number collective variable is defined as
 
 $$s\left(r_{ij},r_{0}\right) =\sum_{i,j}\xi_{ij}$$
 
-where the summation over <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> and <img alt="$j$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6816575pt" height="21.60213pt"/> runs over two types of atoms,
-<img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is the *weighting function*, and <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> is the cut-off
+where the summation over $i$ and $j$ runs over two types of atoms,
+$\xi_{ij}$ is the *weighting function*, and $r_{0}$ is the cut-off
 distance. In the standard procedure for computing the coordination
-number, <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> =1 if <img alt="$r_{ij}&amp;lt;r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/70c5fddc4b0f648ba5d4cc8f918c0990.svg?invert_in_darkmode&sanitize=true" align=middle width="51.295365pt" height="22.74591pt"/>, otherwise 
-<img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> =0,
-implying that <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is not continuous when 
-<img alt="$r_{ij}=r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5f9111eb45cfbada3002d54aa5a1632d.svg?invert_in_darkmode&sanitize=true" align=middle width="54.752445pt" height="14.10255pt"/>. To
+number, $\xi_{ij}$ =1 if $r_{ij}<r_{0}$, otherwise 
+$\xi_{ij}$ =0,
+implying that $\xi_{ij}$ is not continuous when 
+$r_{ij}=r_{0}$. To
 ensure a smooth and continuous definition of the coordination number, we
 adopt two variants of the weighting function. The first variant
 is
 
-<img alt="$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3601f11912ffe438c9e1ba76f363c68.svg?invert_in_darkmode&sanitize=true" align=middle width="116.48505pt" height="33.8712pt"/>
+$$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$$
 
-where <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> and <img alt="$m$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width="14.379255pt" height="14.10255pt"/> are integers (m > n) chosen such that
-<img alt="$\xi_{ij}\approx 1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84700304a3d7acf0008cfbe96f43964d.svg?invert_in_darkmode&sanitize=true" align=middle width="48.800565pt" height="22.74591pt"/> when
+where $n$ and $m$ are integers (m > n) chosen such that
+$\xi_{ij}\approx 1$ when
 \(r_{ij}<r_{0}\)  and
-<img alt="$\xi_{ij}\rightarrow 0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75a2aa9692825f1c8a743993e42c61ac.svg?invert_in_darkmode&sanitize=true" align=middle width="52.43997pt" height="22.74591pt"/> when <img alt="$r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/92e0822b1528090efc2435d2ae60c9ee.svg?invert_in_darkmode&sanitize=true" align=middle width="18.103965pt" height="14.10255pt"/> is much larger than <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/>.
+$\xi_{ij}\rightarrow 0$ when $r_{ij}$ is much larger than $r_{0}$.
 For example, the parameters of the O-H coordination in water is well
-described by <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> =1.6 Å, 
-<img alt="$n=6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/600979b5b6b2bf60cc96e3ebb182b871.svg?invert_in_darkmode&sanitize=true" align=middle width="39.88842pt" height="21.10812pt"/>
-and <img alt="$m=18$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f05a0a759783bdcc5e02151882f0db17.svg?invert_in_darkmode&sanitize=true" align=middle width="52.62609pt" height="21.10812pt"/>. 
-In practice, <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>
-and <img alt="$m$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width="14.379255pt" height="14.10255pt"/> must tuned for a given <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> to ensure that <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/>
+described by $r_{0}$ =1.6 Å, 
+$n=6$
+and $m=18$. 
+In practice, $n$
+and $m$ must tuned for a given $r_{0}$ to ensure that $\xi_{ij}$
 is smooth and satisfies the above mentioned properties, particularly the
-large <img alt="$r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/92e0822b1528090efc2435d2ae60c9ee.svg?invert_in_darkmode&sanitize=true" align=middle width="18.103965pt" height="14.10255pt"/>
+large $r_{ij}$
 
 The second form of the weighting function, which is due to Sprik, is
 
-<img alt="$\xi_{ij}=\frac{1}{1 + \exp\left[n\left(r_{ij}-r_{0}\right)\right]}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dad6ece196b905622d4e51f840a6bd2a.svg?invert_in_darkmode&sanitize=true" align=middle width="144.506505pt" height="27.72033pt"/>
+$$\xi_{ij}=\frac{1}{1 + \exp\left[n\left(r_{ij}-r_{0}\right)\right]}$$
 
-In this definition <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is analogous to the Fermi function and
-its width is controlled by the parameter <img alt="$\frac{1}{n}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/179b80cc86f52ed7205e115c2a3ddc1b.svg?invert_in_darkmode&sanitize=true" align=middle width="8.126085pt" height="27.72033pt"/>. Large and
-small values of <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> respectively correspond to sharp and soft
-transitions at <img alt="$r_{ij} = r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/603ddac5711cb486f42d9f3bb061b1e6.svg?invert_in_darkmode&sanitize=true" align=middle width="54.752445pt" height="14.10255pt"/>. 
-Furthermore <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> should
+In this definition $\xi_{ij}$ is analogous to the Fermi function and
+its width is controlled by the parameter $\frac{1}{n}$. Large and
+small values of $n$ respectively correspond to sharp and soft
+transitions at $r_{ij} = r_{0}$. 
+Furthermore $\xi_{ij}$ should
 approach 1 and 0 when \(r_{ij} < 0\)
 and
 \(r_{ij} < r_0 \)
 respectively. In practice 
-<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> =6-10 Å 
-<img alt="$^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2351d2e88576cfc62e0f3db8a8ab779c.svg?invert_in_darkmode&sanitize=true" align=middle width="16.76367pt" height="26.70657pt"/>. 
+$n$ =6-10 Å 
+$^{-1}$. 
 For example, a good set
-of parameters of the O-H coordination in water is <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> =1.4 Å and
-<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> =10 Å <img alt="$^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2351d2e88576cfc62e0f3db8a8ab779c.svg?invert_in_darkmode&sanitize=true" align=middle width="16.76367pt" height="26.70657pt"/>.
+of parameters of the O-H coordination in water is $r_{0}$ =1.4 Å and
+$n$ =10 Å $^{-1}$.
 
 #### N-Plane Collective Variable
 
@@ -2036,16 +2036,16 @@ adatom/admolecules to a surface. It is defined as the *average distance*
 of the adatom/admolecule from a given layer in the slab along the
 surface normal:
 
-<img alt="$s = Z_{ads}-\frac{1}{N_{plane}}\sum_{i=1}^{N_{plane}}Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/21585c657d6e7a7bc667ba9140327eba.svg?invert_in_darkmode&sanitize=true" align=middle width="206.042595pt" height="33.6765pt"/>
+$$s = Z_{ads}-\frac{1}{N_{plane}}\sum_{i=1}^{N_{plane}}Z_i$$
 
-where <img alt="$Z_{ads}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/79893c344f6963e41e3e8f21bafa8ed4.svg?invert_in_darkmode&sanitize=true" align=middle width="31.28202pt" height="22.38192pt"/> denotes the position of the adatom/admolecule/impurity
+where $Z_{ads}$ denotes the position of the adatom/admolecule/impurity
 along the surface normal (here, we assume the surface normal to be the
 z-axis) and the summation over 
-<img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> 
+$i$ 
 runs over 
-<img alt="$N_{plane}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fec83962e01db7093a670f089a6a7e1.svg?invert_in_darkmode&sanitize=true" align=middle width="45.530925pt" height="22.38192pt"/> 
+$N_{plane}$ 
 atoms at
-<img alt="$Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed35373880183d013fc1bba898b2e3ae.svg?invert_in_darkmode&sanitize=true" align=middle width="15.813105pt" height="22.38192pt"/> which form the layer. The layer could be on the face or in the
+$Z_i$ which form the layer. The layer could be on the face or in the
 interior of the
 slab.
 
@@ -2144,7 +2144,7 @@ sub-block.
     Note Ewald summation is only used if the simulation_cell is
     periodic.
 
- Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
+ Default set to be $frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -2193,9 +2193,9 @@ input in detail.
 
 Alternatively, instead of explicitly entering lattice vectors, users can
 enter the unit cell using the standard cell parameters, a, b, c,
-<img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>,
-<img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>, 
-and <img alt="$\gamma$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>, by using the LATTICE block. The
+$alpha$,
+$\beta$, 
+and $\gamma$, by using the LATTICE block. The
 format for input is as follows:
 ```
 NWPW 
@@ -2297,7 +2297,7 @@ that you specify.
 Basically, the pseudopotential
 energy
 
-<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ebf5b6cffb11b24b8340ba90b370b03.svg?invert_in_darkmode&sanitize=true" align=middle width="830.321745pt" height="39.01194pt"/>
+$$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$$
 
 was modified
 to
