@@ -3636,12 +3636,9 @@ The following isodesmic reaction can be used determine the enthalpy of
 formation for CCl$_3$SH that is significantly more accurate than the
 estimates based on atomization energies.
 
-<center>
 
-CCl$_3$SH + CH$_4$ $\rightarrow$ CH$_3$SH + CCl$_3$H,
-ΔH$_r$(calc).
-
-</center>
+CCl<sub>3</sub>SH + CH<sub>4</sub> $\rightarrow$ CH<sub>3</sub>SH + CCl<sub>3</sub>H,
+ΔH<sub>r</sub>(calc).
 
 The first step is to calculate the reaction enthalpy of this reaction
 from electronic, thermal and vibrational energy differences at 298.15K
@@ -3649,14 +3646,14 @@ at a consistent level of theory. The defining property of an isodesmic
 reaction that there are an equal number of like bonds on the left-hand
 and right-hand sides of the reaction helps to minimize the error in the
 calculation of the reaction energy. The enthalpy of formation of
-CCl$_3$SH can then be calculated by using Hess’s law with the
+CCl<sub>3</sub>SH can then be calculated by using Hess’s law with the
 calculated enthalpy change and the experimentally known heats of
 formation of the other 3 species (see Table 3).
 
 <center>
 
-ΔH$_f$(CCl$_3$SH) = ΔH$_f$(CH$_3$SH)(exp) +
-ΔH$_f$(CCl$_3$H)(exp) - ΔH$_f$(CH$_4$)(exp)- ΔH$_r$(calc).
+ΔH<sub>f</sub>(CCl<sub>3</sub>SH) = ΔH<sub>f</sub>(CH<sub>3</sub>SH)(exp) +
+ΔH<sub>f</sub>(CCl<sub>3</sub>H)(exp) - ΔH<sub>f</sub>(CH<sub>4</sub>)(exp)- ΔH<sub>r</sub>(calc).
 
 </center>
 
@@ -3671,7 +3668,7 @@ the SCF, DFT, MP2, and TCE modules.
 
 <center>
 
-CCl$_3$SH + CH$_4$ $\rightarrow$ CH$_3$SH + CCl$_3$H
+CCl<sub>3</sub>SH + CH<sub>4</sub> $\rightarrow$ CH<sub>3</sub>SH + CCl<sub>3</sub>H
 
 </center>
 
@@ -3768,8 +3765,8 @@ Table 3: Miscellaneous experimental gas-phase enthalpies of formation
 output:[Media:ccl4-64water.nwout](ccl4-64water.nwout))
 
 In this section we show how use the PSPW module to perform a
-Car-Parrinello AIMD/MM simulation for a CCl$_4$ molecule in a box of
-64 H$_2$O. Before running a PSPW Car-Parrinello simulation the system
+Car-Parrinello AIMD/MM simulation for a CCl<sub>4</sub> molecule in a box of
+64 H<sub>2</sub>O. Before running a PSPW Car-Parrinello simulation the system
 should be on the Born-Oppenheimer surface, i.e. the one-electron
 orbitals should be minimized with respect to the total energy (i.e. task
 pspw energy). In this example, default pseudopotentials from the
