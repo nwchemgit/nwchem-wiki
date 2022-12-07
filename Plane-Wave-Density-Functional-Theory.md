@@ -497,8 +497,9 @@ $$\tilde{E}_{Coulomb-pw} = \frac{\Omega}{2} \sum_{\mathbf{G}} \frac{4\pi}{|\math
 
 $$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$$
 
-$$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\ + \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 +  $$
-$$ - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2 $$
+$$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) + $$
+$$\frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 +  $$
+$$ - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_{I} Z_{I} \right)^2 $$
 
 The local potential in the $\tilde{E}_{vlocal-pw}$ term is the Fourier
 transform of
@@ -1164,9 +1165,9 @@ The following list describes these keywords.
     orbitals
   - `output_wavefunctions` - name that will point to file containing the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass ($\mu$). This
+  - `fake_mass` - value for the electronic fake mass $\mu$. This
     parameter is not presently used in a conjugate gradient simulation
-  - `time_step` - value for the time step ($\Delta t$). This parameter
+  - `time_step` - value for the time step $\Delta t$. This parameter
     is not presently used in a conjugate gradient simulation.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
@@ -2020,11 +2021,8 @@ small values of $n$ respectively correspond to sharp and soft
 transitions at $r_{ij} = r_{0}$. 
 Furthermore $\xi_{ij}$ should
 approach 1 and 0 when $r_{ij} < 0$
-and
-$r_{ij} < r_0 $
-respectively. In practice 
-$n$ =6-10 Å 
-$^{-1}$. 
+and $r_{ij} < r_0 $
+respectively. In practice $n$ =6-10 Å $^{-1}$. 
 For example, a good set
 of parameters of the O-H coordination in water is $r_{0}$ =1.4 Å and
 $n$ =10 Å $^{-1}$.
