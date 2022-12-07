@@ -2991,7 +2991,7 @@ orbitals.
 Given this kinetic energy the constrained equations of motion are found
 by taking the first variation of the auxiliary Lagrangian.
 
-$$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \left \{ \psi_{i,\sigma}(\vec{r}) \right \} , \left \{ \vec{R}_I \right \} \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$$
+$$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \bigl[ \psi_{i,\sigma}(\vec{r}) \bigr] , \left \{ \vec{R}_I \right \} \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$$
 
 Which generates a dynamics for the wavefunctions
 $\psi_{i,\sigma}(\vec{r})$ and atoms positions $\vec{R}_I$ through
