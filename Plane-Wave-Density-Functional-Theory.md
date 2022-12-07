@@ -1165,9 +1165,9 @@ The following list describes these keywords.
     orbitals
   - `output_wavefunctions` - name that will point to file containing the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass (<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/>). This
+  - `fake_mass` - value for the electronic fake mass ($\mu$). This
     parameter is not presently used in a conjugate gradient simulation
-  - `time_step` - value for the time step (<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>). This parameter
+  - `time_step` - value for the time step ($\Delta t$). This parameter
     is not presently used in a conjugate gradient simulation.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
@@ -1191,7 +1191,7 @@ The following list describes these keywords.
     Note Ewald summation is only used if the simulation_cell is
     periodic.
 
- Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
+ Default set to be $\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
 
   - (Vosko || PBE96 || revPBE) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -1598,7 +1598,7 @@ The following list describes the input for the Car-Parrinello sub-block.
     Note Ewald summation is only used if the simulation_cell is
     periodic.
 
- Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
+ Default set to be $\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -1841,38 +1841,38 @@ is a powerful, non-equilibrium molecular dynamics method which
 accelerates the sampling of the multidimensional free energy surfaces of
 chemical reactions. This is achieved by adding an external
 time-dependent bias potential that is a function of user defined
-collective variables, <img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>. The bias potential discourages the
-system from sampling previously visited values of <img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/> (i.e.,
-encourages the system to explore new values of <img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/>). During the
+collective variables, $\bold{s}$. The bias potential discourages the
+system from sampling previously visited values of $\bold{s}$ (i.e.,
+encourages the system to explore new values of $\bold{s}$. During the
 simulation the bias potential accumulates in low energy wells which then
 allows the system to cross energy barriers much more quickly than would
-occur in standard dynamics. The collective variable <img alt="$\bold{s}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ac1f4e1dab5841b672f5e0b7c71e768.svg?invert_in_darkmode&sanitize=true" align=middle width="7.428762pt" height="14.55729pt"/> is a
-generic function of the system coordinates, <img alt="$\bold{R}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/88676c53c0045c08c941fe2cd832be75.svg?invert_in_darkmode&sanitize=true" align=middle width="14.125155pt" height="22.473pt"/> (e.g. bond
+occur in standard dynamics. The collective variable $\bold{s}$ is a
+generic function of the system coordinates, $\bold{R}$ (e.g. bond
 distance, bond angle, coordination numbers, etc.) that is capable of
 describing the chemical reaction of interest.
-<img alt="$\bold{s}\left(\bold{R}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc95a580b006c998fc3862504df87633.svg?invert_in_darkmode&sanitize=true" align=middle width="37.05504pt" height="24.56553pt"/> can be regarded as a reaction
+$\bold{s}\left(\bold{R}\right)$ can be regarded as a reaction
 coordinate if it can distinguish between the reactant, transition, and
 products states, and also capture the kinetics of the reaction.
 
 The biasing is achieved by “flooding” the energy landscape with
 repulsive Gaussian “hills” centered on the current location of
-<img alt="$\bold{s}\left(\bold{R}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc95a580b006c998fc3862504df87633.svg?invert_in_darkmode&sanitize=true" align=middle width="37.05504pt" height="24.56553pt"/> at a constant time interval
-<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>. If the height of the Gaussians is constant in time then we
+$\bold{s}\left(\bold{R}\right)$ at a constant time interval
+$\Delta t$. If the height of the Gaussians is constant in time then we
 have standard metadynamics; if the heights vary (slowly decreased) over
 time then we have well-tempered metadynamics. In between the addition of
 Gaussians, the system is propagated by normal (but out of equilibrium)
-dynamics. Suppose that the dimension of the collective space is <img alt="$d$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width="8.524065pt" height="22.74591pt"/>,
+dynamics. Suppose that the dimension of the collective space is $d$,
 i.e.
-<img alt="$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/48c11959e32b7d6c14bacefa2825cad1.svg?invert_in_darkmode&sanitize=true" align=middle width="259.225395pt" height="24.56553pt"/>
-and that prior to any time <img alt="$t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width="5.913963pt" height="20.1465pt"/> during the simulation, <img alt="$N +1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ee9f6cc10642a33f4191e28713116513.svg?invert_in_darkmode&sanitize=true" align=middle width="43.182645pt" height="22.38192pt"/>
+$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$
+and that prior to any time $t$ during the simulation, $N +1$
 Gaussians centered on 
-<img alt="$\bold{S}^{t_g}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d50809746605bae17ac22ee2985f51b4.svg?invert_in_darkmode&sanitize=true" align=middle width="21.44076pt" height="26.03337pt"/>
+$\bold{S}^{t_g}$
 are deposited along the
-trajectory of <img alt="$\bold{s}\left(\bold{R}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc95a580b006c998fc3862504df87633.svg?invert_in_darkmode&sanitize=true" align=middle width="37.05504pt" height="24.56553pt"/> at times
-<img alt="$t_g = 0, \Delta t, 2\Delta t, \ldots ,N\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d494fcac6fb74e9eb5e8b51ea1efd390.svg?invert_in_darkmode&sanitize=true" align=middle width="176.515845pt" height="22.38192pt"/>. Then, the value of
-the bias potential, <img alt="$V$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width="13.192575pt" height="22.38192pt"/>, at an arbitrary point,
-<img alt="$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/48c11959e32b7d6c14bacefa2825cad1.svg?invert_in_darkmode&sanitize=true" align=middle width="259.225395pt" height="24.56553pt"/>,
-along the trajectory of <img alt="$\bold{s}\left(\bold{R}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc95a580b006c998fc3862504df87633.svg?invert_in_darkmode&sanitize=true" align=middle width="37.05504pt" height="24.56553pt"/> at time <img alt="$t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width="5.913963pt" height="20.1465pt"/>
+trajectory of $\bold{s}\left(\bold{R}\right)$ at times
+$t_g = 0, \Delta t, 2\Delta t, \ldots ,N\Delta t$. Then, the value of
+the bias potential, $V$, at an arbitrary point,
+$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$,
+along the trajectory of $\bold{s}\left(\bold{R}\right)$ at time $t$
 is given
 by
 
@@ -1880,25 +1880,25 @@ $$V_{meta}\left(\pmb{s},t\right) = \sum_{t_g=0}^{t_g<} W(t) \exp\left(-\sum_{i=1
 
 
 where
-<img alt="$W(t)=W_0 \exp\left(-\frac{V_{meta}\left(\bold{s},t-\Delta t\right)}{k_B T_{tempered}}\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b6380e48009b8ba62daa7b38a4b38831.svg?invert_in_darkmode&sanitize=true" align=middle width="234.305445pt" height="37.80348pt"/>
-is the time-dependent Gaussian height. <img alt="$\sigma_i \,(i=1,2,\ldots,d)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6a4feb4eaf24154e2dbf69ee77dc37c5.svg?invert_in_darkmode&sanitize=true" align=middle width="126.50517pt" height="24.56553pt"/>
-and <img alt="$W_0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e0ab31cb9c791e75fc086f61bfb584f8.svg?invert_in_darkmode&sanitize=true" align=middle width="21.995325pt" height="22.38192pt"/> are width and initial height respectively of Gaussians, and
-<img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/>
+$W(t)=W_0 \exp\left(-\frac{V_{meta}\left(\bold{s},t-\Delta t\right)}{k_B T_{tempered}}\right)$
+is the time-dependent Gaussian height. $\sigma_i \,(i=1,2,\ldots,d)$
+and $W_0$ are width and initial height respectively of Gaussians, and
+$T_{tempered}$
 is the tempered metadynamics temperature.
-<img alt="$T_{tempered}=0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fc97e81aef93d0c15221d229b5a795ff.svg?invert_in_darkmode&sanitize=true" align=middle width="95.86896pt" height="22.38192pt"/>
+$T_{tempered}=0$
 corresponds to standard molecular dynamics because
-<img alt="$W(t)=0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b2bf00c013c2220b61f833468d71e1b5.svg?invert_in_darkmode&sanitize=true" align=middle width="66.460185pt" height="24.56553pt"/>
-and therfore there is no bias. <img alt="$T_{tempered}=\infty$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0d51bc543d9e21b68ced229d5732fca1.svg?invert_in_darkmode&sanitize=true" align=middle width="104.057415pt" height="22.38192pt"/>
+$W(t)=0$
+and therfore there is no bias. $T_{tempered}=\infty$
 corresponds to standard metadynamics since in this case
-<img alt="$W(t)=W_0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d58716ccf76b6173a819a3ce8284f153.svg?invert_in_darkmode&sanitize=true" align=middle width="80.26689pt" height="24.56553pt"/>=constant. A positive, finite value of <img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/> (eg.
-<img alt="$T_{tempered}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c171d6d6a35960b377dc402f1c0752cf.svg?invert_in_darkmode&sanitize=true" align=middle width="64.78296pt" height="22.38192pt"/> >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)\le W_0\).
+$W(t)=W_0$=constant. A positive, finite value of $T_{tempered}$ (eg.
+$T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)\le W_0\).
 
-For sufficiently large <img alt="$t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width="5.913963pt" height="20.1465pt"/>, the history potential
-<img alt="$V_{meta}\left(\bold{s},t\right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/392e208085b8f9af761c4619c8dcf343.svg?invert_in_darkmode&sanitize=true" align=middle width="76.505715pt" height="24.56553pt"/> will nearly flatten the free energy
-surface, <img alt="$F(\bold{s})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/063f008708730bb84ce011fd262fe8c6.svg?invert_in_darkmode&sanitize=true" align=middle width="32.98086pt" height="24.56553pt"/>, along <img alt="$\bold{S}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/7ff7f7f69e6fa5b699da44dd00bd6af0.svg?invert_in_darkmode&sanitize=true" align=middle width="10.46298pt" height="22.473pt"/> and an unbiased estimator
+For sufficiently large $t$, the history potential
+$V_{meta}\left(\bold{s},t\right)$ will nearly flatten the free energy
+surface, $F(\bold{s})$, along $\bold{S}$ and an unbiased estimator
 of F(s) is given by
 
-<img alt="$F(\bold{s}) = -\left(1+\frac{T}{T_{tempered}}\right)\lim_{t \to \infty} V_{meta}(\bold{s},t)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/76a69f25685ddfb910031c5a10b6fb10.svg?invert_in_darkmode&sanitize=true" align=middle width="314.238045pt" height="37.80348pt"/>
+$$F(\bold{s}) = -\left(1+\frac{T}{T_{tempered}}\right)\lim_{t \to \infty} V_{meta}(\bold{s},t)$$
 
 #### Input
 
@@ -1968,14 +1968,14 @@ will produce a two-dimensional potential energy surface.
 
 #### Bond Distance Collective Variable
 
-This describes the bond distance between any pair of atoms <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> and
-<img alt="$j$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6816575pt" height="21.60213pt"/>:
+This describes the bond distance between any pair of atoms $i$ and
+$j$:
 
-<img alt="$s\left(r_{ij}\right) = \left \vert \bold{r}_{i}-\bold{r}_j\right\vert = r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/762bbee86acf8585c59ad9d10c3085cd.svg?invert_in_darkmode&sanitize=true" align=middle width="161.231895pt" height="24.56553pt"/>
+$$s\left(r_{ij}\right) = \left \vert \bold{r}_{i}-\bold{r}_j\right\vert = r_{ij}$$
 
 #### Angle Collective Variable
 
-This describes the bond angle formed at <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> by the triplet \(<ijk>\)
+This describes the bond angle formed at $i$ by the triplet \(<ijk>\)
 
 $$s\left(r_{ij},r_{ik}\right) = \frac{\pmb{r}_{ij}\cdot\pmb{r}_{ik}}{r_{ij}r_{ik}}$$
 
@@ -1983,7 +1983,7 @@ $$s\left(r_{ij},r_{ik}\right) = \frac{\pmb{r}_{ij}\cdot\pmb{r}_{ik}}{r_{ij}r_{ik
 
 The coordination number collective variable is defined as
 
-<img alt="$s\left(r_{ij},r_{0}\right) =\sum_{i,j}\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c5bdbbe7fc39d51bb9d6f9ab718cbcf7.svg?invert_in_darkmode&sanitize=true" align=middle width="139.61475pt" height="24.65793pt"/>
+$$s\left(r_{ij},r_{0}\right) =\sum_{i,j}\xi_{ij}$$
 
 where the summation over <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> and <img alt="$j$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6816575pt" height="21.60213pt"/> runs over two types of atoms,
 <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is the *weighting function*, and <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> is the cut-off
