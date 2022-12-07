@@ -1871,7 +1871,7 @@ are deposited along the
 trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at times
 $t_g = 0, \Delta t, 2\Delta t, \ldots ,N\Delta t$. Then, the value of
 the bias potential, $V$, at an arbitrary point,
-$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right\}$,
+$\mathbf{s}\left(\mathbf{R}\right)=\left[s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right]$,
 along the trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at time $t$
 is given
 by
