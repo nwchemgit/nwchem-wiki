@@ -435,31 +435,25 @@ as
 
 <center>
 
-<img alt="$\psi_n^I(\mathbf{r}) = \sum_{\alpha} (\varphi_{\alpha}^I(\mathbf{r})-\tilde{\varphi}_{\alpha}^I(\mathbf{r}))c_{n\alpha}^I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/848aa7ada3c2deaf67b284abb866fa5d.svg?invert_in_darkmode&sanitize=true" align=middle width="226.367295pt" height="27.59823pt"/>
+$$\psi_n^I(\mathbf{r}) = \sum_{\alpha} (\varphi_{\alpha}^I(\mathbf{r})-\tilde{\varphi}_{\alpha}^I(\mathbf{r}))c_{n\alpha}^I$$
 
 </center>
 
-where the coefficients <img alt="$c_{n\alpha}^I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9912f4d7691c2b7812f92088b00f8e79.svg?invert_in_darkmode&sanitize=true" align=middle width="23.69697pt" height="27.59823pt"/>are given by
+where the coefficients $c_{n\alpha}^I$ are given by
 
 $$ c_{n\alpha}^I = <\tilde{p}_{\alpha}^I | \tilde{\psi}_n>$$
 
 
 This decomposition can be expressed using an invertible linear
-transformation, <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/>, is defined which relates the stiff one-electron
-wavefunctions <img alt="$\psi_n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b13a79228c80e7215dae92bab7edf28d.svg?invert_in_darkmode&sanitize=true" align=middle width="18.76347pt" height="22.74591pt"/> to a set of smooth one-electron wavefunctions
-<img alt="$\tilde{\psi}_n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fcc9c90d3a7f00d625fc3d3e14eedf6d.svg?invert_in_darkmode&sanitize=true" align=middle width="18.76347pt" height="30.55107pt"/>
+transformation, $T$, is defined which relates the stiff one-electron
+wavefunctions $\psi_n$ to a set of smooth one-electron wavefunctions
+$\tilde{\psi}_n$   
 
-<center>
 
-<img alt="$\tilde{\psi}_n = T \psi_n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1a3eb7230098a1f7704e75960d236e1a.svg?invert_in_darkmode&sanitize=true" align=middle width="72.14262pt" height="30.55107pt"/>
+$$\tilde{\psi}_n = T \psi_n$$
 
-</center>
+$$\psi_n = T^{-1} \tilde{\psi}_n$$
 
-<center>
-
-<img alt="$\psi_n = T^{-1} \tilde{\psi}_n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d60e712a65cbf6e8756e2aa49179f051.svg?invert_in_darkmode&sanitize=true" align=middle width="89.75109pt" height="30.55107pt"/>
-
-</center>
 
 which can be represented by fairly small plane-wave basis. The
 transformation <img alt="$T$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f118ee06d05f3c2d98361d9c30e38ce.svg?invert_in_darkmode&sanitize=true" align=middle width="11.84502pt" height="22.38192pt"/> is defined using a local PAW basis, which consists
