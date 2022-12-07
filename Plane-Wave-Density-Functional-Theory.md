@@ -1863,7 +1863,7 @@ time then we have well-tempered metadynamics. In between the addition of
 Gaussians, the system is propagated by normal (but out of equilibrium)
 dynamics. Suppose that the dimension of the collective space is $d$,
 i.e.
-$$\mathbf{s}\left{\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right}$$
+$$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right}$$
 and that prior to any time $t$ during the simulation, $N +1$
 Gaussians centered on 
 $\mathbf{S}^{t_g}$
