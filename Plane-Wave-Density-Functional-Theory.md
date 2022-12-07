@@ -1841,38 +1841,38 @@ is a powerful, non-equilibrium molecular dynamics method which
 accelerates the sampling of the multidimensional free energy surfaces of
 chemical reactions. This is achieved by adding an external
 time-dependent bias potential that is a function of user defined
-collective variables, $\bold{s}$. The bias potential discourages the
-system from sampling previously visited values of $\bold{s}$ (i.e.,
-encourages the system to explore new values of $\bold{s}$. During the
+collective variables, $\mathbf{s}$. The bias potential discourages the
+system from sampling previously visited values of $\mathbf{s}$ (i.e.,
+encourages the system to explore new values of $\mathbf{s}$. During the
 simulation the bias potential accumulates in low energy wells which then
 allows the system to cross energy barriers much more quickly than would
-occur in standard dynamics. The collective variable $\bold{s}$ is a
-generic function of the system coordinates, $\bold{R}$ (e.g. bond
+occur in standard dynamics. The collective variable $\mathbf{s}$ is a
+generic function of the system coordinates, $\mathbf{R}$ (e.g. bond
 distance, bond angle, coordination numbers, etc.) that is capable of
 describing the chemical reaction of interest.
-$\bold{s}\left(\bold{R}\right)$ can be regarded as a reaction
+$\mathbf{s}\left(\mathbf{R}\right)$ can be regarded as a reaction
 coordinate if it can distinguish between the reactant, transition, and
 products states, and also capture the kinetics of the reaction.
 
 The biasing is achieved by “flooding” the energy landscape with
 repulsive Gaussian “hills” centered on the current location of
-$\bold{s}\left(\bold{R}\right)$ at a constant time interval
+$\mathbf{s}\left(\mathbf{R}\right)$ at a constant time interval
 $\Delta t$. If the height of the Gaussians is constant in time then we
 have standard metadynamics; if the heights vary (slowly decreased) over
 time then we have well-tempered metadynamics. In between the addition of
 Gaussians, the system is propagated by normal (but out of equilibrium)
 dynamics. Suppose that the dimension of the collective space is $d$,
 i.e.
-$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$
+$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right\}$
 and that prior to any time $t$ during the simulation, $N +1$
 Gaussians centered on 
-$\bold{S}^{t_g}$
+$\mathbf{S}^{t_g}$
 are deposited along the
-trajectory of $\bold{s}\left(\bold{R}\right)$ at times
+trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at times
 $t_g = 0, \Delta t, 2\Delta t, \ldots ,N\Delta t$. Then, the value of
 the bias potential, $V$, at an arbitrary point,
-$\bold{s}\left(\bold{R}\right)=\left\{s_1\left(\bold{R}\right),s_2\left(\bold{R}\right),\ldots,s_d\left(\bold{R}\right)\right\}$,
-along the trajectory of $\bold{s}\left(\bold{R}\right)$ at time $t$
+$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right\}$,
+along the trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at time $t$
 is given
 by
 
@@ -1880,7 +1880,7 @@ $$V_{meta}\left(\pmb{s},t\right) = \sum_{t_g=0}^{t_g<} W(t) \exp\left(-\sum_{i=1
 
 
 where
-$W(t)=W_0 \exp\left(-\frac{V_{meta}\left(\bold{s},t-\Delta t\right)}{k_B T_{tempered}}\right)$
+$W(t)=W_0 \exp\left(-\frac{V_{meta}\left(\mathbf{s},t-\Delta t\right)}{k_B T_{tempered}}\right)$
 is the time-dependent Gaussian height. $\sigma_i \,(i=1,2,\ldots,d)$
 and $W_0$ are width and initial height respectively of Gaussians, and
 $T_{tempered}$
@@ -1894,11 +1894,11 @@ $W(t)=W_0$=constant. A positive, finite value of $T_{tempered}$ (eg.
 $T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)\le W_0\).
 
 For sufficiently large $t$, the history potential
-$V_{meta}\left(\bold{s},t\right)$ will nearly flatten the free energy
-surface, $F(\bold{s})$, along $\bold{S}$ and an unbiased estimator
+$V_{meta}\left(\mathbf{s},t\right)$ will nearly flatten the free energy
+surface, $F(\mathbf{s})$, along $\mathbf{S}$ and an unbiased estimator
 of F(s) is given by
 
-$$F(\bold{s}) = -\left(1+\frac{T}{T_{tempered}}\right)\lim_{t \to \infty} V_{meta}(\bold{s},t)$$
+$$F(\mathbf{s}) = -\left(1+\frac{T}{T_{tempered}}\right)\lim_{t \to \infty} V_{meta}(\mathbf{s},t)$$
 
 #### Input
 
@@ -1971,7 +1971,7 @@ will produce a two-dimensional potential energy surface.
 This describes the bond distance between any pair of atoms $i$ and
 $j$:
 
-$$s\left(r_{ij}\right) = \left \vert \bold{r}_{i}-\bold{r}_j\right\vert = r_{ij}$$
+$$s\left(r_{ij}\right) = \left \vert \mathbf{r}_{i}-\mathbf{r}_j\right\vert = r_{ij}$$
 
 #### Angle Collective Variable
 
