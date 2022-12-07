@@ -1,5 +1,5 @@
 ##### Contents  
-
+$\equiv P_{electron}$
 * [1 Pseudopotential plane-wave density functional theory (NWPW)](#pseudopotential-plane-wave-density-functional-theory-nwpw)
    - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks-gamma-point-calculations)
       - [1.1.1 PAW Potentials](#paw-potentials) 
@@ -1609,13 +1609,13 @@ The following list describes the input for the Car-Parrinello sub-block.
     dynamics. See section -sec:pspw_nose- for a description of the
     parameters. Note that the Temperature subblock is just a reordering
     of the Nose-Hoover subblock.
-      - `Period_electron` $\equiv P_{electron}$ - estimated period for
+      - `Period_electron` \(\equiv P_{electron}\) - estimated period for
         fictitious electron thermostat.
-      - `Temperature_electron` $\equiv T_{electron}$ - temperature for
+      - `Temperature_electron` \(\equiv T_{electron}\) - temperature for
         fictitious electron motion
-      - `Period_ion` $\equiv P_{ion}$ - estimated period for ionic
+      - `Period_ion` \(\equiv P_{ion}\) - estimated period for ionic
         thermostat
-      - `Temperature_ion` $\equiv T_{ion}$ - temperature for ion
+      - `Temperature_ion` \(\equiv T_{ion}\) - temperature for ion
         motion
       - `Chainlength_electron` - number of electron thermostat chains
       - `Chainlength_ion` - number of ion thermostat chains
@@ -1624,9 +1624,9 @@ The following list describes the input for the Car-Parrinello sub-block.
     annealing to work the Nose-Hoover subblock needs to be specified.
     The initial temperature are taken from the Nose-Hoover subblock. See
     section -sec:pspw_nose- for a description of the parameters.
-      - `sa_scale_c` $\equiv \tau_{electron}$ - decay rate in atomic
+      - `sa_scale_c` \(\equiv \tau_{electron}\) - decay rate in atomic
         units for electronic temperature.
-      - `sa_scale_r` $\equiv \tau_{ionic}$ - decay rate in atomic
+      - `sa_scale_r` \(\equiv \tau_{ionic}\) - decay rate in atomic
         units for the ionic temperature.  
   - `xyz_filename` - name of the XYZ motion file generated
   - `emotion_filename` - name of the emotion motion file. See section
@@ -1863,7 +1863,7 @@ time then we have well-tempered metadynamics. In between the addition of
 Gaussians, the system is propagated by normal (but out of equilibrium)
 dynamics. Suppose that the dimension of the collective space is $d$,
 i.e.
-$$\mathbf{s}\left(\mathbf{R}\right)=\left[s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right]$$
+$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right\}$
 and that prior to any time $t$ during the simulation, $N +1$
 Gaussians centered on 
 $\mathbf{S}^{t_g}$
@@ -1871,7 +1871,7 @@ are deposited along the
 trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at times
 $t_g = 0, \Delta t, 2\Delta t, \ldots ,N\Delta t$. Then, the value of
 the bias potential, $V$, at an arbitrary point,
-$\mathbf{s}\left(\mathbf{R}\right)=\left[s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right]$,
+$\mathbf{s}\left(\mathbf{R}\right)=\left\{s_1\left(\mathbf{R}\right),s_2\left(\mathbf{R}\right),\ldots,s_d\left(\mathbf{R}\right)\right\}$,
 along the trajectory of $\mathbf{s}\left(\mathbf{R}\right)$ at time $t$
 is given
 by
@@ -1985,49 +1985,50 @@ The coordination number collective variable is defined as
 
 $$s\left(r_{ij},r_{0}\right) =\sum_{i,j}\xi_{ij}$$
 
-where the summation over $i$ and $j$ runs over two types of atoms,
-$\xi_{ij}$ is the *weighting function*, and $r_{0}$ is the cut-off
+where the summation over <img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> and <img alt="$j$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode&sanitize=true" align=middle width="7.6816575pt" height="21.60213pt"/> runs over two types of atoms,
+<img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is the *weighting function*, and <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> is the cut-off
 distance. In the standard procedure for computing the coordination
-number, $\xi_{ij}$ =1 if $r_{ij}<r_{0}$, otherwise 
-$\xi_{ij}$ =0,
-implying that $\xi_{ij}$ is not continuous when 
-$r_{ij}=r_{0}$. To
+number, <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> =1 if <img alt="$r_{ij}&amp;lt;r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/70c5fddc4b0f648ba5d4cc8f918c0990.svg?invert_in_darkmode&sanitize=true" align=middle width="51.295365pt" height="22.74591pt"/>, otherwise 
+<img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> =0,
+implying that <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is not continuous when 
+<img alt="$r_{ij}=r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5f9111eb45cfbada3002d54aa5a1632d.svg?invert_in_darkmode&sanitize=true" align=middle width="54.752445pt" height="14.10255pt"/>. To
 ensure a smooth and continuous definition of the coordination number, we
 adopt two variants of the weighting function. The first variant
 is
 
-$$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$$
+<img alt="$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f3601f11912ffe438c9e1ba76f363c68.svg?invert_in_darkmode&sanitize=true" align=middle width="116.48505pt" height="33.8712pt"/>
 
-where $n$ and $m$ are integers (m > n) chosen such that
-$\xi_{ij}\approx 1$ when
+where <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> and <img alt="$m$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width="14.379255pt" height="14.10255pt"/> are integers (m > n) chosen such that
+<img alt="$\xi_{ij}\approx 1$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/84700304a3d7acf0008cfbe96f43964d.svg?invert_in_darkmode&sanitize=true" align=middle width="48.800565pt" height="22.74591pt"/> when
 \(r_{ij}<r_{0}\)  and
-$\xi_{ij}\rightarrow 0$ when $r_{ij}$ is much larger than $r_{0}$.
+<img alt="$\xi_{ij}\rightarrow 0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/75a2aa9692825f1c8a743993e42c61ac.svg?invert_in_darkmode&sanitize=true" align=middle width="52.43997pt" height="22.74591pt"/> when <img alt="$r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/92e0822b1528090efc2435d2ae60c9ee.svg?invert_in_darkmode&sanitize=true" align=middle width="18.103965pt" height="14.10255pt"/> is much larger than <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/>.
 For example, the parameters of the O-H coordination in water is well
-described by $r_{0}$ =1.6 Å, 
-$n=6$
-and $m=18$. 
-In practice, $n$
-and $m$ must tuned for a given $r_{0}$ to ensure that $\xi_{ij}$
+described by <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> =1.6 Å, 
+<img alt="$n=6$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/600979b5b6b2bf60cc96e3ebb182b871.svg?invert_in_darkmode&sanitize=true" align=middle width="39.88842pt" height="21.10812pt"/>
+and <img alt="$m=18$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f05a0a759783bdcc5e02151882f0db17.svg?invert_in_darkmode&sanitize=true" align=middle width="52.62609pt" height="21.10812pt"/>. 
+In practice, <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>
+and <img alt="$m$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width="14.379255pt" height="14.10255pt"/> must tuned for a given <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> to ensure that <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/>
 is smooth and satisfies the above mentioned properties, particularly the
-large $r_{ij}$
+large <img alt="$r_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/92e0822b1528090efc2435d2ae60c9ee.svg?invert_in_darkmode&sanitize=true" align=middle width="18.103965pt" height="14.10255pt"/>
 
 The second form of the weighting function, which is due to Sprik, is
 
-$$\xi_{ij}=\frac{1}{1 + \exp\left[n\left(r_{ij}-r_{0}\right)\right]}$$
+<img alt="$\xi_{ij}=\frac{1}{1 + \exp\left[n\left(r_{ij}-r_{0}\right)\right]}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dad6ece196b905622d4e51f840a6bd2a.svg?invert_in_darkmode&sanitize=true" align=middle width="144.506505pt" height="27.72033pt"/>
 
-In this definition $\xi_{ij}$ is analogous to the Fermi function and
-its width is controlled by the parameter $\frac{1}{n}$. Large and
-small values of $n$ respectively correspond to sharp and soft
-transitions at $r_{ij} = r_{0}$. 
-Furthermore $\xi_{ij}$ should
+In this definition <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> is analogous to the Fermi function and
+its width is controlled by the parameter <img alt="$\frac{1}{n}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/179b80cc86f52ed7205e115c2a3ddc1b.svg?invert_in_darkmode&sanitize=true" align=middle width="8.126085pt" height="27.72033pt"/>. Large and
+small values of <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> respectively correspond to sharp and soft
+transitions at <img alt="$r_{ij} = r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/603ddac5711cb486f42d9f3bb061b1e6.svg?invert_in_darkmode&sanitize=true" align=middle width="54.752445pt" height="14.10255pt"/>. 
+Furthermore <img alt="$\xi_{ij}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde59bc86fe700f4e70a89734832be39.svg?invert_in_darkmode&sanitize=true" align=middle width="17.880225pt" height="22.74591pt"/> should
 approach 1 and 0 when \(r_{ij} < 0\)
 and
 \(r_{ij} < r_0 \)
 respectively. In practice 
-$n$ =6-10 Å$^{-1}$. 
+<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> =6-10 Å 
+<img alt="$^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2351d2e88576cfc62e0f3db8a8ab779c.svg?invert_in_darkmode&sanitize=true" align=middle width="16.76367pt" height="26.70657pt"/>. 
 For example, a good set
-of parameters of the O-H coordination in water is $r_{0}$ =1.4 Å and
-$n$=10Å$^{-1}$.
+of parameters of the O-H coordination in water is <img alt="$r_{0}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/14cf9c352461f38102beb9f9c5157738.svg?invert_in_darkmode&sanitize=true" align=middle width="13.91676pt" height="14.10255pt"/> =1.4 Å and
+<img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/> =10 Å <img alt="$^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2351d2e88576cfc62e0f3db8a8ab779c.svg?invert_in_darkmode&sanitize=true" align=middle width="16.76367pt" height="26.70657pt"/>.
 
 #### N-Plane Collective Variable
 
@@ -2036,16 +2037,16 @@ adatom/admolecules to a surface. It is defined as the *average distance*
 of the adatom/admolecule from a given layer in the slab along the
 surface normal:
 
-$$s = Z_{ads}-\frac{1}{N_{plane}}\sum_{i=1}^{N_{plane}}Z_i$$
+<img alt="$s = Z_{ads}-\frac{1}{N_{plane}}\sum_{i=1}^{N_{plane}}Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/21585c657d6e7a7bc667ba9140327eba.svg?invert_in_darkmode&sanitize=true" align=middle width="206.042595pt" height="33.6765pt"/>
 
-where $Z_{ads}$ denotes the position of the adatom/admolecule/impurity
+where <img alt="$Z_{ads}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/79893c344f6963e41e3e8f21bafa8ed4.svg?invert_in_darkmode&sanitize=true" align=middle width="31.28202pt" height="22.38192pt"/> denotes the position of the adatom/admolecule/impurity
 along the surface normal (here, we assume the surface normal to be the
 z-axis) and the summation over 
-$i$ 
+<img alt="$i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width="5.642109pt" height="21.60213pt"/> 
 runs over 
-$N_{plane}$ 
+<img alt="$N_{plane}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fec83962e01db7093a670f089a6a7e1.svg?invert_in_darkmode&sanitize=true" align=middle width="45.530925pt" height="22.38192pt"/> 
 atoms at
-$Z_i$ which form the layer. The layer could be on the face or in the
+<img alt="$Z_i$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ed35373880183d013fc1bba898b2e3ae.svg?invert_in_darkmode&sanitize=true" align=middle width="15.813105pt" height="22.38192pt"/> which form the layer. The layer could be on the face or in the
 interior of the
 slab.
 
@@ -2144,7 +2145,7 @@ sub-block.
     Note Ewald summation is only used if the simulation_cell is
     periodic.
 
- Default set to be $\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
+ Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
 
   - (Vosko || PBE96 || revPBE || ...) - Choose between Vosko et al's LDA
     parameterization or the orginal and revised Perdew, Burke, and
@@ -2193,9 +2194,9 @@ input in detail.
 
 Alternatively, instead of explicitly entering lattice vectors, users can
 enter the unit cell using the standard cell parameters, a, b, c,
-$\alpha$,
-$\beta$, 
-and $\gamma$, by using the LATTICE block. The
+<img alt="$\alpha$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width="10.537065pt" height="14.10255pt"/>,
+<img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>, 
+and <img alt="$\gamma$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width="9.388665pt" height="14.10255pt"/>, by using the LATTICE block. The
 format for input is as follows:
 ```
 NWPW 
@@ -2297,12 +2298,12 @@ that you specify.
 Basically, the pseudopotential
 energy
 
-$$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( <\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma>  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} <\psi_i^\sigma|P_{nlm}^I> h_{l,n,n'}^I <P_{n'lm}^{I}|\psi_i^\sigma> \right)$$
+<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I} &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ebf5b6cffb11b24b8340ba90b370b03.svg?invert_in_darkmode&sanitize=true" align=middle width="830.321745pt" height="39.01194pt"/>
 
 was modified
 to
 
-$$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( <\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma>  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I}  \left(1-\delta_{l,l^\sigma} \delta_{I,ionlist^\sigma}(\xi^\sigma-1)\right) <\psi_i^\sigma|P_{nlm}^I> h_{l,n,n'}^I <P_{n'lm}^{I}|\psi_i^\sigma> \right)$$
+<img alt="$E_{psp}= \sum_{\sigma=\uparrow,\downarrow} \sum_{i=1}^{n_{elc}^\sigma} \sum_{I=1}^{n_{ions}} \left( &amp;lt;\psi_i^\sigma|V_{local}^{I}|\psi_i^\sigma&amp;gt;  + \sum_{l=0}^{l_{max}^I} \sum_{m=-l}^{l} \sum_{n=1}^{n_{max}^I} \sum_{n'=1}^{n_{max}^I}  \left(1-\delta_{l,l^\sigma} \delta_{I,ionlist^\sigma}(\xi^\sigma-1)\right) &amp;lt;\psi_i^\sigma|P_{nlm}^I&amp;gt; h_{l,n,n'}^I &amp;lt;P_{n'lm}^{I}|\psi_i^\sigma&amp;gt; \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c0af951100d1f7a3b61c91a36abaebd7.svg?invert_in_darkmode&sanitize=true" align=middle width="1026.227895pt" height="39.01194pt"/>
 
 An example input is as follows:
 ```
@@ -2435,8 +2436,8 @@ NWPW
 END
 ```
 defines the local pseudopotential for the O^ MM atom , where
-$Z_{ion}=-0.8476$, 
-$n_{\sigma}=4$, and $r_c=0.7$. The following
+<img alt="$Z_{ion}=-0.8476$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>, 
+<img alt="$n_{\sigma}=4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e56942592d9ad471b92a22dba2b133c6.svg?invert_in_darkmode&sanitize=true" align=middle width="48.74067pt" height="21.10812pt"/>, and <img alt="$r_c=0.7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c3a2feed51f0f36f7a17124ccead504.svg?invert_in_darkmode&sanitize=true" align=middle width="56.881275pt" height="21.10812pt"/>. The following
 input can be used to define the local pseudopotentials for all the MM
 atoms in the geometry block defined above
 ```
@@ -2585,8 +2586,8 @@ to define the pseudopotential. After the ATOMIC_FILLING: <ncore>
 <nvalence> line, the core states are listed (one per line), and then the
 valence states are listed (one per line). Each state contains two
 integer and a value. The first integer specifies the radial quantum
-number, $n$, the second integer specifies the angular momentum quantum
-number, $l$, and the third value specifies the occupation of the
+number, <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>, the second integer specifies the angular momentum quantum
+number, <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/>, and the third value specifies the occupation of the
 state.
 
 For example to define a pseudopotential for the Neon atom in the
@@ -2597,7 +2598,7 @@ ATOMIC_FILLING: 1 2
  2 s 2.0 #valence state - 2s^2   
  2 p 6.0 #valence state - 2p^6
 ```
-for a pseudopotential with a $2s$ and $2p$ valence electrons or the
+for a pseudopotential with a <img alt="$2s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/> and <img alt="$2p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/> valence electrons or the
 block
 ```
 ATOMIC_FILLING: 3 0   
@@ -2737,9 +2738,9 @@ The following list describes these keywords.
     orbitals
   - `output_wavefunctions` - name of the file that will contain the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass $\mu$. This
+  - `fake_mass` - value for the electronic fake mass \(\mu\). This
     parameter is not presently used in a conjugate gradient simulation
-  - `time_step` - value for the time step ($\Delta t$). This parameter
+  - `time_step` - value for the time step (<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>). This parameter
     is not presently used in a conjugate gradient simulation.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
@@ -2762,7 +2763,7 @@ The following list describes these keywords.
   - `rcut` - value for the cutoff radius used in the smooth compensation
     summation.
 
-Default set to be $\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
+Default set to be <img alt="$\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ca7404f1852e7155791bf9b98b1cc5a0.svg?invert_in_darkmode&sanitize=true" align=middle width="138.472455pt" height="33.14091pt"/>.
 
   - (Vosko || PBE96 || revPBE) - Choose between Vosko et al's LDA
     parametrization or the original and revised Perdew, Burke, and
@@ -2986,27 +2987,27 @@ heart of this method they introduced a fictitious kinetic energy
 functional for the Kohn-Sham
 orbitals.
 
-![$\begin{align}KE \left ( \left \{ \psi_{i,\sigma}(\vec{r}) \right \} \right ) = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2\end{align}$"](svgs/804dff8a7e91191f883aba3d46f1fe7c.svg)
+$$\begin{align}KE \left ( \bigl[ \psi_{i,\sigma}(\vec{r}) \bigr] \right ) = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2\end{align}$$
 
 Given this kinetic energy the constrained equations of motion are found
 by taking the first variation of the auxiliary Lagrangian.
 
-$$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \bigl[ \psi_{i,\sigma}(\vec{r}) \bigr] , \bigl[ \vec{R}_I \right \bigr] \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$$
+![$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \left \{ \psi_{i,\sigma}(\vec{r}) \right \} , \left \{ \vec{R}_I \right \} \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$](svgs/bace631069baebda741a776e136b0e1a.svg)
 
 Which generates a dynamics for the wavefunctions
-$\psi_{i,\sigma}(\vec{r})$ and atoms positions $\vec{R}_I$ through
+<img alt="$\psi_{i,\sigma}(\vec{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/730a1523e8e8ba1c187f863f8d4f37c5.svg?invert_in_darkmode&sanitize=true" align=middle width="48.685725pt" height="24.56553pt"/> and atoms positions <img alt="$\vec{R}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/57ac99f1caf72f8bb91bbfe4da0441aa.svg?invert_in_darkmode&sanitize=true" align=middle width="19.1301pt" height="31.71135pt"/> through
 the constrained equations of motion:
 
 $$\begin{matrix}\mu \ddot{\psi}_{i,\sigma}(\vec{r},t) = -\frac{\delta E}{\delta \psi_{i,\sigma }^{*} \left( \vec{r},t \right) } + \sum\limits_j \Lambda_{ij,\sigma} \psi_{j,\sigma} \left( \vec{r},t \right) \end{matrix}$$
 
 $$\begin{matrix}M_I \ddot{\vec{R}}_I = -\frac{\partial E}{\partial \vec{R}_I} \end{matrix}$$
 
-where $\mu$ is the fictitious mass for the electronic degrees of
-freedom and $M_I$ are the ionic masses. The adjustable parameter
-$\mu$ is used to describe the relative rate at which the wavefunctions
-change with time. $\Lambda_{ij,\sigma}$ are the Lagrangian multipliers
+where <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> is the fictitious mass for the electronic degrees of
+freedom and <img alt="$M_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/00cbfe86d6a32a76c7a606e0c0d804da.svg?invert_in_darkmode&sanitize=true" align=middle width="22.58322pt" height="22.38192pt"/> are the ionic masses. The adjustable parameter
+<img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> is used to describe the relative rate at which the wavefunctions
+change with time. <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/> are the Lagrangian multipliers
 for the orthonormalization of the single-particle orbitals
-$\psi_{i,\sigma}(\vec{r})$. They are defined by the orthonormalization
+<img alt="$\psi_{i,\sigma}(\vec{r})$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/730a1523e8e8ba1c187f863f8d4f37c5.svg?invert_in_darkmode&sanitize=true" align=middle width="48.685725pt" height="24.56553pt"/>. They are defined by the orthonormalization
 constraint conditions and can be rigorously found. However, the
 equations of motion for the Lagrange multipliers depend on the specific
 algorithm used to integrate the Eqns. above.
@@ -3039,14 +3040,14 @@ $$\begin{matrix}\vec{R}_I^{t+\Delta t} \leftarrow 2 \vec{R}_I^{t} - \vec{R}_I^{t
 In this molecular dynamic procedure we have to know variational
 derivative
 $$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
-and the matrix $\Lambda_{ij,\sigma}$. The variational derivative
+and the matrix <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/>. The variational derivative
 $$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
 can be analytically found and is  
 
 $$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}  = -\frac{1}{2} \nabla^2 \psi_{i,\sigma}(\vec{r}) \\  + \int d\vec{r^{\prime}} W_{ext}(\vec{r},\vec{r^{\prime}}) \psi_{i,\sigma}(\vec{r^{\prime}}) \\  + \int d\vec{r^{\prime}} \frac{n(\vec{r^{\prime}})}{|\vec{r}-\vec{r^{\prime}}|} \psi_{i,\sigma}(\vec{r})\\  + \mu_{xc}^{\sigma}(\vec{r}) \psi_{i,\sigma}(\vec{r}) \\  \equiv \hat{H} \psi_{i,\sigma} \end{align}$$
 
-To find the matrix $\Lambda_{ij,\sigma}$ we impose the orthonormality
-constraint on $\psi_{i,\sigma}^{t+\Delta t}$ to obtain a matrix
+To find the matrix <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/> we impose the orthonormality
+constraint on <img alt="$\psi_{i,\sigma}^{t+\Delta t}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f5a90d4417795f4ac627995a6be27500.svg?invert_in_darkmode&sanitize=true" align=middle width="41.964615pt" height="29.73135pt"/> to obtain a matrix
 Riccatti equation, and then Riccatti equation is solved by an iterative
 solution.
 
@@ -3054,7 +3055,7 @@ solution.
 
 Nose-Hoover Thermostats for the electrons and ions can also be added to
 the Car-Parrinello simulation. In this type of simulation thermostats
-variables $x_e$ and $x_R$ are added to the simulation by adding the
+variables <img alt="$x_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a2132016f1d31f96de56a06d8cdf390f.svg?invert_in_darkmode&sanitize=true" align=middle width="15.573525pt" height="14.10255pt"/> and <img alt="$x_R$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c096d689340fd96e5e112ea66a4b2abd.svg?invert_in_darkmode&sanitize=true" align=middle width="19.28454pt" height="14.10255pt"/> are added to the simulation by adding the
 auxiliary energy functionals to the total
 energy.
 
@@ -3064,7 +3065,7 @@ In these equations, the average kinetic energy for the ions is
 
 $$\begin{matrix}E_{R0} = \frac{1}{2} f k_B T \end{matrix}$$
 
-where $f$ is the number of atomic degrees of freedom, $k_B$ is
+where <img alt="$f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width="9.780705pt" height="22.74591pt"/> is the number of atomic degrees of freedom, <img alt="$k_B$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bad54364b5669c56b4b0a72d42c7da00.svg?invert_in_darkmode&sanitize=true" align=middle width="18.979455pt" height="22.74591pt"/> is
 Boltzmann's constant, and T is the desired t emperature. Defining the
 average fictitious kinetic energy of the electrons is not as
 straightforward. Blöchl and Parrinello (P.E. Blöchl and M. Parrinello,
@@ -3074,19 +3075,19 @@ energy
 
 $$\begin{matrix}E_{e0} = 4 k_B T \frac{\mu}{M} \sum_{i} <\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}> \end{matrix}$$
 
-where $\mu$ is the fictitious electronic mass, $M$ is average mass
+where <img alt="$\mu$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width="9.86799pt" height="14.10255pt"/> is the fictitious electronic mass, <img alt="$M$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width="17.67348pt" height="22.38192pt"/> is average mass
 of one atom, and
 $$\begin{matrix}\sum_{i} <\psi_i|-\frac{1}{2} \nabla^2 |\psi_{i}> \end{matrix}$$
 is the kinetic energy of the electrons.
 
 Blöchl and Parrinello suggested that the choice of mass parameters,
-$Q_e$, and $Q_R$ should be made such that the period of oscillating
+<img alt="$Q_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/25d99aa5082492b57d3beef5928ffac3.svg?invert_in_darkmode&sanitize=true" align=middle width="19.16046pt" height="22.38192pt"/>, and <img alt="$Q_R$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3ed261b38de3a90e4d91fe27c8f513b1.svg?invert_in_darkmode&sanitize=true" align=middle width="22.871475pt" height="22.38192pt"/> should be made such that the period of oscillating
 thermostats should be chosen larger than the typical time scale for the
 dynamical events of interest but shorter than the simulation time.
 
 $$\begin{align}P_{ion}  = 2\pi \sqrt{\frac{Q_R}{4E_{R0}}}\\P_{electron}  = 2\pi \sqrt{\frac{Q_e}{4E_{e0}}}\end{align}$$
 
-where $P_{ion}$ and $P_{electron}$ are the periods of oscillation
+where <img alt="$P_{ion}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a4e38e59b681f3b803b72b09f581f67f.svg?invert_in_darkmode&sanitize=true" align=middle width="29.707755pt" height="22.38192pt"/> and <img alt="$P_{electron}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e29a4bd79ecd185b4b23ff25948575c7.svg?invert_in_darkmode&sanitize=true" align=middle width="58.94427pt" height="22.38192pt"/> are the periods of oscillation
 for the ionic and fictitious electronic thermostats.
 
 In simulated annealing simulations the electronic and ionic Temperatures
@@ -3094,8 +3095,8 @@ are scaled according to an exponential cooling schedule,
 
 $$\begin{align}T_e(t)  = T_e^0 \exp^{-\frac{t}{\tau_e}}\\T_{ionic}(t)  = T_{ionic}^0 \exp^{-\frac{t}{\tau_{ionic}}} \end{align}$$
 
-where $T_e^0$ and $T_{ionic}^0$ are the initial temperatures, and
-$\tau_e$ and $\tau_{ionic}$ are the cooling rates in atomic units.
+where <img alt="$T_e^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/02f92fea930bab9b0cb5b411829b7bf4.svg?invert_in_darkmode&sanitize=true" align=middle width="18.381495pt" height="26.70657pt"/> and <img alt="$T_{ionic}^0$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2d76ae8eb00a93d64de686b4f03b596d.svg?invert_in_darkmode&sanitize=true" align=middle width="39.2502pt" height="26.70657pt"/> are the initial temperatures, and
+<img alt="$\tau_e$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e34a134b05ac6daa10ed56dc39d42035.svg?invert_in_darkmode&sanitize=true" align=middle width="13.37292pt" height="14.10255pt"/> and <img alt="$\tau_{ionic}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a8fa93ce0ad82bb2691c5d3740bcf14a.svg?invert_in_darkmode&sanitize=true" align=middle width="36.839055pt" height="14.10255pt"/> are the cooling rates in atomic units.
 
 ## NWPW Tutorial 1: S<sub>2</sub> dimer examples with PSPW
 
@@ -3168,7 +3169,7 @@ be
 (input:[Media:s2-example2.nw](s2-example2.nw),
 output:[Media:s2-example2.nwout](s2-example2.nwout))
 
-In this example, the structure of the S$_2$ dimer using results
+In this example, the structure of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using results
 generated from prior energy calculation is calculated. Since most of the
 parameters are already stored in the run-time database the input is very
 simple.
@@ -3246,12 +3247,12 @@ be
    
  ...
 ```
-### Frequency calculation of S$_2$ dimer with LDA approximation
+### Frequency calculation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
 
 (input:[Media:s2-example3.nw](s2-example3.nw),
 output:[Media:s2-example3.nwout](s2-example3.nwout))
 
-In this example, the vibrational frequency of the S$_2$ dimer using
+In this example, the vibrational frequency of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using
 results generated from prior geometry optimization is calculated. Since
 most of the parameters are already stored in the run-time database the
 input is very simple.
@@ -3303,14 +3304,14 @@ generated
   ----------------------------------------------------------------------------  
  ...
 ```
-### Ab initio molecular dynamics simulation (Car-Parrinello) of S$_2$ dimer using the LDA approximation
+### Ab initio molecular dynamics simulation (Car-Parrinello) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
 
 (input:[Media:s2-example4.nw](s2-example4.nw),
 output:[Media:s2-example4.nwout](s2-example4.nwout)
 [Media:s2-md.xyz](s2-md.xyz)
 [Media:s2-md.emotion.dat](s2-md.emotion.dat) )
 
-In this example, a constant energy Car-Parrinello simulation of S$_2$
+In this example, a constant energy Car-Parrinello simulation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
 dimer using LDA approximation is calculated. A brief introduction to the
 Car-Parrinello method can be found in
 [cpmd-lecture.pdf](cpmd-lecture.pdf)
@@ -3376,7 +3377,7 @@ i.e.,
  gnuplot> plot "s2-md.emotion","s2-md.emotion" using 1:3  
  gnuplot> 
 ```
-The following plot shows the Car-Parrinello $^3\Sigma_g^-$ S$_2$
+The following plot shows the Car-Parrinello <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
 energy surface generated from the
 simulation.
 
@@ -3421,7 +3422,7 @@ nwpw
 end 
 task pspw born-oppenheimer
 ```
-The following plot shows the $^3\Sigma_g^-$ S$_2$ energy surface
+The following plot shows the <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> energy surface
 generated from the
 simulation.
 
@@ -3451,13 +3452,13 @@ forces are calculated from ab initio calculations that are performed
 
 The following examples demonstrate how to use the ab initio molecular
 dynamics methods and simulated annealing strategies of NWChem to
-determine the lowest energy structures of the B$_{12}$ cluster. This
+determine the lowest energy structures of the B<img alt="$_{12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b969a189f1d72cb1b766b0414d53d618.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="14.10255pt"/> cluster. This
 example is based on a study performed by Kiran Boggavarapu et al.. One
 might expect from chemical intuition that lowest energy structure of
-B$_{12}$ will be an icosahedran, since B$_{12}$ icosahedra are a
+B<img alt="$_{12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b969a189f1d72cb1b766b0414d53d618.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="14.10255pt"/> will be an icosahedran, since B<img alt="$_{12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b969a189f1d72cb1b766b0414d53d618.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="14.10255pt"/> icosahedra are a
 common structural unit found in many boron rich materials. Despite this
 prevalence, ab initio calculations performed by several researchers have
-suggested that B$_{12}$, as well as B$_{12}^+$ and B$_{12}^-$,
+suggested that B<img alt="$_{12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b969a189f1d72cb1b766b0414d53d618.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="14.10255pt"/>, as well as B<img alt="$_{12}^+$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9688308038c1d0faef7ec46d707cd750.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="28.25757pt"/> and B<img alt="$_{12}^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/76b163dea42b9afe111cd4adae744905.svg?invert_in_darkmode&sanitize=true" align=middle width="13.05612pt" height="28.25757pt"/>,
 will have a more open geometry.
 
 <img alt="boron" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/boron.png" align=middle with="600pt" height="246pt"/>  
@@ -3550,7 +3551,7 @@ The simulated annealing calculation in this example uses a constant
 temperature Car-Parrinello simulation with an exponential cooling
 schedule,
 
-$T(t)=T_0e^{-t/\tau}$
+<img alt="$T(t)=T_0e^{-t/\tau}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c85ce616a87e043e02bbcb4ca8004687.svg?invert_in_darkmode&sanitize=true" align=middle width="106.202745pt" height="29.12679pt"/>
 
 where T0 and τ are an initial temperature and a time scale of cooling,
 respectively. In the present calculations T0=3500K and τ=4.134e+4 au
@@ -3590,11 +3591,11 @@ effects, are included will the heat of formation from ab initio
 electronic structure methods be accurate to within one kcal/mol.
 Although one can now accurately calculate the heats of formation of
 molecules with up to 6 first row atoms, such high-level calculations are
-extremely demanding and scale computationally as $N^7$ for $N$ basis
+extremely demanding and scale computationally as <img alt="$N^7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b9c3ee9199da80ec95872baf2648b4e.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> for <img alt="$N$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width="14.94405pt" height="22.38192pt"/> basis
 functions.
 
 Examples of these types of large errors are shown in the following
-Table, where the enthalpies of formation of CCl<sub>3</sub>SH are calculated
+Table, where the enthalpies of formation of CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH are calculated
 by using atomization energies from different levels of ab initio
 theory.
 
@@ -3603,11 +3604,11 @@ theory.
 |            |             |           |            |             |           |
 | ---------- | ----------- | --------- | ---------- | ----------- | --------- |
 |            | MP2/cc-pVDZ | LDA/DZVP2 | BP91/DZVP2 | B3LYP/DZVP2 | G2 Theory |
-| ΔH $_f^o$ | \+4.9       | \-80.0    | \-2.6      | \+26.5      | \-13.0    |
+| ΔH <img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/> | \+4.9       | \-80.0    | \-2.6      | \+26.5      | \-13.0    |
 |  |
 
-Table 1: Standard enthalpy of formation (ΔH<sub>f</sub><sup>o</sup>(298K) for
-CCl<sub>3</sub>SH in kcal/mol from atomization energies with various
+Table 1: Standard enthalpy of formation (ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K) for
+CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH in kcal/mol from atomization energies with various
 electronic structure methods. Results taken from reference [2].
 
 </center>
@@ -3633,12 +3634,15 @@ more accurate for estimating neighboring interactions and long-range
 through-bond effects.
 
 The following isodesmic reaction can be used determine the enthalpy of
-formation for CCl<sub>3</sub>SH that is significantly more accurate than the
+formation for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH that is significantly more accurate than the
 estimates based on atomization energies.
 
+<center>
 
-CCl<sub>3</sub>SH + CH<sub>4</sub> $\rightarrow$ CH<sub>3</sub>SH + CCl<sub>3</sub>H,
-ΔH<sub>r</sub>(calc).
+CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H,
+ΔH<img alt="$_r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0a76558af80d8b34ac99d40ce5b8bc9f.svg?invert_in_darkmode&sanitize=true" align=middle width="6.4333665pt" height="14.10255pt"/>(calc).
+
+</center>
 
 The first step is to calculate the reaction enthalpy of this reaction
 from electronic, thermal and vibrational energy differences at 298.15K
@@ -3646,34 +3650,34 @@ at a consistent level of theory. The defining property of an isodesmic
 reaction that there are an equal number of like bonds on the left-hand
 and right-hand sides of the reaction helps to minimize the error in the
 calculation of the reaction energy. The enthalpy of formation of
-CCl<sub>3</sub>SH can then be calculated by using Hess’s law with the
+CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH can then be calculated by using Hess’s law with the
 calculated enthalpy change and the experimentally known heats of
 formation of the other 3 species (see Table 3).
 
 <center>
 
-ΔH<sub>f</sub>(CCl<sub>3</sub>SH) = ΔH<sub>f</sub>(CH<sub>3</sub>SH)(exp) +
-ΔH<sub>f</sub>(CCl<sub>3</sub>H)(exp) - ΔH<sub>f</sub>(CH<sub>4</sub>)(exp)- ΔH<sub>r</sub>(calc).
+ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH) = ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH)(exp) +
+ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H)(exp) - ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>)(exp)- ΔH<img alt="$_r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0a76558af80d8b34ac99d40ce5b8bc9f.svg?invert_in_darkmode&sanitize=true" align=middle width="6.4333665pt" height="14.10255pt"/>(calc).
 
 </center>
 
 In this example, try to design and run NWPW simulations that can be used
-to estimate the enthalpy of formation for CCl$_3$SH using its
+to estimate the enthalpy of formation for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH using its
 atomization energy and using the reaction enthalpy of the isodesmic
 reaction and compare your results to Table 2. Be careful to make sure
 that you use the same cutoff energy for all the simulations (.e.g.
 cutoff 35.0). You might also try to estimate enthalpies of formation for
-CHCl<sub>2</sub>SH and CH<sub>2</sub>ClSH. Also try designing simulations that use
+CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH and CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH. Also try designing simulations that use
 the SCF, DFT, MP2, and TCE modules.
 
 <center>
 
-CCl<sub>3</sub>SH + CH<sub>4</sub> $\rightarrow$ CH<sub>3</sub>SH + CCl<sub>3</sub>H
+CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H
 
 </center>
 
-Un-optimized geometries for CCl<sub>3</sub>SH, CH<sub>3</sub>SH, CCl<sub>3</sub>H and
-CH<sub>4</sub> which are needed to design your simulations are contained in
+Un-optimized geometries for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H and
+CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> which are needed to design your simulations are contained in
 the file
 [Media:thermodynamics.xyz](thermodynamics.xyz). You
 will also need to calculate the energies for the H, C, S, and Cl atoms
@@ -3684,7 +3688,7 @@ of the total energy and a thermal correction to the enthalpy. A good
 estimate for the thermal correction to the enthalpy can be obtained from
 a frequency calculation, i.e.
 
-H = E + H<sub>correction</sub>
+H = E + H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
 
 Thermodynamic output from a frequency
 calculation:
@@ -3696,7 +3700,7 @@ Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)
 Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)
 ```
 The following line contains the value for
-H<sub>correction</sub>
+H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
 ```
 Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)
 
@@ -3716,13 +3720,13 @@ Cv (constant volume heat capacity) =    6.503 cal/mol-K
 | ------------ | ----------- | ----------- | ----------- | ----------- | ------------- | ---------- |
 | Compounds    | MP2/cc-pVDZ | LDA/DZVP2   | BP91/DZVP2  | B3LYP/DZVP2 | G2            | Experiment |
 |              | (isodesmic) | (isodesmic) | (isodesmic) | (isodesmic) | (atomization) |            |
-| CCl<sub>3</sub>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
-| CHCl<sub>2</sub>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
-| CH<sub>2</sub>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
-| CH<sub>3</sub>SH   |             |             |             |             | \-4.76        | \-5.34     |
+| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
+| CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
+| CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
+| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH   |             |             |             |             | \-4.76        | \-5.34     |
 |  |
 
-Table 2: Gas-phase standard enthalpies of formation ( ΔH<sub>f</sub><sup>o</sup>(298K))
+Table 2: Gas-phase standard enthalpies of formation ( ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K))
 in kcal/mol from isodesmic reactions and G2 Theory calculations taken
 from [3].
 
@@ -3732,17 +3736,17 @@ from [3].
 
 |                  |                  |
 | ---------------- | ---------------- |
-| Compounds        | ΔH$_f^o$(298K) |
+| Compounds        | ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K) |
 | H                | 52.095           |
 | C                | 171.291          |
 | S                | 66.636           |
 | Cl               | 29.082           |
-| CCl<sub>4</sub>        | \-24.59          |
-| CCl<sub>3</sub>H       | \-24.65          |
-| CCl<sub>2</sub>H<sub>2</sub> | \-22.10          |
-| CClH<sub>3</sub>       | \-19.32          |
-| CH<sub>4</sub>         | \-17.88          |
-| CH<sub>3</sub>SH       | \-5.34           |
+| CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>        | \-24.59          |
+| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H       | \-24.65          |
+| CCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> | \-22.10          |
+| CClH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>       | \-19.32          |
+| CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>         | \-17.88          |
+| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH       | \-5.34           |
 |  |
 
 Table 3: Miscellaneous experimental gas-phase enthalpies of formation
@@ -3759,14 +3763,14 @@ Table 3: Miscellaneous experimental gas-phase enthalpies of formation
 3.  Chase, M. W., Jr. Phys. Chem. Ref. Data, Monograph No. 9 1998, 9,
     1-1951.
 
-## NWPW Tutorial 4: AIMD/MM simulation of CCl<sub>4</sub> + 64 H<sub>2</sub>O
+## NWPW Tutorial 4: AIMD/MM simulation of CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> + 64 H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>O
 
 (input:[Media:ccl4-64water.nw](ccl4-64water.nw),
 output:[Media:ccl4-64water.nwout](ccl4-64water.nwout))
 
 In this section we show how use the PSPW module to perform a
-Car-Parrinello AIMD/MM simulation for a CCl<sub>4</sub> molecule in a box of
-64 H<sub>2</sub>O. Before running a PSPW Car-Parrinello simulation the system
+Car-Parrinello AIMD/MM simulation for a CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> molecule in a box of
+64 H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>O. Before running a PSPW Car-Parrinello simulation the system
 should be on the Born-Oppenheimer surface, i.e. the one-electron
 orbitals should be minimized with respect to the total energy (i.e. task
 pspw energy). In this example, default pseudopotentials from the
@@ -3778,7 +3782,173 @@ be 5.0 au and 600.0 au, respectively.
 
 ## NWPW Tutorial 5: Optimizing the Unit Cell and Geometry of Diamond
 
-$\begin{align} E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  \end{align}$ is the energy of the solid and $E_{atom}^a$ are
+<img alt="diamong" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond.png" align=left with="200pt" height="190pt"/>   The PSPW and BAND
+codes can be used to determine structures and energies for a wide range
+of crystalline systems. It can also be used to generate band structure
+and density of state
+plots.
+
+### Optimizing the Unit Cell and Geometry for an 8 Atom Supercell of Diamond with PSPW
+
+(input:[Media:diamond-pspw.nw](diamond-pspw.nw),
+output:[Media:diamond-pspw.nwout](diamond-pspw.nwout),
+[Media:diamond.opt.cif](diamond.opt.cif))
+
+(input:[Media:catom-pspw.nw](catom-pspw.nw),
+output:[Media:catom-pspw.nwout](catom-pspw.nwout))
+
+The following example uses the PSPW module to optimize the unit cell and
+geometry for a diamond crystal. The fractional coordinates and the unit
+cell are defined in the geometry block. The simulation_cell block is
+not needed since NWPW automatically uses the unit cell defined in the
+geometry
+block.
+```
+title "Diamond 8 atom cubic cell - geometry and unit cell optimization"  
+echo  
+   
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond  
+   
+memory 950 mb  
+   
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 3.56d0   
+    lat_b 3.56d0   
+    lat_c 3.56d0   
+    alpha 90.0d0   
+    beta  90.0d0   
+    gamma 90.0d0   
+  end  
+  C -0.50000d0 -0.50000d0 -0.50000d0  
+  C  0.00000d0  0.00000d0 -0.50000d0  
+  C  0.00000d0 -0.50000d0  0.00000d0  
+  C -0.50000d0  0.00000d0  0.00000d0  
+  C -0.25000d0 -0.25000d0 -0.25000d0  
+  C  0.25000d0  0.25000d0 -0.25000d0  
+  C  0.25000d0 -0.25000d0  0.25000d0  
+  C -0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw   
+  ewald_rcut 3.0  
+  ewald_ncut 8  #The default value of 1 needs to be increased for small cells  
+  lmbfgs  
+  xc pbe96  
+end  
+   
+driver   
+  clear   
+  maxiter 40  
+end  
+  
+set nwpw:cif_filename diamond.opt  # create a CIF file containing optimization history   
+set includestress .true.           # this option tells driver to optimize the unit cell  
+task pspw optimize ignore
+```
+The optimized energy and geometry will
+be
+```
+ ...  
+     ----------------------  
+     Optimization converged  
+     ----------------------  
+  
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+  ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    6     -45.07688304 -1.1D-07  0.00037  0.00021  0.00002  0.00003    174.5  
+                                    ok       ok       ok       ok    
+  
+   
+   
+                        Geometry "geometry" -> "geometry"  
+                        ---------------------------------  
+  
+Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+ No.       Tag          Charge          X              Y              Z  
+---- ---------------- ---------- -------------- -------------- --------------  
+   1 C                    6.0000     1.82723789     1.82729813     1.82705440  
+   2 C                    6.0000     0.00000857    -0.00006053     1.82730027  
+   3 C                    6.0000    -0.00000584     1.82706061     0.00002852  
+   4 C                    6.0000     1.82712018     0.00006354    -0.00002544  
+   5 C                    6.0000     2.74074195     2.74072805     2.74088522  
+   6 C                    6.0000     0.91366407     0.91370055     2.74064976  
+   7 C                    6.0000     0.91351181     2.74080771     0.91352917  
+   8 C                    6.0000     2.74078843     0.91348115     0.91365446  
+  
+     Lattice Parameters   
+     ------------------   
+  
+     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+     a1=<   3.654   0.000   0.000 >  
+     a2=<   0.000   3.654   0.000 >  
+     a3=<   0.000   0.000   3.654 >  
+     a=       3.654 b=      3.654 c=       3.654  
+     alpha=  90.000 beta=  90.000 gamma=  90.000  
+     omega=    48.8  
+  
+     reciprocal lattice vectors in a.u.  
+  
+     b1=<   0.910   0.000   0.000 >  
+     b2=<   0.000   0.910   0.000 >  
+     b3=<   0.000   0.000   0.910 >  
+  
+     Atomic Mass   
+     -----------   
+  
+     C                 12.000000  
+  
+  
+==============================================================================  
+                               internuclear distances  
+------------------------------------------------------------------------------  
+      center one      |      center two      | atomic units |  angstroms  
+------------------------------------------------------------------------------  
+   5 C                |   1 C                |     2.99027  |     1.58238  
+   6 C                |   1 C                |     2.99027  |     1.58238  
+   6 C                |   2 C                |     2.99027  |     1.58238  
+   7 C                |   1 C                |     2.99026  |     1.58238  
+   7 C                |   3 C                |     2.99027  |     1.58238  
+   8 C                |   1 C                |     2.99027  |     1.58238  
+   8 C                |   4 C                |     2.99027  |     1.58238  
+------------------------------------------------------------------------------  
+                        number of included internuclear distances:          7  
+==============================================================================  
+  
+==============================================================================  
+                                internuclear angles  
+------------------------------------------------------------------------------  
+       center 1       |       center 2       |       center 3       |  degrees  
+------------------------------------------------------------------------------  
+   5 C                |   1 C                |   6 C                |   109.46  
+   5 C                |   1 C                |   7 C                |   109.48  
+   5 C                |   1 C                |   8 C                |   109.48  
+   6 C                |   1 C                |   7 C                |   109.47  
+   6 C                |   1 C                |   8 C                |   109.46  
+   7 C                |   1 C                |   8 C                |   109.48  
+   1 C                |   6 C                |   2 C                |   109.48  
+   1 C                |   7 C                |   3 C                |   109.47  
+   1 C                |   8 C                |   4 C                |   109.47  
+------------------------------------------------------------------------------  
+                           number of included internuclear angles:          9  
+==============================================================================  ...
+```
+The C-C bond distance after the geometry optimization is 1.58 Angs. and
+agrees very well with the experimental value of 1.54 Angs.. Another
+quantity that can be calculated from this simulation is the cohesive
+energy.The cohesive energy of a crystal is the energy needed to separate
+the atoms of the solid into isolated atoms,
+i.e.
+
+![$\begin{align} E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  \end{align}$](svgs/93cf8b8da88e9e3067b160ad32c5d9eb.svg)
+
+where <img alt="$E_{solid}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0479f37244fd4da93d764e9132414dcf.svg?invert_in_darkmode&sanitize=true" align=middle width="40.39431pt" height="22.38192pt"/> is the energy of the solid and <img alt="$E_{atom}^a$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c8cd94d8d58f10c3091c4f26c69f3140.svg?invert_in_darkmode&sanitize=true" align=middle width="42.225975pt" height="22.38192pt"/> are
 the energies of the isolated atoms. In order to calculate the cohesive
 energy the energy of an isolated carbon atom at the same level of theory
 and cutoff energy will need to be calculated. The following input can be
@@ -3820,7 +3990,7 @@ calculated to be
 $$\begin{align} E_{coh}= -\left( -45.07688304au/8 - (-5.421213534au)  \right)= 0.2133968 au = 5.8 eV \end{align}$$
 
 This value is substantially lower than the experimental value of
-$7.37eV$\! It turns out this error is a result of the unit cell being
+<img alt="$7.37eV$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74d9051358c1ca8aaea0239dcd57965a.svg?invert_in_darkmode&sanitize=true" align=middle width="49.932795pt" height="22.38192pt"/>\! It turns out this error is a result of the unit cell being
 too small for the diamond calculation (or too small of a Brillioun zone
 sampling). In the next section, we show how increasing the Brillouin
 zone sampling reduces the error in the calculated cohesive
@@ -3918,7 +4088,946 @@ Angs.
 
 <center>
 
-CH<sub>3</sub>Cl &rarr; CH<sub>3</sub><sup>+</sup> + Cl<sup>-</sup>
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/ecohdist.png" align=middle with="792pt" height="612pt"/>  
+
+</center>
+
+### Using BAND to Optimize the Unit Cell for a 2 Atom Primitive Cell of Diamond
+
+(input:[Media:diamond-fcc.nw](diamond-fcc.nw),
+output:[Media:diamond-fcc.nwout.gz](diamond-fcc.nwout.gz))
+
+In this example the BAND module is used to optimize a 2 atom unit cell
+for a diamond crystal at different Brillouin zone samplings. The
+optimized energy and geometry will be (Monkhorst-Pack sampling of
+11x11x11)
+```
+     ----------------------  
+     Optimization converged  
+     ----------------------  
+  
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+  ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    1     -11.40586236  5.2D-07  0.00039  0.00018  0.00002  0.00003    662.0  
+                                     ok       ok       ok       ok    
+  
+   
+   
+                         Geometry "geometry" -> "geometry"  
+                         ---------------------------------  
+  
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+   
+  No.       Tag          Charge          X              Y              Z  
+ ---- ---------------- ---------- -------------- -------------- --------------  
+    1 C                    6.0000     0.00000000     0.00000000     0.00000000  
+    2 C                    6.0000     0.72201500     1.25056532     0.51054180  
+   
+      Lattice Parameters   
+      ------------------   
+  
+      lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+      a1=<   2.165   1.251   0.001 >  
+      a2=<   0.001   2.500   0.001 >  
+      a3=<   0.722   1.251   2.041 >  
+      a=       2.500 b=      2.500 c=       2.500  
+      alpha=  59.966 beta=  59.966 gamma=  59.966  
+      omega=    11.0  
+  
+      reciprocal lattice vectors in a.u.  
+  
+      b1=<   1.536  -0.768   0.000 >  
+      b2=<   0.000   1.330   0.000 >  
+      b3=<  -0.543  -0.543   1.629 >  
+  
+      Atomic Mass   
+      -----------   
+  
+      C                 12.000000  
+  
+  
+ ==============================================================================  
+                                internuclear distances  
+ ------------------------------------------------------------------------------  
+       center one      |      center two      | atomic units |  angstroms  
+ ------------------------------------------------------------------------------  
+    2 C                |   1 C                |     2.89435  |     1.53162  
+ ------------------------------------------------------------------------------  
+                         number of included internuclear distances:          1  
+ ==============================================================================
+```
+The following figure shows a plot of the cohesive energy and C-C bond
+distance versus the Brillouin zone sampling for the 8 atom SC unit cell
+and the 2 atom FCC unit
+cell.
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-fcc.png" align=middle with="792pt" height="612pt"/>  
+
+### Using BAND to Calculate the Band Structures of Diamond
+
+(input:[Media:diamond-structure.nw](diamond-structure.nw),
+output:[Media:diamond-structure.nwout](diamond-structure.nwout),
+[file:diamondfcc.restricted_band.dat](diamondfcc.restricted_band.dat))
+
+The following example uses the BAND module to calculate the band
+structure for the FCC cell of the a diamond crystal. The fractional
+coordinates and the unit cell are defined in the geometry block. The
+simulation_cell block is not needed since NWPW automatically uses the
+unit cell defined in the geometry
+block.
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+  
+start diamondfcc  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+end  
+  
+#need to run "task band energy" before "task band structure" can be run  
+task band energy  
+  
+nwpw  
+   virtual 16  
+   brillouin_zone  
+     zone_name fccpath  
+     path fcc l gamma x w k gamma  
+   end  
+   zone_structure_name fccpath  
+end  
+task band structure
+```
+This calculation outputs the
+[file:diamondfcc.restricted_band.dat](diamondfcc.restricted_band.dat))
+data file in the permanent_directory. A plotting (e.g. gnuplot or
+xmgrace) can be used to display the band structure.
+
+<center>
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-structure.png" align=middle with="792pt" height="612pt"/>  
+
+</center>
+
+### Using BAND to Calculate the Density of States of Diamond
+
+(2 atom cell -
+input:[diamond-dos.nw](diamond-dos.nw)
+output:[diamond-dos.nwout](diamond-dos.nwout),
+[diamond-dos.dos.dat](diamond-dos.dos.dat) (8
+atom cell -
+input:[diamond-dos8.nw](diamond-dos8.nw) output:
+[diamond-dos8.nwout.gz](diamond-dos8.nwout.gz),
+[diamond-dos8.dos.dat](diamond-dos8.dos.dat)
+
+
+There are two possible ways to use the BAND module to calculate the density and projected density of states.  The first approach just uses the eigenvalues generated from an energy calculation to generate a density of states.  The following example uses this strategy to calculate the density of states and projected density of states of diamond.
+
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - density of states plot"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-dos  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+  dos                   # dos keyword tells the code to calculate dos at the end of an energy calculation
+  mulliken              # turn on projected density of states
+  virtual 8             # include 8 virtual states
+end  
+ 
+task band energy  
+```
+
+
+The other approach uses the band structure code to calculate the eigenvalues given a precomputed density.  The approach is slower than the first approach, however, it can be used to substantially increase the number of k-points and virtual orbitals used to generate the density of states.  The following example demonstrates this capability to calculate the density of states and projected density of states of the diamond crystal.
+
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - density of states plot"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-dos  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+end  
+  
+#need to run "task band energy" before "task band dos" can be run  
+task band energy  
+  
+nwpw  
+   virtual 26                     #26 virtual orbitals included in the DOS calculation  
+   dos 0.002 700 -1.00000 2.0000  #alpha npoints emin emax,....,change default energy range and gridding. note alpha not used in task band dos calculations
+   dos-grid 11 11 11  
+   mulliken                       # mulliken keyword used to turn on projected density of states
+end  
+task band dos
+```
+
+This calculation outputs the ![diamond-dos.dos.dat](diamond-dos.dos.dat) data file in the permanent_directory. A plotting
+(e.g. gnuplot or xmgrace) can be used to display the density of
+states.
+
+<center>
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/band-dos.png" align=middle with="792pt" height="612pt"/>  
+
+</center>
+
+
+
+
+
+### Calculate the Phonon Spectrum of Diamond
+
+
+```
+title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Phonon spectra"  
+echo  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+   
+start diamond-dos  
+   
+memory 1950 mb  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 2.500d0   
+    lat_b 2.500d0   
+    lat_c 2.500d0   
+    alpha 60.0d0   
+    beta  60.0d0   
+    gamma 60.0d0   
+  end  
+ C  0.00000d0  0.00000d0  0.00000d0  
+ C  0.25000d0  0.25000d0  0.25000d0  
+end  
+   
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8    #The default value of 1 needs to be increased  
+  lmbfgs  
+  xc pbe96  
+  
+  monkhorst-pack 9 9 9  
+end  
+
+task band energy  
+task band freq
+
+```
+
+
+## NWPW Tutorial 6: optimizing the unit cell of nickel with fractional occupation
+
+(input:[Media:Ni-band.nw](Ni-band.nw)
+output:[Media:Ni-band.nwout](Ni-band.nwout)) The
+following example demonstrates how to uses the BAND module to optimize
+the unit cell and geometry for FCC cell of Nickel
+metal
+
+```
+title "Ni FCC metal, monkhorst-pack=3x3x3, 5x5x5, and 7x7x7, fermi smearing, xc=pbe96"  
+echo  
+  
+start Ni-band  
+  
+memory 1900 mb  
+  
+permanent_dir ./perm  
+scratch_dir   ./scratch  
+  
+geometry units angstroms center noautosym noautoz print  
+ system crystal  
+    lat_a 3.5451d0  
+    lat_b 3.5451d0  
+    lat_c 3.5454d0  
+    alpha 90.0d0  
+    beta  90.0d0  
+    gamma 90.0d0  
+  end  
+  
+Ni 0.000000   0.000000   0.000000  
+Ni 0.000000   0.500000   0.500000   
+Ni 0.500000   0.000000   0.500000   
+Ni 0.500000   0.500000   0.000000  
+end  
+set nwpw:cif_filename Ni-band  
+set nwpw:zero_forces .true.  
+set includestress    .true.  
+  
+#turn on pseudopotential filtering   
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+  
+nwpw  
+   #fractional occupation  
+   smear fermi   
+  
+   #scf option used with smear  
+   scf anderson outer_iterations 0 kerker 2.0    
+  
+   ewald_ncut 8  
+   ewald_rcut 3.0  
+   xc pbe96  
+   monkhorst-pack 3 3 3  
+   np_dimensions -1 -1 4   
+end  
+  
+#generate initial wavefunctions w/ low cutoff energy  
+nwpw  
+   loop 10 10  
+   cutoff 10.0  
+end  
+task band energy  
+  
+#increase cutoff energy and number of iterations  
+nwpw  
+   cutoff 50.0  
+   loop 10 100  
+end
+
+#3x3x3 k-point mesh  
+nwpw   
+  monkhorst-pack 3 3 3  
+end  
+set nwpw:cif_filename nickel333.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#5x5x5 k-point mesh  
+nwpw   
+  monkhorst-pack 5 5 5  
+end  
+set nwpw:cif_filename nickel555.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
+
+#7x7x7 k-point mesh  
+nwpw   
+  monkhorst-pack 7 7 7  
+end  
+set nwpw:cif_filename nickel777.opt  
+driver; clear; maxiter 40; end; task band optimize ignore
+```
+
+The following figure shows a plot of the cohesive energy and Ni-Ni bond
+distance versus the Brillouin zone sampling. As can be seen in this
+figure the cohesive energy (w/o zero-point correction) and Ni-Ni bond
+distance agree very well with the experimental values of 4.44 eV
+(including zero-point correction) and 2.49
+Angs.
+
+<center>
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/niecohdist.png" align=middle with="792pt" height="612pt"/>  
+
+</center>
+
+## NWPW Tutorial 7: Optimizing the unit cells with symmetry: Diamond with Fd-3m symmetry and Brucite with P-3m1 symmetry
+
+(Diamond example,
+input:[Media:diamond-symmetry.nw](diamond-symmetry.nw),
+output:[Media:diamond-symmetry.nwout](diamond-symmetry.nwout))
+
+(Brucite example,
+input:[Media:brucite-symmetry.nw](brucite-symmetry.nw),
+output:[Media:brucite-symmetry.nwout](brucite-symmetry.nwout))
+
+The following example uses the BAND module to optimize the unit cell and
+geometry for a Diamond crystal with Fd-3m symmetry. The fractional
+coordinates, unit cell, and symmetry are defined in the geometry
+block.
+```
+title "Diamond 8 atom cubic cell generated using Fd-3m symmetry - geometry and unit cell optimization" 
+echo 
+  
+memory 1500 mb
+  
+permanent_dir ./perm
+scratch_dir   ./scratch
+  
+start diamond-symmetry  
+  
+  
+geometry nocenter noautosym noautoz print 
+ system crystal 
+   lat_a 3.58 
+   lat_b 3.58 
+   lat_c 3.58  
+   alpha 90.0  
+   beta  90.0  
+   gamma 90.0  
+ end
+symmetry Fd-3m
+C 0.0 0.0 0.0
+end 
+set nwpw:cif_filename diamond-symmetry
+  
+#turn on pseudopotential filtering  
+set nwpw:kbpp_ray    .true.
+set nwpw:kbpp_filter .true.
+  
+#***** setup the nwpw Band code - 3x3x3 k-point mesh ****  
+nwpw
+  ewald_rcut 3.0
+  ewald_ncut 8
+  xc pbe96  
+  lmbfgs
+  monkhorst-pack 3 3 3
+  np_dimensions -1 -1 4
+end  
+  
+set includestress  .true.   # tell driver to optimize unit cell
+set includelattice .true.   # tell driver to optimize with a,b,c,alpha,beta,gamma
+task band optimize ignore
+```
+The optimized geometry will also contain the information about the
+symmetry being
+used
+```
+....  
+     ----------------------  
+     Optimization converged  
+     ----------------------  
+  
+  
+ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    7     -45.62102901 -4.1D-07  0.00010  0.00003  0.00019  0.00060    287.1  
+                                     ok       ok       ok       ok    
+  
+  
+  
+                        Geometry "geometry" -> "geometry"  
+                        ---------------------------------  
+  
+Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+ No.       Tag          Charge          X              Y              Z  
+---- ---------------- ---------- -------------- -------------- --------------  
+   1 C                    6.0000     0.00000000     0.00000000     0.00000000  
+   2 C                    6.0000     0.00000000     1.76715074     1.76715074  
+   3 C                    6.0000     1.76715074     1.76715074     0.00000000  
+   4 C                    6.0000     1.76715074     0.00000000     1.76715074  
+   5 C                    6.0000     2.65072611     0.88357537     2.65072611  
+   6 C                    6.0000     0.88357537     0.88357537     0.88357537  
+   7 C                    6.0000     0.88357537     2.65072611     2.65072611  
+   8 C                    6.0000     2.65072611     2.65072611     0.88357537  
+  
+     Lattice Parameters   
+     ------------------   
+  
+     lattice vectors in angstroms (scale by  1.889725989 to convert to a.u.)  
+  
+     a1=<   3.534   0.000   0.000 >  
+     a2=<   0.000   3.534   0.000 >  
+     a3=<   0.000   0.000   3.534 >  
+     a=       3.534 b=      3.534 c=       3.534  
+     alpha=  90.000 beta=  90.000 gamma=  90.000  
+     omega=    44.1  
+  
+     reciprocal lattice vectors in a.u.  
+  
+     b1=<   0.941   0.000   0.000 >  
+     b2=<   0.000   0.941   0.000 >  
+     b3=<   0.000   0.000   0.941 >  
+  
+     Atomic Mass   
+     -----------   
+  
+     C                 12.000000  
+  
+  
+     Symmetry information  
+     --------------------  
+  
+Group name                  Fd-3m  
+Group number            227  
+Group order             192  
+No. of unique centers     1  
+Setting number            1  
+  
+     Symmetry unique atoms  
+  
+    1  
+  
+==============================================================================  
+                               internuclear distances  
+------------------------------------------------------------------------------  
+      center one      |      center two      | atomic units |  angstroms  
+------------------------------------------------------------------------------  
+   5 C                |   4 C                |     2.89203  |     1.53040  
+   6 C                |   1 C                |     2.89203  |     1.53040  
+   6 C                |   2 C                |     2.89203  |     1.53040  
+   6 C                |   3 C                |     2.89203  |     1.53040  
+   6 C                |   4 C                |     2.89203  |     1.53040  
+   7 C                |   2 C                |     2.89203  |     1.53040  
+   8 C                |   3 C                |     2.89203  |     1.53040  
+------------------------------------------------------------------------------  
+                        number of included internuclear distances:          7  
+==============================================================================  
+  
+  
+  
+==============================================================================  
+                                internuclear angles  
+------------------------------------------------------------------------------  
+       center 1       |       center 2       |       center 3       |  degrees  
+------------------------------------------------------------------------------  
+   6 C                |   2 C                |   7 C                |   109.47  
+   6 C                |   3 C                |   8 C                |   109.47  
+   5 C                |   4 C                |   6 C                |   109.47  
+   1 C                |   6 C                |   2 C                |   109.47  
+   1 C                |   6 C                |   3 C                |   109.47  
+   1 C                |   6 C                |   4 C                |   109.47  
+   2 C                |   6 C                |   3 C                |   109.47  
+   2 C                |   6 C                |   4 C                |   109.47  
+   3 C                |   6 C                |   4 C                |   109.47  
+------------------------------------------------------------------------------  
+                           number of included internuclear angles:          9  
+==============================================================================
+```
+The following example uses the BAND module to optimize the unit cell and
+geometry for a [Brucite](http://en.wikipedia.org/wiki/Brucite) crystal
+(Mg(OH)<sub>2</sub> with P-3m1
+symmetry.
+
+
+![400px](./Brucite-small.jpg)
+
+```
+title "brucite testing - using P-3m1 symmetry"  
+echo  
+  
+memory 1500 mb  
+  
+permanent_dir ./perm  
+scratch_dir      ./scratch  
+  
+geometry nocenter noautosym noautoz print   
+ system crystal   
+   lat_a 3.14979  
+   lat_b 3.14979  
+   lat_c 4.7702  
+   alpha 90.0  
+   beta  90.0  
+   gamma 120.0  
+ end  
+symmetry P-3m1  
+Mg   0.00000   0.00000  0.00000  
+O   0.33333   0.66667   0.22030  
+H   0.33333   0.66667   0.41300  
+end   
+set nwpw:cif_filename brucite  
+  
+#turn on pseudopotential filtering   
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+  
+#***** setup the nwpw gamma point code ****  
+nwpw  
+  ewald_rcut 3.0  
+  ewald_ncut 8  
+  xc pbe96  
+  lmbfgs  
+  monkhorst-pack 3 3 2  
+  #np_dimensions -1 -1 4  
+end  
+  
+driver  
+  clear  
+  maxiter 31  
+end  
+   
+set includestress  .true.          # tell driver to optimize unit cell  
+set includelattice .true.  
+  
+task band optimize ignore
+```
+Optimizing Brucite, which is a soft layered material (2.5-3 Mohs scale),
+is more difficult to optimize than a hard material such as Diamond. For
+these types of materials using symmetry can often result in a faster
+optimization. For example, with symmetry the optimization converges
+within 20 to 30 geometry optimization
+steps,
+```
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+@ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    0     -34.39207476  0.0D+00  0.24673  0.10223  0.00000  0.00000    172.7  
+@    1     -34.39340208 -1.3D-03  0.00872  0.00302  0.00198  0.00485    328.5  
+....  
+@   20     -34.39042736 -1.2D-05  0.00195  0.00083  0.00440  0.01964   3019.2  
+@   21     -34.39043463 -7.3D-06  0.00028  0.00011  0.00493  0.02042   3150.6  
+@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5  
+@   22     -34.39043484 -2.1D-07  0.00043  0.00014  0.00002  0.00008   3278.5
+```
+whereas, without symmetry the optimization may not be converged even at
+100 geometry steps
+(input:[Media:brucite-nosymmetry.nw](brucite-nosymmetry.nw),
+output:[Media:brucite-nosymmetry.nwout](brucite-nosymmetry.nwout)).
+```
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime  
+@ ---- ---------------- -------- -------- -------- -------- -------- --------  
+@    0     -34.39207476  0.0D+00  0.24673  0.10250  0.00000  0.00000     18.4  
+@    1     -34.39340765 -1.3D-03  0.02963  0.00715  0.00202  0.00500     30.7  
+...  
+@   49     -34.39027641 -2.1D-06  0.01870  0.00646  0.00074  0.00202    595.7  
+@   50     -34.39027503  1.4D-06  0.01962  0.00669  0.00069  0.00197    608.4  
+...  
+@  100     -34.39034236 -3.8D-07  0.00380  0.00150  0.00036  0.00132   1155.3  
+@  101     -34.39034431 -1.9D-06  0.00305  0.00118  0.00012  0.00045   1166.8  
+@  102     -34.39034449 -1.8D-07  0.00370  0.00144  0.00006  0.00020   1177.9  
+...
+```
+## NWPW Tutorial 8: NVT Metropolis Monte-Carlo Simulations
+
+In this example the PSPW module is used to run an NVT simulation for a
+diamond crystal using the a Metropolis Monte-Carlo algorithm.
+
+<!-- (input:[Media:diamond-nvt.nw](diamond-nvt.nw),
+output:[Media:diamond-nvt.nwout.gz](diamond-nvt.nwout.gz),
+datafiles:[Media:diamond-nvt.emotion.gz](diamond-nvt.emotion.gz),
+[Media:diamond-nvt.ion_motion.gz](diamond-nvt.ion_motion.gz),
+[Media:diamond-nvt.xyz.gz](diamond-nvt.xyz.gz),
+[Media:diamond_nvt_234.cif.gz](diamond_nvt_234.cif.gz)) -->
+
+![NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond,
+T=300K.](diamond-nvt.gif "NVT Metropolis Monte-Carlo Trajectory (Markov Chain) for diamond, T=300K.")
+```
+title "Metropolis NVT simulation of diamond - this input is used to put the system in equilibrium"  
+echo  
+  
+start diamond-nvt  
+  
+#permanent_dir ./perm  
+#scratch_dir   ./perm  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+system crystal   
+   lat_a 3.56d0   
+   lat_b 3.56d0   
+   lat_c 3.56d0   
+   alpha 90.0d0   
+   beta  90.0d0   
+   gamma 90.0d0   
+end  
+C -0.50000d0 -0.50000d0 -0.50000d0  
+C  0.00000d0  0.00000d0 -0.50000d0  
+C  0.00000d0 -0.50000d0  0.00000d0  
+C -0.50000d0  0.00000d0  0.00000d0  
+C -0.25000d0 -0.25000d0 -0.25000d0  
+C  0.25000d0  0.25000d0 -0.25000d0  
+C  0.25000d0 -0.25000d0  0.25000d0  
+C -0.25000d0  0.25000d0  0.25000d0  
+end  
+set nwpw:cif_filename diamond_nvt_234  
+  
+###### setup the nwpw gamma point code ######  
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+set nwpw:frozen_lattice:thresh 999.0  
+nwpw  
+   lmbfgs  
+   ewald_rcut 3.0  
+   ewald_ncut 8  
+   xc pbe  
+end  
+task pspw energy  
+  
+##### optimize the unit cell #####  
+set includestress  .true.  #this option tells driver to optimize the unit cell  
+set includelattice .true.  #this option tells driver to optimize cell using a,b,c,alpha,beta,gamma   
+driver  
+   clear  
+   maxiter 51  
+end  
+task pspw optimize ignore  
+  
+####################################################################################  
+###### setup Metropolis NVT code - input will change in a forthcoming release ######  
+####################################################################################  
+set nwpw:mc_seed 234              # Seed for random number generator  
+set nwpw:mc_algorithm 1            # 1-NVT; 2-NPT  
+set nwpw:mc_aratio 0.234           # targeted acceptance ratio  
+set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance  
+set nwpw:mc_temperature 300.0      # Temperature in K  
+set nwpw:mc_step_size   0.250      # initial geometry displacement step size  
+  
+nwpw  
+   mc_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10  
+   cpmd_properties on  
+end  
+task pspw Metropolis
+```
+## NWPW Tutorial 9: NPT Metropolis Monte-Carlo Simulations
+
+In this example the PSPW module is used to run an NPT simulation for a
+diamond crystal using the a Metropolis Monte-Carlo
+algorithm.
+
+(input:[Media:diamond-metropolis.nw](diamond-metropolis.nw),
+output:[Media:diamond-metropolis.nwout.gz](diamond-metropolis.nwout.gz),
+datafiles:[Media:diamond-metropolis.emotion.gz](diamond-metropolis.emotion.gz),
+[Media:diamond-metropolis.ion_motion.gz](diamond-metropolis.ion_motion.gz),
+[Media:diamond-metropolis.xyz.gz](diamond-metropolis.xyz.gz),
+[Media:diamond_metropolis_1234.cif.gz](diamond_metropolis_1234.cif.gz))
+```
+title "Metropolis NPT simulation of diamond - this input is used to put the system in equilibrium"  
+echo  
+  
+start diamond-metropolis  
+  
+#permanent_dir ./perm  
+#scratch_dir   ./perm  
+  
+#**** Enter the geometry using fractional coordinates ****  
+geometry center noautosym noautoz print   
+  system crystal   
+    lat_a 3.56d0   
+    lat_b 3.56d0   
+    lat_c 3.56d0   
+    alpha 90.0d0   
+    beta  90.0d0   
+    gamma 90.0d0    
+  end  
+ C -0.50000d0 -0.50000d0 -0.50000d0  
+ C  0.00000d0  0.00000d0 -0.50000d0  
+ C  0.00000d0 -0.50000d0  0.00000d0  
+ C -0.50000d0  0.00000d0  0.00000d0  
+ C -0.25000d0 -0.25000d0 -0.25000d0  
+ C  0.25000d0  0.25000d0 -0.25000d0  
+ C  0.25000d0 -0.25000d0  0.25000d0  
+ C -0.25000d0  0.25000d0  0.25000d0  
+end  
+set nwpw:cif_filename pspw_metropolis  
+  
+###### setup the nwpw gamma point code ######  
+set nwpw:kbpp_ray .true.  
+set nwpw:kbpp_filter .true.  
+set nwpw:frozen_lattice:thresh 999.0  
+nwpw  
+   lmbfgs  
+   ewald_rcut 3.0  
+   ewald_ncut 8  
+   xc pbe  
+end  
+task pspw energy  
+  
+  
+####################################################################################  
+###### setup Metropolis NPT code - input will change in a forthcoming release ######  
+####################################################################################  
+set nwpw:mc_seed 1234              # Seed for random number generator  
+set nwpw:mc_algorithm 2            # 1-NVT; 2-NPT  
+set nwpw:mc_aratio 0.234           # targeted acceptance ratio  
+set nwpw:mc_ddx 0.1                # parameter used to adjust geometry dispacement to have sampling with targeted acceptance  
+set nwpw:mc_ddv 0.1                # parameter used to adjust volume change to have sampling with targeted acceptance  
+set nwpw:mc_temperature 300.0      # Temperature in K  
+set nwpw:mc_step_size   0.250      # geometry displacement step size  
+set nwpw:mc_volume_step 0.130      # volume displacement step size  
+  
+nwpw  
+   bo_steps 10 100  #total number of iterations = 10*100, number of iterations between step size adjustments = 10  
+end  
+task pspw Metropolis
+```
+<center>
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-metropolis.png" align=middle with="640pt" height="480pt"/>  
+
+</center>
+
+(inputs:[Media:diamond-metropolis-sampling.nw.tgz](diamond-metropolis-sampling.nw.tgz))
+
+(python analysis
+program:[Media:makehistogram.gz](makehistogram.gz))
+```
+[WE27972:~/Projects/NWChem/Metropolis] bylaska% makehistogram -t 300 -c 2 1235/diamond-metropolis-1235.emotion 1236/diamond-metropolis-1236.emotion   
+1237/diamond-metropolis-1237.emotion 1238/diamond-metropolis-1238.emotion 1239/diamond-metropolis-1239.emotion 1240/diamond-metropolis-1240.emotion   
+1241/diamond-metropolis-1241.emotion 1242/diamond-metropolis-1242.emotion 1243/diamond-metropolis-1243.emotion 1244/diamond-metropolis-1244.emotion   
+1245/diamond-metropolis-1245.emotion 1246/diamond-metropolis-1246.emotion 1248/diamond-metropolis-1248.emotion 1249/diamond-metropolis-1249.emotion   
+makehistogram Program  
+len(args)= 14  
+  
+unitconversion  = 1.0  
+temperature (K) = 300  
+RT (au)         = 0.000949482834326  ( 0.5958  kcal/mol)  
+  
+data columns -1 = [1]  
+data rows (n)   = 52000  
+  
+delta (au)       = 0.01  
+xmin-delta (au)  = -45.08080365  
+xmax+delta (au)  = -45.05079515  
+  
+data averaging:  
+- xbar       (au)           = -45.0668093497  
+- S2_{n-1}   (au)           = 1.08378343101e-05  
+- <exp((x-xmin)/RT)> (au)   = 5293374903.39  
+- <exp((x-xbar)/RT)> (au)   = 2102.44405413  
+- Free energy               = -45.0595449934  
+- Free energy1              = -45.0595449934  
+  
+histogram distribution parameters:  
+- number of bins (Rice k) = 75  
+- bin width               = 0.00040552027027  
+- norm                    = 1.0  
+- xbar (au)               = -45.0668107987  (error= -1.44908364064e-06 )  
+- S2_{n-1} (au)           = 1.0858459744e-05  (error= 2.06254339582e-08 )  
+- <exp((x-xmin)/RT)> (au) = 5184600342.01  (error= -108774561.378 )  
+- <exp((x-xbar)/RT)> (au) = 2062.38570923  (error= -40.0583449011 )  
+- Free energy               = -45.0595647078  (error= -1.9714360235e-05 )  
+- Free energy1              = -45.0595647078  (error= -1.9714360235e-05 )  
+- histogram plot file     = histogram.dat  
+  
+normal distribution parameters:  
+- average x (input xbar)                   = -45.0668093497  
+- unbiased sample variance (input S2_(n-1))= 1.08378343101e-05  
+- xbar-xmin                                = 0.0139943003357  
+- norm                    = 0.99998877936  
+- xbar (au)               = -45.0663035243  (error= 0.000505825397738 )  
+- S2_{n-1} (au)           = 1.1091077321e-05  (error= 2.53243010936e-07 )  
+- <exp((x-xmin)/RT)> (au) = 943482808.939  (error= -4349892094.45 )  
+- <exp((x-xbar)/RT)> (au) = 219.968603653  (error= -1882.47545048 )  
+- Free energy               = -45.061182503  (error= -0.00163750957643 )  
+- Free energy1              = -45.061182503  (error= -0.00163750957643 )  
+- normal distribution plot file = normdist.dat  
+- number data points = 1500  
+  
+gamma distribution parameters:  
+- alpha0= 18.0700715921  
+- beta0 = 1291.24508969  
+- xmin + alpha0/beta0 = -45.0668093497  
+- alpha = 18.5003178357  
+- beta  = 1321.98948086  
+- xmin + alpha/beta   = -45.0668093497  
+- norm                    = 0.999923464137 0.99993569948  
+- xbar (au)               = -45.0633614482 -45.0639126423  (error= 0.00344790150088 0.00289670733491 )  
+- S2_{n-1} (au)           = 2.27110055327e-05 1.89632753897e-05  (error= 1.18731712226e-05 8.12544107961e-06 )  
+- <exp((x-xmin)/RT)> (au) = 7932775654.26 7060892836.07  (error= 2639400750.87 1767517932.68 )  
+- <exp((x-xbar)/RT)> (au) = 83.43400035 132.707151194  (error= -2019.01005378 -1969.73690294 )  
+- Free energy               = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )  
+- Free energy1              = -45.059160883 -45.0592714327  (error= 0.000384110406969 0.000273560709338 )  
+- gamma distribution plot file = gammadist.dat  
+- number data points = 1500  
+  
+Hausdorff distribution parameters:  
+- xmin = -45.08080365  
+- xmax = -45.05079515  
+- number moments     = 15  
+  -- < x^0 >    =    1.000000000000000  
+  -- < x^1 >    =    0.466344546904007  
+  -- < x^2 >    =    0.229512222180349  
+  -- < x^3 >    =    0.119040323347820  
+  -- < x^4 >    =    0.064946164109284  
+  -- < x^5 >    =    0.037186896798964  
+  -- < x^6 >    =    0.022287980659815  
+  -- < x^7 >    =    0.013942929105868  
+  -- < x^8 >    =    0.009076370636747  
+  -- < x^9 >    =    0.006128509645342  
+  -- < x^10 >   =    0.004278147917961  
+  -- < x^11 >   =    0.003077410986590  
+  -- < x^12 >   =    0.002273768533280  
+  -- < x^13 >   =    0.001720304299285  
+  -- < x^14 >   =    0.001328990330385  
+- norm                    = 1.0000000003  
+- xbar (au)               = -45.066809363  (error= -1.33426993898e-08 )  
+- S2_{n-1} (au)           = 1.08376258908e-05  (error= -2.08419282206e-10 )  
+- <exp((x-xmin)/RT)> (au) = 5423305875.35  (error= 129930971.958 )  
+- <exp((x-xbar)/RT)> (au) = 2154.08083332  (error= 51.6367791881 )  
+- Free energy               = -45.0595219689  (error= 2.30245307122e-05 )  
+- Free energy1              = -45.0595219689  (error= 2.30245307122e-05 )  
+- Hausdorff moment history file = moment_hist.dat  
+- Hausdorff distribution plot file = hausdorff.dat  
+- number data points = 1500
+```
+<center>
+
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-e-histogram.png" align=middle with="640pt" height="480pt"/>  
+<img alt=" " src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/diamond-v-histogram.png" align=middle with="640pt" height="480pt"/>  
+
+</center>
+
+## NWPW Tutorial 9: Free Energy Simulations
+
+A description of using the WHAM method for generating free energy of the
+gas-phase dissociation reaction CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>Cl <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>+Cl
 can be found in the attached pdf
 ([nwchem-new-pmf.pdf](nwchem-new-pmf.pdf))
 
@@ -4006,16 +5115,16 @@ task paw optimize
 ### Running a Car-Parrinello Simulation
 
 In this section we show how use the PAW module to perform a
-Car-Parrinello molecular dynamic simulation for a $C_2$ molecule at
+Car-Parrinello molecular dynamic simulation for a <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> molecule at
 the LDA level. Before running a PAW Car-Parrinello simulation the system
 should be on the Born-Oppenheimer surface, i.e. the one-electron
 orbitals should be minimized with respect to the total energy (i.e. task
 pspw energy). The input needed is basically the same as for optimizing
-the geometry of a $C_2$ molecule at the LDA level,except that and
+the geometry of a <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> molecule at the LDA level,except that and
 additional Car-Parrinello sub-block is added.
 
 In the following example we show the input needed to run a
-Car-Parrinello simulation for a $C_2$ molecule at the LDA level. In
+Car-Parrinello simulation for a <img alt="$C_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/85f3e1190907b9a8e94ce25bec4ec435.svg?invert_in_darkmode&sanitize=true" align=middle width="18.232995pt" height="22.38192pt"/> molecule at the LDA level. In
 this example, default pseudopotentials from the pseudopotential library
 are used for C, the boundary condition is free-space, the exchange
 correlation functional is LDA, The boundary condition is free-space, and
