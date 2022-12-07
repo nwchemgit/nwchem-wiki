@@ -1891,7 +1891,7 @@ $W(t)=0$
 and therfore there is no bias. $T_{tempered}=\infty$
 corresponds to standard metadynamics since in this case
 $W(t)=W_0$=constant. A positive, finite value of $T_{tempered}$ (eg.
-$T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)\le W_0\).
+$T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)<= W_0\).
 
 For sufficiently large $t$, the history potential
 $V_{meta}\left(\mathbf{s},t\right)$ will nearly flatten the free energy
@@ -3169,7 +3169,7 @@ be
 (input:[Media:s2-example2.nw](s2-example2.nw),
 output:[Media:s2-example2.nwout](s2-example2.nwout))
 
-In this example, the structure of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using results
+In this example, the structure of the S<sub>2</sub> dimer using results
 generated from prior energy calculation is calculated. Since most of the
 parameters are already stored in the run-time database the input is very
 simple.
