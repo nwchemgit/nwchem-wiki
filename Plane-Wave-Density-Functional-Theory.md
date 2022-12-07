@@ -3594,7 +3594,7 @@ extremely demanding and scale computationally as $N^7$ for $N$ basis
 functions.
 
 Examples of these types of large errors are shown in the following
-Table, where the enthalpies of formation of CCl$_3$SH are calculated
+Table, where the enthalpies of formation of CCl<sub>3</sub>SH are calculated
 by using atomization energies from different levels of ab initio
 theory.
 
@@ -3606,8 +3606,8 @@ theory.
 | ΔH $_f^o$ | \+4.9       | \-80.0    | \-2.6      | \+26.5      | \-13.0    |
 |  |
 
-Table 1: Standard enthalpy of formation (ΔH$_f^o$(298K) for
-CCl$_3$SH in kcal/mol from atomization energies with various
+Table 1: Standard enthalpy of formation (ΔH<sub>f</sub><sup>o</sup>(298K) for
+CCl<sub>3</sub>SH in kcal/mol from atomization energies with various
 electronic structure methods. Results taken from reference [2].
 
 </center>
@@ -3633,7 +3633,7 @@ more accurate for estimating neighboring interactions and long-range
 through-bond effects.
 
 The following isodesmic reaction can be used determine the enthalpy of
-formation for CCl$_3$SH that is significantly more accurate than the
+formation for CCl<sub>3</sub>SH that is significantly more accurate than the
 estimates based on atomization energies.
 
 
@@ -3663,7 +3663,7 @@ atomization energy and using the reaction enthalpy of the isodesmic
 reaction and compare your results to Table 2. Be careful to make sure
 that you use the same cutoff energy for all the simulations (.e.g.
 cutoff 35.0). You might also try to estimate enthalpies of formation for
-CHCl$_2$SH and CH$_2$ClSH. Also try designing simulations that use
+CHCl<sub>2</sub>SH and CH<sub>2</sub>ClSH. Also try designing simulations that use
 the SCF, DFT, MP2, and TCE modules.
 
 <center>
@@ -3696,7 +3696,7 @@ Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)
 Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)
 ```
 The following line contains the value for
-H$_{correction}$
+H<sub>correction</sub>
 ```
 Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)
 
@@ -3716,13 +3716,13 @@ Cv (constant volume heat capacity) =    6.503 cal/mol-K
 | ------------ | ----------- | ----------- | ----------- | ----------- | ------------- | ---------- |
 | Compounds    | MP2/cc-pVDZ | LDA/DZVP2   | BP91/DZVP2  | B3LYP/DZVP2 | G2            | Experiment |
 |              | (isodesmic) | (isodesmic) | (isodesmic) | (isodesmic) | (atomization) |            |
-| CCl$_3$SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
-| CHCl$_2$SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
-| CH$_2$ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
-| CH$_3$SH   |             |             |             |             | \-4.76        | \-5.34     |
+| CCl<sub>3</sub>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
+| CHCl<sub>2</sub>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
+| CH<sub>2</sub>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
+| CH<sub>3</sub>SH   |             |             |             |             | \-4.76        | \-5.34     |
 |  |
 
-Table 2: Gas-phase standard enthalpies of formation ( ΔH$_f^o$(298K))
+Table 2: Gas-phase standard enthalpies of formation ( ΔH<sub>f</sub><sup>o</sup>(298K))
 in kcal/mol from isodesmic reactions and G2 Theory calculations taken
 from [3].
 
@@ -3737,12 +3737,12 @@ from [3].
 | C                | 171.291          |
 | S                | 66.636           |
 | Cl               | 29.082           |
-| CCl$_4$        | \-24.59          |
-| CCl$_3$H       | \-24.65          |
-| CCl$_2$H$_2$ | \-22.10          |
-| CClH$_3$       | \-19.32          |
-| CH$_4$         | \-17.88          |
-| CH$_3$SH       | \-5.34           |
+| CCl<sub>4</sub>        | \-24.59          |
+| CCl<sub>3</sub>H       | \-24.65          |
+| CCl<sub>2</sub>H<sub>2</sub> | \-22.10          |
+| CClH<sub>3</sub>       | \-19.32          |
+| CH<sub>4</sub>         | \-17.88          |
+| CH<sub>3</sub>SH       | \-5.34           |
 |  |
 
 Table 3: Miscellaneous experimental gas-phase enthalpies of formation
@@ -3759,7 +3759,7 @@ Table 3: Miscellaneous experimental gas-phase enthalpies of formation
 3.  Chase, M. W., Jr. Phys. Chem. Ref. Data, Monograph No. 9 1998, 9,
     1-1951.
 
-## NWPW Tutorial 4: AIMD/MM simulation of CCl$_4$ + 64 H$_2$O
+## NWPW Tutorial 4: AIMD/MM simulation of CCl<sub>4</sub> + 64 H<sub>2</sub>O
 
 (input:[Media:ccl4-64water.nw](ccl4-64water.nw),
 output:[Media:ccl4-64water.nwout](ccl4-64water.nwout))
