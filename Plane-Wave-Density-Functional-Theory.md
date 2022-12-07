@@ -563,33 +563,23 @@ $$\tilde{\rho}_{cmp}(r)=\sum_I \sum_{lm} Q_{lm}^I g_{lm}^(\tilde{\sigma}_I ) (r-
 where
 
 
-$$Q_{lm}^I = \sum_i \sum_{\alpha\beta} &lt;\tilde{\psi}_i|\tilde{p}_\alpha^I > <\tilde{p}_\beta^I|\tilde{\psi}_i >  \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} (q_{comp}^I )_{\alpha\beta}^l$$
+$$Q_{lm}^I = \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_\alpha^I > <\tilde{p}_\beta^I|\tilde{\psi}_i >  \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} (q_{comp}^I )_{\alpha\beta}^l$$
 
 
-The decay parameter <img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> is defined the same as above, and
-<img alt="$\tilde{\sigma}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/868716a1beb2c79093e4eceb0dd3946e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="21.87504pt"/> is defined to be smooth enough in order that ρ̃\_cmp (r) and <img alt="$\tilde{V}_{local}(r)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/408502d1bcbe2ef8af49657dd00ed880.svg?invert_in_darkmode&sanitize=true" align=middle width="58.93503pt" height="30.18576pt"/> can readily be expanded in
+The decay parameter $\sigma_I$ is defined the same as above, and
+$\tilde{\sigma}_I$ is defined to be smooth enough in order that ρ̃<sub>cmp<\sub>(r) and $\tilde{V}_{local}(r)$ can readily be expanded in
 terms of plane-waves.
 
 The final three terms are the energies that contain the core
 densities
 
-<center>
 
-<img alt="$E_{valence-core}=\sum_i\sum_I\sum_{\alpha \beta}&lt;\tilde{\psi}_i|\tilde{p}_\alpha^I &gt;  (V_{valence-core})_{\alpha \beta}^I &lt;\tilde{p}_\beta^I|\tilde{\psi}_i &gt;$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9fd3923375f91fcd62987cee67cd367f.svg?invert_in_darkmode&sanitize=true" align=middle width="482.714595pt" height="30.55107pt"/>
+$$E_{valence-core}=\sum_i\sum_I\sum_{\alpha \beta}<\tilde{\psi}_i|\tilde{p}_\alpha^I >  (V_{valence-core})_{\alpha \beta}^I <\tilde{p}_\beta^I|\tilde{\psi}_i >$$
 
-</center>
 
-<center>
-
-<img alt="$E_{kinetic-core}=\sum_c \int_0^\infty [ (\varphi_{n_c l_c}^I (r))^' (\varphi_{n_c l_c}^I (r))^' + l_c (l_c+1)  \frac{\varphi_{n_c l_c}^I (r) \varphi_{n_c l_c}^I (r)}{r^2} ]  dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6ccdb6f864b6c62e5aa4419e97773fe1.svg?invert_in_darkmode&sanitize=true" align=middle width="470.012895pt" height="62.7957pt"/>
-
-</center>
-
-<center>
+$$E_{kinetic-core}=\sum_c \int_0^\infty [ (\varphi_{n_c l_c}^I (r))^' (\varphi_{n_c l_c}^I (r))^' + l_c (l_c+1)  \frac{\varphi_{n_c l_c}^I (r) \varphi_{n_c l_c}^I (r)}{r^2} ]  dr$$
 
 $$E_{ion-core}= \sum_I \frac{1}{2} \iint \frac{\rho_c^{I} (r) \rho_c^{I} (r')}{|r-r'|}  drdr^{'} - \int  \frac{\rho_c^{I} (r)}{|r|}  (Z_I+Z_I^{core} ) dr$$
-
-</center>
 
 The matrix elements contained in the above formula are
 
@@ -597,47 +587,20 @@ $$(t_{atom}^{I} )_{\alpha \beta}= {\delta_{m_\alpha m_\beta} \delta_{l_\alpha l_
   (\varphi_{n_\alpha l_\alpha}^{I} (r))' (\varphi_{n_\beta l_\beta}^{I} (r))' - (\tilde{\varphi}_{n_\alpha l_\alpha}^{I} (r))' (\tilde{\varphi}_{n_\beta l_\beta}^{I} (r))' + l_\alpha (l_\alpha+1)  \frac{ \varphi_{n_\alpha l_\alpha}^{I}(r) \varphi_{n_\beta l_\beta}^{I}(r) - \tilde{\varphi}_{n_\alpha l_\alpha}^{I}(r) \tilde{\varphi}_{n_\beta l_\beta}^I }{r^2 } \right]  dr$$
 
 
-<center>
-
 $$(u_{atom}^I )_{\alpha \beta} =\frac{Z_I}{4\pi} (V_{comp}^I )_{\alpha \beta}^{l=0} + \frac{2Z_I}{(\sqrt{2\pi} \sigma_I } (q_comp^I )_{\alpha \beta}^(l=0) +\delta_{m_\alpha m_\beta } \delta_{l_\alpha l_\beta } \int_0^{r_{cut}^I} [ \varphi_{n_\alpha l_\alpha}^I (r) \varphi_(n_\beta l_\beta)^I (r) \frac{-Z_I}{r} + \tilde{\varphi}_{n_\alpha l_\alpha}^I (r) \tilde{\varphi}_{n_\beta l_\beta}^I (r) (-v_{ps}^I (r)) ] dr$$
 
-</center>
 
-<center>
+$$(V_{Heff}^I )_{\alpha \beta \mu \nu}^l = (V_H^I )_{\alpha\beta\mu\nu}^l - 2(V_{comp}^I )_{\alpha\beta}^l (q_{comp}^I )_{\mu\nu}^l -(v_g^I )^l (q_{comp}^I )_{\alpha\beta}^l (q_{comp}^I )_{\mu\nu}^l$$
 
-<img alt="$(V_{Heff}^I )_{\alpha \beta \mu \nu}^l = (V_H^I )_{\alpha\beta\mu\nu}^l - 2(V_{comp}^I )_{\alpha\beta}^l (q_{comp}^I )_{\mu\nu}^l -(v_g^I )^l (q_{comp}^I )_{\alpha\beta}^l (q_{comp}^I )_{\mu\nu}^l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2ebbca749223f7e0c738c3aaf6bff0ee.svg?invert_in_darkmode&sanitize=true" align=middle width="535.913895pt" height="27.85299pt"/>
+$$(V_H^I )_{\alpha\beta\mu\nu}^l = \frac{4\pi}{2l+1} \int_0^{r_{cut}^I} \int_0^{r_{cut}^I} \left( \frac{r_{<}^l}{r_{>}^{l+1} } \right)( \varphi_{n_\alpha l_\alpha } (r) \varphi_{n_\beta l_\beta } (r) \varphi_{n_\mu l_\mu } (r) \varphi_{n_\nu l_\nu } (r) - \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_(n_\beta l_\beta ) (r) \tilde{\varphi}_{n_\mu l_\mu } (r) \tilde{\varphi}_{n_\nu l_\nu } (r) )  drdr'$$
 
-</center>
+$$(V_{comp}^I )_{\alpha\beta}^l = \frac{4\pi}{2l+1} \int_0^{r_{cut}^I} \int_0^{r_{cut}^I} \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_{n_\beta l_\beta } (r) \left( \frac{r_{<}^l}{r_{>}^{l+1} } \right) g_l^I (r')  r'^2  drdr'$$
 
-<center>
+$$(q_{comp}^I )_{\alpha\beta}^l = \int_0^\infty r^l \left( \varphi_{n_\alpha l_\alpha } (r) \varphi_{n_\beta l_\beta } (r)- \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_{n_\beta l_\beta } (r) \right) dr$$
 
-<img alt="$(V_H^I )_{\alpha\beta\mu\nu}^l = \frac{4\pi}{2l+1} \int_0^{r_{cut}^I} \int_0^{r_{cut}^I} \left( \frac{r_{&lt;}^l}{r_{&gt;}^{l+1} } \right)( \varphi_{n_\alpha l_\alpha } (r) \varphi_{n_\beta l_\beta } (r) \varphi_{n_\mu l_\mu } (r) \varphi_{n_\nu l_\nu } (r) - \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_(n_\beta l_\beta ) (r) \tilde{\varphi}_{n_\mu l_\mu } (r) \tilde{\varphi}_{n_\nu l_\nu } (r) )  drdr'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ff12fa7251c5bf99929a8e560d9fe29f.svg?invert_in_darkmode&sanitize=true" align=middle width="809.904645pt" height="39.72045pt"/>
+$$(v_g^I )^l =\frac{4\sqrt{2\pi}}{ (2l+1)(2l+1)!! \sigma_I^{2l+1} }$$
 
-</center>
-
-<center>
-
-<img alt="$(V_{comp}^I )_{\alpha\beta}^l = \frac{4\pi}{2l+1} \int_0^{r_{cut}^I} \int_0^{r_{cut}^I} \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_{n_\beta l_\beta } (r) \left( \frac{r_{&lt;}^l}{r_{&gt;}^{l+1} } \right) g_l^I (r')  r'^2  drdr'$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2a90167eda488ad3fbf03ed3ddf701c9.svg?invert_in_darkmode&sanitize=true" align=middle width="476.061795pt" height="39.72045pt"/>
-
-</center>
-
-<center>
-
-<img alt="$(q_{comp}^I )_{\alpha\beta}^l = \int_0^\infty r^l \left( \varphi_{n_\alpha l_\alpha } (r) \varphi_{n_\beta l_\beta } (r)- \tilde{\varphi}_{n_\alpha l_\alpha } (r) \tilde{\varphi}_{n_\beta l_\beta } (r) \right) dr$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/372a5217d6536e226cf320e63a95bf77.svg?invert_in_darkmode&sanitize=true" align=middle width="430.833645pt" height="28.2282pt"/>
-
-</center>
-
-<center>
-
-<img alt="$(v_g^I )^l =\frac{4\sqrt{2\pi}}{ (2l+1)(2l+1)!! \sigma_I^{2l+1} }$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/13f02fbbfa62b0975ff9313c9bd5ce5d.svg?invert_in_darkmode&sanitize=true" align=middle width="172.963395pt" height="33.20526pt"/>
-
-</center>
-
-<center>
-
-<img alt="$\tau_{l_\alpha m_\alpha,l_\beta m_\beta}^{lm}= \int_0^{2\pi} \int_0^{\pi} T_{lm} (\theta,\phi) T_{l_\alpha m_\alpha } (\theta,\phi) T_{l_\beta m_\beta } (\theta,\phi)  \sin(\theta) d\theta d\phi$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aa22bd7b752349e96d6a8f4953dd5b90.svg?invert_in_darkmode&sanitize=true" align=middle width="452.729145pt" height="33.132pt"/>
-
-</center>
+$$\tau_{l_\alpha m_\alpha,l_\beta m_\beta}^{lm}= \int_0^{2\pi} \int_0^{\pi} T_{lm} (\theta,\phi) T_{l_\alpha m_\alpha } (\theta,\phi) T_{l_\beta m_\beta } (\theta,\phi)  \sin(\theta) d\theta d\phi$$
 
 ### Exchange-Correlation Potentials
 
