@@ -574,7 +574,7 @@ The final three terms are the energies that contain the core
 densities
 
 
-$$E_{valence-core}=\sum_i\sum_I\sum_{\alpha \beta}<\tilde{\psi}_i|\tilde{p}_\alpha^I >  (V_{valence-core})_{\alpha \beta}^I <\tilde{p}_\beta^I|\tilde{\psi}_i >$$
+$$E_{valence-core}=\sum_{i}\sum_{I}\sum_{\alpha \beta}<\tilde{\psi}_{i} | \tilde{p}_{\alpha}^{I} >  (V_{valence-core})_{\alpha \beta}^{I} <\tilde{p}_\beta^{I} | \tilde{\psi}_{i} >$$
 
 
 $$E_{kinetic-core}=\sum_c \int_0^\infty [ (\varphi_{n_c l_c}^I (r))^' (\varphi_{n_c l_c}^I (r))^' + l_c (l_c+1)  \frac{\varphi_{n_c l_c}^I (r) \varphi_{n_c l_c}^I (r)}{r^2} ]  dr$$
