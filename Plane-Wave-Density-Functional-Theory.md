@@ -498,7 +498,8 @@ $$\tilde{E}_{Coulomb-pw} = \frac{\Omega}{2} \sum_{\mathbf{G}} \frac{4\pi}{|\math
 
 $$\tilde{E}_{xc-pw} = \frac{\Omega}{N_1 N_2 N_3} \sum_{\mathbf{r}} \tilde{\rho}(\mathbf{r}) \epsilon_{xc}(\tilde{\rho}(\mathbf{r}))$$
 
-$$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\ + \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2 $$
+$$E_{ion-ion} = \frac{1}{2\Omega} \sum_{\mathbf{G}} \frac{4\pi}{|\mathbf{G}|^2} \exp(\frac{|\mathbf{G}|^2}{4\epsilon}) \sum_{I,J} Z_I \exp (-i \mathbf{G} \cdot \mathbf{R}_I) Z_J \exp ( -i  \mathbf{G} \cdot \mathbf{R}_J) \\ + \frac{1}{2}\sum_{\mathbf{a}} \sum_{I,J \in |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} Z_I Z_J \frac{erf(\epsilon |\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|)}{|\mathbf{R}_I-\mathbf{R}_J+\mathbf{a}|} - \frac{\epsilon}{\pi}\sum_I Z_I^2 +  $$
+$$ - \frac{\pi}{2\epsilon^2\Omega} \left( \sum_I Z_I \right)^2 $$
 
 The local potential in the $\tilde{E}_{vlocal-pw}$ term is the Fourier
 transform of
@@ -545,38 +546,25 @@ $$E_{cmp-pw}= \Omega \sum_{\mathbf{G} \neq 0} \frac{4\pi}{|\mathbf{G}|^2} \rho_{
 
 In the first two formulas the first terms are computed using plane-waves
 and the second terms are computed using Gaussian two center integrals.
-The smooth local potential in the <img alt="$E_{cmp-vloc}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f662a7095d0a4f4c7567d46cf7ceda31.svg?invert_in_darkmode&sanitize=true" align=middle width="70.0392pt" height="22.38192pt"/> term is the Fourier
+The smooth local potential in the $E_{cmp-vloc}$ term is the Fourier
 transform
 of
 
-<center>
-
-<img alt="$\tilde{V}_{local}(\mathbf{r})=- \sum_I Z_I    \frac{ erf( \frac{ |\mathbf{r}-\mathbf{R}_I | }{\tilde{\sigma}_I })} {|r-R_I |}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/1a0d812242e714c4218fa7b300898302.svg?invert_in_darkmode&sanitize=true" align=middle width="216.355095pt" height="48.96771pt"/>
-
-</center>
+$$\tilde{V}_{local}(\mathbf{r})=- \sum_I Z_I    \frac{ erf( \frac{ |\mathbf{r}-\mathbf{R}_I | }{\tilde{\sigma}_I })} {|r-R_I |}$$
 
 The stiff and smooth compensation charge densities in the above formula
 are
 
-<center>
+$$\rho_{cmp}(r)=\sum_I\sum_{lm} Q_{lm}^I g_{lm}^(\sigma_I ) (r-R_I )$$
 
-<img alt="$\rho_{cmp}(r)=\sum_I\sum_{lm} Q_{lm}^I g_{lm}^(\sigma_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3eb755504671afe017d10c089812abf5.svg?invert_in_darkmode&sanitize=true" align=middle width="278.545245pt" height="34.27314pt"/>
+$$\tilde{\rho}_{cmp}(r)=\sum_I \sum_{lm} Q_{lm}^I g_{lm}^(\tilde{\sigma}_I ) (r-R_I )$$
 
-</center>
-
-<center>
-
-<img alt="$\tilde{\rho}_{cmp}(r)=\sum_I \sum_{lm} Q_{lm}^I g_{lm}^(\tilde{\sigma}_I ) (r-R_I )$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/82d5c2a76f9e68c2d3683cbb2e6a9017.svg?invert_in_darkmode&sanitize=true" align=middle width="278.611245pt" height="34.27314pt"/>
-
-</center>
 
 where
 
-<center>
 
-<img alt="$Q_{lm}^I = \sum_i \sum_{\alpha\beta} &lt;\tilde{\psi}_i|\tilde{p}_\alpha^I &gt; &lt;\tilde{p}_\beta^I|\tilde{\psi}_i &gt;  \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} (q_{comp}^I )_{\alpha\beta}^l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/22f28431631b00f6b1445d5c2f15d179.svg?invert_in_darkmode&sanitize=true" align=middle width="410.314245pt" height="30.55107pt"/>
+$$Q_{lm}^I = \sum_i \sum_{\alpha\beta} &lt;\tilde{\psi}_i|\tilde{p}_\alpha^I > <\tilde{p}_\beta^I|\tilde{\psi}_i >  \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} (q_{comp}^I )_{\alpha\beta}^l$$
 
-</center>
 
 The decay parameter <img alt="$\sigma_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c034260f882e456bbf355fe7fdafe10.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="14.10255pt"/> is defined the same as above, and
 <img alt="$\tilde{\sigma}_I$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/868716a1beb2c79093e4eceb0dd3946e.svg?invert_in_darkmode&sanitize=true" align=middle width="16.053345pt" height="21.87504pt"/> is defined to be smooth enough in order that ρ̃\_cmp (r) and <img alt="$\tilde{V}_{local}(r)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/408502d1bcbe2ef8af49657dd00ed880.svg?invert_in_darkmode&sanitize=true" align=middle width="58.93503pt" height="30.18576pt"/> can readily be expanded in
