@@ -3038,9 +3038,14 @@ $$\begin{matrix}\vec{R}_I^{t+\Delta t} \leftarrow 2 \vec{R}_I^{t} - \vec{R}_I^{t
 
 In this molecular dynamic procedure we have to know variational
 derivative  
+
 $$\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}$$
-and the matrix $\Lambda_{ij,\sigma}$. The variational derivative
+
+and the matrix $\Lambda_{ij,\sigma}$.  
+The variational derivative
+
 $$\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}$$
+
 can be analytically found and is  
 
 $$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}  = -\frac{1}{2} \nabla^2 \psi_{i,\sigma}(\vec{r}) \\  + \int d\vec{r^{\prime}} W_{ext}(\vec{r},\vec{r^{\prime}}) \psi_{i,\sigma}(\vec{r^{\prime}}) \\  + \int d\vec{r^{\prime}} \frac{n(\vec{r^{\prime}})}{|\vec{r}-\vec{r^{\prime}}|} \psi_{i,\sigma}(\vec{r})\\  + \mu_{xc}^{\sigma}(\vec{r}) \psi_{i,\sigma}(\vec{r}) \\  \equiv \hat{H} \psi_{i,\sigma} \end{align}$$
