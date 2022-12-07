@@ -1986,8 +1986,9 @@ $$s\left(r_{ij},r_{0}\right) =\sum_{i,j}\xi_{ij}$$
 
 where the summation over $i$ and $j$ runs over two types of atoms,
 $\xi_{ij}$ is the *weighting function*, and $r_{0}$ is the cut-off
-distance. In the standard procedure for computing the coordination
-number, $\xi_{ij}$ =1 if $r_{ij}<r_{0}$, otherwise 
+distance.
+In the standard procedure for computing the coordination
+number, $\xi_{ij}$ =1 if $r_{ij} < r_0$, otherwise 
 $\xi_{ij}$ =0,
 implying that $\xi_{ij}$ is not continuous when 
 $r_{ij}=r_{0}$. To
@@ -2019,9 +2020,9 @@ its width is controlled by the parameter $\frac{1}{n}$. Large and
 small values of $n$ respectively correspond to sharp and soft
 transitions at $r_{ij} = r_{0}$. 
 Furthermore $\xi_{ij}$ should
-approach 1 and 0 when \(r_{ij} < 0\)
+approach 1 and 0 when $r_{ij} < 0$
 and
-\(r_{ij} < r_0 \)
+$r_{ij} < r_0 $
 respectively. In practice 
 $n$ =6-10 Å 
 $^{-1}$. 
