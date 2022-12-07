@@ -3037,10 +3037,10 @@ $$\begin{matrix}\psi_{i,\sigma}^{t+ \Delta t} \leftarrow 2 \psi_{i,\sigma}^{t} -
 $$\begin{matrix}\vec{R}_I^{t+\Delta t} \leftarrow 2 \vec{R}_I^{t} - \vec{R}_I^{t-\Delta t} + \frac{(\Delta t)^2}{M_I} \frac{\partial E}{\partial \vec{R}_I}\end{matrix}$$
 
 In this molecular dynamic procedure we have to know variational
-derivative
-$$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
-and the matrix <img alt="$\Lambda_{ij,\sigma}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6bfbdae12ad4ca99f779237e04cd6148.svg?invert_in_darkmode&sanitize=true" align=middle width="33.272745pt" height="22.38192pt"/>. The variational derivative
-$$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}\end{align}$$
+derivative  
+$$\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}$$
+and the matrix $\Lambda_{ij,\sigma}$". The variational derivative
+$$\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}$$
 can be analytically found and is  
 
 $$\begin{align}\frac{\delta E}{\delta \psi_{i,\sigma}^{*}}  = -\frac{1}{2} \nabla^2 \psi_{i,\sigma}(\vec{r}) \\  + \int d\vec{r^{\prime}} W_{ext}(\vec{r},\vec{r^{\prime}}) \psi_{i,\sigma}(\vec{r^{\prime}}) \\  + \int d\vec{r^{\prime}} \frac{n(\vec{r^{\prime}})}{|\vec{r}-\vec{r^{\prime}}|} \psi_{i,\sigma}(\vec{r})\\  + \mu_{xc}^{\sigma}(\vec{r}) \psi_{i,\sigma}(\vec{r}) \\  \equiv \hat{H} \psi_{i,\sigma} \end{align}$$
