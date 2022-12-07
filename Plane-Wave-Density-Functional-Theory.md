@@ -577,7 +577,7 @@ densities
 $$E_{valence-core}=\sum_{i}\sum_{I}\sum_{\alpha \beta}<\tilde{\psi}_{i} | \tilde{p}_{\alpha}^{I} >  (V_{valence-core})_{\alpha \beta}^{I} <\tilde{p}_\beta^{I} | \tilde{\psi}_{i} >$$
 
 
-$$E_{kinetic-core}=\sum_c \int_0^\infty [ (\varphi_{n_c l_c}^I (r))^' (\varphi_{n_c l_c}^I (r))^' + l_c (l_c+1)  \frac{\varphi_{n_c l_c}^I (r) \varphi_{n_c l_c}^I (r)}{r^2} ]  dr$$
+$$E_{kinetic-core}=\sum_c \int_0^\infty \left[ (\varphi_{n_c l_c}^I (r))^{'} (\varphi_{n_c l_c}^{I} (r))^{'} + l_c (l_c+1)  \frac{\varphi_{n_c l_c}^{I} (r) \varphi_{n_c l_c}^{I} (r)}{r^{2}} \right]  dr$$
 
 $$E_{ion-core}= \sum_I \frac{1}{2} \iint \frac{\rho_c^{I} (r) \rho_c^{I} (r')}{|r-r'|}  drdr^{'} - \int  \frac{\rho_c^{I} (r)}{|r|}  (Z_I+Z_I^{core} ) dr$$
 
