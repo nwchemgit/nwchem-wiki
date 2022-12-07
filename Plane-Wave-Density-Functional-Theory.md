@@ -3921,7 +3921,7 @@ Angs.
 
 <center>
 
-$_3$Cl $\rightarrow$ CH$_3$+Cl
+CH<sub>3</sub>Cl $\rightarrow$ CH<sub>3</sub><sup>+</sup> + Cl<sup>-</sup>
 can be found in the attached pdf
 ([nwchem-new-pmf.pdf](nwchem-new-pmf.pdf))
 
