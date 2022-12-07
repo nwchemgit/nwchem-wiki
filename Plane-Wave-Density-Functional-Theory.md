@@ -567,7 +567,7 @@ $$Q_{lm}^I = \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_\alpha^I > <\ti
 
 
 The decay parameter $\sigma_I$ is defined the same as above, and
-$\tilde{\sigma}_I$ is defined to be smooth enough in order that ρ̃<sub>cmp<\sub>(r) and $\tilde{V}_{local}(r)$ can readily be expanded in
+$\tilde{\sigma}_{I}$ is defined to be smooth enough in order that ρ̃<sub>cmp</sub>(r) and $\tilde{V}_{local}(r)$ can readily be expanded in
 terms of plane-waves.
 
 The final three terms are the energies that contain the core
