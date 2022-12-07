@@ -298,10 +298,10 @@ block.
     orbitals
   - `output_wavefunctions` - name of the file that will contain the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass \(\mu\)
+  - `fake_mass` - value for the electronic fake mass $\mu$
     This parameter is not presently used in a conjugate gradient
     simulation.
-  - `time_step` - value for the time step \(\Delta t\). This parameter
+  - `time_step` - value for the time step $\Delta t$. This parameter
     is not presently used in a conjugate gradient simulation.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
@@ -1574,9 +1574,9 @@ The following list describes the input for the Car-Parrinello sub-block.
     orbital velocities.
   - `output_v_wavefunctions` - name of the file that will contain the
     one-electron orbital velocities at the end of the run.
-  - `fake_mass` - value for the electronic fake mass (\(\mu\) ).
+  - `fake_mass` - value for the electronic fake mass ($\mu$ ).
   - `time_step` - value for the Verlet integration time step
-    (\(Delta t\)).
+    ($Delta t$).
   - `inner_iteration` - number of iterations between the printing out of
     energies.
   - `outer_iteration` - number of outer iterations
@@ -1608,13 +1608,13 @@ The following list describes the input for the Car-Parrinello sub-block.
     dynamics. See section -sec:pspw_nose- for a description of the
     parameters. Note that the Temperature subblock is just a reordering
     of the Nose-Hoover subblock.
-      - `Period_electron` \(\equiv P_{electron}\) - estimated period for
+      - `Period_electron` $\equiv P_{electron}$ - estimated period for
         fictitious electron thermostat.
-      - `Temperature_electron` \(\equiv T_{electron}\) - temperature for
+      - `Temperature_electron` $\equiv T_{electron}$ - temperature for
         fictitious electron motion
-      - `Period_ion` \(\equiv P_{ion}\) - estimated period for ionic
+      - `Period_ion` $\equiv P_{ion}$ - estimated period for ionic
         thermostat
-      - `Temperature_ion` \(\equiv T_{ion}\) - temperature for ion
+      - `Temperature_ion` $\equiv T_{ion}$ - temperature for ion
         motion
       - `Chainlength_electron` - number of electron thermostat chains
       - `Chainlength_ion` - number of ion thermostat chains
@@ -1623,9 +1623,9 @@ The following list describes the input for the Car-Parrinello sub-block.
     annealing to work the Nose-Hoover subblock needs to be specified.
     The initial temperature are taken from the Nose-Hoover subblock. See
     section -sec:pspw_nose- for a description of the parameters.
-      - `sa_scale_c` \(\equiv \tau_{electron}\) - decay rate in atomic
+      - `sa_scale_c` $\equiv \tau_{electron}$ - decay rate in atomic
         units for electronic temperature.
-      - `sa_scale_r` \(\equiv \tau_{ionic}\) - decay rate in atomic
+      - `sa_scale_r` $\equiv \tau_{ionic}$ - decay rate in atomic
         units for the ionic temperature.  
   - `xyz_filename` - name of the XYZ motion file generated
   - `emotion_filename` - name of the emotion motion file. See section
@@ -1890,7 +1890,7 @@ $W(t)=0$
 and therfore there is no bias. $T_{tempered}=\infty$
 corresponds to standard metadynamics since in this case
 $W(t)=W_0$=constant. A positive, finite value of $T_{tempered}$ (eg.
-$T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  \(0 < W(t)<= W_0\).
+$T_{tempered}$ >=1500 K) corresponds to *well-tempered* metadynamics in which  $0 < W(t)<= W_0$.
 
 For sufficiently large $t$, the history potential
 $V_{meta}\left(\mathbf{s},t\right)$ will nearly flatten the free energy
@@ -1974,7 +1974,7 @@ $$s\left(r_{ij}\right) = \left \vert \mathbf{r}_{i}-\mathbf{r}_j\right\vert = r_
 
 #### Angle Collective Variable
 
-This describes the bond angle formed at $i$ by the triplet \(<ijk>\)
+This describes the bond angle formed at $i$ by the triplet $<ijk>$
 
 $$s\left(r_{ij},r_{ik}\right) = \frac{\pmb{r}_{ij}\cdot\pmb{r}_{ik}}{r_{ij}r_{ik}}$$
 
@@ -2000,7 +2000,7 @@ $$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}
 
 where $n$ and $m$ are integers (m > n) chosen such that
 $\xi_{ij}\approx 1$ when
-\(r_{ij}<r_{0}\)  and
+$r_{ij}<r_{0}$  and
 $\xi_{ij}\rightarrow 0$ when $r_{ij}$ is much larger than $r_{0}$.
 For example, the parameters of the O-H coordination in water is well
 described by $r_{0}$ =1.6 Å, 
@@ -2124,8 +2124,8 @@ sub-block.
     orbitals
   - `output_wavefunctions` - name of the file tha will contain the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass \(\mu\)
-  - `time_step` - value for the time step \(Delta t\).
+  - `fake_mass` - value for the electronic fake mass $\mu$
+  - `time_step` - value for the time step $Delta t$.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
   - `outer_iteration` - number of outer iterations
@@ -2591,7 +2591,7 @@ number, <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwc
 state.
 
 For example to define a pseudopotential for the Neon atom in the
-\(1s^2 2s^2 2p^6\) state could have the block
+$1s^2 2s^2 2p^6$ state could have the block
 ```
 ATOMIC_FILLING: 1 2   
  1 s 2.0 #core state - 1s^2   
@@ -2612,9 +2612,9 @@ could be used for a pseudopotential with no valence electrons.
 
 This optional block specifies the cutoff distances used to match the
 all-electron atom to the pseudopotential atom. For Hamann
-pseudopotentials \(r_{cut}(l)\) defines the distance where the
+pseudopotentials $r_{cut}(l)$ defines the distance where the
 all-electron potential is matched to the pseudopotential, and for
-Troullier-Martins pseudopotentials \(r_{cut}(l)\) defines the distance
+Troullier-Martins pseudopotentials $r_{cut}(l)$ defines the distance
 where the all-electron orbital is matched to the pseudowavefunctions.
 Thus the definition of the radii depends on the type of pseudopotential.
 The cutoff radii used in Hamann pseudopotentials will be smaller than
@@ -2653,7 +2653,7 @@ to dramatically improve results for systems containing alkali and
 transition metal atoms.
 
 The implementation in the PSPW module defines the semi-core density,
-\(\rho_{semicore}\), by
+$\rho_{semicore}$, by
 using the sixth-order polynomial
 
 $$\rho_{semicore}(r) = \begin{cases} \rho_{core}  \mbox{if } r \ge r_{semicore} \\ c_0 + c_3 r^3 + c_4 r^4 + c_5 r^5 + c_6 r^6  \mbox{if } r < r_{semicore} \end{cases}$$
@@ -2738,9 +2738,9 @@ The following list describes these keywords.
     orbitals
   - `output_wavefunctions` - name of the file that will contain the
     one-electron orbitals at the end of the run.
-  - `fake_mass` - value for the electronic fake mass \(\mu\). This
+  - `fake_mass` - value for the electronic fake mass $\mu$. This
     parameter is not presently used in a conjugate gradient simulation
-  - `time_step` - value for the time step (<img alt="$\Delta t$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5a63739e01952f6a63389340c037ae29.svg?invert_in_darkmode&sanitize=true" align=middle width="19.56141pt" height="22.38192pt"/>). This parameter
+  - `time_step` - value for the time step ($\Delta t$). This parameter
     is not presently used in a conjugate gradient simulation.
   - `inner_iteration` - number of iterations between the printing out of
     energies and tolerances
