@@ -1999,8 +1999,7 @@ is
 $$\xi_{ij} = \frac{1-\left(r_{ij}/r_{0}\right)^n}{1-\left(r_{ij}/r_{0}\right)^m}$$
 
 where $n$ and $m$ are integers (m > n) chosen such that
-$\xi_{ij}\approx 1$ when
-$r_{ij}<r_{0}$  and
+$\xi_{ij}\approx 1$ when $r_{ij} < r_0$  and
 $\xi_{ij}\rightarrow 0$ when $r_{ij}$ is much larger than $r_{0}$.
 For example, the parameters of the O-H coordination in water is well
 described by $r_{0}$ =1.6 Å, 
