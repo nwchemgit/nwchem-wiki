@@ -1609,13 +1609,13 @@ The following list describes the input for the Car-Parrinello sub-block.
     dynamics. See section -sec:pspw_nose- for a description of the
     parameters. Note that the Temperature subblock is just a reordering
     of the Nose-Hoover subblock.
-      - `Period_electron` \(\equiv P_{electron}\) - estimated period for
+      - `Period_electron` $\equiv P_{electron}$ - estimated period for
         fictitious electron thermostat.
-      - `Temperature_electron` \(\equiv T_{electron}\) - temperature for
+      - `Temperature_electron` $\equiv T_{electron}$ - temperature for
         fictitious electron motion
-      - `Period_ion` \(\equiv P_{ion}\) - estimated period for ionic
+      - `Period_ion` $\equiv P_{ion}$ - estimated period for ionic
         thermostat
-      - `Temperature_ion` \(\equiv T_{ion}\) - temperature for ion
+      - `Temperature_ion` $\equiv T_{ion}$ - temperature for ion
         motion
       - `Chainlength_electron` - number of electron thermostat chains
       - `Chainlength_ion` - number of ion thermostat chains
@@ -1624,9 +1624,9 @@ The following list describes the input for the Car-Parrinello sub-block.
     annealing to work the Nose-Hoover subblock needs to be specified.
     The initial temperature are taken from the Nose-Hoover subblock. See
     section -sec:pspw_nose- for a description of the parameters.
-      - `sa_scale_c` \(\equiv \tau_{electron}\) - decay rate in atomic
+      - `sa_scale_c` $\equiv \tau_{electron}$ - decay rate in atomic
         units for electronic temperature.
-      - `sa_scale_r` \(\equiv \tau_{ionic}\) - decay rate in atomic
+      - `sa_scale_r` $\equiv \tau_{ionic}$ - decay rate in atomic
         units for the ionic temperature.  
   - `xyz_filename` - name of the XYZ motion file generated
   - `emotion_filename` - name of the emotion motion file. See section
