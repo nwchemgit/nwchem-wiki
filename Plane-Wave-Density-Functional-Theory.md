@@ -2991,7 +2991,7 @@ $$\begin{align}KE \left ( \bigl[ \psi_{i,\sigma}(\vec{r}) \bigr] \right ) = \sum
 Given this kinetic energy the constrained equations of motion are found
 by taking the first variation of the auxiliary Lagrangian.
 
-$$\begin{align} = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [ \left \bigl[ \psi_{i,\sigma}(\vec{r}) \right \bigr] , \left \bigl \vec{R}_I \right \bigr] \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )\end{align}$$
+$$ L = \sum_{i,\sigma}^{occ} \int d\vec{r}\ \mu \left | \dot{\psi}_{i,\sigma}(\vec{r}) \right | ^2;     + \frac{1}{2} \sum_{I} M_I \left | \dot{\vec{R}}_{I} \right | ^2 - E \left [  \bigl[ \psi_{i,\sigma}(\vec{r}) \right \bigr] , \bigl[ \vec{R}_I \right \bigr] \right ] \\ + \sum_{ij,\sigma} \Lambda_{ij,\sigma} \left ( \int d\vec{r}\ \psi_{i,\sigma}^{*}(\vec{r}) \psi_{j,\sigma}(\vec{r}) - \delta_{ij\sigma} \right )$$
 
 Which generates a dynamics for the wavefunctions
 $\psi_{i,\sigma}(\vec{r})$ and atoms positions $\vec{R}_I$ through
@@ -3063,7 +3063,8 @@ variables $x_e$ and $x_R$ are added to the simulation by adding the
 auxiliary energy functionals to the total
 energy.
 
-$$\begin{align} ION\_{THERMOSTAT}(x_R)  = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R \\ ELECTRON\_{THERMOSTAT}(x_e)  = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e \end{align}$$
+$$ ION_{THERMOSTAT}(x_R)  = \frac{1}{2} Q_R \dot{x_R} + E_{R0}x_R$$
+$$ELECTRON_{THERMOSTAT}(x_e)  = \frac{1}{2} Q_e \dot{x_e} + E_{e0}x_e $$
 
 In these equations, the average kinetic energy for the ions is
 
@@ -3089,7 +3090,8 @@ $Q_e$, and $Q_R$ should be made such that the period of oscillating
 thermostats should be chosen larger than the typical time scale for the
 dynamical events of interest but shorter than the simulation time.
 
-$$\begin{align}P_{ion}  = 2\pi \sqrt{\frac{Q_R}{4E_{R0}}}\\P_{electron}  = 2\pi \sqrt{\frac{Q_e}{4E_{e0}}}\end{align}$$
+$$P_{ion}  = 2\pi \sqrt{\frac{Q_R}{4E_{R0}}}$$
+$$P_{electron}  = 2\pi \sqrt{\frac{Q_e}{4E_{e0}}}$$
 
 where $P_{ion}$ and $P_{electron}$ are the periods of oscillation
 for the ionic and fictitious electronic thermostats.
@@ -3097,7 +3099,8 @@ for the ionic and fictitious electronic thermostats.
 In simulated annealing simulations the electronic and ionic Temperatures
 are scaled according to an exponential cooling schedule,
 
-$$\begin{align}T_e(t)  = T_e^0 \exp^{-\frac{t}{\tau_e}}\\T_{ionic}(t)  = T_{ionic}^0 \exp^{-\frac{t}{\tau_{ionic}}} \end{align}$$
+$$T_e(t)  = T_e^0 \exp^{-\frac{t}{\tau_e}}$$
+$$T_{ionic}(t)  = T_{ionic}^0 \exp^{-\frac{t}{\tau_{ionic}}}$$
 
 where $T_e^0$ and $T_{ionic}^0$ are the initial temperatures, and
 $\tau_e$ and $\tau_{ionic}$ are the cooling rates in atomic units.
