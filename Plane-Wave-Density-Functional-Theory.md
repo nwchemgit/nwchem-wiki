@@ -459,7 +459,7 @@ which can be represented by fairly small plane-wave basis. The
 transformation $T$ is defined using a local PAW basis, which consists
 of atomic orbitals, $\varphi{\alpha}^I(\mathbf{r})$, 
 smooth atomic
-orbitals, $\tilde{\varphi}<sub>&alpha;</sub><sup>I</sup>(**r**)  which coincide with
+orbitals, $\tilde{\varphi}$<sub>&alpha;</sub><sup>I</sup>(**r**)  which coincide with
 the atomic orbitals outside a defined atomic sphere, and projector
 functions, $p_{\alpha}^I(\mathbf{r})$. Where I is the atomic index and
 α is the orbital index. The projector functions are constructed such
