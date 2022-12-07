@@ -3672,8 +3672,8 @@ CCl<sub>3</sub>SH + CH<sub>4</sub> $\rightarrow$ CH<sub>3</sub>SH + CCl<sub>3</s
 
 </center>
 
-Un-optimized geometries for CCl$_3$SH, CH$_3$SH, CCl$_3$H and
-CH$_4$ which are needed to design your simulations are contained in
+Un-optimized geometries for CCl<sub>3</sub>SH, CH<sub>3</sub>SH, CCl<sub>3</sub>H and
+CH<sub>4</sub> which are needed to design your simulations are contained in
 the file
 [Media:thermodynamics.xyz](thermodynamics.xyz). You
 will also need to calculate the energies for the H, C, S, and Cl atoms
@@ -3684,7 +3684,7 @@ of the total energy and a thermal correction to the enthalpy. A good
 estimate for the thermal correction to the enthalpy can be obtained from
 a frequency calculation, i.e.
 
-H = E + H$_{correction}$
+H = E + H<sub>correction</sub>
 
 Thermodynamic output from a frequency
 calculation:
