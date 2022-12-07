@@ -1,5 +1,4 @@
 ##### Contents  
-$\equiv P_{electron}$
 * [1 Pseudopotential plane-wave density functional theory (NWPW)](#pseudopotential-plane-wave-density-functional-theory-nwpw)
    - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks-gamma-point-calculations)
       - [1.1.1 PAW Potentials](#paw-potentials) 
