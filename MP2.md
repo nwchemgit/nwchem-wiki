@@ -379,7 +379,7 @@ occupied orbitals in the *(occ vir|fit)* three-center integrals to be
 produced at a time. If this entry is less than the number of occupied
 orbitals in the system, the transformation will require multiple passes
 through the two-electron integrals. The memory requirements of this
-stage are two global arrays of dimension *<batch size> x vir x fit* with
+stage are two global arrays of dimension *`batch size` x vir x fit* with
 the "fit" dimension distributed across all processors (on shell-block
 boundaries). The compromise here is memory space versus multiple
 integral evaluations.
@@ -387,9 +387,9 @@ integral evaluations.
 The energy evaluation batch sizes are computed in the code from the
 number of occupied orbitals in the two sets of three-center integrals to
 be multiplied together to produce a matrix of approximate four-center
-integrals. Two blocks of integrals of dimension *(<batch isize> x vir)*
-and *(<batch jsize> x vir)* by fit are read in from disk and multiplied
-together to produce *<batch isize> <batch jsize> vir^2* approximate
+integrals. Two blocks of integrals of dimension *(`batch isize` x vir)*
+and *(`batch jsize` x vir)* by fit are read in from disk and multiplied
+together to produce *`batch isize` `batch jsize` vir^2* approximate
 integrals. The compromise here is performance of the distributed matrix
 multiplication (which requires large matrices) versus memory space.
 
@@ -422,7 +422,7 @@ help from the user. Therefore, it is unlikely that users will have any
 reason to specify values for these entries except when doing very
 particular performance measurements.
 
-The size of xf3ci:AO 1 batch size is the most important of the three, in
+The size of `xf3ci:AO 1 batch size` is the most important of the three, in
 terms of the effect on performance.
 
 Local memory usage in the first two steps of the transformation is
