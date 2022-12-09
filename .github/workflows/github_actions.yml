@@ -175,3 +175,20 @@ jobs:
         working-directory: mkdocs/nwchemgit.github.io
         run: |
             git log -2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+
+  NWChem_website_deploy:
+    if: |
+      github.event_name == 'schedule' ||
+      (!contains(github.event.head_commit.message, 'ci skip'))
+    needs: NWChem_website_update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+      
