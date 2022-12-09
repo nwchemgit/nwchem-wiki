@@ -1,5 +1,7 @@
 # Hybrid Calculations with ONIOM
 
+## Overview
+
 ONIOM is the hybrid method of Morokuma and co-workers that enables
 different levels of theory to be applied to different parts of a
 molecule/system and combined to produce a consistent energy expression.
@@ -92,9 +94,9 @@ are specified, then so must the other.
 
 The geometry and total charge of the full or real system should be
 specified as normal using the [geometry](Geometry) directive.
-If <img alt="$N_{model}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e739a8a9732a54838b9b1d5173730d5a.svg?invert_in_darkmode&sanitize=true" align=middle width="48.48327pt" height="22.38192pt"/> of the atoms are to be included in the model system,
+If $N_{model}$ of the atoms are to be included in the model system,
 then these should be specified first in the geometry. Similarly, in a
-three-layer calculation, if there are <img alt="$N_{inter}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/a0974a9c9e88110489b9327f7d294bd3.svg?invert_in_darkmode&sanitize=true" align=middle width="43.48179pt" height="22.38192pt"/> atoms to be included
+three-layer calculation, if there are $N_{inter}$ atoms to be included
 in the intermediate system, then these should also be arranged together
 at the beginning of the geometry. The implict assumption is that the
 model system is a subset of the intermediate system which is a subset of
@@ -104,7 +106,7 @@ Optionally, the total charge of the model and intermediate systems may
 be adjusted. The default is that all three systems have the same total
 charge.
 
-Example 1. A two-layer calculation on <img alt="$K^{+}(H_{2}O)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/12f4155c2cfe5fbf243abc21184651e5.svg?invert_in_darkmode&sanitize=true" align=middle width="72.67227pt" height="26.12412pt"/> taking the
+Example 1. A two-layer calculation on $K^{+}(H_{2}O)$ taking the
 potassium ion as the model system. Note that no bonds are broken so no
 link atoms are introduced. The real geometry would be specified with
 potassium (the model) first.
@@ -135,7 +137,7 @@ atoms (i and j), the scale factor (g) and optionally the tag of the link
 atom. Link atoms are placed along the vector connecting the the first to
 the second atom of the bond according to the equation
 
-<img alt="$\underline{R}_{link} = (1-g)\underline{R}_{1} + g*\underline{R}_{2}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ef8d3972c822c37484342b86b5ad27ab.svg?invert_in_darkmode&sanitize=true" align=middle width="191.996145pt" height="24.56553pt"/>
+$$\underline{R}_{link} = (1-g)\underline{R}_{1} + g*\underline{R}_{2}$$
 
 where *g* is the scale factor. If the scale factor is one, then the link
 atom is placed where the second atom was. More usually, the scale factor
@@ -147,13 +149,13 @@ length 1.528 Angstrøms) using a hydrogen link atom we will want a
 carbon-hydrogen bond length of about 1.084 Angstrøms, so the scale
 factor should be chosen as 1.084/1.528 ~ 0.709.
 
-Example 2. A calculation on acetaldehyde (<img alt="$H_{3}C-CHO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9615cbc1d27fcbf805188bee31d14ebc.svg?invert_in_darkmode&sanitize=true" align=middle width="94.68855pt" height="22.38192pt"/>) using aldehyde
-(<img alt="$H-CHO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/413f09d46c9fbfd640a837d6d746520f.svg?invert_in_darkmode&sanitize=true" align=middle width="75.76899pt" height="22.38192pt"/>) as the model system. The covalent bond between the two
+Example 2. A calculation on acetaldehyde ($H_{3}C-CHO$) using aldehyde
+($H-CHO$) as the model system. The covalent bond between the two
 carbon atoms is broken and a link atom must be introduced to replace the
 methyl group. The link atom is automatically generated -- all you need
 to do is specify the atoms in the model system that are also in the real
-system (here <img alt="$CHO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6437f0894a99729bcbb4f09453b64569.svg?invert_in_darkmode&sanitize=true" align=middle width="40.776615pt" height="22.38192pt"/>) and the broken bonds. Here is the geometry of
-acetaldehyde with the <img alt="$CHO$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6437f0894a99729bcbb4f09453b64569.svg?invert_in_darkmode&sanitize=true" align=middle width="40.776615pt" height="22.38192pt"/> of aldehyde first
+system (here $CHO$) and the broken bonds. Here is the geometry of
+acetaldehyde with the $CHO$ of aldehyde first
 ```
    geometry  
      C    -0.383    0.288    0.021  
@@ -295,7 +297,7 @@ calculations which you can then terminate.
 
 E.g., in a calculation on Fe(III) surrounded by some ligands, it is hard
 to converge the full (real) system from the atomic guess so as to obtain
-a <img alt="$d^5$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/81701ee85f8bb9d3d7757e8fb5463c7e.svg?invert_in_darkmode&sanitize=true" align=middle width="15.052125pt" height="26.70657pt"/> configuration for the iron atom since the *d* orbitals are
+a $d^5$ configuration for the iron atom since the *d* orbitals are
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
@@ -327,8 +329,8 @@ A simple two-layer model changing just the wavefunction with one link
 atom.
 
 This reproduces the two-layer ONIOM (MP2:HF) result from Dapprich et al.
-for the reaction <img alt="$R-CH_{3} = R-CH_{2} + H$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9941ef20af8e4f201893a098776e7617.svg?invert_in_darkmode&sanitize=true" align=middle width="189.804945pt" height="22.38192pt"/> with <img alt="$R=CH_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/105147afab9baf8d8264b1624bf3eeee.svg?invert_in_darkmode&sanitize=true" align=middle width="67.45398pt" height="22.38192pt"/> using
-<img alt="$CH_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ae893ddc6a1df993f14669218c18b5e1.svg?invert_in_darkmode&sanitize=true" align=middle width="33.022275pt" height="22.38192pt"/> as the model. The geometries of <img alt="$R-CH_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/19809976b707de2a4a0c5e682e945a0e.svg?invert_in_darkmode&sanitize=true" align=middle width="65.62743pt" height="22.38192pt"/> and <img alt="$R-CH_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/930cb353b2d97e89745a01f4068b1d8d.svg?invert_in_darkmode&sanitize=true" align=middle width="65.62743pt" height="22.38192pt"/> are
+for the reaction $R-CH_{3} = R-CH_{2} + H$ with $R=CH_3$ using
+$CH_4$ as the model. The geometries of $R-CH_3$ and $R-CH_2$ are
 optimized at the DFT-B3LYP/6-311++G\*\* level of theory, and then ONIOM
 is used to compute the binding energy using UMP2 for the model system
 and HF for the real system. The results, including MP2 calculations on
@@ -350,12 +352,11 @@ two-layer model.
 
 </center>
 
-The following input first performs a calculation on <img alt="$CH_{3}-CH_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0a3697ccc48b9f13c6a21bc7897138f2.svg?invert_in_darkmode&sanitize=true" align=middle width="86.93421pt" height="22.38192pt"/>, and
-then on <img alt="$CH_{3}-CH_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/110844c6b36dfb26d1dabe5db2aea198.svg?invert_in_darkmode&sanitize=true" align=middle width="86.93421pt" height="22.38192pt"/>. Note that in the second calculation we cannot
+The following input first performs a calculation on $CH_{3}-CH_2$, and
+then on $CH_{3}-CH_3$. Note that in the second calculation we cannot
 use the full symmetry since we are breaking the C-C bond in forming the
 model system (the non-equivalence of the methyl groups is perhaps more
-apparent if we write
-<img alt="$R-CH_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/19809976b707de2a4a0c5e682e945a0e.svg?invert_in_darkmode&sanitize=true" align=middle width="65.62743pt" height="22.38192pt"/>).
+apparent if we write $R-CH_3$).
 ```
    start  
      
@@ -415,8 +416,8 @@ A two-layer model including modification of theory, basis, ECP and total
 charge and no link atoms.
 
 This input reproduces the ONIOM optimization and vibrational frequency
-calculation of <img alt="$Rh(CO)_{2}Cp$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8f6c655d6daa3150f91c0db87db43609.svg?invert_in_darkmode&sanitize=true" align=middle width="89.05941pt" height="24.56553pt"/> of Dapprich et al. The model system is
-<img alt="$Rh(CO)_{2}^{+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4689fc1148533f4fb945fc3e4de82f91.svg?invert_in_darkmode&sanitize=true" align=middle width="70.61835pt" height="28.25757pt"/>. The low theory is the Gaussian LANL2MB model
+calculation of $Rh(CO)_{2}Cp$ of Dapprich et al. The model system is
+$Rh(CO)_{2}^{+}$. The low theory is the Gaussian LANL2MB model
 (Hay-Wadt n+1 ECP with minimal basis on Rh, STO-3G on others) with SCF.
 The high theory is the Gaussian LANL2DZ model (another Hay-Wadt ECP with
 a DZ basis set on Rh, Dunning split valence on the other atoms) with

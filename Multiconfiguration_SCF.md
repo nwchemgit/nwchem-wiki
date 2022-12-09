@@ -1,5 +1,7 @@
 # MCSCF
 
+## Overview
+
 The NWChem multiconfiguration SCF (MCSCF) module can currently perform
 complete active space SCF (CASSCF) calculations with at most 20 active
 orbitals and about 500 basis

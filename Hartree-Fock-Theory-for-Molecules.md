@@ -1,5 +1,7 @@
 # Hartree-Fock
 
+## Overview
+
 The NWChem self-consistent field (SCF) module computes closed-shell
 restricted Hartree-Fock (RHF) wavefunctions, restricted high-spin
 open-shell Hartree-Fock (ROHF) wavefunctions, and spin-unrestricted

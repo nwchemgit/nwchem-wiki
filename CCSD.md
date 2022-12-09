@@ -1,5 +1,7 @@
 # Coupled Cluster Calculations
 
+## Overview
+
 The NWChem coupled cluster energy module is primarily the work of
 Alistair Rendell and Rika Kobayashi[1][2], with contributions from
 Bert de Jong, David Bernholdt and Edoardo Aprà[3].

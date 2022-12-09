@@ -1,5 +1,7 @@
 # MP2
 
+## Overview
+
 There are (at least) three algorithms within NWChem that compute the
 Møller-Plesset (or many-body) perturbation theory second-order
 correction[^1] to the Hartree-Fock energy (MP2). They vary in
