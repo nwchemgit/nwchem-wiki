@@ -4,12 +4,9 @@ Setting up QM/MM calculations for a new system for which classical force
 analog is not readily available would typically involve the following
 steps
 
-1.  [Generation of the proper PDB file
-    ](#generation-of-the-proper-pdf-file)
-2.  [Construction the fragment
-    file(s)](#generation-of-new-fragment-files)
-3.  [Creation of parameter file if new atom types were
-    defined](#generation-of-new-parameter-files)
+1.  [Generation of the proper PDB file](#generation-of-the-proper-pdb-file)
+2.  [Construction the fragment file(s)](#generation-of-new-fragment-files)
+3.  [Creation of parameter file if new atom types were defined](#generation-of-new-parameter-files)
 
 ## Generation of the proper PDB file
 
