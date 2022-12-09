@@ -1,5 +1,6 @@
-
 # Electrostatic potentials
+
+## Overview
 
 The NWChem Electrostatic Potential (ESP) module derives partial atomic
 charges that fit the quantum mechanical electrostatic potential on
