@@ -188,6 +188,9 @@ jobs:
       (!contains(github.event.head_commit.message, 'ci skip'))
     needs: NWChem_website_update
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
