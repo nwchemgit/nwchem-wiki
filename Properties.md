@@ -424,7 +424,7 @@ input Molden files, e.g.
 the `MOLDEN_NORM` option allows the renormalization of the basis set
 coefficients. By default, the coefficient values from input are not
 modified. Using the `JANPA` value coefficients are normalized following
-[JANPA](https://sourceforge.net/p/janpa/wiki/nwchem2molden/)'s
+[JANPA](https://janpa.sourceforge.net/)'s
 convention (where basis coefficients are normalized to unity), while the `NWCHEM` will produce coefficients normalized
 according to NWChem's convention. Using `MOLDEN_NORM` equal `NONE` will
 leave the input coefficients unmodified.  
@@ -449,7 +449,7 @@ be named `h2o.molden`
  
  task scf property
 ```
-Then, the resulting `h2o.molden` file can be post processed by Janpa with the following command
+Then, the resulting `h2o.molden` file can be post processed by [Janpa](https://janpa.sourceforge.net/) with the following command
 ```
 java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
