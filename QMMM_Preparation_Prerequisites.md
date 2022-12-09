@@ -1,7 +1,7 @@
 ----
 The necessary prerequisites for
 the preparation of topology and restart files for QM/MM simulations are:
-*Properly [http://www.wwpdb.org/docs.html formatted PDB file] for the system.
+*Properly formatted [PDB](http://www.wwpdb.org/docs.html)  file for the system.
 *Fragment Files (extension .frg)
 *Parameter Files (extension .par)
 
