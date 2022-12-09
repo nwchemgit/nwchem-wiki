@@ -1,6 +1,6 @@
 # NWChem Architecture
 
-As noted above, NWChem consists of independent modules that perform the
+As described in the [Getting Started](Getting-Started.md) section, NWChem consists of independent modules that perform the
 various functions of the code. Examples include the input parser,
 self-consistent field (SCF) energy, SCF analytic gradient, and density
 functional theory (DFT) energy modules. The independent NWChem modules
@@ -16,8 +16,8 @@ code will help in clarifying the logic behind the input requirements,
 especially when restarting jobs or performing multiple tasks within one
 job.
 
-As described above ([Input File
-Structure](Getting-Started.md#input-file-structure)), all
+As detailed in the section describing the ([input file
+structure](Getting-Started.md#input-file-structure)), all
 start-up directives are processed at the beginning of the job by the
 main program, and then the input module is invoked. Each input directive
 usually results in one or more entries being made in the database. When
