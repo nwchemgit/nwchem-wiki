@@ -1,5 +1,7 @@
 # Hessians
 
+## Overview
+
 This section relates to the computation of analytic hessians which are
 available for open and closed shell SCF, except ROHF and for closed
 shell and unrestricted open shell DFT [1]. Analytic hessians are not
