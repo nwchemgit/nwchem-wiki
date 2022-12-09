@@ -1,4 +1,6 @@
-## Vibrational frequencies
+# Vibrational frequencies
+
+## Overview
 
 The nuclear hessian which is used to compute the vibrational frequencies
 can be computed by finite difference for any ab initio wave-function
@@ -27,20 +29,20 @@ equal, the mass of the isotope with the longest half life was used.
 In addition, the vibrational analysis is given at the default standard
 temperature of 298.15 degrees.
 
-#  Vibrational Module Input
+##  Vibrational Module Input
 
 All input for the Vibrational Module is optional since the default
 definitions will compute the frequencies and IR intensities. The generic
 module input can begin with vib, freq, frequency and has the form:
 ```
- {freq || vib || frequency}  
-   [reuse [<string hessian_filename>]]  
-   [mass <integer lexical_index> <real new_mass>]  
-   [mass <string tag_identifier> <real new_mass>]  
-   [{temp || temperature} <integer number_of_temperatures> \  
-         <real temperature1 temperature2 ...>]  
-   [animate [<real step_size_for_animation>]]  
- end
+ {freq || vib || frequency}  
+   [reuse [<string hessian_filename>]]  
+   [mass <integer lexical_index> <real new_mass>]  
+   [mass <string tag_identifier> <real new_mass>]  
+   [{temp || temperature} <integer number_of_temperatures> \  
+         <real temperature1 temperature2 ...>]  
+   [animate [<real step_size_for_animation>]]  
+ end
 ```
 ### Hessian File Reuse
 
@@ -50,7 +52,7 @@ reuse in the module input block. If you have stored the hessian in an
 alternate place you may redirect the reuse directive to that file by
 specifying the path to that file.
 ```
- reuse /path_to_hessian_file
+ reuse /path_to_hessian_file
 ```
 This will reuse your saved Hessian data but one caveat is that the
 geometry specification at the point where the hessian is computed must
@@ -64,7 +66,7 @@ via the input.
 
 To modify the mass of a specific center you can simply use:
 ```
- mass 3 4.00260324
+ mass 3 4.00260324
 ```
 which will set the mass of center 3 to 4.00260324 AMUs. The lexical
 index of centers is determined by the geometry object.
@@ -72,7 +74,7 @@ index of centers is determined by the geometry object.
 To modify all Hydrogen atoms in a molecule you may use the tag based
 mechanism:
 ```
- mass hydrogen 2.014101779
+ mass hydrogen 2.014101779
 ```
 The mass redefinitions always start with the default masses and change
 the masses in the order given in the input. Care must be taken to change
@@ -88,15 +90,15 @@ invalidate the mass definitions of the previous input block. For
 example,
 ```
 freq  
-  reuse  
-  mass hydrogen 2.014101779  
+  reuse  
+  mass hydrogen 2.014101779  
 end  
-task scf frequencies  
+task scf frequencies  
 freq  
-  reuse  
-  mass oxygen 17.9991603  
+  reuse  
+  mass oxygen 17.9991603  
 end  
-task scf frequencies
+task scf frequencies
 ```
 will use the new mass for all hydrogens in the first frequency analysis.
 The mass of the oxygen atoms will be redefined in the second frequency
@@ -104,16 +106,16 @@ analysis but the hydrogen atoms will use the default mass. To get a
 modified oxygen and hydrogen analysis you would have to use:
 ```
 freq  
-  reuse  
-  mass hydrogen 2.014101779  
+  reuse  
+  mass hydrogen 2.014101779  
 end  
-task scf frequencies  
+task scf frequencies  
 freq  
-  reuse  
-  mass hydrogen 2.014101779  
-  mass oxygen 17.9991603  
+  reuse  
+  mass hydrogen 2.014101779  
+  mass oxygen 17.9991603  
 end  
-task scf frequencies
+task scf frequencies
 ```
 ### Temp or Temperature
 
@@ -123,13 +125,13 @@ temperature can be used to initiate this command.
 
 To modify the temperature of the computation you can simply use:
 ```
- temp 4 298.15 300.0 350.0 400.0
+ temp 4 298.15 300.0 350.0 400.0
 ```
 At this point, the temperatures are persistant and so the user must
 "reset" the temperature if the standard behavior is required after
 setting the temperatures in a previous "VIB" command, i.e.
 ```
- temp 1 298.15
+ temp 1 298.15
 ```
 ### Animation
 
@@ -143,7 +145,7 @@ direction of the mode vector, and finally back to the equilibrium
 geometry. By default these files are not generated. To activate this
 mechanism simply use the following input directive
 ```
- animate
+ animate
 ```
 anywhere in the frequency/vib input block.
 
@@ -152,7 +154,7 @@ anywhere in the frequency/vib input block.
 By default, the step size used is 0.15 a.u. which will give reliable
 animations for most systems. This can be changed via the input directive
 ```
- animate real <step_size>
+ animate real <step_size>
 ```
 where <step_size> is the real number that is the magnitude of each step
 along the eigenvector of each nuclear hessian mode in atomic units.
@@ -163,42 +165,42 @@ This example input deck will optimize the geometry for the given basis
 set, compute the frequencies for H<sub>2</sub>O, H<sub>2</sub>O at different
 temperatures, D<sub>2</sub>O, HDO, and TDO.
 ```
-start  h2o  
-title Water   
-geometry units au autosym  
-  O      0.00000000    0.00000000    0.00000000  
-  H      0.00000000    1.93042809   -1.10715266  
-  H      0.00000000   -1.93042809   -1.10715266  
+start  h2o  
+title Water   
+geometry units au autosym  
+  O      0.00000000    0.00000000    0.00000000  
+  H      0.00000000    1.93042809   -1.10715266  
+  H      0.00000000   -1.93042809   -1.10715266  
 end  
-basis noprint  
-  H library sto-3g   
-  O library sto-3g  
+basis noprint  
+  H library sto-3g   
+  O library sto-3g  
 end  
-scf; thresh 1e-6; end  
-driver; tight; end  
-task scf optimize  
+scf; thresh 1e-6; end  
+driver; tight; end  
+task scf optimize  
   
-scf; thresh 1e-8; print none; end  
-task scf freq   
-  
-freq  
- reuse; temp 4 298.15 300.0 350.0 400.0  
-end  
-task scf freq  
-  
-freq   
- reuse; mass H 2.014101779  
- temp 1 298.15  
-end  
-task scf freq  
+scf; thresh 1e-8; print none; end  
+task scf freq   
   
 freq  
- reuse; mass 2 2.014101779  
+ reuse; temp 4 298.15 300.0 350.0 400.0  
 end  
-task scf freq  
+task scf freq  
+  
+freq   
+ reuse; mass H 2.014101779  
+ temp 1 298.15  
+end  
+task scf freq  
   
 freq  
- reuse; mass 2 2.014101779 ; mass 3 3.01604927  
+ reuse; mass 2 2.014101779  
 end  
-task scf freq
+task scf freq  
+  
+freq  
+ reuse; mass 2 2.014101779 ; mass 3 3.01604927  
+end  
+task scf freq
 ```

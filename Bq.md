@@ -1,4 +1,8 @@
-Bq module provides a way to perform QM calculations in the presence of point charges or Bq's,  (as typically referred to in quantum chemistry community). 
+# Point charges
+
+## Overview
+
+The Bq module provides a way to perform QM calculations in the presence of point charges or Bq's,  (as typically referred to in quantum chemistry community). 
 Using Bq module versus  geometry block is a recommended way to include point charges in your calculations, in particular if number of charges are big.
 
 The format for including external point charges using the Bq module is shown below, supporting both explicit charge definition in the body of the block and/or loading from external files.

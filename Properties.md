@@ -1,5 +1,6 @@
-
 # Properties
+
+## Overview
 
 Properties can be calculated for both the Hartree-Fock and DFT wave
 functions. The properties that are available are:

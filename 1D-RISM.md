@@ -1,4 +1,8 @@
-1D-RISM module in NWChem provides description of solvated systems
+# 1-D RISM
+
+## Overview
+
+The 1D-RISM module in NWChem provides description of solvated systems
 following one-dimensional reference interaction site of model of
 Chandler and Anderson. Similar to ab-initio density-functional theory,
 1D-RISM can be thought of as an approach where discrete particle
