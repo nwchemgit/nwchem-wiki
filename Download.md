@@ -2,7 +2,7 @@
 
 ## Source Download
 
-NWChem source is available for download from
+The NWChem source is available for download from
 [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases)
 
 Compilation instructions can be found at this [link](Compiling-NWChem)
