@@ -1,3 +1,4 @@
+[TOC]
 # Gaussian Basis AIMD
 
 ## Overview
