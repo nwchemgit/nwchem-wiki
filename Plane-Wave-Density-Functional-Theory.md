@@ -2435,8 +2435,8 @@ NWPW
 END
 ```
 defines the local pseudopotential for the O^ MM atom , where
-<img alt="$Z_{ion}=-0.8476$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8c301378f33eb82930d006117829a286.svg?invert_in_darkmode&sanitize=true" align=middle width="111.366255pt" height="22.38192pt"/>, 
-<img alt="$n_{\sigma}=4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e56942592d9ad471b92a22dba2b133c6.svg?invert_in_darkmode&sanitize=true" align=middle width="48.74067pt" height="21.10812pt"/>, and <img alt="$r_c=0.7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9c3a2feed51f0f36f7a17124ccead504.svg?invert_in_darkmode&sanitize=true" align=middle width="56.881275pt" height="21.10812pt"/>. The following
+$Z_{ion}=-0.8476$, 
+$n_{\sigma}=4$, and $r_c=0.7$. The following
 input can be used to define the local pseudopotentials for all the MM
 atoms in the geometry block defined above
 ```
@@ -2585,8 +2585,8 @@ to define the pseudopotential. After the ATOMIC_FILLING: <ncore>
 <nvalence> line, the core states are listed (one per line), and then the
 valence states are listed (one per line). Each state contains two
 integer and a value. The first integer specifies the radial quantum
-number, <img alt="$n$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width="9.83004pt" height="14.10255pt"/>, the second integer specifies the angular momentum quantum
-number, <img alt="$l$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2f2322dff5bde89c37bcae4116fe20a8.svg?invert_in_darkmode&sanitize=true" align=middle width="5.2088685pt" height="22.74591pt"/>, and the third value specifies the occupation of the
+number, $n$, the second integer specifies the angular momentum quantum
+number, $l$, and the third value specifies the occupation of the
 state.
 
 For example to define a pseudopotential for the Neon atom in the
@@ -2597,7 +2597,7 @@ ATOMIC_FILLING: 1 2
  2 s 2.0 #valence state - 2s^2   
  2 p 6.0 #valence state - 2p^6
 ```
-for a pseudopotential with a <img alt="$2s$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b3b95a23e582b767082e556418815ee.svg?invert_in_darkmode&sanitize=true" align=middle width="15.865245pt" height="21.10812pt"/> and <img alt="$2p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/b647ff71634d36e3d4cecfae0ce1446d.svg?invert_in_darkmode&sanitize=true" align=middle width="16.428225pt" height="21.10812pt"/> valence electrons or the
+for a pseudopotential with a $2s$ and $2p$ valence electrons or the
 block
 ```
 ATOMIC_FILLING: 3 0   
@@ -3254,12 +3254,12 @@ be
    
  ...
 ```
-### Frequency calculation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer with LDA approximation
+### Frequency calculation of S<sub>2</sub> dimer with LDA approximation
 
 (input:[Media:s2-example3.nw](s2-example3.nw),
 output:[Media:s2-example3.nwout](s2-example3.nwout))
 
-In this example, the vibrational frequency of the S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using
+In this example, the vibrational frequency of the S<sub>2</sub> dimer using
 results generated from prior geometry optimization is calculated. Since
 most of the parameters are already stored in the run-time database the
 input is very simple.
@@ -3311,14 +3311,14 @@ generated
   ----------------------------------------------------------------------------  
  ...
 ```
-### Ab initio molecular dynamics simulation (Car-Parrinello) of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> dimer using the LDA approximation
+### Ab initio molecular dynamics simulation (Car-Parrinello) of S<sub>2</sub> dimer using the LDA approximation
 
 (input:[Media:s2-example4.nw](s2-example4.nw),
 output:[Media:s2-example4.nwout](s2-example4.nwout)
 [Media:s2-md.xyz](s2-md.xyz)
 [Media:s2-md.emotion.dat](s2-md.emotion.dat) )
 
-In this example, a constant energy Car-Parrinello simulation of S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
+   In this example, a constant energy Car-Parrinello simulation of S<sub>2</sub>
 dimer using LDA approximation is calculated. A brief introduction to the
 Car-Parrinello method can be found in
 [cpmd-lecture.pdf](cpmd-lecture.pdf)
@@ -3384,7 +3384,7 @@ i.e.,
  gnuplot> plot "s2-md.emotion","s2-md.emotion" using 1:3  
  gnuplot> 
 ```
-The following plot shows the Car-Parrinello <img alt="$^3\Sigma_g^-$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/2223ae97efb963660ddc1ec0e60d2d36.svg?invert_in_darkmode&sanitize=true" align=middle width="29.43798pt" height="26.70657pt"/> S<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>
+The following plot shows the Car-Parrinello $^3\Sigma_g^-$ S$_2$
 energy surface generated from the
 simulation.
 
@@ -3558,7 +3558,7 @@ The simulated annealing calculation in this example uses a constant
 temperature Car-Parrinello simulation with an exponential cooling
 schedule,
 
-<img alt="$T(t)=T_0e^{-t/\tau}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c85ce616a87e043e02bbcb4ca8004687.svg?invert_in_darkmode&sanitize=true" align=middle width="106.202745pt" height="29.12679pt"/>
+$$T(t)=T_0e^{-t/\tau}$$
 
 where T0 and τ are an initial temperature and a time scale of cooling,
 respectively. In the present calculations T0=3500K and τ=4.134e+4 au
@@ -3598,11 +3598,11 @@ effects, are included will the heat of formation from ab initio
 electronic structure methods be accurate to within one kcal/mol.
 Although one can now accurately calculate the heats of formation of
 molecules with up to 6 first row atoms, such high-level calculations are
-extremely demanding and scale computationally as <img alt="$N^7$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/3b9c3ee9199da80ec95872baf2648b4e.svg?invert_in_darkmode&sanitize=true" align=middle width="21.47871pt" height="26.70657pt"/> for <img alt="$N$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width="14.94405pt" height="22.38192pt"/> basis
+extremely demanding and scale computationally as $N^7$ for $N$ basis
 functions.
 
 Examples of these types of large errors are shown in the following
-Table, where the enthalpies of formation of CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH are calculated
+Table, where the enthalpies of formation of CCl$_3$SH are calculated
 by using atomization energies from different levels of ab initio
 theory.
 
@@ -3611,7 +3611,7 @@ theory.
 |            |             |           |            |             |           |
 | ---------- | ----------- | --------- | ---------- | ----------- | --------- |
 |            | MP2/cc-pVDZ | LDA/DZVP2 | BP91/DZVP2 | B3LYP/DZVP2 | G2 Theory |
-| ΔH <img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/> | \+4.9       | \-80.0    | \-2.6      | \+26.5      | \-13.0    |
+| ΔH $_f^o$ | \+4.9       | \-80.0    | \-2.6      | \+26.5      | \-13.0    |
 |  |
 
 Table 1: Standard enthalpy of formation (ΔH$_f^o$(298K) for
@@ -3646,8 +3646,8 @@ estimates based on atomization energies.
 
 
 
-CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H,
-ΔH<img alt="$_r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0a76558af80d8b34ac99d40ce5b8bc9f.svg?invert_in_darkmode&sanitize=true" align=middle width="6.4333665pt" height="14.10255pt"/>(calc).
+CCl$_3$SH + CH$_4$ $\rightarrow$ CH$_3$SH + CCl$_3$H,
+ΔH$_r$(calc).
 
 
 
@@ -3657,34 +3657,34 @@ at a consistent level of theory. The defining property of an isodesmic
 reaction that there are an equal number of like bonds on the left-hand
 and right-hand sides of the reaction helps to minimize the error in the
 calculation of the reaction energy. The enthalpy of formation of
-CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH can then be calculated by using Hess’s law with the
+CCl$_3$SH can then be calculated by using Hess’s law with the
 calculated enthalpy change and the experimentally known heats of
 formation of the other 3 species (see Table 3).
 
 
 
-ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH) = ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH)(exp) +
-ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H)(exp) - ΔH<img alt="$_f$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e84ab6c3c44c562e682dc11bb308e8f3.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="14.10255pt"/>(CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>)(exp)- ΔH<img alt="$_r$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0a76558af80d8b34ac99d40ce5b8bc9f.svg?invert_in_darkmode&sanitize=true" align=middle width="6.4333665pt" height="14.10255pt"/>(calc).
+ΔH$_f$(CCl$_3$SH) = ΔH$_f$(CH$_3$SH)(exp) +
+ΔH$_f$(CCl$_3$H)(exp) - ΔH$_f$(CH$_4$)(exp)- ΔH$_r$(calc).
 
 
 
 In this example, try to design and run NWPW simulations that can be used
-to estimate the enthalpy of formation for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH using its
+to estimate the enthalpy of formation for CCl$_3$SH using its
 atomization energy and using the reaction enthalpy of the isodesmic
 reaction and compare your results to Table 2. Be careful to make sure
 that you use the same cutoff energy for all the simulations (.e.g.
 cutoff 35.0). You might also try to estimate enthalpies of formation for
-CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH and CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH. Also try designing simulations that use
+CHCl$_2$SH and CH$_2$ClSH. Also try designing simulations that use
 the SCF, DFT, MP2, and TCE modules.
 
 
 
-CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH + CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H
+CCl$_3$SH + CH$_4$ $\rightarrow$ CH$_3$SH + CCl$_3$H
 
 
 
-Un-optimized geometries for CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH, CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H and
-CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> which are needed to design your simulations are contained in
+Un-optimized geometries for CCl$_3$SH, CH$_3$SH, CCl$_3$H and
+CH$_4$ which are needed to design your simulations are contained in
 the file
 [Media:thermodynamics.xyz](thermodynamics.xyz). You
 will also need to calculate the energies for the H, C, S, and Cl atoms
@@ -3695,7 +3695,7 @@ of the total energy and a thermal correction to the enthalpy. A good
 estimate for the thermal correction to the enthalpy can be obtained from
 a frequency calculation, i.e.
 
-H = E + H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
+H = E + H$_{correction}$
 
 Thermodynamic output from a frequency
 calculation:
@@ -3707,7 +3707,7 @@ Zero-Point correction to Energy  =   27.528 kcal/mol  (  0.043869 au)
 Thermal correction to Energy     =   29.329 kcal/mol  (  0.046739 au)
 ```
 The following line contains the value for
-H<img alt="$_{correction}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d07640e8892ddec9206d9f1ae6a1f2cc.svg?invert_in_darkmode&sanitize=true" align=middle width="61.39353pt" height="14.10255pt"/>
+H$_{correction}$
 ```
 Thermal correction to Enthalpy   =   29.922 kcal/mol  (  0.047683 au)
 
@@ -3727,13 +3727,13 @@ Cv (constant volume heat capacity) =    6.503 cal/mol-K
 | ------------ | ----------- | ----------- | ----------- | ----------- | ------------- | ---------- |
 | Compounds    | MP2/cc-pVDZ | LDA/DZVP2   | BP91/DZVP2  | B3LYP/DZVP2 | G2            | Experiment |
 |              | (isodesmic) | (isodesmic) | (isodesmic) | (isodesmic) | (atomization) |            |
-| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
-| CHCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
-| CH<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
-| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH   |             |             |             |             | \-4.76        | \-5.34     |
+| CCl$_3SH  | \-13.40     | \-11.86     | \-8.68      | \-7.64      | \-12.95       |            |
+| CHCl$_2$SH | \-11.48     | \-11.07     | \-8.66      | \-7.92      | \-11.52       |            |
+| CH$_2$ClSH | \-7.01      | \-6.66      | \-5.44      | \-5.20      | \-6.98        |            |
+| CH$_3$SH   |             |             |             |             | \-4.76        | \-5.34     |
 |  |
 
-Table 2: Gas-phase standard enthalpies of formation ( ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K))
+Table 2: Gas-phase standard enthalpies of formation ( ΔH$_f^o$(298K))
 in kcal/mol from isodesmic reactions and G2 Theory calculations taken
 from [3].
 
@@ -3743,17 +3743,17 @@ from [3].
 
 |                  |                  |
 | ---------------- | ---------------- |
-| Compounds        | ΔH<img alt="$_f^o$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0e16cbde2103f5bf61f317d716efe063.svg?invert_in_darkmode&sanitize=true" align=middle width="7.671147pt" height="21.80244pt"/>(298K) |
+| Compounds        | ΔH$_f^o$(298K) |
 | H                | 52.095           |
 | C                | 171.291          |
 | S                | 66.636           |
 | Cl               | 29.082           |
-| CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>        | \-24.59          |
-| CCl<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H       | \-24.65          |
-| CCl<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> | \-22.10          |
-| CClH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>       | \-19.32          |
-| CH<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>         | \-17.88          |
-| CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>SH       | \-5.34           |
+| CCl$_4$          | \-24.59          |
+| CCl$_3$H         | \-24.65          |
+| CCl$_2$H$_2$     | \-22.10          |
+| CClH$_3$         | \-19.32          |
+| CH$_4$           | \-17.88          |
+| CH$_3$SH         | \-5.34           |
 |  |
 
 Table 3: Miscellaneous experimental gas-phase enthalpies of formation
@@ -3770,14 +3770,14 @@ Table 3: Miscellaneous experimental gas-phase enthalpies of formation
 3.  Chase, M. W., Jr. Phys. Chem. Ref. Data, Monograph No. 9 1998, 9,
     1-1951.
 
-## NWPW Tutorial 4: AIMD/MM simulation of CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> + 64 H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>O
+## NWPW Tutorial 4: AIMD/MM simulation of CCl$_4$ + 64 H$_2$O
 
 (input:[Media:ccl4-64water.nw](ccl4-64water.nw),
 output:[Media:ccl4-64water.nwout](ccl4-64water.nwout))
 
 In this section we show how use the PSPW module to perform a
-Car-Parrinello AIMD/MM simulation for a CCl<img alt="$_4$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5dfc3ab84de9c94bbfee2e75b72e1184.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/> molecule in a box of
-64 H<img alt="$_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/10f8f9bf55a697fc978ffe2990e3209d.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>O. Before running a PSPW Car-Parrinello simulation the system
+Car-Parrinello AIMD/MM simulation for a CCl$_4$ molecule in a box of
+64 H$_2$O. Before running a PSPW Car-Parrinello simulation the system
 should be on the Born-Oppenheimer surface, i.e. the one-electron
 orbitals should be minimized with respect to the total energy (i.e. task
 pspw energy). In this example, default pseudopotentials from the
@@ -3953,9 +3953,9 @@ energy.The cohesive energy of a crystal is the energy needed to separate
 the atoms of the solid into isolated atoms,
 i.e.
 
-![$\begin{align} E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  \end{align}$](svgs/93cf8b8da88e9e3067b160ad32c5d9eb.svg)
+$$ E_{coh}= -\left( E_{solid} - \sum_{a} E_{atom}^a  \right)  $$
 
-where <img alt="$E_{solid}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/0479f37244fd4da93d764e9132414dcf.svg?invert_in_darkmode&sanitize=true" align=middle width="40.39431pt" height="22.38192pt"/> is the energy of the solid and <img alt="$E_{atom}^a$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/c8cd94d8d58f10c3091c4f26c69f3140.svg?invert_in_darkmode&sanitize=true" align=middle width="42.225975pt" height="22.38192pt"/> are
+where $E_{solid}$ is the energy of the solid and $E_{atom}^a$ are
 the energies of the isolated atoms. In order to calculate the cohesive
 energy the energy of an isolated carbon atom at the same level of theory
 and cutoff energy will need to be calculated. The following input can be
@@ -3997,7 +3997,7 @@ calculated to be
 $$\begin{align} E_{coh}= -\left( -45.07688304au/8 - (-5.421213534au)  \right)= 0.2133968 au = 5.8 eV \end{align}$$
 
 This value is substantially lower than the experimental value of
-<img alt="$7.37eV$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/74d9051358c1ca8aaea0239dcd57965a.svg?invert_in_darkmode&sanitize=true" align=middle width="49.932795pt" height="22.38192pt"/>\! It turns out this error is a result of the unit cell being
+$7.37eV$! It turns out this error is a result of the unit cell being
 too small for the diamond calculation (or too small of a Brillioun zone
 sampling). In the next section, we show how increasing the Brillouin
 zone sampling reduces the error in the calculated cohesive
@@ -5034,7 +5034,7 @@ Hausdorff distribution parameters:
 ## NWPW Tutorial 9: Free Energy Simulations
 
 A description of using the WHAM method for generating free energy of the
-gas-phase dissociation reaction CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>Cl <img alt="$\rightarrow$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e5d134f35dc4949fab12ec64d186248a.svg?invert_in_darkmode&sanitize=true" align=middle width="16.377075pt" height="14.10255pt"/> CH<img alt="$_3$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d9485a0bfce3e0c6a2177e8dedee19f4.svg?invert_in_darkmode&sanitize=true" align=middle width="6.5281095pt" height="14.10255pt"/>+Cl
+gas-phase dissociation reaction CH$_3$Cl $\rightarrow$ CH$_3$+Cl
 can be found in the attached pdf
 ([nwchem-new-pmf.pdf](nwchem-new-pmf.pdf))
 
