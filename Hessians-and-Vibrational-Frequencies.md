@@ -310,8 +310,8 @@ set stpr_gen:delta 0.005
 ### An Example Input Deck
 
 This example input deck will optimize the geometry for the given basis
-set, compute the frequencies for <img alt="$H_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7fc8f229a929f93c03b951b7fe40bf0.svg?invert_in_darkmode&sanitize=true" align=middle width="33.934725pt" height="22.38192pt"/>, <img alt="$H_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7fc8f229a929f93c03b951b7fe40bf0.svg?invert_in_darkmode&sanitize=true" align=middle width="33.934725pt" height="22.38192pt"/> at different
-temperatures, <img alt="$D_{2}O$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/ce64a0239658825eb59f2dbb21363632.svg?invert_in_darkmode&sanitize=true" align=middle width="33.88011pt" height="22.38192pt"/>, HDO, and TDO.
+          set, compute the frequencies for H<sub>2</sub>O, H<sub>2</sub>O at different
+temperatures, D<sub>2</sub>O, HDO, and TDO.
 
 ```
 start  h2o
