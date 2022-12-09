@@ -9,7 +9,7 @@ rate defined by Marcus' theory, which also depends on the temperature
 (see Reference 1
 below):
 
-<img alt="${k_{ET}}= \frac{2\pi}{\hbar} V_{RP}^{2} \frac{1}{\sqrt{4\pi \lambda k_{B}T}} \exp \left( \frac{- \Delta G^{*}}{k_{B} T} \right)$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/534ce113598ba681e3cbb214b4ef4072.svg?invert_in_darkmode&sanitize=true" align=middle width="255.900645pt" height="37.80348pt"/>
+$${k_{ET}}= \frac{2\pi}{\hbar} V_{RP}^{2} \frac{1}{\sqrt{4\pi \lambda k_{B}T}} \exp \left( \frac{- \Delta G^{*}}{k_{B} T} \right)$$
 
 The ET module utilizes the method of *Corresponding Orbital
 Transformation* to calculate <i>V<sub>RP</sub></i>. The only input required are the
