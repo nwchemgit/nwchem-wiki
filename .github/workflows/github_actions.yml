@@ -177,6 +177,10 @@ jobs:
             git log -2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+          name: github-pages
+          retention-days: 1
 
   NWChem_website_deploy:
     if: |
