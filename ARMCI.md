@@ -1,6 +1,8 @@
 
 # Choosing the ARMCI Library
 
+## Overview
+
 The Global Arrays parallel environment relies upon a one-sided
 communication runtime system. There are at least three options currently
 available:
