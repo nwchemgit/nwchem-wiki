@@ -71,7 +71,7 @@ threshold for the evaluation of the energy and related quantities.
 CAUTION\! At the present time, the tol2e parameter only affects the
 three- and four-virtual contributions, and the triples, all of which are
 done "on the fly". The transformations used for the other parts of the
-code currently have a hard-wired threshold of <img alt="$10^{-12}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aeab78344f8b0fe0d6b7163980cf8ff1.svg?invert_in_darkmode&sanitize=true" align=middle width="39.668805pt" height="26.70657pt"/>. The default
+code currently have a hard-wired threshold of 10<sub>-12</sub>. The default
 for tol2e is set to match this, and since user input can only make the
 threshold smaller, setting this parameter can only make calculations
 take longer.
@@ -143,7 +143,8 @@ Currently available methods
 are
 
   * CCSD - Full iterative inclusion of single and double excitations
-  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged<br> singles and doubles amplitudes
+  * CCSD+T(CCSD) - The fourth order triples contribution computed with converged
+   singles and doubles amplitudes
   * CCSD(T) - The linearized triples approximation due to Raghavachari.
 
 The calculation is invoked using the TASK directive, so to perform a
