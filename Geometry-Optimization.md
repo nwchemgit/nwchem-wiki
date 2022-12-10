@@ -232,8 +232,7 @@ turn these into an animated GIF movie.
 ```
 The SOCKET directive enables NWChem to communicate with other software
 packages -- such as [i-PI](http://ipi-code.org/) or
-[ASE](https://wiki.fysik.dtu.dk/ase/dev/ase/calculators/socketio/socketio.html) --
-via the i-PI socket protocol.
+[ASE](https://wiki.fysik.dtu.dk/ase/ase/calculators/socketio/socketio.html) -- via the i-PI socket protocol.
 
 Communication is done either over Unix sockets (`SOCKET UNIX`) or IP
 sockets (`SOCKET IPI_CLIENT`):
@@ -330,7 +329,7 @@ directive
 STEPPER can also be used to find the transition state by following the
 lowest eigenvector of the nuclear Hessian. This is usually invoked by
 using the saddle keyword on the [TASK
-directive](Top-level.md#TASK), but it may also be
+directive](Top-level#TASK), but it may also be
 selected by specifying the directive
 ```
  TS

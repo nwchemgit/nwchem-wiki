@@ -205,7 +205,7 @@ high-level theory defaults to the standard "ao basis". That for the
 medium level defaults to the high-level basis, and the low-level basis
 defaults to the medium-level basis. Other wavefunction parameters are
 obtained from the standard wavefunction input blocks. See [Effective
-core potential](#effective-core-potential) for an example.
+core potentials](#effective-core-potentials) for an example.
 
 ### Effective core potentials
 
@@ -301,7 +301,7 @@ a $d^5$ configuration for the iron atom since the *d* orbitals are
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
-guess](Hartree-Fock-Theory-for-Molecules#superposition-of-fragment-molecular-orbitals)
+guess](Hartree-Fock-Theory-for-Molecules#vectors-fragment-superposition-of-fragment-molecular-orbitals)
 as a starting guess for the real system. The resulting converged
 molecular orbitals can be saved either with the default name (as
 described above in this section), in which case no additional input is

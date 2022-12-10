@@ -88,5 +88,5 @@ Experience shows that the value of gnorm less or around O(10^-2)
 indicates converged pathway. The current pathway in the XYZ format can
 be found in the output file (look for XYZ FILE string) and viewed as
 animation in some of the molecular viewers (e.g.
-[JMOL](http://jmol.sourceforge.net/))
+[JMOL](https://jmol.sourceforge.net/))
 

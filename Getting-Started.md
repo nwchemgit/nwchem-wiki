@@ -4,7 +4,7 @@
 
 This section provides an overview of NWChem input and program
 architecture, and the syntax used to describe the input. See [Simple
-Input File](#simple-input-file----scf-geometry-optimization)
+Input File](#simple-input-file-scf-geometry-optimization)
 and [Water Molecule Input](#water-molecule-sample-input-file)
 for examples of NWChem input files with detailed explanation.
 
@@ -31,8 +31,8 @@ There are two types of directives. Simple directives consist of one line
 of input, which may contain multiple fields. Compound directives group
 together multiple simple directives that are in some way related and are
 terminated with an END directive. See the sample inputs ([Simple Input
-File](#simple-input-file---_SCF_geometry_optimization) and
-[Water Molecule Input](#water-molecule-smple-input-file))
+File](#simple-input-file-scf-geometry-optimization) and
+[Water Molecule Input](#water-molecule-sample-input-file))
 and the input syntax specification ([Input Format and Syntax for
 Directives](#input-format-and-syntax-for-directives)).
 

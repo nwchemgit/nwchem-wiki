@@ -10,7 +10,7 @@ w.r.t. parameters in the basis set, computing polarizabilities with
 finite field, and simple molecular dynamics.
 
 Look in the NWChem contrib directory for useful scripts and examples.
-Visit the Python web-site <http://www.python.org> for a full manual and
+Visit the Python web-site <https://www.python.org> for a full manual and
 lots of useful code and resources.
 
 ## How to input and run a Python program inside NWChem

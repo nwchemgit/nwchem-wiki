@@ -29,9 +29,9 @@ input begins with hessian and has the form:
 
 You may modify the default threshold for the wavefunction. This keyword
 is identical to
-[THRESH](Hartree-Fock-Theory-for-Molecules#thresh----convergence-threshold)
+[THRESH](Hartree-Fock-Theory-for-Molecules#thresh-convergence-threshold)
 in the SCF, and the
-[CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence----scf-convergence-control)
+[CONVERGENCE](Density-Functional-Theory-for-Molecules#convergence-scf-convergence-control)
 gradient in the DFT. The usual defaults for the convergence of the
 wavefunction for single point and gradient calculations is generally not
 tight enough for analytic hessians. Therefore, the hessian, by default,
@@ -76,7 +76,7 @@ Hessian Print Control Specifications
 The nuclear hessian which is used to compute the vibrational frequencies
 can be computed by finite difference for any ab initio wave-function
 that has analytic gradients or by analytic methods for SCF and DFT (see
-[Hessians](#Hessians) for details). The appropriate nuclear
+[Hessians](#overview) for details). The appropriate nuclear
 hessian generation algorithm is chosen based on the user input when TASK
 <theory> frequencies is the task directive.
 
@@ -247,7 +247,7 @@ It uses the free utilities
 
 
  - rasmol 
-   [https://www.umass.edu/microbio/rasmol](http://www.umass.edu/microbio/rasmol)
+   [https://www.umass.edu/microbio/rasmol/](http://www.umass.edu/microbio/rasmol/)
    to manipulate the molecule and generate the individual frames
  - convert from ImageMagick 
    [https://www.imagemagick.org](https://www.imagemagick.org)

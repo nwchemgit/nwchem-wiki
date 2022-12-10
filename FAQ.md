@@ -10,7 +10,7 @@ The NWChem User's Manual is now at
 
 If you have problems with compiling the tools directory, please visit
 the Global Arrays Google group at
-<http://groups.google.com/g/hpctools> or visit the Global Arrays
+<http://groups.google.com/g/hpctools/> or visit the Global Arrays
 website at <http://hpc.pnl.gov/globalarrays/>
 
 ## Where do I go for help with NWChem problems?
@@ -231,7 +231,7 @@ the current value of `kernel.shmmax` on your system by typing
 sysctl kernel.shmmax
 ```
 
-More detail about kernel.shmmax can be found at this [link](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Setting_Shared_Memory-Setting_SHMALL_Parameter.html)
+More detail about kernel.shmmax can be found at this [link](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/tuning_and_optimizing_red_hat_enterprise_linux_for_oracle_9i_and_10g_databases/sect-oracle_9i_and_10g_tuning_guide-setting_shared_memory-setting_shmall_parameter)
 
 ## WSL execution problems
 

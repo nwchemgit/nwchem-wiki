@@ -12,11 +12,11 @@ feedback on this page content.
   - **EMSL Arrows** Evolution of Chemical and Materials Computation
     <https://nwchemgit.github.io/EMSL_Arrows.html>
   - **Avogadro** reads cube files, generates NWChem input files,
-    analyzes output files (including frequencies) <http://avogadro.cc>
+    analyzes output files (including frequencies) <https://avogadro.cc>
   - **WebMO** World Wide Web-based interface to computational chemistry
     packages <https://www.webmo.net/> [^2]
   - **Jmol** analyzes output and cube files
-    <http://wiki.jmol.org/index.php/NWChem>
+    <https://wiki.jmol.org/index.php/NWChem>
   - **Scienomics MAPS** platform has a NWChem Plugin that will allow
     users to easily create NWChem input files. Since MAPS platform also
     has complex builders available, users can create complex models and
@@ -25,15 +25,15 @@ feedback on this page content.
     <https://www.scienomics.com/maps-platform/simulate/quantum/nwchem-plugin/>
   - **CULGI** computational platform
     <https://www.plm.automation.siemens.com/global/en/products/simcenter/culgi.html>
-  - **Chemcraft** <http://www.chemcraftprog.com>
-  - **ASE** Atomic Simulation Environment <http://wiki.fysik.dtu.dk/ase>
+  - **Chemcraft** <https://www.chemcraftprog.com>
+  - **ASE** Atomic Simulation Environment <https://wiki.fysik.dtu.dk/ase>
   - **Ascalaph**
     <http://www.biomolecular-modeling.com/Ascalaph/index.html>
-  - **MoCalc2012** <http://mocalc2012.sourceforge.net/>
-  - **Chemissian** <http://www.chemissian.com/>
+  - **MoCalc2012** <https://mocalc2012.sourceforge.net/>
+  - **Chemissian** <https://www.chemissian.com/>
   - **Gausssum** a GUI application that can analyze the output since
-    version 3.0 using the [cclib](http://cclib.github.io/) library
-    <http://gausssum.sf.net>
+    version 3.0 using the [cclib](https://cclib.github.io/) library
+    <https://gausssum.sf.net>
   - **OpenDFT**  brings cutting edge solid state research to the people <https://github.com/JannickWeisshaupt/OpenDFT>
   - **STREAMM** generates structures and input files for quantum chemical and molecular dynamics codes <https://github.com/NREL/streamm-tools>
 
@@ -45,16 +45,16 @@ feedback on this page content.
     from NWChem results <http://kisthelp.univ-reims.fr/>
   - **Fiesta** is a Gaussian-basis GW and Bethe-Salpeter code
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
-  - **JANPA** performs Natural Population Analysis <http://janpa.sf.net>
+  - **JANPA** performs Natural Population Analysis <https://janpa.sf.net>
   - **CamCASP** Cambridge package for Calculation of Anisotropic Site
     Properties <https://gitlab.com/anthonyjs/camcasp> <https://gitlab.com/anthonyjs/camcasp/-/wikis/home>
   - **ChemShell** is a computational chemistry environment for standard
     quantum chemical or force field calculations
     <https://www.chemshell.org>
   - **PUPIL** allows developers to perform multi-scale simulations
-    <http://pupil.sf.net>
+    <https://pupil.sf.net>
   - **LICHEM** interfaces between QM and MM software
-    <http://github.com/kratman/LICHEM_QMMM>
+    <https://github.com/kratman/LICHEM_QMMM>
   - **VENUS** interfaces NWChem with chemical dynamics
     <https://www.depts.ttu.edu/chemistry/Venus/index.php>
     <https://www.sciencedirect.com/science/article/pii/S0010465513004049>
@@ -80,7 +80,7 @@ feedback on this page content.
   - **QCengine** is a program executor and IO standardizer for quantum chemistry.<https://github.com/MolSSI/QCEngine>
   - **AiiDA plugin for NWChem** AiiDA is a Python infrastructure to deal with complex scientific workflows <https://aiida-nwchem.readthedocs.io/>
   - **cclib** is a Python library for parsing and interpreting the results of computational chemistry packages <https://cclib.github.io/>
-  - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/charmm/documentation/by-version/c42b1/params/doc/nwchem/>
+  - **CHARMM** can perform combined Quantum Mechanical and Molecular Mechanics simulations using NWChem <https://www.charmm.org/archive/charmm/documentation/by-version/c45b1/nwchem.html>
  - **kMap** is a program for simulation and data analysis in photoemission tomography <https://github.com/brands-d/kMap>
  - **QMCube** is a Python suite focused on multiscale QM/MM simulations of biological systems <https://github.com/sergio-marti/qm3>
  - **autodE** is a Python module designed for the automated generation of reaction profiles <https://duartegroup.github.io/autodE>
@@ -100,7 +100,7 @@ The following programs can display cube files from
 [Molden](Properties.md#moldenfile) files
 
   - **gOpenMol** <https://web.archive.org/web/20090518024059/http://www.csc.fi/english/pages/g0penMol>
-  - **Molden** <https://www3.cmbi.umcn.nl/molden/>
+  - **Molden** <https://www.theochem.ru.nl/molden/>
   - **Molekel** <http://ugovaretto.github.io/molekel/>
   - **GaussView** <http://www.gaussian.com/g_prod/gv5.htm>
   - **VMD** <http://www.ks.uiuc.edu/Research/vmd>

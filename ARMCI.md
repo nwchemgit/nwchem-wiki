@@ -19,7 +19,7 @@ available:
     communication features of MPI, rather than a platform-specific
     conduit. It currents provides both MPI-2 and MPI-3 implementations;
     the MPI-3 one is supported by nearly all platforms. See
-    <https://wiki.mpich.org/armci-mpi/index.php/Main_Page> for details.
+    <https://github.com/pmodels/mpich/blob/main/doc/wiki/Index.md> for details.
 
 By default, Global Arrays will choose ARMCI or ComEx, based upon the
 environment variables selected by the user (see GA documentation for
@@ -40,7 +40,7 @@ Global Arrays:
 | `MPI-MT`       | ARMCI over multi-threaded MPI                | [Do not use Open-MPI 1.x.](https://github.com/open-mpi/ompi/issues/157)                         |
 | `MPI-TS`       | ARMCI over MPI without data server           |                                                     |
 | `MPI-SPAWN`    | ARMCI using MPI dynamic processes           | Requires MPI_Comm_spawn support.                    |
-| `ARMCI`        | Uses ARMCI-MPI  | See [the ARMCI-MPI NWChem page](https://wiki.mpich.org/armci-mpi/index.php/NWChem) for details. |
+| `ARMCI`        | Uses ARMCI-MPI  | See [the ARMCI-MPI NWChem page](https://github.com/pmodels/mpich/blob/main/doc/wiki/Index.md) for details. |
 |                | (please use *mpi3rma* branch) | requires `EXTERNAL_ARMCI_PATH`|
  
 
@@ -63,7 +63,7 @@ option to choose. However, we observe the following:
     because MPI-3 is not fully supported. On all other platforms, the
     `ARMCI-MPI` branch *mpi3rma* is recommended.
   - The performance of `ARMCI-MPI` is greatly enhanced by
-    [Casper](http://www.mcs.anl.gov/project/casper/). See [this
+    [Casper](https://pmodels.github.io/casper-www/). See [this
     link](https://pmodels.github.io/casper-www/publication.html) 
     for design details and [this
     page](https://wiki.mpich.org/armci-mpi/index.php/Casper) for

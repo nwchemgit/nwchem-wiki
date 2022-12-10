@@ -6,12 +6,12 @@ of calculations, perform simple thermochemistry calculations, calculate
 the NMR and IR spectra of modest size molecule, or just try out NWChem
 before installing it? EMSL Arrows scientific service can help. [A Web
 API to EMSL Arrows is now available for Alpha testing. Click on this
-link.](https://arrows.emsl.pnnl.gov/api) For more information contact
+link.](https://arrows.emsl.pnnl.gov/api/) For more information contact
 [Eric Bylaska
 (eric.bylaska@pnnl.gov).](mailto:eric.bylaska@pnnl.gov?Subject=EMSL%20Arrows%20Question)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api) </span>
+[*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api/) </span>
 
 [](emslarrows.png) Besides using the
 Web API you can also use EMSL Arrows by just sending a simple email.

@@ -240,7 +240,7 @@ export LAPACK_LIB=-lopenblas
 ```   
   
 NWChem can also take advantage of the [ScaLAPACK
-library](http://www.netlib.org/scalapack/) if it is installed on your
+library](http://netlib.org/scalapack/) if it is installed on your
 system. The following environment variables need to be set:
 ```
 export USE_SCALAPACK=y
@@ -581,7 +581,7 @@ make
   - Download and unpack latest NWChem tarball to the directory of your
     choosing, say /Users/johndoe/nwchem
   - Install Homebrew as described at
-<https://brew.sh>
+<https://brew.sh/>
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
@@ -619,7 +619,7 @@ make
 
   - Download and unpack latest NWChem tarball to the directory of your
     choosing, say /Users/johndoe/nwchem
-  - Install gfortran (4.9) from <http://hpc.sourceforge.net/> (
+  - Install gfortran (4.9) from <https://hpc.sourceforge.net/> (
     <http://prdownloads.sourceforge.net/hpc/gcc-4.9-bin.tar.gz?download>
     ) and make sure to add the location to your path
 
@@ -1246,7 +1246,7 @@ A good alternative only on Windows 10 is **Windows Subsystem for Linux** (WSL).
 This option gives the best performance on Windows when [WLS 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) is used.
 **WSL** allows you to obtain a functional command line Linux 64-bit NWChem environment, either by compiling the NWChem code from scratch or by using the Ubuntu precompiled NWChem package. Here is a link to the install guide
 
-[https://docs.microsoft.com/en-us/windows/wsl/install](https://docs.microsoft.com/en-us/windows/wsl/install)
+[https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 Once Ubuntu is installed, the quickest method to install NWChem is by fetching the Ubuntu NWChem package by typing
 ```

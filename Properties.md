@@ -397,7 +397,7 @@ codes, e.g.
 
   - [XAIM](http://www.quimica.urv.es/XAIM/)
   - [NCIPLOT](https://github.com/aoterodelaroza/nciplot)
-  - [Multiwfn](http://multiwfn.codeplex.com/)
+  - [Multiwfn](http://sobereva.com/multiwfn/)
   - [Postg](https://github.com/aoterodelaroza/postg)
 
 **WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties.md#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
@@ -408,12 +408,12 @@ MOLDENFILE
 MOLDEN_NORM (JANPA | | NWCHEM || NONE)
 ```
 This keyword generates files using the [Molden
-format](https://www3.cmbi.umcn.nl/molden/molden_format.html). The resulting
+format](https://www.theochem.ru.nl/molden/molden_format.html). The resulting
 Molden file (.molden) should compatible with a variety of codes that can
 input Molden files, e.g.
 
-  - [Molden](https://www3.cmbi.umcn.nl/molden/)
-  - [JANPA](http://janpa.sf.net) (the nwchem2molden step is no longer
+  - [Molden](https://www.theochem.ru.nl/molden/)
+  - [JANPA](https://janpa.sf.net) (the nwchem2molden step is no longer
     required when using .molden files and the `MOLDEN_NORM JANPA`
     keyword)
   - [orbkit](http://orbkit.github.io/)
