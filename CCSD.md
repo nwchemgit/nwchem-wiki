@@ -71,7 +71,7 @@ threshold for the evaluation of the energy and related quantities.
 CAUTION\! At the present time, the tol2e parameter only affects the
 three- and four-virtual contributions, and the triples, all of which are
 done "on the fly". The transformations used for the other parts of the
-code currently have a hard-wired threshold of 10<sub>-12</sub>. The default
+code currently have a hard-wired threshold of 10<sup>-12</sup>. The default
 for tol2e is set to match this, and since user input can only make the
 threshold smaller, setting this parameter can only make calculations
 take longer.
