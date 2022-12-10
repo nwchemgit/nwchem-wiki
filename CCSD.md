@@ -3,8 +3,8 @@
 ## Overview
 
 The NWChem coupled cluster energy module is primarily the work of
-Alistair Rendell and Rika Kobayashi[1][2], with contributions from
-Bert de Jong, David Bernholdt and Edoardo Aprà[3].
+Alistair Rendell and Rika Kobayashi[^1][^2], with contributions from
+Bert de Jong, David Bernholdt and Edoardo Aprà[^3].
 
 The coupled cluster code can perform calculations with full iterative
 treatment of single and double excitations and non-iterative inclusion
@@ -262,18 +262,18 @@ processes and threads is not available.
 ```
 
 ## References
+///Footnotes Go Here///
 
-
-1.  Rendell, A.P., Lee, T.J., Komornicki, A., and Wilson, S. (1992)
+[^1]: Rendell, A.P., Lee, T.J., Komornicki, A., and Wilson, S. (1992)
     "Evaluation of the contribution from triply excited intermediates to
     the fourth-order perturbation theory energy on Intel distributed
     memory supercomputers", *Theor. Chem. Acc.*, **84**, 271-287, doi:
     [10.1007/BF01113267](http://dx.doi.org/10.1007/BF01113267)
-2.  Kobayashi, R. and Rendell, A.P. (1997) "A direct coupled cluster
+[^2]:  Kobayashi, R. and Rendell, A.P. (1997) "A direct coupled cluster
     algorithm for massively parallel computers", *Chem. Phys. Lett.*,
     **265**, 1-11, doi:
     [10.1016/S0009-2614(96)01387-5](http://dx.doi.org/10.1016/S0009-2614$96$01387-5)
-3.  Aprà, E., Harrison, R.J., de Jong, W.A., Rendell, A.P., Tipparaju,
+[^3]:  Aprà, E., Harrison, R.J., de Jong, W.A., Rendell, A.P., Tipparaju,
     V. and Xantheas, S.S. (2009) "Liquid Water: Obtaining the Right
     Answer for the Right Reasons", *Proc. SC'09*, doi:
     [10.1145/1654059.1654127](http://dx.doi.org/10.1145/1654059.1654127)
