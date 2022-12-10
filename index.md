@@ -72,7 +72,7 @@ for more information see
 [EMSL Arrows - an easier way to use nwchem](Current_events#emsl-arrows-an-easier-way-to-use-nwchem) and [EMSL Arrows](EMSL_Arrows)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[EMSL Arrows API](https://arrows.emsl.pnnl.gov//api) </span>
+[EMSL Arrows API](https://arrows.emsl.pnnl.gov/api/) </span>
 
 ### [NWChem Documentation](Home)
 
