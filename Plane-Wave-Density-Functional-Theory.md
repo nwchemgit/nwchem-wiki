@@ -1,3 +1,5 @@
+# Plane-Wave Density Functional Theory
+
 ##### Contents  
 * [1 Pseudopotential plane-wave density functional theory (NWPW)](#pseudopotential-plane-wave-density-functional-theory-nwpw)
    - [1.1 PSPW Tasks - Gamma Point Calculations](#pspw-tasks-gamma-point-calculations)
