@@ -1,3 +1,5 @@
+# QM/MM properties
+
 A number of electronic structure properties can be calculated with QM/MM
 using capabilities provided by [property](Properties),
 [esp](ESP), and [dplot modules](DPLOT).

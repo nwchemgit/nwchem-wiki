@@ -1,6 +1,4 @@
-
-
-## QMMM Introduction
+# QMMM Introduction
 
 The combined quantum mechanical molecular mechanics (QM/MM) approach
 provides a simple and effective tool to study localized molecular

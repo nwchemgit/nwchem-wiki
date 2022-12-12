@@ -1,3 +1,5 @@
+# QM/MM hessian and frequency calculations
+
 ### Setup
 
 QM/MM hessian and frequency calculations are invoked though the

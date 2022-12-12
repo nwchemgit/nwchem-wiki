@@ -1,4 +1,4 @@
-## QMMM\_Single\_Point\_Calculations
+# QMMM Single Point Calculations
 
 The task directive for QM/MM
 single point energy and gradient calculations is given by
