@@ -145,7 +145,7 @@ jobs:
         shell: bash
         working-directory: mkdocs
         run: |
-          git clone -b $GITHUB_REF_NAME --depth 1 \\
+          git clone -b $GITHUB_REF_NAME --depth 1 \
           https://github.com/nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
         shell: bash
