@@ -416,8 +416,8 @@ A two-layer model including modification of theory, basis, ECP and total
 charge and no link atoms.
 
 This input reproduces the ONIOM optimization and vibrational frequency
-calculation of $Rh(CO)_{2}Cp$ of Dapprich et al. The model system is
-$Rh(CO)_{2}^{+}$. The low theory is the Gaussian LANL2MB model
+calculation of Rh(CO)<sub>2</sub>Cp of Dapprich et al. The model system is
+Rh(CO)<sub>2</sub><sup>+</sup>. The low theory is the Gaussian LANL2MB model
 (Hay-Wadt n+1 ECP with minimal basis on Rh, STO-3G on others) with SCF.
 The high theory is the Gaussian LANL2DZ model (another Hay-Wadt ECP with
 a DZ basis set on Rh, Dunning split valence on the other atoms) with
