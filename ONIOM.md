@@ -149,13 +149,13 @@ length 1.528 Angstrøms) using a hydrogen link atom we will want a
 carbon-hydrogen bond length of about 1.084 Angstrøms, so the scale
 factor should be chosen as 1.084/1.528 ~ 0.709.
 
-Example 2. A calculation on acetaldehyde ($H_{3}C-CHO$) using aldehyde
-($H-CHO$) as the model system. The covalent bond between the two
+Example 2. A calculation on acetaldehyde (H<sub>3</sub>C-CHO) using aldehyde
+(H-CHO) as the model system. The covalent bond between the two
 carbon atoms is broken and a link atom must be introduced to replace the
 methyl group. The link atom is automatically generated -- all you need
 to do is specify the atoms in the model system that are also in the real
-system (here $CHO$) and the broken bonds. Here is the geometry of
-acetaldehyde with the $CHO$ of aldehyde first
+system (here CHO) and the broken bonds. Here is the geometry of
+acetaldehyde with the CHO of aldehyde first
 ```
    geometry  
      C    -0.383    0.288    0.021  
