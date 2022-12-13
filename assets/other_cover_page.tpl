@@ -3,7 +3,7 @@
 <br>
 <h1>Release 7.2.0</h1>
 <br>
-<img src="/assets/MS3logo.png" />
+<img src="assets/MS3logo.png" />
 
 <h3>W.R. Wiley Environmental Molecular Sciences Laboratory</h3>
 <h3>Pacific Northwest National Laboratory</h3>
