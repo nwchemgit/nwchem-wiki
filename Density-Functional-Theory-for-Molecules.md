@@ -1806,7 +1806,7 @@ computed, the dispersion term may be added empirically through
 long-range contribution DFT-D, i.e. *E<sub>DFT-D</sub>=E<sub>DFT-KS</sub>+E<sub>disp</sub>*, 
 where:
 
-$$E_{disp}=-s_6\sum_{i=1}^{N_{atom}-1}\sum_{j=i+1}^{N_{atom}} \frac{C_{6}^{ij}}{R_{ij}^{6}} \left( 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \right)^{-1}$$
+$$E_{disp}=-s_6\sum_{i=1}^{N_{atom}-1}\sum_{j=i+1}^{N_{atom}} \frac{C_{6}^{ij}}{R_{ij}^{6}} \biggl\\{ 1+e^{-\alpha (\frac{R_{ij}}{R_{vdw}} -1)} \biggr\\}^{-1}$$
 
   In this equation, the  *s<sub>6</sub>* term depends in the functional and basis
   set used, *C<sub>6</sub><sup>ij</sup>* is the dispersion coefficient between pairs of
@@ -1840,8 +1840,10 @@ some functionals and triple-zeta plus double polarization basis set
 
 Grimme's DFT-D3 is also available. Here the dispersion term has the
 following form:
+    
+$$ E_{disp} = \sum_{i,j} \sum_{n=6,8} s_n \ \frac{C^{ij}_n}{r_{ij}} \biggl\lbrace 1 + 6 \bigl[\frac{r_{ij}}{s_{r,n} \ R_0^{ij}} \bigr]^{-\alpha n} \biggr\rbrace^{-1}$$
+    
 
-<var>E<sub>disp</sub> = &sum;<sub>ij</sub> &sum;<sub>n=6,8</sub> s<sub>n</sub>  C<sup>ij</sup><sub>n</sub> &frasl; r<sub>ij</sub><sup>n</sup> &lbrace;1 + 6 &lbrack;r<sub>ij</sub> &frasl; (s<sub>r,n</sub> R<sub>0</sub><sup>ij</sup>)&rbrack;<sup>-&alpha;n</sup> &rbrace;<sup>-1</sup></var>
 
 This new dispersion correction covers elements through Z=94.
   *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
