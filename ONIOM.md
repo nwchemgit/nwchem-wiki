@@ -179,7 +179,7 @@ Since the default link atom is hydrogen there is actually no need to
 specify the "H".
 
 See also the
-[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example)
+[ONIOM three layer example](#a-three-layer-example)
 for a more complex example.
 
 ### Numbering of the link atoms
@@ -209,7 +209,7 @@ core potentials](#effective-core-potentials) for an example.
 
 ### Effective core potentials
 
-If an [effective core potential](ECP) is specified in the
+If an [effective core potential](ECP.md) is specified in the
 usual fashion outside of the ONIOM input then this will be used in all
 calculations. If an alternative ECP name (the name specified on the ECP
 directive in the same manner as done for basis sets) is specified on one
