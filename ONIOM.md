@@ -86,14 +86,14 @@ END
 ```
 which are described in detail below.
 
-For better validation of user input, the HIGH, LOW and MODEL directives
-must always be specified. If the one of the MEDIUM or INTER directives
+For better validation of user input, the `HIGH`, `LOW` and `MODEL` directives
+must always be specified. If the one of the `MEDIUM` or `INTER` directives
 are specified, then so must the other.
 
 ## Real, model and intermediate geometries
 
 The geometry and total charge of the full or real system should be
-specified as normal using the [geometry](Geometry) directive.
+specified as normal using the [geometry](Geometry.md) directive.
 If $N_{model}$ of the atoms are to be included in the model system,
 then these should be specified first in the geometry. Similarly, in a
 three-layer calculation, if there are $N_{inter}$ atoms to be included
@@ -126,12 +126,12 @@ atom (implicitly the first in the geometry) is in the model system
 ### Link atoms
 
 Link atoms for bonds spanning two regions are automatically generated
-from the bond information. The additional parameters on the MODEL and
-INTER directives describe the broken bonds including scale factors for
+from the bond information. The additional parameters on the `MODEL` and
+`INTER` directives describe the broken bonds including scale factors for
 placement of the link atom and, optionally, the type of link atom. The
 type of link atom defaults to hydrogen, but any type may be specified
 (actually here you are specifying a geometry tag which is used to
-associate a [geometrical center](Geometry) with an atom type
+associate a [geometrical center](Geometry.md) with an atom type
 and basis sets, etc. For each broken bond specify the numbers of the two
 atoms (i and j), the scale factor (g) and optionally the tag of the link
 atom. Link atoms are placed along the vector connecting the the first to
@@ -215,7 +215,7 @@ calculations. If an alternative ECP name (the name specified on the ECP
 directive in the same manner as done for basis sets) is specified on one
 of the theory directives, then this ECP will be used in preference for
 that level of theory. See the
-[ONIOM\#a-three-layer-example](ONIOM#a-three-layer-example)
+[ONIOM three layer example](#a-three-layer-example)
 for sample input.
 
 ### General input strings
@@ -227,7 +227,7 @@ theory (e.g., DFT) is to be used with different options for the ONIOM
 theoretical models, then the general input strings must be used. These
 strings are processed as NWChem input each time the theoretical model is
 invoked. The strings may contain any NWChem input, except for options
-pertaining to ONIOM and the task directive. The intent that the strings
+pertaining to ONIOM and the `task` directive. The intent that the strings
 be used just to control the options pertaining to the theory being used.
 
 A word of caution. Be sure to check that the options are producing the
@@ -281,7 +281,7 @@ Each calculation will utilize the appropriate vectors which is more
 efficient during geometry optimizations and frequency calculations, and
 is also useful for the initial calculation. In the absence of existing
 MO vectors files, the default atomic guess is used (see
-[|Input/output of MO vectors](Hartree-Fock-Theory-for-Molecules#vectors-inputoutput-of-mo-vectors)).
+[|Input/output of MO vectors](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors)).
 
 If special measures must be taken to converge the initial SCF, DFT or
 MCSCF calculation for one or more of the systems, then initial vectors
@@ -301,11 +301,11 @@ a $d^5$ configuration for the iron atom since the *d* orbitals are
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
-guess](Hartree-Fock-Theory-for-Molecules#vectors-fragment-superposition-of-fragment-molecular-orbitals)
+guess](Hartree-Fock-Theory-for-Molecules.md#vectors-fragment-superposition-of-fragment-molecular-orbitals)
 as a starting guess for the real system. The resulting converged
 molecular orbitals can be saved either with the default name (as
 described above in this section), in which case no additional input is
-necessary. If an alternative name is desired, then the VECTORS directive
+necessary. If an alternative name is desired, then the `VECTORS` directive
 may be used as follows
 ```
    vectors low-real /u/rjh/jobs/fe_ether_water.mos
