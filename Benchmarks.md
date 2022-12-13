@@ -20,12 +20,12 @@ Cascade supercomputer located at PNNL. [Input](c240_631gs.nw) and
 
 # Parallel performance of *Ab initio* Molecular Dynamics using plane waves
 
-AIMD Parallel timings for <img alt="$UO_2^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/4cd58371c815e721956191c6092523a5.svg?invert_in_darkmode&sanitize=true" align=middle width="42.50433pt" height="28.83969pt"/>+122<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O.
+AIMD Parallel timings for $UO_2^{2+}$+122$H_2$O.
 These calculations were performed on the Franklin Cray-XT4 computer
 system at NERSC.  
 ![PW](PWScaling.png)  
 
-AIMD and AIMD/MM Parallel Timings for <img alt="$Zn^{2+}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/535088252ee6a9c0146ed4ba09c15c92.svg?invert_in_darkmode&sanitize=true" align=middle width="38.76708pt" height="26.70657pt"/>+64<img alt="$H_2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/912631c954499428b64ab8d828ac8cb6.svg?invert_in_darkmode&sanitize=true" align=middle width="20.141385pt" height="22.38192pt"/>O (unit
+AIMD and AIMD/MM Parallel Timings for $Zn^{2+}$+64$H_2$O (unit
 cell parameters SC=12.4 Angs. and cutoff energy =100Ry). These
 calculations were performed on the Chinook HP computer system at MSCF
 EMSL, PNNL.  
@@ -65,7 +65,7 @@ MRCC approaches have been developed. During his internship at PNNL Jirka
 Brabec, using novel processor-group-based algorithms, implemented
 Brillouin-Wigner and Mukherjee MRCC models with singles and doubles. The
 scalabililty tests for the Brillouin-Wigner MRCCSD approach have been
-performed on Jaguar XT5 system at ORNL for <img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>-carotene in 6-31
+performed on Jaguar XT5 system at ORNL for $\beta$-carotene in 6-31
 basis set (472 orbitals, 216 correlated electrons, 20 reference
 functions; see J.Brabec, J. Pittner, H.J.J. van Dam, E. Aprà, K.
 Kowalski, JCTC 2012, 8(2), pp 487–497). 
@@ -81,12 +81,12 @@ Former PNNL postdoctoral
 fellow Dr. Kiran Bhaskaran Nair developed perturbative MRCCSD(T)
 approaches, which accounts for the effect of triple excitations.
 Scaling of the triples part of the BW-MRCCSD(T) method for
-<img alt="$\beta$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="10.1277pt" height="22.74591pt"/>-carotene in 6-31 basis set (JCP 137, 094112 (2012)). The
+$\beta$" -carotene in 6-31 basis set (JCP 137, 094112 (2012)). The
 scalability tests of the BW-MRCCSD(T) implementation of NWChem have been
 performed on the Jaguar Cray-XK6 computer system of the National Center
 for Computational Sciences at Oak Ridge National Laboratory.
 
-![mrccsd\_t\_titan.png](mrccsd_t_titan.png)
+![mrccsd_t_titan.png](mrccsd_t_titan.png)
 
 # Timings of CCSD/EOMCCSD for the oligoporphyrin dimer
 

@@ -144,7 +144,7 @@ Molecular simulations
 
 The type of molecular dynamics simulation is specified by the NWChem task directive.
 ```
-task md [ energy | optimize | dynamics | thermodynamics ]
+task md [ energy | optimize | dynamics | thermodynamics ]
 ```
 where the theory keyword md specifies use of the molecular dynamics module, and the operation keyword is one of
 
@@ -158,18 +158,18 @@ System specification
 
 The chemical system for a calculation is specified in the topology and restart files. These files should be created using the utilities nwtop and nwrst before a simulation can be performed. The names of these files are determined from the required system directive.
 ```
-system <string systemid>_<string calcid>
+system <string systemid>_<string calcid>
 ```
 where the strings systemid and calcid are user defined names for the chemical system and the type of calculation to ber performed, respectively. These names are used to derive the filenames used for the calculation. The topoly file used will be systemid.top, while all other files are named systemid\_calcid.ext.
 
 Restarting and continuing simulations
 -------------------------------------
 ```
-   finish
+   finish
 ```
 Specifies that the current job will finish a previous, incomplete simulation, using the input data that have been recorded by that previous run in the restart file. Most of the input in the current md input block will be ignored.
 ```
-   resume
+   resume
 ```
 
 Specifies that the current job will be an extension of a previous simulation, using most of the input data that have been recorded by that previous run in the restart file. Typically the input in the current md input block defines a larger number of steps than the previous job.
@@ -177,31 +177,31 @@ Specifies that the current job will be an extension of a previous simulation, us
 Parameter set
 -------------
 ```
-set <integer iset>
+set <integer iset>
 ```
 Specifies the use of parameter set `<iset>` for the molecular dynamics simulation. The topology file contains three separate parameters sets that can be used. The default for `<iset>` is 1.
 ```
-lambda <integer ilambda> <integer ilambda>
+lambda <integer ilambda> <integer ilambda>
 ```
 Specifies the use of parameter set for the ilambda-th of mlambda steps.
 ```
-pset <integer isetp1> [<integer isetp2>]
+pset <integer isetp1> [<integer isetp2>]
 ```
 Specifies the parameter sets to be used as perturbation potentials in single step thermodynamic perturbation free energy evaluations, where `<isetp1>` specifies the first perturbation parameter set and `<isetp2>` specifies the second perturbation parameter set. Legal values for `<isetp1>` are 2 and 3. Legal value for `<isetp2>` is 3, in which case `<isetp1>` can only be 2. If specified, `<iset>` is automatically set to 1.
 ```
-pmf [ equilharm <integer npmfc> | scale <real facpmf>]
+pmf [ equilharm <integer npmfc> | scale <real facpmf>]
 ```
 Specifies that any potential of mean force functions defined in the topology files are to be used. If equilharm is specified, the first npmfc dynamics steps will use a harmonic potential in stead of any pmf constraint. If scale is specified, all pmf force constants are scaled by a factor facpmf.
 ```
-distar [draver [<integer ndaver default 1>]] 
-  [scale <real drsscl>]
-  [after <integer nfdrss>]
+distar [draver [<integer ndaver default 1>]] 
+  [scale <real drsscl>]
+  [after <integer nfdrss>]
 ```
 Specifies that any distance restraint functions defined in the topology files are to be used.
 ```
-qhop [<integer nfhop default 10>] 
-  [<real rhop default 0.35>]
-  [<real thop default 0.02>]
+qhop [<integer nfhop default 10>] 
+  [<real rhop default 0.35>]
+  [<real thop default 0.02>]
 ```
 Specifies that a Q-HOP simulation is to be carried out with attempted proton hops every *nfhop* steps, a cutoff for the donor-acceptor pair distance of *rhop* nm, and a minimum time before back hopping can occur of *thop* ps.
 
@@ -210,13 +210,13 @@ Energy minimization algorithms
 
 The energy minimization of the system as found in the restart file is performed with the following directives. If both are specified, steepest descent energy minimization precedes conjugate gradient minimization.
 ```
-   sd <integer msdit> [init <real dx0sd>] [min <real dxsdmx>] \
-                      [max <real dxmsd>]
+   sd <integer msdit> [init <real dx0sd>] [min <real dxsdmx>] \
+                      [max <real dxmsd>]
 ```
 Specifies the variables for steepest descent energy minimizations, where `<msdit>` is the maximum number of steepest descent steps taken, for which the default is 100, `<dx0sd>` is the initial step size in nm for which the default is 0.001, `<dxsdmx>` is the threshold for the step size in nm for which the default is 0.0001, and `<dxmsd>` is the maximum allowed step size in nm for which the default is 0.05.
 ```
-   cg <integer mcgit> [init <real dx0cg>] [min <real dxcgmx>] \
-                      [cy <integer ncgcy>]
+   cg <integer mcgit> [init <real dx0cg>] [min <real dxcgmx>] \
+                      [cy <integer ncgcy>]
 ```
 
 Specifies the variables for conjugate gradient energy minimizations, where `<mcgit>` is the maximum number of conjugate gradient steps taken, for which the default is 100, `<dx0cg>` is the initial search interval size in nm for which the default is 0.001, `<dxcgmx>` is the threshold for the step size in nm for which the default is 0.0001, and `<ncgcy>` is the number of conjugate gradient steps after which the gradient history is discarded for which the default is 10. If conjugate gradient energy minimization is preceded by steepest descent energy minimization, the search interval is set to twice the final step of the steepest descent energy minimization.
@@ -226,37 +226,37 @@ Multi-configuration thermodynamic integration
 
 The following keywords control free energy difference simulations. Multi-configuration thermodynamic integrations are always combined with multiple step thermodynamic perturbations.
 ```
-   (forward | reverse) [[<integer mrun> of] <integer maxlam>]
+   (forward | reverse) [[<integer mrun> of] <integer maxlam>]
 ```
 
 Specifies the direction and number of integration steps in free energy evaluations, with forward being the default direction. `<mrun>` is the number of ensembles that will be generated in this calculation, and `<maxlam>` is the total number of ensembles to complete the thermodynamic integration. The default value for `<maxlam>` is 21. The default value of `<mrun>` is the value of `<maxlam>`.
 ```
-   error <real edacq>
+   error <real edacq>
 ```
 
-Specifies the maximum allowed statistical error in each generated ensemble, where `<edacq>` is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/9e6f26ffa9c11ec7fc178fb4ec8dd59f.svg?invert_in_darkmode&sanitize=true" align=middle width="63.9969pt" height="26.70657pt"/>.
+Specifies the maximum allowed statistical error in each generated ensemble, where `<edacq>` is the maximum error allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 kJ mol<sup>-1</sup>.
 ```
-   drift <real ddacq>
+   drift <real ddacq>
 ```
 
-Specifies the maximum allowed drift in the free energy result, where <ddacq> is the maximum drift allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 <img alt="$kJ mol^{-1} ps^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/31a9d30a29fa0f4c5923496e777ab5c2.svg?invert_in_darkmode&sanitize=true" align=middle width="97.561695pt" height="26.70657pt"/>.
+Specifies the maximum allowed drift in the free energy result, where <ddacq> is the maximum drift allowed in the ensemble average derivative of the Hamiltonian with respect to λ with a default of 5.0 kJ mol<sup>-1</sup> ps<sup>-1</sup>.
 ```
-   factor <real fdacq>
+   factor <real fdacq>
 ```
 
 Specifies the maximum allowed change in ensemble size where `<fdacq>` is the minimum size of an ensemble relative to the previous ensemble in the calculation with a default value of 0.75.
 ```
-   decomp
+   decomp
 ```
 
 Specifies that a free energy decomposition is to be carried out. Since free energy contributions are path dependent, results from a decomposition analysis can no be unambiguously interpreted, and the default is not to perform this decomposition.
 ```
-   sss [delta <real delta>]
+   sss [delta <real delta>]
 ```
 
-Specifies that atomic non-bonded interactions describe a dummy atom in either the initial or final state of the thermodynamic calculation will be calculated using separation-shifted scaling, where `<delta>` is the separation-shifted scaling factor with a default of <img alt="$0.075 nm^2$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/bde6b54b6723ccfc3b0293826bfcfd13.svg?invert_in_darkmode&sanitize=true" align=middle width="68.040555pt" height="26.70657pt"/>. This scaling method prevents problems associated with singularities in the interaction potentials.
+Specifies that atomic non-bonded interactions describe a dummy atom in either the initial or final state of the thermodynamic calculation will be calculated using separation-shifted scaling, where `<delta>` is the separation-shifted scaling factor with a default of 0.075 nm<sup>2</sup>. This scaling method prevents problems associated with singularities in the interaction potentials.
 ```
-   new | renew | extend
+   new | renew | extend
 ```
 
 Specifies the initial conditions for thermodynamic calculations. new indicates that this is an initial mcti calculation, which is the default. renew instructs to obtain the initial conditions for each λ from the mro-file from a previous mcti calculation, which has to be renamed to an mri-file. The keyword extend will extend a previous mcti calculation from the data read from an mri-file.
@@ -266,40 +266,40 @@ Time and integration algorithm directives
 
 Following directives control the integration of the equations of motion.
 ```
-   leapfrog | leapfrog_bc
+   leapfrog | leapfrog_bc
 ```
 
 Specifies the integration algorithm, where leapfrog specifies the default leap frog integration, and leapfrog\_bc specifies the Brown-Clarke leap frog integrator.
 ```
-   guided [<real fguide default 0.2> [<real tguide default 0.2>]]
+   guided [<real fguide default 0.2> [<real tguide default 0.2>]]
 ```
 
-Specifies the use of the guided molecular dynamics simulation technique. Variable *fguide* defines the fraction of the averaged forces *g* to be added to the forces <img alt="$f^{f}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/aac399a766fd66ec52ce651f8dbc7e3a.svg?invert_in_darkmode&sanitize=true" align=middle width="17.458485pt" height="27.85299pt"/> evaluated using the force field functions to obtain the forces *f* used to advance the coordinates.
+Specifies the use of the guided molecular dynamics simulation technique. Variable *fguide* defines the fraction of the averaged forces *g* to be added to the forces *f<sup>f</sup>* evaluated using the force field functions to obtain the forces *f* used to advance the coordinates.
 
-<img alt="$f_i=f^{f}_i+fguide * g_{i-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cc72f07f1f63ba27a370261690168ad8.svg?invert_in_darkmode&sanitize=true" align=middle width="167.770845pt" height="31.72125pt"/>
+$$f_i=f^{f}_i+fguide * g_{i-1}$$
 
 Variable tguide defines the length of the averaging relative to the timestep Δ *t*.
 
-<img alt="$g_i = {\Delta t\over tguide} f_i + \left(1- {\Delta t\over tguide}\right) g_{i-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cd0fbec5c477acca717650497fc6753f.svg?invert_in_darkmode&sanitize=true" align=middle width="231.061545pt" height="37.80348pt"/>
+$$g_i = {\Delta t\over tguide} f_i + \left(1- {\Delta t\over tguide}\right) g_{i-1}$$
 
 The current implementation is still under development.
 ```
-   equil <integer mequi>
+   equil <integer mequi>
 ```
 
 Specifies the number of equilibration steps `<mequi>`, with a default of 100.
 ```
-   data <integer mdacq> [over <integer ldacq>]]
+   data <integer mdacq> [over <integer ldacq>]]
 ```
 
 Specifies the number of data gathering steps `<mdacq>` with a default of 500. In multi-configuration thermodynamic integrations `<mequi>` and `<mdacq>` are for each of the ensembles, and variable `<ldacq>` specifies the minimum number of data gathering steps in each ensemble. In regular molecular dynamics simulations `<ldacq>` is not used. The default value for `<ldacq>` is the value of `<mdacq>`.
 ```
-   time <real stime>
+   time <real stime>
 ```
 
 Specifies the initial time `<stime>` of a molecular simulation in ps, with a default of 0.0.
 ```
-   step <real tstep>
+   step <real tstep>
 ```
 
 Specifies the time step `<tstep>` in ps, with 0.001 as the default value.
@@ -309,26 +309,26 @@ Ensemble selection
 
 Following directives control the ensemble type.
 ```
-   isotherm [<real tmpext> [<real tmpext2>]] [trelax <real tmprlx> [<real tmsrlx>]] \
-            [anneal [<real tann1>] <real tann2>]
+   isotherm [<real tmpext> [<real tmpext2>]] [trelax <real tmprlx> [<real tmsrlx>]] \
+            [anneal [<real tann1>] <real tann2>]
 ```
 
 Specifies a constant temperature ensemble using Berendsen's thermostat, where `<tmpext>` is the external temperature with a default of 298.15 K, and `<tmprlx>` and `<tmsrlx>` are temperature relaxation times in ps with a default of 0.1. If only `<tmprlx>` is given the complete system is coupled to the heat bath with relaxation time `<tmprlx>`. If both relaxation times are supplied, solvent and solute are independently coupled to the heat bath with relaxation times `<tmprlx>` and `<tmsrlx>`, respectively. If keyword anneal is specified, the external temperature will change from tmpext to tempext2 between simulation time tann1 and tann2
 ```
-   isobar [<real prsext>] [trelax <real prsrlx> ] \
-          [compress <real compr>] [anisotropic] [xy | z | xy-z]
+   isobar [<real prsext>] [trelax <real prsrlx> ] \
+          [compress <real compr>] [anisotropic] [xy | z | xy-z]
 ```
-Specifies a constant pressure ensemble using Berendsen's piston, where `<prsext>` is the external pressure with a default of <img alt="$1.025 10^{5} Pa$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d7104a9cbf96d125d88749351b5c33f4.svg?invert_in_darkmode&sanitize=true" align=middle width="82.508745pt" height="26.70657pt"/>, `<prsrlx>` is the pressure relaxation time in ps with a default of 0.5, and `<compr>` is the system compressibility in <img alt="$m{^2}N^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e2c5efb4ab2a30c085dc8485b09a9d54.svg?invert_in_darkmode&sanitize=true" align=middle width="53.468085pt" height="26.70657pt"/> with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
+Specifies a constant pressure ensemble using Berendsen's piston, where `<prsext>` is the external pressure with a default of 1.025 10<sup>5</sup> Pa, `<prsrlx>` is the pressure relaxation time in ps with a default of 0.5, and `<compr>` is the system compressibility in $m{^2}N^{-1}$ with a default of 4.53E-10. Optional keywords xy, z and xy-z may be used to specify that pressure scaling is to be applied in the x and y dimension only, the z dimension only, or, in all three dimensions with identical scaling in the x and y dimension. The last option requires that anisotropic is also specified.
 
 Velocity reassignments
 ----------------------
 
 Velocities can be periodically reassigned to reflect a certain temperature.
 ```
-   vreass <integer nfgaus> <real tgauss>
-          [fraction [<real frgaus default 0.5]]
-          [once]
-          [(first | initial)] [(last | final)]
+   vreass <integer nfgaus> <real tgauss>
+          [fraction [<real frgaus default 0.5]]
+          [once]
+          [(first | initial)] [(last | final)]
 ```
 Specifies that velocities will be reassigned every `<nfgaus>` molecular dynamics steps, reflecting a temperature of `<tgauss>` K. The default is not to reassign velocities, i.e. `<nfgaus>` is 0. Keyword fraction allows the specification of the fraction of the new velocities are random. Keyword once specifies that velocity reassignment only should be done in the first step. Keywords first or initial and last or final specify that velocity reassigment should only be applied in the first and last window of multiple run simulations.
 
@@ -337,8 +337,8 @@ Cutoff radii
 
 Cutoff radii can be specified for short range and long range interactions.
 ```
-   cutoff [short] <real rshort> [long <real rlong>] \
-          [qmmm <real rqmmm>]
+   cutoff [short] <real rshort> [long <real rlong>] \
+          [qmmm <real rqmmm>]
 ```
 Specifies the short range cutoff radius `<rshort>`, and the long range cutoff radius `<rlong>` in nm. If the long range cutoff radius is larger than the short range cutoff radius the twin range method will be used, in which short range forces and energies are evaluated every molecular dynamics step, and long range forces and energies with a frequency of `<nflong>` molecular dynamics steps. Keyword qmmm specifies the radius of the zone around quantum atoms defining the QM/MM bare charges. The default value for `<rshort>`, `<rlong>` and `<rqmmm>` is 0.9 nm.
 
@@ -347,14 +347,14 @@ Polarization
 
 First order and self consistent electronic polarization models have been implemented.
 ```
-   polar (first | scf [[<integer mpolit>] <real ptol>])
+   polar (first | scf [[<integer mpolit>] <real ptol>])
 ```
 Specifies the use of polarization potentials, where the keyword first specifies the first order polarization model, and scf specifies the self consistent polarization field model, iteratively determined with a maximum of `<mpolit>` iterations to within a tolerance of `<ptol>` D in the generated induced dipoles. The default is not to use polarization models.
 
 External electrostatic field
 ----------------------------
 ```
-   field <real xfield> [freq <real xffreq>] [vector <real xfvect(1:3)>]
+   field <real xfield> [freq <real xffreq>] [vector <real xfvect(1:3)>]
 ```
 Specifies an external electrostatic field, where `<xfield>` is the field strength, `<xffreq>` is the frequency in MHz and `<xfvect>` is the external field vector.
 
@@ -363,12 +363,12 @@ Constraints
 
 Constraints are satisfied using the SHAKE coordinate resetting procedure.
 ```
-   shake [<integer mshitw> [<integer mshits>]]  \
-         [<real tlwsha> [<real tlssha>]]
+   shake [<integer mshitw> [<integer mshits>]]  \
+         [<real tlwsha> [<real tlssha>]]
 ```
 Specifies the use of SHAKE constraints, where `<mshitw>` is the maximum number of solvent SHAKE iterations, and `<mshits>` is the maximum number of solute SHAKE iterations. If only `<mshitw>` is specified, the value will also be used for `<mshits>`. The default maximum number of iterations is 100 for both. `<tlwsha>` is the solvent SHAKE tolerance in nm, and `<tlssha>` is the solute SHAKE tolerance in nm. If only `<tlwsha>` is specified, the value given will also be used for `<tlssha>`. The default tolerance is 0.001 nm for both.
 ```
-   noshake (solvent | solute)
+   noshake (solvent | solute)
 ```
 Disables SHAKE and treats the bonded interaction according to the force field.
 
@@ -377,13 +377,13 @@ Long range interaction corrections
 
 Long range electrostatic interactions are implemented using the smooth particle mesh Ewald technique, for neutral periodic cubic systems in the constant volume ensemble, using pair interaction potentials. Particle-mesh Ewald long range interactions can only be used in molecular dynamics simulations using effective pair potentials, and not in free energy simulations, QMD or QM/MM simulations.
 ```
-   pme [grid <integer ng>] [alpha <real ealpha>] \
-       [order <integer morder>] [fft <integer imfft>]\
-       [procs <integer nprocs>] [solvent]
+   pme [grid <integer ng>] [alpha <real ealpha>] \
+       [order <integer morder>] [fft <integer imfft>]\
+       [procs <integer nprocs>] [solvent]
 ```
-Specifies the use of smooth particle-mesh Ewald long range interaction treatment, where ng is the number of grid points per dimension, ealpha is the Ewald coefficient in <img alt="$nm^{-1}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/5ca6e2b7bcbc238bdbb565ea0cf817ae.svg?invert_in_darkmode&sanitize=true" align=middle width="40.972965pt" height="26.70657pt"/>, with a default that leads to a tolerance of <img alt="$10^{-4}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6784e1fd68d75a57b35bd36247a1aefe.svg?invert_in_darkmode&sanitize=true" align=middle width="33.140745pt" height="26.70657pt"/> at the short range cutoff radius, and morder is order of the Cardinal B-spline interpolation which must be an even number and at least 4 (default value). A platform specific 3D fast Fourier transform is used, if available, when imfft is set to 2. nprocs can be used to define a subset of processors to be used to do the FFT calculations. If solvent is specified, the charge grid will be calculated from the solvent charges only.
+Specifies the use of smooth particle-mesh Ewald long range interaction treatment, where ng is the number of grid points per dimension, ealpha is the Ewald coefficient in $nm^{-1}$, with a default that leads to a tolerance of $10^{-4}$ at the short range cutoff radius, and morder is order of the Cardinal B-spline interpolation which must be an even number and at least 4 (default value). A platform specific 3D fast Fourier transform is used, if available, when imfft is set to 2. nprocs can be used to define a subset of processors to be used to do the FFT calculations. If solvent is specified, the charge grid will be calculated from the solvent charges only.
 ```
-   react [<real dielec default 80.0>]
+   react [<real dielec default 80.0>]
 ```
 Specifies that a simple reaction field correction is used with a dielectric constant dielec. This is an experimental option that has not been well tested.
 
@@ -392,48 +392,48 @@ Fixing coordinates
 
 Solvent or solute may be fixed using the following keywords.
 ```
-   ( fix | free ) 
-    solvent ( [<integer idfirst> [<integer idlast>]] | 
-               ( within | beyond) <real rfix> <string atomname> ) | \
-    solute  ( [<integer idfirst> [<integer idlast>]] [ heavy | {<string atomname>}] |
-               ( within | beyond) <real rfix> <string atomname> )
-    [permanent]
+   ( fix | free ) 
+    solvent ( [<integer idfirst> [<integer idlast>]] | 
+               ( within | beyond) <real rfix> <string atomname> ) | \
+    solute  ( [<integer idfirst> [<integer idlast>]] [ heavy | {<string atomname>}] |
+               ( within | beyond) <real rfix> <string atomname> )
+    [permanent]
 ```
 For solvent the molecule numbers idfirst and idlastmay be specified to be the first and last molecule to which the directive applies. If omitted, the directive applies to all molecules. For solute, the segment numbers idfirst and idlastmay be specified to be the first and last segment to which the directive applies. If omitted, the directive applies to all segments. In addition, the keyword heavy may be specified to apply to all non hydrogen atoms in the solute, or a set of atom names may be specified in which a wildcard character ? may be used. Keyword permanent is used to keep the specification on the restart file for subsequent simulations.
 
 Special options
 ---------------
 ```
-   import [<integer impfr default 1> [<integer impto default impfr> \
-          [<integer nftri default 1>]]]
+   import [<integer impfr default 1> [<integer impto default impfr> \
+          [<integer nftri default 1>]]]
 ```
 Specifies the import of frames impfr to impto with frequency nftri from a trajectory file with extension tri for which energies and forces are to be recalculated. This option only applied to task md energy.
 ```
-   detail
+   detail
 ```
 Specifies that moments of inertia and radii of gyration will be part of the recorded properties.
 ```
-   profile
+   profile
 ```
 Specifies that execution time profiling data will be part of the recorded properties.
 ```
-   scale <real scaleq>
+   scale <real scaleq>
 ```
 Specifies that all charges will be scaled by the factro scaleq.
 ```
-   collapse [<real fcoll default 10.0> [ segment | z | xy ]
+   collapse [<real fcoll default 10.0> [ segment | z | xy ]
 ```
 Specifies that additional forces directed to the origin of the simulation cell with strength fcoll will be applied to all solute molecules. If z or xy is specified, these forces will only apply in the specified dimension(s).
 ```
-   include fixed
+   include fixed
 ```
 Specifies that energies will be evaluated between fixed atoms. Normally these interactions are excluded from the pairlists.
 ```
-   eqm <real eqm>
+   eqm <real eqm>
 ```
 Specifies the zero point of energy in QMD simulations.
 ```
-   atomlist
+   atomlist
 ```
 Specifies that pairlists will be atom based. Normally pairlist are charge group based.
 
@@ -442,7 +442,7 @@ Autocorrelation function
 
 For the evaluation of the statistical error of multi-configuration thermodynamic integration free energy results a correlated data analysis is carried out, involving the calculation of the autocorrelation function of the derivative of the Hamiltonian with respect to the control variable λ.
 ```
-   auto <integer lacf> [fit <integer nfit>] [weight <real weight>]
+   auto <integer lacf> [fit <integer nfit>] [weight <real weight>]
 ```
 Controls the calculation of the autocorrelation, where `<lacf>` is the length of the autocorrelation function, with a default of 1000, `<nfit>` is the number of functions used in the fit of the autocorrelation function, with a default of 15, and `<weight>` is the weight factor for the autocorrelation function, with a default value of 0.0.
 
@@ -451,17 +451,17 @@ Print options
 
 Keywords that control print to the output file, with extension out. Print directives may be combined to a single directive.
 ```
-   print [topol [nonbond] [solvent] [solute]]     \
-         [step <integer nfoutp> [extra] [energy]] \
-         [stat <integer nfstat>]                  \
-         [energies [<integer nfener>]]            \
-         [forces [<integer nfforce>]]             \
-         [matrix]                                 \
-         [expect <integer npxpct>]                \
-         [timing]                                 \
-         [pmf [<integer iprpmf>]]                 \
-         [out6]                                   \
-         [dayout]
+   print [topol [nonbond] [solvent] [solute]]     \
+         [step <integer nfoutp> [extra] [energy]] \
+         [stat <integer nfstat>]                  \
+         [energies [<integer nfener>]]            \
+         [forces [<integer nfforce>]]             \
+         [matrix]                                 \
+         [expect <integer npxpct>]                \
+         [timing]                                 \
+         [pmf [<integer iprpmf>]]                 \
+         [out6]                                   \
+         [dayout]
 ```
 -   Keyword topol specifies printing the topology information, where nonbond refers to the non-bonded interaction parameters, solvent to the solvent bonded parameters, and solute to the solute bonded parameters. If only topol is specified, all topology information will be printed to the output file.
 
@@ -506,21 +506,21 @@ Periodic updates
 
 Following keywords control periodic events during a molecular dynamics or thermodynamic integration simulation. Update directives may be combined to a single directive.
 ```
-   update [pairs <integer nfpair default 1>]                  \
+   update [pairs <integer nfpair default 1>]                  \
 
-          [long <integer nflong default 1>]                   \
+          [long <integer nflong default 1>]                   \
 
-          [center <integer nfcntr default 0> [zonly | xyonly] \
+          [center <integer nfcntr default 0> [zonly | xyonly] \
 
-                  [fraction <integer idscb(1:5)>]             \
+                  [fraction <integer idscb(1:5)>]             \
 
-          [motion <integer nfslow default 0>]                 \
+          [motion <integer nfslow default 0>]                 \
 
-          [analysis <integer nfanal default 0>]               \
+          [analysis <integer nfanal default 0>]               \
 
-          [rdf <integer nfrdf default 0>                      \
+          [rdf <integer nfrdf default 0>                      \
 
-                  [range <real rrdf>] [bins <integer ngl>]    \
+                  [range <real rrdf>] [bins <integer ngl>]    \
 ```
 -   Keyword pairs specifies the frequency `<nfpair>` in molecular dynamics steps of updating the pair lists. The default for the frequency is 1. In addition, pair lists are also updated after each step in which recording of the restart or trajectory files is performed. Updating the pair lists includes the redistribution of atoms that changed domain and load balancing, if specified.
 
@@ -557,37 +557,37 @@ Recording
 
 The following keywords control recording data to file. Record directives may be combined to a single directive.
 ```
-   record [rest <integer nfrest> [keep]]     \
+   record [rest <integer nfrest> [keep]]     \
 
-          [coord <integer nfcoor default 0>] \
+          [coord <integer nfcoor default 0>] \
 
-          [wcoor <integer nfwcoo default 0>] \
+          [wcoor <integer nfwcoo default 0>] \
 
-          [scoor <integer nfscoo default 0>] \
+          [scoor <integer nfscoo default 0>] \
 
-          [veloc <integer nfvelo default 0>] \
+          [veloc <integer nfvelo default 0>] \
 
-          [wvelo <integer nfwvel default 0>] \
+          [wvelo <integer nfwvel default 0>] \
 
-          [svelo <integer nfsvel default 0>] \
+          [svelo <integer nfsvel default 0>] \
 
-          [force <integer nfvelo default 0>] \
+          [force <integer nfvelo default 0>] \
 
-          [wforc <integer nfwvel default 0>] \
+          [wforc <integer nfwvel default 0>] \
 
-          [sforc <integer nfsvel default 0>] \
+          [sforc <integer nfsvel default 0>] \
 
-          [(prop | prop_average) <integer nfprop default 0>]  \
+          [(prop | prop_average) <integer nfprop default 0>]  \
 
-          [free <integer nffree default 1>]  \
+          [free <integer nffree default 1>]  \
 
-          [sync <integer nfsync default 0>]  \
+          [sync <integer nfsync default 0>]  \
 
-          [times <integer nftime default 0>] \
+          [times <integer nftime default 0>] \
 
-          [acf] [cnv] [fet]
+          [acf] [cnv] [fet]
 
-          [binary] [ascii] [ecce] [argos]
+          [binary] [ascii] [ecce] [argos]
 ```
 -   Keyword rest specifies the frequency `<nfrest>` in molecular dynamics steps of rewriting the restart file, with extension rst. For multi-configuration thermodynamic integration simulations the frequency is in steps in λ. The default is not to record. The restart file is used to start or restart simulations. The keyword keep causes all restart files written to be kept on disk, rather than to be overwritten.
 
@@ -658,143 +658,143 @@ The following keywords control recording data to file. Record directives may be 
 Program control options
 -----------------------
 ```
-   load [reset] 
-        ( none | 
-          size [<real factld>] |
-          sizez [<real factld>] | pairs | 
-         (pairs [<integer ldpair>] size [<real factld>]) )
-        [last]
-        [minimum]
-        [average]
-        [combination]
-        [iotime]
-        [experimental]
+   load [reset] 
+        ( none | 
+          size [<real factld>] |
+          sizez [<real factld>] | pairs | 
+         (pairs [<integer ldpair>] size [<real factld>]) )
+        [last]
+        [minimum]
+        [average]
+        [combination]
+        [iotime]
+        [experimental]
 ```
 Determines the type of dynamic load balancing performed, where the default is none. Load balancing option size is resizing cells on a node, and pairs redistributes the cell-cell interactions over nodes. Keyword reset will reset the load balancing read from the restart file. The level of cell resizing can be influenced with *factld*. The cells on the busiest node are resized with a factor
 
-<img alt="$\left( 1 - factld * { {T_{sync} \over n_p} - t^{min}_{sync} \over t_{wall}} \right)^{1\over 3}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/d6623ab11535e7438b54adef23725be3.svg?invert_in_darkmode&sanitize=true" align=middle width="201.328545pt" height="61.00545pt"/>
+$\left( 1 - factld * { {T_{sync} \over n_p} - t^{min}_{sync} \over t_{wall}} \right)^{1\over 3}$
 
-Where <img alt="$T_{sync}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/cc10b4813049c20dc63220c1959ce82c.svg?invert_in_darkmode&sanitize=true" align=middle width="36.754575pt" height="22.38192pt"/> is the accumulated synchronization time of all nodes, <img alt="$n_p$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/e9371e0bac3b9ddbbe7ff10223641b00.svg?invert_in_darkmode&sanitize=true" align=middle width="16.58118pt" height="14.10255pt"/> is the total number of nodes, <img alt="$t^{min}_{sync}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/6371b18f413b2ec25e3f94e7f628005b.svg?invert_in_darkmode&sanitize=true" align=middle width="33.098175pt" height="27.10224pt"/> is the synchronization time of the busiest node, and <img alt="$t_{wall}$" src="https://raw.githubusercontent.com/wiki/nwchemgit/nwchem/svgs/dbd54c6eef2fd24cbf082f78100048e5.svg?invert_in_darkmode&sanitize=true" align=middle width="31.21767pt" height="20.1465pt"/> is the wall clock time of the molecular dynamics step. For the combined load balancing, ldpair is the number of successive pair redistribution load balancing steps in which the accumulated synchronization time increases, before a resizing load balancing step will be attempted. Load balancing is only performed in molecular dynamics steps in which the pair-list is updated. The default load balancing is equivalent to specifying
+Where $T_{sync}$ is the accumulated synchronization time of all nodes, $n_p$ is the total number of nodes, $t^{min}_{sync}$ is the synchronization time of the busiest node, and $t_{wall}$ is the wall clock time of the molecular dynamics step. For the combined load balancing, ldpair is the number of successive pair redistribution load balancing steps in which the accumulated synchronization time increases, before a resizing load balancing step will be attempted. Load balancing is only performed in molecular dynamics steps in which the pair-list is updated. The default load balancing is equivalent to specifying
 ```
-   load pairs 10 size 0.75
+   load pairs 10 size 0.75
 ```
 Keyword last specifies that the load balancing is based on the synchronization times of the last step. This is the default. Keyword average specifies that the load balancing is based on the average synchronization times since the last load balancing step. Keyword minimum specifies that the load balancing is based on the minimum synchronization times since the last load balancing step. Keywords combination, iotime and experimental are experimental load balancing options that should not be used in production runs.
 ```
-   (pack | nopack)
+   (pack | nopack)
 ```
 Specifies if data are communicated in packed or unpacked form. The default is pack.
 ```
-   procs <integer npx> <integer npy> <integer npz>
+   procs <integer npx> <integer npy> <integer npz>
 ```
 Specifies the distribution of the available processors over the three Cartesian dimensions. The default distribution is chosen such that, `<npx>`\*`<npy>`\*`<npz>`=`<np>` and `<npx>` `<=` `<npy>` `<= <npz>`, where `<npx>`, `<npy>` and `<npz>` are the processors in the x, y and z dimension respectively, and `<np>` is the number of processors allocated for the calculation. Where more than one combination of `<npx>`, `<npy>` and `<npz>` are possible, the combination is chosen with the minimum value of `<npx>+<npy>+<npz>`. To change the default setting the following optional input option is provided.
 ```
-   cells <integer nbx> <integer nby> <integer nbz>
+   cells <integer nbx> <integer nby> <integer nbz>
 ```
 Specifies the distribution of cells, where `<nbx>`, `<nby>` and `<nbz>` are the number of cells in x, y and z direction, respectively. The molecular system is decomposed into cells that form the smallest unit for communication of atomic data between nodes. The size of the cells is per default set to the short-range cutoff radius. If long-range cutoff radii are used the cell size is set to half the long-range cutoff radius if it is larger than the short-range cutoff. If the number of cells in a dimension is less than the number of processors in that dimension, the number of cells is set to the number of processors.
 ```
-   extra <integer madbox>
+   extra <integer madbox>
 ```
 Sets the number of additional cells for which memory is allocated. In rare events the amount of memory set aside per node is insufficient to hold all atomic coordinates assigned to that node. This leads to execution which aborts with the message that mwm or msa is too small. Jobs may be restarted with additional space allocated by where `<madbox>` is the number of additional cells that are allocated on each node. The default for `<madbox>` is 6. In some cases `<madbox>` can be reduced to 4 if memory usage is a concern. Values of 2 or less will almost certainly result in memory shortage.
 ```
-   mwm <integer mwmreq>
+   mwm <integer mwmreq>
 ```
 Sets the maximum number of solvent molecules `<mwmreq>` per node, allowing increased memory to be allocated for solvent molecules. This option can be used if execution aborted because mwm was too small.
 ```
-   msa <integer msareq>
+   msa <integer msareq>
 ```
 Sets the maximum number of solute atoms `<msareq>` per node, allowing increased memory to be allocated for solute atoms. This option can be used if execution aborted because msa was too small.
 ```
-   mcells <integer mbbreq>
+   mcells <integer mbbreq>
 ```
 Sets the maximum number of cell pairs `<mbbreq>` per node, allowing increased memory to be allocated for the cell pair lists. This option can be used if execution aborted because mbbl was too small.
 ```
-   boxmin <real rbox>
+   boxmin <real rbox>
 ```
 Sets the minimum size of a cell. This directive is obsolete. The use of mcells is preferred.
 ```
-   segmentsize <real rsgm>
+   segmentsize <real rsgm>
 ```
 Sets the maximum size of a segment. This value is used to determine which segments at the boundary of the cutoff radius should be considered in the generation of the pairlists. This value is also determined by the prepare module and written to the restart file. Use of this directive is not needed for simulations that use the current prepare module to generate the restart file.
 ```
-   memory <integer memlim>
+   memory <integer memlim>
 ```
 Sets a limit `<memlim>` in kB on the allocated amount of memory used by the molecular dynamics module. Per default all available memory is allocated. Use of this command is required for QM/MM simulations only.
 ```
-   expert
+   expert
 ```
 Enables the use of certain combinations of features that are considered unsafe. This directive should not be used for production runs.
 ```
-   develop <integer idevel>
+   develop <integer idevel>
 ```
 Enables the use of certain development options specified by the integer idevel. This option is for development purposes only, and should not be used for production runs.
 ```
-   control <integer icntrl>
+   control <integer icntrl>
 ```
 Enables the use of certain development options specified by the integer icntrl. This option is for development purposes only, and should not be used for production runs.
 ```
-   numerical
+   numerical
 ```
 Writes out analytical and finite difference forces for test purposes.
 ```
-   server <string servername> <integer serverport>
+   server <string servername> <integer serverport>
 ```
 Allows monitoring over a socket connection to the specified port on the named server of basic data as a simulation is running.
 
 For development purposes debug information can be written to the debug file with extension dbg with
 ```
-   debug <integer idebug>
+   debug <integer idebug>
 ```
 where *idebug* specifies the type of debug information being written.
 
 For testing purposes test information can be written to the test file with extension tst with
 ```
-   test <integer itest>
+   test <integer itest>
 ```
 where *itest* specifies the number of steps test information is written.
 
 On some platforms prefetching of data can improve the efficiency. This feature can be turned on using
 ```
-   prefetch [<integer nbget>]
+   prefetch [<integer nbget>]
 ```
 where *nbget* is the number of outstanding communication operations.
 
 Application of periodic boundary conditions for the evaluation of forces can be controlled with
 ```
-   pbc ( atom | residue | molecule )
+   pbc ( atom | residue | molecule )
 ```
 This option rarely needs to be used.
 
 Autocorrelation functions for error analysis are controlled using
 ```
-   auto [ fit <integer iapprx> | weight <real weight> ]
+   auto [ fit <integer iapprx> | weight <real weight> ]
 ```
 This option is disabled in the current release.
 
 Membrane system equilibration can be made more efficient using
 ```
-   membrane [ rotations ]
+   membrane [ rotations ]
 ```
 Constraining the center of mass of solute molecules in the xy plane is accomplished using
 ```
-   scmxy [<integer icmopt default 1>]
+   scmxy [<integer icmopt default 1>]
 ```
 where *icmopt* determines if the constraint is mass weighted (2).
 
 Radius of gyration calculations are enabled using
 ```
-   radius_gyration
+   radius_gyration
 ```
 Calculations of diffusion coefficients is enabled using
 ```
-   diffusion
+   diffusion
 ```
 This option is disabled in the current release.
 ```
-   comlim ( on | off )
+   comlim ( on | off )
 ```
 is disabled
 
 To limit the size of recoding files, new files are opened every *nfnewf* md steps using
 ```
-   batch <integer nfnewf>
+   batch <integer nfnewf>
 ```
