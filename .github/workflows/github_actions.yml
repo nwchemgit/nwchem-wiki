@@ -1,3 +1,4 @@
+name: NWChem-wiki mirroring and website update
 on:
   push:
   release:
