@@ -529,7 +529,7 @@ $$ E_{kinetic-atom}= \sum_I \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_
 
 $$ E_{local-atom}=\sum_I \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_{\alpha}^I> (u_{atom}^I)_{\alpha\beta} <\tilde{p}_{\beta}^I|\tilde{\psi}_i>$$
 
-$$ E_{xc-atom}=\sum_I \sum_{\theta\phi} w_{\theta\phi} \int_0^{r_cut^I} r^2 (\rho^I(r,\theta,\phi) \epsilon_{xc}(\rho^I(r,\theta,\phi)) -\tilde{\rho}^I(r,\theta,\phi) \epsilon_{xc}(\tilde{\rho}^I(r,\theta,\phi))) dr $$
+$$ E_{xc-atom}=\sum_I \sum_{\theta\phi} w_{\theta\phi} \int_0^{r_{cut}^I} r^2 (\rho^I(r,\theta,\phi) \epsilon_{xc}(\rho^I(r,\theta,\phi)) -\tilde{\rho}^I(r,\theta,\phi) \epsilon_{xc}(\tilde{\rho}^I(r,\theta,\phi))) dr $$
 
 $$ E_{hartree-atom}= \sum_I W_{atom}^I =\frac{1}{2} \sum_I \sum_i \sum_{\alpha\beta} <\tilde{\psi}_i|\tilde{p}_{\alpha}>  <\tilde{p}_{\beta}^I|\tilde{\psi}_i> $$
 $$ \sum_j \sum_{\mu\nu} <\tilde{\psi}_j|\tilde{p}_{\mu}^I>  <\tilde{p}_{\nu}^I|\tilde{\psi}_j> \sum_{lm} \tau_{l_\alpha m_\alpha, l_\beta m_\beta}^{lm} \tau_{l_\mu m_\mu, l_\nu m_\nu}^{lm} (V_{Heff}^I)_{\alpha\beta\mu\nu}^{l} $$
