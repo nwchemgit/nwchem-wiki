@@ -141,6 +141,11 @@ jobs:
           MKDOCS_SERVE=B bash ./build_website.sh
           ls -lart || true
           ls -lart site/index.html || true
+          cd site
+          sudo apt-get -y install libjpeg-turbo8 libpng16-16 fontconfig  libxext6 libfreetype6 libxrender1 libx11-6  xfonts-75dpi  libexpat1 libfontenc1 x11-common xfonts-encodings  xfonts-base curl
+          curl -LJO https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
+          sudo  dpkg -i wkhtmltox_0.12.6-1.focal_amd64.deb
+          wkhtmltopdf --print-media-type  --javascript-delay 45000 --enable-local-file-access print_page.html nwchemusermanual.pdf
       - name: checkout website
         shell: bash
         working-directory: mkdocs
