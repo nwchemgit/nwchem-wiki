@@ -117,7 +117,7 @@ jobs:
         run: |
           pwd
           bash ./install_mkdocs.sh
-          mkdocs -h || true
+          mkdocs -V || true
       - name: checkout archived forum
         shell: bash
         working-directory: mkdocs
