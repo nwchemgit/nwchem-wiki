@@ -1,4 +1,6 @@
-# Introduction
+# Functionalities
+
+## Overview
 
 NWChem provides many methods for computing the properties of molecular
 and periodic systems using standard quantum mechanical descriptions of

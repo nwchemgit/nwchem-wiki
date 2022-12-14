@@ -1,3 +1,7 @@
+# Geometries
+
+## Overview
+
 The GEOMETRY directive is a compound directive that allows the user to
 define the geometry to be used for a given calculation. The directive
 allows the user to specify the geometry with a relatively small amount

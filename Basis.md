@@ -1,6 +1,6 @@
-
-
 # Basis sets
+
+## Overview
 
 NWChem currently supports basis sets consisting of generally contracted
 Cartesian Gaussian functions up to a maximum angular momentum of six (*h*

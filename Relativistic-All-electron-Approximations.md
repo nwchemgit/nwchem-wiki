@@ -1,5 +1,7 @@
 # Relativistic all-electron approximations
 
+## Overview
+
 All methods which include treatment of relativistic effects are
 ultimately based on the Dirac equation, which has a four component wave
 function. The solutions to the Dirac equation describe both positrons
