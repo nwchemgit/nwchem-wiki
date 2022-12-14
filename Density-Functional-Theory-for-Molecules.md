@@ -179,7 +179,7 @@ given calculation can be summarized as follows:
 - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
     and not recommended
     
-## ADFT
+## ADFT **_New in NWChem 7.2.0_**:
 
 Use of the auxiliary density functional theory method (ADFT) method  can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
 The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
