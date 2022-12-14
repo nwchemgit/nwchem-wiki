@@ -157,7 +157,7 @@ In addition to the basis set for the Kohn-Sham orbitals, the charge
 density fitting basis set can also be specified in the input directives
 for the DFT module. This basis set is used for the evaluation of the
 Coulomb potential in the Dunlap scheme. The charge density fitting basis
-set must have the name "cd basis". This can be the actual name of a
+set must have the name `cd basis`. This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
 [SET](SET.md) directive. If this basis set is not
 defined by input, the O(N<sup>4</sup>) exact Coulomb contribution is computed.
@@ -178,6 +178,11 @@ given calculation can be summarized as follows:
     recommended for evaluation of the Coulomb potential
 - "xc basis" - exchange-correlation (XC) fitting basis set; optional,
     and not recommended
+    
+## ADFT
+
+Use of the auxiliary density functional theory method (ADFT) method  can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
+The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
 ## VECTORS and MAX_OVL: KS-MO Vectors
 
