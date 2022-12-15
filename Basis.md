@@ -21,8 +21,8 @@ The general form of the BASIS directive is as follows:
 ```
  BASIS [<string name default "ao basis">] \  
        [(spherical || cartesian) default cartesian] \  
-       [(print || noprint) default print]  
-       [rel]  
+       [(print || noprint) default print]  \
+       [rel] [bse] 
     <string tag> library [<string tag_in_lib>] \  
                  <string standard_set> [file <filename>] \  
                  [except <string tag list>] [rel]  
@@ -102,6 +102,14 @@ Order of functions.
     approximation](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation)
     for more details.
 
+### BSE keyword
+  `BSE` **_New in NWChem 7.2.0_**:  
+    This keyword loads the basis set [library](#basis-set-library) using data in `$NWCHEM_TOP/src/basis/libraries.bse`
+    from [basisetexchanger.org](#how-to-use-basis-files-from-httpswwwbasissetexchangeorg-new-in-2019).
+    CAVEAT: use of this keyword will also use the
+    [spherical/cartesian](#spherical-or-cartesian)
+    keywords from the basis library files.
+
 ## Basis sets tags
 
 Basis sets are associated with centers by using the tag of a center in a
@@ -134,9 +142,9 @@ coefficients.
 
 ## Basis set library
 
-The keyword library associated with each specific tag entry specifies
+The keyword `library` associated with each specific tag entry specifies
 that the calculation will use the standard basis set in NWChem for that
-center. The variable <standard_set> is the name that identifies the
+center. The string `<standard_set>` is the name that identifies the
 functions in the library. The names of standard basis sets are not case
 sensitive. For a complete list of basis sets and associated ECPs in the
 NWChem library see the [available basis
