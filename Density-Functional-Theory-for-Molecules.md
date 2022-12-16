@@ -1603,9 +1603,9 @@ sic [perturbative || oep || oep-loc ]
 <default perturbative>
 ```
 
-The Perdew and Zunger[^87] method to remove the self-interaction contained in many
+The Perdew and Zunger[^3] method to remove the self-interaction contained in many
 exchange-correlation functionals has been implemented with the Optimized
-Effective Potential method[^88] within the Krieger-Li-Iafrate approximation[^89].
+Effective Potential method[^87] within the Krieger-Li-Iafrate approximation[^88].
 Three variants of these methods are included in NWChem:
 
 - `sic perturbative` This is the default option for the sic directive.
@@ -1625,7 +1625,7 @@ Three variants of these methods are included in NWChem:
 With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
-implementation of this method can be found in the paper by Garza[^90]. The components of the
+implementation of this method can be found in the paper by Garza[^89]. The components of the
 sic energy can be printed out using:
 
 ```
@@ -1727,11 +1727,11 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^91] and [^92] (Use `vdw 0`)  
+1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^90] and [^91] (Use `vdw 0`)  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[^93]. (Use `vdw 1)`  
+2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[^92]. (Use `vdw 1)`  
 
-3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^94]. (Use `vdw 2`)  
+3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^93]. (Use `vdw 2`)  
 
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
@@ -1756,7 +1756,7 @@ $$ E_{disp} = \sum_{i,j} \sum_{n=6,8} s_n \ \frac{C^{ij}_n}{r_{ij}} \biggl\lbrac
 
 This new dispersion correction covers elements through Z=94.
   *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
-about the functional form can be found in reference [^95].
+about the functional form can be found in reference [^94].
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
@@ -1809,7 +1809,7 @@ task dft energy
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 
-See details (including list of a1 and a2 parameters) in  paper[^96]
+See details (including list of a1 and a2 parameters) in  paper[^95]
 and the website <http://schooner.chem.dal.ca/wiki/XDM>
 
 ```
@@ -2051,16 +2051,15 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 [^84]: C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993)
 [^85]: M.E.Mura and P.J.Knowles, J Chem Phys 104, 9848 (1996)
 [^86]: O.Treutler and R.Alrhichs, J.Chem.Phys 102, 346 (1995)
-[^87]: J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981)
-[^88]: R. T. Sharp and G. K. Horton, Phys. Rev. 90, 317 (1953);
+[^87]: R. T. Sharp and G. K. Horton, Phys. Rev. 90, 317 (1953);
        J. D. Talman and W. F. Shadwick, Phys. Rev. A 14, 36 (1976)
-[^89]: J. B. Krieger, Y. Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992);
+[^88]: J. B. Krieger, Y. Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992);
        *ibid*, 47, 165 (1993))
-[^90]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
-[^91]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
-[^92]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
-[^93]: S. Grimme J. Comp. Chem. 25 1463 (2004)
-[^94]: S. Grimme, J. Comp. Chem. 271787 (2006)
-[^95]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
-[^96]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
+[^89]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
+[^90]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
+[^91]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
+[^92]: S. Grimme J. Comput. Chem. 25 1463 (2004)
+[^93]: S. Grimme, J. Comput. Chem. 27 1787 (2006)
+[^94]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
+[^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
 
