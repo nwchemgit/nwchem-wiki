@@ -184,7 +184,7 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT) method  can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
+Use of the auxiliary density functional theory method (ADFT)[^0} can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
 The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
 ## VECTORS and MAX_OVL: KS-MO Vectors
@@ -507,71 +507,6 @@ the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
 The column 2nd refers to second derivatives of the energy with respect
 to nuclear position.  
 
-### References for XC Functionals
-
-///Footnotes Go Here///
-
-[^1]:  J.C. Slater and K.H. Johnson, Phys. Rev. B 5, 844 (1972). J.C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
-[^2]:  S.J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980)
-[^3]:  J.P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981).
-[^4]:  J.P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992)
-[^5]:  A.D. Becke, Phys. Rev. A 88, 3098 (1988)
-[^6]:  J.P. Perdew, J.A. Chevary, S.H. Vosko, K.A. Jackson, M.R. Pederson, D.J. Singh and C. Fiolhais, Phys. Rev. B 46, 6671 (1992)
-[^7]:  J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996); 78 , 1396 (1997)
-[^8]:  P.W.Gill , Mol. Phys. 89, 433 (1996)
-[^9]:  J.P. Perdew, Phys. Rev. B 33, 8822 (1986)
-[^10]: C. Lee, W. Yang and R. G. Parr, Phys. Rev. B 37, 785 (1988)
-[^11]: F.A. Hamprecht, A.J. Cohen, D.J.Tozer and N.C. Handy, J. Chem. Phys. 109, 6264 (1998)
-[^12]: A.D. Boese, N.L. Doltsinis, N.C. Handy and M. Sprik. J. Chem. Phys. 112, 1670 (2000)
-[^13]: A.D. Becke, J. Chem. Phys. 98, 1372 (1992)
-[^14]: A.D. Becke, J. Chem. Phys. 98, 5648 (1993)
-[^15]: A.D. Becke, J. Chem. Phys. 107, 8554 (1997)
-[^16]: H.L. Schmider and A.D. Becke, J. Chem. Phys. 108, 9624 (1998)
-[^17]: C. Adamo and V.Barone, J. Chem. Phys. 110, 6158 (1999)
-[^18]: A.J. Cohen and N.C. Handy, Chem. Phys. Lett. 316, 160 (2000)
-[^19]: A.D. Boese, N.C. Handy, J. Chem. Phys. 114, 5497 (2001)
-[^20]: N.C. Handy, A.J. Cohen, Mol. Phys. 99, 403 (2001)
-[^21]: G. Menconi, P.J. Wilson, D.J. Tozer, J. Chem. Phys 114, 3958 (2001)
-[^22]: P.J. Wilson, T.J. Bradley, D.J. Tozer, J. Chem. Phys 115, 9233 (2001)
-[^23]: C. Adamo and V. Barone, J. Chem. Phys. 108, 664 (1998); Y. Zhao and  D.G. Truhlar, J. Phys. Chem. A 109, 5656 (2005)
-[^24]: M.Filatov and W.Thiel, Mol.Phys. 91, 847 (1997). M.Filatov and W.Thiel, Int.J.Quantum Chem. 62, 603 (1997)
-[^25]: B.J. Lynch, P.L. Fast, M. Harris and D.G. Truhlar, J. Phys. Chem. A 104, 4811 (2000)
-[^26]: J.P. Perdew, S. Kurth, A. Zupan and P. Blaha, Phys. Rev. Lett. 82, 2544 (1999)
-[^27]: A. D. Boese, A. Chandra, J. M. L. Martin and D. Marx, J. Chem. Phys. 119, 5965 (2003)
-[^28]: J. Tao,J.Perdew, V. Staroverov and G. Scuseria, Phys. Rev. Let. 91, 146401-1 (2003)
-[^29]: V. Staroverov, G. Scuseria, J. Tao and J.Perdew, J. Chem.Phys. 119, 12129 (2003)
-[^30]: T.W. Keal, D.J. Tozer, J. Chem. Phys 123, 121103 (2005)
-[^31]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 110, 10664 (1999)
-[^32]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 111, 5656 (1999)
-[^33]: B. Hammer, L. B. Hansen and J. Nørskov , Phys. Rev. B 58, 7413    (1999)
-[^34]: Y. Zhang and W. Yang, Phys. Rev. Letters 80, 890 (1998)
-[^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
-[^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
-[^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
-[^39]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Phys. 123, 161103 (2005)
-[^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
-[^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
-[^42]: Y. Zhao, D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006)
-[^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
-[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
-[^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
-[^46]: Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008)
-[^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
-[^48]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 3, 117 (2012)
-[^49]: Y. Zhao and D. G. Truhlar, J. Chem. Phys. 128, 184109 (2008)
-[^50]: R. Peverati, Y. Zhao and D. G. Truhlar, J. Phys. Chem. Lett. 2, 1911 (2011)
-[^51]: R. Peverati and D.G. Truhlar, J. Chem. Phys. , 135, 191102 (2011)
-[^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
-[^53]: J. P. Perdew and W. Yue, Phys. Rev. B 33, 8800 (1986)
-[^54]: A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
-[^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
-[^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
-[^57]: Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
-[^58]: D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
-[^59]: Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
-[^60]: Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
-[^61]: A. D. Boese and J. M. L. Martin, J. Chem. Phys. 119, 3005 (2003).  
-
 ### Meta-GGA Functionals
 
 One way to calculate meta-GGA energies is to use orbitals and densities
@@ -589,8 +524,8 @@ file](#sample-input-file). In this instance, the energy is
 calculated self-consistently and geometry is optimized using the
 analytical gradients.
 
-(For more information on metaGGAs, see S. Kurth, J. Perdew, P. Blaha,
-Int. J. Quant. Chem 75, 889 (1999) for a brief description of meta-GGAs,
+(For more information on metaGGAs, see Kurth et al 1999 [^62]
+ for a brief description of meta-GGAs,
 and citations 14-27 therein for thorough background)
 
 Note: both TPSS and PKZB correlation require the PBE GGA CORRELATION
@@ -716,24 +651,9 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see the following papers (not a complete list) for further
+Please see references [^63] to [^76]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
-1. A. Savin, In Recent Advances in Density Functional Methods Part I;
-    D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
-2. H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540 (2001)
-3. Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
-4. T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
-5. M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
-6. O.A. Vydrov, G.E. Scuseria J. Chem. Phys. 125 234109 (2006)
-7. J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126, 154105 (2007)
-8. E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
-9. A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126, 191109 (2007)
-10. M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
-11. N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113, 6041 (2009)
-12. R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85 (2010)
-13. J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
-14. P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
 
 Example illustrating the CAM-B3LYP functional:
 
@@ -791,7 +711,7 @@ task dft energy
 
 ### SSB-D functional
 
-The recently developed SSB-D is a small correction to the non-empirical
+The SSB-D[^78] functional is a small correction to the non-empirical
 PBE functional and includes a portion of Grimme's dispersion correction
 (s6=0.847455). It is designed to reproduce the good results of OPBE for
 spin-state splittings and reaction barriers, and the good results of PBE
@@ -800,11 +720,7 @@ systems, including for difficult systems for DFT (dimerization of
 anthracene, branching of octane, water-hexamer isomers, C12H12 isomers,
 stacked adenine dimers), and for NMR chemical shieldings.
 
-1. M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103
-    (2009)
-2. M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9,
-    69 (2009)
-
+1. 
 It can be specified as
 
 ```
@@ -827,11 +743,7 @@ dft
 end
 ```
 
-For details of the theory, please see the following reference:
-
-1. S. Grimme, "Semiempirical hybrid density functional with
-    perturbative second-order correlation" Journal of Chemical Physics
-    124, 034108 (2006) [10.1063/1.2148954](https://doi.org/10.1063/1.2148954)
+For details of the theory, please see reference[^80].
 
 ### LB94 and CS00: Asymptotic correction
 
@@ -1074,8 +986,8 @@ deemed undesirable with the obvious keywords,
 
 For systems where the initial guess is very poor, the user can try using
 fractional occupation of the orbital levels during the initial cycles of
-the SCF convergence (A. D. Rabuck and G. E. Scuseria, J. Chem. Phys
-110,695 (1999)). The input has the following form
+the SCF convergence[^77].
+The input has the following form
 
 ```
  CONVERGENCE rabuck [n_rabuck <integer n_rabuck default 25>]]
@@ -1109,9 +1021,7 @@ task dft
   
 ## CDFT: Constrained DFT
 
-This option enables the constrained DFT formalism by Wu and Van Voorhis
-described in the paper: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502
-(2005).
+This option enables the constrained DFT formalism by Wu and Van Voorhis[^79]: 
 
 ```
  CDFT <integer fatom1 latom1> [<integer fatom2 latom2>] (charge||spin <real constaint_value>) \ 
@@ -1182,8 +1092,8 @@ the HOMO (eg metallic clusters)
 
 This option allows fractional occupation of the molecular orbitals. A
 Gaussian broadening function of exponent smear is used as described in
-the paper: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384
-(1996). The user must be aware that an additional energy term is added
+the paper by Warren and Dunlap[^81].
+The user must be aware that an additional energy term is added
 to the total energy in order to have energies and gradients consistent.
 
 ## FON: Calculations with fractional numbers of electrons
@@ -1529,9 +1439,8 @@ grid lebedev 80 11 H 70 8  O 90 11
 GRID [(becke||erf1||erf2||ssf) default erf1]
 ```
 
-- becke : A. D. Becke, J. Chem. Phys. 88, 1053 (1988).
-- ssf : R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett.
-    257, 213 (1996).
+- becke : see paper[^81]
+- ssf : see paper[^82]
 - erf1 : modified ssf
 - erf2 : modified ssf
 
@@ -1545,13 +1454,11 @@ $$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(
  GRID [[euler||mura||treutler]  default mura]
 ```
 
-- euler : Euler-McLaurin quadrature wih the transformation devised by
-    C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993).
-- mura : Modification of the Murray-Handy-Laming scheme by M.E.Mura
-    and P.J.Knowles, J Chem Phys 104, 9848 (1996) (we are not using the
-    scaling factors proposed in this paper).
-- treutler : Gauss-Chebyshev using the transformation suggested by
-    O.Treutler and R.Alrhichs, J.Chem.Phys 102, 346 (1995).
+- euler : Euler-McLaurin quadrature with the transformation devised by
+    Murray et al[^84].
+- mura : Modification of the Murray-Handy-Laming scheme (we are not using the same
+    scaling factors proposed in the paper by Mura and Knowles[^85]).
+- treutler : Gauss-Chebyshev using the transformation suggested by Treutler[^86].
 
 ### Disk usage for Grid
 
@@ -1695,14 +1602,10 @@ sic [perturbative || oep || oep-loc ]
 <default perturbative>
 ```
 
-The Perdew and Zunger (see J. P. Perdew and A. Zunger, Phys. Rev. B 23,
-5048 (1981)) method to remove the self-interaction contained in many
+The Perdew and Zunger[^87] method to remove the self-interaction contained in many
 exchange-correlation functionals has been implemented with the Optimized
-Effective Potential method (see R. T. Sharp and G. K. Horton, Phys. Rev.
-90, 317 (1953), J. D. Talman and W. F. Shadwick, Phys. Rev. A 14, 36
-(1976)) within the Krieger-Li-Iafrate approximation (J. B. Krieger, Y.
-Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
-165 (1993)) Three variants of these methods are included in NWChem:
+Effective Potential method[^88] within the Krieger-Li-Iafrate approximation[^89].
+Three variants of these methods are included in NWChem:
 
 - `sic perturbative` This is the default option for the sic directive.
     After a self-consistent calculation, the Kohn-Sham orbitals are
@@ -1721,8 +1624,7 @@ Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992); 47,
 With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
-implementation of this method can be found in J. Garza, J. A. Nichols
-and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000). The components of the
+implementation of this method can be found in the paper by Garza[^90]. The components of the
 sic energy can be printed out using:
 
 ```
@@ -1824,13 +1726,11 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from Q. Wu and W. Yang,
-J. Chem. Phys. 116 515 (2002) and U. Zimmerli, M Parrinello and P.
-Koumoutsakos J. Chem. Phys. 120 2693 (2004). (Use `vdw 0`)  
+1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^91] and [^92] (Use `vdw 0`)  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$. See details in S. Grimme J. Comp. Chem. 25 1463 (2004). (Use `vdw 1)`  
+2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$. See details in reference[^93]. (Use `vdw 1)`  
 
-3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in S. Grimme J. Comp. Chem. 271787 (2006). (Use `vdw 2`)  
+3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^94]. (Use `vdw 2`)  
 
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
@@ -1855,8 +1755,7 @@ $$ E_{disp} = \sum_{i,j} \sum_{n=6,8} s_n \ \frac{C^{ij}_n}{r_{ij}} \biggl\lbrac
 
 This new dispersion correction covers elements through Z=94.
   *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
-about the functional form can be found in S. Grimme, J. Antony, S.
-Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010).
+about the functional form can be found in reference [^95].
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
@@ -1909,8 +1808,7 @@ task dft energy
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 
-See details (including list of a1 and a2 parameters) in A.
-Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
+See details (including list of a1 and a2 parameters) in  paper[^96]
 and the website <http://schooner.chem.dal.ca/wiki/XDM>
 
 ```
@@ -2059,3 +1957,109 @@ task sodft
 The options `SYM` and `ADAPT` works the same way as the analogous options for the SCF code.
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
 [ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
+
+### References 
+
+///Footnotes Go Here///
+[^0]: A. M. Köster, J. U. Reveles, and J. M. del Campo, J. Chem. Phys. 121, 3417-3424 (2004).
+[DOI:10.1063/1.1771638](https://dx.doi.org/10.1063/1.1771638)
+[^1]:  J.C. Slater and K.H. Johnson, Phys. Rev. B 5, 844 (1972). J.C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
+[^2]:  S.J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980)
+[^3]:  J.P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981).
+[^4]:  J.P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992)
+[^5]:  A.D. Becke, Phys. Rev. A 88, 3098 (1988)
+[^6]:  J.P. Perdew, J.A. Chevary, S.H. Vosko, K.A. Jackson, M.R. Pederson, D.J. Singh and C. Fiolhais, Phys. Rev. B 46, 6671 (1992)
+[^7]:  J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996); 78 , 1396 (1997)
+[^8]:  P.W.Gill , Mol. Phys. 89, 433 (1996)
+[^9]:  J.P. Perdew, Phys. Rev. B 33, 8822 (1986)
+[^10]: C. Lee, W. Yang and R. G. Parr, Phys. Rev. B 37, 785 (1988)
+[^11]: F.A. Hamprecht, A.J. Cohen, D.J.Tozer and N.C. Handy, J. Chem. Phys. 109, 6264 (1998)
+[^12]: A.D. Boese, N.L. Doltsinis, N.C. Handy and M. Sprik. J. Chem. Phys. 112, 1670 (2000)
+[^13]: A.D. Becke, J. Chem. Phys. 98, 1372 (1992)
+[^14]: A.D. Becke, J. Chem. Phys. 98, 5648 (1993)
+[^15]: A.D. Becke, J. Chem. Phys. 107, 8554 (1997)
+[^16]: H.L. Schmider and A.D. Becke, J. Chem. Phys. 108, 9624 (1998)
+[^17]: C. Adamo and V.Barone, J. Chem. Phys. 110, 6158 (1999)
+[^18]: A.J. Cohen and N.C. Handy, Chem. Phys. Lett. 316, 160 (2000)
+[^19]: A.D. Boese, N.C. Handy, J. Chem. Phys. 114, 5497 (2001)
+[^20]: N.C. Handy, A.J. Cohen, Mol. Phys. 99, 403 (2001)
+[^21]: G. Menconi, P.J. Wilson, D.J. Tozer, J. Chem. Phys 114, 3958 (2001)
+[^22]: P.J. Wilson, T.J. Bradley, D.J. Tozer, J. Chem. Phys 115, 9233 (2001)
+[^23]: C. Adamo and V. Barone, J. Chem. Phys. 108, 664 (1998); Y. Zhao and  D.G. Truhlar, J. Phys. Chem. A 109, 5656 (2005)
+[^24]: M.Filatov and W.Thiel, Mol.Phys. 91, 847 (1997). M.Filatov and W.Thiel, Int.J.Quantum Chem. 62, 603 (1997)
+[^25]: B.J. Lynch, P.L. Fast, M. Harris and D.G. Truhlar, J. Phys. Chem. A 104, 4811 (2000)
+[^26]: J.P. Perdew, S. Kurth, A. Zupan and P. Blaha, Phys. Rev. Lett. 82, 2544 (1999)
+[^27]: A. D. Boese, A. Chandra, J. M. L. Martin and D. Marx, J. Chem. Phys. 119, 5965 (2003)
+[^28]: J. Tao,J.Perdew, V. Staroverov and G. Scuseria, Phys. Rev. Let. 91, 146401-1 (2003)
+[^29]: V. Staroverov, G. Scuseria, J. Tao and J.Perdew, J. Chem.Phys. 119, 12129 (2003)
+[^30]: T.W. Keal, D.J. Tozer, J. Chem. Phys 123, 121103 (2005)
+[^31]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 110, 10664 (1999)
+[^32]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 111, 5656 (1999)
+[^33]: B. Hammer, L. B. Hansen and J. Nørskov , Phys. Rev. B 58, 7413    (1999)
+[^34]: Y. Zhang and W. Yang, Phys. Rev. Letters 80, 890 (1998)
+[^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
+[^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
+[^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
+[^39]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Phys. 123, 161103 (2005)
+[^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
+[^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
+[^42]: Y. Zhao, D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006)
+[^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
+[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
+[^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
+[^46]: Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008)
+[^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
+[^48]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 3, 117 (2012)
+[^49]: Y. Zhao and D. G. Truhlar, J. Chem. Phys. 128, 184109 (2008)
+[^50]: R. Peverati, Y. Zhao and D. G. Truhlar, J. Phys. Chem. Lett. 2, 1911 (2011)
+[^51]: R. Peverati and D.G. Truhlar, J. Chem. Phys. , 135, 191102 (2011)
+[^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
+[^53]: J. P. Perdew and W. Yue, Phys. Rev. B 33, 8800 (1986)
+[^54]: A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
+[^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
+[^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
+[^57]: Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
+[^58]: D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
+[^59]: Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
+[^60]: Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
+[^61]: A. D. Boese and J. M. L. Martin, J. Chem. Phys. 119, 3005 (2003).  
+[^62]: S. Kurth, J. Perdew, P. Blaha, Int. J. Quant. Chem 75, 889 (1999).
+[^63]: A. Savin, In Recent Advances in Density Functional Methods Part I;
+    D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
+[^64]: H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540 (2001)
+[^65]: Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
+[^66]: T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
+[^67]: M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
+[^68]: O.A. Vydrov, G.E. Scuseria J. Chem. Phys. 125 234109 (2006)
+[^69]: J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126, 154105 (2007)
+[^70]: E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
+[^71]: A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126, 191109 (2007)
+[^72]: M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
+[^73]: N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113, 6041 (2009)
+[^74]: R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85 (2010)
+[^75]: J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
+[^76]: P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
+[^77]: A. D. Rabuck and G. E. Scuseria, J. Chem. Phys 110,695 (1999)
+[^78]: M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103 (2009);
+       M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9, 69 (2009)
+[^79]: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502 (2005)
+[^80]: S. Grimme,  J. Chem. Phys. 124, 034108 (2006) [DOI:10.1063/1.2148954](https://dx.doi.org/10.1063/1.2148954)
+[^81]: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384 (1996)
+[^82]: A. D. Becke, J. Chem. Phys. 88, 1053 (1988)
+[^83]: R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett. 257, 213 (1996)
+[^84]: C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993)
+[^85]: M.E.Mura and P.J.Knowles, J Chem Phys 104, 9848 (1996)
+[^86]: O.Treutler and R.Alrhichs, J.Chem.Phys 102, 346 (1995)
+[^87]: J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981)
+[^88]: R. T. Sharp and G. K. Horton, Phys. Rev. 90, 317 (1953);
+       J. D. Talman and W. F. Shadwick, Phys. Rev. A 14, 36 (1976)
+[^89]: J. B. Krieger, Y. Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992);
+       *ibid*, 47, 165 (1993))
+[^90]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
+[^91]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
+[^92]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
+[^93]: S. Grimme J. Comp. Chem. 25 1463 (2004)
+[^94]: S. Grimme, J. Comp. Chem. 271787 (2006)
+[^95]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
+[^91]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
+
