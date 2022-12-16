@@ -1964,17 +1964,19 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 ///Footnotes Go Here///
 [^0]: A. M. Köster, J. U. Reveles, and J. M. del Campo, J. Chem. Phys. 121, 3417-3424 (2004).
 [DOI:10.1063/1.1771638](https://dx.doi.org/10.1063/1.1771638)
-[^1]:  J. C. Slater and K. H. Johnson, Phys. Rev. B 5, 844 (1972). J.C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
-[^2]:  S. J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980)
-[^3]:  J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981).
-[^4]:  J. P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992)
-[^5]:  A.D. Becke, Phys. Rev. A 88, 3098 (1988)
-[^6]:  J. P. Perdew, J. A. Chevary, S. H. Vosko, K. A. Jackson, M. R. Pederson, D. J. Singh and C. Fiolhais, Phys. Rev. B 46, 6671 (1992)
-[^7]:  J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996); 78 , 1396 (1997)
-[^8]:  P. W. Gill , Mol. Phys. 89, 433 (1996)
-[^9]:  J. P. Perdew, Phys. Rev. B 33, 8822 (1986)
-[^10]: C. Lee, W. Yang and R. G. Parr, Phys. Rev. B 37, 785 (1988)
-[^11]: F. A. Hamprecht, A.J. Cohen, D.J.Tozer and N.C. Handy, J. Chem. Phys. 109, 6264 (1998)
+[^1]:  J. C. Slater and K. H. Johnson, Phys. Rev. B 5, 844 (1972)[DOI:10.1103/PhysRevB.5.844](https://dx.doi.org/10.1103/PhysRevB.5.844);
+       J .C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
+[^2]:  S. J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980) [DOI:10.1139/p80-159](https://dx.doi.org/10.1139/p80-159)
+[^3]:  J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981) [DOI:10.1103/PhysRevB.23.5048](https://dx.doi.org/10.1103/PhysRevB.23.5048)
+[^4]:  J. P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992) [DOI:10.1103/PhysRevB.45.13244](https://dx.doi.org/10.1103/PhysRevB.45.13244)
+[^5]:  A. D. Becke, Phys. Rev. A 88, 3098 (1988) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^6]:  J. P. Perdew, J. A. Chevary, S. H. Vosko, K. A. Jackson, M. R. Pederson, D. J. Singh and C. Fiolhais, Phys. Rev. B 46, 6671 (1992) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^7]:  J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996) 10.1103/PhysRevLett.77.3865
+       *ibid* 78 , 1396 (1997) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^8]:  P. W. Gill , Mol. Phys. 89, 433 (1996) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^9]:  J. P. Perdew, Phys. Rev. B 33, 8822 (1986) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^10]: C. Lee, W. Yang and R. G. Parr, Phys. Rev. B 37, 785 (1988) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
+[^11]: F. A. Hamprecht, A. J. Cohen, D. J.Tozer and N. C. Handy, J. Chem. Phys. 109, 6264 (1998) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
 [^12]: A. D. Boese, N.L. Doltsinis, N.C. Handy and M. Sprik. J. Chem. Phys. 112, 1670 (2000)
 [^13]: A. D. Becke, J. Chem. Phys. 98, 1372 (1992)
 [^14]: A. D. Becke, J. Chem. Phys. 98, 5648 (1993)
