@@ -184,7 +184,7 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT)[^0} can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
+Use of the auxiliary density functional theory method (ADFT)[^0] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
 The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
 ## VECTORS and MAX_OVL: KS-MO Vectors
