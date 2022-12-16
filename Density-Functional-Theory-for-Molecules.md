@@ -651,7 +651,8 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [^63] to [^76]  (not a complete list) for further
+Please see references [^63], [^64], [^65], [^66], [^67], [^68], [^69],
+[^70], [^71], [^72], [^73], [^74], [^75] and [^76]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
 
@@ -1728,7 +1729,7 @@ There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
 1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^91] and [^92] (Use `vdw 0`)  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$. See details in reference[^93]. (Use `vdw 1)`  
+2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[^93]. (Use `vdw 1)`  
 
 3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^94]. (Use `vdw 2`)  
 
