@@ -186,7 +186,7 @@ given calculation can be summarized as follows:
 
 Use of the auxiliary density functional theory method (ADFT)[^0] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
 
-The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an `xc basis` without the `adft` keyword. It is important to note that, different to the old exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
+The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an [xc basis](#specification-of-basis-sets-for-the-dft-module) without the `adft` keyword. It is important to note that, different to straight exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
 
 The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
