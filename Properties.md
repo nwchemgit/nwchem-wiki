@@ -87,21 +87,9 @@ hyperfine, gshift and shielding to calculate the EPR and paramagnetic
 NMR parameters of an open-shell system. All calculations are compatible 
 with the ZORA model potential approach.
 
-For theoretical and computational details, please refer to the following
-references:
+For theoretical and computational details, please refer to 
+references[^11][^12][^13].
 
-A1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
-    Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
-    Zeroth-Order Regular Approximation and Density Functional Theory",
-    Journal of Chemical Theory and Computation 7, 2175 (2011). [DOI:10.1021/ct200143w](https://dx.doi.org/10.1021/ct200143w)  
-A2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
-    computations and localized orbital analysis of nuclear hyperfine
-    coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
-    Comput. 2012, 8, 598–609. [DOI:10.1021/ct2008507](https://dx.doi.org/10.1021/ct2008507)    
-A3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
-    computations of nuclear magnetic shielding and g-shifts with the
-    zeroth-order regular approximation and range-separated hybrid
-    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)  
   
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
@@ -121,11 +109,11 @@ follows:
 property
  response  1 7.73178E-2   # response order and frequency in Hartree energy units  
  velocity                 # use modified velocity gauge for electric dipole  
- orbeta                   # calculate optical rotation 'beta' directly [B2]  
- giao                     # GIAO optical rotation [B1,B3,B6], forces orbeta  
- bdtensor                 # calculates B-tilde of Refs. [B1,B6] 
- analysis                 # analyze response in terms of MOs [B6]  
- damping 0.007            # complex response functions with damping, Ref [B5] 
+ orbeta                   # calculate optical rotation 'beta' directly [^B2]  
+ giao                     # GIAO optical rotation [^B1][^B3][^B6], forces orbeta  
+ bdtensor                 # calculates B-tilde of Refs. [^B1][^B6] 
+ analysis                 # analyze response in terms of MOs [^B6]  
+ damping 0.007            # complex response functions with damping, Ref [^B5] 
  convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
@@ -167,17 +155,8 @@ of the analysis carefully). See Ref. [6] for an example. Works with HF
 and density functionals for which linear response kernels are
 implemented in NWChem.
 
-Please refer to the following papers for further details:
+Please refer to papers[^B1][^B2][^B3][^B4][^B5][^B6] for further details:
 
-B1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)  
-B2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)  
-B3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)  
-B4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
-    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)  
-B5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
-    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
-B6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
-    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
 
 ### Raman
 
@@ -242,12 +221,7 @@ set raman:numpts <integer>
 
 #### Raman References
 
-Please refer to the following papers for further details:
-
-C1.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
-    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)  
-C2.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
-    118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)  
+Please refer to papers[^C1][^C2] for further details:
 
 
 ### Polarizability computed with the Sum over Orbitals method
@@ -259,7 +233,7 @@ much less accurate than linear response calculations, with values off
 by a factor of 2-4x. However, the qualitative nature of this results
 can be used to compute Raman frequencies when coupled with
 [QMD](Gaussian-Basis-AIMD.md#property-calculation-in-a-molecular-dynamics-simulation),
-as described in references [D1,D2].
+as described in references [^D1][^D2].
   
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
@@ -275,9 +249,6 @@ end
 task dft property
 ```
   
-D1. S. A. Fischer, T. W. Ueltschi, P. Z. El-Khoury, A. L. Mifflin, W. P. Hess, H.-F. Wang, C. J. Cramer, and N. Govind,
-The Journal of Physical Chemistry B 120 (8), 1429-1436 (2016). [DOI: 10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323)  
-D2.  E. Aprà, A. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)  
   
 ### Nbofile
 
@@ -453,3 +424,53 @@ Then, the resulting `h2o.molden` file can be post processed by [Janpa](https://j
 ```
 java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
+
+## Localization
+
+
+Localized molecular orbitals can be computed with the `localization` keyword.  
+
+```
+property  
+   localization (( pm || boys || ibo) default pm)  
+end  
+ ```
+
+The following methods are available:
+* Pipek-Mezey[^71], `pm` keyword (default)
+* Foster-Boys[^72], `boys` keyword
+* IAO/IBO[^73][^74], `ibo` keyword
+
+## References 
+///Footnotes Go Here///
+
+[^11]:  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
+    Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
+    Zeroth-Order Regular Approximation and Density Functional Theory",
+    Journal of Chemical Theory and Computation 7, 2175 (2011). [DOI:10.1021/ct200143w](https://dx.doi.org/10.1021/ct200143w)  
+[^12]:  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
+    computations and localized orbital analysis of nuclear hyperfine
+    coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
+    Comput. 2012, 8, 598–609. [DOI:10.1021/ct2008507](https://dx.doi.org/10.1021/ct2008507)    
+[^13]:  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
+    computations of nuclear magnetic shielding and g-shifts with the
+    zeroth-order regular approximation and range-separated hybrid
+    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)
+[^B1]: J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)  
+[^B2]: J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)  
+[^B3]: M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)  
+[^B4]: J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
+    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)  
+[^B5]: M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
+    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
+[^B6]: B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
+    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
+[^C1]: J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
+    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)  
+[^C2]: Aquino, F. W.; Schatz, G. C. (2014). The Journal of Physical Chemistry A  118 , 517. [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)  
+[^D1]: Fischer, S. A. ; Ueltschi, T. W.; El-Khoury, P. Z.; Mifflin, A. L.; Hess, W. P.; Wang,  H.-F.; Cramer, C. J.; Govind, N. (2016). The Journal of Physical Chemistry B 120 (8), 1429-1436. [DOI: 10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323)  
+[^D2]:  E. Aprà, A. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)  
+[^71]: Pipek, J; Mezey, P. G. (1989). "A fast intrinsic localization procedure applicable for ab initio and semiempirical linear combination of atomic orbital wave functions". The Journal of Chemical Physics. 90, 4916. [DOI:10.1063/1.456588](https://dx.doi.org/10.1063/1.456588)
+[^72]: Boys, S. F. (1960). "Construction of Molecular orbitals to be minimally variant for changes from one molecule to another". Reviews of Modern Physics. 32, 296–299. [DOI:10.1103/RevModPhys.32.300](https://dx.doi.org/10.1103/RevModPhys.32.300)
+[^73]: Knizia, G. (2013). "Intrinsic atomic orbitals: An unbiased bridge between quantum theory and chemical concepts". J. Chem. Theory Comput. 9, 4834 [DOI:10.1021/ct400687b](https://dx.doi.org/10.1021/ct400687b)
+[^74]: Knizia, G; Klein, J. E. M. N. (2015). "Electron Flow in Reaction Mechanisms-Revealed from First Principles". Angew. Chem. Int. Ed., 54, 5518 [DOI:10.1002/anie.201410637](https://dx.doi.org/10.1002/anie.201410637)

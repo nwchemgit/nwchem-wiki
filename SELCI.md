@@ -40,62 +40,60 @@ A typical sequence of calculations is as follows:
 
 To illustrate this, below is some abbreviated output from a calculation
 on water in an augmented cc-PVDZ basis set with one frozen core orbital.
-The SCF was converged to high precision in \(C_{2v}\) symmetry with the
+The SCF was converged to high precision in C<sub>2v</sub> symmetry with the
 following input
 ```
- start h2o  
- geometry; symmetry c2v  
-   O 0 0 0; H 0 1.43042809 -1.10715266  
- end  
- basis  
-   H library aug-cc-pvdz; O library aug-cc-pvdz  
- end  
- task scf  
- scf; thresh 1d-8; end
+ start h2o  
+ geometry; symmetry c2v  
+   O 0 0 0; H 0 1.43042809 -1.10715266  
+ end  
+ basis  
+   H library aug-cc-pvdz; O library aug-cc-pvdz  
+ end  
+ task scf  
+ scf; thresh 1d-8; end
 ```
 The following input restarts from the SCF to perform a sequence of
 selected CI calculations with the specified tolerances, starting with
 the SCF reference.
 ```
- restart h2o  
- set fourindex:occ_frozen 1  
- set selci:mode select  
- set "selci:selection thresholds" \  
-     0.001 0.001 0.0001 0.0001 0.00001 0.00001 0.000001  
- task selci
+ restart h2o  
+ set fourindex:occ_frozen 1  
+ set selci:mode select  
+ set "selci:selection thresholds" \  
+     0.001 0.001 0.0001 0.0001 0.00001 0.00001 0.000001  
+ task selci
 ```
 The table below summarizes the output from each of the major
 computational steps that were
 performed.
 
-<center>
 
 |       |                                |           |                                       |
-| ----- | ------------------------------ | --------- | ------------------------------------- |
+| ----- | ------------------------------ | --------- | ------------------------------------: |
 |       |                                | CI        |                                       |
 | Step  | Description                    | dimension | Energy                                |
 |       |                                |           |                                       |
 | 1     | Four-index, one frozen-core    |           |                                       |
 | 2     | Config. generator, SCF default | 1         |                                       |
-| 3+4   | CI diagonalization             | 1         | \(E_{CI} = -76.041983\)               |
-| 5     | PT selection T=0.001           | 1         | \(E_{CI+PT} = -76.304797\)            |
-| 6+7   | CI diagonalization             | 75        | \(E_{CI} = -76.110894\)               |
-| 8     | PT selection T=0.001           | 75        | \(E_{CI+PT} = -76.277912\)            |
-| 9+10  | CI diagonalization             | 75        | \(E_{CI}(T=0.001) = -76.110894\)      |
-| 11    | PT selection T=0.0001          | 75        | \(E_{CI+PT}(T=0.001) = -76.277912\)   |
-| 12+13 | CI diagonalization             | 823       | \(E_{CI} = -76.228419\)               |
-| 14    | PT selection T=0.0001          | 823       | \(E_{CI+PT} = -76.273751\)            |
-| 15+16 | CI diagonalization             | 841       | \(E_{CI}(T=0.0001) = -76.2300544\)    |
-| 17    | PT selection T=0.00001         | 841       | \(E_{CI+PT}(T=0.0001) = -76.274073\)  |
-| 18+19 | CI diagonalization             | 2180      | \(E_{CI} = -76.259285\)               |
-| 20    | PT selection T=0.00001         | 2180      | \(E_{CI+PT} = -76.276418\)            |
-| 21+22 | CI diagonalization             | 2235      | \(E_{CI}(T=0.00001) = -76.259818\)    |
-| 23    | PT selection T=0.000001        | 2235      | \(E_{CI+PT}(T=0.00001) = -76.276478\) |
+| 3+4   | CI diagonalization             | 1         | E<sub>CI</sub> = -76.041983               |
+| 5     | PT selection T=0.001           | 1         | E<sub>CI+PT</sub> = -76.304797            |
+| 6+7   | CI diagonalization             | 75        | E<sub>CI</sub> = -76.110894               |
+| 8     | PT selection T=0.001           | 75        | E<sub>CI+PT</sub> = -76.277912            |
+| 9+10  | CI diagonalization             | 75        | E<sub>CI</sub>(T=0.001) = -76.110894      |
+| 11    | PT selection T=0.0001          | 75        | E<sub>CI+PT</sub>(T=0.001) = -76.277912   |
+| 12+13 | CI diagonalization             | 823       | E<sub>CI</sub> = -76.228419               |
+| 14    | PT selection T=0.0001          | 823       | E<sub>CI+PT</sub> = -76.273751            |
+| 15+16 | CI diagonalization             | 841       | E<sub>CI</sub>(T=0.0001) = -76.2300544    |
+| 17    | PT selection T=0.00001         | 841       | E<sub>CI+PT</sub>(T=0.0001) = -76.274073  |
+| 18+19 | CI diagonalization             | 2180      | E<sub>CI</sub> = -76.259285               |
+| 20    | PT selection T=0.00001         | 2180      | E<sub>CI+PT</sub> = -76.276418            |
+| 21+22 | CI diagonalization             | 2235      | E<sub>CI</sub>(T=0.00001) = -76.259818    |
+| 23    | PT selection T=0.000001        | 2235      | E<sub>CI+PT</sub>(T=0.00001) = -76.276478 |
 | 24    | CI diagonalization             | 11489     |                                       |
 
 Summary of steps performed in a selected CI calculation on water.
 
-</center>
 
 ## Files
 
@@ -150,7 +148,7 @@ MCSCF reference.
 
 A single orbital configuration or occupation is specified by
 ```
- ns  (socc(i),i=1,ns)  (docc(i),i=1,nd)
+ ns  (socc(i),i=1,ns)  (docc(i),i=1,nd)
 ```
 where ns specifies the number of singly occupied orbitals, socc() is the
 list of singly occupied orbitals, and docc() is the list of doubly
@@ -159,28 +157,28 @@ inferred from ns and the total number of electrons). All occupations may
 be strung together and inserted into the database as a single integer
 array with name "selci:conf". For example, the input
 ```
- set "selci:conf" \  
-   0                1  2  3  4 \  
-   0                1  2  3 27 \  
-   0                1  3  4 19 \  
-   2   11 19        1  3  4 \  
-   2    8 27        1  2  3 \  
-   0                1  2  4 25 \  
-   4   3  4 25 27   1  2 \  
-   4   2  3 19 20   1 4 \  
-   4   2  4 20 23   1 3
+ set "selci:conf" \  
+   0                1  2  3  4 \  
+   0                1  2  3 27 \  
+   0                1  3  4 19 \  
+   2   11 19        1  3  4 \  
+   2    8 27        1  2  3 \  
+   0                1  2  4 25 \  
+   4   3  4 25 27   1  2 \  
+   4   2  3 19 20   1 4 \  
+   4   2  4 20 23   1 3
 ```
 specifies the following nine orbital configurations
 ```
-  1(2)  2(2)  3(2)  4(2)  
-  1(2)  2(2)  3(2) 27(2)  
-  1(2)  3(2)  4(2) 19(2)  
-  1(2)  3(2)  4(2) 11(1) 19(1)  
-  1(2)  2(2)  3(2)  8(1) 27(1)  
-  1(2)  2(2)  4(2) 25(2)  
-  1(2)  2(2)  3(1)  4(1) 25(1) 27(1)  
-  1(2)  2(1)  3(1)  4(2) 19(1) 20(1)  
-  1(2)  2(1)  3(2)  4(1) 20(1) 23(1)
+  1(2)  2(2)  3(2)  4(2)  
+  1(2)  2(2)  3(2) 27(2)  
+  1(2)  3(2)  4(2) 19(2)  
+  1(2)  3(2)  4(2) 11(1) 19(1)  
+  1(2)  2(2)  3(2)  8(1) 27(1)  
+  1(2)  2(2)  4(2) 25(2)  
+  1(2)  2(2)  3(1)  4(1) 25(1) 27(1)  
+  1(2)  2(1)  3(1)  4(2) 19(1) 20(1)  
+  1(2)  2(1)  3(2)  4(1) 20(1) 23(1)
 ```
 The optional formatting of the input is just to make this arcane
 notation easier to read. Relatively few configurations can be currently
@@ -195,22 +193,22 @@ active spaces with up to ten electrons.
 
 The number of sets is specified as follows,
 
-` set selci:ngen 4`
+` set selci:ngen 4`
 
 which indicates that there will be four sets. Each set is then specified
 as a separate integer array
 ```
- set "selci:refgen  1" 5 4    6 4   5 3   6 3    
- set "selci:refgen  2" 5 4    6 4   5 3   6 3    
- set "selci:refgen  3" 5 4    6 4   5 3   6 3    
- set "selci:refgen  4" 5 4    6 4   5 3   6 3
+ set "selci:refgen  1" 5 4    6 4   5 3   6 3    
+ set "selci:refgen  2" 5 4    6 4   5 3   6 3    
+ set "selci:refgen  3" 5 4    6 4   5 3   6 3    
+ set "selci:refgen  4" 5 4    6 4   5 3   6 3
 ```
 In the absence of friendly, input note that the names "selci:refgen n"
 must be formatted with n in I2 format. Each set specifies a list of
 creation-annihilation operator pairs (in that order). So for instance,
 in the above example each set is the same and causes the excitations
 ```
- 4->5   4->6   3->5   3->6
+ 4->5   4->6   3->5   3->6
 ```
 If orbitals 3 and 4 were initially doubly occupied, and orbitals 5 and 6
 initially unoccupied, then the application of this set of operators four
@@ -235,7 +233,7 @@ By default no excitation is applied to the reference configurations. If,
 for instance, you wanted to generate a single excitation CI space from
 the current configuration list, specify
 ```
- set selci:exci 1
+ set selci:exci 1
 ```
 Any excitation level may be applied, but since the list of
 configurations is explicitly generated, as is the CI Hamiltonian matrix,
@@ -247,7 +245,7 @@ tens of thousands of configurations.
 By default, only one root is generated in the CI diagonalization or
 perturbation selection. The following requests that 2 roots be generated
 ```
- set selci:nroot 2
+ set selci:nroot 2
 ```
 There is no imposed upper limit. If many roots are required, then, to
 minimize root skipping problems, it helps to perform an initial
@@ -258,11 +256,11 @@ obtained.
 ## Accuracy of diagonalization
 
 By default, the CI wavefunctions are converged to a residual norm of
-\(10^{-6}\) which provides similar accuracy in the perturbation
+10<sup>-6</sup> which provides similar accuracy in the perturbation
 corrections to the energy, and much higher accuracy in the CI
 eigenvalues. This may be adjusted with
 ```
-set "selci:diag tol" 1d-3
+set "selci:diag tol" 1d-3
 ```
 the example setting much lower precision, appropriate for the
 approximate diagonalization discussed in the preceding section.
@@ -275,8 +273,8 @@ computing the perturbation correction, and augmenting the CI expansion
 with configurations that make an energy lowering to any root greater
 than *T*. The list of selection thresholds is specified as follows
 ```
- set "selci:selection thresholds" \  
-     0.001 0.001 0.0001 0.0001 0.00001 0.00001 0.000001
+ set "selci:selection thresholds" \  
+     0.001 0.001 0.0001 0.0001 0.00001 0.00001 0.000001
 ```
 There is no default for this parameter.
 
@@ -286,7 +284,7 @@ By default the program runs in "ci+davids" mode and just determines the
 CI eigenvectors/values in the current configuration space. To perform a
 selected-CI with perturbation correction use the following
 ```
- set selci:mode select
+ set selci:mode select
 ```
 and remember to define the selection thresholds.
 
@@ -297,8 +295,8 @@ transformation can be automatically invoked and it does use GAs. The
 selected CI replicates inside each
 process  
 
-   * all unique two-electron integrals in the MO basis that are non-zero by symmetry, and   
-   * all CI information, including the CI vectors.
+   * all unique two-electron integrals in the MO basis that are non-zero by symmetry, and   
+   * all CI information, including the CI vectors.
 
 These large data structures are allocated on the local stack. A fatal
 error will result if insufficient memory is available.
@@ -308,7 +306,7 @@ error will result if insufficient memory is available.
 When scanning a potential energy surface or optimizing a geometry the MO
 integrals need to be regenerated each time. Specify
 ```
- set selci:moints:force logical .true.
+ set selci:moints:force logical .true.
 ```
 to accomplish this.
 
@@ -321,7 +319,7 @@ potential energy surface or optimizing a geometry the reference list
 must be kept fixed to keep the potential energy surface continuous and
 well defined. To do this specify
 ```
- set selci:update logical .false.
+ set selci:update logical .false.
 ```
 ## Orbital locking in CI geometry optimization
 
