@@ -184,8 +184,12 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT)[^0] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using GGA functionals (e.g. PBE96).   
-The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If no `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
+<<<<<<< HEAD
+Use of the auxiliary density functional theory method (ADFT)[^0] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
+
+The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an `xc basis` without the `adft` keyword. It is important to note that, different to the old exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
+
+The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
 ## VECTORS and MAX_OVL: KS-MO Vectors
 
@@ -1963,7 +1967,8 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 
 ///Footnotes Go Here///
 [^0]: A. M. Köster, J. U. Reveles, and J. M. del Campo, J. Chem. Phys. 121, 3417-3424 (2004).
-[DOI:10.1063/1.1771638](https://dx.doi.org/10.1063/1.1771638)
+[DOI:10.1063/1.1771638](https://dx.doi.org/10.1063/1.1771638);
+      P. Calaminici et al. Auxiliary Density Functional Theory: From Molecules to Nanostructures. In: J. Leszczynski, A. Kaczmarek-Kedziera, T. Puzyn, M.G. Papadopoulos, H. Reis, M. Shukla (eds) Handbook of Computational Chemistry, (Springer, 2017) [DOI:10.1007/978-3-319-27282-5_16](https://dx.doi.org/10.1007/978-3-319-27282-5_16);
 [^1]:  J. C. Slater and K. H. Johnson, Phys. Rev. B 5, 844 (1972)[DOI:10.1103/PhysRevB.5.844](https://dx.doi.org/10.1103/PhysRevB.5.844);
        J .C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
 [^2]:  S. J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980) [DOI:10.1139/p80-159](https://dx.doi.org/10.1139/p80-159)
