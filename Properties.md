@@ -109,11 +109,11 @@ follows:
 property
  response  1 7.73178E-2   # response order and frequency in Hartree energy units  
  velocity                 # use modified velocity gauge for electric dipole  
- orbeta                   # calculate optical rotation 'beta' directly [B2]  
- giao                     # GIAO optical rotation [B1,B3,B6], forces orbeta  
- bdtensor                 # calculates B-tilde of Refs. [B1,B6] 
- analysis                 # analyze response in terms of MOs [B6]  
- damping 0.007            # complex response functions with damping, Ref [B5] 
+ orbeta                   # calculate optical rotation 'beta' directly [^B2]  
+ giao                     # GIAO optical rotation [^B1][^B3][^B6], forces orbeta  
+ bdtensor                 # calculates B-tilde of Refs. [^B1][^B6] 
+ analysis                 # analyze response in terms of MOs [^B6]  
+ damping 0.007            # complex response functions with damping, Ref [^B5] 
  convergence 1e-4         # set CPKS convergence criterion (default 1e-4)  
 end
 ```
@@ -221,12 +221,7 @@ set raman:numpts <integer>
 
 #### Raman References
 
-Please refer to the following papers for further details:
-
-C1.  J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
-    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)  
-C2.  F. W. Aquino and G. C. Schatz, The Journal of Physical Chemistry A
-    118 , 517 (2014). [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)  
+Please refer to papers[^C1][^C2] for further details:
 
 
 ### Polarizability computed with the Sum over Orbitals method
@@ -238,7 +233,7 @@ much less accurate than linear response calculations, with values off
 by a factor of 2-4x. However, the qualitative nature of this results
 can be used to compute Raman frequencies when coupled with
 [QMD](Gaussian-Basis-AIMD.md#property-calculation-in-a-molecular-dynamics-simulation),
-as described in references [D1,D2].
+as described in references [^D1][^D2].
   
 Sample input computing polarizability both with the SOO method and the linear response method:
 ```
@@ -254,9 +249,6 @@ end
 task dft property
 ```
   
-D1. S. A. Fischer, T. W. Ueltschi, P. Z. El-Khoury, A. L. Mifflin, W. P. Hess, H.-F. Wang, C. J. Cramer, and N. Govind,
-The Journal of Physical Chemistry B 120 (8), 1429-1436 (2016). [DOI: 10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323)  
-D2.  E. Aprà, A. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)  
   
 ### Nbofile
 
@@ -470,6 +462,11 @@ The following methods are available:
     (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
 [^B6]: B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
     (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
+[^C1]: J. M. Mullin, J. Autschbach, G. C. Schatz, Computational and
+    Theoretical Chemistry 987, 32 (2012). [DOI:10.1016/j.comptc.2011.08.027](https://dx.doi.org/10.1016/j.comptc.2011.08.027)  
+[^C2]: Aquino, F. W.; Schatz, G. C. (2014). The Journal of Physical Chemistry A  118 , 517. [DOI:10.1021/jp411039m](https://dx.doi.org/10.1021/jp411039m)  
+[^D1]: Fischer, S. A. ; Ueltschi, T. W.; El-Khoury, P. Z.; Mifflin, A. L.; Hess, W. P.; Wang,  H.-F.; Cramer, C. J.; Govind, N. (2016). The Journal of Physical Chemistry B 120 (8), 1429-1436. [DOI: 10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323)  
+[^D2]:  E. Aprà, A. Bhattarai, E. Baxter, S. Wang, G. E. Johnson, N. Govind, and P. Z. El-Khoury, Applied Spectroscopy 174 (11), 1350-1357 (2020). [DOI:10.1177/0003702820923392](https://dx.doi.org/10.1177/0003702820923392)  
 [^71]: Pipek, J; Mezey, P. G. (1989). "A fast intrinsic localization procedure applicable for ab initio and semiempirical linear combination of atomic orbital wave functions". The Journal of Chemical Physics. 90, 4916. [DOI:10.1063/1.456588](https://dx.doi.org/10.1063/1.456588)
 [^72]: Boys, S. F. (1960). "Construction of Molecular orbitals to be minimally variant for changes from one molecule to another". Reviews of Modern Physics. 32, 296–299. [DOI:10.1103/RevModPhys.32.300](https://dx.doi.org/10.1103/RevModPhys.32.300)
 [^73]: Knizia, G. (2013). "Intrinsic atomic orbitals: An unbiased bridge between quantum theory and chemical concepts". J. Chem. Theory Comput. 9, 4834 [DOI:10.1021/ct400687b](https://dx.doi.org/10.1021/ct400687b)
