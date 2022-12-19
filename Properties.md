@@ -453,3 +453,24 @@ Then, the resulting `h2o.molden` file can be post processed by [Janpa](https://j
 ```
 java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
+
+## Localization
+```
+property
+   localization (( pm || boys || ibo) default pm)
+ END
+ ```
+
+Localize molecular orbitals can be obtained with the `localization` keyword.
+The following methods are available:
+* Pipek-Mezey[^71], `pm` keyword (default)
+* Foster-Boys[^72], `boys` keyword
+* IAO/IBO[^73][^74], `ibo` keyword
+
+## References 
+///Footnotes Go Here///
+
+[^71]: Pipek, J; Mezey, P. G. (1989). "A fast intrinsic localization procedure applicable for ab initio and semiempirical linear combination of atomic orbital wave functions". The Journal of Chemical Physics. 90, 4916. [DOI:10.1063/1.456588](https://dx.doi.org/10.1063/1.456588)
+[^72]: Boys, S. F. (1960). "Construction of Molecular orbitals to be minimally variant for changes from one molecule to another". Reviews of Modern Physics. 32, 296–299. [DOI:10.1103/RevModPhys.32.300](https://dx.doi.org/10.1103/RevModPhys.32.300)
+[^73]: Knizia, G. (2013). "Intrinsic atomic orbitals: An unbiased bridge between quantum theory and chemical concepts". J. Chem. Theory Comput. 9, 4834 [DOI:10.1021/ct400687b](https://dx.doi.org/10.1021/ct400687b)
+[^74]: Knizia, G; Klein, J. E. M. N. (2015). "Electron Flow in Reaction Mechanisms-Revealed from First Principles". Angew. Chem. Int. Ed., 54, 5518 [DOI:10.1002/anie.201410637](https://dx.doi.org/10.1002/anie.201410637)
