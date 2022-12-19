@@ -426,13 +426,15 @@ java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
 
 ## Localization
-```
-property
-   localization (( pm || boys || ibo) default pm)
- END
- ```
 
-Localized molecular orbitals can be obtained with the `localization` keyword.
+
+Localized molecular orbitals can be computed with the `localization` keyword.  
+
+```
+property  
+   localization (( pm || boys || ibo) default pm)  
+end  
+ ```
 
 The following methods are available:
 * Pipek-Mezey[^71], `pm` keyword (default)
