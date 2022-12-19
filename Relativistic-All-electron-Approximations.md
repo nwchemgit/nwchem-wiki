@@ -44,8 +44,9 @@ RELATIVISTIC
   [DOUGLAS-KROLL [<string (ON||OFF) default ON> \  
                 <string (FPP||DKH||DKFULL||DK3||DK3FULL) default DKH>]  || 
    ZORA [ (ON || OFF) default ON ] ||   
-   DYALL-MOD-DIRAC [ (ON || OFF) default ON ]   
-                 [ (NESC1E || NESC2E) default NESC1E ] ]  
+   DYALL-MOD-DIRAC [ (ON || OFF) default ON ]  ||
+                 [ (NESC1E || NESC2E) default NESC1E ] ]  ||
+   X2C [ (ON || OFF) default ON ]
   [CLIGHT <real clight default 137.0359895>]  
  END
 ```
@@ -57,9 +58,9 @@ the speed of light in atomic units:
  CLIGHT <real clight default 137.0359895>
 ```
 The following sections describe the optional sub-directives that can be
-specified within the RELATIVISTIC block.
+specified within the `RELATIVISTIC` block.
 
-## Douglas-Kroll approximation
+### Douglas-Kroll approximation
 
 The spin-free and spin-orbit one-electron Douglas-Kroll approximation
 have been implemented. The use of relativistic effects from this
@@ -110,7 +111,7 @@ flexibility is available to the user by explicitly specifying a
 Douglas-Kroll fitting basis set. This basis set must be named
 `D-K basis` (see [Basis Sets](Basis.md)).
 
-## Zeroth Order regular approximation (ZORA)
+### Zeroth Order regular approximation (ZORA)
 
 The spin-free and spin-orbit one-electron zeroth-order regular
 approximation (ZORA) have been implemented. ZORA can be accessed only 
@@ -161,7 +162,7 @@ For model potentials constructed from 2-component densities:
 
 Both approaches are comparable in accuracy and depends on the system.
 
-## Dyall's Modified Dirac Hamitonian approximation
+### Dyall's Modified Dirac Hamitonian approximation
 
 The approximate methods described in this section are all based on
 Dyall's modified Dirac Hamiltonian. This Hamiltonian is entirely
@@ -337,23 +338,54 @@ nonrelativistic.
  task scf
 ```
 
-### References 
+### X2C: exact two-component Hamiltonian
+
+The exact two-component Hamiltonian[^18] has been implemented in NWChem[^19],[^20],[^21].
+
+```
+ X2C [<string (ON||OFF) default ON>
+```
+
+The `ON`|`OFF` string is used to turn on or off X2C. By default, if the
+`X2C` keyword is found, the approximation will be used in the
+calculation. If the user wishes to calculate a non-relativistic quantity
+after turning on X2C, the user will need to define a new `RELATIVISTIC`
+block and turn the approximation OFF. The user can also simply put a
+blank `RELATIVISTIC` block in the input file and all options will be
+turned off.
+
+To increase the accuracy of X2C calculations, the following settings may be used 
+in the relativistic block
+
+```
+ relativistic
+     x2c on
+     x2c:cutoff 1d-15
+ end
+```
+
+
+## References 
 ///Footnotes Go Here///
 
-[^1]: Douglas, M.; Kroll, N.M. (1974). "Quantum electrodynamical corrections to the fine structure of helium". Annals of Physics 82: 89-155. doi:[10.1016/0003-4916(74)90333-9](https://dx.doi.org/10.1016/0003-4916(74)90333-9).  
-[^2]: Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. doi:[10.1103/PhysRevA.32.756](https://dx.doi.org/10.1103/PhysRevA.32.756).  
-[^3]: Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. doi:[10.1103/PhysRevA.33.3742](https://dx.doi.org/10.1103/PhysRevA.33.3742).  
-[^4]: Chang, C; Pelissier, M; Durand, M (1986). "Regular Two-Component Pauli-Like Effective Hamiltonians in Dirac Theory". Physica Scripta 34: 394. doi:[10.1088/0031-8949/34/5/007](https://dx.doi.org/10.1088/0031-8949/34/5/007).  
+[^1]: Douglas, M.; Kroll, N.M. (1974). "Quantum electrodynamical corrections to the fine structure of helium". Annals of Physics 82: 89-155. [DOI:10.1016/0003-4916(74)90333-9](https://dx.doi.org/10.1016/0003-4916(74)90333-9).  
+[^2]: Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. [DOI:10.1103/PhysRevA.32.756](https://dx.doi.org/10.1103/PhysRevA.32.756).  
+[^3]: Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. [DOI:10.1103/PhysRevA.33.3742](https://dx.doi.org/10.1103/PhysRevA.33.3742).  
+[^4]: Chang, C; Pelissier, M; Durand, M (1986). "Regular Two-Component Pauli-Like Effective Hamiltonians in Dirac Theory". Physica Scripta 34: 394. [DOI:10.1088/0031-8949/34/5/007](https://dx.doi.org/10.1088/0031-8949/34/5/007).  
 [^5]: van Lenthe, E (1996). "The ZORA Equation" (in English).  
-[^6]: Faas, S.; Snijders, J.G.; van Lenthe, J.H.; van Lenthe, E.; Baerends, E.J. (1995). "The ZORA formalism applied to the Dirac-Fock equation". Chemical Physics Letters 246: 632-640. doi:[10.1016/0009-2614(95)01156-0](https://dx.doi.org/10.1016/0009-2614(95)01156-0).  
-[^7]: Nichols, P.; Govind, N.; Bylaska, E.J.; de Jong, W.A. (2009). "Gaussian Basis Set and Planewave Relativistic Spin-Orbit Methods in NWChem". Journal of Chemical Theory and Computation 5: 491-499. doi:[10.1021/ct8002892](https://dx.doi.org/10.1021/ct8002892).  
-[^8]: Dyall, K.G. (1994). "An exact separation of the spin-free and spin-dependent terms of the Dirac--Coulomb--Breit Hamiltonian". The Journal of Chemical Physics 100: 2118-2127. doi:[10.1063/1.466508](https://dx.doi.org/10.1063/1.466508).  
-[^9]: Dyall, K.G. (1997). "Interfacing relativistic and nonrelativistic methods. I. Normalized elimination of the small component in the modified Dirac equation". The Journal of Chemical Physics 106: 9618-9626. doi:[10.1063/1.473860](https://dx.doi.org/10.1063/1.473860).  
-[^10]: Dyall, K.G.; Enevoldsen, T. (1999). "Interfacing relativistic and nonrelativistic methods. III. Atomic 4-spinor expansions and integral approximations". The Journal of Chemical Physics 111: 10000-10007. doi:[10.1063/1.480353](https://dx.doi.org/10.1063/1.480353).  
-[^11]: Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. doi:[10.1103/PhysRevA.32.756](https://dx.doi.org/10.1103/PhysRevA.32.756).  
-[^12]: Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. doi:[10.1103/PhysRevA.33.3742](https://dx.doi.org/10.1103/PhysRevA.33.3742).  
-[^13]: Haeberlen, O.D.; Roesch, N. (1992). "A scalar-relativistic extension of the linear combination of Gaussian-type orbitals local density functional method: application to AuH, AuCl and Au2". Chemical Physics Letters 199: 491-496. doi:[10.1016/0009-2614(92)87033-L](https://dx.doi.org/10.1016/0009-2614(92)87033-L).  
-[^14]: Nakajima, T.; Hirao, K. (2000). "Numerical illustration of third-order Douglas-Kroll method: atomic and molecular properties of superheavy element 112". Chemical Physics Letters 329: 511-516. doi:[10.1016/S0009-2614(00)01035-6](https://dx.doi.org/10.1016/S0009-2614(00)01035-6).  
-[^15]: Nakajima, T.; Hirao, K. (2000). "The higher-order Douglas--Kroll transformation". The Journal of Chemical Physics 113: 7786-7789. doi:[10.1063/1.1316037](https://dx.doi.org/10.1063/1.1316037).  
-[^16]: van Wullen, C. (1998). "Molecular density functional calculations in the regular relativistic approximation: Method, application to coinage metal diatomics, hydrides, fluorides and chlorides, and comparison with first-order relativistic calculations". The Journal of Chemical Physics 109: 392-399  doi:[10.1063/1.476576](https://dx.doi.org/10.1063/1.476576)
-[^17]: van Wullen, C.; Michauk, C. (2005). "Accurate and efficient treatment of two-electron contributions in quasirelativistic high-order Douglas-Kroll density-functional calculations". The Journal of Chemical Physics 123, 204113 doi:[10.1063/1.2133731](https://dx.doi.org/10.1063/1.2133731)
+[^6]: Faas, S.; Snijders, J.G.; van Lenthe, J.H.; van Lenthe, E.; Baerends, E.J. (1995). "The ZORA formalism applied to the Dirac-Fock equation". Chemical Physics Letters 246: 632-640. [DOI:10.1016/0009-2614(95)01156-0](https://dx.doi.org/10.1016/0009-2614(95)01156-0).  
+[^7]: Nichols, P.; Govind, N.; Bylaska, E.J.; de Jong, W.A. (2009). "Gaussian Basis Set and Planewave Relativistic Spin-Orbit Methods in NWChem". Journal of Chemical Theory and Computation 5: 491-499. [DOI:10.1021/ct8002892](https://dx.doi.org/10.1021/ct8002892).  
+[^8]: Dyall, K.G. (1994). "An exact separation of the spin-free and spin-dependent terms of the Dirac--Coulomb--Breit Hamiltonian". The Journal of Chemical Physics 100: 2118-2127. [DOI:10.1063/1.466508](https://dx.doi.org/10.1063/1.466508).  
+[^9]: Dyall, K.G. (1997). "Interfacing relativistic and nonrelativistic methods. I. Normalized elimination of the small component in the modified Dirac equation". The Journal of Chemical Physics 106: 9618-9626. [DOI:10.1063/1.473860](https://dx.doi.org/10.1063/1.473860).  
+[^10]: Dyall, K.G.; Enevoldsen, T. (1999). "Interfacing relativistic and nonrelativistic methods. III. Atomic 4-spinor expansions and integral approximations". The Journal of Chemical Physics 111: 10000-10007. [DOI:10.1063/1.480353](https://dx.doi.org/10.1063/1.480353).  
+[^11]: Hess, B.A. (1985). "Applicability of the no-pair equation with free-particle projection operators to atomic and molecular structure calculations". Physical Review A 32: 756-763. [DOI:10.1103/PhysRevA.32.756](https://dx.doi.org/10.1103/PhysRevA.32.756).  
+[^12]: Hess, B.A. (1986). "Relativistic electronic-structure calculations employing a two-component no-pair formalism with external-field projection operators". Physical Review A 33: 3742-3748. [DOI:10.1103/PhysRevA.33.3742](https://dx.doi.org/10.1103/PhysRevA.33.3742).  
+[^13]: Haeberlen, O.D.; Roesch, N. (1992). "A scalar-relativistic extension of the linear combination of Gaussian-type orbitals local density functional method: application to AuH, AuCl and Au2". Chemical Physics Letters 199: 491-496. [DOI:10.1016/0009-2614(92)87033-L](https://dx.doi.org/10.1016/0009-2614(92)87033-L).  
+[^14]: Nakajima, T.; Hirao, K. (2000). "Numerical illustration of third-order Douglas-Kroll method: atomic and molecular properties of superheavy element 112". Chemical Physics Letters 329: 511-516. [DOI:10.1016/S0009-2614(00)01035-6](https://dx.doi.org/10.1016/S0009-2614(00)01035-6).  
+[^15]: Nakajima, T.; Hirao, K. (2000). "The higher-order Douglas--Kroll transformation". The Journal of Chemical Physics 113: 7786-7789. [DOI:10.1063/1.1316037](https://dx.doi.org/10.1063/1.1316037).  
+[^16]: van Wullen, C. (1998). "Molecular density functional calculations in the regular relativistic approximation: Method, application to coinage metal diatomics, hydrides, fluorides and chlorides, and comparison with first-order relativistic calculations". The Journal of Chemical Physics 109: 392-399  [DOI:10.1063/1.476576](https://dx.doi.org/10.1063/1.476576)
+[^17]: van Wullen, C.; Michauk, C. (2005). "Accurate and efficient treatment of two-electron contributions in quasirelativistic high-order Douglas-Kroll density-functional calculations". The Journal of Chemical Physics 123, 204113 [DOI:10.1063/1.2133731](https://dx.doi.org/10.1063/1.2133731)
+[^18]:   Liu, W.; Peng, D. (2009). J. Chem. Phys. 2009, 131, 031104 [DOI:10.1063/1.3159445](https://dx.doi.org/10.1063/1.3159445)
+[^19]: Autschbach, J.; Peng, D; Reiher, M. (2012). J. Chem. Theory Comput. 2012, 8,  4239–4248 [DOI:10.1021/ct300623j](https://dx.doi.org/10.1021/ct300623j)
+[^20]: Peng, D.; Reiher, M. (2012). Theor. Chem. Acc. 131, 1081 [DOI:10.1007/s00214-011-1081-y](https://dx.doi.org/10.1007/s00214-011-1081-y)
+[^21]: Autschbach, J. (2021). Quantum Theory for Chemical Applications:From Basic Concepts to Advanced Topics, Oxford, University Press, Chapter 24 [DOI:10.1093/oso/9780190920807.001.0001](https://dx.doi.org/10.1093/oso/9780190920807.001.0001)
