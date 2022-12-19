@@ -386,7 +386,7 @@ in the relativistic block
 [^16]: van Wullen, C. (1998). "Molecular density functional calculations in the regular relativistic approximation: Method, application to coinage metal diatomics, hydrides, fluorides and chlorides, and comparison with first-order relativistic calculations". The Journal of Chemical Physics 109: 392-399  [DOI:10.1063/1.476576](https://dx.doi.org/10.1063/1.476576)
 [^17]: van Wullen, C.; Michauk, C. (2005). "Accurate and efficient treatment of two-electron contributions in quasirelativistic high-order Douglas-Kroll density-functional calculations". The Journal of Chemical Physics 123, 204113 [DOI:10.1063/1.2133731](https://dx.doi.org/10.1063/1.2133731)
 [^18]: Liu, W.; Peng, D. (2009). J. Chem. Phys. 2009, 131, 031104 [DOI:10.1063/1.3159445](https://dx.doi.org/10.1063/1.3159445)
-[^19] Saue, T. (2011). "Relativistic Hamiltonians for Chemistry: A Primer". ChemPhysChem, 12, 3077–3094 [DOI:10.1002/cphc.201100682](http://dx.doi.org/10.1002/cphc.201100682)
+[^19]: Saue, T. (2011). "Relativistic Hamiltonians for Chemistry: A Primer". ChemPhysChem, 12, 3077–3094 [DOI:10.1002/cphc.201100682](http://dx.doi.org/10.1002/cphc.201100682)
 [^20]: Autschbach, J.; Peng, D; Reiher, M. (2012). J. Chem. Theory Comput. 2012, 8,  4239–4248 [DOI:10.1021/ct300623j](https://dx.doi.org/10.1021/ct300623j)
 [^21]: Peng, D.; Reiher, M. (2012). Theor. Chem. Acc. 131, 1081 [DOI:10.1007/s00214-011-1081-y](https://dx.doi.org/10.1007/s00214-011-1081-y)
 [^22]: Autschbach, J. (2021). Quantum Theory for Chemical Applications:From Basic Concepts to Advanced Topics, Oxford, University Press, Chapter 24 [DOI:10.1093/oso/9780190920807.001.0001](https://dx.doi.org/10.1093/oso/9780190920807.001.0001)
