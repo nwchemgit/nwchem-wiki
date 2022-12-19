@@ -340,7 +340,7 @@ nonrelativistic.
 
 ### X2C: exact two-component Hamiltonian
 
-The exact two-component Hamiltonian[^18] has been implemented in NWChem[^19],[^20],[^21].
+The exact two-component Hamiltonian[^18] has been implemented in NWChem[^19]<sup>,</sup>[^20]<sup>,</sup>[^21].
 
 ```
  X2C [<string (ON||OFF) default ON>
