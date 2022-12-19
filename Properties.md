@@ -87,21 +87,9 @@ hyperfine, gshift and shielding to calculate the EPR and paramagnetic
 NMR parameters of an open-shell system. All calculations are compatible 
 with the ZORA model potential approach.
 
-For theoretical and computational details, please refer to the following
-references:
+For theoretical and computational details, please refer to 
+references[^A1][^A3][^A3].
 
-A1.  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
-    Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
-    Zeroth-Order Regular Approximation and Density Functional Theory",
-    Journal of Chemical Theory and Computation 7, 2175 (2011). [DOI:10.1021/ct200143w](https://dx.doi.org/10.1021/ct200143w)  
-A2.  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
-    computations and localized orbital analysis of nuclear hyperfine
-    coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
-    Comput. 2012, 8, 598–609. [DOI:10.1021/ct2008507](https://dx.doi.org/10.1021/ct2008507)    
-A3.  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
-    computations of nuclear magnetic shielding and g-shifts with the
-    zeroth-order regular approximation and range-separated hybrid
-    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)  
   
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
@@ -470,6 +458,18 @@ The following methods are available:
 ## References 
 ///Footnotes Go Here///
 
+[^A1:]  J. Autschbach, S. Patchkovskii, B. Pritchard, "Calculation of
+    Hyperfine Tensors and Paramagnetic NMR Shifts Using the Relativistic
+    Zeroth-Order Regular Approximation and Density Functional Theory",
+    Journal of Chemical Theory and Computation 7, 2175 (2011). [DOI:10.1021/ct200143w](https://dx.doi.org/10.1021/ct200143w)  
+[^A2:]  F. Aquino, B. Pritchard, J. Autschbach, "Scalar relativistic
+    computations and localized orbital analysis of nuclear hyperfine
+    coupling and paramagnetic NMR chemical shifts", J. Chem. Theory
+    Comput. 2012, 8, 598–609. [DOI:10.1021/ct2008507](https://dx.doi.org/10.1021/ct2008507)    
+[^A3:]  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
+    computations of nuclear magnetic shielding and g-shifts with the
+    zeroth-order regular approximation and range-separated hybrid
+    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)  
 [^71]: Pipek, J; Mezey, P. G. (1989). "A fast intrinsic localization procedure applicable for ab initio and semiempirical linear combination of atomic orbital wave functions". The Journal of Chemical Physics. 90, 4916. [DOI:10.1063/1.456588](https://dx.doi.org/10.1063/1.456588)
 [^72]: Boys, S. F. (1960). "Construction of Molecular orbitals to be minimally variant for changes from one molecule to another". Reviews of Modern Physics. 32, 296–299. [DOI:10.1103/RevModPhys.32.300](https://dx.doi.org/10.1103/RevModPhys.32.300)
 [^73]: Knizia, G. (2013). "Intrinsic atomic orbitals: An unbiased bridge between quantum theory and chemical concepts". J. Chem. Theory Comput. 9, 4834 [DOI:10.1021/ct400687b](https://dx.doi.org/10.1021/ct400687b)
