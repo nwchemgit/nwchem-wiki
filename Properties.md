@@ -432,7 +432,8 @@ property
  END
  ```
 
-Localize molecular orbitals can be obtained with the `localization` keyword.
+Localized molecular orbitals can be obtained with the `localization` keyword.
+
 The following methods are available:
 * Pipek-Mezey[^71], `pm` keyword (default)
 * Foster-Boys[^72], `boys` keyword
