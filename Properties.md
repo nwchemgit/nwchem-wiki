@@ -155,17 +155,8 @@ of the analysis carefully). See Ref. [6] for an example. Works with HF
 and density functionals for which linear response kernels are
 implemented in NWChem.
 
-Please refer to the following papers for further details:
+Please refer to papers[^B1][^B2][^B3][^B4][^B5][^B6] for further details:
 
-B1.  J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)  
-B2.  J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)  
-B3.  M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)  
-B4.  J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
-    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)  
-B5.  M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
-    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
-B6.  B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
-    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
 
 ### Raman
 
@@ -469,7 +460,16 @@ The following methods are available:
 [^13]:  F. Aquino, N. Govind, J. Autschbach, "Scalar relativistic
     computations of nuclear magnetic shielding and g-shifts with the
     zeroth-order regular approximation and range-separated hybrid
-    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)  
+    density functionals", J. Chem. Theory Comput. 2011, 7, 3278–3292. [DOI:10.1021/ct200408j](https://dx.doi.org/10.1021/ct200408j)
+[^B1]: J. Autschbach, ChemPhysChem 12 (2011), 3224-3235. [DOI:10.1002/cphc.201100225](https://dx.doi.org/10.1002/cphc.201100225)  
+[^B2]: J. Autschbach, Comput. Lett. 3, (2007), 131. [DOI:10.1163/157404007782913327](https://dx.doi.org/10.1163/157404007782913327)  
+[^B3]: M. Krykunov, J. Autschbach, J. Chem. Phys. 123 (2005), 114103. [DOI:10.1063/1.2032428](https://dx.doi.org/10.1063/1.2032428)  
+[^B4]: J.R. Hammond, N. Govind, K. Kowalski, J. Autschbach, S.S. Xantheas,
+    J. Chem. Phys. 131 (2009), 214103. [DOI:10.1063/1.3263604](https://dx.doi.org/10.1063/1.3263604)  
+[^B5]: M. Krykunov, M. D. Kundrat, J. Autschbach, J. Chem. Phys. 125
+    (2006), 194110. [DOI:10.1063/1.2363372](https://dx.doi.org/10.1063/1.2363372)  
+[^B6]: B. Moore II, M. Srebro, J. Autschbach, J. Chem. Theory Comput. 8
+    (2012), 4336-4346. [DOI:10.1021/ct300839y](https://dx.doi.org/10.1021/ct300839y)  
 [^71]: Pipek, J; Mezey, P. G. (1989). "A fast intrinsic localization procedure applicable for ab initio and semiempirical linear combination of atomic orbital wave functions". The Journal of Chemical Physics. 90, 4916. [DOI:10.1063/1.456588](https://dx.doi.org/10.1063/1.456588)
 [^72]: Boys, S. F. (1960). "Construction of Molecular orbitals to be minimally variant for changes from one molecule to another". Reviews of Modern Physics. 32, 296–299. [DOI:10.1103/RevModPhys.32.300](https://dx.doi.org/10.1103/RevModPhys.32.300)
 [^73]: Knizia, G. (2013). "Intrinsic atomic orbitals: An unbiased bridge between quantum theory and chemical concepts". J. Chem. Theory Comput. 9, 4834 [DOI:10.1021/ct400687b](https://dx.doi.org/10.1021/ct400687b)
