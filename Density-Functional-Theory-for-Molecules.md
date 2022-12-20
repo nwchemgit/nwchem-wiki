@@ -1962,7 +1962,7 @@ The options `SYM` and `ADAPT` works the same way as the analogous options for th
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
 [ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
 
-### References 
+## References 
 
 ///Footnotes Go Here///
 [^0]: A. M. Köster, J. U. Reveles, and J. M. del Campo, J. Chem. Phys. 121, 3417-3424 (2004).
