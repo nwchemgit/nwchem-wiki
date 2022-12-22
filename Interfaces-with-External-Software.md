@@ -1,5 +1,7 @@
 # Interfaces with External Software
 
+## Overview
+
 NWChem can be interfaced with external software packages by following the instructions below.
 
 ## Simint integrals library
@@ -8,8 +10,8 @@ To generate the [Simint](https://www.bennyp.org/research/simint/)
 library and enable the NWChem interface (only for energy and first derivative code),
 you need to define the following environment variables at compile time:  
 
- * `USE_SIMINT=y` (mandatory)   
- * `SIMINT_MAXAM=`"Maximum angular momentum" (optional, default is 3, therefore up to f orbitals)   
+  - `USE_SIMINT=y` (mandatory)
+  - `SIMINT_MAXAM=`"Maximum angular momentum" (optional, default is 3, therefore up to f orbitals)
 
 The following set directives are required in the input file to trigger use of Simint
 ```
