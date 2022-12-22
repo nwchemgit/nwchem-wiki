@@ -1292,12 +1292,14 @@ cp -r libraryps /usr/local/NWChem/data
 
   - Each user will need a .nwchemrc file to point to these default data
     files. A global one could be put in /usr/local/NWChem/data and a
-    symbolic link made in each users $HOME directory is probably the
-    best plan for new installs. Users would have to issue the following
-    command prior to using NWChem: ln -s
-    /usr/local/NWChem/data/default.nwchemrc $HOME/.nwchemrc
+    symbolic link made in each users `$HOME` directory is probably the
+    best plan for new installations. Users would have to issue the following
+    command prior to using NWChem:
+```
+ln -s /usr/local/NWChem/data/default.nwchemrc $HOME/.nwchemrc
+```
 
-Contents of the default.nwchemrc file based on the above information
+Contents of the `default.nwchemrc` file based on the above information
 should be:
 
 ```
@@ -1316,10 +1318,10 @@ charmm_x /usr/local/NWChem/data/charmm_x/
 Of course users can copy this file instead of making the symbolic link
 described above and change these defaults at their discretion.
 
-It is can also be useful to use the NWCHEM\_BASIS\_LIBRARY environment
+It is can also be useful to use the `NWCHEM_BASIS_LIBRARY` environment
 variable when testing a new installation when an old one exists. This
-will allow you to overwrite the value of nwchem\_basis\_library in your
-.nwchemrc file and point to the new basis library. For example:
+will allow you to overwrite the value of `nwchem_basis_library` in your
+`.nwchemrc` file and point to the new basis library. For example:
 
 ```
 % export NWCHEM_BASIS_LIBRARY="$NWCHEM/data-5.0/libraries/"
