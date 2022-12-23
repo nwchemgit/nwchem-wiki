@@ -69,7 +69,7 @@ If you wish to use an existing libxc library, the following environment variable
 
 ## XTB
 
-[Light-weight tight-binding framework](tblite.readthedocs.io)
+[Light-weight tight-binding framework](https://tblite.readthedocs.io)
 
 environment variable `USE_TBLITE=1`
 
