@@ -1,10 +1,10 @@
 # MP2
 
-## Overview
+## Overview 
 
 There are (at least) three algorithms within NWChem that compute the
 Møller-Plesset (or many-body) perturbation theory second-order
-correction[^1] to the Hartree-Fock energy (MP2). They vary in
+correction[@moller1934] to the Hartree-Fock energy (MP2). They vary in
 capability, the size of system that can be treated and use of other
 approximations
 
@@ -20,7 +20,7 @@ approximations
 TASK MP2
 ```
 
-  - Fully-direct[^2] -- this is of utility if only limited I/O
+  - Fully-direct[@wong1996] -- this is of utility if only limited I/O
     resources are available (up to about 2800 functions). Only RHF
     references and energies are available. This is selected by
     specifying `direct_mp2` on the task directive, e.g.
@@ -29,7 +29,7 @@ TASK MP2
 TASK DIRECT_MP2
 ```
 
-  - Resolution of the identity (RI) approximation MP2 (RI-MP2)[^3] --
+  - Resolution of the identity (RI) approximation MP2 (RI-MP2)[@bernholdt1996] --
     this uses the RI approximation and is therefore only exact in the
     limit of a complete fitting basis. However, with some care, high
     accuracy may be obtained with relatively modest fitting basis sets.
@@ -285,7 +285,7 @@ file /scratch/h2o.3c, use this directive
 The type of RI approximation used in the RI-MP2 calculation is
 controlled by means of the RIAPPROX directive. The two possible values
 are V and SVS (case sensitive), which correspond to the approximations
-with the same names described by Vahtras et al.[^4]. The default is V.
+with the same names described by Vahtras et al.[@vahtras1993]. The default is V.
 
 ## Advanced options for RI-MP2
 
@@ -462,7 +462,7 @@ external electric field and is not the expectation value of the operator
 over the wavefunction. It has been shown that evaluating the MP2 density
 through a derivative provides more accurate results, presumably because
 this matches the way experiments probe the electron density more
-closely[^5][^6][^7][^8].
+closely[raghavachari1981][@diercksen1981][@rice1985][@wiberg1992].
 
 Only dipole moments are printed by the MP2 gradient code, but natural
 orbitals are produced and stored in the permanent directory with a file
@@ -496,12 +496,12 @@ task mp2 property
 Note that the MP2 linear response density matrix is not necessarily positive
 definite so it is not unusual to see a few small negative natural
 orbital occupation numbers. Significant negative occupation numbers have
-been argued to be a sign that the system might be near degenerate[^9].
+been argued to be a sign that the system might be near degenerate[@gordon1999].
 
 ## SCS-MP2: Spin-Component Scaled MP2
 
 Each MP2 output contains the calculation of the SCS-MP2 correlation
-energies as suggested by S.Grimme[^10]
+energies as suggested by S.Grimme[@grimme2003]
 
 The SCS keyword is only required for gradients calculations:
 ```
@@ -525,46 +525,3 @@ CCSD.
 ## References
 ///Footnotes Go Here///
 
-
-[^1]:  Møller, C. and Plesset, M.S. (1934) "Note on an approximation
-    treatment for many-electron systems", *Physical Review* **46**
-    618-622,
-    doi:[http://dx.doi.org/10.1103/PhysRev.46.618](http://dx.doi.org/10.1103/PhysRev.46.618).
-[^2]:  Wong, A.T.; Harrison, R.J. and Rendell, A.P. (1996) "Parallel direct
-    four-index transformations", *Theoretica Chimica Acta* **93**
-    317-331,
-    doi:[http://dx.doi.org/10.1007/BF01129213](http://dx.doi.org/10.1007/BF01129213).
-[^3]:  Bernholdt, D.E. and Harrison, R.J. (1996) "Large-scale correlated
-    electronic structure calculations: the RI-MP2 method on parallel
-    computers", *Chemical Physics Letters* **250** (5-6) 477-484,
-    doi:[http://dx.doi.org/10.1016/0009-2614(96)00054-1](http://dx.doi.org/10.1016/0009-2614(96)00054-1)
-[^4]:  Vahtras, O.; Almlöf, J. and Feyereisen, M. W. (1993) "Integral
-    approximations for LCAO-SCF calculations", *Chem. Phys. Lett.*
-    **213**, 514-518, doi:
-    [10.1016/0009-2614(93)89151-7](http://dx.doi.org/10.1016/0009-2614(93)89151-7)
-[^5]:  Raghavachari, K. and Pople, J. A. (1981) "Calculation of
-    one-electron properties using limited configuration interaction
-    techniques", *Int. J. Quantum Chem.* **20**, 1067-1071, doi:
-    [10.1002/qua.560200503](http://dx.doi.org/10.1002/qua.560200503).
-[^6]:  Diercksen, G. H. F.; Roos, B. O. and Sadlej, A. J. (1981)
-    "Legitimate calculation of first-order molecular properties in the
-    case of limited CI functions. Dipole moments", *Chem. Phys.* **59**,
-    29-39, doi:
-    [10.1016/0301-0104(81)80082-1](http://dx.doi.org/10.1016/0301-0104(81)80082-1).
-[^7]:  Rice, J. E. and Amos, R. D. (1985) "On the efficient evaluation of
-    analytic energy gradients", *Chem. Phys. Lett.* **122**, 585-590,
-    doi:
-    [10.1016/0009-2614(85)87275-4](http://dx.doi.org/10.1016/0009-2614(85)87275-4).
-[^8]:  Wiberg, K. B.; Hadad, C. M.; LePage, T. J.; Breneman, C. M. and
-    Frisch, M. J. (1992) "Analysis of the effect of electron correlation
-    on charge density distributions", *J. Phys. Chem.* **96**, 671-679,
-    doi: [10.1021/j100181a030](http://dx.doi.org/10.1021/j100181a030).
-[^9]:  Gordon, M. S.; Schmidt, M. W.; Chaban, G. M.; Glaesemann, K. R.;
-    Stevens, W. J. and Gonzalez, C. (1999) "A natural orbital diagnostic
-    for multiconfigurational character in correlated wave functions",
-    *J. Chem. Phys.* **110**, 4199-4207, doi:
-    [10.1063/1.478301](http://dx.doi.org/10.1063/1.478301).
-[^10]: S. Grimme, "Improved second-order Møller-Plesset perturbation theory
-    by separate scaling of parallel- and antiparallel-spin pair
-    correlation energies", J. Chem. Phys., 118, (2003), 9095-9102,
-    doi:[10.1063/1.1569242](http://dx.doi.org/10.1063/1.1569242).
