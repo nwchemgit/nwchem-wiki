@@ -222,7 +222,7 @@ $$\Delta U^{NWChem}_{l} = \,\! \frac{2}{2l+1} \Delta U_{l}$$
 For example, in the literature (most of) the Stuttgart potentials are
 defined as $\Delta U_{l}$  and, hence, have to be multiplied by $2/(2l+1)$
  (Note: On the Stuttgart/Köln web pages  
- [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html),  
+ [https://www.tc.uni-koeln.de/PP/clickpse.en.html](https://www.tc.uni-koeln.de/PP/clickpse.en.html),  
  spin-orbit potentials have already been corrected by the appropriate scaling factor and can be used as is). On the other hand, the CRENBL
 potentials in the published papers are defined as 
 $\,\!\frac{l}{2l+1} \Delta U_{l}$
@@ -234,7 +234,7 @@ The following URL will display bot the the ECP and SO parts.
 [http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF](http://www.tc.uni-koeln.de/cgi-bin/pp.pl?language=en,format=molpro,element=Hg,job=getecp,ecp=ECP60MDF)  
 The highlighted section (last four lines) below is the SO part.  
 The un-highlighted part (first five lines) is the ECP.    
-```
+<pre><code>
 !  Q=20., MEFIT, MCDHF+Breit, Ref 37.  
 ECP,Hg,60,5,4;  
 1; 2,1.000000,0.000000;   
@@ -243,13 +243,13 @@ ECP,Hg,60,5,4;
 4; 2,8.407895,51.137256; 2,8.214086,76.707459; 2,4.012612,6.561821; 2,3.795398,9.818070;  
 2; 2,3.273106,9.429001; 2,3.208321,12.494856;   
 2; 2,4.485296,-6.338414; 2,4.513200,-8.099863;   
-**4;2,11.310320,-161.013967;2,10.210773,161.034824;2,5.939804,-18.166832;2,5.019755,18.367773;**    
-**4; 2,8.407895,-51.137256; 2,8.214086,51.138306; 2,4.012612,-6.561821; 2,3.795398,6.545380;**      
-**2; 2,3.273106,-6.286001; 2,3.208321,6.247428;**      
-**2; 2,4.485296,3.169207; 2,4.513200,-3.239945;**  
+<b>4; 2,11.310320,-161.013967;2,10.210773,161.034824;2,5.939804,-18.166832;2,5.019755,18.367773;  
+4; 2,8.407895,-51.137256; 2,8.214086,51.138306; 2,4.012612,-6.561821; 2,3.795398,6.545380;     
+2; 2,3.273106,-6.286001; 2,3.208321,6.247428;     
+2; 2,4.485296,3.169207; 2,4.513200,-3.239945;</b>
 ! References:  
 ! [37] D. Figgen, G. Rauhut, M. Dolg, H. Stoll, Chem. Phys. 311, 227 (2005).  
-```
+</code></pre>
 The corresponding NWChem input is 
 
 ```
