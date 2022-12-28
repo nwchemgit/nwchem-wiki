@@ -298,5 +298,6 @@ Hg G
 end
 ```
 ### Websites with Spin-Orbits ECPs
-* [http://www.tc.uni-koeln.de/PP/clickpse.en.html](http://www.tc.uni-koeln.de/PP/clickpse.en.html)
-* [http://people.clarkson.edu/~pchristi/reps.html](http://people.clarkson.edu/~pchristi/reps.html)
+* [https://www.tc.uni-koeln.de/PP/clickpse.en.html](https://www.tc.uni-koeln.de/PP/clickpse.en.html)
+* [https://people.clarkson.edu/~pchristi/reps.html](https://people.clarkson.edu/~pchristi/reps.html)
+* [http://www.qchem.pnpi.spb.ru/recp](http://www.qchem.pnpi.spb.ru/recp)
