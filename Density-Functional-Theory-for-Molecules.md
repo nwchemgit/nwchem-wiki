@@ -1,6 +1,3 @@
----
-ᴴₒᴴₒᴴₒ: true
----
 # Density Functional Theory (DFT)
 
 ## Overview

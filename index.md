@@ -1,6 +1,5 @@
 ---
 title: "NWChem Website"
-ᴴₒᴴₒᴴₒ: true
 ---
 <style>
   .img-container {
