@@ -4,6 +4,9 @@
 
 NWChem can be interfaced with external software packages by following the instructions below.
 
+The interface can be set either using a pre-exisiting software package or
+by downloading and compiling the software from the NWChem makefile infrastructure.  
+
 ## Simint integrals library
 
 To generate the [Simint](https://www.bennyp.org/research/simint/)
