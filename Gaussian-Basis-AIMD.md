@@ -14,12 +14,7 @@ present. If a restart file is present, the trajectory information will
 be read from that file and the trajectory will resume from that point.
 
 For computational details and a case study using the module, please
-refer to the following paper: S. A. Fischer, T. W. Ueltschi, P. Z.
-El-Khoury, A. L. Mifflin, W. P. Hess, H.F. Wang, C. J. Cramer, N. Govind
-"Infrared and Raman Spectroscopy from Ab Initio Molecular Dynamics and
-Static Normal Mode Analysis: The CH Region of DMSO as a Case Study" J.
-Phys. Chem. B, 120 (8), pp 1429–1436 (2016); [DOI:10.1021/acs.jpcb.5b03323](https://dx.doi.org/10.1021/acs.jpcb.5b03323).
-
+refer to the 2016 paper by Fischer[@fischer2015].  
 ```
 QMD
   [dt_nucl <double default 10.0>]  
@@ -75,13 +70,12 @@ the nuclei. Possible options are:
 
 - **svr** `<double default 1000.0>`
 
-   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello,
- J. Chem. Phys. 126, 014101 (2007)  
+   Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello[@bussi2007].  
    Number sets the relaxation parameter of the thermostat  
 
 - **langevin** `<double default 0.1>`
 
-   Langevin dynamics, implementation according to Bussi and Parrinello Phys. Rev. E 75, 056707 (2007)  
+   Langevin dynamics, implementation according to Bussi and Parrinello[@bussiparrinello2007].  
    Number sets the value of the friction  
 
 - **berendsen** `<double default 1000.0>`  
@@ -322,11 +316,7 @@ here.
 ### NAMD: Non-adiabatic Excited Stated Molecular Dynamics
 
 For  details of the NAMD implementation, please
-refer to the following paper:  
-H. Song, S. A. Fischer, Y. Zhang, C. J. Cramer, S. Mukamel, N. Govind and S. Tretiak,
-"First Principles Nonadiabatic Excited-State Molecular Dynamics in NWChem",
-Journal of Chemical Theory and Computation  16 (10), pp. 6418-6427 (2020);
-[DOI:10.1021/acs.jctc.0c00295](https://dx.doi.org/10.1021/acs.jctc.0c00295).
+refer to the 2020 paper by Song[@song2020].    
 
 ```
 [namd]
@@ -345,10 +335,7 @@ In the `namd` sub-block within the `qmd` block, please note:
 
 #### DECO: Decoherence flag
 
-The `deco` flag applies the EDC electronic decoherence correction described in the paper:  
-G. Granucci and M. Persico,
-"Critical appraisal of the fewest switches algorithm for surface hopping", J. Chem. Phys. 126, 134114 (2007);
-[DOI:10.1063/1.2715585](https://dx.doi.org/10.1063/1.2715585).
+The `deco` flag applies the EDC electronic decoherence correction described in the papey bt Granucci and Persico[@granucci2007].  
 The default value is `.false.`, i.e. no decoherence correction is applied.
 
 #### DT_ELEC: Electronic dynamics time step
@@ -420,3 +407,6 @@ qmd
 end
 task tddft qmd
 ```
+
+## References
+///Footnotes Go Here///
