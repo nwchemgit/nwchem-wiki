@@ -72,11 +72,11 @@ If you wish to use an existing libxc library, the following environment variable
 
 ## XTB
 
-[Light-weight tight-binding framework](https://tblite.readthedocs.io)
+Building NWChem with the Light-weight tight-binding framework [tblite](https://tblite.readthedocs.io)
+requires  
 
-environment variable `USE_TBLITE=1`
-
-add `xtb` to `NWCHEM_MODULES`
+* setting theenvironment variable `USE_TBLITE=1`
+* adding `xtb` to list of `NWCHEM_MODULES`
 
 Example:
 ```
