@@ -150,9 +150,11 @@ jobs:
         working-directory: mkdocs
         run: |
           cd site
+          tries=1 ; until [ "$tries" -ge 5 ] ; do
           sudo apt-get -y install libjpeg-turbo8 libpng16-16 fontconfig \
           libxext6 libfreetype6 libxrender1 libx11-6 xfonts-75dpi libexpat1 \
-          libfontenc1 x11-common xfonts-encodings  xfonts-base curl
+          libfontenc1 x11-common xfonts-encodings  xfonts-base curl && break
+          tries=$((tries+1)) ; echo attempt no.  $tries    ; sleep 9 ;  done
           curl -LJO \
           https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
           sudo  dpkg -i wkhtmltox_0.12.6-1.focal_amd64.deb
