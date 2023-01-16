@@ -16,6 +16,7 @@ $\Delta E_{CV}$ is the core-valence correction,
 
 $$\Delta E_{CV} = E_{MP2(FC1)/aug-cc-pCVTZ} \  \  \  \  \   -  E_{MP2/aug-cc-pVTZ}$$
 
+where $FC1$ symbolizes that all electrons of first-row atoms are correlated, all electrons of second-row atoms are correlated except the 1s MOs, and all electrons of atoms K–Kr are correlated except the 1s2s2p MOs.  
 $\Delta E_{SR}$ is the scalar-relativistic correction,
 
 $$\Delta E_{SR} = E_{MP2/cc-pVTZ-DK} \  \  \  -  E_{MP2/cc-pVTZ}$$
