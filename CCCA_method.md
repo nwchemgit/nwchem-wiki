@@ -5,22 +5,22 @@ consistent Composite Approach (ccCA). At present the ccCA module is
 designed for the study of main group species
 only.
 
-\(E_{ccCA} = \Delta E_{MP2/CBS} \; \;  + \Delta E_{CC} + \Delta E_{CV} + \Delta E_{SR} + \Delta E_{ZPE}\)
+$$E_{ccCA} = \Delta E_{MP2/CBS} \  \   + \Delta E_{CC} + \Delta E_{CV} + \Delta E_{SR} + \Delta E_{ZPE}$$
 
 where EMP2/CBS is the complete basis set extrapolation of MP2 energies
-with the aug-cc-pVnZ (n=T,D,Q) series of basis sets, \(\Delta E_{CC}\) is the correlation correction,
+with the aug-cc-pVnZ (n=T,D,Q) series of basis sets, $\Delta E_{CC}$ is the correlation correction,
 
-\(\Delta E_{CC} = E_{CCSD(T)/cc-pVTZ} \; \; \; -  E_{MP2/cc-pVTZ}\)
+$$\Delta E_{CC} = E_{CCSD(T)/cc-pVTZ} \  \ \  -  E_{MP2/cc-pVTZ}$$
 
-\(\Delta E_{CV}\) is the core-valence correction,
+$\Delta E_{CV}$ is the core-valence correction,
 
-\(\Delta E_{CV} = E_{MP2(FC1)/aug-cc-pCVTZ} \; \; \; \; \;  -  E_{MP2/aug-cc-pVTZ}\)
+$$\Delta E_{CV} = E_{MP2(FC1)/aug-cc-pCVTZ} \  \  \  \  \   -  E_{MP2/aug-cc-pVTZ}$$
 
-\(\Delta E_{SR}\) is the scalar-relativistic correction,
+$\Delta E_{SR}$ is the scalar-relativistic correction,
 
-\(\Delta E_{SR} = E_{MP2/cc-pVTZ-DK} \; \; \; -  E_{MP2/cc-pVTZ}\)
+$$\Delta E_{SR} = E_{MP2/cc-pVTZ-DK} \  \  \  -  E_{MP2/cc-pVTZ}$$
 
-and \(\Delta E_{ZPE}\) is the zero-point energy correction or thermal
+and $\Delta E_{ZPE}$ is the zero-point energy correction or thermal
 correction. Geometry optimization and subsequent frequency analysis are
 performed with B3LYP/cc-pVTZ.
 
