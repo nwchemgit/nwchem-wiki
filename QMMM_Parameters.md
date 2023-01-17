@@ -3,22 +3,22 @@ parameters define the interaction between classical and quantum
 regions.
 ```
  qmmm  
- [ [eref](qmmm_eref) <double precision default 0.0d0>]  
- [ [bqzone](qmmm_bq_zone) <double precision default 9.0d0>]  
- [ [mm_charges](qmmm_mm_charges) [exclude <(none||all||linkbond||linkbond_H) default none>]  
+ [ [eref] <double precision default 0.0d0>]  
+ [ [bqzone] <double precision default 9.0d0>]  
+ [ [mm_charges] [exclude <(none||all||linkbond||linkbond_H) default none>]  
           [ expand  <none||all||solute||solvent> default none]  
           [ update  <integer default 0>]   
- [ [link_atoms](qmmm_link_atoms) <(hydrogen||halogen) default hydrogen>]  
- [ [link_ecp](qmmm_link_ecp)  <(auto||user) default auto>]  
- [ [region](Qmmm_region)   < [region1]  [region2]  [region3] > ]  
- [ [method](qmmm_method)   [method1]  [method2]  [method3]  ]  
- [ [maxiter](Qmmm_maxiter)  [maxiter1] [maxiter2] [maxiter3] ]  
- [ [ncycles](Qmmm_ncycles)  < [number] default 1 > ]  
- [ [density](Qmmm_density)  [espfit] [static] [dynamical] ]  
- [ [xyz](Qmmm_xyz)  ]  
- [ [convergence](Qmmm_convergence) <double precision default 1.0d-4>] ]  
- [ [rename](Qmmm_rename) ] <filename>  
- [ [nsamples](Qmmm_nsamples) ]  
+ [ [link_atoms] <(hydrogen||halogen) default hydrogen>]  
+ [ [link_ecp]  <(auto||user) default auto>]  
+ [ [region]   < [region1]  [region2]  [region3] > ]  
+ [ [method]   [method1]  [method2]  [method3]  ]  
+ [ [maxiter]  [maxiter1] [maxiter2] [maxiter3] ]  
+ [ [ncycles]  < [number] default 1 > ]  
+ [ [density]  [espfit] [static] [dynamical] ]  
+ [ [xyz]  ]  
+ [ [convergence] <double precision default 1.0d-4>] ]  
+ [ [rename] ] <filename>  
+ [ [nsamples] ]  
  end
 ```
 
