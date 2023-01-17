@@ -29,3 +29,4 @@
         file](QMMM_Appendix#format-of-nwchem-parameter-file)
       - [Conversion from AMBER program parameter files to
         NWChem](QMMM_Appendix#conversion-of-standard-amber-program-parameter-files)
+  - [References](QMMM_References)
