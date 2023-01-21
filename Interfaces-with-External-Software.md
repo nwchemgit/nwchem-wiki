@@ -32,16 +32,20 @@ BUILD_OPENBLAS=1
 BLAS_SIZE=8
 ```
 
+This procedure requires an internet connection to dowload the OpenBLAS source.  
+Instead, to use a pre-compiled OpenBLAS library, the `BLASOPT`, `LAPACK_LIB` and `BLAS_SIZE` environment variable need to be set.
+
 ## ScaLAPACK
 
 To build NWChem with the [ScaLAPACK](https://github.com/Reference-ScaLAPACK/scalapack) library,
 you need to define the following environment variables at compile time:  
 
-
 ```
 BUILD_SCALAPACK=1
 SCALAPACK_SIZE=8
 ```
+This procedure requires an internet connection to dowload the OpenBLAS source.  
+Instead, to use a pre-compiled ScaLAPACK library, the `SCALAPACK_LIB`  and `SCALAPACK_SIZE` environment variable need to be set.
 
 ## ELPA
 
@@ -52,7 +56,8 @@ then you need to define the following environment variables at compile time:
 ```
 BUILD_ELPA=1
 ```
-
+This procedure requires an internet connection to dowload the OpenBLAS source.  
+Instead, to use a pre-compiled ELPA library, the `ELPA`  and `ELPA_SIZE` environment variable need to be set.
 
 ## Plumed
 
@@ -62,13 +67,20 @@ interfaces it with the [qmd](Gaussian-Basis-AIMD.md) module.
 ## Libxc
 
 Building NWChem with the [libxc](https://www.tddft.org/programs/libxc/) DFT library requires
-setting the environment variable `USE_LIBXC=1`
+setting the environment variable `USE_LIBXC=1`. 
 
-If you wish to use an existing libxc library, the following environment variables must be set:   
+This procedure requires an internet connection to dowload the Libxc source. 
+Instead, if you wish to use an existing libxc library, the following environment variables must be set, after having unset `USE_LIBXC`:   
 
  * `LIBXC_INCLUDE`   
  * `LIBXC_LIB`     
 
+For example, for debian/ubuntu system, the following is needed
+```
+    unset USE_LIBXC
+    export LIBXC_LIB=/usr/lib/x86_64-linux-gnu
+    export LIBXC_INCLUDE=/usr/include
+```
 
 ## XTB
 
