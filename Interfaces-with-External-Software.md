@@ -75,12 +75,19 @@ Instead, if you wish to use an existing libxc library, the following environment
  * `LIBXC_INCLUDE`   location of the libxc header   files
  * `LIBXC_LIB`     location of the libxc libraries files
 
-For example, for Debian/Ubuntu systems, the following is needed
+For example, for Debian/Ubuntu systems, the following is needed after having installed the `libxc-dev` package
 ```
     unset USE_LIBXC
     export LIBXC_LIB=/usr/lib/x86_64-linux-gnu
     export LIBXC_INCLUDE=/usr/include
 ```
+For example, for Fedora systems, the following is needed after having installed the `libxc-devel` package
+```
+    unset USE_LIBXC
+    export LIBXC_LIB=/usr/lib64
+    export LIBXC_INCLUDE="/usr/include -I/usr/lib64/gfortran/modules"
+```
+
 
 ## XTB
 
