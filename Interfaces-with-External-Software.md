@@ -72,8 +72,8 @@ setting the environment variable `USE_LIBXC=1`.
 This procedure requires an internet connection to dowload the Libxc source.   
 Instead, if you wish to use an existing libxc library, the following environment variables must be set, after having unset `USE_LIBXC`:   
 
- * `LIBXC_INCLUDE`   
- * `LIBXC_LIB`     
+ * `LIBXC_INCLUDE`   location of the libxc header   files
+ * `LIBXC_LIB`     location of the libxc libraries files
 
 For example, for Debian/Ubuntu systems, the following is needed
 ```
