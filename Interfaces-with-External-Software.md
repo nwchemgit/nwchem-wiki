@@ -75,7 +75,7 @@ Instead, if you wish to use an existing libxc library, the following environment
  * `LIBXC_INCLUDE`   
  * `LIBXC_LIB`     
 
-For example, for debian/ubuntu system, the following is needed
+For example, for Debian/Ubuntu systems, the following is needed
 ```
     unset USE_LIBXC
     export LIBXC_LIB=/usr/lib/x86_64-linux-gnu
