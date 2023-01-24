@@ -272,7 +272,7 @@ run directory.
 
 ## COSMO Usage Tips
 
-Authors of the paper [^8] report that  
+Authors of paper [^8] report that  
 " ... *the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
 Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
 ```
