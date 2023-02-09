@@ -1,10 +1,10 @@
-# Ongoing_Projects_and_Future_Directions
+# Ongoing Projects and Future Directions (Obsolete content dating from 2018)
 
 ## Density functional theory (DFT), time-dependent DFT (TD-DFT) and properties
-<ul>
-<li>Discrete interaction model/quantum mechanical method (DIM/QM) for describing the response properties of molecules adsorbed on metal nanoparticles. <strong>Developers:</strong> <em>Justin Moore, Lasse Jensen (Penn State University).</em></li>
-<li>Development of exact two-component relativistic theory and calculations of magnetic response parameters. <strong>Developers:</strong> <em>Jochen Autschbach (SUNY Buffalo).</em></li>
-<li>Generalization of real-time TDDFT to include spin-orbit effects . <strong>Developers:</strong> <em>Niri Govind (PNNL), Ken Lopata (LSU).</em></li>
+
+* Discrete interaction model/quantum mechanical method (DIM/QM) for describing the response properties of molecules adsorbed on metal nanoparticles. *Developers:* <em>Justin Moore, Lasse Jensen (Penn State University).
+* Development of exact two-component relativistic theory and calculations of magnetic response parameters. <strong>Developers:</strong> <em>Jochen Autschbach (SUNY Buffalo).</em></li>
+* Generalization of real-time TDDFT to include spin-orbit effects . *Developers*:Niri Govind (PNNL), Ken Lopata (LSU).
 
 ### Future projects
 Dynamics on excited-state surfaces, surface hopping, GW/BSE for molecular systems, Spin-flip TDDFT, Non-collinear DFT, spin-orbit TDDFT, interface to QWalk Quantum Monte-Carlo Program (w/ Lucas Wagner University of Illinois, Urbana-Champaign)
