@@ -31,15 +31,13 @@ New NWPhys module development (w/ John Rehr University of Washington) which will
 * Development of multi-reference coupled-cluster capabilities for quasidegenerate systems. *Developers:* Jiri Pittner (J Heyrovsky Institute of Physical Chemistry), Karol Kowalski (PNNL).
 * Electron-affinity/ionization-potential Equation-of-motion Coupled-Cluster methods. *Developers:* Kiran Bhaskaran-Nair (LSU), Mark Jarrell (LSU), Juana Moreno (LSU), William Shelton (LSU), Karol Kowalski (PNNL).
 * Green function Coupled Cluster formalism. *Developers:* LSU, PNNL.
-* Development of Intel MIC implementation of the CCSD(T) approach *Developers:* Edoardo Apra (PNNL), Michael Klemm (Intel), Karol Kowalski (PNNL).
-* Reduced scaling CC formulations based on the Cholesky Decomposition. *Developers:* Edoardo Apra (PNNL), Karol Kowalski (PNNL).
 ### Future projects
-CC/EOMCC analytical gradients, Intel MIC implementations for iterative CC methods, Multi-reference CC formulations employing incomplete model spaces.
+CC/EOMCC analytical gradients, Multi-reference CC formulations employing incomplete model spaces.
 
 
 ## Long-term NWChem development plans
 
-* Development of new algorithms for hybrid computer architectures including GPU and Intel Xeon Phi computer architectures (NWChem offers already GPU implementations of many-body methods, in 6.5 release we will extend these capabilities to Intel Xeon Phi technology) ,  
+* Development of new algorithms for heterogeneous computer system (beyond the existing NWChem GPU implementations).
 * Implementation of reduced-scaling methods for electronic structure calculations (local formulations, tensor hypercontractions, resolution-of-identity based approaches),  
 *  Development of novel methodologies for extending temporal scales in ab-initio molecular dynamic and molecular dynamics simulations  
 * Approximate electronic structure methods for very large-scale simulations (various semi-empirical methods, order N->N<sup>2</sup> DFT algorithms - orbital free DFT)  
