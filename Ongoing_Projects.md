@@ -2,8 +2,8 @@
 
 ## Density functional theory (DFT), time-dependent DFT (TD-DFT) and properties
 
-* Discrete interaction model/quantum mechanical method (DIM/QM) for describing the response properties of molecules adsorbed on metal nanoparticles. *Developers:* <em>Justin Moore, Lasse Jensen (Penn State University).
-* Development of exact two-component relativistic theory and calculations of magnetic response parameters. <strong>Developers:</strong> <em>Jochen Autschbach (SUNY Buffalo).</em></li>
+* Discrete interaction model/quantum mechanical method (DIM/QM) for describing the response properties of molecules adsorbed on metal nanoparticles. *Developers:* Justin Moore, Lasse Jensen (Penn State University).
+* Development of exact two-component relativistic theory and calculations of magnetic response parameters. *Developers:* Jochen Autschbach (SUNY Buffalo).
 * Generalization of real-time TDDFT to include spin-orbit effects . *Developers*:Niri Govind (PNNL), Ken Lopata (LSU).
 
 ### Future projects
@@ -11,27 +11,27 @@ Dynamics on excited-state surfaces, surface hopping, GW/BSE for molecular system
 
 ### Plane-Wave Density Functional Theory (DFT), Ab Initio Molecular Dynamics, and NWPhys
 
-<li>Parallel in Time Algorithms. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL), Jonathan Q. Weare (University of Chicago), John H. Weare (UCSD).</em></li>
-<li>New free energy methods based on diffusion Monte-Carlo algorithm. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL), Ying Chen (UCSD), John H. Weare (UCSD).</em></li>
-<li>Dynamic Mean Field Theory (DMFT). <strong>Developers:</strong> <em>Duo Song (UCSD), Eric J. Bylaska (PNNL), John H. Weare (UCSD).</em></li>
-<li>Development of new methods to calculate XPS and XANES spectra. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL), Niri Govind (PNNL), John Rehr (University of Washington).</em></li>
-<li>Implementation of electric field gradients and NMR in NWPW <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
-<li>Implementation of the fast multipole method (FMM) in the combined Ab initio molecular dynamics and molecular dynamics (AIMD/MM) code. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
-<li>Constant pressure ab initio molecular dynamics. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
-<li>New implementation of the projector augmented wave method in NWPW. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
-<li>Initial implementation of orbital free DFT in NWPW. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
-<li>implementation of Hybrid openmp-mpi and offloading intel MIC algorithms in NWPW. <strong>Developers:</strong> <em>Eric J. Bylaska (PNNL).</em></li>
+<li>Parallel in Time Algorithms. <strong>Developers:</strong> Eric J. Bylaska (PNNL), Jonathan Q. Weare (University of Chicago), John H. Weare (UCSD).</li>
+<li>New free energy methods based on diffusion Monte-Carlo algorithm. <strong>Developers:</strong> Eric J. Bylaska (PNNL), Ying Chen (UCSD), John H. Weare (UCSD).</li>
+<li>Dynamic Mean Field Theory (DMFT). <strong>Developers:</strong> Duo Song (UCSD), Eric J. Bylaska (PNNL), John H. Weare (UCSD).</li>
+<li>Development of new methods to calculate XPS and XANES spectra. <strong>Developers:</strong> Eric J. Bylaska (PNNL), Niri Govind (PNNL), John Rehr (University of Washington).</li>
+<li>Implementation of electric field gradients and NMR in NWPW <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
+<li>Implementation of the fast multipole method (FMM) in the combined Ab initio molecular dynamics and molecular dynamics (AIMD/MM) code. <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
+<li>Constant pressure ab initio molecular dynamics. <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
+<li>New implementation of the projector augmented wave method in NWPW. <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
+<li>Initial implementation of orbital free DFT in NWPW. <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
+<li>implementation of Hybrid openmp-mpi and offloading intel MIC algorithms in NWPW. <strong>Developers:</strong> Eric J. Bylaska (PNNL).</li>
 </ul>
 <p><strong>Future projects</strong>: New NWPhys module development (w/ John Rehr University of Washington) which will include new methods to calculate XPS and XANES spectra. Interface to QWalk Quantum Monte-Carlo Program (w/ Lubos Mitas University of North Carolina).</p>
 <p><br />
 
 ## High-level Coupled-Cluster methods
 <ul>
-<li>Development of multi-reference coupled-cluster capabilities for quasidegenerate systems. <strong>Developers:</strong> <em>Jiri Pittner (J Heyrovsky Institute of Physical Chemistry), Karol Kowalski (PNNL).</em></li>
-<li>Electron-affinity/ionization-potential Equation-of-motion Coupled-Cluster methods. <strong>Developers:</strong> <em>Kiran Bhaskaran-Nair (LSU), Mark Jarrell (LSU), Juana Moreno (LSU), William Shelton (LSU), Karol Kowalski (PNNL).</em></li>
-<li>Green function Coupled Cluster formalism. <strong>Developers:</strong> <em>LSU, PNNL.</em></li>
-<li>Development of Intel MIC implementation of the CCSD(T) approach <strong>Developers:</strong> <em>Edoardo Apra (PNNL), Michael Klemm (Intel), Karol Kowalski (PNNL).</em></li>
-<li>Reduced scaling CC formulations based on the Cholesky Decomposition. <strong>Developers:</strong> <em>Huub van Dam (PNNL), Edoardo Apra (PNNL), Karol Kowalski (PNNL).</em></li>
+<li>Development of multi-reference coupled-cluster capabilities for quasidegenerate systems. <strong>Developers:</strong> Jiri Pittner (J Heyrovsky Institute of Physical Chemistry), Karol Kowalski (PNNL).</li>
+<li>Electron-affinity/ionization-potential Equation-of-motion Coupled-Cluster methods. <strong>Developers:</strong> Kiran Bhaskaran-Nair (LSU), Mark Jarrell (LSU), Juana Moreno (LSU), William Shelton (LSU), Karol Kowalski (PNNL).</li>
+<li>Green function Coupled Cluster formalism. <strong>Developers:</strong> LSU, PNNL.</li>
+<li>Development of Intel MIC implementation of the CCSD(T) approach <strong>Developers:</strong> Edoardo Apra (PNNL), Michael Klemm (Intel), Karol Kowalski (PNNL).</li>
+<li>Reduced scaling CC formulations based on the Cholesky Decomposition. <strong>Developers:</strong> Edoardo Apra (PNNL), Karol Kowalski (PNNL).</li>
 </ul>
 <p><strong>Future projects</strong>: CC/EOMCC analytical gradients, Intel MIC implementations for iterative CC methods, Multi-reference CC formulations employing incomplete model spaces.</p>
 
