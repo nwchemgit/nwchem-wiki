@@ -503,7 +503,11 @@ where
 | revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
 | w97x        | * | * | *  |     | *    | N   |  [^96]  |
 | w97x-d3     | * | * | *  |     | *    | N   |  [^97]  |
-  
+| rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
+| rscanl      | * | * | *  |  *  |      | N   |  [^99]  | 
+| r2scan      | * | * | *  |     |      | N   |  [^100]  | 
+| r2scan0     | * | * | *  | *   | *    | N   |  [^101]  | 
+    
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
 the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
 The column 2nd refers to second derivatives of the energy with respect
@@ -2070,4 +2074,8 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 [^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
 [^96]: J.-D. Chai and M. Head-Gordon, J. Chem. Phys. 128, 084106 (2008)
 [^97]: Y.-S. Lin, G.-D. Li, S.-P. Mao, and J.-D. Chai, J. Chem. Theory Comput. 9, 263-272 (2013) 
+[^98]: A. P. Bartók and J. R. Yates., J. Chem. Phys. 150, 161101 (2019) 
+[^99]: J. W. Furness, A. D. Kaplan, J. Ning, J. P. Perdew, J. Sun, J. Phys. Chem. Lett. 11, 8208– 8215 (2020)
+[^100]: D. Mejía-Rodríguez and S. B. Trickey., Phys. Rev. B 102, 121109 (2020) 
+[^101]: M. Bursch, H. Neugebauer, S. Ehlert, S. Grimme, J. Chem. Phys. 156, 134105 (2022)
 
