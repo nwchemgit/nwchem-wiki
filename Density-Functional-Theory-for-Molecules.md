@@ -505,7 +505,7 @@ where
 | wb97x-d3    | * | * | *  |     | *    | N   |  [^97]  |
 | rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
 | rscanl      | * | * | *  |  *  |      | N   |  [^99]  | 
-| r2scan      | * | * | *  |     |      | N   |  [^100]  | 
+| r2scan      | * | * | *  |  *  |      | N   |  [^100]  | 
 | r2scan0     | * | * | *  | *   | *    | N   |  [^101]  | 
     
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
