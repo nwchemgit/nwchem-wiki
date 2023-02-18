@@ -501,6 +501,8 @@ where
 | scanl       | * | * | *  | *   |       | N   |  [^58]  |
 | revm06-L    | * | * | *  | *   |       | N   |  [^59]  |
 | revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
+| w97x        | * | * | *  | *   | *    | N   |  [^96]  |
+| w97x-d3     | * | * | *  | *   | *    | N   |  [^97]  |
   
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
 the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
@@ -2066,4 +2068,6 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 [^93]: S. Grimme, J. Comput. Chem. 27 1787 (2006)
 [^94]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
 [^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
+[^96]: J.-D. Chai and M. Head-Gordon, J. Chem. Phys. 128, 084106 (2008)
+[^97]: Y.-S. Lin, G.-D. Li, S.-P. Mao, and J.-D. Chai, J. Chem. Theory Comput. 9, 263-272 (2013) 
 
