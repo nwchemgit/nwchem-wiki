@@ -501,8 +501,8 @@ where
 | scanl       | * | * | *  | *   |       | N   |  [^58]  |
 | revm06-L    | * | * | *  | *   |       | N   |  [^59]  |
 | revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
-| w97x        | * | * | *  | *   | *    | N   |  [^96]  |
-| w97x-d3     | * | * | *  | *   | *    | N   |  [^97]  |
+| w97x        | * | * | *  |     | *    | N   |  [^96]  |
+| w97x-d3     | * | * | *  |     | *    | N   |  [^97]  |
   
 Table of available Exchange (X) and Correlation (C) functionals. GGA is
 the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
