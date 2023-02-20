@@ -265,6 +265,29 @@ Many alternative exchange and correlation functionals are available to
 the user as listed in the table below. The following sections describe
 how to use these options.
 
+### Libxc interface **_New in NWChem 7.2.0_**:
+
+If NWChem is compiled by linking it with the [libxc](https://www.tddft.org/programs/libxc/) DFT library
+(as described in the [Interfaces with External Software](Interfaces-with-External-Software.md#libxc) section),
+the user will be able to use most of the XC functionals available in libxc.  
+The input syntax requires to use the [xc](#xc-and-decomp-exchange-correlation-potentials) keyword followed by
+the functionals name from 
+[list available in Libxc](https://tddft.org/programs/libxc/functionals/)
+
+For example, the following input for the NWChem libxc interface
+```
+dft
+ xc gga_x_pbe 1.0 gga_x_pbe 1.0
+end
+```
+while trigger use of the same PBE96 functionals as in the NWChem built-in interface
+```
+dft
+ xc xpbe96 1.0 cpbe96 1.0
+end
+```
+
+
 ### Exchange-Correlation Functionals
 
 There are several Exchange and Correlation functionals in addition to
