@@ -4,11 +4,11 @@
 
 | Name                                                                 | Current focus                             |
 | :------------------------------------------------------------------- | :---------------------------------------- |
-| [E. J. Bylaska](http://www.emsl.pnl.gov/emslweb/people/eric-bylaska) | Plane wave development                    |
-| [N. Govind](http://www.emsl.pnl.gov/emslweb/people/niri-govind)      | DFT, (LR/RT)-TDDFT, Excited-state methods |
-| [K. Kowalski](http://www.emsl.pnl.gov/emslweb/people/karol-kowalski) | High accuracy methods                     |
-| [M. Valiev](http://www.emsl.pnl.gov/emslweb/people/marat-valiev)     | QM/MM methodologies                       |
-| [E. Aprà](http://www.emsl.pnl.gov/emslweb/people/edoardo-apra)       | DFT, Parallelization infrastructure       |
+| [E. J. Bylaska](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=5644) | Plane wave development                    |
+| [N. Govind](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8375)      | DFT, (LR/RT)-TDDFT, Excited-state methods |
+| [K. Kowalski](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8494) | High accuracy methods                     |
+| [M. Valiev](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8349)     | QM/MM methodologies                       |
+| [E. Aprà](https://www.emsl.pnnl.gov/staff/Edoardo_Apra)       | DFT, Parallelization infrastructure       |
 |  |
 
 ## Active Developers
