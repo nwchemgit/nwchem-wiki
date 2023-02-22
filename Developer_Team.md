@@ -4,31 +4,31 @@
 
 | Name                                                                 | Current focus                             |
 | :------------------------------------------------------------------- | :---------------------------------------- |
-| [E. J. Bylaska](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=5644) | Plane wave development                    |
-| [N. Govind](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8375)      | DFT, (LR/RT)-TDDFT, Excited-state methods |
-| [K. Kowalski](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8494) | High accuracy methods                     |
-| [M. Valiev](https://www.pnnl.gov/science/staff/staff_info.asp?staff_num=8349)     | QM/MM methodologies                       |
+| [E. J. Bylaska](https://www.pnnl.gov/people/eric-bylaska) | Plane wave development                    |
+| [N. Govind](https://www.pnnl.gov/people/niri-govind)      | DFT, (LR/RT)-TDDFT, Excited-state methods |
+| [K. Kowalski](https://www.pnnl.gov/people/karol-kowalski) | High accuracy methods                     |
+| [M. Valiev](https://www.pnnl.gov/people/marat-valiev)     | QM/MM methodologies                       |
 | [E. Aprà](https://www.emsl.pnnl.gov/staff/Edoardo_Apra)       | DFT, Parallelization infrastructure       |
-|  |
+| [D. Mejía-Rodríguez](https://www.pnnl.gov/people/daniel-mejia-rodriguez) |DFT, GW |
 
 ## Active Developers
 
 | Name                                                                                                                                                        | Current focus                                                                      |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
-| [R. J. Harrison](http://www.iacs.stonybrook.edu/people/faculty/robert-j-harrison) (Stony Brook)                                                             | Multiresolution methods                                                            |
-| [W. A. de Jong](http://crd.lbl.gov/about/staff/amsc/scientific-computing-group-scg/bert-de-jong/) (LBNL)                                                    | Properties, relativistic effects, basis sets, parallel performance, integrals, HPC |
+| [R. J. Harrison](https://iacs.stonybrook.edu/people/_faculty/robert-harrison.php) (Stony Brook)                                                             | Multiresolution methods                                                            |
+| [W. A. de Jong](https://crd.lbl.gov/divisions/amcr/computational-science-dept/acsd/staff/staff-members/bert-de-jong/) (LBNL)                                                    | Properties, relativistic effects, basis sets, parallel performance, integrals, HPC |
 | [H. J. J. van Dam](http://www.linkedin.com/in/huubvandam) (BNL)                                                                                             | DFT, Fault tolerance                                                               |
-| [T. P. Straatsma](http://www.olcf.ornl.gov/about-olcf/groups/) (ORNL)                                                                                       | Molecular dynamics                                                                 |
+| [T. P. Straatsma](https://www.olcf.ornl.gov/directory/staff-member/t-p-straatsma/) (ORNL)                                                                                       | Molecular dynamics                                                                 |
 | [T. L. Windus](http://www.chem.iastate.edu/faculty/Theresa_Windus/) (Iowa State U. and AMES)                                                                | Dynamic nucleation theory                                                          |
 | [J. R. Hammond](http://jeffhammond.github.io/) (Nvidia)                                                                    | Coupled cluster methods, performance optimization and multithreading               |
-| [J. Autschbach](http://www.nsm.buffalo.edu/~jochena/) (SUNY Buffalo)                                                                                        | Response properties, relativistic effects                                          |
-| [L. Jensen](http://research.chem.psu.edu/lxjgroup/) (Penn State)                                                                                            | DFT functionals, properties                                                        |
-| [M. Swart](http://iqc.udg.es/~marcel/eng/index.html) (Universitat de Girona, Spain)                                                                         | SSB-D functionals                                                                  |
-| [Q. Wu](http://pubweb.bnl.gov/~qinwu/Site/About_Me.html) (BNL)                                                                                              | Constrained DFT                                                                    |
+| [J. Autschbach](https://ja01.chem.buffalo.edu/) (SUNY Buffalo)                                                                                        | Response properties, relativistic effects                                          |
+| [L. Jensen](https://sites.psu.edu/jensen/) (Penn State)                                                                                            | DFT functionals, properties                                                        |
+| [M. Swart](https://www.marcelswart.eu/) (Universitat de Girona, Spain)                                                                         | SSB-D functionals                                                                  |
+| [Q. Wu](https://www.bnl.gov/staff/qinwu) (BNL)                                                                                              | Constrained DFT                                                                    |
 | [T. Van Voorhis](http://www.mit.edu/~chemistry/faculty/vanvoorhis.html) (MIT)                                                                               | Constrained DFT                                                                    |
 | Y. Zhao (Wuhan)                                                                                        | Minnesota (Truhlar) functionals                                                    |
 | R. Peverati  (FIT)                                                                         | Minnesota (Truhlar) functionals                                                    |
-| [K. Lopata](http://chem-faculty.lsu.edu/lopata/people.html) (LSU)                                                                                           | RT-TDDFT development                                                               |
+| [K. Lopata](https://faculty.lsu.edu/lopata/index.php) (LSU)                                                                                           | RT-TDDFT development                                                               |
 | [A. Vazquez-Mayagoitia](http://sites.google.com/site/alvarovazquezmayagoitia/) ([ANL](http://www.anl.gov))                                                  | DFT functionals, properties                                                        |
 | Kiran Bhaskharan Nair (WUSTL)                                                                                                                                 | Multireference Coupled Cluster (MRCC) Theory development                           |
 | Jiri Brabec (Heyrovsky Institute) | Multireference Coupled Cluster (MRCC) Theory development                           |
