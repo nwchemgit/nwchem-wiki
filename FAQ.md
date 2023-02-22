@@ -423,3 +423,14 @@ See also the following [forum entries](https://groups.google.com/g/nwchem-forum/
 This is most likely due to the fact that NWChem was compiled with the setting `ARMCI_NETWORK=MPI-PR`.  
 This is the expected behavior, since `ARMCI_NETWORK=MPI-PR` requires asking for  for n+1 processes. In other words, a serial run (with a single computing process) is triggered by executing `mpirun -np 2`.  
 If you would prefer  `mpirun -np 1` to work, other choice of `ARMCI_NETWORK` are possible as described in the [ARMCI documentation](ARMCI.md).
+
+## nb_wait_for_handle Error
+
+If you get the following error 
+```
+{1} nb_wait_for_handle Error: all user-level nonblocking handles have been exhaustedapplication called MPI_Abort(comm=0x84000002, -1)
+```
+you can fix it by executing the following command
+```
+export COMEX_MAX_NB_OUTSTANDING=16
+```
