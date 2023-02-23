@@ -410,6 +410,11 @@ where
 
 ## XC Functionals Summary
 
+Table: Available Exchange (X) and Correlation (C) functionals. GGA is
+the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
+The column 2nd refers to second derivatives of the energy with respect
+to nuclear position.  
+
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
 | slater      | *  |    |     |      |       | Y   |  [^1]   |
@@ -531,11 +536,8 @@ where
 | r2scan0     | * | * | *  | *   | *    | N   |  [^101]  | 
 | r2scanl     | * | * | *  |  *  |      | N   |  [^100],[^r2scanl] | 
 | ncap        | * | * | *  |     |      | Y   |  [^102] |   
+|             |   |   |    |     |      |     |         |   
     
-Table of available Exchange (X) and Correlation (C) functionals. GGA is
-the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
-The column 2nd refers to second derivatives of the energy with respect
-to nuclear position.  
 
 ### Meta-GGA Functionals
 
@@ -1277,7 +1279,6 @@ Our intent is to have a numerical integration scheme which would give us
 approximately the accuracy defined below regardless of molecular
 composition.
 
-<center>
 
 | Keyword | Total Energy Target Accuracy |
 | ------- | ---------------------------- |
@@ -1288,7 +1289,6 @@ composition.
 | xfine   |   1&sdot;10<sup>-8</sup>          |
 | huge    |   1&sdot;10<sup>-10</sup>          |
 
-</center>
 
 In order to determine the level of radial and angular quadrature needed
 to give us the target accuracy, we computed total DFT energies at the LDA
@@ -1310,7 +1310,6 @@ accuracy. Note, differing atom types in a given molecular system will
 most likely have differing associated numerical grids. The intent is to
 generate the desired energy accuracy (at the expense of speed of the calculation).
 
-<center>
 
 | Keyword | Radial | Angular |
 | ------- | ------ | ------- |
@@ -1320,13 +1319,11 @@ generate the desired energy accuracy (at the expense of speed of the calculation
 | fine    | 70     | 590     |
 | xfine   | 100    | 1202    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 1 atoms (Li &rarr; F) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1337,13 +1334,11 @@ accuracies.
 | xfine   | 125     | 1454    |
 | huge    | 300     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1354,13 +1349,11 @@ accuracies.
 | xfine   | 160     | 1454    |
 | huge    | 400     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1371,7 +1364,6 @@ accuracies.
 | xfine   | 205     | 1454    |
 | huge    | 400     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
@@ -1414,7 +1406,7 @@ The input for this type of grid takes the form,
 In this context the variable `iangquad` specifies a certain number of
 angular points as indicated by the table below:
 
-<center>
+Table: List of Lebedev quadratures
 
 | IANGQUAD |N<sub>angular</sub>|l|
 | ------------ | --------------- | ----- |
@@ -1447,10 +1439,7 @@ angular points as indicated by the table below:
 | 27           | 4802            | 119   |
 | 28           | 5294            | 125   |
 | 29           | 5810            | 131   |  
-  
-List of Lebedev quadratures
-
-</center>
+|              |                 |       |
 
 Therefore the user can specify any number of radial points along with
 the level of angular quadrature (1-29).
@@ -1876,7 +1865,6 @@ Please see some examples using this directive in [Sample input
 file](#sample-input-file). Known controllable print options
 are:
 
-<center>
 
 | Name                       | Print Level     | Description                                          |
 | -------------------------- | --------------- | ---------------------------------------------------- |
@@ -1910,7 +1898,6 @@ are:
 
 DFT Print Control Specifications
 
-</center>
 
 # Spin-Orbit Density Functional Theory (SODFT)
 
