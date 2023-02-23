@@ -427,7 +427,7 @@ to nuclear position.
 | perdew81    |    | * |     |      |       | Y   |  [@perdew1981]   |
 | pw91lda     |    | * |     |      |       | Y   |  [@perdew1992]   |
 | xbecke86b   | * |    | *  |      |       | N   |  [@becke1986]  |
-| becke88     | * |    | *  |      |       | Y   |  [@becke1998]   |
+| becke88     | * |    | *  |      |       | Y   |  [@becke1988]   |
 | xperdew86   | * |    | *  |      |       | N   |  [@perdew1986]  |
 | xperdew91   | * |    | *  |      |       | Y   |  [@perdew1992]   |
 | xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996,@perdew1997]   |
@@ -1458,7 +1458,7 @@ grid lebedev 80 11 H 70 8  O 90 11
 GRID [(becke||erf1||erf2||ssf) default erf1]
 ```
 
-- becke : see paper[@becke1988]
+- becke : see paper[@becke1988_2]
 - ssf : see paper[@stratmann1996]
 - erf1 : modified ssf
 - erf2 : modified ssf
