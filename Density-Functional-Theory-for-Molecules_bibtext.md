@@ -1898,7 +1898,7 @@ are:
 DFT Print Control Specifications
 
 
-# Spin-Orbit Density Functional Theory (SODFT)
+## Spin-Orbit Density Functional Theory (SODFT)
 
 The spin-orbit DFT module (SODFT) in the NWChem code allows for the variational
 treatment of the one-electron spin-orbit operator within the DFT framework. Calculations
@@ -1969,13 +1969,13 @@ end
 task sodft
 ```
 
-# SYM and ADAPT
+## SYM and ADAPT
 
 The options `SYM` and `ADAPT` works the same way as the analogous options for the SCF code.
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
 [ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
 
-# References 
+## References 
 
 ///Footnotes Go Here///
 
