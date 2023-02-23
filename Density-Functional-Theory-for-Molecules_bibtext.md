@@ -744,16 +744,15 @@ task dft energy
 
 ### SSB-D functional
 
-The SSB-D[^78] functional is a small correction to the non-empirical
+The SSB-D[@swart2009,@swart2009_2] functional is a small correction to the non-empirical
 PBE functional and includes a portion of Grimme's dispersion correction
 (s6=0.847455). It is designed to reproduce the good results of OPBE for
 spin-state splittings and reaction barriers, and the good results of PBE
-for weak interactions. The SSB-D functional works excellent for these
+for weak interactions. The SSB-D functional works well for these
 systems, including for difficult systems for DFT (dimerization of
 anthracene, branching of octane, water-hexamer isomers, C12H12 isomers,
 stacked adenine dimers), and for NMR chemical shieldings.
 
-1. 
 It can be specified as
 
 ```
@@ -1019,7 +1018,7 @@ deemed undesirable with the obvious keywords,
 
 For systems where the initial guess is very poor, the user can try using
 fractional occupation of the orbital levels during the initial cycles of
-the SCF convergence[^77].
+the SCF convergence[@rabuck1999].
 The input has the following form
 
 ```
@@ -1054,7 +1053,7 @@ task dft
   
 ## CDFT: Constrained DFT
 
-This option enables the constrained DFT formalism by Wu and Van Voorhis[^79]: 
+This option enables the constrained DFT formalism by Wu and Van Voorhis[@wu2005]: 
 
 ```
  CDFT <integer fatom1 latom1> [<integer fatom2 latom2>] (charge||spin <real constaint_value>) \ 
@@ -1125,7 +1124,7 @@ the HOMO (eg metallic clusters)
 
 This option allows fractional occupation of the molecular orbitals. A
 Gaussian broadening function of exponent smear is used as described in
-the paper by Warren and Dunlap[^81].
+the paper by Warren and Dunlap[@warren1996].
 The user must be aware that an additional energy term is added
 to the total energy in order to have energies and gradients consistent.
 
@@ -1459,8 +1458,8 @@ grid lebedev 80 11 H 70 8  O 90 11
 GRID [(becke||erf1||erf2||ssf) default erf1]
 ```
 
-- becke : see paper[^81]
-- ssf : see paper[^82]
+- becke : see paper[@becke1988]
+- ssf : see paper[@stratmann1996]
 - erf1 : modified ssf
 - erf2 : modified ssf
 
@@ -1475,10 +1474,10 @@ $$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(
 ```
 
 - euler : Euler-McLaurin quadrature with the transformation devised by
-    Murray et al[^84].
+    Murray et al[@murray1993].
 - mura : Modification of the Murray-Handy-Laming scheme (we are not using the same
-    scaling factors proposed in the paper by Mura and Knowles[^85]).
-- treutler : Gauss-Chebyshev using the transformation suggested by Treutler[^86].
+    scaling factors proposed in the paper by Mura and Knowles[@mura1996]).
+- treutler : Gauss-Chebyshev using the transformation suggested by Treutler[@treutler1995].
 
 ### Disk usage for Grid
 
@@ -1624,7 +1623,7 @@ sic [perturbative || oep || oep-loc ]
 
 The Perdew and Zunger[@perdew1981] method to remove the self-interaction contained in many
 exchange-correlation functionals has been implemented with the Optimized
-Effective Potential method[^87] within the Krieger-Li-Iafrate approximation[^88].
+Effective Potential method[@sharp1953,@talman1976] within the Krieger-Li-Iafrate approximation[@krieger1992,@krieger1992_2,@li1993].
 Three variants of these methods are included in NWChem:
 
 - `sic perturbative` This is the default option for the sic directive.
@@ -1644,7 +1643,7 @@ Three variants of these methods are included in NWChem:
 With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
-implementation of this method can be found in the paper by Garza[^89]. The components of the
+implementation of this method can be found in the paper by Garza[@garza2000]. The components of the
 sic energy can be printed out using:
 
 ```
@@ -1746,7 +1745,7 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^90] and [^91] (Use `vdw 0`)  
+1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [@wu2002] and [@zimmerli2004] (Use `vdw 0`)  
 
 2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[@grimme2004]. (Use `vdw 1)`  
 
@@ -1828,7 +1827,7 @@ task dft energy
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 
-See details (including list of a1 and a2 parameters) in  paper[^95]
+See details (including list of a1 and a2 parameters) in  paper[delaroza2013]
 and the website <http://schooner.chem.dal.ca/wiki/XDM>
 
 ```
@@ -1979,22 +1978,4 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 # References 
 
 ///Footnotes Go Here///
-[^77]: A. D. Rabuck and G. E. Scuseria, J. Chem. Phys 110,695 (1999)
-[^78]: M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103 (2009);
-       M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9, 69 (2009)
-[^79]: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502 (2005)
-[^81]: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384 (1996)
-[^82]: A. D. Becke, J. Chem. Phys. 88, 1053 (1988)
-[^83]: R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett. 257, 213 (1996)
-[^84]: C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993)
-[^85]: M.E.Mura and P.J.Knowles, J Chem Phys 104, 9848 (1996)
-[^86]: O.Treutler and R.Alrhichs, J.Chem.Phys 102, 346 (1995)
-[^87]: R. T. Sharp and G. K. Horton, Phys. Rev. 90, 317 (1953);
-       J. D. Talman and W. F. Shadwick, Phys. Rev. A 14, 36 (1976)
-[^88]: J. B. Krieger, Y. Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992);
-       *ibid*, 47, 165 (1993))
-[^89]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
-[^90]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
-[^91]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
-[^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
 
