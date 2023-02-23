@@ -428,9 +428,9 @@ to nuclear position.
 | pw91lda     |    | * |     |      |       | Y   |  [@perdew1992]   |
 | xbecke86b   | * |    | *  |      |       | N   |  [@becke1986]  |
 | becke88     | * |    | *  |      |       | Y   |  [@becke1998]   |
-| xperdew86   | * |    | *  |      |       | N   |  [@perdew1986_1]  |
+| xperdew86   | * |    | *  |      |       | N   |  [@perdew1986]  |
 | xperdew91   | * |    | *  |      |       | Y   |  [@perdew1992]   |
-| xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
+| xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996,@perdew1997]   |
 | gill96      | * |    | *  |      |       | Y   |  [@gill1996]   |
 | optx        | * |    | *  |      |       | N   |  [@handy2001]  |
 | mpw91       | * |    | *  |      |       | Y   |  [@adamo1998,@zhao2005]  |
@@ -511,7 +511,7 @@ to nuclear position.
 | csogga11-x  |    | * |     |      |       | N   |  [@peverati2001]  |
 | xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2001]  |
 | sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
-| dldf        | * | * |     | *   | *    | N   |  [^52]  |
+| dldf        | * | * |     | *   | *    | N   |  [@pernal2009]  |
 | beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
 | b3lyp       | * | * | *  |      | *    | Y   |  [@becke3]  |
 | acm         | * | * | *  |      | *    | Y   |  [@becke3]  |
@@ -523,12 +523,12 @@ to nuclear position.
 | becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
 | pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
 | mpw1k       | * | * | *  |      | *    | Y   |  [@lynch2000]  |
-| xmvs15      | * |    |     | *   |       | N   |  [^55]  |
-| hle16       | * | * | *  |      | *    | Y   |  [^56]  |
-| scan        | * | * | *  | *   |       | N   |  [^57]  |
-| scanl       | * | * | *  | *   |       | N   |  [^58]  |
-| revm06-L    | * | * | *  | *   |       | N   |  [^59]  |
-| revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
+| xmvs15      | * |    |     | *   |       | N   |  [@sun2015]  |
+| hle16       | * | * | *  |      | *    | Y   |  [@verma2017]  |
+| scan        | * | * | *  | *   |       | N   |  [@yang20176]  |
+| scanl       | * | * | *  | *   |       | N   |  [@mejiarodriguez2017]  |
+| revm06-L    | * | * | *  | *   |       | N   |  [@wang2017]  |
+| revm06      | * | * | *  | *   | *    | N   |  [@wang2018]  |  
 | wb97x       | * | * | *  |     | *    | N   |  [^96]  |
 | wb97x-d3    | * | * | *  |     | *    | N   |  [^97]  |
 | rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
@@ -556,7 +556,7 @@ file](#sample-input-file). In this instance, the energy is
 calculated self-consistently and geometry is optimized using the
 analytical gradients.
 
-(For more information on metaGGAs, see Kurth et al 1999 [^62]
+(For more information on metaGGAs, see Kurth et al 1999 [@kurth1999]
  for a brief description of meta-GGAs,
 and citations 14-27 therein for thorough background)
 
@@ -683,7 +683,7 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [^63], [@iikura2001], [^65], [^66], [^67], [^68], [^69],
+Please see references [@savin1995], [@iikura2001], [^65], [^66], [^67], [^68], [^69],
 [^70], [^71], [^72], [^73], [^74], [^75] and [^76]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
@@ -776,7 +776,7 @@ dft
 end
 ```
 
-For details of the theory, please see reference[^80].
+For details of the theory, please see reference[@grimme2006_2].
 
 ### LB94 and CS00: Asymptotic correction
 
@@ -1748,9 +1748,9 @@ There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
 1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^90] and [^91] (Use `vdw 0`)  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[^92]. (Use `vdw 1)`  
+2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[@grimme2004]. (Use `vdw 1)`  
 
-3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^93]. (Use `vdw 2`)  
+3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[@grimme2006_2]. (Use `vdw 2`)  
 
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
@@ -1775,7 +1775,7 @@ $$ E_{disp} = \sum_{i,j} \sum_{n=6,8} s_n \ \frac{C^{ij}_n}{r_{ij}} \biggl\lbrac
 
 This new dispersion correction covers elements through Z=94.
   *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
-about the functional form can be found in reference [^94].
+about the functional form can be found in reference [@grimme2010].
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
@@ -1979,16 +1979,6 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 # References 
 
 ///Footnotes Go Here///
-[^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
-[^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
-[^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
-[^57]: Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
-[^58]: D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
-[^59]: Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
-[^60]: Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
-[^62]: S. Kurth, J. Perdew, P. Blaha, Int. J. Quant. Chem 75, 889 (1999).
-[^63]: A. Savin, In Recent Advances in Density Functional Methods Part I;
-    D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
 [^65]: Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
 [^66]: T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
 [^67]: M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
@@ -2005,7 +1995,6 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 [^78]: M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103 (2009);
        M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9, 69 (2009)
 [^79]: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502 (2005)
-[^80]: S. Grimme,  J. Chem. Phys. 124, 034108 (2006) [DOI:10.1063/1.2148954](https://dx.doi.org/10.1063/1.2148954)
 [^81]: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384 (1996)
 [^82]: A. D. Becke, J. Chem. Phys. 88, 1053 (1988)
 [^83]: R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett. 257, 213 (1996)
@@ -2019,8 +2008,5 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 [^89]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
 [^90]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
 [^91]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
-[^92]: S. Grimme J. Comput. Chem. 25 1463 (2004)
-[^93]: S. Grimme, J. Comput. Chem. 27 1787 (2006)
-[^94]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
 [^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
 
