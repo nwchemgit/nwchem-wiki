@@ -181,7 +181,7 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT)[@Koester2004;@Calaminici2017] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
+Use of the auxiliary density functional theory method (ADFT)[@koester2004,calaminici2017] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
 
 The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an [xc basis](#specification-of-basis-sets-for-the-dft-module) without the `adft` keyword. It is important to note that, different to straight exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
 
@@ -264,6 +264,29 @@ input](#sample-input-file).
 Many alternative exchange and correlation functionals are available to
 the user as listed in the table below. The following sections describe
 how to use these options.
+
+### Libxc interface **_New in NWChem 7.2.0_**:
+
+If NWChem is compiled by linking it with the [libxc](https://www.tddft.org/programs/libxc/) DFT library
+(as described in the [Interfaces with External Software](Interfaces-with-External-Software.md#libxc) section),
+the user will be able to use most of the XC functionals available in libxc.  
+The input syntax requires to use the [xc](#xc-and-decomp-exchange-correlation-potentials) keyword followed by
+the functionals name from 
+[list available in Libxc](https://tddft.org/programs/libxc/functionals/)
+
+For example, the following input for the NWChem libxc interface
+```
+dft
+ xc gga_x_pbe 1.0 gga_x_pbe 1.0
+end
+```
+while trigger use of the same PBE96 functionals as in the NWChem built-in interface
+```
+dft
+ xc xpbe96 1.0 cpbe96 1.0
+end
+```
+
 
 ### Exchange-Correlation Functionals
 
@@ -350,8 +373,8 @@ functionals, the user has the alternative of specifying combined
 exchange and correlation functionals.
 
 The available hybrid functionals (where a Hartree-Fock Exchange
-component is present) consist of the Becke "half and half"[^13], the adiabatic connection method[^14],
-Becke 1997 ("Becke V" paper[^15]).
+component is present) consist of the Becke "half and half"[@becke1993], the adiabatic connection method[@becke3],
+Becke 1997 ("Becke V" paper[@becke1997]).
 
 The keyword `beckehandh` specifies that the exchange-correlation energy
 will be computed
@@ -387,6 +410,11 @@ where
 
 ## XC Functionals Summary
 
+Table: Available Exchange (X) and Correlation (C) functionals. GGA is
+the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
+The column 2nd refers to second derivatives of the energy with respect
+to nuclear position.  
+
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
 | slater      | *  |    |     |      |       | Y   |  [@slater1972;@slater1974]   |
@@ -418,11 +446,11 @@ where
 | cft97       |    | * | *  |      |       | N   |  [^24]  |
 | op          |    | * | *  |      |       | N   |  [^31]  |
 | hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
-| hcth120     | * | * | *  |      |       | N   |  [^12]  |
-| hcth147     | * | * | *  |      |       | N   |  [^12]  |
+| hcth120     | * | * | *  |      |       | N   |  [@boese2000]  |
+| hcth147     | * | * | *  |      |       | N   |  [@boese2000]  |
 | hcth147@tz2p| * | * | *  |      |       | N   |  [^61]  |
-| hcth407     | * | * | *  |      |       | N   |  [^19]  |
-| becke97gga1 | * | * | *  |      |       | N   |  [^18]  |
+| hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
+| becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [^21]  |
 | ft97        | * | * | *  |      |       | N   |  [^24]  |
 | htch407p    | * | * | *  |      |       | N   |  [^27]  |
@@ -484,16 +512,16 @@ where
 | xsogga11-x  | * |    | *  |      |       | N   |  [^51]  |
 | sogga11-x   | * | * | *  |      | *    | N   |  [^51]  |
 | dldf        | * | * |     | *   | *    | N   |  [^52]  |
-| beckehandh  | * | * |     |      | *    | Y   |  [^13]  |
-| b3lyp       | * | * | *  |      | *    | Y   |  [^14]  |
-| acm         | * | * | *  |      | *    | Y   |  [^14]  |
-| becke97     | * | * | *  |      | *    | N   |  [^15]  |
+| beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
+| b3lyp       | * | * | *  |      | *    | Y   |  [@becke3]  |
+| acm         | * | * | *  |      | *    | Y   |  [@becke3]  |
+| becke97     | * | * | *  |      | *    | N   |  [@becke1997]  |
 | becke97-1   | * | * | *  |      | *    | N   |  [^11]  |
 | becke97-2   | * | * | *  |      | *    | N   |  [^22]  |
 | becke97-3   | * | * | *  |      | *    | N   |  [^30]  |
 | becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
-| becke98     | * | * | *  |      | *    | N   |  [^16]  |
-| pbe0        | * | * | *  |      | *    | Y   |  [^17]  |
+| becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
+| pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
 | mpw1k       | * | * | *  |      | *    | Y   |  [^25]  |
 | xmvs15      | * |    |     | *   |       | N   |  [^55]  |
 | hle16       | * | * | *  |      | *    | Y   |  [^56]  |
@@ -501,11 +529,15 @@ where
 | scanl       | * | * | *  | *   |       | N   |  [^58]  |
 | revm06-L    | * | * | *  | *   |       | N   |  [^59]  |
 | revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
-  
-Table of available Exchange (X) and Correlation (C) functionals. GGA is
-the Generalized Gradient Approximation, and Meta refers to Meta-GGAs.
-The column 2nd refers to second derivatives of the energy with respect
-to nuclear position.  
+| wb97x       | * | * | *  |     | *    | N   |  [^96]  |
+| wb97x-d3    | * | * | *  |     | *    | N   |  [^97]  |
+| rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
+| r2scan      | * | * | *  |  *  |      | N   |  [^99]  | 
+| r2scan0     | * | * | *  | *   | *    | N   |  [^101]  | 
+| r2scanl     | * | * | *  |  *  |      | N   |  [^100],[^r2scanl] | 
+| ncap        | * | * | *  |     |      | Y   |  [^102] |   
+|             |   |   |    |     |      |     |         |   
+    
 
 ### Meta-GGA Functionals
 
@@ -1247,7 +1279,6 @@ Our intent is to have a numerical integration scheme which would give us
 approximately the accuracy defined below regardless of molecular
 composition.
 
-<center>
 
 | Keyword | Total Energy Target Accuracy |
 | ------- | ---------------------------- |
@@ -1258,7 +1289,6 @@ composition.
 | xfine   |   1&sdot;10<sup>-8</sup>          |
 | huge    |   1&sdot;10<sup>-10</sup>          |
 
-</center>
 
 In order to determine the level of radial and angular quadrature needed
 to give us the target accuracy, we computed total DFT energies at the LDA
@@ -1280,7 +1310,6 @@ accuracy. Note, differing atom types in a given molecular system will
 most likely have differing associated numerical grids. The intent is to
 generate the desired energy accuracy (at the expense of speed of the calculation).
 
-<center>
 
 | Keyword | Radial | Angular |
 | ------- | ------ | ------- |
@@ -1290,13 +1319,11 @@ generate the desired energy accuracy (at the expense of speed of the calculation
 | fine    | 70     | 590     |
 | xfine   | 100    | 1202    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 1 atoms (Li &rarr; F) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1307,13 +1334,11 @@ accuracies.
 | xfine   | 125     | 1454    |
 | huge    | 300     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 2 atoms (Na &rarr; Cl) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1324,13 +1349,11 @@ accuracies.
 | xfine   | 160     | 1454    |
 | huge    | 400     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 3 atoms (K &rarr; Br) to reach the desired
 accuracies.
 
-<center>
 
 | Keyword | Radial  | Angular |
 | ------- | ------- | ------- |
@@ -1341,7 +1364,6 @@ accuracies.
 | xfine   | 205     | 1454    |
 | huge    | 400     | 1454    |
 
-</center>
 
 Program default number of radial and angular shells empirically
 determined for Row 4 atoms (Rb &rarr; I) to reach the desired
@@ -1384,7 +1406,7 @@ The input for this type of grid takes the form,
 In this context the variable `iangquad` specifies a certain number of
 angular points as indicated by the table below:
 
-<center>
+Table: List of Lebedev quadratures
 
 | IANGQUAD |N<sub>angular</sub>|l|
 | ------------ | --------------- | ----- |
@@ -1417,10 +1439,7 @@ angular points as indicated by the table below:
 | 27           | 4802            | 119   |
 | 28           | 5294            | 125   |
 | 29           | 5810            | 131   |  
-  
-List of Lebedev quadratures
-
-</center>
+|              |                 |       |
 
 Therefore the user can specify any number of radial points along with
 the level of angular quadrature (1-29).
@@ -1846,7 +1865,6 @@ Please see some examples using this directive in [Sample input
 file](#sample-input-file). Known controllable print options
 are:
 
-<center>
 
 | Name                       | Print Level     | Description                                          |
 | -------------------------- | --------------- | ---------------------------------------------------- |
@@ -1880,7 +1898,6 @@ are:
 
 DFT Print Control Specifications
 
-</center>
 
 # Spin-Orbit Density Functional Theory (SODFT)
 
@@ -1959,17 +1976,9 @@ The options `SYM` and `ADAPT` works the same way as the analogous options for th
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
 [ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
 
-### References 
+## References 
 
 ///Footnotes Go Here///
-[^12]: A. D. Boese, N.L. Doltsinis, N.C. Handy and M. Sprik. J. Chem. Phys. 112, 1670 (2000)
-[^13]: A. D. Becke, J. Chem. Phys. 98, 1372 (1992)
-[^14]: A. D. Becke, J. Chem. Phys. 98, 5648 (1993)
-[^15]: A. D. Becke, J. Chem. Phys. 107, 8554 (1997)
-[^16]: H. L. Schmider and A. D. Becke, J. Chem. Phys. 108, 9624 (1998)
-[^17]: C. Adamo and V. Barone, J. Chem. Phys. 110, 6158 (1999)
-[^18]: A. J. Cohen and N. C. Handy, Chem. Phys. Lett. 316, 160 (2000)
-[^19]: A. D. Boese, N. C. Handy, J. Chem. Phys. 114, 5497 (2001)
 [^20]: N. C. Handy, A. J. Cohen, Mol. Phys. 99, 403 (2001)
 [^21]: G. Menconi, P. J. Wilson, D.J. Tozer, J. Chem. Phys 114, 3958 (2001)
 [^22]: P. J. Wilson, T. J. Bradley, D. J. Tozer, J. Chem. Phys 115, 9233 (2001)
