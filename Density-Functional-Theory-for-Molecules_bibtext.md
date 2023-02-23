@@ -453,7 +453,7 @@ to nuclear position.
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
 | ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
-| htch407p    | * | * | *  |      |       | N   |  [@boese2003]  |
+| htch407p    | * | * | *  |      |       | N   |  [@boese2003_2]  |
 | bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
 | pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
 | xpkzb99     | * |    |     | *   |       | N   |  [@perdew1999]  |
