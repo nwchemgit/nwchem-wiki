@@ -432,9 +432,9 @@ to nuclear position.
 | xperdew91   | * |    | *  |      |       | Y   |  [@perdew1992]   |
 | xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
 | gill96      | * |    | *  |      |       | Y   |  [@gill1996]   |
-| optx        | * |    | *  |      |       | N   |  [^20]  |
-| mpw91       | * |    | *  |      |       | Y   |  [^23]  |
-| xft97       | * |    | *  |      |       | N   |  [^24]  |
+| optx        | * |    | *  |      |       | N   |  [@handy2001]  |
+| mpw91       | * |    | *  |      |       | Y   |  [@adamo1998,@zhao2005]  |
+| xft97       | * |    | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
 | rpbe        | * |    | *  |      |       | Y   |  [^33]  |
 | revpbe      | * |    | *  |      |       | Y   |  [^34]  |
 | xpw6b95     | * |    | *  |      |       | N   |  [^36]  |
@@ -443,7 +443,7 @@ to nuclear position.
 | lyp         |    | * | *  |      |       | Y   |  [@lee1988]  |
 | perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a;@perdew1993]   |
 | cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
-| cft97       |    | * | *  |      |       | N   |  [^24]  |
+| cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
 | op          |    | * | *  |      |       | N   |  [^31]  |
 | hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
 | hcth120     | * | * | *  |      |       | N   |  [@boese2000]  |
@@ -451,8 +451,8 @@ to nuclear position.
 | hcth147@tz2p| * | * | *  |      |       | N   |  [^61]  |
 | hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
-| hcthp14     | * | * | *  |      |       | N   |  [^21]  |
-| ft97        | * | * | *  |      |       | N   |  [^24]  |
+| hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
+| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
 | htch407p    | * | * | *  |      |       | N   |  [^27]  |
 | bop         | * | * | *  |      |       | N   |  [^31]  |
 | pbeop       | * | * | *  |      |       | N   |  [^32]  |
@@ -517,12 +517,12 @@ to nuclear position.
 | acm         | * | * | *  |      | *    | Y   |  [@becke3]  |
 | becke97     | * | * | *  |      | *    | N   |  [@becke1997]  |
 | becke97-1   | * | * | *  |      | *    | N   |  [^11]  |
-| becke97-2   | * | * | *  |      | *    | N   |  [^22]  |
+| becke97-2   | * | * | *  |      | *    | N   |  [@wilson2001]  |
 | becke97-3   | * | * | *  |      | *    | N   |  [^30]  |
 | becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
 | becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
 | pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
-| mpw1k       | * | * | *  |      | *    | Y   |  [^25]  |
+| mpw1k       | * | * | *  |      | *    | Y   |  [@lynch2000]  |
 | xmvs15      | * |    |     | *   |       | N   |  [^55]  |
 | hle16       | * | * | *  |      | *    | Y   |  [^56]  |
 | scan        | * | * | *  | *   |       | N   |  [^57]  |
@@ -1979,12 +1979,6 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 ## References 
 
 ///Footnotes Go Here///
-[^20]: N. C. Handy, A. J. Cohen, Mol. Phys. 99, 403 (2001)
-[^21]: G. Menconi, P. J. Wilson, D.J. Tozer, J. Chem. Phys 114, 3958 (2001)
-[^22]: P. J. Wilson, T. J. Bradley, D. J. Tozer, J. Chem. Phys 115, 9233 (2001)
-[^23]: C. Adamo and V. Barone, J. Chem. Phys. 108, 664 (1998); Y. Zhao and  D. G. Truhlar, J. Phys. Chem. A 109, 5656 (2005)
-[^24]: M. Filatov and W. Thiel, Mol .Phys. 91, 847 (1997); M. Filatov and W. Thiel, Int.J.Quantum Chem. 62, 603 (1997)
-[^25]: B. J. Lynch, P. L. Fast, M. Harris and D. G. Truhlar, J. Phys. Chem. A 104, 4811 (2000)
 [^26]: J. P. Perdew, S. Kurth, A. Zupan and P. Blaha, Phys. Rev. Lett. 82, 2544 (1999)
 [^27]: A. D. Boese, A. Chandra, J. M. L. Martin and D. Marx, J. Chem. Phys. 119, 5965 (2003)
 [^28]: J. Tao, J. Perdew, V. Staroverov and G. Scuseria, Phys. Rev. Let. 91, 146401-1 (2003)
