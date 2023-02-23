@@ -435,10 +435,10 @@ to nuclear position.
 | optx        | * |    | *  |      |       | N   |  [@handy2001]  |
 | mpw91       | * |    | *  |      |       | Y   |  [@adamo1998,@zhao2005]  |
 | xft97       | * |    | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
-| rpbe        | * |    | *  |      |       | Y   |  [^33]  |
-| revpbe      | * |    | *  |      |       | Y   |  [^34]  |
-| xpw6b95     | * |    | *  |      |       | N   |  [^36]  |
-| xpwb6k      | * |    | *  |      |       | N   |  [^36]  |
+| rpbe        | * |    | *  |      |       | Y   |  [@hammer1999]  |
+| revpbe      | * |    | *  |      |       | Y   |  [@zhang1998]  |
+| xpw6b95     | * |    | *  |      |       | N   |  [@zhao2004]  |
+| xpwb6k      | * |    | *  |      |       | N   |  [@zhao2004]  |
 | perdew86    |    | * | *  |      |       | Y   |  [@perdew1986]   |
 | lyp         |    | * | *  |      |       | Y   |  [@lee1988]  |
 | perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a;@perdew1993]   |
@@ -460,33 +460,33 @@ to nuclear position.
 | cpkzb99     |    | * |     | *   |       | N   |  [@perdew1999]  |
 | xtpss03     | * |    |     | *   |       | N   |  [@tao2003]  |
 | ctpss03     |    | * |     | *   |       | N   |  [@tao2003]  |
-| bc95        |    | * |     | *   |       | N   |  [^33]  |
-| cpw6b95     |    | * |     | *   |       | N   |  [^36]  |
-| cpwb6k      |    | * |     | *   |       | N   |  [^36]  |
-| xm05        | * |    |     | *   | *    | N   |  [^37],[@zhao2005_2]  |
-| cm05        |    | * |     | *   |       | N   |  [^37],[@zhao2005_2]  |
-| m05-2x      | * | * |     | *   | *    | N   |  [^40]  |
-| xm05-2x     | * |    |     | *   | *    | N   |  [^40]  |
-| cm05-2x     |    | * |     | *   |       | N   |  [^40]  |
+| bc95        |    | * |     | *   |       | N   |  [@hammer1999]  |
+| cpw6b95     |    | * |     | *   |       | N   |  [@zhao2004]  |
+| cpwb6k      |    | * |     | *   |       | N   |  [@zhao2004]  |
+| xm05        | * |    |     | *   | *    | N   |  [@zhao2004_2],[@zhao2005_2]  |
+| cm05        |    | * |     | *   |       | N   |  [@zhao2004_2],[@zhao2005_2]  |
+| m05-2x      | * | * |     | *   | *    | N   |  [@zhao2006_2]  |
+| xm05-2x     | * |    |     | *   | *    | N   |  [@zhao2006_2]  |
+| cm05-2x     |    | * |     | *   |       | N   |  [@zhao2006_2]  |
 | xctpssh     |    |    |     | *   | *    | N   |  [@staroverov2003]  |
-| bb1k        |    |    |     | *   | *    | N   |  [^34]  |
-| mpw1b95     |    |    |     | *   | *    | N   |  [^35]  |
-| mpwb1k      |    |    |     | *   | *    | N   |  [^35]  |
-| pw6b95      |    |    |     | *   | *    | N   |  [^36]  |
-| pwb6k       |    |    |     | *   | *    | N   |  [^36]  |
-| m05         |    |    |     | *   | *    | N   |  [^37]  |
+| bb1k        |    |    |     | *   | *    | N   |  [@zhang1998]  |
+| mpw1b95     |    |    |     | *   | *    | N   |  [@becke1996]  |
+| mpwb1k      |    |    |     | *   | *    | N   |  [@becke1996]  |
+| pw6b95      |    |    |     | *   | *    | N   |  [@zhao2004]  |
+| pwb6k       |    |    |     | *   | *    | N   |  [@zhao2004]  |
+| m05         |    |    |     | *   | *    | N   |  [@zhao2004_2]  |
 | vs98        |    |    |     | *   | *    | N   |  [@voorhis1998]  |
 | xvs98       | * |    |     | *   |       | N   |  [@voorhis1998]  |
 | cvs98       |    | * |     | *   |       | N   |  [@voorhis1998]  |
 | m06-L       | * | * |     | *   |       | N   |  [@zhao2006]  |
 | xm06-L      | * |    |     | *   |       | N   |  [@zhao2006]  |
 | cm06-L      |    | * |     | *   |       | N   |  [@zhao2006]  |
-| m06-hf      |    |    |     | *   | *    | N   |  [^43]  |
-| xm06-hf     | * |    |     | *   | *    | N   |  [^43]  |
-| cm06-hf     |    | * |     | *   |       | N   |  [^43]  |
-| m06         |    |    |     | *   | *    | N   |  [^44]  |
-| xm06        | * |    |     | *   | *    | N   |  [^44]  |
-| cm06        |    | * |     | *   |       | N   |  [^44]  |
+| m06-hf      |    |    |     | *   | *    | N   |  [@zhao2006_3]  |
+| xm06-hf     | * |    |     | *   | *    | N   |  [@zhao2006_3]  |
+| cm06-hf     |    | * |     | *   |       | N   |  [@zhao2006_3]  |
+| m06         |    |    |     | *   | *    | N   |  [@zhao2008_2]  |
+| xm06        | * |    |     | *   | *    | N   |  [@zhao2008_2]  |
+| cm06        |    | * |     | *   |       | N   |  [@zhao2008_2]  |
 | m06-2x      |    |    |     | *   | *    | N   |  [@zhao2006]  |
 | xm06-2x     | * |    |     | *   | *    | N   |  [@zhao2006]  |
 | cm06-2x     |    | * |     | *   |       | N   |  [@zhao2006]  |
@@ -496,18 +496,18 @@ to nuclear position.
 | cm08-so     |    | * |     | *   |       | N   |  [@zhao2008]  |
 | xm08-so     | * |    |     | *   |       | N   |  [@zhao2008]  |
 | m08-so      | * | * |     | *   | *    | N   |  [@zhao2008]  |
-| cm11        |    | * |     | *   |       | N   |  [^47]  |
-| xm11        | * |    |     | *   |       | N   |  [^47]  |
-| m11         | * | * |     | *   | *    | N   |  [^47]  |
-| cm11-l      |    | * |     | *   |       | N   |  [^48]  |
-| xm11-l      | * |    |     | *   |       | N   |  [^48]  |
-| m11-l       | * | * |     | *   |       | N   |  [^48]  |
+| cm11        |    | * |     | *   |       | N   |  [@peverati2011_2]  |
+| xm11        | * |    |     | *   |       | N   |  [@peverati2011_2]  |
+| m11         | * | * |     | *   | *    | N   |  [@peverati2011_2]  |
+| cm11-l      |    | * |     | *   |       | N   |  [@peverati2012]  |
+| xm11-l      | * |    |     | *   |       | N   |  [@peverati2012]  |
+| m11-l       | * | * |     | *   |       | N   |  [@peverati2012]  |
 | csogga      |    | * | *  |      |       | N   |  [@zhao2008]  |
 | xsogga      | * |    | *  |      |       | N   |  [@zhao2008]  |
 | sogga       | * | * | *  |      |       | N   |  [@zhao2008]  |
-| csogga11    |    | * | *  |      |       | N   |  [^50]  |
-| xsogga11    | * |    | *  |      |       | N   |  [^50]  |
-| sogga11     | * | * | *  |      |       | N   |  [^50]  |
+| csogga11    |    | * | *  |      |       | N   |  [@peverati2011_3]  |
+| xsogga11    | * |    | *  |      |       | N   |  [@peverati2011_3]  |
+| sogga11     | * | * | *  |      |       | N   |  [@peverati2011_3]  |
 | csogga11-x  |    | * |     |      |       | N   |  [@peverati2001]  |
 | xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2001]  |
 | sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
@@ -519,7 +519,7 @@ to nuclear position.
 | becke97-1   | * | * | *  |      | *    | N   |  [@hamprecht1998]  |
 | becke97-2   | * | * | *  |      | *    | N   |  [@wilson2001]  |
 | becke97-3   | * | * | *  |      | *    | N   |  [@keal2005]  |
-| becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
+| becke97-d   | * | * | *  |      | *    | N   |  [@grimme2006]  |
 | becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
 | pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
 | mpw1k       | * | * | *  |      | *    | Y   |  [@lynch2000]  |
@@ -1976,21 +1976,9 @@ The options `SYM` and `ADAPT` works the same way as the analogous options for th
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
 [ADAPT](Hartree-Fock-Theory-for-Molecules.md#adapt-symmetry-adaptation-of-mos), respectively.
 
-## References 
+# References 
 
 ///Footnotes Go Here///
-[^33]: B. Hammer, L. B. Hansen and J. Nørskov , Phys. Rev. B 58, 7413    (1999)
-[^34]: Y. Zhang and W. Yang, Phys. Rev. Letters 80, 890 (1998)
-[^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
-[^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
-[^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
-[^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
-[^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
-[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
-[^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
-[^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
-[^48]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 3, 117 (2012)
-[^50]: R. Peverati, Y. Zhao and D. G. Truhlar, J. Phys. Chem. Lett. 2, 1911 (2011)
 [^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
 [^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
 [^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
