@@ -518,7 +518,7 @@ to nuclear position.
 | becke97     | * | * | *  |      | *    | N   |  [@becke1997]  |
 | becke97-1   | * | * | *  |      | *    | N   |  [@hamprecht1998]  |
 | becke97-2   | * | * | *  |      | *    | N   |  [@wilson2001]  |
-| becke97-3   | * | * | *  |      | *    | N   |  [keal2005]  |
+| becke97-3   | * | * | *  |      | *    | N   |  [@keal2005]  |
 | becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
 | becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
 | pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
