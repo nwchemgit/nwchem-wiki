@@ -426,9 +426,9 @@ to nuclear position.
 | vwn_1_rpa   |    | * |     |      |       | Y   |  [@vosko1980]   |
 | perdew81    |    | * |     |      |       | Y   |  [@perdew1981]   |
 | pw91lda     |    | * |     |      |       | Y   |  [@perdew1992]   |
-| xbecke86b   | * |    | *  |      |       | N   |  [^54]  |
+| xbecke86b   | * |    | *  |      |       | N   |  [@becke1986]  |
 | becke88     | * |    | *  |      |       | Y   |  [@becke1998]   |
-| xperdew86   | * |    | *  |      |       | N   |  [^53]  |
+| xperdew86   | * |    | *  |      |       | N   |  [@perdew1986_1]  |
 | xperdew91   | * |    | *  |      |       | Y   |  [@perdew1992]   |
 | xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
 | gill96      | * |    | *  |      |       | Y   |  [@gill1996]   |
@@ -444,81 +444,81 @@ to nuclear position.
 | perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a;@perdew1993]   |
 | cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
 | cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
-| op          |    | * | *  |      |       | N   |  [^31]  |
+| op          |    | * | *  |      |       | N   |  [@tsuneda1999]  |
 | hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
 | hcth120     | * | * | *  |      |       | N   |  [@boese2000]  |
 | hcth147     | * | * | *  |      |       | N   |  [@boese2000]  |
-| hcth147@tz2p| * | * | *  |      |       | N   |  [^61]  |
+| hcth147@tz2p| * | * | *  |      |       | N   |  [@boese2003]  |
 | hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
 | ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
-| htch407p    | * | * | *  |      |       | N   |  [^27]  |
-| bop         | * | * | *  |      |       | N   |  [^31]  |
-| pbeop       | * | * | *  |      |       | N   |  [^32]  |
-| xpkzb99     | * |    |     | *   |       | N   |  [^26]  |
-| cpkzb99     |    | * |     | *   |       | N   |  [^26]  |
-| xtpss03     | * |    |     | *   |       | N   |  [^28]  |
-| ctpss03     |    | * |     | *   |       | N   |  [^28]  |
+| htch407p    | * | * | *  |      |       | N   |  [@boese2003]  |
+| bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
+| pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
+| xpkzb99     | * |    |     | *   |       | N   |  [@perdew1999]  |
+| cpkzb99     |    | * |     | *   |       | N   |  [@perdew1999]  |
+| xtpss03     | * |    |     | *   |       | N   |  [@tao2003]  |
+| ctpss03     |    | * |     | *   |       | N   |  [@tao2003]  |
 | bc95        |    | * |     | *   |       | N   |  [^33]  |
 | cpw6b95     |    | * |     | *   |       | N   |  [^36]  |
 | cpwb6k      |    | * |     | *   |       | N   |  [^36]  |
-| xm05        | * |    |     | *   | *    | N   |  [^37],[^39]  |
-| cm05        |    | * |     | *   |       | N   |  [^37],[^39]  |
+| xm05        | * |    |     | *   | *    | N   |  [^37],[@zhao2005]  |
+| cm05        |    | * |     | *   |       | N   |  [^37],[@zhao2005]  |
 | m05-2x      | * | * |     | *   | *    | N   |  [^40]  |
 | xm05-2x     | * |    |     | *   | *    | N   |  [^40]  |
 | cm05-2x     |    | * |     | *   |       | N   |  [^40]  |
-| xctpssh     |    |    |     | *   | *    | N   |  [^29]  |
+| xctpssh     |    |    |     | *   | *    | N   |  [@staroverov2003]  |
 | bb1k        |    |    |     | *   | *    | N   |  [^34]  |
 | mpw1b95     |    |    |     | *   | *    | N   |  [^35]  |
 | mpwb1k      |    |    |     | *   | *    | N   |  [^35]  |
 | pw6b95      |    |    |     | *   | *    | N   |  [^36]  |
 | pwb6k       |    |    |     | *   | *    | N   |  [^36]  |
 | m05         |    |    |     | *   | *    | N   |  [^37]  |
-| vs98        |    |    |     | *   | *    | N   |  [^41]  |
-| xvs98       | * |    |     | *   |       | N   |  [^41]  |
-| cvs98       |    | * |     | *   |       | N   |  [^41]  |
-| m06-L       | * | * |     | *   |       | N   |  [^42]  |
-| xm06-L      | * |    |     | *   |       | N   |  [^42]  |
-| cm06-L      |    | * |     | *   |       | N   |  [^42]  |
+| vs98        |    |    |     | *   | *    | N   |  [@voorhis1998]  |
+| xvs98       | * |    |     | *   |       | N   |  [@voorhis1998]  |
+| cvs98       |    | * |     | *   |       | N   |  [@voorhis1998]  |
+| m06-L       | * | * |     | *   |       | N   |  [@zhao2006]  |
+| xm06-L      | * |    |     | *   |       | N   |  [@zhao2006]  |
+| cm06-L      |    | * |     | *   |       | N   |  [@zhao2006]  |
 | m06-hf      |    |    |     | *   | *    | N   |  [^43]  |
 | xm06-hf     | * |    |     | *   | *    | N   |  [^43]  |
 | cm06-hf     |    | * |     | *   |       | N   |  [^43]  |
 | m06         |    |    |     | *   | *    | N   |  [^44]  |
 | xm06        | * |    |     | *   | *    | N   |  [^44]  |
 | cm06        |    | * |     | *   |       | N   |  [^44]  |
-| m06-2x      |    |    |     | *   | *    | N   |  [^42]  |
-| xm06-2x     | * |    |     | *   | *    | N   |  [^42]  |
-| cm06-2x     |    | * |     | *   |       | N   |  [^42]  |
-| cm08-hx     |    | * |     | *   |       | N   |  [^46]  |
-| xm08-hx     | * |    |     | *   |       | N   |  [^46]  |
-| m08-hx      | * | * |     | *   | *    | N   |  [^46]  |
-| cm08-so     |    | * |     | *   |       | N   |  [^46]  |
-| xm08-so     | * |    |     | *   |       | N   |  [^46]  |
-| m08-so      | * | * |     | *   | *    | N   |  [^46]  |
+| m06-2x      |    |    |     | *   | *    | N   |  [@zhao2006]  |
+| xm06-2x     | * |    |     | *   | *    | N   |  [@zhao2006]  |
+| cm06-2x     |    | * |     | *   |       | N   |  [@zhao2006]  |
+| cm08-hx     |    | * |     | *   |       | N   |  [@zhao2008]  |
+| xm08-hx     | * |    |     | *   |       | N   |  [@zhao2008]  |
+| m08-hx      | * | * |     | *   | *    | N   |  [@zhao2008]  |
+| cm08-so     |    | * |     | *   |       | N   |  [@zhao2008]  |
+| xm08-so     | * |    |     | *   |       | N   |  [@zhao2008]  |
+| m08-so      | * | * |     | *   | *    | N   |  [@zhao2008]  |
 | cm11        |    | * |     | *   |       | N   |  [^47]  |
 | xm11        | * |    |     | *   |       | N   |  [^47]  |
 | m11         | * | * |     | *   | *    | N   |  [^47]  |
 | cm11-l      |    | * |     | *   |       | N   |  [^48]  |
 | xm11-l      | * |    |     | *   |       | N   |  [^48]  |
 | m11-l       | * | * |     | *   |       | N   |  [^48]  |
-| csogga      |    | * | *  |      |       | N   |  [^49]  |
-| xsogga      | * |    | *  |      |       | N   |  [^49]  |
-| sogga       | * | * | *  |      |       | N   |  [^49]  |
+| csogga      |    | * | *  |      |       | N   |  [@zhao2008]  |
+| xsogga      | * |    | *  |      |       | N   |  [@zhao2008]  |
+| sogga       | * | * | *  |      |       | N   |  [@zhao2008]  |
 | csogga11    |    | * | *  |      |       | N   |  [^50]  |
 | xsogga11    | * |    | *  |      |       | N   |  [^50]  |
 | sogga11     | * | * | *  |      |       | N   |  [^50]  |
-| csogga11-x  |    | * |     |      |       | N   |  [^51]  |
-| xsogga11-x  | * |    | *  |      |       | N   |  [^51]  |
-| sogga11-x   | * | * | *  |      | *    | N   |  [^51]  |
+| csogga11-x  |    | * |     |      |       | N   |  [@peverati2001]  |
+| xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2001]  |
+| sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
 | dldf        | * | * |     | *   | *    | N   |  [^52]  |
 | beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
 | b3lyp       | * | * | *  |      | *    | Y   |  [@becke3]  |
 | acm         | * | * | *  |      | *    | Y   |  [@becke3]  |
 | becke97     | * | * | *  |      | *    | N   |  [@becke1997]  |
-| becke97-1   | * | * | *  |      | *    | N   |  [^11]  |
+| becke97-1   | * | * | *  |      | *    | N   |  [@hamprecht1998]  |
 | becke97-2   | * | * | *  |      | *    | N   |  [@wilson2001]  |
-| becke97-3   | * | * | *  |      | *    | N   |  [^30]  |
+| becke97-3   | * | * | *  |      | *    | N   |  [keal2005]  |
 | becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
 | becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
 | pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
@@ -683,7 +683,7 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [^63], [^64], [^65], [^66], [^67], [^68], [^69],
+Please see references [^63], [@iikura2001], [^65], [^66], [^67], [^68], [^69],
 [^70], [^71], [^72], [^73], [^74], [^75] and [^76]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
@@ -1979,45 +1979,28 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 ## References 
 
 ///Footnotes Go Here///
-[^26]: J. P. Perdew, S. Kurth, A. Zupan and P. Blaha, Phys. Rev. Lett. 82, 2544 (1999)
-[^27]: A. D. Boese, A. Chandra, J. M. L. Martin and D. Marx, J. Chem. Phys. 119, 5965 (2003)
-[^28]: J. Tao, J. Perdew, V. Staroverov and G. Scuseria, Phys. Rev. Let. 91, 146401-1 (2003)
-[^29]: V. Staroverov, G. Scuseria, J. Tao and J. Perdew, J. Chem.Phys. 119, 12129 (2003)
-[^30]: T. W. Keal, D. J. Tozer, J. Chem. Phys 123, 121103 (2005)
-[^31]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 110, 10664 (1999)
-[^32]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 111, 5656 (1999)
 [^33]: B. Hammer, L. B. Hansen and J. Nørskov , Phys. Rev. B 58, 7413    (1999)
 [^34]: Y. Zhang and W. Yang, Phys. Rev. Letters 80, 890 (1998)
 [^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
 [^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
 [^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
-[^39]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Phys. 123, 161103 (2005)
 [^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
-[^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
-[^42]: Y. Zhao, D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006)
 [^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
 [^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
 [^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
-[^46]: Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008)
 [^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
 [^48]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 3, 117 (2012)
-[^49]: Y. Zhao and D. G. Truhlar, J. Chem. Phys. 128, 184109 (2008)
 [^50]: R. Peverati, Y. Zhao and D. G. Truhlar, J. Phys. Chem. Lett. 2, 1911 (2011)
-[^51]: R. Peverati and D.G. Truhlar, J. Chem. Phys. , 135, 191102 (2011)
 [^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
-[^53]: J. P. Perdew and W. Yue, Phys. Rev. B 33, 8800 (1986)
-[^54]: A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
 [^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
 [^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
 [^57]: Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
 [^58]: D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
 [^59]: Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
 [^60]: Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
-[^61]: A. D. Boese and J. M. L. Martin, J. Chem. Phys. 119, 3005 (2003).  
 [^62]: S. Kurth, J. Perdew, P. Blaha, Int. J. Quant. Chem 75, 889 (1999).
 [^63]: A. Savin, In Recent Advances in Density Functional Methods Part I;
     D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
-[^64]: H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540 (2001)
 [^65]: Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
 [^66]: T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
 [^67]: M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
