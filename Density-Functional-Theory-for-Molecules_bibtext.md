@@ -683,8 +683,8 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [@savin1995], [@iikura2001], [^65], [^66], [^67], [^68], [^69],
-[^70], [^71], [^72], [^73], [^74], [^75] and [^76]  (not a complete list) for further
+Please see references [@savin1995], [@iikura2001], [@tawada2004], [@yanai2004], [@peach2006], [vydrov2006], [@song2007],
+[@livshits2007], [@cohen2007], [@rohrdanz2008], [@govind2009], [@baer2010], [@autschbach2014] and [@verma2014]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
 
@@ -1979,18 +1979,6 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 # References 
 
 ///Footnotes Go Here///
-[^65]: Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
-[^66]: T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
-[^67]: M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
-[^68]: O.A. Vydrov, G.E. Scuseria J. Chem. Phys. 125 234109 (2006)
-[^69]: J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126, 154105 (2007)
-[^70]: E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
-[^71]: A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126, 191109 (2007)
-[^72]: M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
-[^73]: N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113, 6041 (2009)
-[^74]: R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85 (2010)
-[^75]: J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
-[^76]: P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
 [^77]: A. D. Rabuck and G. E. Scuseria, J. Chem. Phys 110,695 (1999)
 [^78]: M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103 (2009);
        M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9, 69 (2009)
