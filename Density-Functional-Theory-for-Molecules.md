@@ -181,7 +181,7 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT)[^0] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
+Use of the auxiliary density functional theory method (ADFT)[@koester2004,calaminici2017] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
 
 The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an [xc basis](#specification-of-basis-sets-for-the-dft-module) without the `adft` keyword. It is important to note that, different to straight exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
 
@@ -231,8 +231,8 @@ default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
 this approximation, the exchange functional is the Slater &rho;<sup>1/3</sup>
-functional[^1], and the correlation functional is the
-Vosko-Wilk-Nusair (VWN) functional (functional V)[^2].
+functional[@slater1972;@slater1974], and the correlation functional is the
+Vosko-Wilk-Nusair (VWN) functional (functional V)[@vosko1980].
 The parameters used in
 this formula are obtained by fitting to the Ceperley and Alder Quantum
 Monte-Carlo solution of the homogeneous electron gas.
@@ -373,8 +373,8 @@ functionals, the user has the alternative of specifying combined
 exchange and correlation functionals.
 
 The available hybrid functionals (where a Hartree-Fock Exchange
-component is present) consist of the Becke "half and half"[^13], the adiabatic connection method[^14],
-Becke 1997 ("Becke V" paper[^15]).
+component is present) consist of the Becke "half and half"[@becke1993], the adiabatic connection method[@becke3],
+Becke 1997 ("Becke V" paper[@becke1997]).
 
 The keyword `beckehandh` specifies that the exchange-correlation energy
 will be computed
@@ -417,118 +417,118 @@ to nuclear position.
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
-| slater      | *  |    |     |      |       | Y   |  [^1]   |
-| vwn_1       |    | * |     |      |       | Y   |  [^2]   |
-| vwn_2       |    | * |     |      |       | Y   |  [^2]   |
-| vwn_3       |    | * |     |      |       | Y   |  [^2]   |
-| vwn_4       |    | * |     |      |       | Y   |  [^2]   |
-| vwn_5       |    | * |     |      |       | Y   |  [^2]   |
-| vwn_1_rpa   |    | * |     |      |       | Y   |  [^2]   |
-| perdew81    |    | * |     |      |       | Y   |  [^3]   |
-| pw91lda     |    | * |     |      |       | Y   |  [^4]   |
-| xbecke86b   | * |    | *  |      |       | N   |  [^54]  |
-| becke88     | * |    | *  |      |       | Y   |  [^5]   |
-| xperdew86   | * |    | *  |      |       | N   |  [^53]  |
-| xperdew91   | * |    | *  |      |       | Y   |  [^6]   |
-| xpbe96      | * |    | *  |      |       | Y   |  [^7]   |
-| gill96      | * |    | *  |      |       | Y   |  [^8]   |
-| optx        | * |    | *  |      |       | N   |  [^20]  |
-| mpw91       | * |    | *  |      |       | Y   |  [^23]  |
-| xft97       | * |    | *  |      |       | N   |  [^24]  |
-| rpbe        | * |    | *  |      |       | Y   |  [^33]  |
-| revpbe      | * |    | *  |      |       | Y   |  [^34]  |
-| xpw6b95     | * |    | *  |      |       | N   |  [^36]  |
-| xpwb6k      | * |    | *  |      |       | N   |  [^36]  |
-| perdew86    |    | * | *  |      |       | Y   |  [^9]   |
-| lyp         |    | * | *  |      |       | Y   |  [^10]  |
-| perdew91    |    | * | *  |      |       | Y   |  [^6]   |
-| cpbe96      |    | * | *  |      |       | Y   |  [^7]   |
-| cft97       |    | * | *  |      |       | N   |  [^24]  |
-| op          |    | * | *  |      |       | N   |  [^31]  |
-| hcth        | * | * | *  |      |       | N   |  [^11]  |
-| hcth120     | * | * | *  |      |       | N   |  [^12]  |
-| hcth147     | * | * | *  |      |       | N   |  [^12]  |
-| hcth147@tz2p| * | * | *  |      |       | N   |  [^61]  |
-| hcth407     | * | * | *  |      |       | N   |  [^19]  |
-| becke97gga1 | * | * | *  |      |       | N   |  [^18]  |
-| hcthp14     | * | * | *  |      |       | N   |  [^21]  |
-| ft97        | * | * | *  |      |       | N   |  [^24]  |
-| htch407p    | * | * | *  |      |       | N   |  [^27]  |
-| bop         | * | * | *  |      |       | N   |  [^31]  |
-| pbeop       | * | * | *  |      |       | N   |  [^32]  |
-| xpkzb99     | * |    |     | *   |       | N   |  [^26]  |
-| cpkzb99     |    | * |     | *   |       | N   |  [^26]  |
-| xtpss03     | * |    |     | *   |       | N   |  [^28]  |
-| ctpss03     |    | * |     | *   |       | N   |  [^28]  |
-| bc95        |    | * |     | *   |       | N   |  [^33]  |
-| cpw6b95     |    | * |     | *   |       | N   |  [^36]  |
-| cpwb6k      |    | * |     | *   |       | N   |  [^36]  |
-| xm05        | * |    |     | *   | *    | N   |  [^37],[^39]  |
-| cm05        |    | * |     | *   |       | N   |  [^37],[^39]  |
-| m05-2x      | * | * |     | *   | *    | N   |  [^40]  |
-| xm05-2x     | * |    |     | *   | *    | N   |  [^40]  |
-| cm05-2x     |    | * |     | *   |       | N   |  [^40]  |
-| xctpssh     |    |    |     | *   | *    | N   |  [^29]  |
-| bb1k        |    |    |     | *   | *    | N   |  [^34]  |
-| mpw1b95     |    |    |     | *   | *    | N   |  [^35]  |
-| mpwb1k      |    |    |     | *   | *    | N   |  [^35]  |
-| pw6b95      |    |    |     | *   | *    | N   |  [^36]  |
-| pwb6k       |    |    |     | *   | *    | N   |  [^36]  |
-| m05         |    |    |     | *   | *    | N   |  [^37]  |
-| vs98        |    |    |     | *   | *    | N   |  [^41]  |
-| xvs98       | * |    |     | *   |       | N   |  [^41]  |
-| cvs98       |    | * |     | *   |       | N   |  [^41]  |
-| m06-L       | * | * |     | *   |       | N   |  [^42]  |
-| xm06-L      | * |    |     | *   |       | N   |  [^42]  |
-| cm06-L      |    | * |     | *   |       | N   |  [^42]  |
-| m06-hf      |    |    |     | *   | *    | N   |  [^43]  |
-| xm06-hf     | * |    |     | *   | *    | N   |  [^43]  |
-| cm06-hf     |    | * |     | *   |       | N   |  [^43]  |
-| m06         |    |    |     | *   | *    | N   |  [^44]  |
-| xm06        | * |    |     | *   | *    | N   |  [^44]  |
-| cm06        |    | * |     | *   |       | N   |  [^44]  |
-| m06-2x      |    |    |     | *   | *    | N   |  [^42]  |
-| xm06-2x     | * |    |     | *   | *    | N   |  [^42]  |
-| cm06-2x     |    | * |     | *   |       | N   |  [^42]  |
-| cm08-hx     |    | * |     | *   |       | N   |  [^46]  |
-| xm08-hx     | * |    |     | *   |       | N   |  [^46]  |
-| m08-hx      | * | * |     | *   | *    | N   |  [^46]  |
-| cm08-so     |    | * |     | *   |       | N   |  [^46]  |
-| xm08-so     | * |    |     | *   |       | N   |  [^46]  |
-| m08-so      | * | * |     | *   | *    | N   |  [^46]  |
-| cm11        |    | * |     | *   |       | N   |  [^47]  |
-| xm11        | * |    |     | *   |       | N   |  [^47]  |
-| m11         | * | * |     | *   | *    | N   |  [^47]  |
-| cm11-l      |    | * |     | *   |       | N   |  [^48]  |
-| xm11-l      | * |    |     | *   |       | N   |  [^48]  |
-| m11-l       | * | * |     | *   |       | N   |  [^48]  |
-| csogga      |    | * | *  |      |       | N   |  [^49]  |
-| xsogga      | * |    | *  |      |       | N   |  [^49]  |
-| sogga       | * | * | *  |      |       | N   |  [^49]  |
-| csogga11    |    | * | *  |      |       | N   |  [^50]  |
-| xsogga11    | * |    | *  |      |       | N   |  [^50]  |
-| sogga11     | * | * | *  |      |       | N   |  [^50]  |
-| csogga11-x  |    | * |     |      |       | N   |  [^51]  |
-| xsogga11-x  | * |    | *  |      |       | N   |  [^51]  |
-| sogga11-x   | * | * | *  |      | *    | N   |  [^51]  |
-| dldf        | * | * |     | *   | *    | N   |  [^52]  |
-| beckehandh  | * | * |     |      | *    | Y   |  [^13]  |
-| b3lyp       | * | * | *  |      | *    | Y   |  [^14]  |
-| acm         | * | * | *  |      | *    | Y   |  [^14]  |
-| becke97     | * | * | *  |      | *    | N   |  [^15]  |
-| becke97-1   | * | * | *  |      | *    | N   |  [^11]  |
-| becke97-2   | * | * | *  |      | *    | N   |  [^22]  |
-| becke97-3   | * | * | *  |      | *    | N   |  [^30]  |
-| becke97-d   | * | * | *  |      | *    | N   |  [^45]  |
-| becke98     | * | * | *  |      | *    | N   |  [^16]  |
-| pbe0        | * | * | *  |      | *    | Y   |  [^17]  |
-| mpw1k       | * | * | *  |      | *    | Y   |  [^25]  |
-| xmvs15      | * |    |     | *   |       | N   |  [^55]  |
-| hle16       | * | * | *  |      | *    | Y   |  [^56]  |
-| scan        | * | * | *  | *   |       | N   |  [^57]  |
-| scanl       | * | * | *  | *   |       | N   |  [^58]  |
-| revm06-L    | * | * | *  | *   |       | N   |  [^59]  |
-| revm06      | * | * | *  | *   | *    | N   |  [^60]  |  
+| slater      | *  |    |     |      |       | Y   |  [@slater1972;@slater1974]   |
+| vwn_1       |    | * |     |      |       | Y   |  [@vosko1980]   |
+| vwn_2       |    | * |     |      |       | Y   |  [@vosko1980]   |
+| vwn_3       |    | * |     |      |       | Y   |  [@vosko1980]   |
+| vwn_4       |    | * |     |      |       | Y   |  [@vosko1980]   |
+| vwn_5       |    | * |     |      |       | Y   |  [@vosko1980]   |
+| vwn_1_rpa   |    | * |     |      |       | Y   |  [@vosko1980]   |
+| perdew81    |    | * |     |      |       | Y   |  [@perdew1981]   |
+| pw91lda     |    | * |     |      |       | Y   |  [@perdew1992]   |
+| xbecke86b   | * |    | *  |      |       | N   |  [@becke1986]  |
+| becke88     | * |    | *  |      |       | Y   |  [@becke1988]   |
+| xperdew86   | * |    | *  |      |       | N   |  [@perdew1986]  |
+| xperdew91   | * |    | *  |      |       | Y   |  [@perdew1992]   |
+| xpbe96      | * |    | *  |      |       | Y   |  [@perdew1996,@perdew1997]   |
+| gill96      | * |    | *  |      |       | Y   |  [@gill1996]   |
+| optx        | * |    | *  |      |       | N   |  [@handy2001]  |
+| mpw91       | * |    | *  |      |       | Y   |  [@adamo1998,@zhao2005]  |
+| xft97       | * |    | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| rpbe        | * |    | *  |      |       | Y   |  [@hammer1999]  |
+| revpbe      | * |    | *  |      |       | Y   |  [@zhang1998]  |
+| xpw6b95     | * |    | *  |      |       | N   |  [@zhao2004]  |
+| xpwb6k      | * |    | *  |      |       | N   |  [@zhao2004]  |
+| perdew86    |    | * | *  |      |       | Y   |  [@perdew1986]   |
+| lyp         |    | * | *  |      |       | Y   |  [@lee1988]  |
+| perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a;@perdew1993]   |
+| cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
+| cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| op          |    | * | *  |      |       | N   |  [@tsuneda1999]  |
+| hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
+| hcth120     | * | * | *  |      |       | N   |  [@boese2000]  |
+| hcth147     | * | * | *  |      |       | N   |  [@boese2000]  |
+| hcth147@tz2p| * | * | *  |      |       | N   |  [@boese2003]  |
+| hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
+| becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
+| hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
+| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| htch407p    | * | * | *  |      |       | N   |  [@boese2003_2]  |
+| bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
+| pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
+| xpkzb99     | * |    |     | *   |       | N   |  [@perdew1999]  |
+| cpkzb99     |    | * |     | *   |       | N   |  [@perdew1999]  |
+| xtpss03     | * |    |     | *   |       | N   |  [@tao2003]  |
+| ctpss03     |    | * |     | *   |       | N   |  [@tao2003]  |
+| bc95        |    | * |     | *   |       | N   |  [@hammer1999]  |
+| cpw6b95     |    | * |     | *   |       | N   |  [@zhao2004]  |
+| cpwb6k      |    | * |     | *   |       | N   |  [@zhao2004]  |
+| xm05        | * |    |     | *   | *    | N   |  [@zhao2004_2],[@zhao2005_2]  |
+| cm05        |    | * |     | *   |       | N   |  [@zhao2004_2],[@zhao2005_2]  |
+| m05-2x      | * | * |     | *   | *    | N   |  [@zhao2006_2]  |
+| xm05-2x     | * |    |     | *   | *    | N   |  [@zhao2006_2]  |
+| cm05-2x     |    | * |     | *   |       | N   |  [@zhao2006_2]  |
+| xctpssh     |    |    |     | *   | *    | N   |  [@staroverov2003]  |
+| bb1k        |    |    |     | *   | *    | N   |  [@zhang1998]  |
+| mpw1b95     |    |    |     | *   | *    | N   |  [@becke1996]  |
+| mpwb1k      |    |    |     | *   | *    | N   |  [@becke1996]  |
+| pw6b95      |    |    |     | *   | *    | N   |  [@zhao2004]  |
+| pwb6k       |    |    |     | *   | *    | N   |  [@zhao2004]  |
+| m05         |    |    |     | *   | *    | N   |  [@zhao2004_2]  |
+| vs98        |    |    |     | *   | *    | N   |  [@voorhis1998]  |
+| xvs98       | * |    |     | *   |       | N   |  [@voorhis1998]  |
+| cvs98       |    | * |     | *   |       | N   |  [@voorhis1998]  |
+| m06-L       | * | * |     | *   |       | N   |  [@zhao2006]  |
+| xm06-L      | * |    |     | *   |       | N   |  [@zhao2006]  |
+| cm06-L      |    | * |     | *   |       | N   |  [@zhao2006]  |
+| m06-hf      |    |    |     | *   | *    | N   |  [@zhao2006_3]  |
+| xm06-hf     | * |    |     | *   | *    | N   |  [@zhao2006_3]  |
+| cm06-hf     |    | * |     | *   |       | N   |  [@zhao2006_3]  |
+| m06         |    |    |     | *   | *    | N   |  [@zhao2008_2]  |
+| xm06        | * |    |     | *   | *    | N   |  [@zhao2008_2]  |
+| cm06        |    | * |     | *   |       | N   |  [@zhao2008_2]  |
+| m06-2x      |    |    |     | *   | *    | N   |  [@zhao2006]  |
+| xm06-2x     | * |    |     | *   | *    | N   |  [@zhao2006]  |
+| cm06-2x     |    | * |     | *   |       | N   |  [@zhao2006]  |
+| cm08-hx     |    | * |     | *   |       | N   |  [@zhao2008]  |
+| xm08-hx     | * |    |     | *   |       | N   |  [@zhao2008]  |
+| m08-hx      | * | * |     | *   | *    | N   |  [@zhao2008]  |
+| cm08-so     |    | * |     | *   |       | N   |  [@zhao2008]  |
+| xm08-so     | * |    |     | *   |       | N   |  [@zhao2008]  |
+| m08-so      | * | * |     | *   | *    | N   |  [@zhao2008]  |
+| cm11        |    | * |     | *   |       | N   |  [@peverati2011_2]  |
+| xm11        | * |    |     | *   |       | N   |  [@peverati2011_2]  |
+| m11         | * | * |     | *   | *    | N   |  [@peverati2011_2]  |
+| cm11-l      |    | * |     | *   |       | N   |  [@peverati2012]  |
+| xm11-l      | * |    |     | *   |       | N   |  [@peverati2012]  |
+| m11-l       | * | * |     | *   |       | N   |  [@peverati2012]  |
+| csogga      |    | * | *  |      |       | N   |  [@zhao2008]  |
+| xsogga      | * |    | *  |      |       | N   |  [@zhao2008]  |
+| sogga       | * | * | *  |      |       | N   |  [@zhao2008]  |
+| csogga11    |    | * | *  |      |       | N   |  [@peverati2011_3]  |
+| xsogga11    | * |    | *  |      |       | N   |  [@peverati2011_3]  |
+| sogga11     | * | * | *  |      |       | N   |  [@peverati2011_3]  |
+| csogga11-x  |    | * |     |      |       | N   |  [@peverati2001]  |
+| xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2001]  |
+| sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
+| dldf        | * | * |     | *   | *    | N   |  [@pernal2009]  |
+| beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
+| b3lyp       | * | * | *  |      | *    | Y   |  [@becke3]  |
+| acm         | * | * | *  |      | *    | Y   |  [@becke3]  |
+| becke97     | * | * | *  |      | *    | N   |  [@becke1997]  |
+| becke97-1   | * | * | *  |      | *    | N   |  [@hamprecht1998]  |
+| becke97-2   | * | * | *  |      | *    | N   |  [@wilson2001]  |
+| becke97-3   | * | * | *  |      | *    | N   |  [@keal2005]  |
+| becke97-d   | * | * | *  |      | *    | N   |  [@grimme2006]  |
+| becke98     | * | * | *  |      | *    | N   |  [@becke1998]  |
+| pbe0        | * | * | *  |      | *    | Y   |  [@adamo1999]  |
+| mpw1k       | * | * | *  |      | *    | Y   |  [@lynch2000]  |
+| xmvs15      | * |    |     | *   |       | N   |  [@sun2015]  |
+| hle16       | * | * | *  |      | *    | Y   |  [@verma2017]  |
+| scan        | * | * | *  | *   |       | N   |  [@yang20176]  |
+| scanl       | * | * | *  | *   |       | N   |  [@mejiarodriguez2017]  |
+| revm06-L    | * | * | *  | *   |       | N   |  [@wang2017]  |
+| revm06      | * | * | *  | *   | *    | N   |  [@wang2018]  |  
 | wb97x       | * | * | *  |     | *    | N   |  [^96]  |
 | wb97x-d3    | * | * | *  |     | *    | N   |  [^97]  |
 | rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
@@ -556,7 +556,7 @@ file](#sample-input-file). In this instance, the energy is
 calculated self-consistently and geometry is optimized using the
 analytical gradients.
 
-(For more information on metaGGAs, see Kurth et al 1999 [^62]
+(For more information on metaGGAs, see Kurth et al 1999 [@kurth1999]
  for a brief description of meta-GGAs,
 and citations 14-27 therein for thorough background)
 
@@ -683,8 +683,8 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [^63], [^64], [^65], [^66], [^67], [^68], [^69],
-[^70], [^71], [^72], [^73], [^74], [^75] and [^76]  (not a complete list) for further
+Please see references [@savin1995], [@iikura2001], [@tawada2004], [@yanai2004], [@peach2006], [vydrov2006], [@song2007],
+[@livshits2007], [@cohen2007], [@rohrdanz2008], [@govind2009], [@baer2010], [@autschbach2014] and [@verma2014]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
 
@@ -744,16 +744,15 @@ task dft energy
 
 ### SSB-D functional
 
-The SSB-D[^78] functional is a small correction to the non-empirical
+The SSB-D[@swart2009,@swart2009_2] functional is a small correction to the non-empirical
 PBE functional and includes a portion of Grimme's dispersion correction
 (s6=0.847455). It is designed to reproduce the good results of OPBE for
 spin-state splittings and reaction barriers, and the good results of PBE
-for weak interactions. The SSB-D functional works excellent for these
+for weak interactions. The SSB-D functional works well for these
 systems, including for difficult systems for DFT (dimerization of
 anthracene, branching of octane, water-hexamer isomers, C12H12 isomers,
 stacked adenine dimers), and for NMR chemical shieldings.
 
-1. 
 It can be specified as
 
 ```
@@ -776,7 +775,7 @@ dft
 end
 ```
 
-For details of the theory, please see reference[^80].
+For details of the theory, please see reference[@grimme2006_2].
 
 ### LB94 and CS00: Asymptotic correction
 
@@ -1019,7 +1018,7 @@ deemed undesirable with the obvious keywords,
 
 For systems where the initial guess is very poor, the user can try using
 fractional occupation of the orbital levels during the initial cycles of
-the SCF convergence[^77].
+the SCF convergence[@rabuck1999].
 The input has the following form
 
 ```
@@ -1054,7 +1053,7 @@ task dft
   
 ## CDFT: Constrained DFT
 
-This option enables the constrained DFT formalism by Wu and Van Voorhis[^79]: 
+This option enables the constrained DFT formalism by Wu and Van Voorhis[@wu2005]: 
 
 ```
  CDFT <integer fatom1 latom1> [<integer fatom2 latom2>] (charge||spin <real constaint_value>) \ 
@@ -1125,7 +1124,7 @@ the HOMO (eg metallic clusters)
 
 This option allows fractional occupation of the molecular orbitals. A
 Gaussian broadening function of exponent smear is used as described in
-the paper by Warren and Dunlap[^81].
+the paper by Warren and Dunlap[@warren1996].
 The user must be aware that an additional energy term is added
 to the total energy in order to have energies and gradients consistent.
 
@@ -1459,8 +1458,8 @@ grid lebedev 80 11 H 70 8  O 90 11
 GRID [(becke||erf1||erf2||ssf) default erf1]
 ```
 
-- becke : see paper[^81]
-- ssf : see paper[^82]
+- becke : see paper[@becke1988_2]
+- ssf : see paper[@stratmann1996]
 - erf1 : modified ssf
 - erf2 : modified ssf
 
@@ -1475,10 +1474,10 @@ $$\begin{array}{lcl}  w_A(r) & = & \prod_{B\neq A}\frac{1}{2} \left[1 \ - \ erf(
 ```
 
 - euler : Euler-McLaurin quadrature with the transformation devised by
-    Murray et al[^84].
+    Murray et al[@murray1993].
 - mura : Modification of the Murray-Handy-Laming scheme (we are not using the same
-    scaling factors proposed in the paper by Mura and Knowles[^85]).
-- treutler : Gauss-Chebyshev using the transformation suggested by Treutler[^86].
+    scaling factors proposed in the paper by Mura and Knowles[@mura1996]).
+- treutler : Gauss-Chebyshev using the transformation suggested by Treutler[@treutler1995].
 
 ### Disk usage for Grid
 
@@ -1622,9 +1621,9 @@ sic [perturbative || oep || oep-loc ]
 <default perturbative>
 ```
 
-The Perdew and Zunger[^3] method to remove the self-interaction contained in many
+The Perdew and Zunger[@perdew1981] method to remove the self-interaction contained in many
 exchange-correlation functionals has been implemented with the Optimized
-Effective Potential method[^87] within the Krieger-Li-Iafrate approximation[^88].
+Effective Potential method[@sharp1953,@talman1976] within the Krieger-Li-Iafrate approximation[@krieger1992,@krieger1992_2,@li1993].
 Three variants of these methods are included in NWChem:
 
 - `sic perturbative` This is the default option for the sic directive.
@@ -1644,7 +1643,7 @@ Three variants of these methods are included in NWChem:
 With `oep` and `oep-loc` options a `xfine grid` (see section about [numerical integration](#grid-numerical-integration-of-the-xc-potential) ) must be
 used in order to avoid numerical noise, furthermore the hybrid
 functionals can not be used with these options. More details of the
-implementation of this method can be found in the paper by Garza[^89]. The components of the
+implementation of this method can be found in the paper by Garza[@garza2000]. The components of the
 sic energy can be printed out using:
 
 ```
@@ -1746,11 +1745,11 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [^90] and [^91] (Use `vdw 0`)  
+1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [@wu2002] and [@zimmerli2004] (Use `vdw 0`)  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[^92]. (Use `vdw 1)`  
+2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[@grimme2004]. (Use `vdw 1)`  
 
-3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[^93]. (Use `vdw 2`)  
+3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[@grimme2006_2]. (Use `vdw 2`)  
 
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
@@ -1775,7 +1774,7 @@ $$ E_{disp} = \sum_{i,j} \sum_{n=6,8} s_n \ \frac{C^{ij}_n}{r_{ij}} \biggl\lbrac
 
 This new dispersion correction covers elements through Z=94.
   *C<sup>ij</sup><sub>n</sub> (n=6,8)* are coordination and geometry dependent. Details
-about the functional form can be found in reference [^94].
+about the functional form can be found in reference [@grimme2010].
 
 To use the Grimme DFT-D3 dispersion correction, use the option
 
@@ -1828,7 +1827,7 @@ task dft energy
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 
-See details (including list of a1 and a2 parameters) in  paper[^95]
+See details (including list of a1 and a2 parameters) in  paper[delaroza2013]
 and the website <http://schooner.chem.dal.ca/wiki/XDM>
 
 ```
@@ -1899,7 +1898,7 @@ are:
 DFT Print Control Specifications
 
 
-# Spin-Orbit Density Functional Theory (SODFT)
+## Spin-Orbit Density Functional Theory (SODFT)
 
 The spin-orbit DFT module (SODFT) in the NWChem code allows for the variational
 treatment of the one-electron spin-orbit operator within the DFT framework. Calculations
@@ -1970,7 +1969,7 @@ end
 task sodft
 ```
 
-# SYM and ADAPT
+## SYM and ADAPT
 
 The options `SYM` and `ADAPT` works the same way as the analogous options for the SCF code.
 Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molecules.md#sym-use-of-symmetry) and
@@ -1979,115 +1978,4 @@ Therefore please use the following links for [SYM](Hartree-Fock-Theory-for-Molec
 ## References 
 
 ///Footnotes Go Here///
-[^0]: A. M. Köster, J. U. Reveles, and J. M. del Campo, J. Chem. Phys. 121, 3417-3424 (2004).
-[DOI:10.1063/1.1771638](https://dx.doi.org/10.1063/1.1771638);
-      P. Calaminici et al. Auxiliary Density Functional Theory: From Molecules to Nanostructures. In: J. Leszczynski, A. Kaczmarek-Kedziera, T. Puzyn, M.G. Papadopoulos, H. Reis, M. Shukla (eds) Handbook of Computational Chemistry, (Springer, 2017) [DOI:10.1007/978-3-319-27282-5_16](https://dx.doi.org/10.1007/978-3-319-27282-5_16);
-[^1]:  J. C. Slater and K. H. Johnson, Phys. Rev. B 5, 844 (1972)[DOI:10.1103/PhysRevB.5.844](https://dx.doi.org/10.1103/PhysRevB.5.844);
-       J .C. Slater, Quantum Theory of Molecules and Solids, Vol. 4: The Self-Consistent Field for Molecules and Solids (McGraw-Hill, New York, 1974)
-[^2]:  S. J. Vosko, L. Wilk and M. Nusair, Can. J. Phys. 58, 1200 (1980) [DOI:10.1139/p80-159](https://dx.doi.org/10.1139/p80-159)
-[^3]:  J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981) [DOI:10.1103/PhysRevB.23.5048](https://dx.doi.org/10.1103/PhysRevB.23.5048)
-[^4]:  J. P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992) [DOI:10.1103/PhysRevB.45.13244](https://dx.doi.org/10.1103/PhysRevB.45.13244)
-[^5]:  A. D. Becke, Phys. Rev. A 88, 3098 (1988) [DOI:10.1103/PhysRevA.38.3098](https://dx.doi.org/10.1103/PhysRevA.38.3098)
-[^6]:  J. P. Perdew, J. A. Chevary, S. H. Vosko, K. A. Jackson, M. R. Pederson, D. J. Singh and C. Fiolhais, Phys. Rev. B 46, 6671 (1992) [DOI:10.1103/PhysRevB.46.6671](https://dx.doi.org/10.1103/PhysRevB.46.6671).
-*ibid* , Phys. Rev. B 86, 4978 (1993) [DOI:10.1103/PhysRevB.48.4978.2](https://dx.doi.org/10.1103/PhysRevB.48.4978.2)
-[^7]:  J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996) [DOI:10.1103/PhysRevLett.78.1396](https://dx.doi.org/10.1103/PhysRevLett.78.1396) 
-       *ibid* 78 , 1396 (1997) [DOI:10.1103/PhysRevLett.77.3865](https://dx.doi.org/10.1103/PhysRevLett.77.3865)
-[^8]:  P. W. Gill , Mol. Phys. 89, 433 (1996) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
-[^9]:  J. P. Perdew, Phys. Rev. B 33, 8822 (1986) [DOI:10.1103/PhysRevB.33.8822](https://dx.doi.org/10.1103/PhysRevB.33.8822)
-[^10]: C. Lee, W. Yang and R. G. Parr, Phys. Rev. B 37, 785 (1988) [DOI:10.1103/PhysRevB.37.785](https://dx.doi.org/10.1103/PhysRevB.37.785)
-[^11]: F. A. Hamprecht, A. J. Cohen, D. J.Tozer and N. C. Handy, J. Chem. Phys. 109, 6264 (1998) [DOI:10.1063/1.477267](https://dx.doi.org/10.1063/1.477267)
-[^12]: A. D. Boese, N.L. Doltsinis, N.C. Handy and M. Sprik. J. Chem. Phys. 112, 1670 (2000)
-[^13]: A. D. Becke, J. Chem. Phys. 98, 1372 (1992)
-[^14]: A. D. Becke, J. Chem. Phys. 98, 5648 (1993)
-[^15]: A. D. Becke, J. Chem. Phys. 107, 8554 (1997)
-[^16]: H. L. Schmider and A. D. Becke, J. Chem. Phys. 108, 9624 (1998)
-[^17]: C. Adamo and V. Barone, J. Chem. Phys. 110, 6158 (1999)
-[^18]: A. J. Cohen and N. C. Handy, Chem. Phys. Lett. 316, 160 (2000)
-[^19]: A. D. Boese, N. C. Handy, J. Chem. Phys. 114, 5497 (2001)
-[^20]: N. C. Handy, A. J. Cohen, Mol. Phys. 99, 403 (2001)
-[^21]: G. Menconi, P. J. Wilson, D.J. Tozer, J. Chem. Phys 114, 3958 (2001)
-[^22]: P. J. Wilson, T. J. Bradley, D. J. Tozer, J. Chem. Phys 115, 9233 (2001)
-[^23]: C. Adamo and V. Barone, J. Chem. Phys. 108, 664 (1998); Y. Zhao and  D. G. Truhlar, J. Phys. Chem. A 109, 5656 (2005)
-[^24]: M. Filatov and W. Thiel, Mol .Phys. 91, 847 (1997); M. Filatov and W. Thiel, Int.J.Quantum Chem. 62, 603 (1997)
-[^25]: B. J. Lynch, P. L. Fast, M. Harris and D. G. Truhlar, J. Phys. Chem. A 104, 4811 (2000)
-[^26]: J. P. Perdew, S. Kurth, A. Zupan and P. Blaha, Phys. Rev. Lett. 82, 2544 (1999)
-[^27]: A. D. Boese, A. Chandra, J. M. L. Martin and D. Marx, J. Chem. Phys. 119, 5965 (2003)
-[^28]: J. Tao, J. Perdew, V. Staroverov and G. Scuseria, Phys. Rev. Let. 91, 146401-1 (2003)
-[^29]: V. Staroverov, G. Scuseria, J. Tao and J. Perdew, J. Chem.Phys. 119, 12129 (2003)
-[^30]: T. W. Keal, D. J. Tozer, J. Chem. Phys 123, 121103 (2005)
-[^31]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 110, 10664 (1999)
-[^32]: T. Tsuneda, T. Suzumura and K. Hirao, J. Chem Phys. 111, 5656 (1999)
-[^33]: B. Hammer, L. B. Hansen and J. Nørskov , Phys. Rev. B 58, 7413    (1999)
-[^34]: Y. Zhang and W. Yang, Phys. Rev. Letters 80, 890 (1998)
-[^35]: A. D. Becke, J. Chem. Phys. 104, 1040 (1996)
-[^36]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004)
-[^37]: Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 108, 6908 (2004)
-[^39]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Phys. 123, 161103 (2005)
-[^40]: Y. Zhao, N. E. Schultz and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006)
-[^41]: T. Van Voorhis, G. E. Scuseria, J. Chem. Phys. 109, 400 (1998)
-[^42]: Y. Zhao, D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006)
-[^43]: Y. Zhao, D. G. Truhlar, J. Phys. Chem. A. 110, 13126 (2006)
-[^44]: Y. Zhao, D. G. Truhlar, Theor. Chem. Acc. 20, 215–241 (2006)
-[^45]: S. Grimme, J. Comp. Chem. 27, 1787 (2006).
-[^46]: Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008)
-[^47]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 2, 2810 (2011)
-[^48]: R. Peverati and D. G. Truhlar, J. Phys. Chem. Letters 3, 117 (2012)
-[^49]: Y. Zhao and D. G. Truhlar, J. Chem. Phys. 128, 184109 (2008)
-[^50]: R. Peverati, Y. Zhao and D. G. Truhlar, J. Phys. Chem. Lett. 2, 1911 (2011)
-[^51]: R. Peverati and D.G. Truhlar, J. Chem. Phys. , 135, 191102 (2011)
-[^52]: K. Pernal, R. Podeszwa, K. Patkowski and K. Szalewicz, Phys. Rev.  Lett. 103, 263201 (2009)
-[^53]: J. P. Perdew and W. Yue, Phys. Rev. B 33, 8800 (1986)
-[^54]: A. D. Becke, J. Chem. Phys. 85, 7184 (1986)
-[^55]: J. Sun, J. P. Perdew, and A. Ruzsinszky, PNAS 112, 685 (2015).
-[^56]: P. Verma and D. G. Truhlar, J. of Phys. Chem. Letters  8, 380 (2017).
-[^57]: Z. Yang, H. Peng, J. Sun, and J. P. Perdew, Phys. Rev. B 93, 205205 (2016).
-[^58]: D. Mejia-Rodriguez and S. B. Trickey, Phys. Rev. A 96, 052512 (2017).
-[^59]: Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, X. He, PNAS  114, 8487 (2017).
-[^60]: Y. Wang, P. Verma, X. Jin, D. G. Truhlar, and X. He, PNAS 115, 10257 (2018).
-[^61]: A. D. Boese and J. M. L. Martin, J. Chem. Phys. 119, 3005 (2003).  
-[^62]: S. Kurth, J. Perdew, P. Blaha, Int. J. Quant. Chem 75, 889 (1999).
-[^63]: A. Savin, In Recent Advances in Density Functional Methods Part I;
-    D.P. Chong, Ed.; World Scientific: Singapore, 1995; Vol. 129.
-[^64]: H. Iikura, T. Tsuneda, T. Yanai, K. Hirao, J. Chem. Phys. 115, 3540 (2001)
-[^65]: Y. Tawada, T. Tsuneda, S. Yanahisawa, T. Yanai, K. Hirao, J. Chem.Phys. 120, 8425 (2004)
-[^66]: T. Yanai, D.P. Tew, N.C. Handy, Chem. Phys. Lett. 393, 51 (2004)
-[^67]: M. J. G. Peach, A. J. Cohen, D. J. Tozer, Phys. Chem. Chem. Phys. 8, 4543 (2006)
-[^68]: O.A. Vydrov, G.E. Scuseria J. Chem. Phys. 125 234109 (2006)
-[^69]: J.-W. Song, T. Hirosawa, T. Tsuneda, K. Hirao, J. Chem. Phys. 126, 154105 (2007)
-[^70]: E. Livshits, R. Baer, Phys. Chem. Chem. Phys. 9, 2932 (2007)
-[^71]: A. J. Cohen, P. Mori-Sanchez, and W. Yang, J. Chem. Phys. 126, 191109 (2007)
-[^72]: M.A. Rohrdanz, J.M. Herbert, J. Chem. Phys. 129 034107 (2008)
-[^73]: N. Govind, M. Valiev, L. Jensen, K. Kowalski, J. Phys. Chem. A, 113, 6041 (2009)
-[^74]: R. Baer, E. Livshits, U. Salzner, Annu. Rev. Phys. Chem. 61, 85 (2010)
-[^75]: J. Autschbach, M. Srebro, Acc. Chem. Res. 47, 2592 (2014)
-[^76]: P. Verma and R. J. Bartlett, J. Chem. Phys. 140, 18A534 (2014)
-[^77]: A. D. Rabuck and G. E. Scuseria, J. Chem. Phys 110,695 (1999)
-[^78]: M. Swart, M. Solà, F.M. Bickelhaupt, J. Chem. Phys. 131, 094103 (2009);
-       M. Swart, M. Solà, F.M. Bickelhaupt, J. Comp. Meth. Sci. Engin. 9, 69 (2009)
-[^79]: Q. Wu, T. Van Voorhis, Phys. Rev. A 72, 024502 (2005)
-[^80]: S. Grimme,  J. Chem. Phys. 124, 034108 (2006) [DOI:10.1063/1.2148954](https://dx.doi.org/10.1063/1.2148954)
-[^81]: R.W. Warren and B.I. Dunlap, Chem. Phys. Letters 262, 384 (1996)
-[^82]: A. D. Becke, J. Chem. Phys. 88, 1053 (1988)
-[^83]: R.E.Stratmann, G.Scuseria and M.J.Frisch, Chem. Phys. Lett. 257, 213 (1996)
-[^84]: C.W. Murray, N.C. Handy, and G.L. Laming, Mol. Phys.78, 997 (1993)
-[^85]: M.E.Mura and P.J.Knowles, J Chem Phys 104, 9848 (1996)
-[^86]: O.Treutler and R.Alrhichs, J.Chem.Phys 102, 346 (1995)
-[^87]: R. T. Sharp and G. K. Horton, Phys. Rev. 90, 317 (1953);
-       J. D. Talman and W. F. Shadwick, Phys. Rev. A 14, 36 (1976)
-[^88]: J. B. Krieger, Y. Li, and G. J. Iafrate, Phys. Rev. A 45, 101 (1992); 46, 5453 (1992);
-       *ibid*, 47, 165 (1993))
-[^89]: J. Garza, J. A. Nichols and D. A. Dixon, J. Chem. Phys. 112, 7880 (2000)
-[^90]: Q. Wu and W. Yang, J. Chem. Phys. 116 515 (2002)
-[^91]: U. Zimmerli, M Parrinello and P. Koumoutsakos J. Chem. Phys. 120 2693 (2004)
-[^92]: S. Grimme J. Comput. Chem. 25 1463 (2004)
-[^93]: S. Grimme, J. Comput. Chem. 27 1787 (2006)
-[^94]: S. Grimme, J. Antony, S. Ehrlich, H. Krieg, J. Chem. Phys. 132, 154104 (2010)
-[^95]: A. Otero-de-la-Roza and E. R. Johnson, J. Chem. Phys. 138, 204109 (2013)
-[^96]: J.-D. Chai and M. Head-Gordon, J. Chem. Phys. 128, 084106 (2008)
-[^97]: Y.-S. Lin, G.-D. Li, S.-P. Mao, and J.-D. Chai, J. Chem. Theory Comput. 9, 263-272 (2013) 
-[^98]: A. P. Bartók and J. R. Yates., J. Chem. Phys. 150, 161101 (2019) 
-[^99]: J. W. Furness, A. D. Kaplan, J. Ning, J. P. Perdew, J. Sun, J. Phys. Chem. Lett. 11, 8208– 8215 (2020)
-[^101]: M. Bursch, H. Neugebauer, S. Ehlert, S. Grimme, J. Chem. Phys. 156, 134105 (2022)
-[^100]: D. Mejía-Rodríguez and S. B. Trickey, Phys. Rev. B 102, 121109 (2020) 
-[^r2scanl]: D. Mejía-Rodríguez and S. B. Trickey, J. Phys. Chem. A 124, 9889-9894 (2020) 
-[^102]: J. Carmona-Espíndola, J. L. Gázquez and A. Vela, J. Chem. Theory Comput. 15, 303-310 (2019)
+
