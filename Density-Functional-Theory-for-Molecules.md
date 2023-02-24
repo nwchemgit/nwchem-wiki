@@ -417,7 +417,7 @@ to nuclear position.
 
 | Keyword     | X  | C  | GGA | Meta | Hybr. | 2nd | Ref.   |
 |-------------|----|----|-----|------|-------|-----|--------|
-| slater      | *  |    |     |      |       | Y   |  [@slater1972;@slater1974]   |
+| slater      | *  |    |     |      |       | Y   |  [@slater1972,@slater1974]   |
 | vwn_1       |    | * |     |      |       | Y   |  [@vosko1980]   |
 | vwn_2       |    | * |     |      |       | Y   |  [@vosko1980]   |
 | vwn_3       |    | * |     |      |       | Y   |  [@vosko1980]   |
@@ -452,7 +452,7 @@ to nuclear position.
 | hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
-| ft97        | * | * | *  |      |       | N   |  [@filatov1997],[@filatov1997_2]  |
+| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
 | htch407p    | * | * | *  |      |       | N   |  [@boese2003_2]  |
 | bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
 | pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
@@ -463,8 +463,8 @@ to nuclear position.
 | bc95        |    | * |     | *   |       | N   |  [@hammer1999]  |
 | cpw6b95     |    | * |     | *   |       | N   |  [@zhao2004]  |
 | cpwb6k      |    | * |     | *   |       | N   |  [@zhao2004]  |
-| xm05        | * |    |     | *   | *    | N   |  [@zhao2004_2],[@zhao2005_2]  |
-| cm05        |    | * |     | *   |       | N   |  [@zhao2004_2],[@zhao2005_2]  |
+| xm05        | * |    |     | *   | *    | N   |  [@zhao2004_2,@zhao2005_2]  |
+| cm05        |    | * |     | *   |       | N   |  [@zhao2004_2,@zhao2005_2]  |
 | m05-2x      | * | * |     | *   | *    | N   |  [@zhao2006_2]  |
 | xm05-2x     | * |    |     | *   | *    | N   |  [@zhao2006_2]  |
 | cm05-2x     |    | * |     | *   |       | N   |  [@zhao2006_2]  |
@@ -534,7 +534,7 @@ to nuclear position.
 | rscan       | * | * | *  |  *  |      | N   |  [@bartok2019]  | 
 | r2scan      | * | * | *  |  *  |      | N   |  [@furness2020]  | 
 | r2scan0     | * | * | *  | *   | *    | N   |  [@bursch2022]  | 
-| r2scanl     | * | * | *  |  *  |      | N   |  [@mejiarodriguez2020_2],[@mejiarodriguez2020] | 
+| r2scanl     | * | * | *  |  *  |      | N   |  [@mejiarodriguez2020_2,@mejiarodriguez2020] | 
 | ncap        | * | * | *  |     |      | Y   |  [@carmona2018] |   
 |             |   |   |    |     |      |     |         |   
     
@@ -683,8 +683,7 @@ xc xpbe96 1.0 xcampbe96 -0.25 cpbe96 1.0 srhfexch 0.25
 cam 0.11 cam_alpha 0.0 cam_beta 1.0
 ```
 
-Please see references [@savin1995], [@iikura2001], [@tawada2004], [@yanai2004], [@peach2006], [vydrov2006], [@song2007],
-[@livshits2007], [@cohen2007], [@rohrdanz2008], [@govind2009], [@baer2010], [@autschbach2014] and [@verma2014]  (not a complete list) for further
+Please see references [@savin1995,@iikura2001,@tawada2004,@yanai2004,@peach2006,vydrov2006,@song2007,@livshits2007,@cohen2007,@rohrdanz2008,@govind2009,@baer2010,@autschbach2014,@verma2014]  (not a complete list) for further
 details about the theory behind these functionals and applications.
 
 
@@ -750,7 +749,7 @@ PBE functional and includes a portion of Grimme's dispersion correction
 spin-state splittings and reaction barriers, and the good results of PBE
 for weak interactions. The SSB-D functional works well for these
 systems, including for difficult systems for DFT (dimerization of
-anthracene, branching of octane, water-hexamer isomers, C12H12 isomers,
+anthracene, branching of octane, water-hexamer isomers, C<sub>12</sub>H<sub>12</sub> isomers,
 stacked adenine dimers), and for NMR chemical shieldings.
 
 It can be specified as
