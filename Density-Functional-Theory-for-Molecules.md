@@ -441,8 +441,8 @@ to nuclear position.
 | xpwb6k      | * |    | *  |      |       | N   |  [@zhao2004]  |
 | perdew86    |    | * | *  |      |       | Y   |  [@perdew1986]   |
 | lyp         |    | * | *  |      |       | Y   |  [@lee1988]  |
-| perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a;@perdew1993]   |
-| cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996;@perdew1997]   |
+| perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a,@perdew1993]   |
+| cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996,@perdew1997]   |
 | cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
 | op          |    | * | *  |      |       | N   |  [@tsuneda1999]  |
 | hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
@@ -452,7 +452,7 @@ to nuclear position.
 | hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
-| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| ft97        | * | * | *  |      |       | N   |  [@filatov1997],[@filatov1997_2]  |
 | htch407p    | * | * | *  |      |       | N   |  [@boese2003_2]  |
 | bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
 | pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
@@ -508,8 +508,8 @@ to nuclear position.
 | csogga11    |    | * | *  |      |       | N   |  [@peverati2011_3]  |
 | xsogga11    | * |    | *  |      |       | N   |  [@peverati2011_3]  |
 | sogga11     | * | * | *  |      |       | N   |  [@peverati2011_3]  |
-| csogga11-x  |    | * |     |      |       | N   |  [@peverati2001]  |
-| xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2001]  |
+| csogga11-x  |    | * |     |      |       | N   |  [@peverati2011]  |
+| xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2011]  |
 | sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
 | dldf        | * | * |     | *   | *    | N   |  [@pernal2009]  |
 | beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
@@ -525,17 +525,17 @@ to nuclear position.
 | mpw1k       | * | * | *  |      | *    | Y   |  [@lynch2000]  |
 | xmvs15      | * |    |     | *   |       | N   |  [@sun2015]  |
 | hle16       | * | * | *  |      | *    | Y   |  [@verma2017]  |
-| scan        | * | * | *  | *   |       | N   |  [@yang20176]  |
+| scan        | * | * | *  | *   |       | N   |  [@yang2016]  |
 | scanl       | * | * | *  | *   |       | N   |  [@mejiarodriguez2017]  |
 | revm06-L    | * | * | *  | *   |       | N   |  [@wang2017]  |
 | revm06      | * | * | *  | *   | *    | N   |  [@wang2018]  |  
-| wb97x       | * | * | *  |     | *    | N   |  [^96]  |
-| wb97x-d3    | * | * | *  |     | *    | N   |  [^97]  |
-| rscan       | * | * | *  |  *  |      | N   |  [^98]  | 
-| r2scan      | * | * | *  |  *  |      | N   |  [^99]  | 
-| r2scan0     | * | * | *  | *   | *    | N   |  [^101]  | 
-| r2scanl     | * | * | *  |  *  |      | N   |  [^100],[^r2scanl] | 
-| ncap        | * | * | *  |     |      | Y   |  [^102] |   
+| wb97x       | * | * | *  |     | *    | N   |  [@chai2008]  |
+| wb97x-d3    | * | * | *  |     | *    | N   |  [@lin2012]  |
+| rscan       | * | * | *  |  *  |      | N   |  [@bartok2019]  | 
+| r2scan      | * | * | *  |  *  |      | N   |  [@furness2020]  | 
+| r2scan0     | * | * | *  | *   | *    | N   |  [@bursch2022]  | 
+| r2scanl     | * | * | *  |  *  |      | N   |  [@mejiarodriguez2020_2],[@mejiarodriguez2020] | 
+| ncap        | * | * | *  |     |      | Y   |  [@carmona2018] |   
 |             |   |   |    |     |      |     |         |   
     
 
