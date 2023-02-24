@@ -510,7 +510,7 @@ to nuclear position.
 | sogga11     | * | * | *  |      |       | N   |  [@peverati2011_3]  |
 | csogga11-x  |    | * |     |      |       | N   |  [@peverati2011]  |
 | xsogga11-x  | * |    | *  |      |       | N   |  [@peverati2011]  |
-| sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2001]  |
+| sogga11-x   | * | * | *  |      | *    | N   |  [@peverati2011]  |
 | dldf        | * | * |     | *   | *    | N   |  [@pernal2009]  |
 | beckehandh  | * | * |     |      | *    | Y   |  [@becke1993]  |
 | b3lyp       | * | * | *  |      | *    | Y   |  [@becke3]  |
