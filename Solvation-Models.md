@@ -275,20 +275,6 @@ and placed in one of the these locations - directory specified by the
 environmental variable `NWCHEM_COSMO_LIBRARY`, permanent directory, or
 run directory.  
 
-### COSMO Usage Tips
-
-Authors of paper [@marenich2009] report that  
-" ... *the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
-Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
-```
-cosmo
- minbem 3
- ificos 1
-end
-```
-
-
-
 
 ## SMD
 
@@ -653,7 +639,19 @@ end
 | p-xylene                        | p-xylene |  2.2705|
 | xylene (mixture)                | xylenemx |  2.3879|
 | water                           | h2o      |  78.400|
-  
+
+## Usage Tips
+
+Authors of paper [@marenich2009] report that  
+" ... *the SMD/COSMO/NWChem calculations we employed finer grids (options minbem=3, maxbem=4, ificos=1) because the default NWChem tessellation parameters (options: minbem=2, maxbem=3, ificos=0) produced very large errors in solvation free energies*."  
+Since the `maxbem` keyword is no longer in use, this paper's recommended input translate into
+```
+cosmo
+ minbem 3
+ ificos 1
+end
+```
+
 ## References
 ///Footnotes Go Here///
 
