@@ -1,4 +1,6 @@
-# Overview
+# Solvation Models
+
+## Overview
 
 Two solvation models are available in NWChem: [COSMO](#cosmo) and [SMD](#smd).
 Since some of the COSMO parameters are used for SMD, we suggest to read the COSMO section before the SMD one.
@@ -8,7 +10,7 @@ Since some of the COSMO parameters are used for SMD, we suggest to read the COSM
 ### Overview
 
 COSMO is the continuum solvation 'COnductor-like Screening MOdel' of A.
-Klamt and G. Schürmann to describe dielectric screening effects in
+Klamt and G. Schüürmann to describe dielectric screening effects in
 solvents[@klamt1993]. This model has been enhanced by D.M. York and M.
 Karplus[@york1999] to create a smooth potential energy surface. The latter
 facilitates geometry optimization and dynamics and the implementation
@@ -140,7 +142,7 @@ For examples see Stefanovich et al.[@stefanovich1995] and Barone et al.[@barone1
 "Rsolv" is no longer used.
 
 `iscren` is a flag to define the dielectric charge scaling option.
-`iscren 1` implies the original scaling from Klamt and Schürmann,
+`iscren 1` implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. `iscren 0` implies the modified scaling suggested
 by Stefanovich and Truong[@stefanovich1995], mainly "(&epsilon;-1)/&epsilon;".
@@ -148,7 +150,7 @@ Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
 The next two parameters define the tesselation of the unit sphere. The
-approach still follows the original proposal by Klamt and Schürmann to
+approach still follows the original proposal by Klamt and Schüürmann to
 some degree. Basically a tesselation is generated from `minbem` refining
 passes starting from either an octahedron or an icosahedron. Each level
 of refinement partitions the triangles of the current tesselation into
@@ -174,7 +176,7 @@ code selects the iterative method.
 suggested by York and Karplus to avoid singularities when two surface
 charges coincide. The default value is `zeta 0.98` this value was chosen
 to ensure that the results of the current implementation are as close as
-possible to those of the original Klamt and Schürmann based
+possible to those of the original Klamt and Schüürmann based
 implementation.
 
 `gamma_s` modifies the width of the smooth switching function that
@@ -201,7 +203,7 @@ COSMO solvation from an unconverged electron density can generate
 unphysical charges that lock the calculation into strange electron
 distributions.
 
-`do_cosmo_ks` is a flag to turn on the Klamt-Schürmann model  
+`do_cosmo_ks` is a flag to turn on the Klamt-Schüürmann model  
 
 `do_cosmo_yk` is a flag to turn on the York-Karplus model (default)  
 
@@ -304,7 +306,7 @@ contribution arising from a self-consistent reaction field (SCRF)
 treatment. The SCRF treatment involves an integration of the
 nonhomogeneous-dielectric Poisson equation for bulk electrostatics in
 terms of the [COSMO model](#cosmo-solvation-model)
-of Klamt and Schürmann with the modified [COSMO scaling factor](#cosmo-input-parameters) 
+of Klamt and Schüürmann with the modified [COSMO scaling factor](#cosmo-input-parameters) 
 suggested by Stefanovich and Truong and by using the SMD
 intrinsic atomic Coulomb radii. These radii have been optimized for H,
 C, N, O, F, Si, P, S, Cl, and Br. For any other atom the current
@@ -408,7 +410,8 @@ icds (integer input)
 ```
 `icds` should have a value of 1 for water.
 `icds` should have a value of 2  for any nonaqueous solvent.  
-If icds=2 you need to provide the following solvent descriptors (see http://comp.chem.umn.edu/solvation/mnsddb.pdf):
+If icds=2 you need to provide the following solvent descriptors
+(see the [MN solvent descriptor database](https://comp.chem.umn.edu/solvation/mnsddb.pdf) ):
 - `sola` 
 - `solb` 
 - `solc` 
