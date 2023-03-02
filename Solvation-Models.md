@@ -305,7 +305,7 @@ into two components. The first component is the bulk-electrostatic
 contribution arising from a self-consistent reaction field (SCRF)
 treatment. The SCRF treatment involves an integration of the
 nonhomogeneous-dielectric Poisson equation for bulk electrostatics in
-terms of the [COSMO model](#cosmo-solvation-model)
+terms of the [COSMO model](#cosmo)
 of Klamt and Schüürmann with the modified [COSMO scaling factor](#cosmo-input-parameters) 
 suggested by Stefanovich and Truong and by using the SMD
 intrinsic atomic Coulomb radii. These radii have been optimized for H,
