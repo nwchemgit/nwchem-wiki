@@ -4,7 +4,7 @@
 
 The VEM is a model for calculating the vertical excitation (absorption)
 or vertical emission (fluorescence) energy in solution according to a
-two-time-scale model of solvent polarization. The model is described in reference[^1].  
+two-time-scale model of solvent polarization. The model is described in reference[@marenich2011].  
 
 The current implementation is based on the VEM(d,RD) algorithm as
 described in the above paper. The method is available only at the [TDDFT](Excited-State-Calculations.md)
@@ -16,13 +16,13 @@ singles (CIS) wave function method can also be used along with VEM by
 considering CIS to be a special case of TDDFT-TDA.
 
 The abbreviation VEM originally referred to the vertical excitation
-model of reference[^2],
+model of reference[@li2000],
 but the current implementation of VEM extends to both excitation and
 emission calculations in solution, and the E in VEM now stands for
 excitation/emission. Furthermore, the current version of VEM (based on
-the Marenich et al. paper[^1]) does
+the Marenich et al. paper[@marenich2011]) does
 not reduce to the original VEM of Li et al., but is improved as
-described in reference[^1].
+described in reference[@marenich2011].
 
 The VEM model is based on a nonequilibrium dielectric-continuum approach
 in terms of two-time-scale solvent response. The solvent's
@@ -57,7 +57,7 @@ supersolute that involves a solute–solvent molecular cluster with one or
 a few solvent molecules added explicitly to a bare solute. The
 solute–solvent dispersion contribution to the solvatochromic shift, if
 desired, can be estimated by the solvation model with state-specific
-polarizability (SMSSP) described in reference[^3].  
+polarizability (SMSSP) described in reference[@marenich2013].  
 
 In this case, the user needs to provide values of ground- and
 excited-state spherically averaged molecular polarizabilities of the
@@ -98,7 +98,7 @@ that if the solvent is specified with the solvent keyword,
  the refractive index is set by the program without needing the user to supply it.)   
 
 Solvent descriptors set by the program are based on the Minnesota
-Solvent Descriptor Database[^4]:
+Solvent Descriptor Database[@winget1999]:
 
 
 If the option `do_cosmo_vem 1` or `do_cosmo_vem 2` is specified the
@@ -165,22 +165,3 @@ task tddft gradient
 ## References
 ///Footnotes Go Here///
 
-[^1]: Marenich, A. V.; Cramer, C. J.; Truhlar, D. G.; Guido, C. A.; Mennucci,
-B.; Scalmani, G.; Frisch, M. J. Practical computation of electronic
-excitation in solution: vertical excitation model. Chem. Science 2011,
-2, 2143-2161; <http://dx.doi.org/10.1039/C1SC00313E>  
-
-[^2]: Li, J.; Cramer, C. J.; Truhlar, D. G. Two-response-time model based on
-CM2/INDO/S2 electrostatic potentials for the dielectric polarization
-component of solvatochromic shifts on vertical excitation energies. Int.
-J. Quantum Chem. 2000, 77, 264-280; [https://dx.doi.org/10.1002/(SICI)1097-461X(2000)77:1<264::AID-QUA24>3.0.CO;2-J](https://dx.doi.org/10.1002/(SICI)1097-461X(2000)77:1<264::AID-QUA24>3.0.CO;2-J)  
-
-[^3]: Marenich, A. V.; Cramer, C. J.; Truhlar, D. G. Uniform treatment of
-solute-solvent dispersion in the ground and excited electronic states of
-the solute based on a solvation model with state-specific
-polarizability. J. Chem. Theory Comput. 2013, 9, 3649-3659;
-<http://dx.doi.org/10.1021/ct400329u>  
-
-[^4]: Winget, P.; Dolney, D. M.; Giesen, D. J.; Cramer, C. J.; Truhlar, D. G.
-Minnesota Solvent Descriptor Database. University of Minnesota:
-Minneapolis, MN, 2010. <http://comp.chem.umn.edu/solvation/mnsddb.pdf>  
