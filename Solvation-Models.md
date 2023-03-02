@@ -143,7 +143,7 @@ For examples see Stefanovich et al.[@stefanovich1995] and Barone et al.[@barone1
 `iscren 1` implies the original scaling from Klamt and Schürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
 dielectric constant. `iscren 0` implies the modified scaling suggested
-by Stefanovich and Truong[@stefanovich1999], mainly "(&epsilon;-1)/&epsilon;".
+by Stefanovich and Truong[@stefanovich1995], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
@@ -338,7 +338,7 @@ geometry-dependent proportionality constants called atomic surface
 tensions) to the solvent-accessible surface areas (SASAs) of the
 individual atoms of the solute.
 
-### SMD Input Paramters
+### SMD Input Parameters
 
 The SMD model requires additional parameters in the [COSMO input block](#cosmo-input-parameters)
 
