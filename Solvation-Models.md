@@ -412,12 +412,13 @@ icds (integer input)
 `icds` should have a value of 2  for any nonaqueous solvent.  
 If icds=2 you need to provide the following solvent descriptors
 (see the [MN solvent descriptor database](https://comp.chem.umn.edu/solvation/mnsddb.pdf) ):
-- `sola` 
-- `solb` 
-- `solc` 
-- `solg` 
-- `solh` 
-- `soln` 
+
+* `sola` 
+* `solb` 
+* `solc` 
+* `solg` 
+* `solh` 
+* `soln` 
 
 ### SMD Examples
 
