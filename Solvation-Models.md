@@ -410,7 +410,7 @@ icds (integer input)
 ```
 `icds` should have a value of 1 for water.
 `icds` should have a value of 2  for any nonaqueous solvent.  
-If icds=2 you need to provide the following solvent descriptors
+If `icds` is set equal to 2, then you need to provide the following solvent descriptors
 (see the [MN solvent descriptor database](https://comp.chem.umn.edu/solvation/mnsddb.pdf) ):
 
 * `sola` 
