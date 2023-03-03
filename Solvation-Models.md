@@ -86,14 +86,17 @@ followed by the task directive specifying the wavefunction and type of
 calculation, e.g., `task scf energy`, `task mp2 energy`, `task dft
 optimize`, etc.
 
+#### COSMO: OFF keyword
 `off` can be used to turn off COSMO in a compound (multiple task) run.
 By default, once the COSMO solvation model has been defined it will be
 used in subsequent calculations. Add the keyword `off` if COSMO is not
 needed in subsequent calculations.
 
+#### COSMO: DIELEC keyword
 `dielec` is the value of the dielectric constant of the medium, with a
 default value of 78.4 (the dielectric constant for water).
 
+#### COSMO: PARAMETERS keyword
 `parameters` specifies COSMO radii parameters file that stores custom
 setting for COSMO parameters. The format for such file consists of the
 atom or element name followed by the radii. The program will first
@@ -102,7 +105,8 @@ Otherwise radius will be set based on default parameters. The file has
 to present in one of the three location ( in the order of preference) -
 directory specified by the environmental variable
 `NWCHEM_COSMO_LIBRARY`, permanent directory, and run directory. 
-  
+
+#### COSMO: RADIUS keyword
 `radius` is an array that specifies the radius of the spheres associated
 with each atom and that make up the molecule-shaped cavity. These values
 will override default radii setting including those specified in the
@@ -141,6 +145,7 @@ For examples see Stefanovich et al.[@stefanovich1995] and Barone et al.[@barone1
 
 "Rsolv" is no longer used.
 
+#### COSMO: ISCREEN keyword
 `iscren` is a flag to define the dielectric charge scaling option.
 `iscren 1` implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
@@ -165,6 +170,7 @@ Solvation energies are not really sensitive to this choice for
 sufficiently fine tesselations. The old "maxbem" directive is no longer
 used.
 
+#### COSMO: LINEQ keyword
 The `lineq` parameter serves to select the numerical algorithm to solve
 the linear equations yielding the effective charges that represent the
 polarization of the medium. `lineq 0` selects a dense matrix linear equation solver
@@ -172,6 +178,7 @@ polarization of the medium. `lineq 0` selects a dense matrix linear equation sol
 large molecules where the number of effective charges is large, the
 code selects the iterative method.
 
+#### COSMO: ZETA keyword
 `zeta` sets the width of the Gaussian charge distributions that were
 suggested by York and Karplus to avoid singularities when two surface
 charges coincide. The default value is `zeta 0.98` this value was chosen
@@ -179,18 +186,21 @@ to ensure that the results of the current implementation are as close as
 possible to those of the original Klamt and Schüürmann based
 implementation.
 
+#### COSMO: GAMMA_S keyword
 `gamma_s` modifies the width of the smooth switching function that
 eliminates surface charges when their positions move into the sphere of
 a neighboring atom. `gamma_s 0.0` leads to a heavyside or abrupt
 switching function, whereas `gamma_s 1.0` maximizes the width of the
 switching function. The default value is `gamma_s 1.0`.
 
+#### COSMO: SW_TOL keyword
 `sw_tol` specifies the cutoff of the switching function below which a
 surface charge at a particular point is eliminated. The values of the
 switching function lie in the domain from 0 to 1. This value should not
 be set too small as that leads to instabilities in the linear system
 solvers. The default value is `sw_tol 1.0e-4`.
 
+#### COSMO: DO_GASPHASE keyword
 `do_gasphase` is a flag to control whether the calculation of the
 solvation energy is preceded by a gas phase calculation. The default is
 to always perform a gas phase calculation first and then calculate the
@@ -203,10 +213,13 @@ COSMO solvation from an unconverged electron density can generate
 unphysical charges that lock the calculation into strange electron
 distributions.
 
+#### COSMO: DO_COSMO_KS keyword
 `do_cosmo_ks` is a flag to turn on the Klamt-Schüürmann model  
 
+#### COSMO: DO_COSMO_YK keyword
 `do_cosmo_yk` is a flag to turn on the York-Karplus model (default)  
 
+#### COSMO: DO_COSMO_SMD keyword
 `do_cosmo_smd` is a flag to turn on the SMD model. More details can be found
 at the [SMD Model documentation](#smd)  
 
@@ -354,6 +367,7 @@ do_cosmo_smd <logical>
 The `do_cosmo_smd` keyword instructs NWChem to perform a ground-state SMD calculation
 when set to a `true` value.
 
+#### SMD: SOLVENT keyword
 ```
 solvent (keyword)
 ```
@@ -363,48 +377,56 @@ a `solvent` keyword from the short name entry in the
 When a solvent is specified by name, the descriptors for the solvent are
 based on the Minnesota Solvent Descriptor Database[@winget1999].  
 
-The user can specify a solvent that is not on the list by omitting the
-solvent keyword and instead introducing user-provided values for the
-following solvent
-descriptors:
+The user can specify a solvent (by using a string using up to eight characters)
+that is not on the list by using a new
+solvent keyword and introducing user-provided values for the
+following solvent descriptors:
 
+#### SMD: DIELEC keyword
 ```
 dielec (real input)
 ```
 dielectric constant at 298 K  
 
+#### SMD: SOLA keyword
 ```
 sola (real input) 
 ```
 Abraham’s hydrogen bond acidity   
 
+#### SMD: SOLB keyword
 ```
 solb (real input) 
 ```
 Abraham’s hydrogen bond basicity  
 
+#### SMD: SOLC keyword
 ```
 solc (real input)
 ```
 aromaticity as a fraction of non-hydrogenic solvent atoms that are aromatic carbon atoms  
 
+#### SMD: SOLG keyword
 ```
 solg (real input)
 ```
 macroscopic surface tension of the solvent at an air/solvent interface at 298 K in units of
 cal mol<sup>–1</sup> Å<sup>–2</sup>  
 (note that 1 dyne/cm = 1.43932 cal mol<sup>–1</sup> Å<sup>–2</sup>)  
-  
+
+#### SMD: SOLH keyword
 ```
 solh (real input)
 ```
 electronegative halogenicity as the fraction of non-hydrogenic solvent atoms that are F, Cl, or Br  
-  
+
+#### SMD: SOLN keyword
 ```
 soln (real input)
 ```
 index of refraction at optical frequencies at 293 K
 
+#### SMD: ICDS keyword
 ```
 icds (integer input)
 ```
@@ -413,21 +435,21 @@ icds (integer input)
 If `icds` is set equal to 2, then you need to provide the following solvent descriptors
 (see the [MN solvent descriptor database](https://comp.chem.umn.edu/solvation/mnsddb.pdf) ):
 
-* `sola` 
-* `solb` 
-* `solc` 
-* `solg` 
-* `solh` 
-* `soln` 
+* [sola](#smd-sola-keyword) 
+* [solb](#smd-solb-keyword)
+* [solc](#smd-solc-keyword)
+* [solg](#smd-solg-keyword) 
+* [solh](#smd-solh-keyword) 
+* [soln](#smd-soln-keyword) 
 
 ### SMD Examples
 
-An example of an SMD input file is as
-follows:
 
+
+### SMD Example: water solvent
 ```
 echo 
-title 'SMD/M06-2X/6-31G(d) solvation free energy for CF3COO- in water'
+title "SMD/M06-2X/6-31G(d) solvation free energy for CF3COO- in water"
 start
 charge -1
 geometry nocenter
@@ -449,6 +471,42 @@ end
 cosmo
  do_cosmo_smd true
  solvent water
+end
+task dft energy
+```
+
+### SMD Example: new solvent
+
+Example using a user defined solvent, not present in the SMD list of solvents
+```
+echo 
+title "SMD/M06-2X/6-31G(d) solvation free energy for CF3COO- in my solvent"
+start
+charge -1
+geometry nocenter
+C    0.512211   0.000000  -0.012117
+C   -1.061796   0.000000  -0.036672
+O   -1.547400   1.150225  -0.006609
+O   -1.547182  -1.150320  -0.006608
+F    1.061911   1.087605  -0.610341
+F    1.061963  -1.086426  -0.612313
+F    0.993255  -0.001122   1.266928
+symmetry c1
+end
+basis
+* library 6-31G*
+end
+dft
+ XC m06-2x
+end
+cosmo
+ do_cosmo_smd true
+ solvent mysolv 
+ dielec 11.4
+ sola 1.887
+ solb 0.0
+ soln 0.98
+ icds 2
 end
 task dft energy
 ```
