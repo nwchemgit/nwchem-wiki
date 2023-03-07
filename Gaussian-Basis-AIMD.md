@@ -76,19 +76,20 @@ the nuclei. Possible options are:
 - **langevin** `<double default 0.1>`
 
    Langevin dynamics, implementation according to Bussi and Parrinello[@bussiparrinello2007].  
-   Number sets the value of the friction  
+   The optional input parameter sets the value of the friction  
 
 - **berendsen** `<double default 1000.0>`  
 
-   Berendsen thermostat, number sets the relaxation parameter of the thermostat  
+   Berendsen thermostat, the optional input parameter sets the relaxation parameter of the thermostat  
 
 - **rescale**
 
    Velocity rescaling, i.e. isokinetic ensemble  
   
-- **nose-hoover**
+- **nose-hoover** `<integer default 3>`
   
-  Nosé–Hoover thermostat (only available in release 7.2.0 and later)
+  Nosé–Hoover thermostat (only available in release 7.2.0 and later). 
+  The optional input parameter defines the number of oscillators.
 
 ### RAND_SEED: Seed for the random number generator
 
