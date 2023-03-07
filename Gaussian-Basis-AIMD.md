@@ -85,6 +85,10 @@ the nuclei. Possible options are:
 - **rescale**
 
    Velocity rescaling, i.e. isokinetic ensemble  
+  
+- **nose-hoover**
+  
+  Nosé–Hoover thermostat (only available in release 7.2.0 and later)
 
 ### RAND_SEED: Seed for the random number generator
 
