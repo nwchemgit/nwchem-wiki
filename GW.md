@@ -21,11 +21,7 @@ is needed for the accurate prediction of core-level binding energies at the
 one-shot *G<sub>0</sub>W<sub>0</sub>* level.
 
 For further theoretical insights and details about the actual implementation in
-NWChem, please refer to the following paper:
-
-  - D. Mejia-Rodriguez, A. Kunitsa, E. Apr&agrave;, N. Govind,
-    [Scalable Molecular GW Calculations: Valence and Core Spectra](https://doi.org/10.1021/acs.jctc.1c00738)
-    *J. Chem. Theory Comput.* **17**, 7504 (2021).
+NWChem, please refer to the paper by Mejia-Rodriguez et al[@mejia2021].  
 
 
 *GW* input is provided using the compound directive
@@ -324,3 +320,6 @@ end
 
 task dft gw
 ```
+
+## References
+///Footnotes Go Here///
