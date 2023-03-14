@@ -437,9 +437,10 @@ end
  ```
 
 The following methods are available:
-* Pipek-Mezey[@pipek1989], `pm` keyword (default)
-* Foster-Boys[@boys1960], `boys` keyword
-* IAO/IBO[@knizia2013][@knizia2015], `ibo` keyword
+
+* Pipek-Mezey[@pipek1989], `pm` keyword (default) 
+* Foster-Boys[@foster1960], `boys` keyword 
+* IAO/IBO[@knizia2013][@knizia2015], `ibo` keyword 
 
 ## References 
 ///Footnotes Go Here///
