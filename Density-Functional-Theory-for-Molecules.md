@@ -1691,8 +1691,8 @@ analysis can be obtained using the following
 ```
 
 The implementation of the Fukui analyis in NWChem was based on the papers by Galvan[@galvan1988] and by Chamorro[@chamorro2005].  
-This implementaton makes use of the generalized Fukui indices ($f_{SN},  f_{NS}, f_{SS}$).  
-The traditional, spin-restricted, Fukui indices are given by fnn+, fnn- and their average:
+This implementation makes use of the generalized Fukui indices ($f_{SN},  f_{NS}, f_{SS}$).  
+The traditional, spin-restricted, Fukui indices are given by $f_{NN}^+$, $f_{NN}^-$ and their average:
 $$f_A^+  = f_{NN}^+$$
 $$f_A^-  = f_{NN}^-$$
 $$f_A^0  = \frac{1}{2}\left( f_{NN}^+ + f_{NN}^- \right) $$
