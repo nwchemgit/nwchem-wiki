@@ -1672,7 +1672,7 @@ task dft
 
 ## FUKUI: Fukui Indices
 
-Fukui inidces analysis is invked by the keyword:
+Fukui indices analysis is invoked by the keyword:
 
 ```
  FUKUI
@@ -1690,6 +1690,13 @@ analysis can be obtained using the following
  task dft
 ```
 
+The implementation of the Fukui analyis in NWChem was based on the papers by Galvan[@galvan1988] and by Chamorro[@chamorro2005].  
+This implementaton makes use of the generalized Fukui indices ($f_{SN},  f_{NS}, f_{SS}$).  
+The traditional, spin-restricted, Fukui indices are given by fnn+, fnn- and their average:
+$$f_A^+  = f_{NN}^+$$
+$$f_A^-  = f_{NN}^-$$
+$$f_A^0  = \frac{1}{2}\left( f_{NN}^+ + f_{NN}^- \right) $$
+    
 ## BSSE: Basis Set Superposition Error
 
 Particular care is required to compute BSSE by the counter-poise method
