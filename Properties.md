@@ -90,6 +90,38 @@ with the ZORA model potential approach.
 For theoretical and computational details, please refer to 
 references[@autschbach2011][@aquino2012][@aquino2011].
 
+#### NMR: Input Example
+```
+geometry  nocenter
+  C    0.00000000    0.00000000    0.00000000
+  O    1.18337200    0.00000000    0.00000000
+  H    -.63151821    0.94387462    0.00000000
+end
+
+basis
+ "*" library 6-311G**
+end
+property
+ efieldgradz4 1 3
+ shielding 2 1 2
+ hyperfine 2 1 3
+ gshift
+end
+
+relativistic
+  zora on
+  zora:cutoff_NMR 1d-8
+  zora:cutoff 1d-30
+end
+
+dft
+mult 2
+xc becke88 perdew86
+end
+
+task dft property
+```
+### CENTER: Center of expansion for multipole calculations
   
 The user also has the option to choose the center of expansion for the
 dipole, quadrupole, and octupole calculations.
@@ -100,6 +132,8 @@ com is the center of mass, coc is the center of charge, origin is (0.0,
 0.0, 0.0) and arb is any arbitrary point which must be accompanied by
 the coordinated to be used. Currently the x, y, and z coordinates must
 be given in the same units as UNITS in [GEOMETRY](Geometry).
+  
+
 
 ### Response Calculations
 
