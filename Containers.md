@@ -4,7 +4,7 @@
 
 Dockerfile recipes are available at the repository [https://github.com/nwchemgit/nwchem-dockerfiles](https://github.com/nwchemgit/nwchem-dockerfiles)
 
-Docker images of the master branch are hosted at [https://ghcr.io](https://github.com/features/packages) and can be used with the following command  
+Docker images of the 7.2.0 release are hosted at [https://ghcr.io](https://github.com/features/packages) at the link [https://github.com/nwchemgit/nwchem-dockerfiles/pkgs/container/nwchem-720](https://github.com/nwchemgit/nwchem-dockerfiles/pkgs/container/nwchem-720) and can be used with the following command  
 
 ```
  docker run --shm-size 256m -u `id -u` --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev input.nw
