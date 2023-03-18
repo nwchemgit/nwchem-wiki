@@ -156,7 +156,8 @@ block. The syntax is:
    [GRAD, END]  
    [CDSPECTRUM]  
    [GIAO]
-   [VELOCITY]  
+   [VELOCITY]
+   [SIMPLESO]
    [ALGORITHM <integer algorithm default 0>]  
    [FREEZE [[core] (atomic || <integer nfzc default 0>)] \  
             [virtual <integer nfzv default 0>]]  
@@ -181,7 +182,7 @@ Since each keyword has a default value, a minimal input file will be
 Note that the keyword for the asymptotic correction must be given in the
 DFT input block, since all the effects of the correction (and also
 changes in the computer program) occur in the SCF calculation stage. See
-[DFT](Density-Functional-Theory-for-Molecules#lb94-and-cs00-asymptotic-correction) (keywords `CS00` and `LB94`) for details.
+[DFT](Density-Functional-Theory-for-Molecules.md#lb94-and-cs00-asymptotic-correction) (keywords `CS00` and `LB94`) for details.
 
 ## Keywords of TDDFT input block
 
@@ -361,6 +362,43 @@ We recommend to use the `GIAO` keyword
 
 Perform CD spectrum calculations with the velocity gauge.
 
+### SIMPLESO: simplified Spin-Orbit coupling
+
+Perform excited states calculations with a simplied Spin-Orbit coupling that uses
+eigenvalues from a [spin-orbit calculation](Density-Functional-Theory-for-Molecules.md#spin-orbit-density-functional-theory-sodft),
+instead of a standard dft calculation.  
+Here is a snippet of an input example (please notice the use of molecular orbitals).
+```
+start au2
+ geometry
+ au 0 0 1
+ au 0 0 -1
+ symmetry d2h
+end
+#basis sets, ecp and so-ecp skipped  for simplicity
+...
+dft
+ odft
+ vectors output au2_noso.mos
+end
+task dft
+dft
+ vectors input au2_noso.mos output au2_so.mos
+end
+task sodft
+dft
+ odft
+ vectors input u2_noso.mos
+end
+
+tddft
+  simpleso au2.evals
+  nroots 1
+  notriplet
+end
+
+task tddft
+```
 ### ALGORITHM: algorithms for tensor contractions
 
 There are four distinct algorithms to choose from, and the default value
