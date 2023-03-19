@@ -55,7 +55,7 @@ it is calculated from the measured gyromagnetic ratio
 >gammaC = 67.262;
 >gnC = gammaC*(h/(2*pi))/BN*(10^6);
 ```
-Note that the example system CH3 ground state is a doublet.
+Note that the example system CH<sub>3</sub> ground state is a doublet.
 ```
 >S = 0.5;
 ```
@@ -87,7 +87,7 @@ ans =
 2.0031
 ```
 To obtain g<sub>iso</sub> , take the trace of g and divide by 3:
-````
+```
 >trace(GTens)/3
 2.0028
 ```
