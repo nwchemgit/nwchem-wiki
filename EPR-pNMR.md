@@ -1,7 +1,7 @@
-
 ### EPR and Paramagnetic NMR NWChem Tutorial
 
-This tutorial involves tensor/matrix operations, which can be readily done with Octave,
+This tutorial involves tensor/matrix operations,
+which can be readily done with [Octave](https://octave.org/),
 a GNU license MATLAB-like program,
 freely available in any Linux or Cygwin (Windows) distribution.
 Octave will be
@@ -112,7 +112,7 @@ ans =
 271.88
 480.91
 ```
-To calculate Aiso , take the trace of the corrected A tensor and divide by 3:
+To calculate A<sub>iso</sub> , take the trace of the corrected A tensor and divide by 3:
 ```
 >trace(ATensC_Corr)/3
 341.56
