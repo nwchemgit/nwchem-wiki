@@ -1,9 +1,13 @@
 
-###$ EPR and Paramagnetic NMR NWChem Tutorial
-This tutorial involves tensor/matrix operations, which can be readily done with Octave, a GNU license
-MATLAB-like program, freely available in any Linux or Cygwin (Windows) distribution. Octave will be
-used to demonstrate tensor manipulation and calculation of g-tensor, A-tensor, and paramagnetic NMR
-parameters obtained from an example NWChem output.
+### EPR and Paramagnetic NMR NWChem Tutorial
+
+This tutorial involves tensor/matrix operations, which can be readily done with Octave,
+a GNU license MATLAB-like program,
+freely available in any Linux or Cygwin (Windows) distribution.
+Octave will be
+used to demonstrate tensor manipulation and calculation of g-tensor, A-tensor,
+and paramagnetic NMR
+parameters obtained from an example NWChem output.  
 
 Example input:
 ```
