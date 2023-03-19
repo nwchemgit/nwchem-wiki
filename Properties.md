@@ -81,8 +81,9 @@ For both the NMR spin-spin and hyperfine coupling the isotope that has
 the highest abundance and has spin, will be chosen for each atom under
 consideration.
 
-**Calculating EPR and paramagnetic NMR parameters:** The following
-[tutorial](EPR-pNMR.pdf) illustrates how to combine the
+#### Calculating EPR and paramagnetic NMR parameters
+The following
+[tutorial](EPR-pNMR.md) illustrates how to combine the
 hyperfine, gshift and shielding to calculate the EPR and paramagnetic
 NMR parameters of an open-shell system. All calculations are compatible 
 with the ZORA model potential approach.
@@ -167,9 +168,9 @@ If the `velocity` or `giao` keywords are absent, the
 dipole-length form will be used for the dipole integrals. This is a bit
 faster.   
 The isotropic optical rotation is origin independent when using
-the velocity gauge (by means of `velocity` keyword) or with GIAOs [B1] (by means of the `giao` keyword).   
+the velocity gauge (by means of `velocity` keyword) or with GIAOs [@autschbach2011_2] (by means of the `giao` keyword).   
 With the keyword `bdtensor`, a
-fully origin-invariant optical rotation tensor is calculated [B1,B6].  
+fully origin-invariant optical rotation tensor is calculated [@autschbach2011_2,@moore2012].  
 Note that `velocity` and `orbeta` are incompatible.   
 The input line
 ```
