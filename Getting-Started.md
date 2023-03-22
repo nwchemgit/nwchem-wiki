@@ -235,7 +235,7 @@ overwritten. The entry h2o\_freq on the START line is the prefix to be
 used for all files created by the calculation. This convention allows
 different jobs to run in the same directory or to share the same scratch
 directory
-[SCRATCH\_DIR](Scratch_Dir.md)/[PERMANENT\_DIR](Permanent_Dir.md),
+[SCRATCH_DIR](Scratch_Dir.md)/[PERMANENT_DIR](Permanent_Dir.md),
 as long as they use different prefix names in this field.
 
 As in the first sample problem, the geometry is given in Cartesian
