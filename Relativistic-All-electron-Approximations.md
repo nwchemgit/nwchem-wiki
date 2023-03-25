@@ -123,7 +123,7 @@ effects with ZORA can be invoked by specifying:
 ```
 
 The `ON`|`OFF` string is used to turn on or off ZORA. No default is present, therefore
-`ZORA` keyword need to be followed by `ON` in ordert for the approximation to be used in the
+`ZORA` keyword need to be followed by `ON` in order for the approximation to be used in the
 calculation. If the user wishes to calculate a non-relativistic quantity
 after turning on ZORA, the user will need to define a new `RELATIVISTIC`
 block and turn the approximation OFF. The user can also simply put a
