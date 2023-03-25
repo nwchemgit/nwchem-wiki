@@ -119,11 +119,11 @@ via the [DFT](Density-Functional-Theory-for-Molecules.md) and [SO-DFT](Density-F
 effects with ZORA can be invoked by specifying:
 
 ```
- ZORA [<string (ON||OFF) default ON>
+ ZORA [<string (ON||OFF) >
 ```
 
-The `ON`|`OFF` string is used to turn on or off ZORA. By default, if the
-`ZORA` keyword is found, the approximation will be used in the
+The `ON`|`OFF` string is used to turn on or off ZORA. No default is present, therefore
+`ZORA` keyword need to be followed by `ON` in ordert for the approximation to be used in the
 calculation. If the user wishes to calculate a non-relativistic quantity
 after turning on ZORA, the user will need to define a new `RELATIVISTIC`
 block and turn the approximation OFF. The user can also simply put a
