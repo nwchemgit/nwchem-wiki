@@ -59,8 +59,8 @@ $$U_{l}(r) =  r^{-2} \sum_{k} A_{lk} r^{n_{lk}} e^{-B_{lk}r^{2}}$$
 where $A_{lk}$ is the contraction coefficient, $n_{lk}$ is the
 exponent of the $r$ term (r-exponent), and $B_{lk}$ is the Gaussian
 exponent. The $n_{lk}$ exponent is shifted by 2, in accordance with most of the
-ECP literature and implementations, i.e., $n_{lk}$ implies
-$r^2$. The current implementation allows $n_{lk}$  values of only
+ECP literature and implementations, i.e., $n_{lk} = 0$ implies
+$r^{-2}$. The current implementation allows $n_{lk}$  values of only
 0, 1, or 2.
 
 ## Scalar ECPs
