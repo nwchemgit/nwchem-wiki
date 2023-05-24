@@ -74,9 +74,10 @@ brew install nwchem
 
 ## NWChem installation on Conda
 
-NWChem can be installed  on Linux or MacOS from the [conda-forge](https://conda-forge.org/) channel of [Conda](https://docs.conda.io) with the command
+NWChem can be installed  on Linux or MacOS from the [conda-forge](https://conda-forge.org/) channel of [Conda](https://docs.conda.io) with the commands
 ```
-conda install -c conda-forge nwchem
+conda install -c conda-forge micromamba
+micromamba install -c conda-forge nwchem
 ```
 More details at [https://github.com/conda-forge/nwchem-feedstock](https://github.com/conda-forge/nwchem-feedstock)
 
