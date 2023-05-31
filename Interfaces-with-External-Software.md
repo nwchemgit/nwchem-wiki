@@ -63,13 +63,23 @@ Instead, to use a pre-compiled ELPA library, the `ELPA`  and `ELPA_SIZE` environ
 
 The `BUILD_PLUMED` environment variable installs [Plumed](https://www.plumed.org/) and
 interfaces it with the [qmd](Gaussian-Basis-AIMD.md) module.
+This procedure requires an internet connection to dowload the Plumed source.
+
+Instead, if you wish to use an existing Plumed install, the following environment variables must be set (after having unset `BUILD_PLUMED`: 
+```
+USE_PLUMED=1
+```
+Requirements:
+* The environment variable `PATH` should to point to the location of the `plumed` command  and `LD_LIBRARY_PATH` should point to the location of the plumed libraries.
+* `BLAS_SIZE` and `SCALAPACK_SIZE` must be equal to 4 (this is not a requirement when using `BUILD_PLUMED`)
 
 ## Libxc
 
 Building NWChem with the [libxc](https://www.tddft.org/programs/libxc/) DFT library requires
 setting the environment variable `USE_LIBXC=1`. 
 
-This procedure requires an internet connection to dowload the Libxc source.   
+This procedure requires an internet connection to dowload the Libxc source.
+
 Instead, if you wish to use an existing libxc library, the following environment variables must be set, after having unset `USE_LIBXC`:   
 
  * `LIBXC_INCLUDE`   location of the libxc C header files
