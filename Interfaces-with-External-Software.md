@@ -65,7 +65,7 @@ The `BUILD_PLUMED` environment variable installs [Plumed](https://www.plumed.org
 interfaces it with the [qmd](Gaussian-Basis-AIMD.md) module.
 This procedure requires an internet connection to dowload the Plumed source.
 
-Instead, if you wish to use an existing Plumed install, the following environment variables must be set (after having unset `BUILD_PLUMED`: 
+Instead, if you wish to use an existing Plumed installation, the following environment variables must be set (after having unset `BUILD_PLUMED`): 
 ```
 USE_PLUMED=1
 ```
