@@ -280,9 +280,9 @@ E.g., for IBM64 this looks like
 
 Notes:
 
-  - When building from a release archive starting with release 7.2.0 the 
-    `make 64_to_32` step is not needed and will just print the message
-    `make: '64_to_32' is up to date.`
+  - Starting with release 7.2.0 when building from a release archive the 
+    `make 64_to_32` step is not required. Executing  `make 64_to_32`
+    will just print the message `make: '64_to_32' is up to date.`
   - GotoBLAS2 (or OpenBLAS) can be installed with 64bit integers. This
     is accomplished by compiling the GotoBLAS2 library after having
     edited the GotoBLAS2 Makefile.rule file and un-commenting the line
