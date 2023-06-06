@@ -65,7 +65,7 @@ Supported combination of ARMCI_NETWORK and NWCHEM_TARGET variables:
 
 Please see [Choosing the ARMCI Library](ARMCI) for
 additional information on choosing the right network
-options.
+options. Using MPI-PR is strongly preferred.
 
 ### MPI variables
 
@@ -172,6 +172,8 @@ initial build of the binary has been completed. The script will choose the defau
 cd $NWCHEM_TOP/src
 ../contrib/getmem.nwchem
 ```
+A test suite failure in the `h2o-b3lyp-disp` test in release 7.2.0 has been reported if `-DDFLT_TOT_MEM` is set without using the `getmem.nwchem` script as suggested above.
+
 If non default compiler are used, the `getmem.nwchem` script must be called, using bash shell, by first specifying the compiler environment variable. The example below  uses ifort as Fortran compiler
 ```
 cd $NWCHEM_TOP/src
@@ -278,6 +280,9 @@ E.g., for IBM64 this looks like
 
 Notes:
 
+  - When building from a release archive starting with release 7.2.0 the 
+    `make 64_to_32` step is not needed and will just print the message
+    `make: '64_to_32' is up to date.`
   - GotoBLAS2 (or OpenBLAS) can be installed with 64bit integers. This
     is accomplished by compiling the GotoBLAS2 library after having
     edited the GotoBLAS2 Makefile.rule file and un-commenting the line
@@ -296,6 +301,8 @@ Notes:
     For ACML the int64 libraries should be chosen, e.g. in the case of
     ACML 4.4.0 using a PGI compiler
     /opt/acml/4.4.0/pgi64_int64/lib/libacml.a
+  - A runtime fail has been reported in release 7.2.0 for the 32-bit integer version
+    if the MKL is statically linked.
     
 **_New in NWChem 7.0.2_**:   
 
