@@ -65,7 +65,7 @@ Supported combination of ARMCI_NETWORK and NWCHEM_TARGET variables:
 
 Please see [Choosing the ARMCI Library](ARMCI) for
 additional information on choosing the right network
-options. Using MPI-PR is strongly preferred.
+options. Using MPI-PR is strongly suggested.
 
 ### MPI variables
 
