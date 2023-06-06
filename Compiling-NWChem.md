@@ -172,7 +172,7 @@ initial build of the binary has been completed. The script will choose the defau
 cd $NWCHEM_TOP/src
 ../contrib/getmem.nwchem
 ```
-A test suite failure in the `h2o-b3lyp-disp` test in release 7.2.0 has been reported if `-DDFLT_TOT_MEM` is set without using the `getmem.nwchem` script as suggested above.
+A test suite failure in the `h2o-b3lyp-disp` test in release 7.2.0 has been reported if `-DDFLT_TOT_MEM` is set manually without using the `getmem.nwchem` script as suggested above.
 
 If non default compiler are used, the `getmem.nwchem` script must be called, using bash shell, by first specifying the compiler environment variable. The example below  uses ifort as Fortran compiler
 ```
