@@ -428,9 +428,24 @@ If you would prefer  `mpirun -np 1` to work, other choice of `ARMCI_NETWORK` are
 
 If you get the following error 
 ```
-{1} nb_wait_for_handle Error: all user-level nonblocking handles have been exhaustedapplication called MPI_Abort(comm=0x84000002, -1)
+{1} nb_wait_for_handle Error: all user-level nonblocking handles have been exhausted
+application called MPI_Abort(comm=0x84000002, -1)
 ```
 you can fix it by executing the following command
 ```
 export COMEX_MAX_NB_OUTSTANDING=16
 ```
+
+## Memory errors
+
+If you get the following error
+```
+[0] Received an Error in Communication: (-1) 0: ptsalloc: increase memory in input line:
+```
+
+you can fix it by either  
+* increasing the memory line in the input file using the syntax described in the [Memory section](Memory.md), or by  
+* recompiling the NWChem binary with the `getmem.nwchem` script as described in the section avaible at this 
+[link](Compiling-NWChem.md#setting-the-default-memory-values)  
+
+

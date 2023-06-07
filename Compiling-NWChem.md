@@ -374,7 +374,7 @@ incorrect results.
 ### Setting the default memory values
 
 It is strongly recommended to use, after a successful compilation, the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
-`$NWCHEM_TOP/contrib` directory.  The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink. Here is an example of its usage:  
+`$NWCHEM_TOP/contrib` directory.  The script will choose the default [memory](Memory.md) settings based on the available physical memory, recompile the appropriate files and relink. Here is an example of its usage:  
 ```
 cd $NWCHEM_TOP/src
 ../contrib/getmem.nwchem
