@@ -158,25 +158,17 @@ lacking any fast and large local filesystem.
 ```
 export USE_NOIO=TRUE
 ```
-**LIB_DEFINES** can be set to pass additional defines to the C
+~~**LIB_DEFINES** can be set to pass additional defines to the C
 preprocessor (for both Fortran and C), e.g.
 ```
 export LIB_DEFINES=-DDFLT_TOT_MEM=16777216
 ```
 Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
-NWChem to run, where the units are in doubles. Instead of manually
-defining this environment variable, one can use the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
-`$NWCHEM_TOP/contrib` directory. This script should be run after an
-initial build of the binary has been completed. The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink. Here is an example of its usage:  
-```
-cd $NWCHEM_TOP/src
-../contrib/getmem.nwchem
-```
-If non default compiler are used, the `getmem.nwchem` script must be called, using bash shell, by first specifying the compiler environment variable. The example below  uses ifort as Fortran compiler
-```
-cd $NWCHEM_TOP/src
-FC=ifort ../contrib/getmem.nwchem
-```
+NWChem to run, where the units are in doubles.~~   
+However, it is recommended that, instead of manually
+defining this environment variable, the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script to be executed as described in the related [section](#setting-the-default-memory-values)
+
+
 **MRCC_METHODS** can be set to request the multireference coupled
 cluster capability to be included in the code, e.g.
 ```
@@ -378,6 +370,20 @@ COPTIMIZE variables. The reason is that the default values for FOPTIMIZE
 and COPTIMIZE have been tested by the NWChem developers (using the
 internal QA suites, among others), while any modification might produce
 incorrect results.
+
+### Setting the default memory values
+
+It is strongly recommended to use, after a successful compilation, the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script in the
+`$NWCHEM_TOP/contrib` directory.  The script will choose the default memory settings based on the available physical memory, recompile the appropriate files and relink. Here is an example of its usage:  
+```
+cd $NWCHEM_TOP/src
+../contrib/getmem.nwchem
+```
+If non default compiler are used, the `getmem.nwchem` script must be called, using bash shell, by first specifying the compiler environment variable. The example below  uses ifort as Fortran compiler
+```
+cd $NWCHEM_TOP/src
+FC=ifort ../contrib/getmem.nwchem
+```
 
 ## How-to: Linux platforms
 
