@@ -444,7 +444,7 @@ If you get the following error
 ```
 
 you can fix it by either  
-* increasing the memory line in the input file using the syntax described in the [Memory section](Memory.md), or by  
+* increasing the memory line in the input file using the syntax described in the [Memory section](Memory.md) (e.g. `memory total 1000 mb`), or by  
 * recompiling the NWChem binary with the `getmem.nwchem` script as described in the section avaible at this 
 [link](Compiling-NWChem.md#setting-the-default-memory-values)  
 
