@@ -318,7 +318,7 @@ here.
 ![pic1](SiCl4IR.png)
 ![pic2](SiCl4VDOS.png)
 
-### NAMD: Non-adiabatic Excited Stated Molecular Dynamics
+## NAMD: Non-adiabatic Excited Stated Molecular Dynamics
 
 For  details of the NAMD implementation, please
 refer to the 2020 paper by Song[@song2020].    
@@ -338,21 +338,21 @@ In the `namd` sub-block within the `qmd` block, please note:
 - The number of roots requested in the tddft block must be at least nstates-1.
 - The nuclear time step (dt_nucl) must be an integer multiple of the electronic time step (`mod(dt_nucl,dt_elec)=0`).
 
-#### DECO: Decoherence flag
+### DECO: Decoherence flag
 
 The `deco` flag applies the EDC electronic decoherence correction described in the papey bt Granucci and Persico[@granucci2007].  
 The default value is `.false.`, i.e. no decoherence correction is applied.
 
-#### DT_ELEC: Electronic dynamics time step
+### DT_ELEC: Electronic dynamics time step
 
 The keyword `dt_elec` sets the electronic time step in atomic units.
 
-#### N_STATES: Number of states
+### N_STATES: Number of states
 
 The keyword `nstates` sets the number of electronic states to include in the calculation, i.e.
 the number of states for use with Eq. 5 of the 2020 Song paper.
 
-#### INIT_STATE: Initial state
+### INIT_STATE: Initial state
 
 The keyword `init_state` sets the initial electronic state to be occupied;
 the numbering for this keyword and the output that reports the currently
@@ -360,7 +360,7 @@ occupied state runs from 0 (ground state) to `nstates-1`.
 So if you want to start a calculation in the first excited state, you would set
 `init_state` to 1.
 
-#### TDKS: Time-Dependent Kohn-Sham
+### TDKS: Time-Dependent Kohn-Sham
 
 The keyword `tdks` will use Time-Dependent Kohn-Sham instead of the default [Tamm-Dancoff](Excited-State-Calculations.md#cis-and-rpa-the-tamm-dancoff-approximation) approximation.  
 The keyword requires the keyword [`odft`](Density-Functional-Theory-for-Molecules.md#odft-and-mult-open-shell-systems)
@@ -370,7 +370,7 @@ It can have two values:
 - `1` (default) selects the alpha spin channel
 - `2`  selects the beta spin channel
 
-#### NAMD Input Example
+### NAMD Input Example
 
 Example input for  fewest-switches surface-hopping (FSSH) approach.
 
