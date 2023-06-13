@@ -1,27 +1,12 @@
 ---
 title: "NWChem Website"
 ---
-<style>
-  .img-container {
-    position: relative;
-    padding-bottom: 18.71%;/* 100*(1-(w-h)/w)*/
-    height: 0;
-    }
 
-.img-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  }
-</style>
-<div class="img-container">
-<img src="header.webp" alt="header" height="131" width="700" style="border:0;" />
-</div>
-  
 
-<br>
+# NWChem: Open Source High-Performance Computational Chemistry
+
+![](EMSL_light.svg){ align=right }
+
 The NWChem  software contains 
 computational chemistry tools that are scalable both in their
 ability to efficiently treat large scientific  problems,
@@ -29,8 +14,8 @@ ability to efficiently treat large scientific  problems,
 from high-performance parallel supercomputers to conventional
 workstation clusters.
 
-NWChem can handle:  
-<img src="pt55.webp" style="float:right; margin-right:2px;" alt="drawing" height="120" width="120"/>
+NWChem can handle:
+![](pt55.webp){ align=right}
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -40,8 +25,8 @@ NWChem can handle:
   * Properties and relativistic effects
 
 NWChem is actively developed by a consortium of developers and
-maintained by the [EMSL](http://www.emsl.pnl.gov) located at the Pacific
-Northwest National Laboratory ([PNNL](http://www.pnl.gov)) in Washington
+maintained by the [The Environmental Molecular Sciences Laboratory (EMSL)](https://www.emsl.pnnl.gov) located at the Pacific
+Northwest National Laboratory ([PNNL](https://www.pnl.gov)) in Washington
 State. Researchers interested in contributing to NWChem should review
 the [Developers page](Developer). The
 code is distributed as open-source under the terms of the [Educational
@@ -59,7 +44,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 
 ### EMSL Arrows
 
-<img src="myarrowmovie.webp" style="float:right; margin-left:10px;" alt="drawing" height="160" width="160"/>
+![](myarrowmovie.webp){ align=right }
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
