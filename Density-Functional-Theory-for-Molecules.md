@@ -156,7 +156,7 @@ named "ao basis", or it must be assigned to this default name using the
 In addition to the basis set for the Kohn-Sham orbitals, the charge
 density fitting basis set can also be specified in the input directives
 for the DFT module. This basis set is used for the evaluation of the
-Coulomb potential in the Dunlap scheme. The charge density fitting basis
+Coulomb potential in the Dunlap scheme[@dunlap1979,@eichkorn1995]. The charge density fitting basis
 set must have the name `cd basis`. This can be the actual name of a
 basis set, or a basis set can be assigned this name using the
 [SET](SET.md) directive. If this basis set is not
