@@ -5,8 +5,6 @@ title: "NWChem Website"
 
 # NWChem: Open Source High-Performance Computational Chemistry
 
-![](EMSL_light.svg){ align=right }
-
 The NWChem  software contains 
 computational chemistry tools that are scalable both in their
 ability to efficiently treat large scientific  problems,
@@ -15,7 +13,7 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 NWChem can handle:
-![](pt55.webp){ align=right}
+![](mol1andmol2.webp){ align=right}
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -23,6 +21,8 @@ NWChem can handle:
   * Gaussian basis functions or plane-waves
   * Scaling from one to thousands of processors
   * Properties and relativistic effects
+
+![](EMSL_light_60pct.svg){ align=right }
 
 NWChem is actively developed by a consortium of developers and
 maintained by the [The Environmental Molecular Sciences Laboratory (EMSL)](https://www.emsl.pnnl.gov) located at the Pacific
