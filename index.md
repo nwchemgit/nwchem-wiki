@@ -26,7 +26,7 @@ NWChem can handle:
 
 NWChem is actively developed by a consortium of developers and maintained by  
 [The Environmental Molecular Sciences Laboratory (EMSL)](https://www.emsl.pnnl.gov) located at the Pacific  
-Northwest National Laboratory ([PNNL](https://www.pnl.gov)) in Washington State. Researchers interested
+Northwest National Laboratory ([PNNL](https://www.pnl.gov)) in Washington State. Researchers interested  
 in contributing to NWChem should review
 the [Developers page](Developer). The
 code is distributed as open-source under the terms of the [Educational
