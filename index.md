@@ -40,7 +40,9 @@ the condensed phase, and enabling innovative and integrated research at
 EMSL. At the same time continued development is needed to enable NWChem
 to effectively utilize architectures of tens of petaflops and beyond.
 
-#### *NWChem version 7.2.0 can be downloaded from this* [link](https://github.com/nwchemgit/nwchem/releases/tag/v7.2.0-release)
+### Latest NWChem release
+
+NWChem version 7.2.0 is the latest release available for download from the link [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases).
 
 ### EMSL Arrows
 
