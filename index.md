@@ -13,7 +13,8 @@ from high-performance parallel supercomputers to conventional
 workstation clusters.
 
 NWChem can handle:
-![](mol1andmol2.webp){ align=right}
+<img align="right" alt="" width="72" height="175" src="mol1andmol2.webp" />
+<!--![](mol1andmol2.webp){ align=right}-->
 
   * Biomolecules, nanostructures, and solid-state
   * From quantum to classical, and all combinations
@@ -22,7 +23,9 @@ NWChem can handle:
   * Scaling from one to thousands of processors
   * Properties and relativistic effects
 
-![](EMSL_light_60pct.svg){ align=right }
+<img align="right" alt="" width="103.02" height="43.14" src="EMSL_light_60pct.svg" />
+<!--![](EMSL_light_60pct.svg){ align=right }-->
+
 
 NWChem is actively developed by a consortium of developers and maintained by  
 [The Environmental Molecular Sciences Laboratory (EMSL)](https://www.emsl.pnnl.gov) located at the Pacific  
@@ -46,7 +49,8 @@ NWChem version 7.2.0 is the latest release available for download from the link 
 
 ## EMSL Arrows
 
-![](myarrowmovie.webp){ align=right }
+<img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp" />
+<!--![](myarrowmovie.webp){ align=right }-->
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
 decks, check your output decks against a large database of calculations,
