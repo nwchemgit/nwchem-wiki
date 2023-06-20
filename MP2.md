@@ -76,6 +76,7 @@ For example, in a calculation on Si(OH)<sub>2</sub>, by default the lowest
 seven orbitals would be frozen (the oxygen 1*s*, and the silicon
 1*s*, 2*s* and 2*p*).
 
+### Number of orbitals considered "core" in the "freeze by atoms" algorithm
 
 | Period | Elements | Core Orbitals                                                                              | Number of Core |
 | ------ | -------- | ----------------------------------- | -------------- |
@@ -87,7 +88,7 @@ seven orbitals would be frozen (the oxygen 1*s*, and the silicon
 | 5      | Cs - Rn  | *1s2s2p3s3p4s3d4p5s4d5p*            | 27             |
 | 6      | Fr - Lr  | *1s2s2p3s3p4s3d4p5s4d5p6s4f5d6p*    | 43             |
 
-Number of orbitals considered "core" in the "freeze by atoms" algorithm
+
 
 
 **Caution:** The rule for freezing orbitals "by atoms" are rather
@@ -107,7 +108,7 @@ freeze atomic O 1 Si 3
 ```
 
 In this case only the lowest four orbitals would be frozen. If the user
-does not specify the orbitals by atom, the rules default to Table 16.1.
+does not specify the orbitals by atom, the rules default  to values reported in the [Table above](#number-of-orbitals-considered-core-in-the-freeze-by-atoms-algorithm).
 
 Caution: The system does not check for a valid number of orbitals per
 atom. If the user specifies to freeze more orbitals then are available
