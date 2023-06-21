@@ -64,29 +64,29 @@ Default: 298.15 K
 This specifies the thermostat to use for regulating the temperature of
 the nuclei. Possible options are:
 
-- **none**
+- **`none`**
 
    No thermostat is used, i.e. an NVE ensemble is simulated. Default  
 
-- **svr** `<double default 1000.0>`
+- **`svr`** `<double default 1000.0>`
 
    Stochastic velocity rescaling thermostat of Bussi, Donadio, and Parrinello[@bussi2007].  
    Number sets the relaxation parameter of the thermostat  
 
-- **langevin** `<double default 0.1>`
+- **`langevin`** `<double default 0.1>`
 
    Langevin dynamics, implementation according to Bussi and Parrinello[@bussiparrinello2007].  
    The optional input parameter sets the value of the friction  
 
-- **berendsen** `<double default 1000.0>`  
+- **`berendsen`** `<double default 1000.0>`  
 
    Berendsen thermostat, the optional input parameter sets the relaxation parameter of the thermostat  
 
-- **rescale**
+- **`rescale`**
 
    Velocity rescaling, i.e. isokinetic ensemble  
   
-- **nose-hoover** `<integer default 3>`
+- **`nose-hoover`** `<integer default 3>`
   
   Nosé–Hoover thermostat (only available in release 7.2.0 and later). 
   The optional input parameter defines the number of oscillators.
