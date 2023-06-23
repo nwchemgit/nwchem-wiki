@@ -93,21 +93,21 @@ the nuclei. Possible options are:
 
 ### RAND_SEED: Seed for the random number generator
 
-This specifies the seed for initializing the random number generator. If
+`rand_seed` specifies the seed for initializing the random number generator. If
 not given, a unique random seed will be generated. Even without a
 thermostat, this will influence the initial
 velocities.
 
 ### COM_STEP: How often center-of-mass translations and rotations are removed
 
-This specifies that center-of-mass translations and rotations will be
+`com_step` specifies that center-of-mass translations and rotations will be
 removed every `com_step` steps. Default 10 COM translations and rotations
 are removed on startup (either randomized initial velocities or those
 read from the restart file).
 
 ### PRINT_XYZ: How often to print trajectory information to xyz file
 
-This specifies how often the trajectory information (coordinates, velocities,
+`print_xyz` specifies how often the trajectory information (coordinates, velocities,
 total energy, step number, dipole (if available)) is written to the xyz file. The
 units for the coordinates and velocities in the xyz file are Angstrom
 and Angstrom/fs, respectively.  
@@ -116,17 +116,17 @@ Default: 1
 
 ### LINEAR: Flag for linear molecules
 
-If present, the code assumes the molecule is linear.
+If the `linear` keyword is present, the code assumes the molecule is linear.
 
 ### PROPERTY: How often to calculate molecular properties as part of the MD simulation
 
-If present, the code will look for the property block and calculate the requested properties.  
+If the `property` keyword present, the code will look for the property block and calculate the requested properties.  
 For example, `property 5` will calculate properties on the current geometry every 5 steps.  
 Default: 0 (e.g properties are not computed)  
 
 ### TDDFT: How often to peform TDDFT calculation as part of the MD simulation  
 
-If present, the code will look for the tddft block and calculate the absorption spectrum.  
+If the `tddft` keyword is present, the code will look for the tddft block and calculate the absorption spectrum.  
 For example, `tddft 5` will perform tddft calculations on the current geometry every 5 steps.  
 Default: 0 (e.g tddft is not run)
 
