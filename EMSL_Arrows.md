@@ -187,6 +187,7 @@ nwoutput: caffeine :nwoutput
   
 ::Arrows
 ```
+
 ## Try out the following web API links (Now Available for Alpha Testing)
 
 [EMSL Arrows API v1.0](http://arrows.emsl.pnnl.gov/api/)
@@ -314,13 +315,13 @@ DFT and plane-wave DFT programs.
                         Only available in Gaussian DFT program
 ```
 
-The xc\_property{} is an optional keyword used to specify the exchange
-correlation potential used in an nmr calculation, and xc\_base{} is an
+The `xc_property{}` is an optional keyword used to specify the exchange
+correlation potential used in an nmr calculation, and `xc_base{}` is an
 optional keyword used to specify the exchange correlation potential of
 the base calculation for an MP2 or CCSD(T) calculation. By default the
-xc\_property and xc\_base are defined to be the same as xc{}.
+`xc_property` and `xc_base` are defined to be the same as `xc{}`.  
 
-### ESMILES Options - solvation\_type{}
+### ESMILES Options - solvation_type{}
 
 The default solvation type is solvation\_type{COSMO}. The following
 solvation types are available with the Gaussian DFT, MP2 and CCSD(T)
@@ -335,7 +336,7 @@ programs.
 -       None                 -- Gas-phase calculation, no solvation model included in the calculations
 ```
 
- The available  SMD `solvent` keywords are given  below:
+ The available  SMD `solvent` keywords are given  below:  
 
 
 | Keyword     | Name                            |
@@ -520,9 +521,8 @@ programs.
 | o-xylene    | o-xylene                        |
 | p-xylene    | p-xylene                        |
 | xylenemx    | xylene (mixture)                |
+    
   
-<br/><br/> 
-
 When a solvent is specified by name, the descriptors for the solvent are
 based on the Minnesota Solvent Descriptor Database:
 
@@ -602,6 +602,8 @@ To calculate atomization energies the following input can be used.
 ```
  C(Cl)(Cl)(Cl)O  --> [C]  mult{3} + 3 [Cl] mult{2} + [O] mult{3}
 ```
+
+
 ## MAP Function for Adding Options to Reactions
 
 To calculate a reaction energy using non-default options the following
@@ -644,6 +646,7 @@ trichloromethanol + methane --> chloroform + methyl alcohol  
   
 ::Arrows
 ```
+
 ## How to Define the Chemical Structure with XYZ Input
 
 The xyzinput: :xyzinput block is used to enter a chemical structure
