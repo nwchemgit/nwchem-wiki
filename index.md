@@ -59,7 +59,7 @@ spectra of a modest size molecule, or just try out nwchem before
 installing it? EMSL Arrows scientific service can help. A web api to
 EMSL Arrows is now available for alpha testing.
 
-for more information see
+For more information see
 [EMSL Arrows - an easier way to use nwchem](EMSL_Arrows)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
