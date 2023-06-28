@@ -1,22 +1,24 @@
 
 # EMSL Arrows - Evolution of Chemical and Materials Computation
 
+## Overview
+
 We would like thank the DOD SERDP program and the DOE OS OBER EMSL
 project for providing support that helped with the initial development
 of EMSL Arrows.
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api) </span>
+[* EMSL Arrows API*](https://arrows.emsl.pnnl.gov/api) </span>
 
 
-<p><iframe width="560" height="315" src="//www.youtube.com/embed/6cIwx63qiQM" frameborder="0" allowfullscreen></iframe>
-</p
-><p><a href="https://youtu.be/UFZg-_nQZPM" class="external text" rel="nofollow">Tutorial on YouTube</a>
+<p><iframe width="560" height="315" src="//www.youtube.com/embed/6cIwx63qiQM" frameborder="0" allowfullscreen></iframe></p>
+<p><a href="https://youtu.be/UFZg-_nQZPM" class="external text" rel="nofollow">Tutorial on YouTube</a>
 <a href="https://youtu.be/6cIwx63qiQM" class="external text" rel="nofollow">(mobile devices)</a>
 </p>
-<p>>
+<p>
 <a href="mailto:arrows@emsl.pnnl.gov?Subject=Another%20Wile(y)%20EMSL%20Arrows%20Calculation&amp;body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AHydrolyzing%20Wile%20E%20Coyote's%20favorite%20molecule%20to%20a%20Meisenheimer%20complex%0A%0AArrows::%20reaction:%20cid=8376%20+%20hydroxide%20--%3E%20TNT-1-OH-%20:reaction%20::Arrows" class="external text" rel="nofollow">Click here to try out Arrows by sending it an email</a>
 </p>
+
 
 Are you just learning NWChem and would like to have an easy way to
 generate input decks, check your output decks against a large database
@@ -29,7 +31,7 @@ Click on this [link](https://arrows.emsl.pnnl.gov/api).
 For more information contact  [Eric Bylaska (eric.bylaska@pnnl.gov)](mailto:eric.bylaska@pnnl.gov?Subject=EMSL%20Arrows%20Question)
 
 <span style="background: #82BA57; border: solid 1px #a9a9a9; padding: 8px">
-[*' EMSL Arrows API*'](https://arrows.emsl.pnnl.gov/api) </span>
+[* EMSL Arrows API*](https://arrows.emsl.pnnl.gov/api) </span>
 
 The difficulty of simulating the thermodynamic and kinetic properties of
 new materials is convoluted by the sensitivity of the processes at the
@@ -98,31 +100,30 @@ Reaction: TNT + 3 benzene --> toluene + 3 nitrobenzene ~ xc{pbe} :Re
 The results returned by EMSL Arrows are a combination of text and
 graphical output.
 
-<p><a href="Arrowsoutputimage001.png" class="image"><img alt="Arrowsoutputimage001.png" src="Arrowsoutputimage001.png" width="488" height="218" /></a>
-</p><p>
+![](Arrowsoutputimage001.png)
 
 Currently EMSL Arrows is designed to calculate the following for all
 NWChem theories:
 
   - Reaction thermodynamics for molecular systems
   - Reaction paths for molecular systems
-  - UV-vis, IR, Raman spectra for molecular systems, phonon  spectra for
+  - UV-vis, IR, Raman spectra for molecular systems, phonon spectra for
     materials systems
   - NMR spectra for molecular and materials systems
   - EXAFS spectra for molecular and materials systems
   - Energetics, structures, and band structures of crystals using the
-     Crystal Open Database (COD ) numbers
+    Crystal Open Database (COD ) numbers
   - A variety of datafiles can be returned including XYZ files, CIF
-     files, NWChem output files
+    files, NWChem output files
 
 We envision that as Arrows evolves it will be part of future closed
 cycles of chemical and materials discovery that requires integrated
-computational and experimental tools combined with materials synthesis.
-
-### Try out EMSL Arrows by sending the following simple emails to arrows@emsl.pnnl.gov
-
-<p>Returns b3lyp/6-311++G(2d,2p) results for the cinnamon flavored molecule.  <a href="mailto:arrows@emsl.pnnl.gov?Subject=Big%20Red%20Calculation&amp;body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AArrows::%20%0A%0Amolecule:%20Cinnamaldehyde%20:molecule%20%0A%0A::Arrows" class="external text" rel="nofollow">Click here to run this example.</a>
-</p>
+computational and experimental tools combined with materials synthesis.   
+  
+## Try out EMSL Arrows by sending the following simple emails to arrows@emsl.pnnl.gov
+  
+Returns b3lyp/6-311++G(2d,2p) results for the cinnamon flavored molecule.  <a href="mailto:arrows@emsl.pnnl.gov?Subject=Big%20Red%20Calculation&amp;body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AArrows::%20%0A%0Amolecule:%20Cinnamaldehyde%20:molecule%20%0A%0A::Arrows" class="external text" rel="nofollow">Click here to run this example.</a>  
+   
 ```
 ---------------- mailto: arrows@emsl.pnnl.gov -----------------------  
 Arrows::  
@@ -187,16 +188,16 @@ nwoutput: caffeine :nwoutput
   
 ::Arrows
 ```
-
+  
 ## Try out the following web API links (Now Available for Alpha Testing)
 
 [EMSL Arrows API v1.0](http://arrows.emsl.pnnl.gov/api/)
-
+  
 ## Introduction to ESMILES - How to Change Calculation Theories
 
-The combined string, "Molecule\_Input keyword1{option1}
-keyword2{option2} keywordN{optionN}", is called an "extended smiles" or
-"esmiles" for short. The Molecule\_Input can be specified using a
+The combined string, `Molecule_Input keyword1{option1}
+keyword2{option2} keywordN{optionN}`, is called an `extended smiles` or
+`esmiles` for short. The `Molecule_Input` can be specified using a
 variety of formats including a SMILES string, common names, iupac, kegg
 numbers, cas, pubchem ids, chemspider ids, and InChI strings. The
 keyword{option} tags are used to enter different calculation types for a
@@ -636,7 +637,7 @@ The map function essentially appends every compound in the reaction by
 the esmiles options string.This is preferred way to use the map
 function. However, an alternative format for entering the map function
 has also been added to the reaction: :reaction block. The format of the
-block is reaction\[esmiles options\]: reaction :reaction.
+block is `reaction[esmiles options]: reaction :reaction`.
 ```
 Arrows::  
   
