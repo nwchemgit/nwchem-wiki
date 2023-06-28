@@ -132,10 +132,9 @@ molecule: Cinnamaldehyde :molecule
   
 ::Arrows
 ```
-<p><br />
 Using MP2 to calculate the reaction energy of a hydrolysis reaction for <a href="https://s-media-cache-ak0.pinimg.com/736x/03/ca/56/03ca566a8425b37e663bf1bd81ffe61b.jpg" class="external text" rel="nofollow">TNT</a>.
 <a href="mailto:arrows@emsl.pnnl.gov?Subject=TNT%20Hydrolysis%20MP2%20Calculation&amp;body=Just%20send%20this%20email%20to%20arrows@emsl.pnnl.gov%20and%20arrows%20will%20send%20an%20email%20back%20with%20the%20results.%0A%0AArrows::%20%0A%0Areaction:%20cid=8376%20+%20hydroxide%20--%3E%20O=N%28=O%29c1cc%28O%29c%28c%28c1%29N%28=O%29=O%29C%20+%20nitrite%20~%20theory%7Bmp2%7D%20:reaction%20%0A%0A::Arrows" class="external text" rel="nofollow">Click here to run this example.</a>
-</p>
+  
 ```
 ---------------- mailto: arrows@emsl.pnnl.gov -----------------------  
 Arrows::  
