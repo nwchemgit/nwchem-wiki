@@ -65,8 +65,10 @@ srun -N $SLURM_NNODES -n $SLURM_NNODES cp ./nwchems_`id -u`.img $SCRATCH/nwchems
 export SINGULARITYENV_NWCHEM_BASIS_LIBRARY=/cluster/apps/nwchem/nwchem/src/basis/libraries/
 # use /big_scratch as scratch_dir
 export SINGULARITYENV_SCRATCH_DIR=$SCRATCH
+# bind local file system
+MYFS=$(findmnt -r -T . | tail -1 |cut -d ' ' -f 1)
 # run
-srun --mpi=pmi2 -N $SLURM_NNODES -n $SLURM_NPROCS singularity exec --bind $SCRATCH $SCRATCH/nwchems.img nwchem  "file name"
+srun --mpi=pmi2 -N $SLURM_NNODES -n $SLURM_NPROCS singularity exec --bind $SCRATCH,$MYFS $SCRATCH/nwchems.img nwchem  "file name"
 ```
 
 ## Podman
