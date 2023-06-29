@@ -159,11 +159,11 @@ lacking any fast and large local filesystem.
 export USE_NOIO=TRUE
 ```
 ~~**LIB_DEFINES** can be set to pass additional defines to the C
-preprocessor (for both Fortran and C), e.g.
+preprocessor (for both Fortran and C), e.g.~~
 ```
 export LIB_DEFINES=-DDFLT_TOT_MEM=16777216
 ```
-Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
+~~Note: `-DDFLT_TOT_MEM` sets the default dynamic memory available for
 NWChem to run, where the units are in doubles.~~   
 However, it is recommended that, instead of manually
 defining this environment variable, the [getmem.nwchem](https://github.com/nwchemgit/nwchem/blob/master/contrib/getmem.nwchem) script to be executed as described in the related [section](#setting-the-default-memory-values)
