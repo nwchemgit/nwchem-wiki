@@ -417,68 +417,9 @@ mpif90 to the PATH variable, instead.
 % make nwchem_config
 % make FC=gfortran >& make.log
 ```
-### NWChem 6.6 on Ubuntu 14.04 (Trusty Tahr)
-
-These instruction are likely to work (with minor modifications) on all
-Debian based distributions
-
-  - Packages
-required:
-
-```
-python-dev gfortran libopenblas-dev libopenmpi-dev openmpi-bin tcsh make
-```
-
-  - Settings
-```
-export USE_MPI=y
-export NWCHEM_TARGET=LINUX64
-export USE_PYTHONCONFIG=y
-export PYTHONVERSION=2.7
-export PYTHONHOME=/usr
-export BLASOPT="-lopenblas -lpthread -lrt"
-export LAPACK_LIB=$BLASOPT
-export BLAS_SIZE=4
-export USE_64TO32=y
-```
-  - Compilation steps
-```
-make nwchem_config NWCHEM_MODULES="all python"
-make 64_to_32
-make
-```
-### NWChem 6.6 on Fedora 22
-
-  - Packages
-required:
-
-```
-python-devel gcc-gfortran openblas-devel openblas-serial64 openmpi-devel tcsh make patch
-```
-
-  - Settings
-
-```
-export USE_MPI=y
-export NWCHEM_TARGET=LINUX64
-export USE_PYTHONCONFIG=y
-export PYTHONVERSION=2.7
-export PYTHONHOME=/usr
-export BLASOPT="-lnwclapack -lopenblas64"
-export BLAS_SIZE=8
-export PATH=/usr/lib64/openmpi/bin:$PATH
-export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib:$LD_LIBRARY_PATH
-export USE_ARUR=y
-```
-
-  - Compilation steps
-
-```
-make nwchem_config NWCHEM_MODULES="all python"
-make
-```
 
 ### NWChem 6.8 on Centos 7.1/Fedora 27
+
 Once you have added the [EPEL
 repository](https://docs.fedoraproject.org/en-US/epel/) to your Centos/Fedora/RedHat
 installation, you can have a more efficient NWChem build. 
@@ -517,151 +458,12 @@ make nwchem_config NWCHEM_MODULES="all python"
 make 64_to_32  
 make
 ```
-### NWChem 6.6 on RedHat 6
-
-  - Packages required:
-
-```
-python-devel gcc-gfortran openmpi-devel tcsh make
-```
-
-  - Settings
-```
-export USE_MPI=y
-export NWCHEM_TARGET=LINUX64
-export USE_PYTHONCONFIG=y
-export PYTHONVERSION=2.6
-export PYTHONHOME=/usr
-export USE_INTERNALBLAS
-export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:$LD_LIBRARY_PATH
-export PATH=/usr/lib64/openmpi/bin/:$PATH
-```
-  - Compilation steps
-```
-make nwchem_config NWCHEM_MODULES="all python"
-make
-```
-### NWChem 6.6 on RedHat 6 & EPEL repository
-
-Once you have added the [EPEL
-repository](https://fedoraproject.org/wiki/EPEL) to you RedHat 6
-installation, you can have a more efficient NWChem build. The settings
-are exactly the same as
-[Centos 7.1](Compiling-NWChem#nwchem-68-on-centos-71fedora-27)
-
-### NWChem 6.6 on OpenSuse 13
-
-  - Packages
-required:
-
-```
-gcc-fortran make python-devel openblas-devel openmpi-devel tcsh
-```
-
-  - Settings
-
-```
-export USE_MPI=y
-export NWCHEM_TARGET=LINUX64
-export USE_PYTHONCONFIG=y
-export PYTHONVERSION=2.7
-export PYTHONHOME=/usr
-export USE_64TO32=y
-export BLAS_SIZE=4
-export BLASOPT="-lopenblas -lpthread -lrt"
-export PATH=/usr/lib64/mpi/gcc/openmpi/bin:$PATH
-export LD_LIBRARY_PATH=/usr/lib64/mpi/gcc/openmpi/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/lib64/openmpi/bin/:$PATH
-```
-
-  - Compilation steps
-
-```
-make nwchem_config NWCHEM_MODULES="all python"
-make 64_to_32
-make
-```
 
 ## How to: Mac platforms
 
-### Compilation of NWChem 6.5 release on Mac OS X 10.9 x86\_64
-
-  - Download and unpack latest NWChem tarball to the directory of your
-    choosing, say /Users/johndoe/nwchem
-  - Install Homebrew as described at
-<https://brew.sh/>
-```
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-```
-  - Use Homebrew to install mpich2
-```
-brew install mpich2
-```
-  - As usual, set the env. variables
-
-```
-export USE_MPI=y
-export NWCHEM_MODULES=all
-export NWCHEM_TARGET=MACX64
-export NWCHEM_TOP=/Users/johndoe/nwchem
-```
-
-  - **Important**: set the following env. variable (GA will not compile
-    otherwise)
-
-```
-export CFLAGS_FORGA="-DMPICH_NO_ATTR_TYPE_TAGS"
-```
-
-  - Go to your source directory, configure, and compile
-
-```
-cd /Users/johndoe/nwchem/src
-make nwchem_config
-make
-```
-
 ### Compilation of NWChem 6.6 on Mac OS X 10.10 (Yosemite) x86\_64
 
-#### Method \#1: using gfortran from hpc.sf.net and mpich from macports
-
-  - Download and unpack latest NWChem tarball to the directory of your
-    choosing, say /Users/johndoe/nwchem
-  - Install gfortran (4.9) from <https://hpc.sourceforge.net/> (
-    <http://prdownloads.sourceforge.net/hpc/gcc-4.9-bin.tar.gz?download>
-    ) and make sure to add the location to your path
-
-<!-- end list -->
-
-  - Install mpi (e.g. using macports)
-
-```
-sudo port install mpich
-sudo port select mpi mpich-mp-fortran
-```
-
-  - Set environmental variables
-
-```
-export NWCHEM_TOP=/Users/johndoe/nwchem/
-export NWCHEM_TARGET=MACX64
-export USE_MPI="y"
-export USE_MPIF="y"
-export USE_MPIF4="y"
-export CFLAGS_FORGA="-DMPICH_NO_ATTR_TYPE_TAGS"
-export LIBMPI="-lmpifort -lmpi -lpmpi -lpthread"
-export BLASOPT=" "
-```
-
-  - Go to your source directory, configure, and compile
-
-```
-cd /Users/johndoe/nwchem/src
-make nwchem_config
-make
-```
-
-#### Method \#2: using gfortran and openmpi from brew
+#### Method \#1: using gfortran and openmpi from brew
 
   - Download and unpack latest NWChem tarball to the directory of your
     choosing, say /Users/johndoe/nwchem
@@ -700,7 +502,7 @@ export CFLAGS_FORGA "-DMPICH_NO_ATTR_TYPE_TAGS"
 libraries available (or brew's veclibfort), since they are causing
 NWChem to produce erroneous results
 
-#### Method \#3: using Intel compilers and MKL
+#### Method \#2: using Intel compilers and MKL
 
 The Intel compilers and MKL work just fine on Mac with the following
 options:
