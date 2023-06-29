@@ -17,29 +17,18 @@ Fedora and EPEL: [https://admin.fedoraproject.org/updates/search/nwchem](https:/
 
 Good search engine for NWChem Linux packages: [https://pkgs.org/search/?q=nwchem](https://pkgs.org/search/?q=nwchem)
 
+
 ### Example of NWChem installation on Debian/Ubuntu
 
 ```
 sudo apt-get  install nwchem
 ```
-
-### Example of NWChem RPM installation under RedHat 6 x86_64
-
+Parallel runs (using more than one process) can be performed with the command
 ```
-sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-sudo yum update
-sudo yum install nwchem nwchem-openmpi environment-modules
-```
-In order to run NWChem, you must type
-```
-module load openmpi-x86_64
-```
-The name of the NWChem executable is
-```
-nwchem_openmpi
+/usr/bin/mpirun.openmpi -np 2 nwchem n2.nw
 ```
 
-### Example of NWChem RPM installation under Centos 7 x86_64
+### Example of NWChem RPM installation under Redhat/Centos 7 x86_64
 
 ```
 sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
