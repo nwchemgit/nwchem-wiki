@@ -84,21 +84,6 @@ jobs:
           mkdir -p mkdocs/docs
           rsync -a --exclude=.git --exclude=mkdocs * mkdocs/docs/.
           ls -lrt mkdocs/docs|tail -4
-      - name: Checkout mkdocs from the nwchem repository
-        shell: bash
-        run: |
-          env|egrep GITHU
-          env|egrep runner
-          cd $GITHUB_WORKSPACE
-          cd ..
-          ls -lart
-          git clone -b $GITHUB_REF_NAME --depth 1  --filter=blob:none --sparse \
-          https://github.com/nwchemgit/nwchem nwchem
-          cd nwchem
-          git sparse-checkout set contrib/mkdocs
-          pwd
-          ls -lrta
-          mv contrib/mkdocs/* $GITHUB_WORKSPACE/mkdocs/.
       - name: check mkdocs directory
         shell: bash
         run: |
