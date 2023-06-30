@@ -1833,8 +1833,8 @@ task dft energy
 XDM  [ a1 <real a1> ]   [ a2 <real a2> ]
 ```
 
-See details (including list of a1 and a2 parameters) in  paper[delaroza2013]
-and the website <http://schooner.chem.dal.ca/wiki/XDM>
+See details (including list of a1 and a2 parameters) in  paper [@delaroza2013]
+and the website <https://erin-r-johnson.github.io/software/>
 
 ```
     geometry 
