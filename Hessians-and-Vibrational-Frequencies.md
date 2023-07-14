@@ -4,7 +4,7 @@
 
 This section relates to the computation of analytic hessians which are
 available for open and closed shell SCF, except ROHF and for closed
-shell and unrestricted open shell DFT [1]. Analytic hessians are not
+shell and unrestricted open shell DFT [@johnson1994]. Analytic hessians are not
 currently available for SCF or DFT calculations relativistic
 all-electron methodologies or for charge fitting with DFT. The current
 algorithm is fully in-core and does not use symmetry.
@@ -357,10 +357,4 @@ task scf freq
 ```
 
 ## References
-
-<references/>
-
-1.  Johnson, B.G. and Frisch, M.J. (1994) "An implementation of analytic
-    second derivatives of the gradient-corrected density functional
-    energy", *Journal of Chemical Physics* **100** 7429-7442,
-    DOI:[10.1063/1.466887](http://dx.doi.org/10.1063/1.466887)
+///Footnotes Go Here///
