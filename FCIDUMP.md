@@ -1,9 +1,9 @@
 # FCIDUMP
 
-The FCIDUMP module write the 1-electron and 2-electron integrals to disk folllowing the format
-specified in the paper  
-P.J. Knowles, N.C. Handy, 
-*Computer Physics Communications* **54**, 75-83 (1989). [DOI:10.1016/0010-4655(89)90033-7](https://doi.org/10.1016/0010-4655(89)90033-7)
+## Overview
+
+The FCIDUMP module writes the 1-electron and 2-electron integrals to disk folllowing the format
+specified in the paper  [@knowles1898]
 
 The  module is used when following NWChem task directive is specified
 ```
@@ -16,7 +16,7 @@ FCIDUMP
 END
 ```
 
-The resulting file will be named "file_prefix.fcidump"
+The resulting file will be named `file_prefix.fcidump`
 
 ## ORBITALS - Orbitals specifications
 ```
@@ -52,3 +52,5 @@ end
 
 task dft fcidump
 ```
+## References
+///Footnotes Go Here///

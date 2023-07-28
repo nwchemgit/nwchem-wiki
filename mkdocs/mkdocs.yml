@@ -141,7 +141,8 @@ nav:
       - Electronic Structure Analysis:
           - Properties.md
           - ESP.md
-          - DPLOT.md 
+          - DPLOT.md
+          - FCIDUMP.md
       - Other-Capabilities:
           - Electron-Transfer.md
           - Python.md
@@ -199,3 +200,4 @@ plugins:
         - Home*
         - Archived-Forum*
         - EMSL*
+        - FCI*
