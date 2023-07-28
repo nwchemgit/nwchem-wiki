@@ -79,7 +79,7 @@ The following sections present the input for this compound directive in
 detail, describing the options available and the usages of the various
 keywords in each of the three main parts.
 
-- [Keywords of the GEOMETRY directive](Keywords-on-the-GEOMETRY-directive.md)
+- [Keywords for the GEOMETRY directive](Keywords-for-the-GEOMETRY-directive.md)
 
 - [SYMMETRY: Symmetry Group Input](SYMMETRY----Symmetry-Group-Input.md)
 
