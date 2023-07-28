@@ -90,10 +90,9 @@ list describes all options and their defaults.
   - `adjust` - This indicates that an existing geometry is to be adjusted.
     Only new input for the redundant internal coordinates may be
     provided ([ZCOORD: Forcing internal
-    coordinates](ZCOORD-Forcing-internal-coordinates)). It
+    coordinates](ZCOORD-Forcing-internal-coordinates.md)). It
     is not possible to define new centers or to modify the point group
-    using this keyword. See [Forcing internal
-    coordinates](ZCOORD-Forcing-internal-coordinates) for
+    using this keyword. See  the section [use of the adjust keyword](ZCOORD-Forcing-internal-coordinates.md#use-of-the-adjust-keyword) for
     an example of its usage.
   - `nucleus` - keyword to specify the default model for the nuclear
     charge distribution. The following values are recognized:
