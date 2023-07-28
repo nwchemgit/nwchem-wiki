@@ -12,7 +12,7 @@ jobs:
     if: |
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
-    runs-on: [ubuntu-20.04]
+    runs-on: [ubuntu-22.04]
     steps:
       - name: Checkout nwchem-wiki
         uses: actions/checkout@v3
@@ -141,8 +141,8 @@ jobs:
           libfontenc1 x11-common xfonts-encodings  xfonts-base curl && break
           tries=$((tries+1)) ; echo attempt no.  $tries    ; sleep 9 ;  done
           curl -LJO \
-          https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
-          sudo  dpkg -i wkhtmltox_0.12.6-1.focal_amd64.deb
+          https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+          sudo  dpkg -i wkhtmltox_*.deb
           wkhtmltopdf --javascript-delay 45000 --enable-local-file-access \
           print_page.html nwchemusermanual.pdf
           ls -l nwchemusermanual.pdf
