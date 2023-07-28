@@ -3,7 +3,7 @@
 ## Overview
 
 The FCIDUMP module writes the 1-electron and 2-electron integrals to disk folllowing the format
-specified in the paper  [@knowles1898]
+specified in the paper  [@knowles1989]
 
 The  module is used when following NWChem task directive is specified
 ```
