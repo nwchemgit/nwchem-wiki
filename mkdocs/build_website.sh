@@ -19,11 +19,23 @@ if [ -d "docs" ]; then
     cd docs
 else    
     rm -rf docs #archivedforum
-#git clone --depth 1 git@github.com:nwchemgit/nwchem-wiki.git docs
-wget -q https://github.com/nwchemgit/nwchem-wiki/tarball/master -O - | tar -xz
+    #git clone --depth 1 git@github.com:nwchemgit/nwchem-wiki.git docs
+    if [[ $(uname -s) == "Darwin" ]]; then    
+	if ! [ -x "$(command -v gtar)" ]; then
+	    echo " please install gtar "
+	    echo " with homebrew "
+	    echo " "
+	    exit 1
+	fi
+	MYTAR=gtar
+    else
+	MYTAR=tar
+    fi
+    
+wget -q https://github.com/nwchemgit/nwchem-wiki/tarball/master -O - | $MYTAR -xz
 mv nwchemgit-nwchem-wiki-* docs
 cd docs
-wget -q  https://github.com/nwchemgit/archivedforum/tarball/master -O - | tar -xz --wildcards   nwchemgit-archivedforum-*/Special_AWCforum/*
+wget -q  https://github.com/nwchemgit/archivedforum/tarball/master -O - | $MYTAR -xz --wildcards   nwchemgit-archivedforum-*/Special_AWCforum/*
 mv nwchemgit-archivedforum-*/Special_AWCforum .
 #git clone --depth 1 git@github.com:nwchemgit/archivedforum.git
 #mv archivedforum/Special_AWCforum .
