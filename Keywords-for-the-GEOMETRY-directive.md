@@ -92,7 +92,7 @@ list describes all options and their defaults.
     provided ([ZCOORD: Forcing internal
     coordinates](ZCOORD-Forcing-internal-coordinates.md)). It
     is not possible to define new centers or to modify the point group
-    using this keyword. See  the section [use of the adjust keyword](ZCOORD-Forcing-internal-coordinates.md#use-of-the-adjust-keyword) for
+    using this keyword. See  the section [use of the adjust keyword](ZCOORD-Forcing-internal-coordinates.md#how-to-use-the-adjust-keyword) for
     an example of its usage.
   - `nucleus` - keyword to specify the default model for the nuclear
     charge distribution. The following values are recognized:

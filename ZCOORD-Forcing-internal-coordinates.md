@@ -104,7 +104,7 @@ must be used. The form of the UNSET directive is as follows:
  unset geometry:actlist
 ```
 
-## Use of the adjust keyword 
+## How to use the adjust keyword
 
 The following example will impose a constraint on the K-O bond with a length of three angstroms.
 ```
