@@ -106,7 +106,7 @@ must be used. The form of the UNSET directive is as follows:
 
 ## Use of the adjust keyword 
 
-The following example will impose a constraint on the K-O bond with a length of 2 angstroms.
+The following example will impose a constraint on the K-O bond with a length of three angstroms.
 ```
 geometry
  K 0.  0.0000  0.0000
