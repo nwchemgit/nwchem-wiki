@@ -142,6 +142,7 @@ jobs:
           tries=$((tries+1)) ; echo attempt no.  $tries    ; sleep 9 ;  done
           curl -LJO \
           https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+          sudo apt-get install -y libssl3
           sudo  dpkg -i wkhtmltox_*.deb
           wkhtmltopdf --javascript-delay 45000 --enable-local-file-access \
           print_page.html nwchemusermanual.pdf
