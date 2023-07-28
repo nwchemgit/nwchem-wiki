@@ -1,4 +1,4 @@
-## Keywords on the GEOMETRY directive
+## Keywords for the GEOMETRY directive
 
 This section presents the options that can be specified using the
 keywords and optional input on the main line of the GEOMETRY directive.
