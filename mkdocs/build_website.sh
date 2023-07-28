@@ -46,7 +46,12 @@ elif [[ "${MKDOCS_SERVE}" == "B" ]]; then
     mkdocs build
 else
     mkdocs serve
-fi    
+fi
+exitcode=$?
+if [ $exitcode -ne 0 ]; then
+    echo "**** Build Error ***"
+    exit 1
+fi
 # restore svg bits
 rm -rf docs
 #cd docs
