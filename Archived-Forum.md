@@ -13,7 +13,7 @@ You can use the form below to search the entries of the archived forum
 <div class="old search">
 <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
 <input name="sitesearch" type="hidden" value="nwchemgit.github.io/Special_AWCforum">
-<input autocomplete="on" class="form-control search" name="q" placeholder="Type your search keywords here" required="required"  type="text" style='font-size:24px;border:3px inset #000000;' maxlength="21" size="21">
+<input autocomplete="on" class="form-control search" name="q" placeholder="Type your search keywords here" required="required"  type="text" style='font-size:24px;border:3px inset #000000;' maxlength="18" size="18">
 <button type="submit"><i class='fas fa-search' style='font-size:24px'></i></button>
 </form>
 </div>
