@@ -53,14 +53,8 @@ markdown_extensions:
     - caption
     - footnotes:
         SEPARATOR: _footnote_
-#    - markdown_katex:
-#         no_inline_svg: True
-#         insert_fonts_css: True
-#         macro-file: macros.tex
     - pymdownx.arithmatex:
         generic: true
-#extra_javascript:
-#  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
     - mdx_math:
         enable_dollar_delimiter: True
     - pymdownx.tilde
