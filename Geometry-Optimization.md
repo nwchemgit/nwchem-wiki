@@ -186,8 +186,8 @@ The initial uphill step is appropriate if the gradient points roughly in
 the direction of the saddle point, such as might be the case if a
 constrained optimization was performed at the starting geometry.
 Alternatively, the initial search direction may be chosen to be along a
-specific internal variable (using the directive VARDIR) or along a
-specific eigen-mode (using MODDIR). Following a variable might be
+specific internal variable (using the directive `VARDIR`) or along a
+specific eigen-mode (using `MODDIR`). Following a variable might be
 valuable if the initial gradient is either very small or very large.
 Note that the eigen-modes in the optimizer have next-to-nothing to do
 with the output from a frequency calculation. You can examine the
@@ -201,7 +201,7 @@ The selection of the first negative mode is usually a good choice if the
 search is started in the vicinity of the transition state and the
 initial search direction is satisfactory. However, sometimes the first
 negative mode might not be the one of interest (e.g., transverse to the
-reaction direction). If NOFIRSTNEG is specified, the code will not take
+reaction direction). If `NOFIRSTNEG` is specified, the code will not take
 the first negative direction and will continue doing mode-following
 until that mode goes negative.
 
@@ -251,7 +251,7 @@ protocol. For more information, see the
 
 ### Print options
 
-The UNIX command "egrep '^@' \< output" will extract a pretty table
+The UNIX command `grep '^@' \< output` will extract a pretty table
 summarizing the optimization.
 
 If you specify the NWChem input
@@ -299,22 +299,22 @@ directive,
    ...  
  END
 ```
-The presence of the STEPPER compound directive automatically turns off
-the default geometry optimization tool DRIVER. Input specified for the
-STEPPER module must appear in the input file after the GEOMETRY
+The presence of the `STEPPER` compound directive automatically turns off
+the default geometry optimization tool `DRIVER`. Input specified for the
+`STEPPER` module must appear in the input file after the `GEOMETRY`
 directive, since it must know the number of atoms that are to be used in
 the geometry optimization. In the current version of NWChem, STEPPER can
 be used only with geometries that are defined in Cartesian coordinates.
-STEPPER removes translational and rotational components before
+`STEPPER` removes translational and rotational components before
 determining the step direction (5 components for linear systems and 6
 for others) using a standard Eckart algorithm. The default initial guess
 nuclear Hessian is the identity matrix.
 
-The default in STEPPER is to minimize the energy as a function of the
+The default in `STEPPER` is to minimize the energy as a function of the
 geometry with a maximum of 20 geometry optimization iterations. When
 this is the desired calculation, no input is required other than the
-STEPPER compound directive. However, the user also has the option of
-defining different tasks for the STEPPER module, and can vary the number
+`STEPPER` compound directive. However, the user also has the option of
+defining different tasks for the `STEPPER` module, and can vary the number
 of iterations and the convergence criteria from the default values. The
 input for these options is described in the following sections.
 
@@ -338,14 +338,14 @@ in the STEPPER input.
 
 ### TRACK: Mode selection
 
-STEPPER has the ability to \`\`track'' a specific mode during an
+`STEPPER` has the ability to \`\`track'' a specific mode during an
 optimization for a transition state search, the user can also have the
 module track the eigenvector corresponding to a specific mode. This is
 done by specifying the directive
 ```
  TRACK [nmode <integer nmode default 1>]
 ```
-The keyword TRACK tells STEPPER to track the eigenvector corresponding
+The keyword `TRACK` tells `STEPPER` to track the eigenvector corresponding
 to the integer value of <nmode> during a transition state walk. (Note:
 this input is invalid for a minimization walk since following a specific
 eigenvector will not necessarily give the desired local minimum.) The
@@ -375,33 +375,33 @@ input line,
  TRUST <real radius default 0.1>
 ```
 The larger the value specified for the variable radius, the larger the
-steps that can be taken by STEPPER. Experience has shown that for larger
+steps that can be taken by `STEPPER`. Experience has shown that for larger
 systems (i.e., those with 20 or more atoms), a value of 0.5, or greater,
 usually should be entered for <radius>.
 
 ### CONVGGM, CONVGG and CONVGE: Convergence criteria
 
 Three convergence criteria can be specified explicitly for the STEPPER
-calculations. The keyword CONVGGM allows the user to specify the
+calculations. The keyword `CONVGGM` allows the user to specify the
 convergence tolerance for the largest component of the gradient. This is
 the primary convergence criterion, as per the default settings, although
 all three criteria are in effect. this default setting is consistent
-with the other optimizer module DRIVER. The input line for CONVGGM has
+with the other optimizer module `DRIVER`. The input line for `CONVGGM` has
 the following form,
 ```
   CONVGGM <real convggm default 8.0d-04>
 ```
-The keyword CONVGG allows the user to specify the convergence tolerance
+The keyword `CONVGG` allows the user to specify the convergence tolerance
 for the gradient norm for all degrees of freedom. The input line is of
 the following form,
 ```
   CONVGG <real convgg default 1.0d-02>
 ```
-The entry for the real variable <convgg> should be approximately equal
+The entry for the real variable `<convgg>` should be approximately equal
 to the square root of the energy convergence tolerance.
 
 The energy convergence tolerance is the convergence criterion for the
-energy difference in the geometry optimization in STEPPER. It can be
+energy difference in the geometry optimization in `STEPPER`. It can be
 specified by input using a line of the following form,
 ```
   CONVGE <real convge default 1.0d-04>
@@ -410,7 +410,7 @@ specified by input using a line of the following form,
 
 If a step taken during the optimization is too large (e.g., the step
 causes the energy to go up for a minimization or down for a transition
-state search), the STEPPER optimizer will automatically "backstep"
+state search), the `STEPPER` optimizer will automatically "backstep"
 and correct the step based on information prior to the faulty step. If
 you have an optimization that "backsteps" frequently then the initial
 trust radius should most likely be decreased.
