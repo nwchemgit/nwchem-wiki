@@ -9,7 +9,16 @@
 <h3>Pacific Northwest National Laboratory</h3>
 <h3>P.O. Box 999, Richland, WA 99352</h3>
 <br>
-<h2> December 2022 </h2>
+
+<h2><div id="current_date"></p>
+<script>
+date = new Date();
+year = date.getFullYear();
+  month = date.toLocaleString('default', { month: 'long' });
+  day = date.getDate();
+
+document.getElementById("current_date").innerHTML = day + " " + month + " " + year;
+</script></h2>
 
 <h2>Educational Community License, Version 2.0 (ECL-2.0)</h2>
 </center
