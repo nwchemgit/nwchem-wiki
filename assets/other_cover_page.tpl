@@ -17,7 +17,7 @@ year = date.getFullYear();
   month = date.toLocaleString('default', { month: 'long' });
   day = date.getDate();
 
-document.getElementById("current_date").innerHTML = day + " " + month + " " + year;
+document.getElementById("current_date").innerHTML = month + " " + day + " " + year;
 </script></h2>
 
 <h2>Educational Community License, Version 2.0 (ECL-2.0)</h2>
