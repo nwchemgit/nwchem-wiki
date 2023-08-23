@@ -34,7 +34,7 @@ For example, if the user wants to increase the accuracy:
 
 ## NSPIN:
 
-A value of `nspin` equal to due triggers an open-shell calculation.
+A value of `nspin` equal to two triggers an open-shell calculation (while the default value of 1 tiggers a closed-shell calculation).
 
 ```
  nspin 2
