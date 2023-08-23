@@ -1,6 +1,9 @@
 # XTB
 
-## Overview 
+## Overview
+
+XTB method [@bannwarth2020]. Full documentation available at the [XTB website](https://xtb-docs.readthedocs.io).  
+The NWChem implementation makes use of the [TBlite library](https://xtb-docs.readthedocs.io).  
 
 ```
  XTB
@@ -15,6 +18,7 @@
    [BROYDEN <real broyden default 0.4>]
  END
 ```
+
 ## ACC: Accuracy
 
 For example, if the user wants to increase the accuracy:
