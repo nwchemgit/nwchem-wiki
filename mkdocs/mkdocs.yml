@@ -91,6 +91,7 @@ nav:
           - CCSD.md
           - Multiconfiguration_SCF.md
           - 'Molecular GW': GW.md
+          - XTB.md
       - Quantum Molecular Dynamics:
           - Plane-Wave-Density-Functional-Theory.md
           - Gaussian-Basis-AIMD.md
