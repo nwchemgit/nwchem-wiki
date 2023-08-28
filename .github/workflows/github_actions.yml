@@ -106,7 +106,8 @@ jobs:
         shell: bash
         working-directory: mkdocs
         run: |
-          wget -q \
+          echo " GITHUB_REF_NAME is $GITHUB_REF_NAME"
+          wget  \
           https://github.com/nwchemgit/archivedforum/tarball/"$GITHUB_REF_NAME"\
            -O - | tar -xz --wildcards \
           nwchemgit-archivedforum-*/Special_AWCforum/*
