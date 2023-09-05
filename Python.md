@@ -319,9 +319,9 @@ package.
 
 ### Scan the geometry and compute the energy and gradient
 ```
- basis noprint; H library sto-3g; O library sto-3g; end
+basis noprint; H library sto-3g; O library sto-3g; end
   
- python
+python
  print ('   y     z     energy                gradient')
  print (' ----- ----- ---------- ------------------------------------')
  y = 1.2
@@ -344,8 +344,8 @@ package.
              print ('%5.2f' % gradient[i]),
              i = i + 1
          print ('')
-     z = z + 0.1
- y = y + 0.1
+         z = z + 0.1
+     y = y + 0.1
 end
   
 print none
