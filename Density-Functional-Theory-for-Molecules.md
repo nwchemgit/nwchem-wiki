@@ -915,8 +915,7 @@ Convergence is satisfied by meeting any or all of three criteria;
 ```
 
 The default optimization strategy is to immediately begin direct
-inversion of the iterative subspace. Damping is also initiated (using
-70% of the previous density) for the first 2 iteration. In addition, if
+inversion of the iterative subspace. In addition, if
 the HOMO - LUMO gap is small and the Fock matrix diagonally
 dominant, then level-shifting is automatically initiated. There are a
 variety of ways to customize this procedure to whatever is desired.
