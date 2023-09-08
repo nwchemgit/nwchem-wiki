@@ -1033,7 +1033,7 @@ the following line
 ```
 ### CONVERGENCE FAST Keyword
       
-`convergence fast` turns on a series of parameters that most often speed-up convergence, but not in 100% of the cases.
+The `convergence fast` option turns on a series of parameters that most often speed-up convergence, but not in 100% of the cases.
 
 ```
   CONVERGENCE fast
@@ -1043,7 +1043,7 @@ the following line
 
 ```
 dft
-convergence lshift 0. ncydp 0 dampon 1d99 dampoff 1d-4 damp 40
+  convergence lshift 0. ncydp 0 dampon 1d99 dampoff 1d-4 damp 40
 end
 set quickguess t
 task dft  
