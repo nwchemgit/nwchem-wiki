@@ -115,7 +115,7 @@ The `nucleus`  keyword to specifies the default model for the nuclear
 * `finite` or `fi`: finite nuclear charge distribution with a Gaussian shape.
 The RMS radius of the Gaussian is determined from the nuclear mass number A by the expression
   
-        <pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
+<pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
   	
 NOTE: If you specify a finite nuclear size, you should ensure that the
 [basis set](Basis) you use is contracted for a finite nuclear
