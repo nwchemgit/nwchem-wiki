@@ -27,25 +27,20 @@ list describes all options and their defaults.
     to associate the default name of geometry with the alternate name.
   
 ### UNITS  
-  The `units`  keyword specifies what value will be entered by the user
-    for the string variable <units>. The default units for the geometry
+The `units`  keyword specifies what value will be entered by the user
+    for the string variable `<units>`. The default units for the geometry
     input are Angstrøms (Note: atomic units or Bohr are used within the
     code, regardless of the option specified for the input units. The
     default conversion factor used in the code to convert from Angstrøms
     to Bohr is 1.8897265 which may be overidden with the
-    `angstrom_to_au` keyword described below.).  
-     The code recognizes the
-    following possible values for the string variable <units>:   
-* `angstroms` or `an`: Angstrøms , the default (converts to A.U.
-        using the Angstrøm to A.U. conversion factor)  
-* `au` or `atomic` or `bohr`: Atomic units (A.U.)  
-* `nm` or `nanometers`: nanometers (converts to A.U. using a
-        conversion factor computed as 10.0 times the Angstrøm to A.U.
-        conversion factor)  
-* `pm` or `picometers`: `picometers` (converts to A.U. using a
-        conversion factor computed as 0.01 times the Angstrøm to A.U.
-        conversion factor)   
+    `angstrom_to_au` keyword described below).    
+ The code recognizes the following possible values for the string variable `<units>`:  
   
+* `angstroms` or `an`: Angstrøms , the default (converts to A.U. using the Angstrøm to A.U. conversion factor)  
+* `au` or `atomic` or `bohr`: Atomic units (A.U.)  
+* `nm` or `nanometers`: nanometers (converts to A.U. using a conversion factor computed as 10.0 times the Angstrøm to A.U. conversion factor)   
+* `pm` or `picometers`: `picometers` (converts to A.U. using a conversion factor computed as 0.01 times the Angstrøm to A.U. conversion factor)     
+    
 ### ANGSTROM_TO_AU
   The  `angstrom_to_au` option may also be specified as `ang2au`. This enables the
     user to modify the conversion factors used to convert between
@@ -91,8 +86,8 @@ list describes all options and their defaults.
     which they are no longer symmetry equivalent. Therefore autosym
     chooses to make the save choice.
   
-### NOAUTOZ
-`noautoz` - by default NWChem (release 3.3 and later) will generate
+### AUTOZ/NOAUTOZ
+By default NWChem will generate
     redundant internal coordinates from user input Cartesian
     coordinates. The internal coordinates will be used in geometry
     optimizations. The `noautoz` keyword disables use of internal
@@ -113,13 +108,12 @@ list describes all options and their defaults.
     an example of its usage.
   
 ### NUCLEUS  
-  The `nucleus`  keyword to specifies the default model for the nuclear
+The `nucleus`  keyword to specifies the default model for the nuclear
     charge distribution. The following values are recognized:  
+
 * `point` or `pt`: point nuclear charge distribution. This is the default.  
-* `finite` or `fi`: finite nuclear charge distribution with a
-        Gaussian shape.
-The RMS radius of the Gaussian is determined
-        from the nuclear mass number A by the expression
+* `finite` or `fi`: finite nuclear charge distribution with a Gaussian shape.
+The RMS radius of the Gaussian is determined from the nuclear mass number A by the expression
         <pre>r<sub> RMS</sub> = 0.836*A<sup>1/3</sup>+0.57 fm</pre>
 
 NOTE: If you specify a finite nuclear size, you should ensure that the
