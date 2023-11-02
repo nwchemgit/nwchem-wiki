@@ -39,7 +39,25 @@ The `units`  keyword specifies what value will be entered by the user
 * `angstroms` or `an`: Angstrøms , the default (converts to A.U. using the Angstrøm to A.U. conversion factor)  
 * `au` or `atomic` or `bohr`: Atomic units (A.U.)  
 * `nm` or `nanometers`: nanometers (converts to A.U. using a conversion factor computed as 10.0 times the Angstrøm to A.U. conversion factor)   
-* `pm` or `picometers`: `picometers` (converts to A.U. using a conversion factor computed as 0.01 times the Angstrøm to A.U. conversion factor)     
+* `pm` or `picometers`: `picometers` (converts to A.U. using a conversion factor computed as 0.01 times the Angstrøm to A.U. conversion factor)
+
+The following examples illustrate some of the various options that the
+user can specify on the first input line of the GEOMETRY directive,
+using the keywords and input options described above.
+
+The following directives all specify the same geometry for  H<sub>2</sub> (a
+bond length of 0.732556 Å):
+```
+ geometry                           geometry units nm     
+   h 0 0 0                            h 0 0 0             
+   h 0 0 0.732556                     h 0 0 0.0732556     
+ end                                end                  
+
+ geometry units pm                  geometry units atomic  
+   h 0 0 0                            h 0 0 0               
+   h 0 0 73.2556                      h 0 0 1.3843305       
+ end                                end
+```   
     
 ### ANGSTROM_TO_AU
   The  `angstrom_to_au` option may also be specified as `ang2au`. This enables the
@@ -121,20 +139,4 @@ NOTE: If you specify a finite nuclear size, you should ensure that the
 [basis set](Basis) you use is contracted for a finite nuclear
 size.
 
-The following examples illustrate some of the various options that the
-user can specify on the first input line of the GEOMETRY directive,
-using the keywords and input options described above.
 
-The following directives all specify the same geometry for  H<sub>2</sub> (a
-bond length of 0.732556 Å):
-```
- geometry                           geometry units nm     
-   h 0 0 0                            h 0 0 0             
-   h 0 0 0.732556                     h 0 0 0.0732556     
- end                                end                  
-
- geometry units pm                  geometry units atomic  
-   h 0 0 0                            h 0 0 0               
-   h 0 0 73.2556                      h 0 0 1.3843305       
- end                                end
-```
