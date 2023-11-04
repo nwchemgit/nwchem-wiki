@@ -45,7 +45,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 
 ## Latest NWChem release
 
-NWChem version 7.2.1 is the latest release available for download from the link [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases).
+NWChem version 7.2.2 is the latest release available for download from the link [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases).
 
 ## EMSL Arrows
 
