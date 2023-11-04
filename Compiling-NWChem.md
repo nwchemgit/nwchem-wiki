@@ -18,7 +18,7 @@ as well as instructions for installing pre-compiled version of NWChem are availa
 
 When dealing with source from a ***NWChem release*** (6.8 in this example)
 ```
-export NWCHEM_TOP=<your path>/nwchem-6.8
+export NWCHEM_TOP=<your path>/nwchem-7.2.
 ```
   - `$NWCHEM_TARGET` defines your target platform, e.g.
 ```
