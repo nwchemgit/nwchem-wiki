@@ -101,7 +101,7 @@ of the hydrogen atom will be calculated from the coordinates of the
 quantum and classical atom of the truncated bond using the following
 expression
 
-$$\mathbf{R}_{hlink} = (1-g)\mathbf{R}_{quant} + g*\mathbf{R}_{class}$$
+$$R_{hlink} = (1-g)R_{quant} + g*R_{class}$$
 
 where *g* is the scale factor set at 0.709
 
