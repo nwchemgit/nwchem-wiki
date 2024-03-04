@@ -15,7 +15,7 @@ jobs:
     runs-on: [ubuntu-22.04]
     steps:
       - name: Checkout nwchem-wiki
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
@@ -42,7 +42,7 @@ jobs:
     runs-on: [ubuntu-22.04]
     steps:
       - name: Checkout nwchem.wiki
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: nwchemgit/nwchem.wiki
           persist-credentials: false
@@ -71,7 +71,7 @@ jobs:
     runs-on: [ubuntu-22.04]
     steps:
       - name: checkout wiki
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
@@ -92,7 +92,7 @@ jobs:
           ls -lart mkdocs
           ls -lart mkdocs/docs
       - name: Set up Python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: install mkdocs and plugins
