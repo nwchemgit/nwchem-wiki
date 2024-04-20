@@ -16,6 +16,9 @@
 
 ## Websites containing NWChem material
 
+* Simple DFT calculations and processing with NWChem (Youtube Videos' playlist) from the Department of Materials and Optoelectronic Science at the National Sun Yat-sen University, Taiwan
+[Link for Youtube playlist](https://www.youtube.com/playlist?list=PLkbV4NC7mZIXvouZ4vhWeQIEsw4GJ3v6I)
+
 * PRACE Spring School in Computational Chemistry 2019  
 [https://web.archive.org/web/20221103195703/https://events.prace-ri.eu/event/786/attachments/840/1256/QC-workshop-advanced.pdf](https://web.archive.org/web/20221103195703/https://events.prace-ri.eu/event/786/attachments/840/1256/QC-workshop-advanced.pdf)
 
