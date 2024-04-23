@@ -579,7 +579,8 @@ Therefore, the long-range HF Exchange energy
 becomes
 
 $$E_X^{LR} = \alpha E_X^{HF} - \frac{\beta}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{\texttt{erf}(\mu r_{12})}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
-  
+
+#### Input parameters for Range-Separated functionals
 ```
  cam <real cam> cam_alpha <real cam_alpha> cam_beta <cam_beta>
 ```
