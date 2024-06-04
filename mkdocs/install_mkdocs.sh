@@ -18,8 +18,8 @@ QUIET=--quiet
 #QUIET=
 python3 -m pip install --upgrade pip $QUIET  $USEROPT
 python3 -m pip install  MarkupSafe --use-pep517 $QUIET $USEROPT
-python3 -m pip install mkdocs==1.4.3 $QUIET $USEROPT
-python3 -m pip install mkdocs-material==9.1.18 $QUIET $USEROPT
+python3 -m pip install mkdocs==1.6.0 $QUIET $USEROPT
+python3 -m pip install mkdocs-material==9.5.25 $QUIET $USEROPT
 python3 -m pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/ --use-pep517 $QUIET $USEROPT
 python3 -m pip install python-markdown-math $QUIET $USEROPT
 python3 -m pip install install pymdown-extensions $QUIET $USEROPT
