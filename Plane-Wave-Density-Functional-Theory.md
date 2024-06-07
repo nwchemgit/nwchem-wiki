@@ -125,7 +125,7 @@ application; those currently provided as options for the PSPW module
 are:
 ```
 NWPW   
-  SIMULATION_CELL            ... (see section [Simulation Cell](#Simulation_Cell)) END
+  SIMULATION_CELL            ... (see section [Simulation Cell](#simulation-cell)) END
   CELL_NAME <string cell_name default 'cell_default'>
   VECTORS [[input (<string input_wavefunctions default file_prefix.movecs>) || 
            [output(<string output_wavefunctions default file_prefix.movecs>)]] 
@@ -175,7 +175,7 @@ NWPW
 
   MAPPING <integer mapping default 1>  
   NP_DIMENSIONS <integer npi npj default -1 -1>  
-  CAR-PARRINELLO             ... (see section [Car-Parrinello](#Car-Parrinello)) END 
+  CAR-PARRINELLO             ... (see section [Car-Parrinello](#car-parrinello-scheme-for-ab-initio-molecular-dynamics)) END 
   STEEPEST_DESCENT           ... (see section [Steepest Descent](#STEEPEST_DESCENT)) END
   DPLOT                      ... (see section [DPLOT](#DPLOT)) END 
   WANNIER                    ... (see section [Wannier](#Wannier)) END 
@@ -598,7 +598,7 @@ included by default in NWChem 6.5*</span>)
 The user has the option of using many of the exchange-correlation
 potentials available in DFT Module (see Section [XC and DECOMP --
 Exchange-Correlation
-Potentials](Density-Functional-Theory-for-Molecules.#xc-and-decomp-exchange-correlation-potentials)).
+Potentials](Density-Functional-Theory-for-Molecules#xc-and-decomp-exchange-correlation-potentials)).
 ```
   XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\
       [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \ 
@@ -639,7 +639,7 @@ nonlocal contributions of a given functional. The user can also specify
 a multiplicative prefactor (the variable `prefactor` in the input) for
 the local/nonlocal component or total (for more details see Section [XC
 and DECOMP -- Exchange-Correlation
-Potentials](Density-Functional-Theory-for-Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials)).
+Potentials](Density-Functional-Theory-for-Molecules#xc-and-decomp-exchange-correlation-potentials)).
 An example of this might be,
 
 `  XC new becke88 nonlocal 0.72`
@@ -1059,7 +1059,7 @@ END
 The following list describes these keywords.
 
   - `cell_name` - name of the simulation_cell named `cell_name`. See
-    [Simulation Cell](#simulation-Cell).
+    [Simulation Cell](#simulation-cell).
   - `input_wavefunctions` - name of the file containing one-electron
     orbitals
   - `output_wavefunctions` - name that will point to file containing the
@@ -1400,7 +1400,7 @@ to a fictitious motion for the Kohn-Sham orbitals of density functional
 theory. Constant energy or constant temperature simulations can be
 performed. A detailed description of this method is described in section
 [Car-Parrinello Scheme for Ab Initio Molecular
-Dynamics](#Car-Parrinello_Scheme_for_Ab_Initio_Molecular_Dynamics).
+Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics).
 
 Input to the Car-Parrinello simulation is contained within the
 Car-Parrinello sub-block.
@@ -2668,7 +2668,7 @@ Default set to be $\frac{MIN(\left| \vec{a_i} \right|)}{\pi}, i=1,2,3$.
   - INTEGRATE_MULT_L - optional keyword which if specified allows the
     user to define the angular XC integration of the augmented region
   - SIMULATION_CELL (see [Simulation Cell](#simulation-cell) )
-  - CAR-PARRINELLO (see [Car-Parrinello](#car-parrinello) )
+  - CAR-PARRINELLO (see [Car-Parrinello](#car-parrinello-scheme-for-ab-initio-molecular-dynamics))
   - `mapping` - for a value of 1 slab FFT is used, for a value of 2 a
     2d-Hilbert FFT is used.
 
@@ -3251,7 +3251,7 @@ Car-Parrinello method can be found in
 ```
 A plotting program (e.g. gnuplot, xmgrace) can be used to look at the
 total, potential, kinetic energies, contained in the s2-md.emotion file
-(see section [EMOTION motion file](#EMOTION_motion_file) for
+(see section [EMOTION motion file](#emotion-motion-file) for
 datafile format)
 i.e.,
 ```
