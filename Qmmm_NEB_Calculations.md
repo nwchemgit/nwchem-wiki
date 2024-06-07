@@ -90,3 +90,4 @@ be found in the output file (look for XYZ FILE string) and viewed as
 animation in some of the molecular viewers (e.g.
 [JMOL](https://jmol.sourceforge.net/))
 
+The entire example directory including the output file can be downloaded from [here](QMMM_NEB_example1.tar.gz). 
