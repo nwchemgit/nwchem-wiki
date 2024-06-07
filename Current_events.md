@@ -40,7 +40,7 @@ database and it is growing every day. If an EMSL Arrows request requires
 a calculation not already in the database, then it will automatically
 start the calculation on a small number of freely available computers
 and send back the results when finished. More information can be found
-at [Arrows](EMSL_Arrows#%22EMSL). We
+at [Arrows](EMSL_Arrows). We
 would like thank the DOD SERDP program and the DOE OS OBER EMSL project
 for their support.
 

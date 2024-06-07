@@ -85,7 +85,7 @@ a nonequilibrium emission energy calculation;
 ### VEM Solvent
 
 The VEM solvent (which is water by default) can be specified by using
-the solvent keyword described in the [SMD section of this manual](SMD-Model.md#solvent) or by
+the solvent keyword described in the [SMD section of this manual](SMD-Model#smd-solvent-keyword) or by
 specifying the VEM solvent descriptors such as
 
 `dielec (real input)`  

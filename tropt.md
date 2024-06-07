@@ -3,7 +3,7 @@
 The TROPT module is one of three drivers (see Section
 [Stepper](Geometry-Optimization#geometry-optimization-with-stepper)
 for documentation on STEPPER and Section
-[Driver module](Geometry-Optimization#geometry-optimization-with-DRIVER)
+[Driver module](Geometry-Optimization#geometry-optimization-with-driver)
 for documentation on DRIVER) to perform a geometry optimization function
 on the molecule defined by input using the `GEOMETRY` directive (see
 Section [Geometry](Geometry)).

@@ -138,7 +138,7 @@ its value, for clarity in reading the input file.
 Following the `VARIABLES` directive, the `CONSTANTS` directive may be used
 to define any Z-matrix symbolic variables that remain unchanged during
 geometry optimizations. To freeze the Cartesian coordinates of an atom,
-refer to the section [Applying constraints in geometry optimizations](ZCOORD-Forcing-internal-coordinates.md#applying_constraints-in-geometry-optimizations).
+refer to the section [Applying constraints in geometry optimizations](ZCOORD-Forcing-internal-coordinates#applying-constraints-in-geometry-optimizations).
 The general form of this directive is as follows:
 ```
  CONSTANTS  
