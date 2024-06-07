@@ -36,16 +36,16 @@ The PSPW, Band, and PAW modules can be used to compute the energy and
 optimize the geometry. Both the PSPW and Band modules can also be used
 to find saddle points, and compute numerical second derivatives. In
 addition the PSPW module can also be used to perform Car-Parrinello
-molecular dynamics. Section [PSPW Tasks](#PSPW_Tasks)
+molecular dynamics. Section [PSPW Tasks](#pspw-tasks-gamma-point-calculations)
 describes the tasks contained within the PSPW module, section [Band
-Tasks](#Band_Tasks) describes the tasks contained within the
-Band module, section [PAW Tasks](#PAW_Tasks) describes the
+Tasks](#band-tasks-multiple-k-point-calculations) describes the tasks contained within the
+Band module, section [PAW Tasks](#paw-tasks-legacy-implementation) describes the
 tasks contained within the PAW module, and section [Pseudopotential and
 PAW basis
-Libraries](#Pseudopotential_and_PAW_basis_Libraries)
+Libraries](#pseudopotential-and-paw-basis-libraries)
 describes the pseudopotential library included with NWChem. The
 datafiles used by the PSPW module are described in section [NWPW RTDB
-Entries and DataFiles](#nwpw-rtdb-entries-and-dataFiles).
+Entries and DataFiles](#nwpw-rtdb-entries-and-miscellaneous-datafiles).
 Car-Parrinello output data files are described in section
 [Car-Parrinello Output
 Datafiles](#PSPW_Car-Parrinello_Output_Datafiles), and the
