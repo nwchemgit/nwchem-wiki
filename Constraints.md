@@ -27,7 +27,7 @@ The keywords are described below
     constraints. Any unnamed set of constraints will be given a name
     *default* and will be automatically loaded prior to a calculation.
     Any constraints with the name other than *default* will have to be
-    loaded manually using the [SET](Top-level#SET) directive. For example,
+    loaded manually using the [SET](SET) directive. For example,
 ```
  CONSTRAINTS one  
    spring bond 1 3 5.0 1.3

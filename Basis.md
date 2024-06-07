@@ -45,7 +45,7 @@ The following sections examine the keywords on the first line of the `BASIS` dir
     [Dyall-modified-Dirac](Relativistic-All-electron-Approximations#dyalls-modified-dirac-hamitonian-approximation)
     relativistic method require multiple basis sets with specific names.
     The user can associate the "ao basis" with another named basis using
-    the SET directive (see [SET](Top-level#SET)).
+    the SET directive (see [SET](SET)).
 
 ### SPHERICAL or CARTESIAN
   `SPHERICAL` || `CARTESIAN` :   
@@ -215,7 +215,7 @@ tags in the geometry that start with "`oxy`".
 If standard basis sets are to be placed upon a dummy center, the
 variable `<tag_in_lib>` must also be entered on this line, to identify the
 correct atom type to use from the basis function library (see the ghost
-atom example in [SET](Top-level#SET) and below).
+atom example in [SET](SET) and below).
 For example: To specify the cc-pvdz basis for a calculation on the water
 monomer in the dimer basis, where the dummy oxygen and dummy hydrogen
 centers have been identified as `bqo` and `bqh` respectively, the `BASIS`

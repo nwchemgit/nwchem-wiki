@@ -50,7 +50,7 @@ Instead, to use a pre-compiled ScaLAPACK library, the `SCALAPACK_LIB`  and `SCAL
 ## ELPA
 
 To build NWChem with the [ELPA](https://gitlab.mpcdf.mpg.de/elpa/elpa) eigensolver library,
-you need first to set the ScaLAPACK settings as described in the previous [section](#ScaLAPACK) and
+you need first to set the ScaLAPACK settings as described in the previous [section](#scalapack) and
 then you need to define the following environment variables at compile time:  
 
 ```

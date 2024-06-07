@@ -33,7 +33,7 @@ When the  keyword `atomic` is specified, the integrals are evaluated using the a
 ## FREEZE - Freezing orbitals
 
 When using molecular orbitals, orbitals can be frozen as described in the
-[MP2](MP2##freeze----freezing-orbitals) section
+[MP2](MP2#freeze-freezing-orbitals) section
 
 ## Examples
 

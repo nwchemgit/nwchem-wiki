@@ -329,7 +329,7 @@ directive
 STEPPER can also be used to find the transition state by following the
 lowest eigenvector of the nuclear Hessian. This is usually invoked by
 using the saddle keyword on the [TASK
-directive](Top-level#TASK), but it may also be
+directive](TASK), but it may also be
 selected by specifying the directive
 ```
  TS

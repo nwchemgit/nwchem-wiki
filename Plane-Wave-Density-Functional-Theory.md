@@ -77,12 +77,12 @@ PSPW
 END
 ```
 To perform an actual calculation a TASK PSPW directive is used (Section
-[Task](Top-level#Task)).
+[Task](TASK)).
 
 `TASK PSPW`
 
 In addition to the directives listed in
-[Task](Top-level#Task), i.e. 
+[Task](TASK), i.e. 
 ```
 TASK PSPW energy 
 TASK PSPW gradient 
@@ -1000,7 +1000,7 @@ NWPW
 END
 ```
 To perform an actual calculation a Task Band directive is used (Section
-[Task](Top-level#TASK)).
+[Task](TASK)).
 
 `Task Band`
 
@@ -2572,11 +2572,11 @@ NWPW
 END
 ```
 To perform an actual calculation a TASK PAW directive is used
-([Task](#TASK)).
+([Task](TASK)).
 
 `TASK PAW`
 
-In addition to the directives listed in [Task](#TASK), i.e.
+In addition to the directives listed in [Task](TASK), i.e.
 ```
 TASK paw energy   
 TASK paw gradient   
