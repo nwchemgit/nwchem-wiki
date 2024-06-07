@@ -598,7 +598,7 @@ included by default in NWChem 6.5*</span>)
 The user has the option of using many of the exchange-correlation
 potentials available in DFT Module (see Section [XC and DECOMP --
 Exchange-Correlation
-Potentials](Density-Functional-Theory-for-Molecules#XC_and_DECOMP_--_Exchange-Correlation_Potentials)).
+Potentials](Density-Functional-Theory-for-Molecules.#xc-and-decomp-exchange-correlation-potentials)).
 ```
   XC [[acm] [b3lyp] [beckehandh] [pbe0] [bhlyp]\
       [becke97]  [becke97-1] [becke97-2] [becke97-3] [becke98] [hcth] [hcth120] [hcth147] \ 
@@ -1567,7 +1567,7 @@ coordinates in a simulation (Note - the Car-Parrinello code recognizes
 Cartesian constraints, but it does not recognize internal coordinate
 constraints). The +SET+ directive (Section [Applying constraints in
 geometry
-optimizations](Geometry#Applying_constraints_in_geometry_optimizations))
+optimizations](ZCOORD-Forcing-internal-coordinates#applying-constraints-in-geometry-optimizations)) 
 is used to freeze atoms, by specifying a directive of the form:
 ```
 set geometry:actlist <integer list_of_center_numbers>
@@ -1589,9 +1589,8 @@ If this option is not specified by entering a +SET+ directive, the
 default behavior in the code is to treat all atoms as active. To revert
 to this default behavior after the option to define frozen atoms has
 been invoked, the +UNSET+ directive must be used (since the database is
-persistent, see Section [NWChem
-Architecture](Top-level#NWChem_Architecture)). The
-form of the +UNSET+ directive is as follows:
+persistent, see Section [NWChem Architecture](NWChem-Architecture)).
+The form of the +UNSET+ directive is as follows:
 
 `unset geometry:actlist`
 
