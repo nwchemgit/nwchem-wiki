@@ -54,8 +54,11 @@ mkdocs  gh-deploy --config-file ../mkdocs.yml --remote-branch master
 cd ..
 rm -rf  nwchemgit.github.io_temp
 elif [[ "${MKDOCS_SERVE}" == "B" ]]; then
-    echo 'building'
-    mkdocs build
+	    tries=1 ; until [ "$tries" -ge 10 ] ; do \
+			  echo 'building '
+			  mkdocs build \
+			      && break ;\
+			      tries=$((tries+1)) ; echo attempt no.  $tries    ; sleep 30 ;  done
 else
     mkdocs serve
 fi
