@@ -138,7 +138,7 @@ setting the temperatures in a previous "VIB" command, i.e.
 The "VIB" module also can generate mode animation input files in the
 standard xyz file format for graphics packages like RasMol or XMol There
 are scripts to automate this for RasMol in
-$NWCHEM\_TOP/contrib/rasmolmovie. Each mode will have 20 xyz files
+`$NWCHEM_TOP/contrib/rasmolmovie`. Each mode will have 20 xyz files
 generated that cycle from the equilibrium geometry to 5 steps in the
 positive direction of the mode vector, back to 5 steps in the negative
 direction of the mode vector, and finally back to the equilibrium
@@ -158,6 +158,18 @@ animations for most systems. This can be changed via the input directive
 ```
 where <step_size> is the real number that is the magnitude of each step
 along the eigenvector of each nuclear hessian mode in atomic units.
+
+#### Changing the Suffix of the Animation Files
+
+The `filename` option sets a new name for the animated natural modes so you
+can have more than one vibrational analysis in a run (e.g. find minimum,
+calculate frequencies, follow mode to TS, calculate frequencies again).
+The optional keyword `overwrite` allows old animated modes to be overwritten
+if they exist.  
+
+```
+filename <filename> [overwrite]
+```
 
 ### An Example Input Deck
 
