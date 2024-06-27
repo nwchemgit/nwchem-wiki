@@ -142,10 +142,10 @@ has rendered the current set of coordinates invalid or non-optimal.
    INHESS <integer inhess default 0>
 ```
 
-  - 0 = Default ... use restart data if available, otherwise use
+  - `0` = Default ... use restart data if available, otherwise use
     diagonal guess.
-  - 1 = Use diagonal initial guess.
-  - 2 = Use restart data if available, otherwise transform Cartesian
+  - `1` = Use diagonal initial guess.
+  - `2` = Use restart data if available, otherwise transform Cartesian
     Hessian from previous frequency calculation.
 
 In addition, the diagonal elements of the initial Hessian for internal
@@ -251,8 +251,13 @@ protocol. For more information, see the
 
 ### Print options
 
-The UNIX command `grep '^@' \< output` will extract a pretty table
-summarizing the optimization.
+The UNIX command   
+
+```
+grep '^@' \< output
+```
+
+will extract a pretty table summarizing the optimization.  
 
 If you specify the NWChem input
 ```
@@ -265,24 +270,23 @@ you'll obtain a pleasantly terse output.
 For more control, these options for the standard print directive are
 recognized
 
-  - debug - prints a large amount of data. Don't use in parallel.
-  - high - print the search direction in internals
-  - default - prints geometry for each major step (not during the line
+  - `debug` - prints a large amount of data. Don't use in parallel.
+  - `high` - print the search direction in internals
+  - `default` - prints geometry for each major step (not during the line
     search), gradient in internals (before and after application of
     constraints)
-  - low - prints convergence and energy information. At convergence
+  - `low` - prints convergence and energy information. At convergence
     prints final geometry, change in internals from initial geometry
 
 and these specific print options
 
-  - finish (low) - print geometry data at end of calculation
-  - bonds (default) - print bonds at end of calculation
-  - angles (default) - print angles at end of calculation
-  - hvecs (never) - print eigen-values/vectors of the Hessian
-  - searchdir (high) - print the search direction in internals
-  - "internal gradient" (default) - print the gradient in internals
-  - sadmode (default) - print the mode being followed to the saddle
-    point
+  - `finish` (low) - print geometry data at end of calculation
+  - `bonds` (default) - print bonds at end of calculation
+  - `angles` (default) - print angles at end of calculation
+  - `hvecs` (never) - print eigen-values/vectors of the Hessian
+  - `searchdir` (high) - print the search direction in internals
+  - `"internal gradient"` (default) - print the gradient in internals
+  - `sadmode` (default) - print the mode being followed to the saddle point
 
 ## Geometry Optimization with STEPPER
 
@@ -338,7 +342,7 @@ in the STEPPER input.
 
 ### TRACK: Mode selection
 
-`STEPPER` has the ability to \`\`track'' a specific mode during an
+`STEPPER` has the ability to *track* a specific mode during an
 optimization for a transition state search, the user can also have the
 module track the eigenvector corresponding to a specific mode. This is
 done by specifying the directive
