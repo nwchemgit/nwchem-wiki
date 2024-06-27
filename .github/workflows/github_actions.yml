@@ -130,13 +130,13 @@ jobs:
           ls -lart || true
           ls -lart site/index.html || true
           echo github.event_name ${{  github.event_name }}
+          cd site && bash ../remove_polyfill.sh || true
       - name: write pdf
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         shell: bash
         working-directory: mkdocs
         run: |
           cd site
-          bash ../remove_polyfill.sh
           tries=1 ; until [ "$tries" -ge 5 ] ; do
           sudo apt-get -y install libjpeg-turbo8 libpng16-16 fontconfig \
           libxext6 libfreetype6 libxrender1 libx11-6 xfonts-75dpi libexpat1 \
