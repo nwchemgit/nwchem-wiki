@@ -202,7 +202,8 @@ defines the format for some of these files.
     printed out every mprnt MC steps. Each distribution is normalized
     (sum equal to one) with respect to the entire (all species)
     distribution. The error is the RMS deviation of the average at each
-    point. Each entry is as follows:   
+    point. Each entry is as follows:
+    
 ```    
     [1] # Total Configurations 
     [2] Species number # 
@@ -210,7 +211,8 @@ defines the format for some of these files.
     [Repeats nob times] 
     [2 and 3 Repeats for each species]
     [4] *** separator.  
- ```     
+```
+
 2.  `*.MCdata.#`  
       
     This file is a concatenated list of accepted configurations. Each
@@ -218,7 +220,8 @@ defines the format for some of these files.
     for methods which do not produce a dipole moment with energy
     calculations. Rsim is either the radial extent of the cluster
     (r-config) or the simulation radius (r-simulation). Each entry is as
-    follows: 
+    follows:  
+
 ```    
     [1] (Atomic label) (X Coord.) (Y Coord.) (Z Coord.) 
     [1 Repeats for each atom in the cluster configuration, units are in
@@ -227,7 +230,8 @@ defines the format for some of these files.
     [3] Dipole = (X) (Y) (Z) au
     [4] Rsim = # Angstrom 
     [1 through 4 repeats for each accepted configuration]  
-```      
+```
+
 3.  `*.MCout.#`  
       
     This file has the same format and information content as the MCdata
@@ -248,7 +252,8 @@ defines the format for some of these files.
       
     This file contains the restart information for each subgroup. Its
     format is not very human readable but the basic fields are described
-    in short here. 
+    in short here.
+
 ```
     Random number seed Potential energy in hartrees
     Sum of potential energy
@@ -300,7 +305,8 @@ by removing the procrestart keyword and including the restart directive.
 The DNTMC module can be used with any level of theory which can produce
 energies. Gradients and Hessians are not required within this
 methodology. If dipole moments are available, they are also utilized.
-The task directive for the DNTMC module is shown below:
+The task directive for the DNTMC module is shown below:  
+
 ```
    task <string theory> dntmc
 ```
@@ -308,8 +314,8 @@ The task directive for the DNTMC module is shown below:
 
 This example is for a molecular cluster of 10 monomers. A 50/50 mixture
 of water and ammonia. The energies are done at the SCF/6-31++G** level
-of
-theory.
+of theory.
+
 ```
    start  
    # start or restart directive if a restart run  
