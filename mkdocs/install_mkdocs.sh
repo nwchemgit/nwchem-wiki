@@ -19,10 +19,10 @@ QUIET=--quiet
 python3 -m pip install --upgrade pip $QUIET  $USEROPT
 python3 -m pip install  MarkupSafe --use-pep517 $QUIET $USEROPT
 python3 -m pip install mkdocs==1.6.0 $QUIET $USEROPT
-#python3 -m pip install mkdocs-material==9.5.25 $QUIET $USEROPT
-MKDOCS_COMMIT=12a8e82837fe400dd1f123e41d75b32987a11744
-curl -LJO https://github.com/squidfunk/mkdocs-material/archive/MKDOCS_COMMIT.tar.gz
-python3 -m pip install mkdocs-material-$MKDOCS_COMMIT.tar.gz $QUIET $USEROPT
+python3 -m pip install mkdocs-material==9.5.26 $QUIET $USEROPT
+#MKDOCS_COMMIT=12a8e82837fe400dd1f123e41d75b32987a11744
+#curl -LJO https://github.com/squidfunk/mkdocs-material/archive/MKDOCS_COMMIT.tar.gz
+#python3 -m pip install mkdocs-material-$MKDOCS_COMMIT.tar.gz $QUIET $USEROPT
 python3 -m pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/ --use-pep517 $QUIET $USEROPT
 python3 -m pip install python-markdown-math $QUIET $USEROPT
 python3 -m pip install install pymdown-extensions $QUIET $USEROPT
