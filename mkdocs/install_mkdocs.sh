@@ -25,11 +25,11 @@ python3 -m pip install mkdocs-material==9.5.26 $QUIET $USEROPT
 #python3 -m pip install mkdocs-material-$MKDOCS_COMMIT.tar.gz $QUIET $USEROPT
 python3 -m pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/ --use-pep517 $QUIET $USEROPT
 python3 -m pip install python-markdown-math $QUIET $USEROPT
-python3 -m pip install install pymdown-extensions $QUIET $USEROPT
-#python3 -m pip install install mkdocs-with-pdf $QUIET $USEROPT
-python3 -m pip install  mkdocs-bibtex --use-pep517 $QUIET $USEROPT
-python3 -m pip install  pandoc --use-pep517 $QUIET $USEROPT
-python3 -m pip install  pypandoc_binary --use-pep517 $QUIET $USEROPT
-python3 -m pip install install git+https://github.com/flywire/caption --use-pep517 $QUIET $USEROPT
-python3 -m pip install install mkdocs-print-site-plugin $QUIET $USEROPT
+python3 -m pip install  pymdown-extensions $QUIET $USEROPT
+#python3 -m pip install mkdocs-with-pdf $QUIET $USEROPT
+python3 -m pip install mkdocs-bibtex --use-pep517 $QUIET $USEROPT
+python3 -m pip install pandoc --use-pep517 $QUIET $USEROPT
+python3 -m pip install pypandoc_binary --use-pep517 $QUIET $USEROPT
+python3 -m pip install git+https://github.com/flywire/caption --use-pep517 $QUIET $USEROPT
+python3 -m pip install mkdocs-print-site-plugin $QUIET $USEROPT
 pip freeze
