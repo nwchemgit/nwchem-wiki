@@ -110,9 +110,9 @@ the mode being maximized during a saddle-point search and defaults to
 
 ### Maximum number of steps
 ```
-   MAXITER <integer maxiter default 20>
+   MAXITER <integer maxiter default 40>
 ```
-By default at most 20 geometry optimization steps will be taken, but
+By default at most 40 geometry optimization steps will be taken, but
 this may be modified with this directive.
 
 ### Discard restart information
