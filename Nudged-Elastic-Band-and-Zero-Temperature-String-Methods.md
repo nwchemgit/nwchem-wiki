@@ -1,4 +1,6 @@
-# Nudged Elastic Band (NEB) method
+## Nudged Elastic Band (NEB) method
+
+### Overview 
 
 The NEB module is an implementation of the nudged elastic band (NEB)
 method of Jonsson et al., and it is one of two drivers in NWChem that
@@ -84,7 +86,7 @@ The following list describes the input for the NEB block
     `jobname.neb_epath` and the current geometries are appended to the
     file `jobname.nebpath_"current iteration".xyz`.
 
-## Setting up initial path
+### Setting up initial path
 
 There are three different ways to define the initial path for NEB
 optimization.
@@ -188,7 +190,7 @@ H           0.000000   -0.550469    0.754065
 H           0.000000   -0.550469   -0.754065  
 --------------- path.xyz ------------------
 ```
-## Convergence criteria
+### Convergence criteria
 
 The defaults may be used, or the directives LOOSE, DEFAULT, or TIGHT
 specified to use standard sets of values, or the individual criteria
@@ -203,7 +205,7 @@ control the maximum and root mean square of the Cartesian step.
 | XMAX | 0.0054d0 | 0.00180 | 0.00006  |
 | XRMS | 0.0036d0 | 0.00120 | 0.00004  |
 
-## NEB Tutorial 1: H2O Inversion
+### NEB Tutorial 1: H2O Inversion
 
 (input:[h2o-neb.nw](h2o-neb.nw),
 output:[h2o-neb.nwout](h2o-neb.nwout), datafiles:
@@ -357,7 +359,9 @@ file.
 @neb   14     -75.961405     -75.922286     -75.973966     -75.921927  0.03549  0.00079  0.00244  0.03857  11860.0  
 @neb  NEB calculation converged
 ```
-# Zero Temperature String Method
+## Zero Temperature String Method
+
+### Overview
 
 The STRING module is an implementation of the zero temperature string
 method of vanden Eijden et al., and it is one of two drivers in NWChem
@@ -435,7 +439,7 @@ The following list describes the input for the STRING block
     `jobname.neb_epath` and the current geometries are appended to the
     file `jobname.nebpath _"current iteration".xyz`
 
-## Setting up the initial path
+### Setting up the initial path
 
 There are three different ways to define the initial path for NEB
 optimization.
@@ -510,7 +514,8 @@ STRING
 END
 ...
 ```
-## String Tutorial 1:HCN --\> HNC path optimization
+
+### String Tutorial 1:HCN --\> HNC path optimization
 
 (input:[HCN-string1.nw](HCN-string1.nw),
 output:[HCN-string1.nwout](HCN-string1.nwout),
@@ -743,7 +748,7 @@ gnuplot>
 [400px](hcn-hnc-dft0.png)
 
 
-## String Tutorial 2:
+### String Tutorial 2:
 ```
 Title "2SiO4H4 --> H3O3Si-O-SiO3H3 + H2O"  
 echo  
@@ -823,4 +828,4 @@ string
 end  
 task pspw string ignore
 ```
-## String Tutorial 3: Combining NEB and String path optimizations
+### String Tutorial 3: Combining NEB and String path optimizations
