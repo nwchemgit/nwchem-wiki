@@ -106,7 +106,7 @@ For example, for Fedora systems, the following is needed after having installed 
 Building NWChem with the Light-weight tight-binding framework [tblite](https://tblite.readthedocs.io)
 requires  
 
-* setting theenvironment variable `USE_TBLITE=1`
+* setting the environment variable `USE_TBLITE=1`
 * adding `xtb` to list of `NWCHEM_MODULES`
 
 Example:
