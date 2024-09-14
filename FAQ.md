@@ -77,7 +77,7 @@ line after the task line and your task directive will be executed.
 
 ## Input problem: AUTOZ fails to generate valid internal coordinates
 
-If [AUTOZ](Keywords-for-the-GEOMETRY-directive.md) fails, NWChem will default to using Cartesian coordinates (and
+If [AUTOZ](Keywords-for-the-GEOMETRY-directive.md#autoznoautoz) fails, NWChem will default to using Cartesian coordinates (and
 ignore any zcoord data) so you don't have to do anything unless you
 really need to use internal coordinates. An exception are certain cases
 where we have a molecule that contains a linear chain of 4 or more
@@ -151,8 +151,9 @@ zcoord; cvr_scaling 0.9; end
 In addition to this you can also try specifying a minimal set of bonds
 to connect the fragments.
 
-If these together don't work, then you're out of luck. Use Cartesians or
-construct a Z-matrix.
+If these together don't work, then you're out of luck. Use either 
+Cartesians coordinates (by using the geometry [NOAUTOZ](Keywords-for-the-GEOMETRY-directive.md#autoznoautoz) keyword) or
+supply your own Z-matrix (using the [ZMATRIX](ZMATRIX.md) input option).
 
 ## How do I restart a geometry optimization?
 
