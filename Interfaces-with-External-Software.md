@@ -75,7 +75,7 @@ Requirements:
 
 ## Libxc
 
-Building NWChem with the [libxc](https://www.tddft.org/programs/libxc/) DFT library requires
+Building NWChem with the [libxc](https://libxc.gitlab.io/) DFT library requires
 setting the environment variable `USE_LIBXC=1`. 
 
 This procedure requires an internet connection to dowload the Libxc source.
