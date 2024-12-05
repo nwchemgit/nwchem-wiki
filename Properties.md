@@ -19,6 +19,7 @@ functions. The properties that are available are:
   - Gshift
   - Response to electric and magnetic fields (static and dynamic)
   - Raman
+  - Localization of molecular orbitals
 
 The properties module is started when the task directive TASK <theory>
 property is defined in the user input file. The input format has the
@@ -62,7 +63,8 @@ keywords:
  SPINSPIN [<integer> number_of_pairs <integer> pair_list]  
  RESPONSE [<integer> response_order <real> frequency]  
  AIMFILE  
- MOLDENFILE  
+ MOLDENFILE
+ LOCALIZATION  
  ALL
 ```
 The `ALL` keyword generates all currently available properties.
@@ -463,19 +465,57 @@ java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ## Localization
 
 
-Localized molecular orbitals can be computed with the `localization` keyword.  
+Localized molecular orbitals (LMOs) can be computed with the `localization` keyword.  
 
 ```
-property  
-   localization (( pm || boys || ibo) default pm)  
-end  
- ```
+ property  
+  localization (( pm || boys || ibo) default pm) ((0 || 1 || 2) default 0)
+ end  
+```
 
 The following methods are available:
 
 * Pipek-Mezey[@pipek1989], `pm` keyword (default) 
 * Foster-Boys[@foster1960], `boys` keyword 
 * IAO/IBO[@knizia2013][@knizia2015], `ibo` keyword 
+
+An optional integer switch may be supplied after the localization method specification. The default `0` means only occupied orbitals are localized.  Use `1` to localize virtual orbitals instead, or `2` to separately localize occupied and virtual orbitals in the same run. Localization of virtual orbitals is not implemented for the Boys localization. If only the keyword `localization` is given, this defaults to a Pipek-Mezey localization of the occupied molecular orbitals.
+
+In spin-unrestricted calculations, alpha and beta spin orbitals are localized separately. Fractional-occupation DFT and restricted open-shell Hartree-Fock or Kohn-Sham are not yet supported; attempting to use localization with fractional orbital occupations may run but will likely produce unwanted and wrong results.
+
+A localization run prints a characterizations of the LMOs. Specifically, the PM and IBO localizations print an energy-sorted list of LMOs indicating the density weight of each LMO on the various atoms for weights exceeding a 1% threshold; the atoms are listed in terms of their input number. A Boys localization prints the LMO centroid and the expectation value of *r*^2 per LMO.
+
+Typically, however, the user will want to visualize the LMOs. The localization run saves the LMO coefficients in a file `locorb.movecs`, which can be used as the MO vector file in an NWChem [DPLOT task](https://nwchemgit.github.io/DPLOT.html) to generate corresponding volume data maps, for example, in the `cube' format commonly used in computational chemistry. The latter can be visualized with a considerable number of open source, free, or proprietary software packages.
+
+NWChem test jobs that use the orbital localization functionality (under `$NWCHEM_TOP/QA/tests/`) are `localize-ibo-allyl`, `localize-pm-allyl`, and `localize-ibo-aa`. The latter is based on the acrylic acid example from the original IBO publication.[@knizia2013] IBO number 19 represents the delocalized C-C pi bond LMO of the system. After running the test job, the corresponding cube file for LMO 19 can be generated, for example, with
+
+```
+ dplot
+ vectors locorb.movecs
+ limitxyz
+ -4.3334997 4.9318898 50
+ -3.3065879000000002 3.718637 50
+ -2.0 2.0 50
+ gaussian
+ spin alpha
+ orbitals view;1;19
+ output localize-ibo-aa-00019.cube
+ end
+ task dplot
+```
+
+The resulting plot with &#177;0.03 isosurfaces may look like the following
+
+![Acrylic Acid IBO number 19](acrylic-acid-ibo.png)
+
+A [Python script](https://github.com/jautschbach/nwchem-dplot-utility) is available to facilitate the creation of volume data files for visualizing multiple MOs or LMOs of a given molecule. For the acrylic acid example, after running NWChem with the `localize-ibo-aa.nw` input, the following command will create an input file with `dplot` tasks to generate cubes for the 19 occupied and 10 virtual IBOs of the molecule on a 50x50x50 grid:
+
+```
+ dplot.py -i localize-ibo-aa.nw -m locorb.movecs -g 50 -l 1-29
+```
+
+The `dplot` task shown above is included in the resulting NWChem input file `dplot.nw`.
+
 
 ## References 
 ///Footnotes Go Here///
