@@ -9,7 +9,7 @@ by downloading and compiling the software from the NWChem makefile infrastructur
 
 ## Simint integrals library
 
-To generate the [Simint](https://www.bennyp.org/research/simint/)
+To generate the [Simint](https://github.com/simint-chem/simint-generator))
 library and enable the NWChem interface (only for energy and first derivative code),
 you need to define the following environment variables at compile time:  
 
