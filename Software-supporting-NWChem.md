@@ -93,7 +93,8 @@ feedback on this page content.
  - **PyADF** is a scripting framework for multiscale quantum chemistry <https://github.com/chjacob-tubs/pyadf-releases>
  - **UniMoVib** is a unified interface for molecular harmonic vibrational frequency calculations <https://github.com/zorkzou/UniMoVib>
  - **MoBioTools** is a toolkit to automatically setup QM/MM calculations <https://github.com/mobiochem/MoBioTools>
- - **Fragme∩t** is a framework that makes it easy to prototype, implement, and benchmark fragmentation methods <https://gitlab.com/john-herbert-group/fragment> 
+ - **Fragme∩t** is a framework that makes it easy to prototype, implement, and benchmark fragmentation methods <https://gitlab.com/john-herbert-group/fragment>
+ - **pyVPT2** is a program to perform second-order vibrational perturbation theory (VPT2) computations to obtain anharmonic vibrational frequencies <https://github.com/philipmnel/pyvpt2>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
