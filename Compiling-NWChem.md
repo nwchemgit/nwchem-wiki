@@ -16,9 +16,9 @@ as well as instructions for installing pre-compiled version of NWChem are availa
   - `$NWCHEM_TOP` defines the top directory of the NWChem source tree,
     e.g.
 
-When dealing with source from a ***NWChem release*** (6.8 in this example)
+When dealing with source from a ***NWChem release*** (7.2.3 in this example)
 ```
-export NWCHEM_TOP=<your path>/nwchem-7.2.
+export NWCHEM_TOP=<your path>/nwchem-7.2.3
 ```
   - `$NWCHEM_TARGET` defines your target platform, e.g.
 ```
@@ -28,17 +28,15 @@ The following platforms are available:
 
 | NWCHEM_TARGET | Platform | OS         | Compilers |
 |---------------|:---------|------------|-----------|
-| LINUX         | x86      | Linux      | GNU, Intel, PGI|
+| LINUX         | x86      | Linux      | GNU, Intel|
 |               | ppc      | Linux      | GNU, IBM  |
-|               | arm      | Linux      | GNU, flang |
-| LINUX64       | x86_64   | Linux      | GNU, Intel, PGI, Flang|
+|               | arm      | Linux      | GNU |
+| LINUX64       | x86_64   | Linux      | GNU, Intel,  flang|
 |               | ppc64le  | Linux      | GNU, IBM |
 |               | aarch64  | Linux      | GNU, flang |
-| MACX          | x86      | Darwin     | GNU, Intel |
-| MACX64 	| x86_64   | Darwin     | GNU, Intel |
-| BGL           |Blue Gene/L|           | IBM |
-| BGP           |Blue Gene/P|           | IBM |
-| BGQ           |Blue Gene/Q|           | IBM |
+| MACX          | x86      | Darwin     | GNU |
+| MACX64 	| x86_64   | Darwin     | GNU  |
+|         | arm64    | Darwin     | GNU  |
   
 <br>
   
