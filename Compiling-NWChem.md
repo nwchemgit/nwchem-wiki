@@ -9,7 +9,7 @@ additional platforms and better environment variables over time.
 
 Download of the NWChem source is a step needed before compilation. Details for downloading
 as well as instructions for installing pre-compiled version of NWChem are available at the
-[Download page](Download).
+[Download page](Download.md).
 
 ## Setting up the proper environment variables
 
