@@ -11,14 +11,14 @@ Docker images of the 7.2.0 release are hosted at [https://ghcr.io](https://githu
 ```
 For example, the following command can be used when starting from the `/tmp` directory:
 ```
- docker run --shm-size 256m -u `id -u` --rm -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev /data/input.nw
+ docker run --shm-size 256m -u `id -u` --rm -v $(pwd):/data ghcr.io/nwchemgit/nwchem-dev /data/input.nw
 ```
 where the input file `input.nw` is located in the `/tmp` directory.
 
 
 The following docker command will run NWChem in parallel using three processes 
 ```
-docker run --shm-size 256m  -u `id -u` --rm  --entrypoint='mpirun' -v /tmp:/data ghcr.io/nwchemgit/nwchem-dev  -np 2 nwchem /data/xvdw.nw
+docker run --shm-size 256m  -u `id -u` --rm  --entrypoint='mpirun' -v $(pwd):/data ghcr.io/nwchemgit/nwchem-dev  -np 2 nwchem /data/xvdw.nw
 ```
 This example uses the input file `xvdw.nw` available on the host directory `/tmp`
 
