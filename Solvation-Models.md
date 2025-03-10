@@ -68,7 +68,8 @@ cosmo
   [radius  <real atom1>  
            <real atom2>  
       . . .  
-           <real atomN>]  
+           <real atomN>]
+  [rsolv <real rsolv default 0.5>]  
   [iscren  <integer iscren default 0>]  
   [minbem  <integer minbem default 2>]  
   [ificos  <integer ificos default 0>]  
@@ -143,7 +144,10 @@ for heavy elements: 1.17\*1.9
 ```
 For examples see Stefanovich et al.[@stefanovich1995] and Barone et al.[@barone1997]
 
-"Rsolv" is no longer used.
+#### COSMO: RSOLV keyword
+
+`rsolv` is a parameter used to define the solvent accessible surface. See the original reference of Klamt and Schuurmann for a description. 
+The default value is 0.5 (in angstroms). It is not used in the York and Karplus (used by default in NWChem).
 
 #### COSMO: ISCREEN keyword
 `iscren` is a flag to define the dielectric charge scaling option.
