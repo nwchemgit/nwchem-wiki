@@ -1,7 +1,7 @@
 During the preparation stage of QM/MM calculations the system may also
-be solvated using *solvate* directive of the prepare module. It is
-recommended that solvation is performed in conjunction with *center* and
-*orient* directives.
+be solvated using `solvate` directive of the prepare module. It is
+recommended that solvation is performed in conjunction with `center` and
+`orient` directives.
 
    Here is an example where the ethanol molecule is declared quantum and solvated in a box of spce waters:
 

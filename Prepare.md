@@ -23,16 +23,16 @@ The prepare module performs three sub-tasks:
 Files involved in the preparation phase exist in the following hierarchy:
 
 -   standards :
-    The standard database files contain the original force field information. These files are to reside in a directory that is specified in the file $HOME/.nwchemrc. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
--   extensions : These database files contain generally accepted extensions to the original force field and are to reside in a separate directory that is specified in the file $HOME/.nwchemrc. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
+    The standard database files contain the original force field information. These files are to reside in a directory that is specified in the file `$HOME/.nwchemrc`. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
+-   extensions : These database files contain generally accepted extensions to the original force field and are to reside in a separate directory that is specified in the file `$HOME/.nwchemrc`. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
 -   contributed :
-    These database files contain contributed definitions, also required for the quality assurance tests and are to reside in a separate directory that is specified in the file $HOME/.nwchemrc. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
+    These database files contain contributed definitions, also required for the quality assurance tests and are to reside in a separate directory that is specified in the file `$HOME/.nwchemrc`. There will be such a directory for each supported force field. These directories contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
 -   user preferences :
-    These database files contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file $HOME/.nwchemrc. Separate directories of this type should be defined for each supported force field. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
+    These database files contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file `$HOME/.nwchemrc`. Separate directories of this type should be defined for each supported force field. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
 -   temporary files :
-    Temporary database files contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file $HOME/.nwchemrc. There may be such a directory for each supported force field. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
+    Temporary database files contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file `$HOME/.nwchemrc`. There may be such a directory for each supported force field. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par).
 -   current files :
-    Database files that contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file $HOME/.nwchemrc. Typically this will be the current working directory, although it may be defined as a specific directory. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par). If not specified, files will be taken from the current directory.
+    Database files that contain user preferred extensions to the original force field and are to reside in a separate directory that is specified in the file `$HOME/.nwchemrc`. Typically this will be the current working directory, although it may be defined as a specific directory. This directory may contain fragment files (with extension frg), segment files (with extension sgm) and a parameter file (with the name of the force field and with extension par). If not specified, files will be taken from the current directory.
 
 Data is taken from the database files searched in the above order. If data is specified more than once, the last found values are used. For example, if some standard segment is redefined in a temporary file, the latter one will be used. This allows the user to redefine standards or extensions without having to modify those database files, which may reside in a generally available, non-modifyable directory. If a filename is specified rather than a directory, the filename indicates the parameter file definition. All other files (frg and sgm files) will be take from the specified directory.
 
@@ -51,7 +51,7 @@ The most common problems with the prepare module are
 Default database directories
 ----------------------------
 
-The file $HOME/.nwchemrc may contain the following entries that determine which files are used by the prepare module.
+The file `$HOME/.nwchemrc` may contain the following entries that determine which files are used by the prepare module.
 ```
 ffield <string ffname>
 ```
@@ -65,7 +65,7 @@ Entries of this type specify the directory ffdir in which force field database f
 ```
 This entry may be used to identify a pure solvent restart file solvfil by a name solvnam
 
-An example file $HOME/.nwchemrc is:
+An example file `$HOME/.nwchemrc` is:
 ```
 ffield amber
 
@@ -116,7 +116,7 @@ hbuild
 ```
 Keyword hbuild may be used to add hydrogen atoms to the unknown segments of the structure found on the pdb file. Placement of hydrogen atoms is based on geometric criteria, and the resulting fragment and segment files should be carefully examined for correctness.
 
-The database directories are used as specified in the file .nwchemrc. Specific definitions for the force field used may be changed in the input file using
+The database directories are used as specified in the file `.nwchemrc`. Specific definitions for the force field used may be changed in the input file using
 ```
 directory_(1-9) <string ffdir> [<string parfile>]
 ```
@@ -171,7 +171,7 @@ Keyword new_top is used to force the generation of a new topology file. An exist
 ```
 amber | charmm
 ```
-The prepare module generates force field specific fragment, segment and topology files. The force field may be explicitly specified in the prepare input block by specifying its name. Currently AMBER and CHARMM are the supported force fields. A default force field may be specified in the file $HOME/.nwchemrc.
+The prepare module generates force field specific fragment, segment and topology files. The force field may be explicitly specified in the prepare input block by specifying its name. Currently AMBER and CHARMM are the supported force fields. A default force field may be specified in the file `$HOME/.nwchemrc`.
 ```
 standard <string dir_s>[<string par_s>]
 extensions <string dir_x>[<string par_x>]
@@ -180,7 +180,7 @@ user <string dir_u>[<string par_u>]
 temporary <string dir_t>[<string par_t>]
 current <string dir_c>[<string par_c>]
 ```
-The user can explicitly specify the directories where force field specific databases can be found. These include force field standards, extensions, quality assurance tests, user preferences, temporary , and current database files. Defaults for the directories where database files reside may be specified in the file $HOME/.nwchemrc for each of the supported force fields. Fragment, segment and sequence files generated by the prepare module are written in the temporary directory. When not specified, the current directory will be used. Topology and restart files are always created in the current directory.
+The user can explicitly specify the directories where force field specific databases can be found. These include force field standards, extensions, quality assurance tests, user preferences, temporary , and current database files. Defaults for the directories where database files reside may be specified in the file `$HOME/.nwchemrc` for each of the supported force fields. Fragment, segment and sequence files generated by the prepare module are written in the temporary directory. When not specified, the current directory will be used. Topology and restart files are always created in the current directory.
 
 The following directives control the modifications of a topology file. These directives are executed in the order in which they appear in the prepare input deck. The topology modifying commands are not stored on the run-time database and are, therefor, not persistent.
 ```
@@ -207,7 +207,7 @@ modify ( bond <string atomtyp> <string atomtyp> |  \
     torsion <string atomtyp> <string atomtyp> <string atomtyp>        \
         <string atomtyp> [ multiplicity <integer multip> ] |      \
     plane <string atomtyp> <string atomtyp> <string atomtyp>          \
-        <string atomtyp> ) [set <integer mset>` | initial | final] \
+        <string atomtyp> ) [set <integer mset> | initial | final] \
     <real value> <real forcon>
 ```
 where atomtyp and mset are defined as above, multip is the torsion ultiplicity for which the modification is to be applied, value is the reference bond, angle, torsion angle of out-of-plane angle value respectively, and forcon is the force constant for bond, angle, torsion angle of out-of-plane angle. When multip or mset are not defined the modification will be applied to all multiplicities and sets, respectively, for the identified bonded interaction.
@@ -295,7 +295,7 @@ touch <real touch default 0.23>
 ```
 The variable touch specifies the minimum distance between a solvent and solute atom for which a solvent molecule will be accepted for solvation.
 ```
-envelope `<real xpndw default 0.0>
+envelope <real xpndw default 0.0>
 ```
 sets the expand vealues to be used in solvate operations.
 ```
@@ -364,7 +364,7 @@ cube
 ```
 specifies to redetermine the smallest cubic box size.
 ```
-box <real xsize> <real ysize>`  <real zsize>
+box <real xsize> <real ysize>  <real zsize>
 ```
 The box directive resets the box size.
 ```
