@@ -7,7 +7,7 @@ given by the topology file (extension .top). These two files are
 module](Prepare). In a typical setting this "preparation
 stage" is performed separately from the main QM/MM simulation.
 
-      * [Prerequisites](QMMM_Preparation_Prerequisites.md)  
-      * [QM region definition](Qmmm_preparation_basic.md)  
-      * [Solvation](Qmmm_preparation_solvation.md)  
-      * [Permanent Constraints](Qmmm_preparation_constraints.md)  
+* [Prerequisites](QMMM_Preparation_Prerequisites.md)  
+* [QM region definition](Qmmm_preparation_basic.md)  
+* [Solvation](Qmmm_preparation_solvation.md)  
+* [Permanent Constraints](Qmmm_preparation_constraints.md)  
