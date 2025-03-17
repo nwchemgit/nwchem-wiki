@@ -287,7 +287,7 @@ Notes:
     ACML 4.4.0 using a PGI compiler
     /opt/acml/4.4.0/pgi64_int64/lib/libacml.a
 
-### <span style="color:#FF0000">Automated build of OpenBLAS/SCaLAPACK</span>
+### <span style="color:#FF0000">Automated build of OpenBLAS/ScaLAPACK</span>
 
 **_<span style="color:#FF0000">New in NWChem 7.0.2</span>_**:   
 
