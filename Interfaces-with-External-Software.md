@@ -45,7 +45,8 @@ BUILD_SCALAPACK=1
 SCALAPACK_SIZE=8
 ```
 This procedure requires an internet connection to dowload the OpenBLAS source.    
-Instead, to use a pre-compiled ScaLAPACK library, the `SCALAPACK_LIB`  and `SCALAPACK_SIZE` environment variable need to be set.
+Instead, to use a pre-compiled ScaLAPACK library, the `SCALAPACK_LIB`  and `SCALAPACK_SIZE` environment variable need to be set, 
+as described in the related [Compiling NWChem](Compiling-NWChem.md#optimized-math-libraries) section
 
 ## ELPA
 
