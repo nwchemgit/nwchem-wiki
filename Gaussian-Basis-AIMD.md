@@ -295,7 +295,7 @@ task dft qmd
 ```
 
 The IR spectrum and vibrational density of states were generated from
-the [qmd_analysis code](qmd_tools.tar.gz) with the following
+the `qmd_analysis` code  with the following
 command.
 
 ```
