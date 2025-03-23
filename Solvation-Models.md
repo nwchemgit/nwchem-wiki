@@ -70,7 +70,8 @@ cosmo
       . . .  
            <real atomN>]
   [rsolv <real rsolv default 0.5>]  
-  [iscren  <integer iscren default 0>]  
+  [screen  <ideal||ks||st>]
+  [iscren  <integer iscren default 0, deprecated>]  
   [minbem  <integer minbem default 2>]  
   [ificos  <integer ificos default 0>]  
   [lineq   <integer lineq default 1>]  
@@ -94,8 +95,9 @@ used in subsequent calculations. Add the keyword `off` if COSMO is not
 needed in subsequent calculations.
 
 #### COSMO: DIELEC keyword
-`dielec` is the value of the dielectric constant of the medium, with a
+`dielec` is the value of the dielectric constant \( \epsilon \) of the medium, with a
 default value of 78.4 (the dielectric constant for water).
+This value is used to scale the dielectric screening energy, as detailed in the [SCREEN section](#cosmo-screen-keyword).
 
 #### COSMO: PARAMETERS keyword
 `parameters` specifies COSMO radii parameters file that stores custom
@@ -149,7 +151,17 @@ For examples see Stefanovich et al.[@stefanovich1995] and Barone et al.[@barone1
 `rsolv` is a parameter used to define the solvent accessible surface. See the original reference of Klamt and Schüürmann [@klamt1993] for a description. 
 The default value is 0.5 (in angstroms). It is not used in the York and Karplus model (used by default in NWChem).
 
-#### COSMO: ISCREEN keyword
+#### COSMO: SCREEN keyword
+The `screen` parameter defines the dielectric screening scaling.
+
+- `screen ideal` applies no scaling, meaning \( f(\epsilon) = 1 \). In this case,
+the [dielectric constant](cosmo-dielec-keyword) \( \epsilon \) is irrelevant, as the solvent is treated as a perfect conductor with \( \epsilon = \infty \).
+- `screen ks` uses the original scaling by Klamt and Schüürmann[@klamt1993], given by \( f(\epsilon) = \frac{\epsilon - 1}{\epsilon + 1/2} \).
+- `screen st` applies the modified scaling proposed by Stefanovich and Truong[@stefanovich1995], defined as \( f(\epsilon) = \frac{\epsilon - 1}{\epsilon} \).
+
+By default, the modified scaling is used. For high dielectric values, the differences between these scaling methods become negligible.
+
+#### COSMO: ISCREEN keyword (deprecated, see [SCREEN](#cosmo-screen-keyword))
 `iscren` is a flag to define the dielectric charge scaling option.
 `iscren 1` implies the original scaling from Klamt and Schüürmann,
 mainly "(&epsilon;-1)/(&epsilon;+1/2)", where &epsilon; is the
@@ -158,7 +170,8 @@ by Stefanovich and Truong[@stefanovich1995], mainly "(&epsilon;-1)/&epsilon;".
 Default is to use the modified scaling. For high dielectric the
 difference between the scaling is not significant.
 
-The next two parameters define the tesselation of the unit sphere. The
+#### COSMO: MINBEM and IFICOS keywords
+The `minbem` and `ificos` parameters define the tesselation of the unit sphere. The
 approach still follows the original proposal by Klamt and Schüürmann to
 some degree. Basically a tesselation is generated from `minbem` refining
 passes starting from either an octahedron or an icosahedron. Each level
