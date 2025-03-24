@@ -124,7 +124,7 @@ If the `property` keyword present, the code will look for the property block and
 For example, `property 5` will calculate properties on the current geometry every 5 steps.  
 Default: 0 (e.g properties are not computed)  
 
-### TDDFT: How often to peform TDDFT calculation as part of the MD simulation  
+### TDDFT: How often to perform TDDFT calculation as part of the MD simulation
 
 If the `tddft` keyword is present, the code will look for the tddft block and calculate the absorption spectrum.  
 For example, `tddft 5` will perform tddft calculations on the current geometry every 5 steps.  
