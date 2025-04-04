@@ -95,6 +95,7 @@ feedback on this page content.
  - **MoBioTools** is a toolkit to automatically setup QM/MM calculations <https://github.com/mobiochem/MoBioTools>
  - **Fragme∩t** is a framework that makes it easy to prototype, implement, and benchmark fragmentation methods <https://gitlab.com/john-herbert-group/fragment>
  - **pyVPT2** is a program to perform second-order vibrational perturbation theory (VPT2) computations to obtain anharmonic vibrational frequencies <https://github.com/philipmnel/pyvpt2>
+ - **Quick-QM-Spectra**  creates a IR, UV-VIS or Raman spectrum from a NWChem output file <https://hanlev.github.io/QQMS>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
