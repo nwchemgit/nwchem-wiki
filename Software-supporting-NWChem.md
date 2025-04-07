@@ -43,8 +43,8 @@ feedback on this page content.
 
 ## Codes using NWChem wavefunctions and/or post-processing NWChem output files
 
-  - **KiSThelP** predicts thermodynamic properties and rate constants
-    from NWChem results <http://kisthelp.univ-reims.fr/>
+  - **KiSThelP** is a program to predict thermodynamic properties and rate constants from quantum chemistry results
+ <http://kisthelp.univ-reims.fr/>
   - **Fiesta** is a Gaussian-basis GW and Bethe-Salpeter code
     <http://perso.neel.cnrs.fr/xavier.blase/fiesta/>
   - **JANPA** performs Natural Population Analysis <https://janpa.sf.net>
