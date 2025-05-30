@@ -217,10 +217,9 @@
 
 
 
-  
-## Format of segment file (7 of 7)  
+## Format of segment file (7 of 7)
 
-<center>
+
 
 | Card                                      | Format | Description     |
 | :---------------------------------------- | :----- | :-------------- |
@@ -239,7 +238,7 @@
 
 
 
-| Card                                                         | Format | Description                                                |
+| Card                                                         | Format | Description                            |
 | :----------------------------------------------------------- | :----- | :--------------------------------------------------------- |
 | I-1-1                                                        | a1     | $ to identify the start of a sequence                      |
 | I-1-2                                                        | a10    | name of the sequence                                       |
