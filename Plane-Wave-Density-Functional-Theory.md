@@ -48,7 +48,7 @@ datafiles used by the PSPW module are described in section [NWPW RTDB
 Entries and DataFiles](#nwpw-rtdb-entries-and-miscellaneous-datafiles).
 Car-Parrinello output data files are described in section
 [Car-Parrinello Output
-Datafiles](#PSPW_Car-Parrinello_Output_Datafiles), and the
+Datafiles](#car-parrinello-output-datafiles), and the
 minimization and Car-Parrinello algorithms are described in section
 [Car-Parrinello Scheme for Ab Initio Molecular
 Dynamics](#car-parrinello-scheme-for-ab-initio-molecular-dynamics).
@@ -2418,7 +2418,7 @@ This code allows the user to modify and develop pseudopotentials.
 Currently, only the Hamann and Troullier-Martins norm-conserving
 pseudopotentials can be generated. In future releases, the
 pseudopotential library (section [Pseudopotential and PAW basis
-Libraries](#Pseudopotential_and_PAW_basis_Libraries)) will be
+Libraries](#pseudopotential-and-paw-basis-libraries)) will be
 more complete, so that the user will not have explicitly generate
 pseudopotentials using this module.
 
