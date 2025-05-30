@@ -156,7 +156,7 @@ The default value is 0.5 (in angstroms). It is not used in the York and Karplus 
 The `screen` parameter defines the dielectric screening scaling.
 
 - `screen ideal` applies no scaling, meaning \( f(\epsilon) = 1 \). In this case,
-the [dielectric constant](cosmo-dielec-keyword) \( \epsilon \) is irrelevant, as the solvent is treated as a perfect conductor with \( \epsilon = \infty \).
+the [dielectric constant](#cosmo-dielec-keyword) \( \epsilon \) is irrelevant, as the solvent is treated as a perfect conductor with \( \epsilon = \infty \).
 - `screen ks` uses the original scaling by Klamt and Schüürmann[@klamt1993], given by \( f(\epsilon) = \frac{\epsilon - 1}{\epsilon + 1/2} \).
 - `screen st` applies the modified scaling proposed by Stefanovich and Truong[@stefanovich1995], defined as \( f(\epsilon) = \frac{\epsilon - 1}{\epsilon} \).
 
