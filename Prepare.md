@@ -16,7 +16,7 @@ The prepare module performs three sub-tasks:
 -   sequence generation :
     This sub-task analyzes the supplied coordinates from a PDB-formatted file or from the input geometry, and generates a sequence file, containing the description of the system in terms of basic building blocks found as fragment or segment files in the database directories for the force field used. If these files do not exist, they are generated based on the supplied coordinates. This process constists of generating a fragment file with the list of atoms with their force field dependent atom types, partial atomic charges calculated from a Hartree Fock calculation for the fragment, followed by a restrained electrostatic potential fit, and a connectivity list. From the information on this fragment file the lists of all bonded interactions are generated, and the complete lists are written to a segment file.
 -   topology generation :
-    Based on the generated or user-supplied sequence file and the force field specific segment database files, this sub-task compiles the lists of atoms, bonded interactions, excluded pairs, and substitutes the force field parameters. Special commands may be given to specify interaction parameters that will be changing in a free energy evaluation.
+    Based on the generated or user-supplied e file and the force field specific segment database files, this sub-task compiles the lists of atoms, bonded interactions, excluded pairs, and substitutes the force field parameters. Special commands may be given to specify interaction parameters that will be changing in a free energy evaluation.
 -   restart generation :
     Using the user supplied coordinates and the topology file for the chemical system, this sub-task generates a restart file for the system with coordinates, velocities and other dynamic information. This step may include solvation of the chemical system and specifying periodic boundary conditions.
 
@@ -120,10 +120,10 @@ The database directories are used as specified in the file `.nwchemrc`. Specific
 ```
 directory_(1-9) <string ffdir> [<string parfile>]
 ```
-Sequence file generation
+e file generation
 ------------------------
 
-If no existing sequence file is present in the current directory, or if the new_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
+If no existing e file is present in the current directory, or if the new_seq keyword was specified in the prepare input deck, a new sequence file is generated from information from the pdb file, and the following input directives.
 ```
 maxscf <integer maxscf default 20>
 ```
@@ -147,7 +147,7 @@ For example, to link atom SG in segment 20 with atom FE in segment 55, use:
 ```
 link 20:_SG 55:FE
 ```
-The format of the sequence file is given in [this table](Format_of_MD_Files.md#format-of-sequence-file).
+The format of the sequence file is given in [this table](Format_of_MD_Files.md#format-of-sequence-file-1-of-7).
 In addition to the list of segments this file also includes links between non-standard segments or other non-standard links. These links are generated based on distances found between atoms on the pdb file. When atoms are involved in such non-standard links that have not been identified in the fragment of segment files as a non-chain link atom, the prepare module will ignore these links and report them as skipped. If one or more of these links are required, the user has to include them with explicit link directives in the sequence file, making them forced links. Alternatively, these links can be made forced-links by changing link into LINK in the sequence file.
 ```
 fraction { <integer imol> }
