@@ -1,10 +1,7 @@
 # NWChem: Open Source High-Performance Computational Chemistry
 
-The NWChem  software provides
-computational chemistry tools that can accurately
-tackle complex scientific  problems.
-The software has been develop to efficiently use the aggregate resources available either on
-supercomputers or computer clusters.
+The NWChem software provides computational chemistry tools that can accurately tackle complex scientific problems.
+The software has been develop to efficiently use the aggregate resources available on supercomputers or computer clusters.
 
 NWChem can handle:
 <img align="right" alt="" width="72" height="175" src="mol1andmol2.webp" />
@@ -39,7 +36,7 @@ to effectively utilize architectures of tens of petaflops and beyond.
 
 ## Latest NWChem release
 
-NWChem version 7.2.2 is the latest release available for download from the link [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases).
+NWChem version 7.2.3 is the latest release available for download from the link [https://github.com/nwchemgit/nwchem/releases](https://github.com/nwchemgit/nwchem/releases).
 
 ## EMSL Arrows
 
