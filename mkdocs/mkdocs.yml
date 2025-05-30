@@ -173,6 +173,14 @@ nav:
       - Documentation in PDF format: "https://nwchemgit.github.io/nwchemusermanual.pdf"
 plugins:
   - search
+  - meta-descriptions:
+      export_csv: false
+      quiet: false
+      enable_checks: false
+      min_length: 50
+      max_length: 160
+      trim: false
+      fallback_if_short: false
   - alternate-link
   - bibtex:
       bib_file: "docs/refs.bib"

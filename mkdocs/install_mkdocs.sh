@@ -32,4 +32,5 @@ python3 -m pip install pandoc --use-pep517 $QUIET $USEROPT
 python3 -m pip install pypandoc_binary --use-pep517 $QUIET $USEROPT
 python3 -m pip install git+https://github.com/flywire/caption --use-pep517 $QUIET $USEROPT
 python3 -m pip install mkdocs-print-site-plugin $QUIET $USEROPT
+python3 -m pip install mkdocs-meta-descriptions-plugin $QUIET $USEROPT
 pip freeze
