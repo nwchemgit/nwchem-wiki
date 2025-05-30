@@ -1,16 +1,10 @@
----
-title: "NWChem Website"
----
-
-
 # NWChem: Open Source High-Performance Computational Chemistry
 
-The NWChem  software contains 
-computational chemistry tools that are scalable both in their
-ability to efficiently treat large scientific  problems,
- and in their use of available computing resources
-from high-performance parallel supercomputers to conventional
-workstation clusters.
+The NWChem  software provides
+computational chemistry tools that can accurately
+tackle complex scientific  problems.
+The software has been develop to efficiently use the aggregate resources available either on
+supercomputers or computer clusters.
 
 NWChem can handle:
 <img align="right" alt="" width="72" height="175" src="mol1andmol2.webp" />
