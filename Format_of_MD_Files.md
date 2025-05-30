@@ -235,9 +235,7 @@
 
 
 
-
-  
-## Format of sequence file 
+## Format of sequence file
 
 
 
@@ -267,8 +265,6 @@
 
 
 
-
-  
 ## Format of trajectory file
 
 
@@ -342,8 +338,7 @@
 
 
 
-  
-## Format of free energy file  
+## Format of free energy file
 
 
 | Card                                    | Format  | Description                                                          |
@@ -389,9 +384,7 @@
 
 
 
-
-  
-## Format of property file  
+## Format of property file
 
 
 
