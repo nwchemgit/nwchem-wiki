@@ -434,7 +434,7 @@ to nuclear position.
 | gill96      | * |    | *  |      |       | Y   |  [@gill1996]   |
 | optx        | * |    | *  |      |       | N   |  [@handy2001]  |
 | mpw91       | * |    | *  |      |       | Y   |  [@adamo1998,@zhao2005]  |
-| xft97       | * |    | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| xft97       | * |    | *  |      |       | N   |  [@filatov1997,@filatov19972]  |
 | rpbe        | * |    | *  |      |       | Y   |  [@hammer1999]  |
 | revpbe      | * |    | *  |      |       | Y   |  [@zhang1998]  |
 | xpw6b95     | * |    | *  |      |       | N   |  [@zhao2004]  |
@@ -443,7 +443,7 @@ to nuclear position.
 | lyp         |    | * | *  |      |       | Y   |  [@lee1988]  |
 | perdew91    |    | * | *  |      |       | Y   |  [@perdew1992a,@perdew1993]   |
 | cpbe96      |    | * | *  |      |       | Y   |  [@perdew1996,@perdew1997]   |
-| cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| cft97       |    | * | *  |      |       | N   |  [@filatov1997,@filatov19972]  |
 | op          |    | * | *  |      |       | N   |  [@tsuneda1999]  |
 | hcth        | * | * | *  |      |       | N   |  [@hamprecht1998]  |
 | hcth120     | * | * | *  |      |       | N   |  [@boese2000]  |
@@ -452,7 +452,7 @@ to nuclear position.
 | hcth407     | * | * | *  |      |       | N   |  [@boese2001]  |
 | becke97gga1 | * | * | *  |      |       | N   |  [@cohen2000]  |
 | hcthp14     | * | * | *  |      |       | N   |  [@menconi2001]  |
-| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov1997_2]  |
+| ft97        | * | * | *  |      |       | N   |  [@filatov1997,@filatov19972]  |
 | htch407p    | * | * | *  |      |       | N   |  [@boese2003_2]  |
 | bop         | * | * | *  |      |       | N   |  [@tsuneda1999]  |
 | pbeop       | * | * | *  |      |       | N   |  [@tsuneda1999_2]  |
