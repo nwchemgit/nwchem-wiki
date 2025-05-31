@@ -17,6 +17,7 @@ fi
 QUIET=--quiet
 #QUIET=
 python3 -m pip install --upgrade pip $QUIET  $USEROPT
+python3 -m pip install --upgrade setuptools==66.1.1 $QUIET  $USEROPT
 python3 -m pip install  MarkupSafe --use-pep517 $QUIET $USEROPT
 python3 -m pip install mkdocs==1.6.0 $QUIET $USEROPT
 python3 -m pip install mkdocs-material==9.5.26 $QUIET $USEROPT
@@ -27,7 +28,7 @@ python3 -m pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/ --use
 python3 -m pip install python-markdown-math $QUIET $USEROPT
 python3 -m pip install  pymdown-extensions $QUIET $USEROPT
 #python3 -m pip install mkdocs-with-pdf $QUIET $USEROPT
-python3 -m pip install mkdocs-bibtex --use-pep517 $QUIET $USEROPT
+python3 -m pip install mkdocs-bibtex==2.8.16 --use-pep517 $QUIET $USEROPT
 python3 -m pip install pandoc --use-pep517 $QUIET $USEROPT
 python3 -m pip install pypandoc_binary --use-pep517 $QUIET $USEROPT
 python3 -m pip install git+https://github.com/flywire/caption --use-pep517 $QUIET $USEROPT
