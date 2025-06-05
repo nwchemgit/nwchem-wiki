@@ -176,16 +176,11 @@ puts an upper limit of 512 MBytes to the semi-direct MP2 usage of disk
 ## PRINT and NOPRINT
 
 The standard print control options are recognized. The list of
-recognized names are given in the table
-below.
-
-<center>
+recognized names are given in the table below.  
 
 | Item                    | Print Level | Description                                |
 | ----------------------- | ----------- | ------------------------------------------ |
-|                         |             |                                            |
 | **RI-MP2**              |             |                                            |
-|                         |             |                                            |
 | "2/3 ints"              | debug       | Partial 3-center integrals                 |
 | "3c ints"               | debug       | MO 3-center integrals                      |
 | "4c ints b"             | debug       | "B" matrix with approx. 4c integrals       |
@@ -203,10 +198,6 @@ below.
 | "progress reports"      | default     | Report completion of time-consuming steps  |
 | "reference"             | high        | Details about reference wavefunction       |
 | "warnings"              | low         | Non-fatal warnings                         |
-
-Printable items in the MP2 modules and their default print levels
-
-</center>
 
 ## VECTORS: MO vectors
 
