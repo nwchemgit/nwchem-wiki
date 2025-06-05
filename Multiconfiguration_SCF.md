@@ -156,13 +156,10 @@ E.g., to set the initial level shift to 0.5
 
 Specific output items can be selectively enabled or disabled using the
 [print control mechanism](Print_Noprint.md) with the
-available print options listed in the table
-below.
+available print options listed in the table below.  
 
-<center>
-
-| MCSCF Print Options | Option  | Class                                  | Synopsis |
-| ------------------- | ------- | -------------------------------------- | -------- |
+| Option              | Class   | Synopsis                               |
+| ------------------- | ------- | -------------------------------------- |
 | ci energy           | default | CI energy eigenvalue                   |
 | fock energy         | default | Energy derived from Fock matrices      |
 | gradient norm       | default | Gradient norm                          |
@@ -176,4 +173,3 @@ below.
 | ci guess            | debug   | Initial guess CI vector                |
 | density matrix      | debug   | One- and Two-particle density matrices |
 
-</center>
