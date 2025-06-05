@@ -15,37 +15,23 @@ energy calculations is required to achieve a meaningful calculation.**
 Description of the implemented methodology can be found in [the
 following paper](https://dx.doi.org/10.1063/1.2768343). In this
 approach the free energy difference between the two configurations of
-the QM region (e.g. A and
-B):
-
-<center>
+the QM region (e.g. A and B):  
 
 \(\Delta W_{A\to B}=-1/\beta \ln \langle (e^{-\beta (E_B-E_A)})  \rangle_{A}\)
 
-</center>
-
-is approximated as a sum of internal QM contribution and
-solvation:
-
-<center>
+is approximated as a sum of internal QM contribution and solvation:  
 
 \(\Delta W_{A\to B}\approx\Delta W_{A\to B}^{int}+\Delta W_{A\to B}^{solv}\)
 
-</center>
-
 It is presumed that structures of A and B configurations are available
-as restart files sharing **common** topology file.
+as restart files sharing **common** topology file.  
 
 ## Internal contribution
 
 The internal QM contribution is given by the differences in the internal
-QM energies evaluated at the **optimized** MM environment:
-
-<center>
+QM energies evaluated at the **optimized** MM environment:  
 
 \(\Delta W_{A\to B}^{int}=E_{B}^{int}-E_{A}^{int}\)
-
-</center>
 
 The internal QM energy is nothing more but a gas phase expression total
 energy but evaluated with the wavefunction obtained in the presence of
@@ -63,76 +49,43 @@ Note that internal QM energy can be found in the QM/MM output file under
 
 The solvation contribution is evaluated by averaging energy difference
 between A and B configurations of the QM system represented by a set of
-ESP
-charges.
-
-<center>
+ESP charges.  
 
 \(\Delta W_{A\to B}^{solv}=-1/\beta \ln \langle (e^{-\beta (E_B^{ESP}-E_A^{ESP})})  \rangle_{A}\)
 
-</center>
-
 where \(E_A^{ESP}\) is the total energy of the system where QM region is
-replaced by a set of fixed point ESP charges.
+replaced by a set of fixed point ESP charges.  
 
 In majority of cases the A and B configuration are "too far apart" and
 one step free energy calculation as shown above will not lead to
 meaningful results. One solution is to introduce intermediate points
-that bridge A and B configurations by linear interpolation
-
-<center>
+that bridge A and B configurations by linear interpolation  
 
 \(R_{\lambda_i} = (1-\lambda_i)R_A + \lambda_i R_B\)
 
-</center>
-
-<center>
-
 \(Q_{\lambda_i} = (1-\lambda_i)Q_A + \lambda_i Q_B\)
 
-</center>
+where  
 
-where
-
-<center>
-
-\(\lambda_i = \frac {i}{n}, \quad i=0,..,n
-\,\!\)
-
-</center>
+\(\lambda_i = \frac {i}{n}, \quad i=0,..,n\,\!\)
 
 The solvation free energy difference can be then written as sum of
-differences for the subintervals \(\,\! [\lambda_i\to\lambda_{i+1}]\)  :
+differences for the subintervals \(\,\! [\lambda_i\to\lambda_{i+1}]\)  :  
 
-<center>
-
-\(
- \Delta W_{A\to B}^{\rm esp} = \sum_{i=0}^{n}\Delta W_{\lambda_i\to\lambda_{i+1}}^{\rm esp}
-\)
-
-</center>
+\( \Delta W_{A\to B}^{\rm esp} = \sum_{i=0}^{n}\Delta W_{\lambda_i\to\lambda_{i+1}}^{\rm esp} \)
 
 To expedite the calculation it is convenient to use a double wide
 sampling strategy where the free energy differences for the intervals
 \(\,\! [\lambda_{i-1}\to\lambda_{i}]\)  and
 \(\,\! [\lambda_i\to\lambda_{i+1}]\)  are calculated simultaneously by
 sampling around \(\,\!\lambda_{i}\)   point. In the simplest case where we
-use two subintervals
-(n=2)
-
-<center>
+use two subintervals (n=2)  
 
 \(\Delta W_{A\to B}^{solv} \equiv \Delta W_{0\to 1}= \Delta W_{0\to 0.5}^{solv}+\Delta W_{0.5\to 1}^{solv}\)
 
-</center>
-
-or
-
-<center>
+or  
 
 \(\Delta W_{A\to B}^{\rm solv} = -\Delta W_{0.5\to 0}^{\rm solv}+\Delta W_{0.5 \to 1}^{\rm solv}\)
-
-</center>
 
 The following items are necessary:
 
