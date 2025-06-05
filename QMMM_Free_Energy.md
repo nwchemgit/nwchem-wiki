@@ -133,14 +133,9 @@ set qmmm:fep_deriv .true.
 ```
 If set, the above directive will perform both
 \(\,\! [\lambda_i\to\lambda_{i+1}]\)  and
-\(\,\! [\lambda_i\to\lambda_{i-1}]\)  calculations, where
+\(\,\! [\lambda_i\to\lambda_{i-1}]\)  calculations, where  
 
-<center>
-
-\(\,\!
- \lambda_{i-1}=\lambda_i - (\lambda_{i+1}-\lambda_i)\)
-
-</center>
+\(\,\! \lambda_{i-1}=\lambda_i - (\lambda_{i+1}-\lambda_i)\)
 
 The calculation proceeds in cycles, each cycle consisting of two phases.
 First phase is generation of classical MD trajectory around
