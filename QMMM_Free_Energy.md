@@ -167,7 +167,7 @@ the MD block:
 ```
  md
   ... 
- equil <number of equilibration steps>
+  equil <number of equilibration steps>
  end
 ```
 Other parameters (e.g. temperature and pressure can be also set in the
