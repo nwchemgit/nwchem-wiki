@@ -54,22 +54,17 @@ useful for developers.
 ### Print Control
 
 Known controllable print options are shown in the table
-below:
-
-<center>
+below:  
 
 | Name           | Print Level     | Description                                     |
 | -------------- | --------------- | ----------------------------------------------- |
-| "hess\_follow" | high            | more information about where the calculation is |
-| "cphf\_cont"   | debug           | detailed CPHF information                       |
-| "nucdd\_cont"  | debug           | detailed nuclear contribution information       |
-| "onedd\_cont"  | debug           | detailed one electron contribution information  |
-| "twodd\_cont"  | debug           | detailed two electron contribution information  |
-| "fock\_xc"     | debug           | detailed XC information during the fock builds  |
+| `hess_follow` | high            | more information about where the calculation is |
+| `cphf_cont`   | debug           | detailed CPHF information                       |
+| `nucdd_cont`  | debug           | detailed nuclear contribution information       |
+| `onedd_cont`  | debug           | detailed one electron contribution information  |
+| `twodd_cont`  | debug           | detailed two electron contribution information  |
+| `fock_xc`     | debug           | detailed XC information during the fock builds  |
 
-Hessian Print Control Specifications
-
-</center>
 
 # Vibrational frequencies
 
