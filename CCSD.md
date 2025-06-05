@@ -123,10 +123,7 @@ be IPRT \> 5, 10, and 50.
 
 The coupled cluster module supports the standard NWChem print control
 keywords, although very little in the code is actually hooked into this
-mechanism
-yet.
-
-<center>
+mechanism yet.  
 
 | Item                      | Print Level | Description                   |
 | ------------------------- | ----------- | ----------------------------- |
@@ -135,12 +132,9 @@ yet.
 | "byproduct energies"      | default     | Intermediate energies         |
 | "term debugging switches" | debug       | Switches for individual terms |
 
-</center>
-
 ## Methods (Tasks) Recognized
 
-Currently available methods
-are
+Currently available methods are
 
   * CCSD - Full iterative inclusion of single and double excitations
   * CCSD+T(CCSD) - The fourth order triples contribution computed with converged
@@ -148,8 +142,7 @@ are
   * CCSD(T) - The linearized triples approximation due to Raghavachari.
 
 The calculation is invoked using the TASK directive, so to perform a
-CCSD+T(CCSD) calculation, for example, the input file should include the
-directive
+CCSD+T(CCSD) calculation, for example, the input file should include the directive
 
 ```
  TASK CCSD+T(CCSD)
@@ -165,8 +158,8 @@ directive is considered the primary result.
 The information in this section is intended for use by experts (both
 with the methodology and with the code), primarily for debugging and
 development work. Messing with stuff in listed in this section will
-probably make your calculation quantitatively wrong\! Consider yourself
-warned\!
+probably make your calculation quantitatively wrong! 
+Consider yourself warned!
 
 ### Switching On and Off Terms
 
