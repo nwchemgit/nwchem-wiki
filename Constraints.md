@@ -73,8 +73,7 @@ the above constraints can be loaded using the following set directive that assig
          fix atom 1 3:6  
        end
 ```
-  - Third approach illustrates the use of multiple `fix atom`
-        directives:
+  - Third approach illustrates the use of multiple `fix atom` directives:
 ```
        constraints 
          fix atom 1 
@@ -96,9 +95,3 @@ directive can be repeated within a given constraints block. If the
 spring between the same pair of atoms is defined more than once, it will
 be replaced by the latest specification in the order it appears in the
 input block.
-
-- spring dihedral places a spring with....
-
-- spring bondings places a spring with....
-
-- penalty pbondings places a penalty function with....
