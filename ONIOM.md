@@ -337,9 +337,8 @@ and HF for the real system. The results, including MP2 calculations on
 the full system for comparison, are as given in the table
 below.  
 
-|        |             |             |            |             |              |
-| ------ | ----------- | ----------- | ---------- | ----------- | ------------ |
 | Theory | Me-CH2      | Me-Me       | H          | De(Hartree) | De(kcal/mol) |
+| ------ | ----------- | ----------- | ---------- | ----------- | ------------ |
 | B3LYP  | \-79.185062 | \-79.856575 | \-0.502256 | 0.169257    | 106.2        |
 | HF     | \-78.620141 | \-79.251701 | \-0.499817 | 0.131741    | 82.7         |
 | MP2    | \-78.904716 | \-79.571654 | \-0.499817 | 0.167120    | 104.9        |
