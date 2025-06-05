@@ -335,9 +335,7 @@ optimized at the DFT-B3LYP/6-311++G\*\* level of theory, and then ONIOM
 is used to compute the binding energy using UMP2 for the model system
 and HF for the real system. The results, including MP2 calculations on
 the full system for comparison, are as given in the table
-below.
-
-<center>
+below.  
 
 |        |             |             |            |             |              |
 | ------ | ----------- | ----------- | ---------- | ----------- | ------------ |
@@ -348,9 +346,7 @@ below.
 | MP2:HF | \-78.755223 | \-79.422559 | \-0.499817 | 0.167518    | 105.1        |
 
 Energies for ONIOM example 1, hydrocarbon bond energy using MP2:HF
-two-layer model.
-
-</center>
+two-layer model.  
 
 The following input first performs a calculation on $CH_{3}-CH_2$, and
 then on $CH_{3}-CH_3$. Note that in the second calculation we cannot
