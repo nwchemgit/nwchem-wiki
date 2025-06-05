@@ -9,7 +9,7 @@ capability, the size of system that can be treated and use of other
 approximations
 
   - Semi-direct -- this is recommended for most large applications (up
-    to about 2800 basis functions), especially on the IBM SP and other
+    to about 2800 basis functions), especially on 
     machines with significant disk I/O capability. Partially transformed
     integrals are stored on disk, multi-passing as necessary. RHF and
     UHF references may be treated including computation of analytic
