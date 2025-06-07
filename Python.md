@@ -588,16 +588,14 @@ but this should have no serious side effect.
 Common problems with Python programs inside NWChem.
 
 1.  You get the message  
-```      
-    0:python_input: indentation must be >= that of first line: 4  
-```      
-    This indicates that NWChem thinks that a line is less indented than
-    the first line. If this is not the case then perhaps there is a tab
+    `0:python_input: indentation must be >= that of first line: 4 `      
+   This indicates that NWChem thinks that a line is less indented than
+   the first line. If this is not the case then perhaps there is a tab
     in your input which NWChem treats as a single space character but
     appears to you as more spaces. Try running untabify in Emacs. The
-    problem could also be the END directive that terminates the PYTHON
-    compound directive -- since Python also has an end statement. To
-    avoid confusion the END directive for NWChem must be at the start of
+    problem could also be the `END` directive that terminates the `PYTHON`
+    compound directive, since Python also has an end statement. To
+    avoid confusion the `END` directive for NWChem must be at the start of
     the line.  
       
 2.  Your program hangs or deadlocks -- most likely you have a piece of
