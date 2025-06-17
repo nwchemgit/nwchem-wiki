@@ -301,3 +301,4 @@ end
 * [https://www.tc.uni-koeln.de/PP/clickpse.en.html](https://www.tc.uni-koeln.de/PP/clickpse.en.html)
 * [https://people.clarkson.edu/~pchristi/reps.html](https://web.archive.org/web/20241007182207/https://people.clarkson.edu/~pchristi/reps.html)
 * [http://www.qchem.pnpi.spb.ru/recp](http://www.qchem.pnpi.spb.ru/recp)
+* [https://pseudopotentiallibrary.org](https://pseudopotentiallibrary.org)
