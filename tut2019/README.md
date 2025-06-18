@@ -4,7 +4,7 @@
 
 This webpage can be reached by using the following URL  
 
-[https://tinyurl.com/nwaero19](https://tinyurl.com/nwaero19)
+[https://github.com/nwchemgit/nwchem-wiki/tree/master/tut2019](https://github.com/nwchemgit/nwchem-wiki/tree/master/tut2019)
 
 The Arrows webpage can be reached by using the following URL  
 
