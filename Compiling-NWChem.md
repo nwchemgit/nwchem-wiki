@@ -592,49 +592,10 @@ Set the environmental variables for compilation:
 % export ARMCI_NETWORK=MPI-PR
 ```
 
-#### Example: NERSC Edison
+#### Example: HPE Cray 
 
-These are variables used for compilation on [NERSC Edison, a Cray
-XC30](https://www.nersc.gov/assets/Uploads/Edison-Overview.pdf), as of
-October 23rd 2015, when using Intel compilers (i.e. after issuing the
-commands `module swap PrgEnv-gnu PrgEnv-intel`). Very similar settings
-can be applied to other Cray XC30 computers, such as [the UK ARCHER
-computer](http://www.archer.ac.uk)
-```
-CRAY_CPU_TARGET=sandybridge 
-NWCHEM_TARGET=LINUX64  
-ARMCI_NETWORK=MPI-PR  
-USE_MPI=y
-SCALAPACK="-L$MKLROOT/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential \\  
--lmkl_blacs_intelmpi_ilp64 -lpthread -lm"  
-SCALAPACK_SIZE=8  
-BLAS_SIZE=8  
-BLASOPT="-L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_core -lmkl_sequential -lpthread -lm"  
-LD_LIBRARY_PATH=/opt/gcc/4.9.2/snos/lib64:$LD_LIBRARY_PATH 
-PATH=/opt/gcc/4.9.2/bin:$PATH  
-CRAYPE_LINK_TYPE=dynamic 
-```
-To compile
-```
-make nwchem_config 
-make FC=ftn
-```
-The following env. variables needs to added to the batch queue
-submission script   
-``` 
-MPICH_GNI_MAX_VSHORT_MSG_SIZE=8192
-MPICH_GNI_MAX_EAGER_MSG_SIZE=131027   
-MPICH_GNI_NUM_BUFS=300   
-MPICH_GNI_NDREG_MAXSIZE=16777216  
-MPICH_GNI_MBOX_PLACEMENT=nic    
-COMEX_MAX_NB_OUTSTANDING=6
-```
-#### Example: NERSC Cori
-
-These are variables used for compilation on the Haswell partition of
-[NERSC Edison, a Cray
-XC40](https://www.nersc.gov/systems/cori/), as of
-November 6th 2016, when using Intel compilers (i.e. after issuing the
+These are variables used for compilation a Cray HPE system
+ using Intel compilers (i.e. after issuing the
 commands `module swap PrgEnv-gnu
 PrgEnv-intel`).
 ```
@@ -657,16 +618,6 @@ To compile
 ```
 make nwchem_config
 make FC=ftn
-```
-The following env. variables needs to added to the batch queue
-submission script
-```
-MPICH_GNI_MAX_VSHORT_MSG_SIZE=10000  
-MPICH_GNI_MAX_EAGER_MSG_SIZE=98304  
-MPICH_GNI_NUM_BUFS=300  
-MPICH_GNI_NDREG_MAXSIZE=16777216 
-MPICH_GNI_MBOX_PLACEMENT=nic
-COMEX_MAX_NB_OUTSTANDING=6
 ```
 ## How-to: Intel Xeon Phi
 
@@ -1006,7 +957,7 @@ Another essential prerequisite step is to install Mpich, which can be
 found at the following
 URL
 
-<http://www.mpich.org/static/tarballs/1.4.1p1/mpich2-1.4.1p1-win-ia32.msi>
+<https://web.archive.org/web/20190105171104/http://www.mpich.org/static/tarballs/1.4.1p1/mpich2-1.4.1p1-win-ia32.msi>
 
 Once Mpich is installed, you should copy the installation files to a
 different location to avoid the failure of the tools compilation. You
