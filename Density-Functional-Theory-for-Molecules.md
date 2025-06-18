@@ -267,12 +267,12 @@ how to use these options.
 
 ### Libxc interface **_New in NWChem 7.2.0_**:
 
-If NWChem is compiled by linking it with the [libxc](https://www.tddft.org/programs/libxc/) DFT library
+If NWChem is compiled by linking it with the [libxc](https://libxc.gitlab.io/) DFT library
 (as described in the [Interfaces with External Software](Interfaces-with-External-Software.md#libxc) section),
 the user will be able to use most of the XC functionals available in libxc.  
 The input syntax requires to use the [xc](#xc-and-decomp-exchange-correlation-potentials) keyword followed by
 the functionals name from 
-[list available in Libxc](https://tddft.org/programs/libxc/functionals/)
+[list available in Libxc](https://libxc.gitlab.io/functionals/)
 
 For example, the following input for the NWChem libxc interface
 ```
