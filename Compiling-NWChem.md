@@ -216,7 +216,6 @@ hardware include:
 |-------------|-----------------------------------------------------------------------------------------------|
 | BLIS        | <https://github.com/flame/blis>                                                               |    
 | OpenBLAS    | <https://github.com/xianyi/OpenBLAS>                                                          |
-| GotoBLAS    | <https://www.tacc.utexas.edu/research-development/tacc-software/gotoblas2>                    |  
 | Intel MKL   | <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html>                  |
 | Cray LibSci | Available only on Cray hardware, it is automatically linked when compiling on Cray computers. |
 | IBM ESSL    | Available only on IBM hardware <https://www.ibm.com/docs/en/essl/6.3> |
@@ -268,9 +267,9 @@ E.g., for IBM64 this looks like
 
 Notes:
 
-  - GotoBLAS2 (or OpenBLAS) can be installed with 64bit integers. This
-    is accomplished by compiling the GotoBLAS2 library after having
-    edited the GotoBLAS2 Makefile.rule file and un-commenting the line
+  - OpenBLAS can be installed with 64bit integers. This
+    is accomplished by compiling the OpenBLAS library after having
+    edited the OpenBLAS Makefile.rule file and un-commenting the line
     containing the INTERFACE64 definition. In other words, the line
 ```
           #INTERFACE64 = 1
@@ -279,13 +278,10 @@ Notes:
 ```
           INTERFACE64 = 1
 ```
-  - ACML and MKL can support 64-bit integers if the appropriate library
+  - AOCL and MKL can support 64-bit integers if the appropriate library
     is chosen. For MKL, one can choose the ILP64 Version of Intel® MKL
     and the correct recipe can be extracted from the website
     <https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-link-line-advisor.html>.
-    For ACML the int64 libraries should be chosen, e.g. in the case of
-    ACML 4.4.0 using a PGI compiler
-    /opt/acml/4.4.0/pgi64_int64/lib/libacml.a
 
 ### <span style="color:#FF0000">Automated build of OpenBLAS/ScaLAPACK</span>
 
