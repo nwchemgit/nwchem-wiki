@@ -1,12 +1,6 @@
 ##Material for the 2019 EMSL/ARM Aerosol Summer School
 
-[https://pnnl.cvent.com/events/aerosol-summer-school/agenda-a5619d0658f24e799567a97dbb6ef20d.aspx](https://pnnl.cvent.com/events/aerosol-summer-school/agenda-a5619d0658f24e799567a97dbb6ef20d.aspx)
-
-This webpage can be reached by using the following URL  
-
-[https://github.com/nwchemgit/nwchem-wiki/tree/master/tut2019](https://github.com/nwchemgit/nwchem-wiki/tree/master/tut2019)
-
-The Arrows webpage can be reached by using the following URL  
+The Arrows aerosol webpage can be reached by using the following URL  
 
 [https://arrows.emsl.pnnl.gov/api/aerosol](https://arrows.emsl.pnnl.gov/api/aerosol)
 
