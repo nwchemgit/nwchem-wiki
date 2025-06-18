@@ -2,7 +2,7 @@
 
 The ECCE\_PRINT directive allows the user to print out a file, usually
 called ecce.out, that will allow the calculation and its results to be
-imported into Ecce (see <http://ecce.pnl.gov>).
+imported into Ecce (see <https://github.com/FriendsofECCE/ECCE>).
 
 `ECCE_PRINT `<string name>
 
