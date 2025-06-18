@@ -9,7 +9,7 @@ National Hellenic Research Foundation (NHRF)
 
 [SCF and DFT](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/2_NWChem_SCFDFT.pdf)
 
-[TD-DFT](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/3_NWChem_TDDFT.pdf)
+[TD-DFT](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/3_NWChem-TDDFT.pdf)
 
 
 [Correlated Methods](https://rawgit.com/nwchemgit/nwchem-wiki/master/tutorial_athens2018/4_NWChem_CC_TCE.pdf)
