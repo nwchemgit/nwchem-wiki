@@ -23,7 +23,7 @@
 [https://web.archive.org/web/20221103195703/https://events.prace-ri.eu/event/786/attachments/840/1256/QC-workshop-advanced.pdf](https://web.archive.org/web/20221103195703/https://events.prace-ri.eu/event/786/attachments/840/1256/QC-workshop-advanced.pdf)
 
 * Introduction To NWChem by B.J. Lynch (UMN) 2006
-[https://www.msi.umn.edu/sites/default/files/IntroNWChem.pdf](https://www.msi.umn.edu/sites/default/files/IntroNWChem.pdf)
+[https://web.archive.org/web/20230418140258/https://www.msi.umn.edu/sites/default/files/IntroNWChem.pdf](https://web.archive.org/web/20230418140258/https://www.msi.umn.edu/sites/default/files/IntroNWChem.pdf)
 
 * Quantum Chemistry Course at Radboud University - Nijmegen
 [https://www.theochem.ru.nl/quantumchemistry](https://www.theochem.ru.nl/quantumchemistry/)
