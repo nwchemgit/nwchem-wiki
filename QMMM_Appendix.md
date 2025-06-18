@@ -30,7 +30,7 @@ QM/MM calculations. Here is the structure of just N3O3- in xyz format
 We cannot use this file as is in the QM/MM simulations, and it has to be
 converted into PDB format. This is needed even if we plan to treat this
 molecule quantum mechanically. There is more than way to do it. For
-example, we could use Babel [http://openbabel.org/wiki/Main_Page](http://openbabel.org/wiki/Main_Page),
+example, we could use Babel [https://openbabel.org](https://openbabel.org),
 which will generate the PDB file as  
 ```
 COMPND    geometry   
