@@ -4,7 +4,7 @@ The NWChem software provides computational chemistry tools that can accurately t
 The software has been develop to efficiently use the aggregate resources available on supercomputers or computer clusters.
 
 NWChem can handle:
-<img align="right" alt="" width="72" height="175" src="mol1andmol2.webp" />
+<img align="right" alt="" width="72" height="175" src="mol1andmol2.webp">
 <!--![](mol1andmol2.webp){ align=right}-->
 
   * Biomolecules, nanostructures, and solid-state
@@ -14,7 +14,7 @@ NWChem can handle:
   * Scaling from one to thousands of processors
   * Properties and relativistic effects
 
-<img align="right" alt="" width="103.02" height="43.14" src="EMSL_light_60pct.svg" />
+<img align="right" alt="" width="103" height="43" src="EMSL_light_60pct.svg">
 <!--![](EMSL_light_60pct.svg){ align=right }-->
 
 
@@ -40,7 +40,7 @@ NWChem version 7.2.3 is the latest release available for download from the link 
 
 ## EMSL Arrows
 
-<img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp" />
+<img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp">
 <!--![](myarrowmovie.webp){ align=right }-->
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
