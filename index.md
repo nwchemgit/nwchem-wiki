@@ -40,7 +40,8 @@ NWChem version 7.2.3 is the latest release available for download from the link 
 
 ## EMSL Arrows
 
-<img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp">
+![EMSLArrows](myarrowmovie.webp){ align=right}
+<!-- img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp"-->
 <!--![](myarrowmovie.webp){ align=right }-->
 Are you just
 learning how to use NWChem and would like to have an easy way to generate input
