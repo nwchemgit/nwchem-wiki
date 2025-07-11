@@ -2,28 +2,44 @@
 
 ## Docker 
 
-Dockerfile recipes are available at the repository [https://github.com/nwchemgit/nwchem-dockerfiles](https://github.com/nwchemgit/nwchem-dockerfiles)
+Instruction for using the NWChem Docker container with the [docker compose](https://docs.docker.com/compose) command
 
-Docker images of the 7.2.0 release are hosted at [https://ghcr.io](https://github.com/features/packages) at the link [https://github.com/nwchemgit/nwchem-dockerfiles/pkgs/container/nwchem-720](https://github.com/nwchemgit/nwchem-dockerfiles/pkgs/container/nwchem-720) and can be used with the following command  
+1. Install docker  as described in [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install)
 
+2. Download the [compose.yaml](https://raw.githubusercontent.com/nwchemgit/nwchem-dockerfiles/refs/heads/master/nwchem-dev.mpipr/compose.yaml) file
+ 
 ```
- docker run --shm-size 256m -u `id -u` --rm -v [host_system_dir]:/data ghcr.io/nwchemgit/nwchem-dev input.nw
+ wget https://raw.githubusercontent.com/nwchemgit/nwchem-dockerfiles/refs/heads/master/nwchem-dev.mpipr/compose.yaml
 ```
-For example, the following command can be used when starting from the `/tmp` directory:
+
+3. Create the nwchem service
+``` 
+docker compose up -d
 ```
- docker run --shm-size 256m -u `id -u` --rm -v $(pwd):/data ghcr.io/nwchemgit/nwchem-dev /data/input.nw
+In some installation, `docker compose` is available as the command `docker-compose`, therefore in those cases, this command becomes
+``` 
+docker-compose up -d
 ```
-where the input file `input.nw` is located in the `/tmp` directory.
+
+4. Run NWChem
+ 
+``` 
+ docker compose run nwchem h2o.nw
+```
+In some installation, `docker compose` is available as the command `docker-compose`, therefore in those cases, this command becomes
+``` 
+ docker-compose run nwchem h2o.nw
+```
 
 
-The following docker command will run NWChem in parallel using three processes 
+In the example above the input file name is `h2o.nw`.   
+The default setting will run NWChem using 2 processes.
+If you would like to use more processes,
+then you would have to set the environment variable `MYNPROC` to the number of processes plus one.
+For example, if you wish to use 4 processes, then you will execute the following (bash syntax)
 ```
-docker run --shm-size 256m  -u `id -u` --rm  --entrypoint='mpirun' -v $(pwd):/data ghcr.io/nwchemgit/nwchem-dev  -np 2 nwchem /data/xvdw.nw
+export MYNPROC=5
 ```
-This example uses the input file `xvdw.nw` available on the host directory `/tmp`
-
-The associated Dockerfile is available at  
-[https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile](https://github.com/nwchemgit/nwchem-dockerfiles/blob/master/nwchem-dev/Dockerfile) 
 
 
 ## Singularity/Apptainer
