@@ -122,7 +122,7 @@ srun  -N $SLURM_NNODES  -l  apptainer exec --bind $BINDS --workdir `pwd` $MYIMG 
 
 ## Shifter 
 
-Instructions for running the NWChem [Shifter images](https://docs.nersc.gov/applications/nwchem/) are available at https://docs.nersc.gov/applications/nwchem
+Instructions for running the NWChem [Shifter images](https://docs.nersc.gov/applications/nwchem/) are available at [https://docs.nersc.gov/applications/nwchem](https://docs.nersc.gov/applications/nwchem)  
 
 ## Podman
 
