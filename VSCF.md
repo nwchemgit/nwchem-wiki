@@ -54,6 +54,5 @@ be scaled down. The scaling factor used can be defined by specifying:
    vcfct <real default 1.0>
 ```
 
-**References**
-
-1. G. M. Chaban, J. O. Jung, and R. B. Gerber, The Journal of Chemical Physics 111, 1823-1829 (1999)
+## References
+///Footnotes Go Here///
