@@ -13,9 +13,9 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     runs-on: [ubuntu-22.04]
-    permissions:
-      contents: read
-      pull-requests: write
+#    permissions:
+#      contents: read
+#      pull-requests: write
     steps:
       - name: Checkout nwchem-wiki
         uses: actions/checkout@v4
