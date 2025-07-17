@@ -1,6 +1,6 @@
 # Vibrational SCF (VSCF)
 
-The VSCF module can be used to calculate the anharmonic contributions to
+The VSCF module[@chaban1999] can be used to calculate the anharmonic contributions to
 the vibrational modes of the molecule of interest. Energies are
 calculated on a one-dimensional grid along each normal mode, on a
 two-dimensional grid along each pair of normal modes, and optionally on
