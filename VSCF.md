@@ -1,5 +1,7 @@
 # Vibrational SCF (VSCF)
 
+## Overview
+
 The VSCF module[@chaban1999] can be used to calculate the anharmonic contributions to
 the vibrational modes of the molecule of interest. Energies are
 calculated on a one-dimensional grid along each normal mode, on a
@@ -22,6 +24,9 @@ defined in the user input file. The input format has the form:
    [vcfct    <real    default 1.0>]  
  END
 ```
+
+## Coupling keyword
+
 The order of coupling of the harmonic normal modes included in the
 calculation is controlled by the specifying:
 ```
@@ -32,11 +37,16 @@ computed.
 For `coupling=pair` a two-dimensional grid along each pair of normal modes is computed.   
 For `coupling=triplet` a three-dimensional grid along each triplet of normal modes is computed. 
 
+## Ngrid keyword
+
 The number of grid points along each normal mode, or pair of modes can
 be defined by specifying:
 ```
    ngrid <integer default 16>
 ```
+
+## Iexcite keyword
+
 This VSCF module by default calculates the ground state (&nu;=0), but can
 also calculate excited states (such as &nu;=1). The number of excited
 states calculated is defined by specifying:
@@ -46,6 +56,8 @@ states calculated is defined by specifying:
 With `iexcite=1` the fundamental frequencies are calculated.  
 With `iexcite=2` the first overtones are calculated.  
 With `iexcite=3` the second overtones are calculated.
+
+## Vcfct keyword
 
 In certain cases the pair coupling potentials can become larger than
 those for a single normal mode. In this case the pair potentials need to
