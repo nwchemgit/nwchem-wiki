@@ -24,11 +24,11 @@ docker-compose up -d
 4. Run NWChem
  
 ``` 
- docker compose run nwchem h2o.nw
+ docker compose run --rm nwchem h2o.nw
 ```
 In some installation, `docker compose` is available as the command `docker-compose`, therefore in those cases, this command becomes
 ``` 
- docker-compose run nwchem h2o.nw
+ docker-compose run --rm nwchem h2o.nw
 ```
 
 
