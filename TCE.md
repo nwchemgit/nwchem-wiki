@@ -2309,14 +2309,6 @@ Xeon Phi card
  % setenv MIC_USE_2MB_BUFFER 16K
 ```
 
-<span style="color:red">**Very important**</span>: when running on
-clusters equipped with Xeon Phi and Infiniband network hardware
-(requiring `ARMCI_NETWORK=OPENIB`), the following env. variable is
-required, even <span style="color:red">in the case when the Xeon Phi
-hardware is not utilized</span>.
-```
- % setenv ARMCI_OPENIB_DEVICE mlx4_0
-```
 ### CCSD(T) method with CUDA
 
 NWChem 6.3 offers a possibility of using GPU accelerators to perform the
