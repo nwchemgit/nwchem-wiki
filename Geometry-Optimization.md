@@ -228,11 +228,11 @@ turn these into an animated GIF movie.
 
 ### i-PI Socket communication
 ```
-   SOCKET (UNIX || IPI_CLIENT) <string socketname default (see input description)>  
+   SOCKET (UNIX | IPI_CLIENT) <socketname> [RETRIES <integer>] [DELAY <float>]
 ```
-The SOCKET directive enables NWChem to communicate with other software
+The `SOCKET` directive enables NWChem to communicate with other software
 packages -- such as [i-PI](http://ipi-code.org/) or
-[ASE](https://wiki.fysik.dtu.dk/ase/ase/calculators/socketio/socketio.html) -- via the i-PI socket protocol.
+[ASE](https://wiki.fysik.dtu.dk/ase/ase/calculators/socketio/socketio.html) or [EON](https://github.com/TheochemUI/eOn/pull/244) -- via the i-PI socket protocol.
 
 Communication is done either over Unix sockets (`SOCKET UNIX`) or IP
 sockets (`SOCKET IPI_CLIENT`):
@@ -243,6 +243,15 @@ sockets (`SOCKET IPI_CLIENT`):
   - IP sockets - NWChem will bind to the IP address and port
     specified by `<socketname>`. If not specified, `<socketname>`
     will default to `127.0.0.1:31415`.
+ 
+The behavior of the client when first attempting to connect to the server can be
+controlled with two optional keywords:
+
+- `RETRIES <integer>`: Specifies the maximum number of times the client will try
+  to connect to the server socket before exiting with an error. If not provided,
+  this defaults to 30 tries.
+- `DELAY <integer>`: Specifies the time in seconds to wait between failed
+  connection attempts. If not provided, this defaults to 2 seconds.
 
 The `SOCKET` directive is only useful when used in conjunction with other
 software packages that support communication via the i-PI socket
