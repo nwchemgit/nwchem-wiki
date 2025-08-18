@@ -18,7 +18,7 @@ jobs:
 #      pull-requests: write
     steps:
       - name: Checkout nwchem-wiki
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
@@ -45,7 +45,7 @@ jobs:
     runs-on: [ubuntu-22.04]
     steps:
       - name: Checkout nwchem.wiki
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: nwchemgit/nwchem.wiki
           persist-credentials: false
@@ -74,7 +74,7 @@ jobs:
     runs-on: [ubuntu-22.04]
     steps:
       - name: checkout wiki
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: nwchemgit/nwchem-wiki
           persist-credentials: false
