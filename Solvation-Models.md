@@ -78,7 +78,8 @@ cosmo
   [lineq   <integer lineq default 1>]  
   [zeta <real zeta default 0.98>]  
   [gamma_s <real gammas default 1.0>]  
-  [sw_tol <real swtol default 1.0e-4>]  
+  [sw_tol <real swtol default 1.0e-4>]
+  [charge_correction <no||scale||lagrangian default lagrangian>]  
   [do_gasphase  <logical do_gasphase default True>] 
   [do_cosmo_ks]
   [do_cosmo_yk]
@@ -217,6 +218,13 @@ surface charge at a particular point is eliminated. The values of the
 switching function lie in the domain from 0 to 1. This value should not
 be set too small as that leads to instabilities in the linear system
 solvers. The default value is `sw_tol 1.0e-4`.
+
+#### COSMO: CHARGE_CORRECTION keyword
+The `charge_correction ` input option defines the surface charge correction to use.  
+With the input line `charge_correction no`, no surface charge corrections are used.  
+With the input line `charge_correction scale`, both the the electron surface charges and the nuclear surface charges are scaled.  
+With the default input line `charge_correction lagrangian`, a lagrangian constraint is used to variationally correct the charges.  
+The default is `charge_correction lagrangian`  unless the Klamt-Schuurmann COSMO model is used when the default becomes `charge_correction scale`.           
 
 #### COSMO: DO_GASPHASE keyword
 `do_gasphase` is a flag to control whether the calculation of the
