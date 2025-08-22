@@ -3,66 +3,66 @@
 NWChem User Documentation   
 =========================
 
--   [Overview](Overview)
+-   [Overview](Overview.md)
 
 <!-- -->
 
--   [System Description](System-Description)
+-   [System Description](System-Description.md)
 
 <!-- -->
 
--   [Quantum Mechanical Methods](Quantum-Mechanical-Methods)
+-   [Quantum Mechanical Methods](Quantum-Mechanical-Methods.md)
 
 <!-- -->
 
--   [Quantum Molecular Dynamics](Quantum-Molecular-Dynamics)
+-   [Quantum Molecular Dynamics](Quantum-Molecular-Dynamics.md)
 
 <!-- -->
 
--   [Molecular Mechanics](Classical-Methods)
+-   [Molecular Mechanics](Classical-Methods.md)
 
 <!-- -->
 
--   [Hybrid Approaches](Hybrid-Approaches)
+-   [Hybrid Approaches](Hybrid-Approaches.md)
 
 <!-- -->
 
 -   [Potential Energy Surface
-    Analysis](Potential-Energy-Surface-Analysis)
+    Analysis](Potential-Energy-Surface-Analysis.md)
 
 <!-- -->
 
 -   [Electronic Structure
-    Analysis](Electronic-Structure-Analysis)
+    Analysis](Electronic-Structure-Analysis.md)
 
 <!-- -->
 
--   [Other Capabilities](Other-Capabilities)
+-   [Other Capabilities](Other-Capabilities.md)
 
 <!-- -->
 
--   [Examples](Examples)
+-   [Examples](Examples.md)
 
 <!-- -->
 
--   [Supplementary Information](Supplementary-Information)
+-   [Supplementary Information](Supplementary-Information.md)
 
 <!-- -->
 
--   [Compiling NWChem](Compiling-NWChem)
+-   [Compiling NWChem](Compiling-NWChem.md)
 
 <!-- -->
 
--   [Developer](Developer)
+-   [Developer](Developer.md)
 
 <!-- -->
 
--   [Benchmarks](Benchmarks)
+-   [Benchmarks](Benchmarks.md)
 
 <!-- -->
 
--   [FAQ](FAQ)
+-   [FAQ](FAQ.md)
 
 <!-- -->
 
--   [Known Bugs](Known-Bugs)
+-   [Known Bugs](Known-Bugs.md)
