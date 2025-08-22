@@ -1751,12 +1751,17 @@ contributes to control the corrections at intermediate distances.
 
 There are available three ways to compute   *C<sup>6</sup><sub>ij</sub>*:
 
-1. $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [@wu2002] and [@zimmerli2004] (Use `vdw 0`)  
+1.  `vdw 0`   
+    $$C_6^{ij}= \frac{2(C_6^{i}C_6^{j})^{2/3}(N_{eff i}N_{eff j})^{1/3}} {C_6^{i}(N_{eff i}^2)^{1/3}+(C_6^{i}N_{eff j}^2)^{1/3}}$$  
+     where *N<sub>eff</sub>* and *C<sub>6</sub>* are obtained from references [@wu2002] and [@zimmerli2004]  
 
-2. $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$ See details in reference[@grimme2004]. (Use `vdw 1)`  
-
-3. $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$ See details in reference[@grimme2006_2]. (Use `vdw 2`)  
-
+2. `vdw 1`  
+   $$C_6^{ij}=2\ \frac{C_6^{i}C_6^{j}}{C_6^{i}+C_6^{j}}$$  
+   See details in reference[@grimme2004]. 
+3. `vdw 2`  
+   $$C_6^{ij}=\sqrt{C_6^{i}C_6^{j}}$$  
+   See details in reference[@grimme2006_2].
+   
 Note that in each option there is a certain set of *C<sub>6</sub>* and *R<sub>vdw</sub>*.
 Also note that Grimme only defined parameters for elements
 up to Z=54 for the dispersion correction above.
