@@ -186,7 +186,7 @@ plugins:
       fallback_if_short: false
   - alternate-link
   - bibtex:
-      bib_file: "docs/refs.bib"
+      bib_file: "docs/nwcrefs.bib"
       csl_file: "docs/journal-of-chemical-theory-and-computation.csl"
   - print-site:
       add_to_navigation: false
