@@ -1694,7 +1694,7 @@ The implementation of the Fukui analyis in NWChem was based on the papers by Gal
 This implementation makes use of the generalized Fukui indices ($f_{SN},  f_{NS}, f_{SS}$).  
 The traditional, spin-restricted, Fukui indices are given by $f_{NN}^+$, $f_{NN}^-$ and their average:
 
-$$\begin{array}{lcl} f_A^+ &=& f_{NN}^+  \\ f_A^-  &=& f_{NN}^- \\ f_A^0  = \frac{1}{2}\left( f_{NN}^+ + f_{NN}^- \right) \end{array}$$
+$$\begin{array}{lcl} f_A^+ &=& f_{NN}^+  \\ f_A^-  &=& f_{NN}^- \\ f_A^0 &=& \frac{1}{2}\left( f_{NN}^+ + f_{NN}^- \right) \end{array}$$
   
 ## BSSE: Basis Set Superposition Error
 
