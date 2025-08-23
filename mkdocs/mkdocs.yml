@@ -66,7 +66,8 @@ markdown_extensions:
         custom_checkbox: true
 extra_javascript:
   - css/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+    #- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
     #- path: https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE
     #async: true
     #type: text/javascript
