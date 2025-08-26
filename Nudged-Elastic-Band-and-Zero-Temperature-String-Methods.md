@@ -59,7 +59,7 @@ The following list describes the input for the NEB block
     Typically less than 1.
   - **nhist** - number of histories to use for quasi-Newton optimization
     (algorithm =0)
-  - LOOSE|DEFAULT|TIGHT - options specifying thresholds for convergence
+  - **LOOSE|DEFAULT|TIGHT** - options specifying thresholds for convergence
   - **gmax** - value for the maximum gradient used to determine
     convergence
   - **grms** - value for the root mean square gradient used to determine
@@ -70,15 +70,15 @@ The following list describes the input for the NEB block
     determine convergence
   - **algorithm** - 0: quasi-Newton Fixed Point optimization, 1: dampled
     Verlet optimization, 2: refining conjugate gradient optimization
-  - IMPOSE - if specified causes the initial geometries used to specify
+  - **IMPOSE** - if specified causes the initial geometries used to specify
     the path to be aligned with one another
-  - HASMIDDLE - if specified causes the initial path to use the the
+  - **HASMIDDLE** - if specified causes the initial path to use the the
     "midgeom" geometry to be used as the midpoint, i.e. the initial path
     is defined as a linear morphing from "geometry" --\> "midgeom" --\>
     "endgeom"
-  - XYZ_PATH - if specified the initial path is defined from the
+  - **XYZ_PATH** - if specified the initial path is defined from the
     sequence of geometries contained in **xyzfilename**
-  - RESET - if specified causes the NEB optimization and path to be
+  - **RESET** - if specified causes the NEB optimization and path to be
     started from scratch
   - **print_shift** - setting the `PRINT_SHIFT` directive causes the path
     energies and geometries to be outputed every `<print_shift>` steps.
