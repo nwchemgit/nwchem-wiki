@@ -249,6 +249,8 @@ distributions.
 `do_cosmo_smd` is a flag to turn on the SMD model. More details can be found
 at the [SMD Model documentation](#smd)  
 
+### Examples 
+
 The following example is for a water molecule in 'water', using the
 HF/6-31G** level of
 theory:
