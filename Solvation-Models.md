@@ -249,6 +249,19 @@ distributions.
 `do_cosmo_smd` is a flag to turn on the SMD model. More details can be found
 at the [SMD Model documentation](#smd)  
 
+#### COSMO: CAVITY keyword
+__(New since August 31st 2025 in master branch)__    
+`cavity [vdw|ses]`
+
+#### COSMO: NDIV keyword
+**(New since August 31st 2025 in master branch)**   
+The `ndiv` keyword define the size of the `SES` cavity.
+`ndiv [coarse|fine|xfine|huge|xxl]`
+
+#### COSMO: POTCORR keyword
+**(New since August 31st 2025 in master branch)**   
+`potcorr [true| false]`
+
 ### Examples 
 
 The following example is for a water molecule in 'water', using the
