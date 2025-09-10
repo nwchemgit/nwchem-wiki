@@ -1,8 +1,6 @@
 title "Diamond 2 atom fcc cell Brillouin sampling=9x9x9 M-P - Band structure plot"
 echo
 
-permanent_dir ./perm6
-scratch_dir   ./scratch
  
 start diamondfcc
  

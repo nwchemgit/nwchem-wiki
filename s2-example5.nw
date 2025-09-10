@@ -1,8 +1,6 @@
 title "Born-Oppenheimer AIMD simulation of s2-dimer"
 echo
 
-scratch_dir   ./scratch
-permanent_dir ./perm
 
 start s2-bomd
 

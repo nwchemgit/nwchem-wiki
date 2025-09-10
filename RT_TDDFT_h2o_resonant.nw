@@ -1,7 +1,5 @@
 title "Water TD-PBE0 resonant excitation"
 echo
-scratch_dir ./scratch
-permanent_dir ./perm
 
 start water
 

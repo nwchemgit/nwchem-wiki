@@ -2,7 +2,6 @@ echo
 
 start sucrose
 
-permanent_dir /dtemp/nwchem_user
 
 memory stack 1300 mb heap 100 mb global 2000 mb noverify
 

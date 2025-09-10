@@ -4,7 +4,6 @@ start c240
 
 memory stack 600 mb heap 50 mb global 400 mb noverify
 
-#scratch_dir /scratch
 
 geometry units angstrom noautoz
   symmetry c1

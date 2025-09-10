@@ -4,8 +4,6 @@ start h2o-neb
 
 memory 1600 mb
 
-permanent_dir ./perm2
-scratch_dir   ./perm2
 
 geometry nocenter noautosym noautoz
 O  0.00000000    -0.02293938     0.00000000

@@ -3,8 +3,6 @@ echo
 
 memory 1500 mb
 
-#permanent_dir ./perm332
-#scratch_dir   ./perm332
 
 geometry nocenter noautosym noautoz print 
   system crystal 

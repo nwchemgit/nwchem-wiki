@@ -1,5 +1,5 @@
 START p2ta_eomccsd
-PERMANENT_DIR /dtemp/kowalski
+
 MEMORY stack 1200 mb heap 100 mb global 1500 mb noverify
 GEOMETRY units angstrom
 SYMMETRY d2h

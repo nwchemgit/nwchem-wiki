@@ -1,7 +1,5 @@
 echo
 title "AIMD simulation of s2-dimer"
-scratch_dir   ./scratch
-permanent_dir ./perm
 start s2-md
 geometry
 S 0.0 0.0 0.0

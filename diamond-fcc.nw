@@ -1,8 +1,6 @@
 title "Diamond 2 atom fcc cell - geometry and unit cell optimization"
 echo
 
-permanent_dir ./perm5
-scratch_dir   ./scratch
  
 start diamondfcc
  

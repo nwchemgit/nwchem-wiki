@@ -11,8 +11,6 @@ start hcn-hnc-dft
 
 memory 1600 mb
 
-permanent_dir ./perm
-scratch_dir   ./perm
 
 geometry noautoz noautosym
 C         0.00000000     0.00000000    -0.49484657

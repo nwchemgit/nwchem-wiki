@@ -4,8 +4,6 @@ start c1-pspw
 
 memory 1400 mb
 
-permanent_dir ./perm
-scratch_dir   ./scratch
 
 geometry
 C 0 0 0

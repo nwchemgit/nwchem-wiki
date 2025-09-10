@@ -1,7 +1,5 @@
 echo
 title "total energy of s2-dimer LDA/30Ry with PSPW method"
-scratch_dir   ./scratch
-permanent_dir ./perm
 start s2-pspw-energy
 geometry
 S 0.0 0.0 0.0

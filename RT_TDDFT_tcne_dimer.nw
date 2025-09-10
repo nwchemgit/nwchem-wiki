@@ -1,8 +1,6 @@
 title "Tetracyanoethylene dimer charge transfer"
 
 echo
-scratch_dir ./scratch
-permanent_dir ./perm
 
 start tcne
 echo

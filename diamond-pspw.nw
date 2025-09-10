@@ -1,8 +1,6 @@
 title "Diamond 8 atom cubic cell - geometry and unit cell optimization"
 echo
 
-permanent_dir ./perm
-scratch_dir   ./scratch
  
 start diamond-pspw
  

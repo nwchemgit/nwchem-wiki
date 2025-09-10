@@ -19,8 +19,6 @@ echo
 
 start diamond-metropolis
 
-#permanent_dir ./perm
-#scratch_dir   ./perm
 
 #**** Enter the geometry using fractional coordinates ****
 geometry center noautosym noautoz print 

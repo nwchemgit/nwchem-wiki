@@ -3,8 +3,6 @@ echo
 
 start b12.anneal2
 
-scratch_dir   ./scratch
-permanent_dir ./perm2
 
 charge 0
 

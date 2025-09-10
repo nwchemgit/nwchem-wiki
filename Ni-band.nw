@@ -5,8 +5,6 @@ start Ni-band
 
 memory 1900 mb
 
-permanent_dir ./perm
-scratch_dir   ./scratch
 
 geometry units angstroms center noautosym noautoz print
  system crystal

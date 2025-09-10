@@ -2,8 +2,6 @@ title "CCl4 + water64 - 195 atom cell"
 
 start CCl4-droplet64
 
-scratch_dir   ./perm
-permanent_dir ./perm
 
 
 charge 0
