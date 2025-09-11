@@ -186,7 +186,7 @@ A **-1** following either `occ` or `vir` stands for all
 states in the respective space.
 
 
-### ERGENCE
+### CONVERGENCE
 
 The convergence threshold of the quasiparticle equations can
 be controlled with the keyword `CONVERGENCE` and might be
