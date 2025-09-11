@@ -75,7 +75,7 @@ GW
   ETA <real infinitesimal default 0.001> 
   SOLVER [ [newton <integer maxiter default 10> ] || [graph] ]
   STATES [ [ alpha || beta ] [occ <integer number default 1>] [vir <integer default 0>] ]
-  ERGENCE <real threshold default 0.005> [<string units default ev>]
+  CONVERGENCE <real threshold default 0.005> [<string units default ev>]
 END
 ```
 
