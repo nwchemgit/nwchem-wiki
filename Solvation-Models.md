@@ -250,15 +250,15 @@ distributions.
 at the [SMD Model documentation](#smd)  
 
 #### COSMO: CAVITY keyword
-__(New since August 31st 2025 in master branch)__
-`cavity [vdw|ses]`
+__(New since August 31st 2025 in master branch)__  
+`cavity [vdw|ses]`  
 The `vdw` dewfault option uses the York Karplus[@york1999] prescription for creating the cavity.  
-Instead, the `ses` cavity construction approach creates a solvent-excluding surface (SES), using the GEPOL93 algorithm[@pasculahir1994].
+Instead, the `ses` cavity construction approach creates a solvent-excluding surface (SES), using the GEPOL93 algorithm[@pasculahuir1994].
 
 #### COSMO: NDIV keyword
 **(New since August 31st 2025 in master branch)**   
-The `ndiv` keyword define the size of the `SES` cavity.
-`ndiv [coarse|fine|xfine|huge|xxl]`
+`ndiv [coarse|fine|xfine|huge|xxl]`  
+The `ndiv` keyword define the size of the `SES` cavity.  
 
 #### COSMO: POTCORR keyword
 **(New since August 31st 2025 in master branch)**   
