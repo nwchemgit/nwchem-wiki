@@ -75,7 +75,7 @@ GW
   ETA <real infinitesimal default 0.001> 
   SOLVER [ [newton <integer maxiter default 10> ] || [graph] ]
   STATES [ [ alpha || beta ] [occ <integer number default 1>] [vir <integer default 0>] ]
-  CONVERGENCE <real threshold default 0.005> [<string units default ev>]
+  ERGENCE <real threshold default 0.005> [<string units default ev>]
 END
 ```
 
@@ -186,9 +186,9 @@ A **-1** following either `occ` or `vir` stands for all
 states in the respective space.
 
 
-### CONVERGENCE
+### ERGENCE
 
-The converegnce threshold of the quasiparticle equations can
+The convergence threshold of the quasiparticle equations can
 be controlled with the keyword `CONVERGENCE` and might be
 given either in `eV` or Hartree `au`.
 
