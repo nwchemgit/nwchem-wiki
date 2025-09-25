@@ -106,7 +106,7 @@ Optionally, the total charge of the model and intermediate systems may
 be adjusted. The default is that all three systems have the same total
 charge.
 
-Example 1. A two-layer calculation on $K^{+}(H_{2}O)$ taking the
+Example 1. A two-layer calculation on K<sup>+</sup>(H<sub>2</sub>O) taking the
 potassium ion as the model system. Note that no bonds are broken so no
 link atoms are introduced. The real geometry would be specified with
 potassium (the model) first.
@@ -135,7 +135,7 @@ associate a [geometrical center](Geometry.md) with an atom type
 and basis sets, etc. For each broken bond specify the numbers of the two
 atoms (i and j), the scale factor (g) and optionally the tag of the link
 atom. Link atoms are placed along the vector connecting the the first to
-the second atom of the bond according to the equation
+the second atom of the bond according to the equation  
 
 $$\underline{R}_{link} = (1-g)\underline{R}_{1} + g*\underline{R}_{2}$$
 
@@ -329,9 +329,9 @@ A simple two-layer model changing just the wavefunction with one link
 atom.
 
 This reproduces the two-layer ONIOM (MP2:HF) result from Dapprich et al.
-for the reaction $R-CH_{3} = R-CH_{2} + H$ with $R=CH_3$ using
-$CH_4$ as the model. The geometries of $R-CH_3$ and $R-CH_2$ are
-optimized at the DFT-B3LYP/6-311++G\*\* level of theory, and then ONIOM
+for the reaction R-CH<sub>3</sub> = R-CH<sub>2</sub> + H  with R=CH<sub>3</sub> using
+CH<sub>4</sub> as the model. The geometries of R-CH<sub>3</sub> and R-CH<sub>2</sub> are
+optimized at the DFT-B3LYP/6-311++G** level of theory, and then ONIOM
 is used to compute the binding energy using UMP2 for the model system
 and HF for the real system. The results, including MP2 calculations on
 the full system for comparison, are as given in the table
@@ -347,11 +347,11 @@ below.
 Energies for ONIOM example 1, hydrocarbon bond energy using MP2:HF
 two-layer model.  
 
-The following input first performs a calculation on $CH_{3}-CH_2$, and
-then on $CH_{3}-CH_3$. Note that in the second calculation we cannot
+The following input first performs a calculation on CH<sub>2</sub>-CH<sub>2</sub>, and
+then on  CH<sub>3</sub>-CH<sub>3</sub>. Note that in the second calculation we cannot
 use the full symmetry since we are breaking the C-C bond in forming the
 model system (the non-equivalence of the methyl groups is perhaps more
-apparent if we write $R-CH_3$).
+apparent if we write R-CH<sub>3</sub>).
 ```
    start  
      
