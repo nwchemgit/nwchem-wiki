@@ -329,7 +329,7 @@ A simple two-layer model changing just the wavefunction with one link
 atom.
 
 This reproduces the two-layer ONIOM (MP2:HF) result from Dapprich et al.
-for the reaction R-CH<sub>3</sub> = R-CH<sub>2</sub> + H  with R=CH<sub>3</sub> using
+for the reaction R-CH<sub>3</sub> ➔ R-CH<sub>2</sub> + H  with R=CH<sub>3</sub> using
 CH<sub>4</sub> as the model. The geometries of R-CH<sub>3</sub> and R-CH<sub>2</sub> are
 optimized at the DFT-B3LYP/6-311++G** level of theory, and then ONIOM
 is used to compute the binding energy using UMP2 for the model system
@@ -486,7 +486,7 @@ A three layer example combining CCSD(T), and MP2 with two different
 quality basis sets, and using multiple link atoms.
 
 The full system is tetra-dimethyl-amino-ethylene (TAME) or
-(N(Me)2)2-C=C-(N(Me)2)2. The intermediate system is (NH2)2-C=C-(NH2)2
+(N(Me)<sub>2</sub>)<sub>2</sub>-C=C-(N(Me)<sub>2</sub>)<sub>2</sub>. The intermediate system is (NH<sub>2</sub>)<sub>2</sub>-C=C-(NH<sub>2</sub>)<sub>2</sub>
 and H2C=CH2 is the model system. CCSD(T)+aug-cc-pvtz is used for the
 model region, MP2+aug-cc-pvtz for the intermediate region, and
 MP2+aug-cc-pvdz for everything.
