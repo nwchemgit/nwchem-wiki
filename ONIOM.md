@@ -94,14 +94,14 @@ are specified, then so must the other.
 
 The geometry and total charge of the full or real system should be
 specified as normal using the [geometry](Geometry.md) directive.
-If $N_{model}$ of the atoms are to be included in the model system,
+If N<sub>model</sub> of the atoms are to be included in the model system,
 then these should be specified first in the geometry. Similarly, in a
-three-layer calculation, if there are $N_{inter}$ atoms to be included
+three-layer calculation, if there are N<sub>inter</sub> atoms to be included
 in the intermediate system, then these should also be arranged together
 at the beginning of the geometry. The implict assumption is that the
 model system is a subset of the intermediate system which is a subset of
 the real system. The number of atoms to be included in the model and
-intemediate systems are specified using the MODEL and INTER directives.
+intemediate systems are specified using the `MODEL` and `INTER` directives.
 Optionally, the total charge of the model and intermediate systems may
 be adjusted. The default is that all three systems have the same total
 charge.
@@ -297,7 +297,7 @@ calculations which you can then terminate.
 
 E.g., in a calculation on Fe(III) surrounded by some ligands, it is hard
 to converge the full (real) system from the atomic guess so as to obtain
-a $d^5$ configuration for the iron atom since the *d* orbitals are
+a d<sup>5</sup> configuration for the iron atom since the *d* orbitals are
 often nominally lower in energy than some of the ligand orbitals. The
 most effective mechanism is to converge the isolated Fe(III) and then to
 use the [fragment
