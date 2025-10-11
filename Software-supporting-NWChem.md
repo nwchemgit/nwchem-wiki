@@ -97,6 +97,7 @@ feedback on this page content.
  - **Fragme∩t** is a framework that makes it easy to prototype, implement, and benchmark fragmentation methods <https://gitlab.com/john-herbert-group/fragment>
  - **pyVPT2** is a program to perform second-order vibrational perturbation theory (VPT2) computations to obtain anharmonic vibrational frequencies <https://github.com/philipmnel/pyvpt2>
  - **Quick-QM-Spectra**  creates a IR, UV-VIS or Raman spectrum from a NWChem output file <https://hanlev.github.io/QQMS>
+ - **Quantum Chemistry Operate** is a package for operating Quantum Chemistry programs using qcio standardized data structures <https://github.com/coltonbh/qcop>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
