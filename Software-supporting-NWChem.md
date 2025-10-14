@@ -39,7 +39,7 @@ feedback on this page content.
   - **OpenDFT**  brings cutting edge solid state research to the people <https://github.com/JannickWeisshaupt/OpenDFT>
   - **STREAMM** generates structures and input files for quantum chemical and molecular dynamics codes <https://github.com/NREL/streamm-tools>
   - **SparcleQC** is a Python package that creates QM/MM-like input files for quantum chemistry codes <https://sparcle-qc.readthedocs.io>
-  - **Winmostar** front-end GUI for pre- and post-processing quantum chemistry codes.
+  - **Winmostar** is a front-end GUI for pre- and post-processing quantum chemistry codes <https://winmostar.com>
 
 <references/>
 
