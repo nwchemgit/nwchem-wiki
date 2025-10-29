@@ -112,7 +112,7 @@ export MPICH_SMP_SINGLE_COPY_MODE=NONE
 export OMP_NUM_THREADS=1
 export APPTAINERENV_OMP_NUM_THREADS=1
 MYIMG=oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.mpich3.4.2:
-srun  -N $SLURM_NNODES  -l  apptainer exec --bind $BINDS --workdir `pwd` $MYIMG   nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
+srun apptainer exec --bind $BINDS --workdir `pwd` $MYIMG nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
 ```
 
 ## Shifter 
