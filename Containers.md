@@ -104,9 +104,7 @@ module  load cray-mpich-abi
 export APPTAINERENV_LD_LIBRARY_PATH="$CRAY_MPICH_DIR/lib-abi-mpich:$CRAY_MPICH_ROOTDIR/gtl/lib:$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH:/opt/cray/pe/lib64:$HIP_LIB_PATH:/opt/cray/pe/gcc/current/snos/lib64"
 export APPTAINER_CONTAINLIBS="/usr/lib64/libcxi.so.1,/usr/lib64/libjson-c.so.3,/lib64/libtinfo.so.6,/usr/lib64/libnl-3.so.200,/usr/lib64/libgfortran.so.5,/usr/lib64/libjansson.so.4"
 MYFS=$(findmnt -r -T . | tail -1 |cut -d ' ' -f 1)
-export http_proxy=http://proxy.ccs.ornl.gov:3128/
 export https_proxy=http://proxy.ccs.ornl.gov:3128/
-export no_proxy='localhost,127.0.0.0/8,*.ccs.ornl.gov'
 export BINDS=/usr/share/libdrm,/var/spool/slurmd,/opt/cray,${MYFS}
 export FI_CXI_RX_MATCH_MODE=hybrid
 export COMEX_EAGER_THRESHOLD=32768
