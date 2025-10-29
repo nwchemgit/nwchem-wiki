@@ -100,23 +100,20 @@ Slurm script for running NWChem Singularity/Apptainer images on [OLCF Frontier](
 #SBATCH  --cpus-per-task 1
 #SBATCH -J siosi6
 #SBATCH -o siosi6.err.%j
-module swap libfabric libfabric/1.15.2.0
 module  load cray-mpich-abi
-export APPTAINERENV_LD_LIBRARY_PATH="$CRAY_MPICH_DIR/lib-abi-mpich:$CRAY_MPICH_ROOTDIR/gtl/lib:/opt/rocm/lib:/opt/rocm/lib64:$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH:/opt/cray/pe/lib64:$HIP_LIB_PATH:/opt/cray/pe/gcc/11.2.0/snos/lib64:/opt/cray/xpmem/default/lib64"
+export APPTAINERENV_LD_LIBRARY_PATH="$CRAY_MPICH_DIR/lib-abi-mpich:$CRAY_MPICH_ROOTDIR/gtl/lib:$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH:/opt/cray/pe/lib64:$HIP_LIB_PATH:/opt/cray/pe/gcc/current/snos/lib64"
 export APPTAINER_CONTAINLIBS="/usr/lib64/libcxi.so.1,/usr/lib64/libjson-c.so.3,/lib64/libtinfo.so.6,/usr/lib64/libnl-3.so.200,/usr/lib64/libgfortran.so.5,/usr/lib64/libjansson.so.4"
 MYFS=$(findmnt -r -T . | tail -1 |cut -d ' ' -f 1)
 export http_proxy=http://proxy.ccs.ornl.gov:3128/
 export https_proxy=http://proxy.ccs.ornl.gov:3128/
 export no_proxy='localhost,127.0.0.0/8,*.ccs.ornl.gov'
-export PERMANENT_DIR=$MEMBERWORK/$SLURM_JOB_ACCOUNT
-export BINDS=/usr/share/libdrm,/var/spool/slurmd,/opt/cray,${MYFS},${PERMANENT_DIR}
+export BINDS=/usr/share/libdrm,/var/spool/slurmd,/opt/cray,${MYFS}
 export FI_CXI_RX_MATCH_MODE=hybrid
 export COMEX_EAGER_THRESHOLD=32768
 export MPICH_SMP_SINGLE_COPY_MODE=NONE
 export OMP_NUM_THREADS=1
+export APPTAINERENV_OMP_NUM_THREADS=1
 MYIMG=oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.mpich3.4.2:
-export APPTAINER_CACHEDIR=$MEMBERWORK/$SLURM_JOB_ACCOUNT/cache
-mkdir -p $APPTAINER_CACHEDIR
 srun  -N $SLURM_NNODES  -l  apptainer exec --bind $BINDS --workdir `pwd` $MYIMG   nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
 ```
 
