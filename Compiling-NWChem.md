@@ -16,9 +16,9 @@ as well as instructions for installing pre-compiled version of NWChem are availa
   - `$NWCHEM_TOP` defines the top directory of the NWChem source tree,
     e.g.
 
-When dealing with source from a ***NWChem release*** (7.3.0 in this example)
+When dealing with source from a ***NWChem release*** (7.3.1 in this example)
 ```
-export NWCHEM_TOP=<your path>/nwchem-7.3.0
+export NWCHEM_TOP=<your path>/nwchem-7.3.1
 ```
   - `$NWCHEM_TARGET` defines your target platform, e.g.
 ```
