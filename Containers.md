@@ -115,6 +115,44 @@ MYIMG=oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.mpich3.4.2:
 srun apptainer exec --bind $BINDS --workdir `pwd` $MYIMG nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
 ```
 
+### Instruction for running on NERSC Perlmutter CPU partition
+
+Slurm script for running NWChem Singularity/Apptainer images on the CPU partition of [NERSC Perlmutter](https://docs.nersc.gov/systems/perlmutter/architecture/)
+
+```
+#SBATCH -C cpu
+#SBATCH -N 8
+#SBATCH -A ABC123
+#SBATCH --ntasks-per-node=64
+#SBATCH --cpus-per-task=2
+module load PrgEnv-gnu
+module load cray-pmi
+module load  cray-mpich-abi
+module list
+export APPTAINERENV_LD_LIBRARY_PATH="$CRAY_MPICH_DIR/lib-abi-mpich:$CRAY_MPICH_ROOTDIR/gtl/lib:$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH:/opt/cray/pe/lib64:/opt/cray/pe/gcc/default/snos/lib64"
+export APPTAINER_CONTAINLIBS="/usr/lib64/libcxi.so.1,/usr/lib64/libjson-c.so.3,/lib64/libtinfo.so.6,/usr/lib64/libnl-3.so.200,/usr/lib64/libgfortran.so.5,/usr/lib64/libjansson.so.4"
+export OMP_NUM_THREADS=1
+export OMP_PROC_BIND=true
+export COMEX_MAX_NB_OUTSTANDING=6
+export COMEX_EAGER_THRESHOLD=65536
+export SCRATCH_DIR=/tmp
+export APPTAINER_CONFIGDIR=${SCRATCH}/apptainer
+export APPTAINER_CACHEDIR=${SCRATCH}/apptainer/cache
+export APP_VER=current
+export PATH=/cvmfs/oasis.opensciencegrid.org/mis/apptainer/$APP_VER/x86_64/bin:$PATH
+export PATH=/cvmfs/oasis.opensciencegrid.org/mis/apptainer/$APP_VER/x86_64/utils/bin/:$PATH
+export LD_LIBRARY_PATH=/cvmfs/oasis.opensciencegrid.org/mis/apptainer/current/x86_64/utils/lib:$LD_LIBRARY_PATH
+MYFS=$(findmnt -r -T . | tail -1 |cut -d ' ' -f 1)
+export BINDS=/usr/share/libdrm,/var/spool/slurmd,/opt/cray,${MYFS}
+export MPICH_GPU_SUPPORT_ENABLED=0
+export MPICH_SMP_SINGLE_COPY_MODE=NONE
+export FI_CXI_RX_MATCH_MODE=hybrid
+export FI_MR_CACHE_MONITOR=disabled
+export FI_CXI_RDZV_THRESHOLD=65536
+MYIMG=oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.mpich3.4.2.libfabric1.18.3:
+apptainer pull  /tmp/nwchem.sif $MYIMG
+srun  -v  -N  $SLURM_NNODES  -n $SLURM_NPROCS   apptainer exec --bind $BINDS --workdir `pwd`  $MYIMG nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
+```
 ## Shifter 
 
 Instructions for running the NWChem [Shifter images](https://docs.nersc.gov/applications/nwchem/) are available at [https://docs.nersc.gov/applications/nwchem](https://docs.nersc.gov/applications/nwchem)  
