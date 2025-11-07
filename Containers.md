@@ -6,10 +6,10 @@ Instruction for using the NWChem Docker container with the [docker compose](http
 
 1. Install docker  as described in [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install)
 
-2. Download the [compose.yaml](https://raw.githubusercontent.com/nwchemgit/nwchem-dockerfiles/refs/heads/master/nwchem-dev.mpipr/compose.yaml) file
+2. Download the [compose.yaml](https://github.com/nwchemgit/nwchem-dockerfiles/raw/refs/heads/master/nwchem-cross/compose.yaml) file
  
 ```
- wget https://raw.githubusercontent.com/nwchemgit/nwchem-dockerfiles/refs/heads/master/nwchem-dev.mpipr/compose.yaml
+ wget https://github.com/nwchemgit/nwchem-dockerfiles/raw/refs/heads/master/nwchem-cross/compose.yaml
 ```
 
 3. Create the nwchem service
