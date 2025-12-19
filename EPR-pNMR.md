@@ -1,4 +1,4 @@
-### EPR and Paramagnetic NMR NWChem Tutorial
+### EPR and Paramagnetic NMR NWChem Tutorial  
 
 This tutorial involves tensor/matrix operations,
 which can be readily done with [Octave](https://octave.org/),
