@@ -22,7 +22,7 @@ else
     #git clone --depth 1 git@github.com:nwchemgit/nwchem-wiki.git docs
     if [[ $(uname -s) == "Darwin" ]]; then    
 	if ! [ -x "$(command -v gtar)" ]; then
-	    echo " please install gtar "
+	    echo " please install gnu-tar "
 	    echo " with homebrew "
 	    echo " "
 	    exit 1
