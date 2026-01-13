@@ -253,7 +253,7 @@ at the [SMD Model documentation](#smd)
 __(New since August 31st 2025 in master branch)__  
 `cavity [vdw|ses]`  
 The `vdw` dewfault option uses the York Karplus[@york1999] prescription for creating the cavity.  
-Instead, the `ses` cavity construction approach creates a solvent-excluding surface (SES), using the GEPOL93 algorithm[@pascualahuir1994].
+Instead, the `ses` cavity construction approach creates a solvent-excluding surface (SES), using the GEPOL93 algorithm[@pascualahuir1994,@soares2025].
 
 #### COSMO: NDIV keyword
 **(New since August 31st 2025 in master branch)**   
@@ -261,8 +261,9 @@ Instead, the `ses` cavity construction approach creates a solvent-excluding surf
 The `ndiv` keyword define the size of the `SES` cavity.  
 
 #### COSMO: POTCORR keyword
-**(New since August 31st 2025 in master branch)**   
-`potcorr [true| false]`
+**(New since August 31st 2025 in master branch)**
+`potcorr [true| false]`  
+Apply the  outlying charge correction to the electrostatic potential as described  in [@soares2025]
 
 ### Examples 
 
