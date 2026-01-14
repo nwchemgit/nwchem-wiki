@@ -99,6 +99,7 @@ feedback on this page content.
  - **pyVPT2** is a program to perform second-order vibrational perturbation theory (VPT2) computations to obtain anharmonic vibrational frequencies <https://github.com/philipmnel/pyvpt2>
  - **Quick-QM-Spectra**  creates a IR, UV-VIS or Raman spectrum from a NWChem output file <https://hanlev.github.io/QQMS>
  - **Quantum Chemistry Operate** is a package for operating Quantum Chemistry programs using qcio standardized data structures <https://github.com/coltonbh/qcop>
+ - **SHARC** is a software package to study the excited-state dynamics of molecules <https://sharc-md.org/>
 
 ## Programs that can display or manipulate cube and/or Molden files
 
