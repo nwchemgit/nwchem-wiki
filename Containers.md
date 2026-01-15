@@ -146,9 +146,9 @@ MYFS=$(findmnt -r -T . | tail -1 |cut -d ' ' -f 1)
 export BINDS=/usr/share/libdrm,/var/spool/slurmd,/opt/cray,${MYFS}
 export MPICH_GPU_SUPPORT_ENABLED=0
 export MPICH_SMP_SINGLE_COPY_MODE=NONE
-export FI_CXI_RX_MATCH_MODE=hybrid
+export FI_CXI_RX_MATCH_MODE=software
 export FI_MR_CACHE_MONITOR=disabled
-export FI_CXI_RDZV_THRESHOLD=65536
+export FI_CXI_RDZV_THRESHOLD=16384
 MYIMG=oras://ghcr.io/edoapra/nwchem-singularity/nwchem-dev.mpich3.4.2.libfabric1.18.3:
 apptainer pull  /tmp/nwchem.sif $MYIMG
 srun  -v  -N  $SLURM_NNODES  -n $SLURM_NPROCS   apptainer exec --bind $BINDS --workdir `pwd`  $MYIMG nwchem siosi6.nw >& siosi6.out.$SLURM_JOBID
