@@ -340,7 +340,7 @@ nonrelativistic.
 
 ### X2C: exact two-component relativistic Hamiltonian
 
-The exact two-component Hamiltonian[^18][^19] has been implemented in NWChem[^20][^21][^22].
+The exact two-component Hamiltonian[^18][^19] has been implemented in the [DFT](Density-Functional-Theory-for-Molecules.md) module of NWChem[^20][^21][^22].
 
 ```
  X2C [<string (ON||OFF) default ON>
