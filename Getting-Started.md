@@ -141,16 +141,17 @@ A simple example of an NWChem input file is an SCF geometry optimization
 of the nitrogen molecule, using a Dunning cc-pvdz basis set. This input
 file contains the bare minimum of information the user must specify to
 run this type of problem -- fewer than ten lines of input, as follows:
+
 ```
- title "Nitrogen cc-pvdz SCF geometry optimization"  
- geometry    
-   n 0 0 0  
-   n 0 0 1.08  
- end  
- basis  
-   n library cc-pvdz  
- end  
- task scf optimize
+title "Nitrogen cc-pvdz SCF geometry optimization"
+geometry
+  N 0 0 0
+  N 0 0 1.08
+end
+basis
+  N library cc-pvdz
+end
+task scf optimize
 ```
 Examining the input line by line, it can be seen that it contains only
 four directives; TITLE, GEOMETRY, BASIS, and TASK. The TITLE directive
