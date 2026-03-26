@@ -40,6 +40,7 @@ feedback on this page content.
   - **STREAMM** generates structures and input files for quantum chemical and molecular dynamics codes <https://github.com/NREL/streamm-tools>
   - **SparcleQC** is a Python package that creates QM/MM-like input files for quantum chemistry codes <https://sparcle-qc.readthedocs.io>
   - **Winmostar** is a front-end GUI for pre- and post-processing quantum chemistry codes <https://winmostar.com>
+  - **ASH** is a Python-based computational chemistry and multiscale modelling program <https://ash.readthedocs.io>
 
 <references/>
 
@@ -114,12 +115,13 @@ The following programs can display cube files from
   - **GaussView** <http://www.gaussian.com/g_prod/gv5.htm>
   - **VMD** <http://www.ks.uiuc.edu/Research/vmd>
   - **VESTA** <http://jp-minerals.org/vesta/en/>
-  - **Jamberoo**
+  - **Jamberoo** is a molecular viewer/editor
     <http://www.jamberoo.org/>
   - **Molden2AIM** is a utility program which can be used to create AIM-WFN, AIM-WFX, and NBO-47 files from a Molden file
      <https://github.com/zorkzou/Molden2AIM>
   - **Multiwfn** is a wavefunction analysis program <http://sobereva.com/multiwfn>
   - **CrystalExplorer** is a program for Hirshfeld surface analysis, visualization and quantitative analysis of molecular crystals that can read NWChem Molden Files <https://crystalexplorer.net/>
+  - **VibeMol** is a molecular visualization and editing tool <https://evangelistalab.org/vibemol/>
 
 ## Programs post-processing AIM files
 
