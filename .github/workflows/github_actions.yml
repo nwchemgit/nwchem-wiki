@@ -13,10 +13,18 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     runs-on: [ubuntu-22.04]
-#    permissions:
-#      contents: read
-#      pull-requests: write
+    permissions:
+      contents: write
     steps:
+      - name: push_false
+        id: push_false
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          echo "push_truefalse=false" >> $GITHUB_ENV
+      - name: push_true
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          echo "push_truefalse=true" >> $GITHUB_ENV
       - name: Checkout nwchem-wiki
         uses: actions/checkout@v6
         with:
@@ -33,6 +41,7 @@ jobs:
           git fetch upstream
           git merge upstream/master --no-edit
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,6 +51,8 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     needs: mirror_dotwiki2repo
+    permissions:
+      contents: write
     runs-on: [ubuntu-22.04]
     steps:
       - name: Checkout nwchem.wiki
@@ -60,6 +71,7 @@ jobs:
           git fetch upstream
           git merge upstream/master --no-edit
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPOSITORY_TOKEN }}
@@ -71,6 +83,8 @@ jobs:
       github.event_name == 'schedule' ||
       (!contains(github.event.head_commit.message, 'ci skip'))
     needs: mirror_repo2dotwiki
+    permissions:
+      contents: write
     runs-on: [ubuntu-22.04]
     steps:
       - name: checkout wiki
@@ -111,7 +125,7 @@ jobs:
         run: |
           echo " GITHUB_REF_NAME is $GITHUB_REF_NAME"
           curl -LJ  \
-          https://github.com/nwchemgit/archivedforum/tarball/"$GITHUB_REF_NAME"\
+          https://github.com/nwchemgit/archivedforum/tarball/master \
            | tar -xz --wildcards \
           nwchemgit-archivedforum-*/Special_AWCforum/*
           mv nwchemgit-archivedforum-* archivedforum
@@ -154,12 +168,14 @@ jobs:
           print_page.html nwchemusermanual.pdf
           ls -l nwchemusermanual.pdf
       - name: checkout website
+        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs
         run: |
           git clone -b $GITHUB_REF_NAME --depth 1 \
           https://github.com/nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
+        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs
         run: |
@@ -169,6 +185,7 @@ jobs:
           cd nwchemgit.github.io
           time -p git log -1
       - name: Commit changes
+        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs/nwchemgit.github.io
         run: |
@@ -176,6 +193,7 @@ jobs:
             ls -lrt ../
             bash ../commit_changes.sh
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           directory: mkdocs/nwchemgit.github.io
@@ -183,6 +201,7 @@ jobs:
           branch: ${{ github.ref }}
           repository: nwchemgit/nwchemgit.github.io
       - name: Check commit result
+        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs/nwchemgit.github.io
         run: |
