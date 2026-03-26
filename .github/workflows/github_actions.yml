@@ -125,7 +125,7 @@ jobs:
         run: |
           echo " GITHUB_REF_NAME is $GITHUB_REF_NAME"
           curl -LJ  \
-          https://github.com/nwchemgit/archivedforum/tarball/"$GITHUB_REF_NAME"\
+          https://github.com/nwchemgit/archivedforum/tarball/master \
            | tar -xz --wildcards \
           nwchemgit-archivedforum-*/Special_AWCforum/*
           mv nwchemgit-archivedforum-* archivedforum
