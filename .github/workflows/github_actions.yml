@@ -16,6 +16,15 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: push_false
+        id: push_false
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          echo "push_truefalse=false" >> $GITHUB_ENV
+      - name: push_true
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          echo "push_truefalse=true" >> $GITHUB_ENV
       - name: Checkout nwchem-wiki
         uses: actions/checkout@v6
         with:
@@ -32,6 +41,7 @@ jobs:
           git fetch upstream
           git merge upstream/master --no-edit
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -61,6 +71,7 @@ jobs:
           git fetch upstream
           git merge upstream/master --no-edit
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPOSITORY_TOKEN }}
@@ -179,6 +190,7 @@ jobs:
             ls -lrt ../
             bash ../commit_changes.sh
       - name: Push changes
+        if: ${{ env.push_truefalse == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           directory: mkdocs/nwchemgit.github.io
