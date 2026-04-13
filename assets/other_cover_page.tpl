@@ -1,7 +1,7 @@
 <center>
 <h1>NWChem User Manual</h1>
 <br>
-<h1>Release 7.2.0</h1>
+<h1>Release 7.3.1</h1>
 <br>
 <img src="assets/MS3logo.png" />
 
