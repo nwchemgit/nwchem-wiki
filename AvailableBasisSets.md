@@ -466,16 +466,10 @@ The library files are located in
 | [m6-31gs](#m6-31gs) | Spherical | Sc-Cu |
 | [ma-qzvp](#ma-qzvp) | Spherical | H-Rn |
 | [ma-qzvpp](#ma-qzvpp) | Spherical | H-Rn |
-| [ma-qzvpp~](#ma-qzvpp) | Spherical | H-Rn |
-| [ma-qzvp~](#ma-qzvp) | Spherical | H-Rn |
 | [ma-svp](#ma-svp) | Spherical | H-Rn |
 | [ma-svpp](#ma-svpp) | Spherical | H-Rn |
-| [ma-svpp~](#ma-svpp) | Spherical | H-Rn |
-| [ma-svp~](#ma-svp) | Spherical | H-Rn |
 | [ma-tzvp](#ma-tzvp) | Spherical | H-Rn |
 | [ma-tzvpp](#ma-tzvpp) | Spherical | H-Rn |
-| [ma-tzvpp~](#ma-tzvpp) | Spherical | H-Rn |
-| [ma-tzvp~](#ma-tzvp) | Spherical | H-Rn |
 | [maug-cc-pvd+dz](#maug-cc-pvddz) | Spherical | H-Ar |
 | [maug-cc-pvdz](#maug-cc-pvdz) | Spherical | H-Ar |
 | [maug-cc-pvq+dz](#maug-cc-pvqdz) | Spherical | H-Ar |
@@ -4741,20 +4735,6 @@ ma-qzvpp
 - **Number of elements:** 86
 - **Library file:** [ma-qzvpp](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-qzvpp)
 
-### ma-qzvpp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-qzvpp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-qzvpp~)
-
-### ma-qzvp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-qzvp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-qzvp~)
-
 ### ma-svp
 
 ma-svp
@@ -4773,20 +4753,6 @@ ma-svp(p)
 - **Number of elements:** 86
 - **Library file:** [ma-svpp](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-svpp)
 
-### ma-svpp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-svpp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-svpp~)
-
-### ma-svp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-svp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-svp~)
-
 ### ma-tzvp
 
 ma-tzvp
@@ -4804,20 +4770,6 @@ ma-tzvpp
 - **Elements:** H-Rn
 - **Number of elements:** 86
 - **Library file:** [ma-tzvpp](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-tzvpp)
-
-### ma-tzvpp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-tzvpp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-tzvpp~)
-
-### ma-tzvp~
-
-- **Type:** Spherical
-- **Elements:** H-Rn
-- **Number of elements:** 86
-- **Library file:** [ma-tzvp~](https://github.com/nwchemgit/nwchem/tree/master/src/basis/libraries/ma-tzvp~)
 
 ### maug-cc-pvd+dz
 
