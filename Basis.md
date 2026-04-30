@@ -178,11 +178,11 @@ accessed for the basis functions. For example,
    si library 6-31g file /usr/d3g681/nwchem/libraries/  
  end
 ```
-This directive tells the code to use the basis set 3-21g in the file
-/usr/d3g681/nwchem/library for atom o and to use the basis set 6-31g in
-the directory /usr/d3g681/nwchem/libraries/ for atom si, rather than
+This directive tells the code to use the basis set `3-21g` in the file
+`/usr/d3g681/nwchem/library` for atom `o` and to use the basis set `6-31g` in
+the directory `/usr/d3g681/nwchem/libraries/` for atom `si`, rather than
 look for them in the default libraries. When a directory is defined the
-code will search for the basis set in a file with the name 6-31g.
+code will search for the basis set in a file with the name `6-31g`.
 
 The "`*`" tag can be used to efficiently define basis set input
 directives for large numbers of atoms. An example is:
@@ -191,7 +191,7 @@ directives for large numbers of atoms. An example is:
    *  library 3-21g 
  end
 ```
-This directive tells the code to assign the basis sets 3-21g to all the
+This directive tells the code to assign the basis sets `3-21g` to all the
 atom tags defined in the geometry. If one wants to place a different
 basis set on one of the atoms defined in the geometry, the following
 directive can be used:
@@ -200,7 +200,7 @@ directive can be used:
    *  library 3-21g except H 
  end
 ```
-This directive tells the code to assign the basis sets 3-21g to all the
+This directive tells the code to assign the basis sets `3-21g` to all the
 atoms in the geometry, except the hydrogen atoms. Remember that the user
 will have to explicitly define the hydrogen basis set in this
 directive! One may also define tags that end with a "`*`":
@@ -209,7 +209,7 @@ directive! One may also define tags that end with a "`*`":
    oxy*  library 3-21g   
  end
 ```
-This directive tells the code to assign the basis sets 3-21g to all atom
+This directive tells the code to assign the basis sets `3-21g` to all atom
 tags in the geometry that start with "`oxy`".
 
 If standard basis sets are to be placed upon a dummy center, the
