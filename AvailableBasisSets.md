@@ -630,7 +630,7 @@ The library files are located in
 
 ### 2zapa-nr
 
-2ZaPa-NR  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+2ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -639,7 +639,7 @@ The library files are located in
 
 ### 2zapa-nr_cv
 
-2ZaPa-NR_CV  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+2ZaPa-NR_CV  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -648,7 +648,7 @@ The library files are located in
 
 ### 3-21++g
 
-3-21++G  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+3-21++G  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ca
@@ -657,7 +657,7 @@ The library files are located in
 
 ### 3-21++gs
 
-3-21++G*  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+3-21++G*  
 
 - **Type:** Cartesian
 - **Elements:** H-Ar
@@ -666,7 +666,7 @@ The library files are located in
 
 ### 3-21g
 
-3-21G  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+3-21G  
 
 - **Type:** Cartesian
 - **Elements:** H-Cs
@@ -675,7 +675,7 @@ The library files are located in
 
 ### 3-21gs
 
-3-21G*  EMSL  Basis Set Exchange Library  2/17/10 4:56 PM
+3-21G*  
 
 - **Type:** Cartesian
 - **Elements:** H-Ar
@@ -684,7 +684,7 @@ The library files are located in
 
 ### 3-21gs_polarization
 
-3-21G* Polarization  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+3-21G* Polarization  
 
 - **Type:** Cartesian
 - **Elements:** Na-Ar
@@ -693,7 +693,7 @@ The library files are located in
 
 ### 3-21gsp
 
-3-21GSP  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+3-21GSP  
 
 - **Type:** Cartesian
 - **Elements:** H-Ar
@@ -702,7 +702,7 @@ The library files are located in
 
 ### 3zapa-nr
 
-3ZaPa-NR  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+3ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -711,7 +711,7 @@ The library files are located in
 
 ### 3zapa-nr_cv
 
-3ZaPa-NR_CV  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+3ZaPa-NR_CV  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -720,7 +720,7 @@ The library files are located in
 
 ### 4-22gsp
 
-4-22GSP  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+4-22GSP  
 
 - **Type:** Cartesian
 - **Elements:** H-Ar
@@ -729,7 +729,7 @@ The library files are located in
 
 ### 4-31g
 
-4-31G  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+4-31G  
 
 - **Type:** Cartesian
 - **Elements:** H-Ne, P-Cl
@@ -738,7 +738,7 @@ The library files are located in
 
 ### 4zapa-nr
 
-4ZaPa-NR  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+4ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -747,7 +747,7 @@ The library files are located in
 
 ### 4zapa-nr_cv
 
-4ZaPa-NR_CV  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+4ZaPa-NR_CV  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -756,7 +756,7 @@ The library files are located in
 
 ### 5zapa-nr
 
-5ZaPa-NR  EMSL  Basis Set Exchange Library  8/17/16 12:19 PM
+5ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -765,7 +765,7 @@ The library files are located in
 
 ### 5zapa-nr_cv
 
-5ZaPa-NR_CV  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+5ZaPa-NR_CV  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -774,7 +774,7 @@ The library files are located in
 
 ### 5zp
 
-5ZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+5ZP  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -783,7 +783,7 @@ The library files are located in
 
 ### 5zp-dkh
 
-5ZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+5ZP-DKH  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -792,7 +792,7 @@ The library files are located in
 
 ### 6-31++g
 
-6-31++G  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+6-31++G  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ca
@@ -801,7 +801,7 @@ The library files are located in
 
 ### 6-31++gs
 
-6-31++G*  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-31++G*  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca
@@ -810,7 +810,7 @@ The library files are located in
 
 ### 6-31++gss
 
-6-31++G**  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-31++G**  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca
@@ -819,7 +819,7 @@ The library files are located in
 
 ### 6-31++gss-j
 
-6-31++G**-J  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+6-31++G**-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -828,7 +828,7 @@ The library files are located in
 
 ### 6-31+g
 
-6-31+G  EMSL  Basis Set Exchange Library  2/16/15 5:17 PM
+6-31+G  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -837,7 +837,7 @@ The library files are located in
 
 ### 6-31+gs
 
-6-31+G*  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-31+G*  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca
@@ -846,7 +846,7 @@ The library files are located in
 
 ### 6-31+gs-j
 
-6-31+G*-J  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+6-31+G*-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -855,7 +855,7 @@ The library files are located in
 
 ### 6-31+gss
 
-6-31+G**  EMSL  Basis Set Exchange Library  2/16/15 5:17 PM
+6-31+G**  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -864,7 +864,7 @@ The library files are located in
 
 ### 6-311++g
 
-6-311++G  EMSL  Basis Set Exchange Library  2/27/15 12:02 PM
+6-311++G  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ca
@@ -873,7 +873,7 @@ The library files are located in
 
 ### 6-311++g2d_2p
 
-6-311++G(2d,2p)  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+6-311++G(2d,2p)  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ca
@@ -882,7 +882,7 @@ The library files are located in
 
 ### 6-311++g3df_3pd
 
-6-311++G(3df,3pd)  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
+6-311++G(3df,3pd)  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ar
@@ -891,7 +891,7 @@ The library files are located in
 
 ### 6-311++gs
 
-6-311++G*  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
+6-311++G*  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ca
@@ -900,7 +900,7 @@ The library files are located in
 
 ### 6-311++gss
 
-6-311++G**  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-311++G**  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -909,7 +909,7 @@ The library files are located in
 
 ### 6-311++gss-j
 
-6-311++G**-J  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+6-311++G**-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -918,7 +918,7 @@ The library files are located in
 
 ### 6-311+g
 
-6-311+G  EMSL  Basis Set Exchange Library  2/27/15 12:02 PM
+6-311+G  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -927,7 +927,7 @@ The library files are located in
 
 ### 6-311+g2d_p
 
-6-311+G(2d,p)  EMSL  Basis Set Exchange Library  2/27/15 12:01 PM
+6-311+G(2d,p)  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -936,7 +936,7 @@ The library files are located in
 
 ### 6-311+gs
 
-6-311+G*  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-311+G*  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -945,7 +945,7 @@ The library files are located in
 
 ### 6-311+gs-j
 
-6-311+G*-J  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+6-311+G*-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -954,7 +954,7 @@ The library files are located in
 
 ### 6-311+gss
 
-6-311+G**  EMSL  Basis Set Exchange Library  2/27/15 12:02 PM
+6-311+G**  
 
 - **Type:** Spherical
 - **Elements:** H-Ca
@@ -963,7 +963,7 @@ The library files are located in
 
 ### 6-311g
 
-6-311G  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+6-311G  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr, I
@@ -972,7 +972,7 @@ The library files are located in
 
 ### 6-311g-j
 
-6-311G-J  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+6-311G-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -981,7 +981,7 @@ The library files are located in
 
 ### 6-311g2df_2pd
 
-6-311G(2df,2pd)  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
+6-311G(2df,2pd)  
 
 - **Type:** Spherical
 - **Elements:** H-Ne, K-Ca
@@ -990,7 +990,7 @@ The library files are located in
 
 ### 6-311gs
 
-6-311G*  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-311G*  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr, I
@@ -999,7 +999,7 @@ The library files are located in
 
 ### 6-311gs_polarization
 
-6-311G* Polarization  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-311G* Polarization  
 
 - **Type:** Spherical
 - **Elements:** Li-Ca, Ga-Kr, I
@@ -1008,7 +1008,7 @@ The library files are located in
 
 ### 6-311gss
 
-6-311G**  EMSL  Basis Set Exchange Library  2/17/10 4:56 PM
+6-311G**  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr, I
@@ -1017,7 +1017,7 @@ The library files are located in
 
 ### 6-311gss_polarization
 
-6-311G** Polarization  EMSL  Basis Set Exchange Library  2/17/10 4:58 PM
+6-311G** Polarization  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr, I
@@ -1026,7 +1026,7 @@ The library files are located in
 
 ### 6-31g
 
-6-31G  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
+6-31G  
 
 - **Type:** Spherical
 - **Elements:** H-Zn
@@ -1035,7 +1035,7 @@ The library files are located in
 
 ### 6-31g-blaudeau
 
-6-31G-Blaudeau  EMSL  Basis Set Exchange Library  4/15/11 10:04 AM
+6-31G-Blaudeau  
 
 - **Type:** Cartesian
 - **Elements:** K-Ca
@@ -1044,7 +1044,7 @@ The library files are located in
 
 ### 6-31g-j
 
-6-31G-J  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+6-31G-J  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -1062,7 +1062,7 @@ The library files are located in
 
 ### 6-31g3df_3pd
 
-6-31G(3df,3pd)  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
+6-31G(3df,3pd)  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -1071,7 +1071,7 @@ The library files are located in
 
 ### 6-31gs
 
-6-31G*  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+6-31G*  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -1080,7 +1080,7 @@ The library files are located in
 
 ### 6-31gs-blaudeau
 
-6-31G*-Blaudeau  EMSL  Basis Set Exchange Library  2/17/10 4:56 PM
+6-31G*-Blaudeau  
 
 - **Type:** Cartesian
 - **Elements:** K-Ca
@@ -1089,7 +1089,7 @@ The library files are located in
 
 ### 6-31gs_polarization
 
-6-31G* Polarization  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-31G* Polarization  
 
 - **Type:** Cartesian
 - **Elements:** Li-Zn
@@ -1098,7 +1098,7 @@ The library files are located in
 
 ### 6-31gss
 
-6-31G**  EMSL  Basis Set Exchange Library  2/17/10 4:58 PM
+6-31G**  
 
 - **Type:** Cartesian
 - **Elements:** H-Zn
@@ -1107,7 +1107,7 @@ The library files are located in
 
 ### 6-31gss_polarization
 
-6-31G** Polarization  EMSL  Basis Set Exchange Library  2/17/10 4:57 PM
+6-31G** Polarization  
 
 - **Type:** Cartesian
 - **Elements:** H-Zn
@@ -1116,7 +1116,7 @@ The library files are located in
 
 ### 6zapa-nr
 
-6ZaPa-NR  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+6ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -1125,7 +1125,7 @@ The library files are located in
 
 ### 6zp
 
-6ZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+6ZP  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -1134,7 +1134,7 @@ The library files are located in
 
 ### 6zp-dkh
 
-6ZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+6ZP-DKH  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -1143,7 +1143,7 @@ The library files are located in
 
 ### 7zapa-nr
 
-7ZaPa-NR  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+7ZaPa-NR  
 
 - **Type:** Spherical
 - **Elements:** H-Ne
@@ -1152,7 +1152,7 @@ The library files are located in
 
 ### a5zp
 
-A5ZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+A5ZP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ar
@@ -1161,7 +1161,7 @@ A5ZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### adzp
 
-ADZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+ADZP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-K, Sc-Rb, Y-La, Hf-Rn
@@ -1170,7 +1170,7 @@ ADZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### ahlrichs_coulomb_fitting
 
-Ahlrichs Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Ahlrichs Coulomb Fitting  
 
 - **Type:** Spherical
 - **Elements:** H-Ba, Hf-At
@@ -1179,7 +1179,7 @@ Ahlrichs Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ahlrichs_polarization
 
-Ahlrichs Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Ahlrichs Polarization  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -1188,7 +1188,7 @@ Ahlrichs Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### ahlrichs_pvdz
 
-Ahlrichs pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Ahlrichs pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -1197,7 +1197,7 @@ Ahlrichs pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### ahlrichs_tzv
 
-Ahlrichs TZV  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Ahlrichs TZV  
 
 - **Type:** Spherical
 - **Elements:** Li-Kr
@@ -1206,7 +1206,7 @@ Ahlrichs TZV  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ahlrichs_vdz
 
-Ahlrichs VDZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Ahlrichs VDZ  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -1215,7 +1215,7 @@ Ahlrichs VDZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ahlrichs_vtz
 
-Ahlrichs VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Ahlrichs VTZ  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -1224,7 +1224,7 @@ Ahlrichs VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### ano-rcc
 
-ANO-RCC  EMSL  Basis Set Exchange Library  7/2/14 4:38 PM
+ANO-RCC  
 
 - **Type:** Spherical
 - **Elements:** H-Cm
@@ -1233,7 +1233,7 @@ ANO-RCC  EMSL  Basis Set Exchange Library  7/2/14 4:38 PM
 
 ### apr-cc-pvq+dz
 
-apr-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+apr-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -1242,7 +1242,7 @@ apr-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aqzp
 
-AQZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+AQZP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-K, Sc-Rb, Y-Xe
@@ -1251,7 +1251,7 @@ AQZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### atzp
 
-ATZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+ATZP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-K, Sc-Rb, Y-Xe
@@ -1260,7 +1260,7 @@ ATZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### aug-cc-pcv5z
 
-aug-cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pCV5Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -1269,7 +1269,7 @@ aug-cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pcvdz
 
-aug-cc-pCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+aug-cc-pCVDZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -1278,7 +1278,7 @@ aug-cc-pCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### aug-cc-pcvqz
 
-aug-cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pCVQZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -1287,7 +1287,7 @@ aug-cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pcvt+dz
 
-aug-cc-pCV(T+d)Z  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
+aug-cc-pCV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Cl
@@ -1296,7 +1296,7 @@ aug-cc-pCV(T+d)Z  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
 
 ### aug-cc-pcvtz
 
-aug-cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pCVTZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -1305,7 +1305,7 @@ aug-cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pv5+dz
 
-aug-cc-pV(5+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(5+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1314,7 +1314,7 @@ aug-cc-pV(5+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv5+dz_diffuse
 
-aug-cc-pV(5+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(5+d)Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1323,7 +1323,7 @@ aug-cc-pV(5+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv5z
 
-aug-cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1332,7 +1332,7 @@ aug-cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv5z-dk
 
-aug-cc-pV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pV5Z-DK  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Sc-Kr
@@ -1341,7 +1341,7 @@ aug-cc-pV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pv5z-dk_diffuse
 
-aug-cc-pV5Z-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV5Z-DK Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Sc-Kr
@@ -1350,7 +1350,7 @@ aug-cc-pV5Z-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv5z-nr_mp2_fitting
 
-aug-cc-pV5Z-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pV5Z-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1359,7 +1359,7 @@ aug-cc-pV5Z-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pv5z-pp
 
-aug-cc-pV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV5Z-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1368,7 +1368,7 @@ aug-cc-pV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv5z-pp-ri_diffuse
 
-aug-cc-pV5Z-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV5Z-PP-RI Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -1377,7 +1377,7 @@ aug-cc-pV5Z-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv5z-pp_diffuse
 
-aug-cc-pV5Z-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pV5Z-PP Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1386,7 +1386,7 @@ aug-cc-pV5Z-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pv5z-pp_mp2_fitting
 
-aug-cc-pV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pV5Z-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -1395,7 +1395,7 @@ aug-cc-pV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pv5z-pp_optri
 
-aug-cc-pV5Z-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV5Z-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1404,7 +1404,7 @@ aug-cc-pV5Z-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv5z-ri_diffuse
 
-aug-cc-pV5Z-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV5Z-RI diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1413,7 +1413,7 @@ aug-cc-pV5Z-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv5z_diffuse
 
-aug-cc-pV5Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV5Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Sc-Kr
@@ -1422,7 +1422,7 @@ aug-cc-pV5Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv5z_optri
 
-aug-cc-pV5Z_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV5Z_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1431,7 +1431,7 @@ aug-cc-pV5Z_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv6+dz
 
-aug-cc-pV(6+d)Z  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pV(6+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1440,7 +1440,7 @@ aug-cc-pV(6+d)Z  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pv6+dz_diffuse
 
-aug-cc-pV(6+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(6+d)Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1449,7 +1449,7 @@ aug-cc-pV(6+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv6z
 
-aug-cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV6Z  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1458,7 +1458,7 @@ aug-cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv6z-ri_diffuse
 
-aug-cc-pV6Z-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV6Z-RI diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1467,7 +1467,7 @@ aug-cc-pV6Z-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pv6z_diffuse
 
-aug-cc-pV6Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV6Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1476,7 +1476,7 @@ aug-cc-pV6Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pv7+dz
 
-aug-cc-pV(7+d)Z  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+aug-cc-pV(7+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Cl
@@ -1485,7 +1485,7 @@ aug-cc-pV(7+d)Z  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### aug-cc-pv7z
 
-aug-cc-pV7Z  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+aug-cc-pV7Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ne
@@ -1494,7 +1494,7 @@ aug-cc-pV7Z  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### aug-cc-pvd+dz
 
-aug-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pV(D+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1503,7 +1503,7 @@ aug-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvd+dz_diffuse
 
-aug-cc-pV(D+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(D+d)Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1512,7 +1512,7 @@ aug-cc-pV(D+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvdz
 
-aug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1521,7 +1521,7 @@ aug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvdz-dk
 
-aug-cc-pVDZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVDZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1530,7 +1530,7 @@ aug-cc-pVDZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvdz-dk_diffuse
 
-aug-cc-pVDZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVDZ-DK Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1539,7 +1539,7 @@ aug-cc-pVDZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvdz-pp
 
-aug-cc-pVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVDZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1548,7 +1548,7 @@ aug-cc-pVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvdz-pp-ri_diffuse
 
-aug-cc-pVDZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVDZ-PP-RI Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -1557,7 +1557,7 @@ aug-cc-pVDZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvdz-pp_diffuse
 
-aug-cc-pVDZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+aug-cc-pVDZ-PP Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1566,7 +1566,7 @@ aug-cc-pVDZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### aug-cc-pvdz-pp_mp2_fitting
 
-aug-cc-pVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pVDZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -1575,7 +1575,7 @@ aug-cc-pVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvdz-pp_optri
 
-aug-cc-pVDZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVDZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1584,7 +1584,7 @@ aug-cc-pVDZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvdz-ri_diffuse
 
-aug-cc-pVDZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVDZ-RI diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -1593,7 +1593,7 @@ aug-cc-pVDZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvdz_diffuse
 
-aug-cc-pVDZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+aug-cc-pVDZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1602,7 +1602,7 @@ aug-cc-pVDZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### aug-cc-pvdz_optri
 
-aug-cc-pVDZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVDZ_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1611,7 +1611,7 @@ aug-cc-pVDZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvq+dz
 
-aug-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1620,7 +1620,7 @@ aug-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvq+dz_diffuse
 
-aug-cc-pV(Q+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(Q+d)Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1629,7 +1629,7 @@ aug-cc-pV(Q+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvqz
 
-aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1638,7 +1638,7 @@ aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvqz-dk
 
-aug-cc-pVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVQZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1647,7 +1647,7 @@ aug-cc-pVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvqz-dk_diffuse
 
-aug-cc-pVQZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVQZ-DK Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1656,7 +1656,7 @@ aug-cc-pVQZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvqz-nr_mp2_fitting
 
-aug-cc-pVQZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pVQZ-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1665,7 +1665,7 @@ aug-cc-pVQZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pvqz-pp
 
-aug-cc-pVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVQZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1674,7 +1674,7 @@ aug-cc-pVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvqz-pp-ri_diffuse
 
-aug-cc-pVQZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pVQZ-PP-RI Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -1683,7 +1683,7 @@ aug-cc-pVQZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvqz-pp_diffuse
 
-aug-cc-pVQZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVQZ-PP Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1692,7 +1692,7 @@ aug-cc-pVQZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvqz-pp_mp2_fitting
 
-aug-cc-pVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVQZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -1701,7 +1701,7 @@ aug-cc-pVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvqz-pp_optri
 
-aug-cc-pVQZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVQZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1710,7 +1710,7 @@ aug-cc-pVQZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvqz-ri_diffuse
 
-aug-cc-pVQZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVQZ-RI diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -1719,7 +1719,7 @@ aug-cc-pVQZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvqz_diffuse
 
-aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVQZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1728,7 +1728,7 @@ aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvqz_optri
 
-aug-cc-pVQZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVQZ_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1737,7 +1737,7 @@ aug-cc-pVQZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvt+dz
 
-aug-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1746,7 +1746,7 @@ aug-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvt+dz_diffuse
 
-aug-cc-pV(T+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pV(T+d)Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -1755,7 +1755,7 @@ aug-cc-pV(T+d)Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvtz
 
-aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1764,7 +1764,7 @@ aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvtz-dk
 
-aug-cc-pVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVTZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr, Y-Pd
@@ -1773,7 +1773,7 @@ aug-cc-pVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvtz-dk_diffuse
 
-aug-cc-pVTZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVTZ-DK Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr, Y-Pd
@@ -1782,7 +1782,7 @@ aug-cc-pVTZ-DK Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvtz-j
 
-aug-cc-pVTZ-J  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVTZ-J  
 
 - **Type:** Spherical
 - **Elements:** H, B-F, Al-Cl, Sc-Zn, Se
@@ -1791,7 +1791,7 @@ aug-cc-pVTZ-J  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvtz-pp
 
-aug-cc-pVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+aug-cc-pVTZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1800,7 +1800,7 @@ aug-cc-pVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### aug-cc-pvtz-pp-ri_diffuse
 
-aug-cc-pVTZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVTZ-PP-RI Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -1809,7 +1809,7 @@ aug-cc-pVTZ-PP-RI Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvtz-pp_diffuse
 
-aug-cc-pVTZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVTZ-PP Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -1818,7 +1818,7 @@ aug-cc-pVTZ-PP Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvtz-pp_mp2_fitting
 
-aug-cc-pVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVTZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -1827,7 +1827,7 @@ aug-cc-pVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvtz-pp_optri
 
-aug-cc-pVTZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pVTZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1836,7 +1836,7 @@ aug-cc-pVTZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvtz-ri_diffuse
 
-aug-cc-pVTZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pVTZ-RI diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -1845,7 +1845,7 @@ aug-cc-pVTZ-RI diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pvtz_diffuse
 
-aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pVTZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -1854,7 +1854,7 @@ aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pvtz_mp2_fitting
 
-aug-cc-pVTZ MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVTZ MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1863,7 +1863,7 @@ aug-cc-pVTZ MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pvtz_optri
 
-aug-cc-pVTZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pVTZ_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -1872,7 +1872,7 @@ aug-cc-pVTZ_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcv5z
 
-aug-cc-pwCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCV5Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -1881,7 +1881,7 @@ aug-cc-pwCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcv5z-dk
 
-aug-cc-pwCV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pwCV5Z-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1890,7 +1890,7 @@ aug-cc-pwCV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pwcv5z-nr
 
-aug-cc-pwCV5Z-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCV5Z-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1899,7 +1899,7 @@ aug-cc-pwCV5Z-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcv5z-pp_mp2_fitting
 
-aug-cc-pwCV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+aug-cc-pwCV5Z-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd
@@ -1908,7 +1908,7 @@ aug-cc-pwCV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### aug-cc-pwcv5z-pp_optri
 
-aug-cc-pwCV5Z-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCV5Z-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1917,7 +1917,7 @@ aug-cc-pwCV5Z-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvdz
 
-aug-cc-pwCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pwCVDZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -1926,7 +1926,7 @@ aug-cc-pwCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pwcvdz-pp_mp2_fitting
 
-aug-cc-pwCVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pwCVDZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd
@@ -1935,7 +1935,7 @@ aug-cc-pwCVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pwcvdz-pp_optri
 
-aug-cc-pwCVDZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCVDZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1944,7 +1944,7 @@ aug-cc-pwCVDZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvqz
 
-aug-cc-pwCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pwCVQZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar, Br
@@ -1953,7 +1953,7 @@ aug-cc-pwCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-cc-pwcvqz-dk
 
-aug-cc-pwCVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCVQZ-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1962,7 +1962,7 @@ aug-cc-pwCVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvqz-nr
 
-aug-cc-pwCVQZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCVQZ-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -1971,7 +1971,7 @@ aug-cc-pwCVQZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvqz-pp_mp2_fitting
 
-aug-cc-pwCVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pwCVQZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd
@@ -1980,7 +1980,7 @@ aug-cc-pwCVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pwcvqz-pp_optri
 
-aug-cc-pwCVQZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pwCVQZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -1989,7 +1989,7 @@ aug-cc-pwCVQZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pwcvtz
 
-aug-cc-pwCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-cc-pwCVTZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -1998,7 +1998,7 @@ aug-cc-pwCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-cc-pwcvtz-dk
 
-aug-cc-pwCVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCVTZ-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn, Y-Pd
@@ -2007,7 +2007,7 @@ aug-cc-pwCVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvtz-nr
 
-aug-cc-pwCVTZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-cc-pwCVTZ-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -2016,7 +2016,7 @@ aug-cc-pwCVTZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-cc-pwcvtz-nr_mp2_fitting
 
-aug-cc-pwCVTZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-cc-pwCVTZ-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -2025,7 +2025,7 @@ aug-cc-pwCVTZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-cc-pwcvtz-pp_mp2_fitting
 
-aug-cc-pwCVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+aug-cc-pwCVTZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd
@@ -2034,7 +2034,7 @@ aug-cc-pwCVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### aug-cc-pwcvtz-pp_optri
 
-aug-cc-pwCVTZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-cc-pwCVTZ-PP_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -2043,7 +2043,7 @@ aug-cc-pwCVTZ-PP_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-mcc-pv5z
 
-aug-mcc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-mcc-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2052,7 +2052,7 @@ aug-mcc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-mcc-pv6z
 
-aug-mcc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-mcc-pV6Z  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2061,7 +2061,7 @@ aug-mcc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-mcc-pv7z
 
-aug-mcc-pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-mcc-pV7Z  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2070,7 +2070,7 @@ aug-mcc-pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-mcc-pv8z
 
-aug-mcc-pV8Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-mcc-pV8Z  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2079,7 +2079,7 @@ aug-mcc-pV8Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-mcc-pvqz
 
-aug-mcc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-mcc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2088,7 +2088,7 @@ aug-mcc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-mcc-pvtz
 
-aug-mcc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-mcc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H
@@ -2097,7 +2097,7 @@ aug-mcc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pc-0
 
-aug-pc-0  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pc-0  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr
@@ -2106,7 +2106,7 @@ aug-pc-0  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pc-1
 
-aug-pc-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pc-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2115,7 +2115,7 @@ aug-pc-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pc-2
 
-aug-pc-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pc-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2124,7 +2124,7 @@ aug-pc-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pc-3
 
-aug-pc-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pc-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2133,7 +2133,7 @@ aug-pc-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pc-4
 
-aug-pc-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pc-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2142,7 +2142,7 @@ aug-pc-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pc-infinity
 
-aug-pc-infinity  EMSL  Basis Set Exchange Library  9/24/18 11:59 AM
+aug-pc-infinity  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2151,7 +2151,7 @@ aug-pc-infinity  EMSL  Basis Set Exchange Library  9/24/18 11:59 AM
 
 ### aug-pcj-0
 
-aug-pcJ-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-pcJ-0  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2160,7 +2160,7 @@ aug-pcJ-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-pcj-0_2006
 
-aug-pcJ-0_2006  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pcJ-0_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2169,7 +2169,7 @@ aug-pcJ-0_2006  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pcj-1
 
-aug-pcJ-1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pcJ-1  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2178,7 +2178,7 @@ aug-pcJ-1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pcj-1_2006
 
-aug-pcJ-1_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcJ-1_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2187,7 +2187,7 @@ aug-pcJ-1_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcj-2
 
-aug-pcJ-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-pcJ-2  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2196,7 +2196,7 @@ aug-pcJ-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-pcj-2_2006
 
-aug-pcJ-2_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcJ-2_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2205,7 +2205,7 @@ aug-pcJ-2_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcj-3
 
-aug-pcJ-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pcJ-3  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2214,7 +2214,7 @@ aug-pcJ-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pcj-3_2006
 
-aug-pcJ-3_2006  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pcJ-3_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2223,7 +2223,7 @@ aug-pcJ-3_2006  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pcj-4
 
-aug-pcJ-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+aug-pcJ-4  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2232,7 +2232,7 @@ aug-pcJ-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### aug-pcj-4_2006
 
-aug-pcJ-4_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcJ-4_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2241,7 +2241,7 @@ aug-pcJ-4_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcs-0
 
-aug-pcS-0  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcS-0  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2250,7 +2250,7 @@ aug-pcS-0  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcs-1
 
-aug-pcS-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcS-1  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2259,7 +2259,7 @@ aug-pcS-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcs-2
 
-aug-pcS-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcS-2  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2268,7 +2268,7 @@ aug-pcS-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcs-3
 
-aug-pcS-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcS-3  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2277,7 +2277,7 @@ aug-pcS-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcs-4
 
-aug-pcS-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+aug-pcS-4  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2286,7 +2286,7 @@ aug-pcS-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### aug-pcseg-0
 
-aug-pcseg-0  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-pcseg-0  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2295,7 +2295,7 @@ aug-pcseg-0  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-pcseg-1
 
-aug-pcseg-1  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+aug-pcseg-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2304,7 +2304,7 @@ aug-pcseg-1  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### aug-pcseg-2
 
-aug-pcseg-2  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-pcseg-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2313,7 +2313,7 @@ aug-pcseg-2  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-pcseg-3
 
-aug-pcseg-3  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+aug-pcseg-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2322,7 +2322,7 @@ aug-pcseg-3  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### aug-pcseg-4
 
-aug-pcseg-4  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+aug-pcseg-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2331,7 +2331,7 @@ aug-pcseg-4  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### aug-pcsseg-0
 
-aug-pcSseg-0  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+aug-pcSseg-0  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2340,7 +2340,7 @@ aug-pcSseg-0  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
 
 ### aug-pcsseg-1
 
-aug-pcSseg-1  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
+aug-pcSseg-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2349,7 +2349,7 @@ aug-pcSseg-1  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
 
 ### aug-pcsseg-2
 
-aug-pcSseg-2  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
+aug-pcSseg-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2358,7 +2358,7 @@ aug-pcSseg-2  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
 
 ### aug-pcsseg-3
 
-aug-pcSseg-3  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
+aug-pcSseg-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2367,7 +2367,7 @@ aug-pcSseg-3  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
 
 ### aug-pcsseg-4
 
-aug-pcSseg-4  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+aug-pcSseg-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -2376,7 +2376,7 @@ aug-pcSseg-4  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
 
 ### aug-pv7z
 
-aug-pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-pV7Z  
 
 - **Type:** Spherical
 - **Elements:** C-F, S
@@ -2385,7 +2385,7 @@ aug-pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### aug-pv7z_diffuse
 
-aug-pV7Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+aug-pV7Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** C-F, S
@@ -2394,7 +2394,7 @@ aug-pV7Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### b2_basis_set_for_zn
 
-B2 basis set for Zn  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+B2 basis set for Zn  
 
 - **Type:** Spherical
 - **Elements:** Zn
@@ -2403,7 +2403,7 @@ B2 basis set for Zn  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### bauschlicher_ano
 
-Bauschlicher ANO  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Bauschlicher ANO  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu
@@ -2412,7 +2412,7 @@ Bauschlicher ANO  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### binning-curtiss_1d_polarization
 
-Binning-Curtiss (1d) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+Binning-Curtiss (1d) Polarization  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2421,7 +2421,7 @@ Binning-Curtiss (1d) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### binning-curtiss_df_polarization
 
-Binning-Curtiss (df) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Binning-Curtiss (df) Polarization  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2430,7 +2430,7 @@ Binning-Curtiss (df) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### binning_curtiss_sv
 
-Binning/Curtiss SV  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Binning/Curtiss SV  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2439,7 +2439,7 @@ Binning/Curtiss SV  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### binning_curtiss_svp
 
-Binning/Curtiss SVP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Binning/Curtiss SVP  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2448,7 +2448,7 @@ Binning/Curtiss SVP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### binning_curtiss_vtz
 
-Binning/Curtiss VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Binning/Curtiss VTZ  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2457,7 +2457,7 @@ Binning/Curtiss VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### binning_curtiss_vtzp
 
-Binning/Curtiss VTZP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Binning/Curtiss VTZP  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr
@@ -2466,7 +2466,7 @@ Binning/Curtiss VTZP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### blaudeau_polarization
 
-Blaudeau Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Blaudeau Polarization  
 
 - **Type:** Cartesian
 - **Elements:** K-Ca
@@ -2475,7 +2475,7 @@ Blaudeau Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pcv5z
 
-cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCV5Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ar, Ca
@@ -2484,7 +2484,7 @@ cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcv6z
 
-cc-pCV6Z  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+cc-pCV6Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -2493,7 +2493,7 @@ cc-pCV6Z  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### cc-pcv6zold
 
-cc-pCV6Z(old)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pCV6Z(old)  
 
 - **Type:** Spherical
 - **Elements:** O
@@ -2502,7 +2502,7 @@ cc-pCV6Z(old)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pcvdz
 
-cc-pCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pCVDZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -2511,7 +2511,7 @@ cc-pCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pcvdz-f12
 
-cc-pCVDZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCVDZ-F12  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2520,7 +2520,7 @@ cc-pCVDZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcvdz-f12_mp2_fitting
 
-cc-pCVDZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+cc-pCVDZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2529,7 +2529,7 @@ cc-pCVDZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### cc-pcvdz-f12_optri
 
-cc-pCVDZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pCVDZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2538,7 +2538,7 @@ cc-pCVDZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pcvdzold
 
-cc-pCVDZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCVDZ(old)  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2547,7 +2547,7 @@ cc-pCVDZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcvqz
 
-cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pCVQZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -2556,7 +2556,7 @@ cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pcvqz-f12
 
-cc-pCVQZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCVQZ-F12  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2565,7 +2565,7 @@ cc-pCVQZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcvqz-f12_mp2_fitting
 
-cc-pCVQZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+cc-pCVQZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2574,7 +2574,7 @@ cc-pCVQZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### cc-pcvqz-f12_optri
 
-cc-pCVQZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCVQZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2583,7 +2583,7 @@ cc-pCVQZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcvqzold
 
-cc-pCVQZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pCVQZ(old)  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2592,7 +2592,7 @@ cc-pCVQZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pcvtz
 
-cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pCVTZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -2601,7 +2601,7 @@ cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pcvtz-f12
 
-cc-pCVTZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pCVTZ-F12  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2610,7 +2610,7 @@ cc-pCVTZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pcvtz-f12_mp2_fitting
 
-cc-pCVTZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+cc-pCVTZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2619,7 +2619,7 @@ cc-pCVTZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### cc-pcvtz-f12_optri
 
-cc-pCVTZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pCVTZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar
@@ -2628,7 +2628,7 @@ cc-pCVTZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pcvtzold
 
-cc-pCVTZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pCVTZ(old)  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2637,7 +2637,7 @@ cc-pCVTZ(old)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv5+dz
 
-cc-pV(5+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV(5+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2646,7 +2646,7 @@ cc-pV(5+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv5+dz-ri
 
-cc-pV(5+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV(5+d)Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2655,7 +2655,7 @@ cc-pV(5+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv5z
 
-cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ca-Kr
@@ -2664,7 +2664,7 @@ cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv5z-dk
 
-cc-pV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV5Z-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -2673,7 +2673,7 @@ cc-pV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv5z-nr_mp2_fitting
 
-cc-pV5Z-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pV5Z-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -2682,7 +2682,7 @@ cc-pV5Z-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pv5z-pp
 
-cc-pV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV5Z-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -2691,7 +2691,7 @@ cc-pV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv5z-pp-ri
 
-cc-pV5Z-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV5Z-PP-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -2700,7 +2700,7 @@ cc-pV5Z-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv5z-pp_mp2_fitting
 
-cc-pV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV5Z-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -2709,7 +2709,7 @@ cc-pV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv5z-ri
 
-cc-pV5Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV5Z-RI  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2718,7 +2718,7 @@ cc-pV5Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv5zfi_sf_fw
 
-cc-pV5Z(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV5Z(fi/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2727,7 +2727,7 @@ cc-pV5Z(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv5zfi_sf_lc
 
-cc-pV5Z(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV5Z(fi/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2736,7 +2736,7 @@ cc-pV5Z(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv5zfi_sf_sc
 
-cc-pV5Z(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+cc-pV5Z(fi/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2745,7 +2745,7 @@ cc-pV5Z(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### cc-pv5zpt_sf_fw
 
-cc-pV5Z(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV5Z(pt/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2754,7 +2754,7 @@ cc-pV5Z(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv5zpt_sf_lc
 
-cc-pV5Z(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV5Z(pt/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2763,7 +2763,7 @@ cc-pV5Z(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv5zpt_sf_sc
 
-cc-pV5Z(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV5Z(pt/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2772,7 +2772,7 @@ cc-pV5Z(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv6+dz
 
-cc-pV(6+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV(6+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2781,7 +2781,7 @@ cc-pV(6+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv6+dz-ri
 
-cc-pV(6+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV(6+d)Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2790,7 +2790,7 @@ cc-pV(6+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv6z
 
-cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV6Z  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2799,7 +2799,7 @@ cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pv6z-ri
 
-cc-pV6Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pV6Z-RI  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -2808,7 +2808,7 @@ cc-pV6Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pv8z
 
-cc-pV8Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV8Z  
 
 - **Type:** Spherical
 - **Elements:** H, Ne
@@ -2817,7 +2817,7 @@ cc-pV8Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pv9z
 
-cc-pV9Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV9Z  
 
 - **Type:** Spherical
 - **Elements:** Ne
@@ -2826,7 +2826,7 @@ cc-pV9Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvd+dz
 
-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV(D+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2835,7 +2835,7 @@ cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvd+dz-ri
 
-cc-pV(D+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV(D+d)Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -2844,7 +2844,7 @@ cc-pV(D+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvdz
 
-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ca-Kr
@@ -2853,7 +2853,7 @@ cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdz-dk
 
-cc-pVDZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -2862,7 +2862,7 @@ cc-pVDZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdz-dk3
 
-cc-pVDZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+cc-pVDZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -2871,7 +2871,7 @@ cc-pVDZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
 
 ### cc-pvdz-f12
 
-cc-pVDZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVDZ-F12  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2880,7 +2880,7 @@ cc-pVDZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvdz-f12_mp2_fitting
 
-cc-pVDZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+cc-pVDZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -2889,7 +2889,7 @@ cc-pVDZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### cc-pvdz-f12_optri
 
-cc-pVDZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVDZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ar
@@ -2898,7 +2898,7 @@ cc-pVDZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvdz-fit2-1
 
-cc-pVDZ-fit2-1  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVDZ-fit2-1  
 
 - **Type:** Spherical
 - **Elements:** H-Ne
@@ -2907,7 +2907,7 @@ cc-pVDZ-fit2-1  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvdz-pp
 
-cc-pVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -2916,7 +2916,7 @@ cc-pVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdz-pp-ri
 
-cc-pVDZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ-PP-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -2925,7 +2925,7 @@ cc-pVDZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdz-pp_mp2_fitting
 
-cc-pVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVDZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -2934,7 +2934,7 @@ cc-pVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvdz-ri
 
-cc-pVDZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ-RI  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ga-Kr
@@ -2943,7 +2943,7 @@ cc-pVDZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdzfi_sf_fw
 
-cc-pVDZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ(fi/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2952,7 +2952,7 @@ cc-pVDZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdzfi_sf_lc
 
-cc-pVDZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVDZ(fi/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2961,7 +2961,7 @@ cc-pVDZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvdzfi_sf_sc
 
-cc-pVDZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ(fi/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2970,7 +2970,7 @@ cc-pVDZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdzpt_sf_fw
 
-cc-pVDZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ(pt/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2979,7 +2979,7 @@ cc-pVDZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdzpt_sf_lc
 
-cc-pVDZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVDZ(pt/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2988,7 +2988,7 @@ cc-pVDZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvdzpt_sf_sc
 
-cc-pVDZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVDZ(pt/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -2997,7 +2997,7 @@ cc-pVDZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvdzseg-opt
 
-cc-pVDZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVDZ(seg-opt)  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ga-Kr
@@ -3006,7 +3006,7 @@ cc-pVDZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvq+dz
 
-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3015,7 +3015,7 @@ cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvq+dz-ri
 
-cc-pV(Q+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV(Q+d)Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3024,7 +3024,7 @@ cc-pV(Q+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvqz
 
-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ca-Kr
@@ -3033,7 +3033,7 @@ cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqz-dk
 
-cc-pVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr
@@ -3042,7 +3042,7 @@ cc-pVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqz-dk3
 
-cc-pVQZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+cc-pVQZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3051,7 +3051,7 @@ cc-pVQZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### cc-pvqz-f12
 
-cc-pVQZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVQZ-F12  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3060,7 +3060,7 @@ cc-pVQZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvqz-f12_mp2_fitting
 
-cc-pVQZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+cc-pVQZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3069,7 +3069,7 @@ cc-pVQZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### cc-pvqz-f12_optri
 
-cc-pVQZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ar
@@ -3078,7 +3078,7 @@ cc-pVQZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqz-nr_mp2_fitting
 
-cc-pVQZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pVQZ-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3087,7 +3087,7 @@ cc-pVQZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pvqz-pp
 
-cc-pVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVQZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3096,7 +3096,7 @@ cc-pVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvqz-pp-ri
 
-cc-pVQZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVQZ-PP-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Au-Rn
@@ -3105,7 +3105,7 @@ cc-pVQZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvqz-pp_mp2_fitting
 
-cc-pVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVQZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3114,7 +3114,7 @@ cc-pVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvqz-ri
 
-cc-pVQZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVQZ-RI  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ga-Kr
@@ -3123,7 +3123,7 @@ cc-pVQZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvqzfi_sf_fw
 
-cc-pVQZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ(fi/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3132,7 +3132,7 @@ cc-pVQZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqzfi_sf_lc
 
-cc-pVQZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVQZ(fi/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3141,7 +3141,7 @@ cc-pVQZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvqzfi_sf_sc
 
-cc-pVQZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ(fi/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3150,7 +3150,7 @@ cc-pVQZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqzpt_sf_fw
 
-cc-pVQZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ(pt/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3159,7 +3159,7 @@ cc-pVQZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqzpt_sf_lc
 
-cc-pVQZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVQZ(pt/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3168,7 +3168,7 @@ cc-pVQZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvqzpt_sf_sc
 
-cc-pVQZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ(pt/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3177,7 +3177,7 @@ cc-pVQZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvqzseg-opt
 
-cc-pVQZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVQZ(seg-opt)  
 
 - **Type:** Spherical
 - **Elements:** H-He, C, O
@@ -3186,7 +3186,7 @@ cc-pVQZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvt+dz
 
-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3195,7 +3195,7 @@ cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvt+dz+
 
-cc-pV(T+d)Z+  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+cc-pV(T+d)Z+  
 
 - **Type:** Spherical
 - **Elements:** H, C-O, S-Cl
@@ -3204,7 +3204,7 @@ cc-pV(T+d)Z+  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### cc-pvt+dz-dk
 
-cc-pV(T+d)Z-DK  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
+cc-pV(T+d)Z-DK  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3213,7 +3213,7 @@ cc-pV(T+d)Z-DK  EMSL  Basis Set Exchange Library  9/22/15 11:33 AM
 
 ### cc-pvt+dz-ri
 
-cc-pV(T+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pV(T+d)Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3222,7 +3222,7 @@ cc-pV(T+d)Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvtz
 
-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ca-Kr
@@ -3231,7 +3231,7 @@ cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtz-dk
 
-cc-pVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVTZ-DK  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Kr, Y-Pd
@@ -3240,7 +3240,7 @@ cc-pVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvtz-dk3
 
-cc-pVTZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+cc-pVTZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3249,7 +3249,7 @@ cc-pVTZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### cc-pvtz-f12
 
-cc-pVTZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ-F12  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3258,7 +3258,7 @@ cc-pVTZ-F12  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtz-f12_mp2_fitting
 
-cc-pVTZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+cc-pVTZ-F12 MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3267,7 +3267,7 @@ cc-pVTZ-F12 MP2 Fitting  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### cc-pvtz-f12_optri
 
-cc-pVTZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVTZ-F12_OPTRI  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ar
@@ -3276,7 +3276,7 @@ cc-pVTZ-F12_OPTRI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvtz-fit2-1
 
-cc-pVTZ-fit2-1  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ-fit2-1  
 
 - **Type:** Spherical
 - **Elements:** H-Ne
@@ -3285,7 +3285,7 @@ cc-pVTZ-fit2-1  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtz-pp
 
-cc-pVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3294,7 +3294,7 @@ cc-pVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvtz-pp-ri
 
-cc-pVTZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVTZ-PP-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Ag-Xe, Hf-Rn
@@ -3303,7 +3303,7 @@ cc-pVTZ-PP-RI  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvtz-pp_mp2_fitting
 
-cc-pVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3312,7 +3312,7 @@ cc-pVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvtz-ri
 
-cc-pVTZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ-RI  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ga-Kr
@@ -3321,7 +3321,7 @@ cc-pVTZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvtz_mp2_fitting
 
-cc-pVTZ MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3330,7 +3330,7 @@ cc-pVTZ MP2 Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvtzfi_sf_fw
 
-cc-pVTZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ(fi/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3339,7 +3339,7 @@ cc-pVTZ(fi/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtzfi_sf_lc
 
-cc-pVTZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ(fi/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3348,7 +3348,7 @@ cc-pVTZ(fi/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pvtzfi_sf_sc
 
-cc-pVTZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ(fi/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3357,7 +3357,7 @@ cc-pVTZ(fi/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtzpt_sf_fw
 
-cc-pVTZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ(pt/sf/fw)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3366,7 +3366,7 @@ cc-pVTZ(pt/sf/fw)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtzpt_sf_lc
 
-cc-pVTZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pVTZ(pt/sf/lc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3375,7 +3375,7 @@ cc-pVTZ(pt/sf/lc)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pvtzpt_sf_sc
 
-cc-pVTZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pVTZ(pt/sf/sc)  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar, Ga-Kr
@@ -3384,7 +3384,7 @@ cc-pVTZ(pt/sf/sc)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pvtzseg-opt
 
-cc-pVTZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pVTZ(seg-opt)  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Ga-Kr
@@ -3393,7 +3393,7 @@ cc-pVTZ(seg-opt)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcv5z
 
-cc-pwCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCV5Z  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3402,7 +3402,7 @@ cc-pwCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcv5z-dk
 
-cc-pwCV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCV5Z-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3411,7 +3411,7 @@ cc-pwCV5Z-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcv5z-nr
 
-cc-pwCV5Z-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCV5Z-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3420,7 +3420,7 @@ cc-pwCV5Z-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcv5z-pp
 
-cc-pwCV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCV5Z-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3429,7 +3429,7 @@ cc-pwCV5Z-PP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcv5z-pp_mp2_fitting
 
-cc-pwCV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pwCV5Z-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3438,7 +3438,7 @@ cc-pwCV5Z-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pwcv5z-ri
 
-cc-pwCV5Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCV5Z-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -3447,7 +3447,7 @@ cc-pwCV5Z-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcv5z-ri_tight
 
-cc-pwCV5Z-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCV5Z-RI tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3456,7 +3456,7 @@ cc-pwCV5Z-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcv5z_core_set
 
-cc-pwCV5Z Core Set  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCV5Z Core Set  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3465,7 +3465,7 @@ cc-pwCV5Z Core Set  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcv5z_tight
 
-cc-pwCV5Z Tight  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCV5Z Tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3474,7 +3474,7 @@ cc-pwCV5Z Tight  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcvdz
 
-cc-pwCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCVDZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3483,7 +3483,7 @@ cc-pwCVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcvdz-dk3
 
-cc-pwCVDZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+cc-pwCVDZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3492,7 +3492,7 @@ cc-pwCVDZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
 
 ### cc-pwcvdz-pp
 
-cc-pwCVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCVDZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3501,7 +3501,7 @@ cc-pwCVDZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcvdz-pp_mp2_fitting
 
-cc-pwCVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pwCVDZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3510,7 +3510,7 @@ cc-pwCVDZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pwcvdz-ri
 
-cc-pwCVDZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVDZ-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -3519,7 +3519,7 @@ cc-pwCVDZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvdz-ri_tight
 
-cc-pwCVDZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVDZ-RI tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3528,7 +3528,7 @@ cc-pwCVDZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvdz_tight
 
-cc-pwCVDZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVDZ Tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3537,7 +3537,7 @@ cc-pwCVDZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvqz
 
-cc-pwCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVQZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar, Br
@@ -3546,7 +3546,7 @@ cc-pwCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvqz-dk
 
-cc-pwCVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCVQZ-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3555,7 +3555,7 @@ cc-pwCVQZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcvqz-dk3
 
-cc-pwCVQZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+cc-pwCVQZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3564,7 +3564,7 @@ cc-pwCVQZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### cc-pwcvqz-nr
 
-cc-pwCVQZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVQZ-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3573,7 +3573,7 @@ cc-pwCVQZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvqz-pp
 
-cc-pwCVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVQZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3582,7 +3582,7 @@ cc-pwCVQZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvqz-pp_mp2_fitting
 
-cc-pwCVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+cc-pwCVQZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3591,7 +3591,7 @@ cc-pwCVQZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### cc-pwcvqz-ri
 
-cc-pwCVQZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVQZ-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -3600,7 +3600,7 @@ cc-pwCVQZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvqz-ri_tight
 
-cc-pwCVQZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+cc-pwCVQZ-RI tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3609,7 +3609,7 @@ cc-pwCVQZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### cc-pwcvqz_tight
 
-cc-pwCVQZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVQZ Tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar, Br
@@ -3618,7 +3618,7 @@ cc-pwCVQZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvtz
 
-cc-pwCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVTZ  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3627,7 +3627,7 @@ cc-pwCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvtz-dk
 
-cc-pwCVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVTZ-DK  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn, Y-Pd
@@ -3636,7 +3636,7 @@ cc-pwCVTZ-DK  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvtz-dk3
 
-cc-pwCVTZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+cc-pwCVTZ-DK3  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3645,7 +3645,7 @@ cc-pwCVTZ-DK3  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### cc-pwcvtz-nr
 
-cc-pwCVTZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVTZ-NR  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3654,7 +3654,7 @@ cc-pwCVTZ-NR  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvtz-nr_mp2_fitting
 
-cc-pwCVTZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pwCVTZ-NR MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -3663,7 +3663,7 @@ cc-pwCVTZ-NR MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pwcvtz-pp
 
-cc-pwCVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVTZ-PP  
 
 - **Type:** Spherical
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -3672,7 +3672,7 @@ cc-pwCVTZ-PP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvtz-pp_mp2_fitting
 
-cc-pwCVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+cc-pwCVTZ-PP MP2 Fitting  
 
 - **Type:** Spherical
 - **Elements:** Y-Pd, Hf-Pt
@@ -3681,7 +3681,7 @@ cc-pwCVTZ-PP MP2 Fitting  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### cc-pwcvtz-ri
 
-cc-pwCVTZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVTZ-RI  
 
 - **Type:** Spherical
 - **Elements:** Cu-Zn, Ag-Cd, Au-Hg
@@ -3690,7 +3690,7 @@ cc-pwCVTZ-RI  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cc-pwcvtz-ri_tight
 
-cc-pwCVTZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+cc-pwCVTZ-RI tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3699,7 +3699,7 @@ cc-pwCVTZ-RI tight  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### cc-pwcvtz_tight
 
-cc-pwCVTZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+cc-pwCVTZ Tight  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3708,7 +3708,7 @@ cc-pwCVTZ Tight  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### ccemd-2
 
-ccemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+ccemd-2  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3717,7 +3717,7 @@ ccemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### ccemd-3
 
-ccemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+ccemd-3  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3726,7 +3726,7 @@ ccemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ccj-pv5z
 
-ccJ-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+ccJ-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3735,7 +3735,7 @@ ccJ-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ccj-pvdz
 
-ccJ-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+ccJ-pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3744,7 +3744,7 @@ ccJ-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### ccj-pvqz
 
-ccJ-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+ccJ-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3753,7 +3753,7 @@ ccJ-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ccj-pvtz
 
-ccJ-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+ccJ-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3762,7 +3762,7 @@ ccJ-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### chipman_dzp_+_diffuse
 
-Chipman DZP + Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Chipman DZP + Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H, B-F
@@ -3771,7 +3771,7 @@ Chipman DZP + Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### coemd-2
 
-coemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+coemd-2  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3780,7 +3780,7 @@ coemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### coemd-3
 
-coemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+coemd-3  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3789,7 +3789,7 @@ coemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### coemd-4
 
-coemd-4  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+coemd-4  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3798,7 +3798,7 @@ coemd-4  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### coemd-ref
 
-coemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+coemd-ref  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -3807,7 +3807,7 @@ coemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cologne_dkh2
 
-Cologne DKH2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Cologne DKH2  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -3816,7 +3816,7 @@ Cologne DKH2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### core_valence_functions_cc-pcv5z
 
-Core/valence Functions (cc-pCV5Z)  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+Core/valence Functions (cc-pCV5Z)  
 
 - **Type:** Spherical
 - **Elements:** B-Ar, Ca
@@ -3825,7 +3825,7 @@ Core/valence Functions (cc-pCV5Z)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### core_valence_functions_cc-pcv6z
 
-Core/valence Functions (cc-pCV6Z)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Core/valence Functions (cc-pCV6Z)  
 
 - **Type:** Spherical
 - **Elements:** B-Ne, Al-Ar
@@ -3834,7 +3834,7 @@ Core/valence Functions (cc-pCV6Z)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### core_valence_functions_cc-pcv6zold
 
-Core/valence Functions (cc-pCV6Z(old))  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Core/valence Functions (cc-pCV6Z(old))  
 
 - **Type:** Spherical
 - **Elements:** O
@@ -3843,7 +3843,7 @@ Core/valence Functions (cc-pCV6Z(old))  EMSL  Basis Set Exchange Library  3/15/1
 
 ### core_valence_functions_cc-pcvdz
 
-Core/valence Functions (cc-pCVDZ)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Core/valence Functions (cc-pCVDZ)  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -3852,7 +3852,7 @@ Core/valence Functions (cc-pCVDZ)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### core_valence_functions_cc-pcvdzold
 
-Core/valence Functions (cc-pCVDZ(old))  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Core/valence Functions (cc-pCVDZ(old))  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3861,7 +3861,7 @@ Core/valence Functions (cc-pCVDZ(old))  EMSL  Basis Set Exchange Library  3/15/1
 
 ### core_valence_functions_cc-pcvqz
 
-Core/valence Functions (cc-pCVQZ)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Core/valence Functions (cc-pCVQZ)  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -3870,7 +3870,7 @@ Core/valence Functions (cc-pCVQZ)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### core_valence_functions_cc-pcvqzold
 
-Core/valence Functions (cc-pCVQZ(old))  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Core/valence Functions (cc-pCVQZ(old))  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3879,7 +3879,7 @@ Core/valence Functions (cc-pCVQZ(old))  EMSL  Basis Set Exchange Library  3/15/1
 
 ### core_valence_functions_cc-pcvtz
 
-Core/valence Functions (cc-pCVTZ)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Core/valence Functions (cc-pCVTZ)  
 
 - **Type:** Spherical
 - **Elements:** Li-Ar, Ca
@@ -3888,7 +3888,7 @@ Core/valence Functions (cc-pCVTZ)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### core_valence_functions_cc-pcvtzold
 
-Core/valence Functions (cc-pCVTZ(old))  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Core/valence Functions (cc-pCVTZ(old))  
 
 - **Type:** Spherical
 - **Elements:** Al-Ar
@@ -3897,7 +3897,7 @@ Core/valence Functions (cc-pCVTZ(old))  EMSL  Basis Set Exchange Library  3/15/1
 
 ### crenbl_ecp
 
-CRENBL ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+CRENBL ECP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Mt
@@ -3906,7 +3906,7 @@ CRENBL ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### crenbs_ecp
 
-CRENBS ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+CRENBS ECP  
 
 - **Type:** Spherical
 - **Elements:** Sc-Kr, Y-Xe, La, Hf-Rn, Rf-Mt
@@ -3915,7 +3915,7 @@ CRENBS ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### cvtz
 
-CVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+CVTZ  
 
 - **Type:** Spherical
 - **Elements:** Li-Be, Na-Mg, K-Ca
@@ -3924,7 +3924,7 @@ CVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### d-aug-cc-pv5z
 
-d-aug-cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+d-aug-cc-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3933,7 +3933,7 @@ d-aug-cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### d-aug-cc-pv5z_diffuse
 
-d-aug-cc-pV5Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+d-aug-cc-pV5Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3942,7 +3942,7 @@ d-aug-cc-pV5Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### d-aug-cc-pv6z
 
-d-aug-cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+d-aug-cc-pV6Z  
 
 - **Type:** Spherical
 - **Elements:** H, B-O
@@ -3951,7 +3951,7 @@ d-aug-cc-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### d-aug-cc-pv6z_diffuse
 
-d-aug-cc-pV6Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+d-aug-cc-pV6Z Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H, B-O
@@ -3960,7 +3960,7 @@ d-aug-cc-pV6Z Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### d-aug-cc-pvdz
 
-d-aug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+d-aug-cc-pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3969,7 +3969,7 @@ d-aug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### d-aug-cc-pvdz_diffuse
 
-d-aug-cc-pVDZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+d-aug-cc-pVDZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3978,7 +3978,7 @@ d-aug-cc-pVDZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### d-aug-cc-pvqz
 
-d-aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+d-aug-cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3987,7 +3987,7 @@ d-aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### d-aug-cc-pvqz_diffuse
 
-d-aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+d-aug-cc-pVQZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -3996,7 +3996,7 @@ d-aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### d-aug-cc-pvtz
 
-d-aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+d-aug-cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -4005,7 +4005,7 @@ d-aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### d-aug-cc-pvtz_diffuse
 
-d-aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+d-aug-cc-pVTZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -4014,7 +4014,7 @@ d-aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### def2-ecp
 
-Def2-ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Def2-ECP  
 
 - **Type:** Cartesian
 - **Elements:** Rb-La, Hf-Rn
@@ -4023,7 +4023,7 @@ Def2-ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### def2-qzvp
 
-Def2-QZVP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Def2-QZVP  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4032,7 +4032,7 @@ Def2-QZVP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### def2-qzvpd
 
-Def2-QZVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Def2-QZVPD  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4041,7 +4041,7 @@ Def2-QZVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### def2-qzvpp
 
-Def2-QZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Def2-QZVPP  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4050,7 +4050,7 @@ Def2-QZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### def2-qzvppd
 
-Def2-QZVPPD  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Def2-QZVPPD  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4059,7 +4059,7 @@ Def2-QZVPPD  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### def2-svp
 
-Def2-SV(P)  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
+Def2-SV(P)  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4068,7 +4068,7 @@ Def2-SV(P)  EMSL  Basis Set Exchange Library  4/15/11 10:03 AM
 
 ### def2-svpd
 
-Def2-SVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Def2-SVPD  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4077,7 +4077,7 @@ Def2-SVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### def2-tzvp
 
-Def2-TZVP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Def2-TZVP  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4086,7 +4086,7 @@ Def2-TZVP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### def2-tzvpd
 
-Def2-TZVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Def2-TZVPD  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4095,7 +4095,7 @@ Def2-TZVPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### def2-tzvpp
 
-Def2-TZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Def2-TZVPP  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4104,7 +4104,7 @@ Def2-TZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### def2-tzvppd
 
-Def2-TZVPPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Def2-TZVPPD  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4113,7 +4113,7 @@ Def2-TZVPPD  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### demon_coulomb_fitting
 
-DeMon Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DeMon Coulomb Fitting  
 
 - **Type:** Cartesian
 - **Elements:** H-Xe
@@ -4122,7 +4122,7 @@ DeMon Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dgauss_a1_dft_coulomb_fitting
 
-DGauss A1 DFT Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DGauss A1 DFT Coulomb Fitting  
 
 - **Type:** Cartesian
 - **Elements:** H-Xe
@@ -4131,7 +4131,7 @@ DGauss A1 DFT Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 A
 
 ### dgauss_a1_dft_exchange_fitting
 
-DGauss A1 DFT Exchange Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DGauss A1 DFT Exchange Fitting  
 
 - **Type:** Cartesian
 - **Elements:** H-Xe
@@ -4140,7 +4140,7 @@ DGauss A1 DFT Exchange Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 
 
 ### dgauss_a2_dft_coulomb_fitting
 
-DGauss A2 DFT Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DGauss A2 DFT Coulomb Fitting  
 
 - **Type:** Cartesian
 - **Elements:** H-Ar, Sc-Zn
@@ -4149,7 +4149,7 @@ DGauss A2 DFT Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 A
 
 ### dgauss_a2_dft_exchange_fitting
 
-DGauss A2 DFT Exchange Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DGauss A2 DFT Exchange Fitting  
 
 - **Type:** Cartesian
 - **Elements:** H-Zn
@@ -4158,7 +4158,7 @@ DGauss A2 DFT Exchange Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 
 
 ### dhf-ecp
 
-dhf-ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+dhf-ECP  
 
 - **Type:** Cartesian
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4167,7 +4167,7 @@ dhf-ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dhf-qzvp
 
-dhf-QZVP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+dhf-QZVP  
 
 - **Type:** Spherical
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4176,7 +4176,7 @@ dhf-QZVP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dhf-qzvpp
 
-dhf-QZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+dhf-QZVPP  
 
 - **Type:** Spherical
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4185,7 +4185,7 @@ dhf-QZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dhf-svp
 
-dhf-SV(P)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+dhf-SV(P)  
 
 - **Type:** Spherical
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4194,7 +4194,7 @@ dhf-SV(P)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### dhf-tzvp
 
-dhf-TZVP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+dhf-TZVP  
 
 - **Type:** Spherical
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4203,7 +4203,7 @@ dhf-TZVP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dhf-tzvpp
 
-dhf-TZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+dhf-TZVPP  
 
 - **Type:** Spherical
 - **Elements:** Rb-Ba, Hf-Rn
@@ -4212,7 +4212,7 @@ dhf-TZVPP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### dhms_polarization
 
-DHMS Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DHMS Polarization  
 
 - **Type:** Cartesian
 - **Elements:** H-Ne, Al-Cl
@@ -4221,7 +4221,7 @@ DHMS Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dunning-hay_diffuse
 
-Dunning-Hay Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Dunning-Hay Diffuse  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ne
@@ -4230,7 +4230,7 @@ Dunning-Hay Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dunning-hay_double_rydberg
 
-Dunning-Hay Double Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Dunning-Hay Double Rydberg  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne, Al-Ar
@@ -4239,7 +4239,7 @@ Dunning-Hay Double Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dunning-hay_rydberg
 
-Dunning-Hay Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Dunning-Hay Rydberg  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne, Al-Ar
@@ -4248,7 +4248,7 @@ Dunning-Hay Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### dz_+_double_rydberg_dunning-hay
 
-DZ + Double Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DZ + Double Rydberg (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne, Al-Cl
@@ -4257,7 +4257,7 @@ DZ + Double Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### dz_+_rydberg_dunning
 
-DZ + Rydberg (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DZ + Rydberg (Dunning)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne, Al-Cl
@@ -4266,7 +4266,7 @@ DZ + Rydberg (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dz_dunning
 
-DZ (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+DZ (Dunning)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li, B-Ne, Al-Cl
@@ -4275,7 +4275,7 @@ DZ (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### dzp
 
-DZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+DZP  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4284,7 +4284,7 @@ DZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### dzp-dkh
 
-DZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+DZP-DKH  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -4293,7 +4293,7 @@ DZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### dzp_+_diffuse_dunning
 
-DZP + Diffuse (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+DZP + Diffuse (Dunning)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li, B-Ne
@@ -4302,7 +4302,7 @@ DZP + Diffuse (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### dzp_+_rydberg_dunning
 
-DZP + Rydberg (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+DZP + Rydberg (Dunning)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne, Al-Cl
@@ -4311,7 +4311,7 @@ DZP + Rydberg (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dzp_dunning
 
-DZP (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+DZP (Dunning)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li, B-Ne, Al-Cl
@@ -4320,7 +4320,7 @@ DZP (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### dzq
 
-DZQ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+DZQ  
 
 - **Type:** Spherical
 - **Elements:** Y-Ag
@@ -4329,7 +4329,7 @@ DZQ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### dzvp2_dft_orbital
 
-DZVP2 (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+DZVP2 (DFT Orbital)  
 
 - **Type:** Cartesian
 - **Elements:** H-F, Al-Ar, Sc-Zn
@@ -4338,7 +4338,7 @@ DZVP2 (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### dzvp_dft_orbital
 
-DZVP (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+DZVP (DFT Orbital)  
 
 - **Type:** Cartesian
 - **Elements:** H-Xe
@@ -4347,7 +4347,7 @@ DZVP (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### feller_misc._cvdz
 
-Feller Misc. CVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Feller Misc. CVDZ  
 
 - **Type:** Spherical
 - **Elements:** K
@@ -4356,7 +4356,7 @@ Feller Misc. CVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### feller_misc._cvqz
 
-Feller Misc. CVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Feller Misc. CVQZ  
 
 - **Type:** Spherical
 - **Elements:** K
@@ -4365,7 +4365,7 @@ Feller Misc. CVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### feller_misc._cvtz
 
-Feller Misc. CVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Feller Misc. CVTZ  
 
 - **Type:** Spherical
 - **Elements:** K
@@ -4374,7 +4374,7 @@ Feller Misc. CVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### g3largexp
 
-G3LargeXP  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+G3LargeXP  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -4383,7 +4383,7 @@ G3LargeXP  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### g3mp2large
 
-G3MP2large  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+G3MP2large  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr
@@ -4392,7 +4392,7 @@ G3MP2large  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### g3mp2largexp
 
-G3MP2LargeXP  EMSL  Basis Set Exchange Library  7/12/16 10:30 AM
+G3MP2LargeXP  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -4401,7 +4401,7 @@ G3MP2LargeXP  EMSL  Basis Set Exchange Library  7/12/16 10:30 AM
 
 ### gamess_pvtz
 
-GAMESS PVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+GAMESS PVTZ  
 
 - **Type:** Cartesian
 - **Elements:** H, Be-Ar
@@ -4410,7 +4410,7 @@ GAMESS PVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### gamess_vtz
 
-GAMESS VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+GAMESS VTZ  
 
 - **Type:** Cartesian
 - **Elements:** H, Be-Ar
@@ -4419,7 +4419,7 @@ GAMESS VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### glendening_polarization
 
-Glendening Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Glendening Polarization  
 
 - **Type:** Spherical
 - **Elements:** K, Rb, Cs
@@ -4428,7 +4428,7 @@ Glendening Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### hay-wadt_mb_n+1_ecp
 
-Hay-Wadt MB (n+1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Hay-Wadt MB (n+1) ECP  
 
 - **Type:** Spherical
 - **Elements:** K-Cu, Rb-Ag, Cs-La, Hf-Au
@@ -4437,7 +4437,7 @@ Hay-Wadt MB (n+1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### hay-wadt_vdz_n+1_ecp
 
-Hay-Wadt VDZ (n+1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Hay-Wadt VDZ (n+1) ECP  
 
 - **Type:** Spherical
 - **Elements:** K-Cu, Rb-Ag, Cs-La, Ta-Au
@@ -4446,7 +4446,7 @@ Hay-Wadt VDZ (n+1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### hay_wadt_n-1_ecp
 
-HAY/WADT (N-1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+HAY/WADT (N-1) ECP  
 
 - **Type:** Cartesian
 - **Elements:** K-Cu, Rb-Ag, Cs-La, Hf-Au
@@ -4455,7 +4455,7 @@ HAY/WADT (N-1) ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### hondo7_polarization
 
-HONDO7 Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+HONDO7 Polarization  
 
 - **Type:** Cartesian
 - **Elements:** H-He, Be-Ar
@@ -4464,7 +4464,7 @@ HONDO7 Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### huzinaga_polarization
 
-Huzinaga Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Huzinaga Polarization  
 
 - **Type:** Cartesian
 - **Elements:** K-Ca, Ga-Sr, In-Xe, Tl-Rn
@@ -4473,7 +4473,7 @@ Huzinaga Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### iglo-ii
 
-IGLO-II  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+IGLO-II  
 
 - **Type:** Cartesian
 - **Elements:** H, B-F, Al-Cl
@@ -4482,7 +4482,7 @@ IGLO-II  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### iglo-iii
 
-IGLO-III  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+IGLO-III  
 
 - **Type:** Cartesian
 - **Elements:** H, B-F, Al-Cl
@@ -4491,7 +4491,7 @@ IGLO-III  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### jul-cc-pvd+dz
 
-jul-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+jul-cc-pV(D+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4500,7 +4500,7 @@ jul-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### jul-cc-pvq+dz
 
-jul-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+jul-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4509,7 +4509,7 @@ jul-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### jul-cc-pvt+dz
 
-jul-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+jul-cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4518,7 +4518,7 @@ jul-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### jun-cc-pvd+dz
 
-jun-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+jun-cc-pV(D+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4527,7 +4527,7 @@ jun-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### jun-cc-pvq+dz
 
-jun-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+jun-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4536,7 +4536,7 @@ jun-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### jun-cc-pvt+dz
 
-jun-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+jun-cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4545,7 +4545,7 @@ jun-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### lanl08
 
-LANL08  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+LANL08  
 
 - **Type:** Spherical
 - **Elements:** Na-La, Hf-Bi
@@ -4554,7 +4554,7 @@ LANL08  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl08+
 
-LANL08+  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+LANL08+  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -4563,7 +4563,7 @@ LANL08+  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### lanl08d
 
-LANL08d  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+LANL08d  
 
 - **Type:** Spherical
 - **Elements:** Si-Cl, Ge-Br, Sn-I, Pb-Bi
@@ -4572,7 +4572,7 @@ LANL08d  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl08f
 
-LANL08(f)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+LANL08(f)  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu, Y-Ag, La, Hf-Au
@@ -4581,7 +4581,7 @@ LANL08(f)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### lanl2-10s8p7d3f2g
 
-Lanl2-[10s8p7d3f2g]  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Lanl2-[10s8p7d3f2g]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4590,7 +4590,7 @@ Lanl2-[10s8p7d3f2g]  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2-5s4p4d2f
 
-Lanl2-[5s4p4d2f]  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Lanl2-[5s4p4d2f]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4599,7 +4599,7 @@ Lanl2-[5s4p4d2f]  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2-6s4p4d2f
 
-Lanl2-[6s4p4d2f]  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Lanl2-[6s4p4d2f]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4608,7 +4608,7 @@ Lanl2-[6s4p4d2f]  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### lanl2-[10s8p7d3f2g]
 
-Lanl2-[10s8p7d3f2g]  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+Lanl2-[10s8p7d3f2g]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4617,7 +4617,7 @@ Lanl2-[10s8p7d3f2g]  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### lanl2-[5s4p4d2f]
 
-Lanl2-[5s4p4d2f]  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
+Lanl2-[5s4p4d2f]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4626,7 +4626,7 @@ Lanl2-[5s4p4d2f]  EMSL  Basis Set Exchange Library  7/12/16 10:31 AM
 
 ### lanl2-[6s4p4d2f]
 
-Lanl2-[6s4p4d2f]  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
+Lanl2-[6s4p4d2f]  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4635,7 +4635,7 @@ Lanl2-[6s4p4d2f]  EMSL  Basis Set Exchange Library  7/12/16 10:32 AM
 
 ### lanl2dz+1d1f
 
-Lanl2DZ+1d1f  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Lanl2DZ+1d1f  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4644,7 +4644,7 @@ Lanl2DZ+1d1f  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2dz+2s2p2d2f
 
-Lanl2DZ+2s2p2d2f  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Lanl2DZ+2s2p2d2f  
 
 - **Type:** Spherical
 - **Elements:** Rh
@@ -4653,7 +4653,7 @@ Lanl2DZ+2s2p2d2f  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2dz_ecp
 
-LANL2DZ ECP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+LANL2DZ ECP  
 
 - **Type:** Spherical
 - **Elements:** H, Li-La, Hf-Bi, U-Pu
@@ -4662,7 +4662,7 @@ LANL2DZ ECP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### lanl2dzdp_ecp
 
-LANL2DZdp ECP  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
+LANL2DZdp ECP  
 
 - **Type:** Spherical
 - **Elements:** H, C-F, Si-Cl, Ge-Br, Sn-I, Pb-Bi
@@ -4671,7 +4671,7 @@ LANL2DZdp ECP  EMSL  Basis Set Exchange Library  3/15/13 10:16 AM
 
 ### lanl2dzdp_ecp_polarization
 
-LANL2DZdp ECP Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+LANL2DZdp ECP Polarization  
 
 - **Type:** Spherical
 - **Elements:** H, C-F, Si-Cl, Ge-Br, Sn-I, Pb-Bi
@@ -4680,7 +4680,7 @@ LANL2DZdp ECP Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### lanl2tz
 
-LANL2TZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+LANL2TZ  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn, Y-Cd, La, Hf-Hg
@@ -4689,7 +4689,7 @@ LANL2TZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2tz+
 
-LANL2TZ+  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+LANL2TZ+  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -4698,7 +4698,7 @@ LANL2TZ+  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### lanl2tzf
 
-LANL2TZ(f)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+LANL2TZ(f)  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu, Y-Ag, La, Hf-Au
@@ -4707,7 +4707,7 @@ LANL2TZ(f)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### m6-31g
 
-m6-31G  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+m6-31G  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu
@@ -4716,7 +4716,7 @@ m6-31G  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### m6-31gs
 
-m6-31G*  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+m6-31G*  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu
@@ -4821,7 +4821,7 @@ ma-tzvpp
 
 ### maug-cc-pvd+dz
 
-maug-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+maug-cc-pV(D+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4830,7 +4830,7 @@ maug-cc-pV(D+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### maug-cc-pvdz
 
-maug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+maug-cc-pVDZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4839,7 +4839,7 @@ maug-cc-pVDZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### maug-cc-pvq+dz
 
-maug-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+maug-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4848,7 +4848,7 @@ maug-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### maug-cc-pvqz
 
-maug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+maug-cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4857,7 +4857,7 @@ maug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### maug-cc-pvt+dz
 
-maug-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+maug-cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4866,7 +4866,7 @@ maug-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### maug-cc-pvtz
 
-maug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+maug-cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4875,7 +4875,7 @@ maug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### may-cc-pvq+dz
 
-may-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+may-cc-pV(Q+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4884,7 +4884,7 @@ may-cc-pV(Q+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### may-cc-pvt+dz
 
-may-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+may-cc-pV(T+d)Z  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4893,7 +4893,7 @@ may-cc-pV(T+d)Z  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### mclean_chandler_vtz
 
-McLean/Chandler VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+McLean/Chandler VTZ  
 
 - **Type:** Cartesian
 - **Elements:** Na-Ar
@@ -4902,7 +4902,7 @@ McLean/Chandler VTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### mg3s
 
-MG3S  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+MG3S  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -4911,7 +4911,7 @@ MG3S  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### midi!
 
-MIDI!  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+MIDI!  
 
 - **Type:** Spherical
 - **Elements:** H, C-F, Si-Cl, Br, I
@@ -4920,7 +4920,7 @@ MIDI!  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### midi_huzinaga
 
-MIDI (Huzinaga)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+MIDI (Huzinaga)  
 
 - **Type:** Cartesian
 - **Elements:** H-Na, Al-K, Cs
@@ -4929,7 +4929,7 @@ MIDI (Huzinaga)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### mini_huzinaga
 
-MINI (Huzinaga)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+MINI (Huzinaga)  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca
@@ -4938,7 +4938,7 @@ MINI (Huzinaga)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### mini_scaled
 
-MINI (Scaled)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+MINI (Scaled)  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca
@@ -4947,7 +4947,7 @@ MINI (Scaled)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### minis-bsip1
 
-MINIs-BSIP1  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+MINIs-BSIP1  
 
 - **Type:** Spherical
 - **Elements:** H, C-F, P-Cl
@@ -4956,7 +4956,7 @@ MINIs-BSIP1  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### modified_lanl2dz
 
-modified LANL2DZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+modified LANL2DZ  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu, Y-Ag, La, Hf-Au
@@ -4965,7 +4965,7 @@ modified LANL2DZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### nasa_ames_ano
 
-NASA Ames ANO  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+NASA Ames ANO  
 
 - **Type:** Spherical
 - **Elements:** H, B-Ne, Al, P, Ti, Fe, Ni
@@ -4974,7 +4974,7 @@ NASA Ames ANO  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### nasa_ames_ano2
 
-NASA Ames ANO2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+NASA Ames ANO2  
 
 - **Type:** Spherical
 - **Elements:** Sc-V
@@ -4983,7 +4983,7 @@ NASA Ames ANO2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### nasa_ames_cc-pcv5z
 
-NASA Ames cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+NASA Ames cc-pCV5Z  
 
 - **Type:** Spherical
 - **Elements:** Ti
@@ -4992,7 +4992,7 @@ NASA Ames cc-pCV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### nasa_ames_cc-pcvqz
 
-NASA Ames cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+NASA Ames cc-pCVQZ  
 
 - **Type:** Spherical
 - **Elements:** Ti
@@ -5001,7 +5001,7 @@ NASA Ames cc-pCVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### nasa_ames_cc-pcvtz
 
-NASA Ames cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+NASA Ames cc-pCVTZ  
 
 - **Type:** Spherical
 - **Elements:** Ti
@@ -5010,7 +5010,7 @@ NASA Ames cc-pCVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### nasa_ames_cc-pv5z
 
-NASA Ames cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+NASA Ames cc-pV5Z  
 
 - **Type:** Spherical
 - **Elements:** Ti, Fe
@@ -5019,7 +5019,7 @@ NASA Ames cc-pV5Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### nasa_ames_cc-pvqz
 
-NASA Ames cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+NASA Ames cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** Ti, Fe
@@ -5028,7 +5028,7 @@ NASA Ames cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### nasa_ames_cc-pvtz
 
-NASA Ames cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+NASA Ames cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** Ti, Fe
@@ -5037,7 +5037,7 @@ NASA Ames cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### nlo-v
 
-NLO-V  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+NLO-V  
 
 - **Type:** Spherical
 - **Elements:** H, B-F, Si-Cl
@@ -5046,7 +5046,7 @@ NLO-V  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### nmr-dkh_tz2p
 
-NMR-DKH (TZ2P)  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+NMR-DKH (TZ2P)  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Sr, In-Xe, Pt
@@ -5055,7 +5055,7 @@ NMR-DKH (TZ2P)  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
 
 ### partridge_uncontracted_1
 
-Partridge Uncontracted 1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Partridge Uncontracted 1  
 
 - **Type:** Spherical
 - **Elements:** Li-Sr
@@ -5064,7 +5064,7 @@ Partridge Uncontracted 1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### partridge_uncontracted_2
 
-Partridge Uncontracted 2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Partridge Uncontracted 2  
 
 - **Type:** Spherical
 - **Elements:** Li-Kr
@@ -5073,7 +5073,7 @@ Partridge Uncontracted 2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### partridge_uncontracted_3
 
-Partridge Uncontracted 3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Partridge Uncontracted 3  
 
 - **Type:** Spherical
 - **Elements:** Li-Zn
@@ -5082,7 +5082,7 @@ Partridge Uncontracted 3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### partridge_uncontracted_4
 
-Partridge Uncontracted 4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Partridge Uncontracted 4  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -5091,7 +5091,7 @@ Partridge Uncontracted 4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pc-0
 
-pc-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pc-0  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr
@@ -5100,7 +5100,7 @@ pc-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pc-1
 
-pc-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pc-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5109,7 +5109,7 @@ pc-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pc-2
 
-pc-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pc-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5118,7 +5118,7 @@ pc-2  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pc-3
 
-pc-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pc-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5127,7 +5127,7 @@ pc-3  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pc-4
 
-pc-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pc-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5136,7 +5136,7 @@ pc-4  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pcemd-2
 
-pcemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pcemd-2  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5145,7 +5145,7 @@ pcemd-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pcemd-3
 
-pcemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcemd-3  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5154,7 +5154,7 @@ pcemd-3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcemd-4
 
-pcemd-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcemd-4  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5163,7 +5163,7 @@ pcemd-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-0
 
-pcJ-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcJ-0  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5172,7 +5172,7 @@ pcJ-0  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcj-0_2006
 
-pcJ-0_2006  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcJ-0_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5181,7 +5181,7 @@ pcJ-0_2006  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcj-1
 
-pcJ-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-1  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5190,7 +5190,7 @@ pcJ-1  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-1_2006
 
-pcJ-1_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-1_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5199,7 +5199,7 @@ pcJ-1_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-2
 
-pcJ-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcJ-2  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5208,7 +5208,7 @@ pcJ-2  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcj-2_2006
 
-pcJ-2_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-2_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5217,7 +5217,7 @@ pcJ-2_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-3
 
-pcJ-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-3  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5226,7 +5226,7 @@ pcJ-3  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-3_2006
 
-pcJ-3_2006  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcJ-3_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5235,7 +5235,7 @@ pcJ-3_2006  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcj-4
 
-pcJ-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-4  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5244,7 +5244,7 @@ pcJ-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcj-4_2006
 
-pcJ-4_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcJ-4_2006  
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Al-Ar
@@ -5253,7 +5253,7 @@ pcJ-4_2006  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcs-0
 
-pcS-0  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pcS-0  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5262,7 +5262,7 @@ pcS-0  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pcs-1
 
-pcS-1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pcS-1  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5271,7 +5271,7 @@ pcS-1  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pcs-2
 
-pcS-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pcS-2  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5280,7 +5280,7 @@ pcS-2  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pcs-3
 
-pcS-3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pcS-3  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5289,7 +5289,7 @@ pcS-3  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pcs-4
 
-pcS-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+pcS-4  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5298,7 +5298,7 @@ pcS-4  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### pcseg-0
 
-pcseg-0  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+pcseg-0  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5307,7 +5307,7 @@ pcseg-0  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### pcseg-1
 
-pcseg-1  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+pcseg-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5316,7 +5316,7 @@ pcseg-1  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### pcseg-2
 
-pcseg-2  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+pcseg-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5325,7 +5325,7 @@ pcseg-2  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### pcseg-3
 
-pcseg-3  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+pcseg-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5334,7 +5334,7 @@ pcseg-3  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### pcseg-4
 
-pcseg-4  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+pcseg-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5343,7 +5343,7 @@ pcseg-4  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### pcsseg-0
 
-pcSseg-0  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+pcSseg-0  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5352,7 +5352,7 @@ pcSseg-0  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
 
 ### pcsseg-1
 
-pcSseg-1  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+pcSseg-1  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5361,7 +5361,7 @@ pcSseg-1  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
 
 ### pcsseg-2
 
-pcSseg-2  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
+pcSseg-2  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5370,7 +5370,7 @@ pcSseg-2  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
 
 ### pcsseg-3
 
-pcSseg-3  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
+pcSseg-3  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5379,7 +5379,7 @@ pcSseg-3  EMSL  Basis Set Exchange Library  9/22/15 11:32 AM
 
 ### pcsseg-4
 
-pcSseg-4  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
+pcSseg-4  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5388,7 +5388,7 @@ pcSseg-4  EMSL  Basis Set Exchange Library  9/22/15 11:34 AM
 
 ### pople-style_diffuse
 
-Pople-style Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Pople-style Diffuse  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ca
@@ -5397,7 +5397,7 @@ Pople-style Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pople_2d_2p_polarization
 
-Pople (2d,2p) Polarization  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+Pople (2d,2p) Polarization  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ga-Kr
@@ -5406,7 +5406,7 @@ Pople (2d,2p) Polarization  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### pople_2df_2pd_polarization
 
-Pople (2df,2pd) Polarization  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+Pople (2df,2pd) Polarization  
 
 - **Type:** Spherical
 - **Elements:** H-Ne, K-Ca
@@ -5415,7 +5415,7 @@ Pople (2df,2pd) Polarization  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### pople_3df_3pd_polarization
 
-Pople (3df,3pd) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Pople (3df,3pd) Polarization  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -5424,7 +5424,7 @@ Pople (3df,3pd) Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### psbkjc
 
-pSBKJC  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pSBKJC  
 
 - **Type:** Spherical
 - **Elements:** C-F, Si-Cl, Ge-Br, Sn-I
@@ -5433,7 +5433,7 @@ pSBKJC  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### pt_-_mdzp
 
-Pt - mDZP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Pt - mDZP  
 
 - **Type:** Spherical
 - **Elements:** Pt
@@ -5442,7 +5442,7 @@ Pt - mDZP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pv6z
 
-pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+pV6Z  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -5451,7 +5451,7 @@ pV6Z  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### pv7z
 
-pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+pV7Z  
 
 - **Type:** Spherical
 - **Elements:** H, C-Ne, S
@@ -5460,7 +5460,7 @@ pV7Z  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### q-aug-cc-pv5z_diffuse
 
-$Id$
+q-aug-cc-pv5z diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -5469,7 +5469,7 @@ $Id$
 
 ### q-aug-cc-pv6z_diffuse
 
-$Id$
+q-aug-cc-pv6z diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -5478,7 +5478,7 @@ $Id$
 
 ### q-aug-cc-pvdz_diffuse
 
-$Id$
+q-aug-cc-pvdz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -5487,7 +5487,7 @@ $Id$
 
 ### q-aug-cc-pvqz_diffuse
 
-$Id$
+q-aug-cc-pvqz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -5496,7 +5496,7 @@ $Id$
 
 ### q-aug-cc-pvtz_diffuse
 
-$Id$
+q-aug-cc-pvtz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -5505,7 +5505,7 @@ $Id$
 
 ### qzp
 
-QZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+QZP  
 
 - **Type:** Spherical
 - **Elements:** H-Xe
@@ -5514,7 +5514,7 @@ QZP  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### qzp-dkh
 
-QZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+QZP-DKH  
 
 - **Type:** Spherical
 - **Elements:** H-Xe
@@ -5523,7 +5523,7 @@ QZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### roos-ano-dz
 
-$Id$
+Roos ano-dz
 
 - **Type:** Spherical
 - **Elements:** H-Zn
@@ -5532,7 +5532,7 @@ $Id$
 
 ### roos-ano-tz
 
-$Id$
+Roos ano-tz
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Zn
@@ -5541,7 +5541,7 @@ $Id$
 
 ### roos_augmented_double_zeta_ano
 
-Roos Augmented Double Zeta ANO  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Roos Augmented Double Zeta ANO  
 
 - **Type:** Spherical
 - **Elements:** H-Zn
@@ -5550,7 +5550,7 @@ Roos Augmented Double Zeta ANO  EMSL  Basis Set Exchange Library  3/15/13 10:18 
 
 ### roos_augmented_triple_zeta_ano
 
-Roos Augmented Triple Zeta ANO  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Roos Augmented Triple Zeta ANO  
 
 - **Type:** Spherical
 - **Elements:** H-Ar, Sc-Zn
@@ -5559,7 +5559,7 @@ Roos Augmented Triple Zeta ANO  EMSL  Basis Set Exchange Library  3/15/13 10:19 
 
 ### s3-21g
 
-s3-21G  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+s3-21G  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -5568,7 +5568,7 @@ s3-21G  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### s3-21gs
 
-s3-21G*  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+s3-21G*  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -5577,7 +5577,7 @@ s3-21G*  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### s6-31g
 
-s6-31G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+s6-31G  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -5586,7 +5586,7 @@ s6-31G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### s6-31gs
 
-s6-31G*  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+s6-31G*  
 
 - **Type:** Spherical
 - **Elements:** Sc-Zn
@@ -5595,7 +5595,7 @@ s6-31G*  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### sadlej+
 
-Sadlej+  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
+Sadlej+  
 
 - **Type:** Spherical
 - **Elements:** H, C-O
@@ -5604,7 +5604,7 @@ Sadlej+  EMSL  Basis Set Exchange Library  6/9/14 1:08 PM
 
 ### sadlej_pvtz
 
-Sadlej pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Sadlej pVTZ  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Be, C-F, Na-Mg, Si-Cl, K-Ca, Br, Rb-Sr, I
@@ -5613,7 +5613,7 @@ Sadlej pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### sarc-dkh
 
-SARC-DKH  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SARC-DKH  
 
 - **Type:** Spherical
 - **Elements:** La-Rn, Ac-Lr
@@ -5622,7 +5622,7 @@ SARC-DKH  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sarc-zora
 
-SARC-ZORA  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SARC-ZORA  
 
 - **Type:** Spherical
 - **Elements:** La-Rn, Ac-Lr
@@ -5631,7 +5631,7 @@ SARC-ZORA  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sarc2-qzv-dkh
 
-SARC2-QZV-DKH  EMSL  Basis Set Exchange Library  8/1/16 5:39 PM
+SARC2-QZV-DKH  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5640,7 +5640,7 @@ SARC2-QZV-DKH  EMSL  Basis Set Exchange Library  8/1/16 5:39 PM
 
 ### sarc2-qzv-dkh_jk
 
-SARC2-QZV-DKH/JK  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
+SARC2-QZV-DKH/JK  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5649,7 +5649,7 @@ SARC2-QZV-DKH/JK  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
 
 ### sarc2-qzv-zora
 
-SARC2-QZV-ZORA  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
+SARC2-QZV-ZORA  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5658,7 +5658,7 @@ SARC2-QZV-ZORA  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
 
 ### sarc2-qzv-zora_jk
 
-SARC2-QZV-ZORA/JK  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
+SARC2-QZV-ZORA/JK  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5667,7 +5667,7 @@ SARC2-QZV-ZORA/JK  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
 
 ### sarc2-qzvp-dkh
 
-SARC2-QZVP-DKH  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
+SARC2-QZVP-DKH  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5676,7 +5676,7 @@ SARC2-QZVP-DKH  EMSL  Basis Set Exchange Library  8/1/16 5:37 PM
 
 ### sarc2-qzvp-dkh_jk
 
-SARC2-QZVP-DKH/JK  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
+SARC2-QZVP-DKH/JK  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5685,7 +5685,7 @@ SARC2-QZVP-DKH/JK  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
 
 ### sarc2-qzvp-zora
 
-SARC2-QZVP-ZORA  EMSL  Basis Set Exchange Library  8/1/16 5:39 PM
+SARC2-QZVP-ZORA  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5694,7 +5694,7 @@ SARC2-QZVP-ZORA  EMSL  Basis Set Exchange Library  8/1/16 5:39 PM
 
 ### sarc2-qzvp-zora_jk
 
-SARC2-QZVP-ZORA/JK  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
+SARC2-QZVP-ZORA/JK  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5703,7 +5703,7 @@ SARC2-QZVP-ZORA/JK  EMSL  Basis Set Exchange Library  8/1/16 5:38 PM
 
 ### sbkjc_ecp
 
-SBKJC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SBKJC ECP  
 
 - **Type:** Cartesian
 - **Elements:** Li-Ce, Hf-Rn
@@ -5712,7 +5712,7 @@ SBKJC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sbkjc_polarized_p_2d_-_lfk
 
-SBKJC Polarized (p,2d) - LFK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SBKJC Polarized (p,2d) - LFK  
 
 - **Type:** Spherical
 - **Elements:** H-Ca, Ge-Sr, Sn-Ba, Pb-Rn
@@ -5721,7 +5721,7 @@ SBKJC Polarized (p,2d) - LFK  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sbkjc_vdz_ecp
 
-SBKJC VDZ ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+SBKJC VDZ ECP  
 
 - **Type:** Cartesian
 - **Elements:** H-Ce, Hf-Rn
@@ -5730,7 +5730,7 @@ SBKJC VDZ ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sdb-aug-cc-pvqz
 
-SDB-aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+SDB-aug-cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** Ga-Br, In-I
@@ -5739,7 +5739,7 @@ SDB-aug-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### sdb-aug-cc-pvqz_diffuse
 
-SDB-aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SDB-aug-cc-pVQZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Ga-Br, In-I
@@ -5748,7 +5748,7 @@ SDB-aug-cc-pVQZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sdb-aug-cc-pvtz
 
-SDB-aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+SDB-aug-cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** Ga-Br, In-I
@@ -5757,7 +5757,7 @@ SDB-aug-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sdb-aug-cc-pvtz_diffuse
 
-SDB-aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SDB-aug-cc-pVTZ Diffuse  
 
 - **Type:** Spherical
 - **Elements:** Ga-Br, In-I
@@ -5766,7 +5766,7 @@ SDB-aug-cc-pVTZ Diffuse  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sdb-cc-pvqz
 
-SDB-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SDB-cc-pVQZ  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr, In-Xe
@@ -5775,7 +5775,7 @@ SDB-cc-pVQZ  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sdb-cc-pvtz
 
-SDB-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+SDB-cc-pVTZ  
 
 - **Type:** Spherical
 - **Elements:** Ga-Kr, In-Xe
@@ -5784,7 +5784,7 @@ SDB-cc-pVTZ  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sdb_rlc_ecp
 
-SDB RLC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SDB RLC ECP  
 
 - **Type:** Cartesian
 - **Elements:** Ga-Kr, In-Xe
@@ -5793,7 +5793,7 @@ SDB RLC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sto-2g
 
-STO-2G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+STO-2G  
 
 - **Type:** Cartesian
 - **Elements:** H-Ca, Sr
@@ -5802,7 +5802,7 @@ STO-2G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sto-3g
 
-STO-3G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+STO-3G  
 
 - **Type:** Spherical
 - **Elements:** H-I
@@ -5811,7 +5811,7 @@ STO-3G  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sto-3gs
 
-STO-3G*  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+STO-3G*  
 
 - **Type:** Spherical
 - **Elements:** Na-Ar
@@ -5820,7 +5820,7 @@ STO-3G*  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sto-3gs_polarization
 
-STO-3G* Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+STO-3G* Polarization  
 
 - **Type:** Spherical
 - **Elements:** Na-Ar
@@ -5829,7 +5829,7 @@ STO-3G* Polarization  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### sto-6g
 
-STO-6G  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+STO-6G  
 
 - **Type:** Spherical
 - **Elements:** H-Kr
@@ -5838,7 +5838,7 @@ STO-6G  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### stuttgart-koeln_mcdhf_rsc_ecp
 
-Stuttgart-Koeln MCDHF RSC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+Stuttgart-Koeln MCDHF RSC ECP  
 
 - **Type:** Cartesian
 - **Elements:** Cu-Kr, Y-Xe, Hf-Rn
@@ -5847,7 +5847,7 @@ Stuttgart-Koeln MCDHF RSC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:19 A
 
 ### stuttgart_rlc_ecp
 
-Stuttgart RLC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Stuttgart RLC ECP  
 
 - **Type:** Spherical
 - **Elements:** Li-Ca, Zn-Sr, In-Ba, Hg-Rn, Ac-Lr
@@ -5856,7 +5856,7 @@ Stuttgart RLC ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### stuttgart_rsc_1997_ecp
 
-Stuttgart RSC 1997 ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Stuttgart RSC 1997 ECP  
 
 - **Type:** Spherical
 - **Elements:** K-Zn, Rb-Cd, Cs-Hg, Ac-Lr, Db
@@ -5865,7 +5865,7 @@ Stuttgart RSC 1997 ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### stuttgart_rsc_ano_ecp
 
-Stuttgart RSC ANO/ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Stuttgart RSC ANO/ECP  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5874,7 +5874,7 @@ Stuttgart RSC ANO/ECP  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### stuttgart_rsc_ecp
 
-Stuttgart RSC ECP  EMSL  Basis Set Exchange Library  3/19/10 12:43 PM
+Stuttgart RSC ECP  
 
 - **Type:** Cartesian
 - **Elements:** La-Lu
@@ -5883,7 +5883,7 @@ Stuttgart RSC ECP  EMSL  Basis Set Exchange Library  3/19/10 12:43 PM
 
 ### stuttgart_rsc_segmented_ecp
 
-Stuttgart RSC Segmented/ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Stuttgart RSC Segmented/ECP  
 
 - **Type:** Spherical
 - **Elements:** La-Lu
@@ -5892,7 +5892,7 @@ Stuttgart RSC Segmented/ECP  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### sv_+_double_rydberg_dunning-hay
 
-SV + Double Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+SV + Double Rydberg (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne
@@ -5901,7 +5901,7 @@ SV + Double Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:
 
 ### sv_+_rydberg_dunning-hay
 
-SV + Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SV + Rydberg (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne
@@ -5910,7 +5910,7 @@ SV + Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### sv_dunning-hay
 
-SV (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SV (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ne
@@ -5919,7 +5919,7 @@ SV (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### svp_+_diffuse_+_rydberg
 
-SVP + Diffuse + Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+SVP + Diffuse + Rydberg  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne
@@ -5928,7 +5928,7 @@ SVP + Diffuse + Rydberg  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### svp_+_diffuse_dunning-hay
 
-SVP + Diffuse (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SVP + Diffuse (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ne
@@ -5937,7 +5937,7 @@ SVP + Diffuse (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### svp_+_rydberg_dunning-hay
 
-SVP + Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+SVP + Rydberg (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** B-Ne
@@ -5946,7 +5946,7 @@ SVP + Rydberg (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### svp_dunning-hay
 
-SVP (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+SVP (Dunning-Hay)  
 
 - **Type:** Cartesian
 - **Elements:** H, Li-Ne
@@ -5955,7 +5955,7 @@ SVP (Dunning-Hay)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### t-aug-cc-pv5z_diffuse
 
-$Id$
+t-aug-cc-pv5z diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -5964,7 +5964,7 @@ $Id$
 
 ### t-aug-cc-pv6z_diffuse
 
-$Id$
+t-aug-cc-pv6z diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne
@@ -5973,7 +5973,7 @@ $Id$
 
 ### t-aug-cc-pvdz_diffuse
 
-$Id$
+t-aug-cc-pvdz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -5982,7 +5982,7 @@ $Id$
 
 ### t-aug-cc-pvqz_diffuse
 
-$Id$
+t-aug-cc-pvqz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -5991,7 +5991,7 @@ $Id$
 
 ### t-aug-cc-pvtz_diffuse
 
-$Id$
+t-aug-cc-pvtz diffuse
 
 - **Type:** Spherical
 - **Elements:** H-He, B-Ne, Cl
@@ -6000,7 +6000,7 @@ $Id$
 
 ### tz_dunning
 
-TZ (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+TZ (Dunning)  
 
 - **Type:** Spherical
 - **Elements:** H, Li-Ne
@@ -6009,7 +6009,7 @@ TZ (Dunning)  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### tzp
 
-TZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+TZP  
 
 - **Type:** Spherical
 - **Elements:** H-Xe
@@ -6018,7 +6018,7 @@ TZP  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### tzp-dkh
 
-TZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
+TZP-DKH  
 
 - **Type:** Spherical
 - **Elements:** H-Xe
@@ -6027,7 +6027,7 @@ TZP-DKH  EMSL  Basis Set Exchange Library  6/9/14 1:07 PM
 
 ### tzvp_dft_orbital
 
-TZVP (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+TZVP (DFT Orbital)  
 
 - **Type:** Cartesian
 - **Elements:** H, C-F, Al-Ar
@@ -6036,7 +6036,7 @@ TZVP (DFT Orbital)  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### ugbs
 
-UGBS  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+UGBS  
 
 - **Type:** Spherical
 - **Elements:** H-Th, Pu-Am, Cf-Lr
@@ -6045,7 +6045,7 @@ UGBS  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### un-ccemd-ref
 
-un-ccemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
+un-ccemd-ref  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -6054,7 +6054,7 @@ un-ccemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:19 AM
 
 ### un-pcemd-ref
 
-un-pcemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+un-pcemd-ref  
 
 - **Type:** Spherical
 - **Elements:** H-Ar
@@ -6063,7 +6063,7 @@ un-pcemd-ref  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### wachters+f
 
-Wachters+f  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+Wachters+f  
 
 - **Type:** Spherical
 - **Elements:** Sc-Cu
@@ -6072,7 +6072,7 @@ Wachters+f  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### weigend_coulomb_fitting
 
-Weigend Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
+Weigend Coulomb Fitting  
 
 - **Type:** Spherical
 - **Elements:** H-La, Hf-Rn
@@ -6081,7 +6081,7 @@ Weigend Coulomb Fitting  EMSL  Basis Set Exchange Library  3/15/13 10:18 AM
 
 ### wtbs
 
-WTBS  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
+WTBS  
 
 - **Type:** Spherical
 - **Elements:** He-Rn
@@ -6090,7 +6090,7 @@ WTBS  EMSL  Basis Set Exchange Library  3/15/13 10:17 AM
 
 ### x2c-coulomb-fitting
 
-x2c-coulomb-fitting  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+x2c-coulomb-fitting  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6099,7 +6099,7 @@ x2c-coulomb-fitting  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
 
 ### x2c-svpall
 
-x2c-SVPall  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+x2c-SVPall  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6108,7 +6108,7 @@ x2c-SVPall  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### x2c-svpall-2c
 
-x2c-SVPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+x2c-SVPall-2c  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6117,7 +6117,7 @@ x2c-SVPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### x2c-tzvpall
 
-x2c-TZVPall  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
+x2c-TZVPall  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6126,7 +6126,7 @@ x2c-TZVPall  EMSL  Basis Set Exchange Library  10/12/17 2:09 PM
 
 ### x2c-tzvpall-2c
 
-x2c-TZVPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+x2c-TZVPall-2c  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6135,7 +6135,7 @@ x2c-TZVPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### x2c-tzvppall
 
-x2c-TZVPPall  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
+x2c-TZVPPall  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6144,7 +6144,7 @@ x2c-TZVPPall  EMSL  Basis Set Exchange Library  10/12/17 2:08 PM
 
 ### x2c-tzvppall-2c
 
-x2c-TZVPPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
+x2c-TZVPPall-2c  
 
 - **Type:** Spherical
 - **Elements:** H-Rn
@@ -6153,7 +6153,7 @@ x2c-TZVPPall-2c  EMSL  Basis Set Exchange Library  10/12/17 2:07 PM
 
 ### z3pol
 
-$Id$
+z3pol
 
 - **Type:** Spherical
 - **Elements:** H, C-F, Si-Cl
