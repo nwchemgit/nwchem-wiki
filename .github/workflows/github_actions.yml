@@ -165,14 +165,12 @@ jobs:
           print_page.html nwchemusermanual.pdf
           ls -l nwchemusermanual.pdf
       - name: checkout website
-        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs
         run: |
           git clone -b $GITHUB_REF_NAME --depth 1 \
           https://github.com/nwchemgit/nwchemgit.github.io
       - name: update nwchemgit.github.io with new content
-        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs
         run: |
@@ -182,7 +180,6 @@ jobs:
           cd nwchemgit.github.io
           time -p git log -1
       - name: Commit changes
-        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs/nwchemgit.github.io
         run: |
@@ -198,7 +195,6 @@ jobs:
           branch: ${{ github.ref }}
           repository: nwchemgit/nwchemgit.github.io
       - name: Check commit result
-        if: ${{ env.push_truefalse == 'true' }}
         shell: bash
         working-directory: mkdocs/nwchemgit.github.io
         run: |
