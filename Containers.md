@@ -6,15 +6,15 @@
 
 Instruction for using the NWChem Docker container with the [docker compose](https://docs.docker.com/compose) command
 
-1. Install docker  as described in [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install)
+- Install docker  as described in [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install)
 
-2. Download the [compose.yaml](https://github.com/nwchemgit/nwchem-dockerfiles/raw/refs/heads/master/nwchem-cross/compose.yaml) file
+- Download the [compose.yaml](https://github.com/nwchemgit/nwchem-dockerfiles/raw/refs/heads/master/nwchem-cross/compose.yaml) file
  
 ```
  wget https://github.com/nwchemgit/nwchem-dockerfiles/raw/refs/heads/master/nwchem-cross/compose.yaml
 ```
 
-3. Create the nwchem service
+- Create the nwchem service
 ``` 
 docker compose up -d
 ```
@@ -23,7 +23,7 @@ In some installation, `docker compose` is available as the command `docker-compo
 docker-compose up -d
 ```
 
-4. Run NWChem
+- Run NWChem
  
 ``` 
  docker compose run --rm nwchem h2o.nw
