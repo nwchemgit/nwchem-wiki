@@ -48,7 +48,7 @@ export MYNPROC=5
 After installing Apple Container as described at https://github.com/apple/container on computers equipped with Apple silicon, it is possible to run NWChem docker images as in the example below. 
 
 ```
-container run -i --shm-size  1G --memory 3G  -t --volume $(pwd):/data --entrypoint=mpirun   --rm ghcr.io/nwchemgit/nwchemcross-dev-mpi-pr:arm64 -np 4 nwchem /data/siosi3.nw
+container run --shm-size 1G --memory 3G --volume $(pwd):/data --entrypoint=mpirun   --rm ghcr.io/nwchemgit/nwchemcross-dev-mpi-pr:arm64 -np 4 nwchem /data/siosi3.nw
 ```
 
 ## Singularity/Apptainer
