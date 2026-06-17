@@ -11,6 +11,8 @@
 #    exit
 #fi
 #fresh clone of wiki
+export NO_MKDOCS_2_WARNING=1
+#https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/
 if [ -d "docs" ]; then
     echo ' WARNING'
     echo ' since the docs directory is already present, '
