@@ -127,12 +127,11 @@ task dft property
 ```
 ### Electric field
 
-```
-efieldgrad
-efieldgradZ4
-efieldgradmap
-```
-The method used in NWChem to computer electric field and electric filed gradients in described in publication [@aquino2010].
+* `efield` computes the electric field.
+* `efieldgrad` computes the electric field gradient.  
+* `efieldgradZ4` computes the electric field gradient based on the two-component relativistic zeroth-order regular approximation (ZORA)
+  
+The method used in NWChem to computer electric field and electric fieled gradients in described in publication [@aquino2010].
 
 
 ### CENTER: Center of expansion for multipole calculations
