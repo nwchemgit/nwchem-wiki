@@ -14,9 +14,9 @@ See the [FAQ page](FAQ) for solutions to common issues.
 ```
 spcart_bra2etran: nbf_xj.ne.nbf_sj  (xj-sj) =                   5
 ```
-[https://groups.google.com/g/nwchem-forum/c/RA0tYxdfvaw](https://groups.google.com/g/nwchem-forum/c/RA0tYxdfvaw)
-[https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html](https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html)
-[https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817](https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817)
+[https://groups.google.com/g/nwchem-forum/c/RA0tYxdfvaw](https://groups.google.com/g/nwchem-forum/c/RA0tYxdfvaw)  
+[https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html](https://nwchemgit.github.io/Special_AWCforum/st/id3386/Ubuntu_18.html)  
+[https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817](https://bugs.launchpad.net/ubuntu/+source/nwchem/+bug/1675817)  
 
 
 Please use commands to install an updated version (as described
