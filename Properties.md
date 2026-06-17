@@ -125,6 +125,16 @@ end
 
 task dft property
 ```
+### Electric field
+
+```
+efieldgrad
+efieldgradZ4
+efieldgradmap
+```
+The method used in NWChem to computer electric field and electric filed gradients in described in publication [@aquino2010].
+
+
 ### CENTER: Center of expansion for multipole calculations
   
 The user also has the option to choose the center of expansion for the
@@ -306,7 +316,7 @@ calculation, (see the NBO user's manual for details.)
 Users that have their own NBO version can compile and link the code into
 the NWChem software. See the INSTALL file in the source for details.
 
-## Aimfile
+### Aimfile
 
 This keyword generates AIM Wavefunction files. The resulting AIM
 wavefunction file (.wfn/.wfx) can be post-processed with a variety of
@@ -319,7 +329,7 @@ codes, e.g.
 
 **WARNING:** Since we have discovered issues in generating .WFN files with this module (e.g. systems with ECPs), the recommended method for generating .WFN file is to first generate a Molden file with the [Moldenfile](Properties.md#moldenfile) option, then convert the Molden file into a WFN file by using the [Molden2AIM](https://github.com/zorkzou/Molden2AIM) program.
 
-## Moldenfile
+### Moldenfile
 ```
 MOLDENFILE
 MOLDEN_NORM (JANPA | | NWCHEM || NONE)
@@ -371,7 +381,7 @@ Then, the resulting `h2o.molden` file can be post processed by [Janpa](https://j
 java -jar janpa.jar h2o.molden > h2o.janpa.txt
 ```
 
-## Localization
+### Localization
 
 
 Localized molecular orbitals (LMOs) can be computed with the `localization` keyword.  
