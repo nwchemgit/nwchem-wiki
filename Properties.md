@@ -69,6 +69,7 @@ keywords:
 ```
 The `ALL` keyword generates all currently available properties.
 
+
 ### NMR and EPR
 
 Both the NMR shielding and spin-spin coupling have additional optional
@@ -305,98 +306,6 @@ calculation, (see the NBO user's manual for details.)
 Users that have their own NBO version can compile and link the code into
 the NWChem software. See the INSTALL file in the source for details.
 
-## Gaussian Cube Files
-
-Electrostatic potential (keyword `esp`) and the magnitude of the
-electric field (keyword `efield`) on the grid can be generated in the
-form of the Gaussian Cube File. This behavior is triggered by the
-inclusion of grid keyword as shown
-below
-```
- grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]
-```
-where
-
-  - `pad dx [dy dz]` - specifies amount of padding (in angstroms) in
-    x,y, and z dimensions that will be applied in the automatic
-    construction of the rectangular grid volume based on the geometry of
-    the system. If only one number is provided then the same amount of
-    padding will be applied in all dimensions. The default setting is 4
-    angstrom padding in all dimensions.
-
-
-  - `rmin x y z` - specifies the coordinates (in angstroms) of the minimum
-    corner of the rectangular grid volume. This will override any
-    padding in this direction.
-
-  - `rmax x y z` - specifies the coordinates (in angstroms) of the maximum
-    corner of the rectangular grid volume. This will override any
-    padding in this direction.
-
-
-  - `ngrid nx [ny nz]` - specifies number of grid points along each
-    dimension. If only one number is provided then the same number of
-    grid points are assumed all dimensions. In the absence of this
-    directive the number of grid points would be computed such that grid
-    spacing will be close to 0.2 angstrom, but not exceeding 50 grid
-    points in either dimension.
-
-
-  - `output filename` - specifies name of the output cube file. The
-    default behavior is to use *prefix*`-elp.cube` or *prefix*`-elf.cube`
-    file names for electrostatic potential or electric field
-    respectively. Here *prefix* denotes the system name as specified in
-    start directive. Note that Gaussian cube files will be written in
-    the run directory (where the input file resides).
-
-Example input file
-```
-  echo  
-  start nacl  
-    
-   
-  geometry nocenter noautoz noautosym  
-   Na                   -0.00000000     0.00000000    -0.70428494  
-   Cl                    0.00000000    -0.00000000     1.70428494  
-  end  
-    
-    
-  basis  
-    * library 6-31g*  
-  end  
-    
-  #electric field would be written out to nacl.elf.cube file  
-  #with  
-  #ngrid     : 20 20 20  
-  #rmax      : 4.000     4.000     5.704  
-  #rmin      :-4.000    -4.000    -4.704  
-    
-  property  
-  efield  
-  grid pad 4.0 ngrid 20  
-  end  
-    
-  task dft property  
-    
-  #electrostatic potential would be written to esp-pad.cube file  
-  # with the same parameters as above  
-    
-  property  
-  esp  
-  grid pad 4.0 ngrid 20 output esp-pad.cube  
-  end  
-    
-  task dft property  
-     
-  #illustrating explicit specification of minumum box coordinates  
-    
-  property  
-  esp  
-  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20  
-  end  
-    
-  task dft property
-```
 ## Aimfile
 
 This keyword generates AIM Wavefunction files. The resulting AIM
@@ -515,6 +424,100 @@ A [Python script](https://github.com/jautschbach/nwchem-dplot-utility) is availa
 ```
 
 The `dplot` task shown above is included in the resulting NWChem input file `dplot.nw`.
+
+
+## Gaussian Cube Files
+
+Electrostatic potential (keyword `esp`) and the magnitude of the
+electric field (keyword `efield`) on the grid can be generated in the
+form of the Gaussian Cube File. This behavior is triggered by the
+inclusion of grid keyword as shown
+below
+```
+ grid [pad dx [dy dz]] [rmax x y z] [rmin x y z] [ngrid nx [ny nz]] [output filename]
+```
+where
+
+  - `pad dx [dy dz]` - specifies amount of padding (in angstroms) in
+    x,y, and z dimensions that will be applied in the automatic
+    construction of the rectangular grid volume based on the geometry of
+    the system. If only one number is provided then the same amount of
+    padding will be applied in all dimensions. The default setting is 4
+    angstrom padding in all dimensions.
+
+
+  - `rmin x y z` - specifies the coordinates (in angstroms) of the minimum
+    corner of the rectangular grid volume. This will override any
+    padding in this direction.
+
+  - `rmax x y z` - specifies the coordinates (in angstroms) of the maximum
+    corner of the rectangular grid volume. This will override any
+    padding in this direction.
+
+
+  - `ngrid nx [ny nz]` - specifies number of grid points along each
+    dimension. If only one number is provided then the same number of
+    grid points are assumed all dimensions. In the absence of this
+    directive the number of grid points would be computed such that grid
+    spacing will be close to 0.2 angstrom, but not exceeding 50 grid
+    points in either dimension.
+
+
+  - `output filename` - specifies name of the output cube file. The
+    default behavior is to use *prefix*`-elp.cube` or *prefix*`-elf.cube`
+    file names for electrostatic potential or electric field
+    respectively. Here *prefix* denotes the system name as specified in
+    start directive. Note that Gaussian cube files will be written in
+    the run directory (where the input file resides).
+
+Example input file
+```
+  echo  
+  start nacl  
+    
+   
+  geometry nocenter noautoz noautosym  
+   Na                   -0.00000000     0.00000000    -0.70428494  
+   Cl                    0.00000000    -0.00000000     1.70428494  
+  end  
+    
+    
+  basis  
+    * library 6-31g*  
+  end  
+    
+  #electric field would be written out to nacl.elf.cube file  
+  #with  
+  #ngrid     : 20 20 20  
+  #rmax      : 4.000     4.000     5.704  
+  #rmin      :-4.000    -4.000    -4.704  
+    
+  property  
+  efield  
+  grid pad 4.0 ngrid 20  
+  end  
+    
+  task dft property  
+    
+  #electrostatic potential would be written to esp-pad.cube file  
+  # with the same parameters as above  
+    
+  property  
+  esp  
+  grid pad 4.0 ngrid 20 output esp-pad.cube  
+  end  
+    
+  task dft property  
+     
+  #illustrating explicit specification of minumum box coordinates  
+    
+  property  
+  esp  
+  grid pad 4.0 rmax 4.000 4.000 5.704 ngrid 20  
+  end  
+    
+  task dft property
+```
 
 
 ## References 
