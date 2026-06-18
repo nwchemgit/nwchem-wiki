@@ -1,6 +1,6 @@
 # Supplementary Information
 
-## [Global Arrays](http://hpc.pnl.gov/globalarrays/)
+## [Global Arrays](https://globalarrays.github.io/)
 
 ## [Choosing the right ARMCI library](ARMCI.md)
 

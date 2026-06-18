@@ -9,9 +9,8 @@ The NWChem User's Manual is now at
 ## Where do I go for help with a Global Arrays problem?
 
 If you have problems with compiling the tools directory, please visit
-the Global Arrays Google group at
-<http://groups.google.com/g/hpctools/> or visit the Global Arrays
-website at <http://hpc.pnl.gov/globalarrays/>
+the Global Arrays
+website at <https://globalarrays.github.io/>
 
 ## Where do I go for help with NWChem problems?
 
