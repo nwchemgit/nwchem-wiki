@@ -40,7 +40,7 @@ NWChem version 7.3.1 is the latest release available for download from the link 
 
 ## EMSL Arrows
 
-![EMSLArrows](myarrowmovie.webp){ align=right}
+<img  alt="EMSLArrows" style="float:right" src="mol1andmol2.webp">
 <!-- img align="right" alt=""  width="200" height="150" src="myarrowmovie.webp"-->
 <!--![](myarrowmovie.webp){ align=right }-->
 Are you just
