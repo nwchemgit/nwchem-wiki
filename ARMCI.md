@@ -63,8 +63,8 @@ option to choose. However, we observe the following:
     for design details.
 
 When using ARMCI-MPI, please make sure to use the most recent version of
-MPI (MPICH 3.2+, Cray MPI 7.2+, MVAPICH2 2.0+, Intel MPI 5.1+, Open-MPI
-2.0+). Older versions of MPI are known to have bugs in the MPI-3 RMA
+MPI (MPICH 5.+, Cray MPI 7.2+, MVAPICH2 2.0+, Intel MPI 5.1+, Open-MPI
+5.0+). Older versions of MPI are known to have bugs in the MPI-3 RMA
 features that affect the correctness of NWChem.
 
 ## Support
