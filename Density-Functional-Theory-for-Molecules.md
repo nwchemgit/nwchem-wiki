@@ -109,7 +109,7 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
               [diis [nfock <integer nfock default 10>]] \  
               [nodiis] [lshift <real lshift default 0.5>] \  
               [nolevelshifting] \  
-              [hl_tol <real hl_tol default 0.1>] \  
+              [hl_tol <real hl_tol default 0.01>] \  
               [rabuck [n_rabuck <integer n_rabuck default 25>]\
               [fast] ]  
  GRID [(xcoarse||coarse||medium||fine||xfine||huge) default medium] \  
@@ -870,7 +870,7 @@ file](#sample-input-file).
  CONVERGENCE [energy <real energy default 1e-6>] \  
              [density <real density default 1e-5>] \  
              [gradient <real gradient default 5e-4>] \  
-             [hl_tol <real hl_tol default 0.1>]  
+             [hl_tol <real hl_tol default 0.01>]  
              [dampon <real dampon default 0.0>] \  
              [dampoff <real dampoff default 0.0>] \  
              [ncydp <integer ncydp default 2>] \  
@@ -957,7 +957,7 @@ can be modified by the following keywords
  CONVERGENCE  [damp <integer ndamp default 0>] \  
               [diis [nfock <integer nfock default 10>]] \  
               [lshift <real lshift default 0.5>] \  
-              [hl_tol <real hl_tol default 0.1>]]
+              [hl_tol <real hl_tol default 0.01>]]
 ```
     
 ### CONVERGENCE DAMP Keyword
@@ -985,12 +985,12 @@ specified by the keyword `lshift`. For example the directive,
 causes the diagonal elements of the Fock matrix corresponding to the
 virtual orbitals to be shifted by 0.5 a.u. By default, this
 level-shifting procedure is switched on whenever the HOMO-LUMO gap is
-small. Small is defined by default to be 0.05 au but can be modified by
+small. Small is defined by default to be 0.01 au but can be modified by
 the directive hl\_tol. An example of changing the HOMO-LUMO gap
-tolerance to 0.01 would be,
+tolerance to 0.005 would be,
 
 ```
- CONVERGENCE hl_tol 0.01
+ CONVERGENCE hl_tol 0.005
 ```
 
 ### CONVERGENCE DIIS Keyword    
