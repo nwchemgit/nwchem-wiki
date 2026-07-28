@@ -258,7 +258,7 @@ Instead, the `ses` cavity construction approach creates a solvent-excluding surf
 #### COSMO: NDIV keyword
 **(New since August 31st 2025 in master branch)**   
 `ndiv [coarse|fine|xfine|huge|xxl]`  
-The `ndiv` keyword define the size of the `SES` cavity.  
+The `ndiv` keyword define the size of the `SES` cavity.  `ndiv fine` is the default value.
 
 #### COSMO: POTCORR keyword
 **(New since August 31st 2025 in master branch)**
