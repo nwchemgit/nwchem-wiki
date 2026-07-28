@@ -80,10 +80,13 @@ cosmo
   [gamma_s <real gammas default 1.0>]  
   [sw_tol <real swtol default 1.0e-4>]
   [charge_correction <no||scale||lagrangian default lagrangian>]  
-  [do_gasphase  <logical do_gasphase default True>] 
+  [do_gasphase  <logical do_gasphase default true>] 
   [do_cosmo_ks]
   [do_cosmo_yk]
   [do_cosmo_smd]
+  [cavity <vdw||ses default vdw>]
+  [ndiv <coarse||fine||xfine||huge||xxl default fine>]
+  [potcorr <logical potocorr default false>]
 end
 ```
 followed by the task directive specifying the wavefunction and type of
