@@ -246,7 +246,7 @@ distinguished by the suffix `_pt` and `_fi`. It is the user's
 responsibility to ensure that the contraction matches the nuclear type
 specified in the geometry object. The specification of a finite nucleus
 basis set does NOT automatically set the nuclear type for that atom to
-be finite. See [Geometries](Geometry) for
+be finite. See [Geometries](Keywords-for-the-GEOMETRY-directive.md#nucleus) for
 information.
 ## How to use basis files from https://www.basissetexchange.org (NEW in 2019)
 
