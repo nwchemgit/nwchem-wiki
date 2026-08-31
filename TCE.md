@@ -1441,7 +1441,7 @@ END
 TASK UCCSD ENERGY
 ```
 
-EOMCCSD calculations with EOMSOL 2 algorithm. In these claculations the
+EOMCCSD calculations with EOMSOL 2 algorithm. In these calculations the
 diis value of 8 will be used both in the CCSD and EOMCCSD iterations.
 
 ```
