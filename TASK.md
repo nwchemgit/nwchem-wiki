@@ -279,8 +279,8 @@ system (see Section [Charge](Charge.md)). The options `OFF` and `ON` turns off a
 on any BSSE calculation.
 
 The energy evaluation involves 1 + 2N calculations, i.e. one for the
-supermolecule and two for the N monomers. [S. Simon, M. Duran, J. J.
-Dannenberg, J. Chem. Phys., 105, 11024 (1996)] NWChem stores the vector
+supermolecule and two for the N monomers[@xantheas1996][@simon1996].
+NWChem stores the vector
 files for each calculation (`<string monomer name>.bsse.movecs`), and one
 hessian file (`<string monomer name>.bsse.hess`). The code does not assign
 automatically the basis set for the ghost atoms, you must assign the
