@@ -77,11 +77,12 @@ Here is an example that illustrates this
 
 #### BQ: LOAD/UNITS keyword
 
-** `units au|nm|pm|ang|...` - this optional keyword sets the local coordinate units valid only for this particular load directive. Otherwise global unit definition will apply (see above)
+* `units au|nm|pm|ang|...` - this optional keyword sets the local coordinate units valid only for this particular load directive. Otherwise global unit definition will apply (see above)
 
 #### BQ: LOAD/SCALE keyword
 
-** `scale <factor>`
+* `scale <factor>`
+```
   geometry nocenter noautosym units angstrom noautoz print  
   O          2.045   1.011  -1.505  
   H1         1.912   0.062  -1.314  
