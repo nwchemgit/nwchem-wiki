@@ -51,7 +51,7 @@ Here is an example that illustrates this
 
 ### BQ: FORCE|NOFORCE keyword
 
-* **force** <output_file> | **noforce** this directive triggers|disables calculation of forces on Bq charges. Default value is **noforce**, which disables force calculation. The forces will be written to <output_file> if provided or to <prefix>.bqforce.dat file. The format of the file is
+* **force** `<output_file>` | **noforce** this directive triggers|disables calculation of forces on Bq charges. Default value is **noforce**, which disables force calculation. The forces will be written to `<output_file>` if provided or to `<prefix>.bqforce.dat` file. The format of the file is
 ```
  #comment line
  fx fy fz
@@ -60,12 +60,13 @@ Here is an example that illustrates this
 
 ### BQ: LOAD keyword
 
-* **load** <file> [charges <chargefile> ] [format ix iy iz iq] [units au|nm|pm|**ang**|...] [ scale <factor> ] - this directive allows to load point charges from external file(s). You can load charges and their coordinates from a single file, or from separate files. The files do not have to follow any specific format, but blank lines and comments (starting with #) will be ignored. The actual specification of how the coordinates/charges are laid out in in the file is given by format keyword. Multiple load directives are a supported.  
+* **load** `<file> [charges <chargefile> ] [format ix iy iz iq] [units au|nm|pm|**ang**|...] [ scale <factor> ]` - this directive allows to load point charges from external file(s). You can load charges and their coordinates from a single file, or from separate files. The files do not have to follow any specific format, but blank lines and comments (starting with #) will be ignored. The actual specification of how the coordinates/charges are laid out in in the file is given by format keyword. Multiple load directives are a supported.  
 ** <file> - the name of the file where Bq coordinates and charges are stored.   
-** charges <chargefile> - this optional keyword allows to load charges (NOT the coordinates) from a separate <chargefile>. In this case, only coordinates would be loaded from <file>  
+** charges <chargefile> - this optional keyword allows to load charges (NOT the coordinates) from a separate `<chargefile>`. In this case, only coordinates would be loaded from `<file>`
+    
 #### BQ: LOAD/FORMAT keyword
 
-** format ix iy iz iq - this optional keyword allows to set the fields (separated by blanks) where x,y,z coordinates and respective charge values are to be found. If a specified field doe nor exist or contains no numerical value, the processing will skip to the next line. The default value for format is '''2 3 4 5''', which will work for the following example (note that the second line will not be processed here)  
+* `format ix iy iz iq` - this optional keyword allows to set the fields (separated by blanks) where x,y,z coordinates and respective charge values are to be found. If a specified field doe nor exist or contains no numerical value, the processing will skip to the next line. The default value for `format` is `2 3 4 5`, which will work for the following example (note that the second line will not be processed here)  
 ```
  #this is a comment
  coordinates are in fields 2,3,4 and charge is field 5
@@ -76,27 +77,11 @@ Here is an example that illustrates this
 
 #### BQ: LOAD/UNITS keyword
 
-** units au|nm|pm|ang|... - this optional keyword sets the local coordinate units valid only for this particular load directive. Otherwise global unit definition will apply (see above)
+** `units au|nm|pm|ang|...` - this optional keyword sets the local coordinate units valid only for this particular load directive. Otherwise global unit definition will apply (see above)
 
 #### BQ: LOAD/SCALE keyword
 
-** scale <factor> - this optional keyword allows to scale loaded charge values by some factor
-
-* x y z q  - explicit definition of coordinates and charge values of point charges. These can be mixed in with load directive at will. 
-
-```
-  start w1  
-  
-  BASIS "ao basis" PRINT  
-  * library "3-21G"  
-  END  
-  
-  dft  
-   mult 1  
-   XC b3lyp  
-   iterations 5000  
-  end  
-   
+** `scale <factor>`
   geometry nocenter noautosym units angstrom noautoz print  
   O          2.045   1.011  -1.505  
   H1         1.912   0.062  -1.314  
