@@ -61,8 +61,8 @@ Here is an example that illustrates this
 ### BQ: LOAD keyword
 
 * **load** `<file> [charges <chargefile> ] [format ix iy iz iq] [units au|nm|pm|**ang**|...] [ scale <factor> ]` - this directive allows to load point charges from external file(s). You can load charges and their coordinates from a single file, or from separate files. The files do not have to follow any specific format, but blank lines and comments (starting with #) will be ignored. The actual specification of how the coordinates/charges are laid out in in the file is given by format keyword. Multiple load directives are a supported.  
-** <file> - the name of the file where Bq coordinates and charges are stored.   
-** charges <chargefile> - this optional keyword allows to load charges (NOT the coordinates) from a separate `<chargefile>`. In this case, only coordinates would be loaded from `<file>`
+* `<file>` - the name of the file where Bq coordinates and charges are stored.   
+* `charges <chargefile>` - this optional keyword allows to load charges (NOT the coordinates) from a separate `<chargefile>`. In this case, only coordinates would be loaded from `<file>`
     
 #### BQ: LOAD/FORMAT keyword
 
