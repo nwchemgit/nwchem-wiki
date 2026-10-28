@@ -182,7 +182,7 @@ given calculation can be summarized as follows:
     
 ## ADFT **_New in NWChem 7.2.0_**:
 
-Use of the auxiliary density functional theory method (ADFT)[@koester2004,calaminici2017] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
+Use of the auxiliary density functional theory method (ADFT)[@koester2004,@calaminici2017] can be triggered by means of the `adft` keyword. This can result in a large speed-up when using "pure" GGA functionals (e.g. PBE96) and Laplacian-dependent mGGA functionals (e.g. SCAN-L). The speed-up comes from the use of the fitted density obtained with the charge density fitting technique to approximate both the Coulomb and Exchange-Correlation contributions.
 
 The ADFT method is similar in spirit to the exchange-correlation fitting technique triggered by specifying an [xc basis](#specification-of-basis-sets-for-the-dft-module) without the `adft` keyword. It is important to note that, different to straight exchange-correlation fitting, *energy derivatives are well-defined* within the ADFT framework. As a consequence, geometry optimizations and harmonic vibrational frequencies are well-behaved.
 
@@ -197,7 +197,7 @@ The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-M
 ```
 
 has the same effect.  
-Instead, the `IMOM` keyword applies the maximum overlap condition with respect to the initial SCF orbitals [@barca2018] (while `max_ovl`[@lykos1961,king1967,gilbert2008] uses the orbitals from the previous cycle).
+Instead, the `IMOM` keyword applies the maximum overlap condition with respect to the initial SCF orbitals [@barca2018] (while `max_ovl`[@lykos1961,@king1967,@gilbert2008] uses the orbitals from the previous cycle).
 
 ## XC and DECOMP: Exchange-Correlation Potentials
 
@@ -233,7 +233,7 @@ default exchange-correlation functional is defined as the local density
 approximation (LDA) for closed shell systems and its counterpart the
 local spin-density (LSD) approximation for open shell systems. Within
 this approximation, the exchange functional is the Slater &rho;<sup>1/3</sup>
-functional[@slater1972;@slater1974], and the correlation functional is the
+functional[@slater1972,@slater1974], and the correlation functional is the
 Vosko-Wilk-Nusair (VWN) functional (functional V)[@vosko1980].
 The parameters used in
 this formula are obtained by fitting to the Ceperley and Alder Quantum
