@@ -197,7 +197,7 @@ The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-M
 ```
 
 has the same effect.  
-Instead, the `IMOM` keyword applies the maximum overlap condition with respect to the initial SCF orbitals (while `max_ovl` uses the orbitals from the previous cycle).
+Instead, the `IMOM` keyword applies the maximum overlap condition with respect to the initial SCF orbitals [@barca2018] (while `max_ovl`[@lykos1961,king1967,gilbert2008] uses the orbitals from the previous cycle).
 
 ## XC and DECOMP: Exchange-Correlation Potentials
 
