@@ -130,7 +130,8 @@ VECTORS [[input] (<string input_movecs default atomic>) || \
             [filename <string filename default $file_prefix.aoints$>]
  INCORE 
  ITERATIONS <integer iterations default 30> 
- MAX_OVL  
+ MAX_OVL
+ IMOM  
  CGMIN  
  RODFT  
  MULLIKEN  
@@ -187,7 +188,7 @@ The ADFT method is similar in spirit to the exchange-correlation fitting techniq
 
 The ADFT method requires a charge density fitting basis set (see [DFT basis set section](#specification-of-basis-sets-for-the-dft-module)). If not `cd basis` set is provided, the `weigend coulomb fitting` basis set will be loaded.
 
-## VECTORS and MAX_OVL: KS-MO Vectors
+## VECTORS and MAX_OVL/IMOM: KS-MO Vectors
 
 The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-Molecules.md#vectors-inputoutput-of-mo-vectors) module. Currently, the [LOCK](Hartree-Fock-Theory-for-Molecules.md#vectors-lock-keyword) keyword is not supported by the DFT module, however the directive
 
@@ -195,7 +196,8 @@ The VECTORS directive is the same as that in the [SCF](Hartree-Fock-Theory-for-M
  MAX_OVL
 ```
 
-has the same effect.
+has the same effect.  
+Instead, the `IMOM` keyword applies the maximum overlap condition with respect to the initial SCF orbitals (while `max_ovl` uses the orbitals from the previous cycle).
 
 ## XC and DECOMP: Exchange-Correlation Potentials
 
